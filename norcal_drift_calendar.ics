@@ -2,27 +2,30 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
-DESCRIPTION:Driver: $250 | Helmet required | Beginner friendly
-DURATION:PT8H
-LOCATION:Sonoma Raceway
-DTSTART:20260720T090000Z
-SUMMARY:Good Luck League - Open Drift Day
-UID:0cca2739-a9a2-43b0-91be-a6d978ad4ac6@0cca.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:DriftSF open practice session
-DURATION:PT6H
-LOCATION:Thunderhill Raceway
-DTSTART:20260727T100000Z
-SUMMARY:DriftSF Practice Day
-UID:2a399b4b-a433-4dc1-af74-4bf3b22bc533@2a39.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Tandem practice allowed
-DURATION:PT8H
+DESCRIPTION:Promoter: Valley Drift Club\nLocation: Crows Landing\nRegistration / Info: https://www.instagram.com/valleydriftclub/\n\nPlaceholder. Replace with real event details.
+DTEND:20260803T170000Z
 LOCATION:Crows Landing
 DTSTART:20260803T090000Z
-SUMMARY:Valley Drift Club Session
-UID:fe03a62e-589b-43c9-bcdf-09880d09b9e3@fe03.org
+SUMMARY:Valley Drift Club - Valley Drift Club Session
+UID:5509d12f-9534-4d58-8de3-a8a312cec57f@5509.org
+URL:https://www.instagram.com/valleydriftclub/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Good Luck League\nLocation: Sonoma Raceway\nRegistration / Info: https://www.goodluckleague.com\n\nDriver event. Verify final registration details.
+DTEND:20260720T170000Z
+LOCATION:Sonoma Raceway
+DTSTART:20260720T090000Z
+SUMMARY:Good Luck League - Good Luck League - Open Drift Day
+UID:e22d4313-b6fb-4e56-b19f-843981103467@e22d.org
+URL:https://www.goodluckleague.com
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: DriftSF\nLocation: Thunderhill Raceway\nRegistration / Info: https://www.drift-sf.com\n\nOpen practice placeholder. Verify final schedule.
+DTEND:20260727T160000Z
+LOCATION:Thunderhill Raceway
+DTSTART:20260727T100000Z
+SUMMARY:DriftSF - DriftSF Practice Day
+UID:93900e3f-7727-4d26-9d7f-285a3aa2df8c@9390.org
+URL:https://www.drift-sf.com
 END:VEVENT
 END:VCALENDAR
