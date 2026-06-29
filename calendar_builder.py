@@ -1,24 +1,16 @@
 from ics import Calendar, Event
-import yaml
 from datetime import datetime
-
-with open("sources.yaml", "r") as f:
-    config = yaml.safe_load(f)
 
 cal = Calendar()
 
-def add_event(title, start, duration_hours, location, description):
+def add_event(title, start_str, duration_hours, location, description):
     e = Event()
     e.name = title
-    e.begin = start
+    e.begin = datetime.strptime(start_str, "%Y-%m-%d %H:%M")
     e.duration = {"hours": duration_hours}
     e.location = location
     e.description = description
     cal.events.add(e)
-
-# ----------------------------
-# TEMP SAMPLE EVENTS (we replace with real scraping next step)
-# ----------------------------
 
 add_event(
     "Good Luck League - Open Drift Day",
@@ -44,6 +36,5 @@ add_event(
     "Tandem practice allowed"
 )
 
-# Output calendar
 with open("norcal_drift_calendar.ics", "w") as f:
     f.writelines(cal)
