@@ -46,12 +46,62 @@ body {
   color: #e10600;
 }
 
-.nav-links {
-  display: flex;
-  gap: 42px;
-  font-size: 14px;
-  font-weight: 900;
-  letter-spacing: 1px;
+.nav-links{
+display:flex;
+gap:40px;
+align-items:center;
+}
+
+.nav-links a{
+
+position:relative;
+
+color:white;
+
+text-decoration:none;
+
+font-size:14px;
+
+font-weight:900;
+
+letter-spacing:1px;
+
+transition:.25s;
+
+padding-bottom:6px;
+
+}
+
+.nav-links a:hover{
+
+color:#e10600;
+
+}
+
+.nav-links a::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+bottom:0;
+
+width:0;
+
+height:2px;
+
+background:#e10600;
+
+transition:.25s;
+
+}
+
+.nav-links a:hover::after{
+
+width:100%;
+
 }
 
 .logo-wrap {
