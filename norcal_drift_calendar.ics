@@ -2,30 +2,147 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
-DESCRIPTION:Promoter: Valley Drift Club\nLocation: Crows Landing\nRegistration / Info: https://www.instagram.com/valleydriftclub/\n\nPlaceholder. Replace with real event details.
-DTEND:20260803T170000Z
-LOCATION:Crows Landing
-DTSTART:20260803T090000Z
-SUMMARY:Valley Drift Club - Valley Drift Club Session
-UID:5509d12f-9534-4d58-8de3-a8a312cec57f@5509.org
-URL:https://www.instagram.com/valleydriftclub/
+DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/2026-schedule\n\nSingle-day Drift Central event.
+DTEND:20260705T170000Z
+LOCATION:Salinas Municipal Airport
+DTSTART:20260705T070000Z
+SUMMARY:Drift Central - July Drift Event
+UID:32db1e19-0d24-4c49-a96a-0b848873cfb5@32db.org
+URL:https://driftcentral.com/2026-schedule
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Promoter: Good Luck League\nLocation: Sonoma Raceway\nRegistration / Info: https://www.goodluckleague.com\n\nDriver event. Verify final registration details.
-DTEND:20260720T170000Z
-LOCATION:Sonoma Raceway
-DTSTART:20260720T090000Z
-SUMMARY:Good Luck League - Good Luck League - Open Drift Day
-UID:e22d4313-b6fb-4e56-b19f-843981103467@e22d.org
-URL:https://www.goodluckleague.com
+DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/2026-schedule\n\nDay 2 of 2-day Drift Central event.
+DTEND:20260607T170000Z
+LOCATION:Salinas Municipal Airport
+DTSTART:20260607T070000Z
+SUMMARY:Drift Central - June Drift Event - Day 2
+UID:bd50adad-18d2-4d30-b298-a907766687b0@bd50.org
+URL:https://driftcentral.com/2026-schedule
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Promoter: DriftSF\nLocation: Thunderhill Raceway\nRegistration / Info: https://www.drift-sf.com\n\nOpen practice placeholder. Verify final schedule.
-DTEND:20260727T160000Z
+DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/2026-schedule\n\nDay 1 of 2-day Drift Central event.
+DTEND:20260307T170000Z
+LOCATION:Salinas Municipal Airport
+DTSTART:20260307T070000Z
+SUMMARY:Drift Central - March Drift Event
+UID:55aac967-723f-412c-a55f-7d2630b98cc7@55aa.org
+URL:https://driftcentral.com/2026-schedule
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/2026-schedule\n\nDay 1 of 2-day Drift Central event.
+DTEND:20260404T170000Z
+LOCATION:Salinas Municipal Airport
+DTSTART:20260404T070000Z
+SUMMARY:Drift Central - April Drift Event
+UID:68e5606c-f1e4-4d5c-81fb-ca502565826a@68e5.org
+URL:https://driftcentral.com/2026-schedule
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway\nRegistration / Info: https://bayareadrifting.com/schedule\n\nBeginner & Intermediate Drift School.
+DTEND:20260913T170000Z
 LOCATION:Thunderhill Raceway
-DTSTART:20260727T100000Z
-SUMMARY:DriftSF - DriftSF Practice Day
-UID:93900e3f-7727-4d26-9d7f-285a3aa2df8c@9390.org
-URL:https://www.drift-sf.com
+DTSTART:20260913T080000Z
+SUMMARY:Bay Area Drifting - Thunderhill Drift School - Day 2
+UID:7b15b049-b7bc-4230-909b-e40942d08312@7b15.org
+URL:https://bayareadrifting.com/schedule
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Fast In Fast Out\nLocation: Sonoma Raceway\nRegistration / Info: https://fastinfastouttrackdays.com/products/drift-september-18th-20th-2026-sonoma-raceway-copy\n\nSunday.
+DTEND:20260920T180000Z
+LOCATION:Sonoma Raceway
+DTSTART:20260920T080000Z
+SUMMARY:Fast In Fast Out - Fast In Fast Out Drift
+UID:1692ac12-60a5-4aec-8452-fe69cbeb787c@1692.org
+URL:https://fastinfastouttrackdays.com/products/drift-september-18th-20th-2026-sonoma-raceway-copy
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Fast In Fast Out\nLocation: Sonoma Raceway\nRegistration / Info: https://fastinfastouttrackdays.com/products/drift-september-18th-20th-2026-sonoma-raceway-copy\n\nFriday.
+DTEND:20260918T180000Z
+LOCATION:Sonoma Raceway
+DTSTART:20260918T080000Z
+SUMMARY:Fast In Fast Out - Fast In Fast Out Drift
+UID:c02f6b9d-ba46-4e7c-a8f6-e55080e779e8@c02f.org
+URL:https://fastinfastouttrackdays.com/products/drift-september-18th-20th-2026-sonoma-raceway-copy
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway\nRegistration / Info: https://bayareadrifting.com/schedule\n\nBeginner & Intermediate Drift School.
+DTEND:20260808T170000Z
+LOCATION:Thunderhill Raceway
+DTSTART:20260808T080000Z
+SUMMARY:Bay Area Drifting - Thunderhill Drift School
+UID:00c1f257-0f5a-4e42-bfb1-ad0a9a4295fa@00c1.org
+URL:https://bayareadrifting.com/schedule
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway\nRegistration / Info: https://bayareadrifting.com/schedule\n\nBeginner & Intermediate Drift School.
+DTEND:20260809T170000Z
+LOCATION:Thunderhill Raceway
+DTSTART:20260809T080000Z
+SUMMARY:Bay Area Drifting - Thunderhill Drift School - Day 2
+UID:25b050ac-8797-4d14-9302-51e331a96e6b@25b0.org
+URL:https://bayareadrifting.com/schedule
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/2026-schedule\n\nDay 2 of 2-day Drift Central event.
+DTEND:20260405T170000Z
+LOCATION:Salinas Municipal Airport
+DTSTART:20260405T070000Z
+SUMMARY:Drift Central - April Drift Event - Day 2
+UID:c86dbd4c-ab11-4454-8dad-0ebbd6856475@c86d.org
+URL:https://driftcentral.com/2026-schedule
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/2026-schedule\n\nDay 2 of 2-day Drift Central event.
+DTEND:20260308T170000Z
+LOCATION:Salinas Municipal Airport
+DTSTART:20260308T070000Z
+SUMMARY:Drift Central - March Drift Event - Day 2
+UID:ba320567-efa4-4147-b809-ae1c4c53a7b7@ba32.org
+URL:https://driftcentral.com/2026-schedule
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Fast In Fast Out\nLocation: Sonoma Raceway\nRegistration / Info: https://fastinfastouttrackdays.com/products/drift-september-18th-20th-2026-sonoma-raceway-copy\n\nSaturday.
+DTEND:20260919T180000Z
+LOCATION:Sonoma Raceway
+DTSTART:20260919T080000Z
+SUMMARY:Fast In Fast Out - Fast In Fast Out Drift
+UID:e6f0522d-6fde-444a-b7ba-a63a6d471ce6@e6f0.org
+URL:https://fastinfastouttrackdays.com/products/drift-september-18th-20th-2026-sonoma-raceway-copy
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/2026-schedule\n\nDay 2 of 2-day Drift Central event.
+DTEND:20260809T170000Z
+LOCATION:Salinas Municipal Airport
+DTSTART:20260809T070000Z
+SUMMARY:Drift Central - August Drift Event - Day 2
+UID:d5f1f274-6f4c-4fc1-8eff-34b225847b8a@d5f1.org
+URL:https://driftcentral.com/2026-schedule
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway\nRegistration / Info: https://bayareadrifting.com/schedule\n\nBeginner & Intermediate Drift School.
+DTEND:20260912T170000Z
+LOCATION:Thunderhill Raceway
+DTSTART:20260912T080000Z
+SUMMARY:Bay Area Drifting - Thunderhill Drift School
+UID:c5b3f555-1eee-4e28-ab70-6206f3521a16@c5b3.org
+URL:https://bayareadrifting.com/schedule
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/2026-schedule\n\nDay 1 of 2-day Drift Central event.
+DTEND:20260606T170000Z
+LOCATION:Salinas Municipal Airport
+DTSTART:20260606T070000Z
+SUMMARY:Drift Central - June Drift Event
+UID:0220ab6a-10ad-4b02-8286-ec1f92242600@0220.org
+URL:https://driftcentral.com/2026-schedule
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/2026-schedule\n\nDay 1 of 2-day Drift Central event.
+DTEND:20260808T170000Z
+LOCATION:Salinas Municipal Airport
+DTSTART:20260808T070000Z
+SUMMARY:Drift Central - August Drift Event
+UID:db98ec9e-87b8-4ebb-9bc4-e5e2c947ec21@db98.org
+URL:https://driftcentral.com/2026-schedule
 END:VEVENT
 END:VCALENDAR
