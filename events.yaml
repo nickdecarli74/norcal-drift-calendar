@@ -1,24 +1,141 @@
 events:
-  - title: Good Luck League - Open Drift Day
-    promoter: Good Luck League
-    start: "2026-07-20 09:00"
-    end: "2026-07-20 17:00"
-    location: Sonoma Raceway
-    url: https://www.goodluckleague.com
-    notes: Driver event. Verify final registration details.
 
-  - title: DriftSF Practice Day
-    promoter: DriftSF
-    start: "2026-07-27 10:00"
-    end: "2026-07-27 16:00"
+  # ==========================
+  # Drift Central - Salinas
+  # ==========================
+
+  - title: March Drift Event
+    promoter: Drift Central
+    start: "2026-03-07 07:00"
+    end: "2026-03-07 17:00"
+    location: Salinas Municipal Airport
+    url: https://driftcentral.com/2026-schedule
+    notes: Day 1 of 2-day Drift Central event.
+
+  - title: March Drift Event - Day 2
+    promoter: Drift Central
+    start: "2026-03-08 07:00"
+    end: "2026-03-08 17:00"
+    location: Salinas Municipal Airport
+    url: https://driftcentral.com/2026-schedule
+    notes: Day 2 of 2-day Drift Central event.
+
+  - title: April Drift Event
+    promoter: Drift Central
+    start: "2026-04-04 07:00"
+    end: "2026-04-04 17:00"
+    location: Salinas Municipal Airport
+    url: https://driftcentral.com/2026-schedule
+    notes: Day 1 of 2-day Drift Central event.
+
+  - title: April Drift Event - Day 2
+    promoter: Drift Central
+    start: "2026-04-05 07:00"
+    end: "2026-04-05 17:00"
+    location: Salinas Municipal Airport
+    url: https://driftcentral.com/2026-schedule
+    notes: Day 2 of 2-day Drift Central event.
+
+  - title: June Drift Event
+    promoter: Drift Central
+    start: "2026-06-06 07:00"
+    end: "2026-06-06 17:00"
+    location: Salinas Municipal Airport
+    url: https://driftcentral.com/2026-schedule
+    notes: Day 1 of 2-day Drift Central event.
+
+  - title: June Drift Event - Day 2
+    promoter: Drift Central
+    start: "2026-06-07 07:00"
+    end: "2026-06-07 17:00"
+    location: Salinas Municipal Airport
+    url: https://driftcentral.com/2026-schedule
+    notes: Day 2 of 2-day Drift Central event.
+
+  - title: July Drift Event
+    promoter: Drift Central
+    start: "2026-07-05 07:00"
+    end: "2026-07-05 17:00"
+    location: Salinas Municipal Airport
+    url: https://driftcentral.com/2026-schedule
+    notes: Single-day Drift Central event.
+
+  - title: August Drift Event
+    promoter: Drift Central
+    start: "2026-08-08 07:00"
+    end: "2026-08-08 17:00"
+    location: Salinas Municipal Airport
+    url: https://driftcentral.com/2026-schedule
+    notes: Day 1 of 2-day Drift Central event.
+
+  - title: August Drift Event - Day 2
+    promoter: Drift Central
+    start: "2026-08-09 07:00"
+    end: "2026-08-09 17:00"
+    location: Salinas Municipal Airport
+    url: https://driftcentral.com/2026-schedule
+    notes: Day 2 of 2-day Drift Central event.
+
+  # ==========================
+  # Bay Area Drifting
+  # ==========================
+
+  - title: Thunderhill Drift School
+    promoter: Bay Area Drifting
+    start: "2026-08-08 08:00"
+    end: "2026-08-08 17:00"
     location: Thunderhill Raceway
-    url: https://www.drift-sf.com
-    notes: Open practice placeholder. Verify final schedule.
+    url: https://bayareadrifting.com/schedule
+    notes: Beginner & Intermediate Drift School.
 
-  - title: Valley Drift Club Session
-    promoter: Valley Drift Club
-    start: "2026-08-03 09:00"
-    end: "2026-08-03 17:00"
-    location: Crows Landing
-    url: https://www.instagram.com/valleydriftclub/
-    notes: Placeholder. Replace with real event details.
+  - title: Thunderhill Drift School - Day 2
+    promoter: Bay Area Drifting
+    start: "2026-08-09 08:00"
+    end: "2026-08-09 17:00"
+    location: Thunderhill Raceway
+    url: https://bayareadrifting.com/schedule
+    notes: Beginner & Intermediate Drift School.
+
+  - title: Thunderhill Drift School
+    promoter: Bay Area Drifting
+    start: "2026-09-12 08:00"
+    end: "2026-09-12 17:00"
+    location: Thunderhill Raceway
+    url: https://bayareadrifting.com/schedule
+    notes: Beginner & Intermediate Drift School.
+
+  - title: Thunderhill Drift School - Day 2
+    promoter: Bay Area Drifting
+    start: "2026-09-13 08:00"
+    end: "2026-09-13 17:00"
+    location: Thunderhill Raceway
+    url: https://bayareadrifting.com/schedule
+    notes: Beginner & Intermediate Drift School.
+
+  # ==========================
+  # Sonoma Raceway
+  # ==========================
+
+  - title: Fast In Fast Out Drift
+    promoter: Fast In Fast Out
+    start: "2026-09-18 08:00"
+    end: "2026-09-18 18:00"
+    location: Sonoma Raceway
+    url: https://fastinfastouttrackdays.com/products/drift-september-18th-20th-2026-sonoma-raceway-copy
+    notes: Friday.
+
+  - title: Fast In Fast Out Drift
+    promoter: Fast In Fast Out
+    start: "2026-09-19 08:00"
+    end: "2026-09-19 18:00"
+    location: Sonoma Raceway
+    url: https://fastinfastouttrackdays.com/products/drift-september-18th-20th-2026-sonoma-raceway-copy
+    notes: Saturday.
+
+  - title: Fast In Fast Out Drift
+    promoter: Fast In Fast Out
+    start: "2026-09-20 08:00"
+    end: "2026-09-20 18:00"
+    location: Sonoma Raceway
+    url: https://fastinfastouttrackdays.com/products/drift-september-18th-20th-2026-sonoma-raceway-copy
+    notes: Sunday.
