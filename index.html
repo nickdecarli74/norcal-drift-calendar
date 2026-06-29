@@ -1,187 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>DriftCal</title>
 
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-
-background:#050505;
-font-family:Arial,Helvetica,sans-serif;
-color:white;
-
+body {
+  background: #030303;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.hero{
-
-min-height:100vh;
-
-display:flex;
-justify-content:center;
-align-items:center;
-
-padding:40px;
-
-background:
-linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.8)),
-url("assets/logo.png");
-
-background-size:cover;
-background-position:center;
-
+.hero {
+  min-height: 100vh;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background:
+    radial-gradient(circle at center, rgba(80,80,80,.14), transparent 45%),
+    linear-gradient(#050505, #000);
 }
 
-.content{
-
-text-align:center;
-max-width:900px;
-
-backdrop-filter:blur(4px);
-
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1300px;
+  margin-bottom: 70px;
 }
 
-.logo{
-
-width:min(900px,95vw);
-
-margin-bottom:20px;
-
+.nav-logo {
+  font-weight: 900;
+  font-style: italic;
+  font-size: 24px;
+  letter-spacing: -1px;
 }
 
-.tagline{
-
-font-size:28px;
-
-font-weight:300;
-
-letter-spacing:1px;
-
-color:#dddddd;
-
-margin-bottom:50px;
-
+.nav-logo span {
+  color: #e10600;
 }
 
-.subscribe{
-
-display:inline-block;
-
-background:#e10600;
-
-padding:18px 40px;
-
-border-radius:12px;
-
-font-size:24px;
-
-font-weight:bold;
-
-color:white;
-
-text-decoration:none;
-
-transition:.2s;
-
-box-shadow:
-0 0 30px rgba(225,6,0,.45);
-
+.nav-links {
+  display: flex;
+  gap: 42px;
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 1px;
 }
 
-.subscribe:hover{
-
-transform:translateY(-3px);
-
-box-shadow:
-0 0 45px rgba(225,6,0,.8);
-
+.main-logo {
+  width: min(820px, 95vw);
+  display: block;
+  margin: 0 auto 18px;
 }
 
-.info{
-
-margin-top:80px;
-
-font-size:18px;
-
-line-height:1.7;
-
-color:#cfcfcf;
-
-max-width:700px;
-
-margin-left:auto;
-margin-right:auto;
-
+.tagline {
+  font-size: 20px;
+  letter-spacing: 9px;
+  color: #ddd;
+  font-style: italic;
+  margin-bottom: 38px;
+  text-align: center;
 }
 
-footer{
-
-padding:30px;
-
-text-align:center;
-
-font-size:14px;
-
-color:#666;
-
+.subscribe {
+  display: inline-block;
+  background: #e10600;
+  color: white;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 20px;
+  letter-spacing: 1px;
+  padding: 18px 38px;
+  border-radius: 8px;
+  box-shadow: 0 0 34px rgba(225, 6, 0, .55);
+  transition: .2s;
 }
 
+.subscribe:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 50px rgba(225, 6, 0, .8);
+}
+
+.down {
+  margin-top: 46px;
+  font-size: 34px;
+  color: #aaa;
+}
+
+.event-card {
+  width: min(900px, 92vw);
+  margin-top: 36px;
+  border: 1px solid rgba(255,255,255,.12);
+  border-top: 4px solid #e10600;
+  border-radius: 16px;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.96), rgba(0,0,0,.72)),
+    radial-gradient(circle at right, rgba(225,6,0,.18), transparent 45%);
+  box-shadow: 0 0 35px rgba(0,0,0,.7);
+}
+
+.event-inner {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 34px;
+  padding: 34px;
+}
+
+.next {
+  color: #e10600;
+  font-weight: 900;
+  letter-spacing: 2px;
+  font-size: 13px;
+  margin-bottom: 22px;
+}
+
+.date {
+  border-right: 1px solid rgba(255,255,255,.18);
+  padding-right: 25px;
+  text-align: center;
+}
+
+.month {
+  font-size: 26px;
+  font-weight: 900;
+}
+
+.day {
+  font-size: 74px;
+  line-height: .9;
+  font-weight: 900;
+}
+
+.year {
+  font-size: 20px;
+  font-weight: 900;
+  color: #ccc;
+}
+
+.event-title {
+  font-size: 36px;
+  font-weight: 900;
+  font-style: italic;
+  margin-bottom: 18px;
+}
+
+.event-info {
+  color: #ddd;
+  line-height: 1.9;
+  font-size: 18px;
+}
+
+.view-btn {
+  margin-top: 22px;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  border: 1px solid #e10600;
+  border-radius: 8px;
+  padding: 12px 22px;
+  font-weight: 900;
+}
+
+.section-title {
+  width: min(900px, 92vw);
+  margin-top: 34px;
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 4px;
+}
+
+footer {
+  text-align: center;
+  color: #666;
+  padding: 28px;
+}
+
+@media (max-width: 700px) {
+  .nav-links {
+    display: none;
+  }
+
+  .tagline {
+    font-size: 14px;
+    letter-spacing: 4px;
+  }
+
+  .subscribe {
+    font-size: 16px;
+    padding: 16px 24px;
+  }
+
+  .event-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .date {
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,.18);
+    padding-bottom: 20px;
+  }
+}
 </style>
-
 </head>
 
 <body>
 
 <section class="hero">
 
-<div class="content">
+  <nav class="nav">
+    <div class="nav-logo">DRIFT<span>CAL</span></div>
+    <div class="nav-links">
+      <div>EVENTS</div>
+      <div>TRACKS</div>
+      <div>MEDIA</div>
+      <div>ABOUT</div>
+    </div>
+  </nav>
 
-<img class="logo" src="assets/driftcal-logo.png" alt="DriftCal Logo">
+  <img class="main-logo" src="assets/Drift Cal Logo 3.png" alt="DriftCal Logo">
 
-<div class="tagline">
+  <div class="tagline">NEVER MISS A DRIFT EVENT.</div>
 
-Never Miss A Drift Event.
+  <a class="subscribe" href="webcal://nickdecarli74.github.io/norcal-drift-calendar/norcal_drift_calendar.ics">
+    📅 SUBSCRIBE TO DRIFTCAL
+  </a>
 
-</div>
+  <div class="down">⌄</div>
 
-<a
-class="subscribe"
-href="webcal://nickdecarli74.github.io/norcal-drift-calendar/norcal_drift_calendar.ics">
+  <div class="event-card">
+    <div class="event-inner">
+      <div class="date">
+        <div class="next">NEXT EVENT</div>
+        <div class="month">JUL</div>
+        <div class="day">11</div>
+        <div class="year">2026</div>
+      </div>
 
-📅 Subscribe to DriftCal
+      <div>
+        <div class="event-title">HEAT WAVE</div>
+        <div class="event-info">
+          📍 Crows Landing, CA<br>
+          🏁 Valley Drift Club<br>
+          🕘 All Day Event
+        </div>
+        <a class="view-btn" href="https://www.valleydriftclub.com/">VIEW EVENT ›</a>
+      </div>
+    </div>
+  </div>
 
-</a>
-
-<div class="info">
-
-The easiest way to stay up to date with drift events throughout Northern California.
-
-Automatically synced with Apple Calendar.
-
-More features coming soon.
-
-</div>
-
-</div>
+  <div class="section-title">UPCOMING EVENTS</div>
 
 </section>
 
 <footer>
-
-© DriftCal
-
+  © DriftCal
 </footer>
 
 </body>
-
 </html>
