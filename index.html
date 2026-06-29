@@ -1,68 +1,187 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DriftCal</title>
-  <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      background: radial-gradient(circle at center, #333 0%, #050505 70%);
-      color: white;
-      font-family: Arial, sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-    .card {
-      padding: 40px 24px;
-      max-width: 420px;
-    }
-    h1 {
-      font-size: 54px;
-      margin: 0;
-      letter-spacing: 2px;
-      font-style: italic;
-    }
-    .cal {
-      color: #e10600;
-    }
-    p {
-      color: #ccc;
-      font-size: 18px;
-      margin: 16px 0 28px;
-    }
-    a.button {
-      display: inline-block;
-      background: #e10600;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 16px 24px;
-      border-radius: 10px;
-      font-size: 18px;
-    }
-    .small {
-      margin-top: 20px;
-      font-size: 13px;
-      color: #999;
-    }
-  </style>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>DriftCal</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:#050505;
+font-family:Arial,Helvetica,sans-serif;
+color:white;
+
+}
+
+.hero{
+
+min-height:100vh;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+padding:40px;
+
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.8)),
+url("assets/logo.png");
+
+background-size:cover;
+background-position:center;
+
+}
+
+.content{
+
+text-align:center;
+max-width:900px;
+
+backdrop-filter:blur(4px);
+
+}
+
+.logo{
+
+width:min(900px,95vw);
+
+margin-bottom:20px;
+
+}
+
+.tagline{
+
+font-size:28px;
+
+font-weight:300;
+
+letter-spacing:1px;
+
+color:#dddddd;
+
+margin-bottom:50px;
+
+}
+
+.subscribe{
+
+display:inline-block;
+
+background:#e10600;
+
+padding:18px 40px;
+
+border-radius:12px;
+
+font-size:24px;
+
+font-weight:bold;
+
+color:white;
+
+text-decoration:none;
+
+transition:.2s;
+
+box-shadow:
+0 0 30px rgba(225,6,0,.45);
+
+}
+
+.subscribe:hover{
+
+transform:translateY(-3px);
+
+box-shadow:
+0 0 45px rgba(225,6,0,.8);
+
+}
+
+.info{
+
+margin-top:80px;
+
+font-size:18px;
+
+line-height:1.7;
+
+color:#cfcfcf;
+
+max-width:700px;
+
+margin-left:auto;
+margin-right:auto;
+
+}
+
+footer{
+
+padding:30px;
+
+text-align:center;
+
+font-size:14px;
+
+color:#666;
+
+}
+
+</style>
+
 </head>
+
 <body>
-  <div class="card">
-    <h1>DRIFT<span class="cal">CAL</span></h1>
-    <p>Never miss a drift event.</p>
 
-    <a class="button" href="webcal://nickdecarli74.github.io/norcal-drift-calendar/norcal_drift_calendar.ics">
-      📅 Subscribe to Calendar
-    </a>
+<section class="hero">
 
-    <div class="small">
-      Works best on iPhone or Mac. If it does not open, copy the calendar link manually.
-    </div>
-  </div>
+<div class="content">
+
+<img class="logo" src="assets/logo.png">
+
+<div class="tagline">
+
+Never Miss A Drift Event.
+
+</div>
+
+<a
+class="subscribe"
+href="webcal://nickdecarli74.github.io/norcal-drift-calendar/norcal_drift_calendar.ics">
+
+📅 Subscribe to DriftCal
+
+</a>
+
+<div class="info">
+
+The easiest way to stay up to date with drift events throughout Northern California.
+
+Automatically synced with Apple Calendar.
+
+More features coming soon.
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+© DriftCal
+
+</footer>
+
 </body>
+
 </html>
