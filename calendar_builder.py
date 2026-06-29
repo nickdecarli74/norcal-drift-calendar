@@ -1,40 +1,38 @@
 from ics import Calendar, Event
 from datetime import datetime
+import yaml
+
+INPUT_FILE = "events.yaml"
+OUTPUT_FILE = "norcal_drift_calendar.ics"
+
+def parse_dt(value):
+    return datetime.strptime(value, "%Y-%m-%d %H:%M")
+
+with open(INPUT_FILE, "r", encoding="utf-8") as f:
+    data = yaml.safe_load(f)
 
 cal = Calendar()
 
-def add_event(title, start_str, duration_hours, location, description):
+for item in data.get("events", []):
     e = Event()
-    e.name = title
-    e.begin = datetime.strptime(start_str, "%Y-%m-%d %H:%M")
-    e.duration = {"hours": duration_hours}
-    e.location = location
-    e.description = description
+    e.name = f"{item.get('promoter', 'Drift')} - {item['title']}"
+    e.begin = parse_dt(item["start"])
+    e.end = parse_dt(item["end"])
+    e.location = item.get("location", "")
+
+    description_parts = [
+        f"Promoter: {item.get('promoter', '')}",
+        f"Location: {item.get('location', '')}",
+        f"Registration / Info: {item.get('url', '')}",
+        "",
+        item.get("notes", "")
+    ]
+    e.description = "\n".join(description_parts)
+
+    if item.get("url"):
+        e.url = item["url"]
+
     cal.events.add(e)
 
-add_event(
-    "Good Luck League - Open Drift Day",
-    "2026-07-20 09:00",
-    8,
-    "Sonoma Raceway",
-    "Driver: $250 | Helmet required | Beginner friendly"
-)
-
-add_event(
-    "DriftSF Practice Day",
-    "2026-07-27 10:00",
-    6,
-    "Thunderhill Raceway",
-    "DriftSF open practice session"
-)
-
-add_event(
-    "Valley Drift Club Session",
-    "2026-08-03 09:00",
-    8,
-    "Crows Landing",
-    "Tandem practice allowed"
-)
-
-with open("norcal_drift_calendar.ics", "w") as f:
+with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
     f.writelines(cal)
