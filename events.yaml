@@ -4,7 +4,8 @@ events:
   # Drift Central - Salinas
   # ==========================
 
-  - title: March Drift Event
+  - id: dc-2026-03-07
+    title: March Drift Event
     promoter: Drift Central
     start: "2026-03-07 07:00"
     end: "2026-03-07 17:00"
@@ -12,7 +13,8 @@ events:
     url: https://driftcentral.com/2026-schedule
     notes: Day 1 of 2-day Drift Central event.
 
-  - title: March Drift Event - Day 2
+  - id: dc-2026-03-08
+    title: March Drift Event - Day 2
     promoter: Drift Central
     start: "2026-03-08 07:00"
     end: "2026-03-08 17:00"
@@ -20,7 +22,8 @@ events:
     url: https://driftcentral.com/2026-schedule
     notes: Day 2 of 2-day Drift Central event.
 
-  - title: April Drift Event
+  - id: dc-2026-04-04
+    title: April Drift Event
     promoter: Drift Central
     start: "2026-04-04 07:00"
     end: "2026-04-04 17:00"
@@ -28,7 +31,8 @@ events:
     url: https://driftcentral.com/2026-schedule
     notes: Day 1 of 2-day Drift Central event.
 
-  - title: April Drift Event - Day 2
+  - id: dc-2026-04-05
+    title: April Drift Event - Day 2
     promoter: Drift Central
     start: "2026-04-05 07:00"
     end: "2026-04-05 17:00"
@@ -36,7 +40,8 @@ events:
     url: https://driftcentral.com/2026-schedule
     notes: Day 2 of 2-day Drift Central event.
 
-  - title: June Drift Event
+  - id: dc-2026-06-06
+    title: June Drift Event
     promoter: Drift Central
     start: "2026-06-06 07:00"
     end: "2026-06-06 17:00"
@@ -44,7 +49,8 @@ events:
     url: https://driftcentral.com/2026-schedule
     notes: Day 1 of 2-day Drift Central event.
 
-  - title: June Drift Event - Day 2
+  - id: dc-2026-06-07
+    title: June Drift Event - Day 2
     promoter: Drift Central
     start: "2026-06-07 07:00"
     end: "2026-06-07 17:00"
@@ -52,7 +58,8 @@ events:
     url: https://driftcentral.com/2026-schedule
     notes: Day 2 of 2-day Drift Central event.
 
-  - title: July Drift Event
+  - id: dc-2026-07-05
+    title: July Drift Event
     promoter: Drift Central
     start: "2026-07-05 07:00"
     end: "2026-07-05 17:00"
@@ -60,7 +67,8 @@ events:
     url: https://driftcentral.com/2026-schedule
     notes: Single-day Drift Central event.
 
-  - title: August Drift Event
+  - id: dc-2026-08-08
+    title: August Drift Event
     promoter: Drift Central
     start: "2026-08-08 07:00"
     end: "2026-08-08 17:00"
@@ -68,7 +76,8 @@ events:
     url: https://driftcentral.com/2026-schedule
     notes: Day 1 of 2-day Drift Central event.
 
-  - title: August Drift Event - Day 2
+  - id: dc-2026-08-09
+    title: August Drift Event - Day 2
     promoter: Drift Central
     start: "2026-08-09 07:00"
     end: "2026-08-09 17:00"
@@ -77,10 +86,60 @@ events:
     notes: Day 2 of 2-day Drift Central event.
 
   # ==========================
+  # Valley Drift Club - Crows Landing
+  # ==========================
+
+  - id: vdc-2026-07-11
+    title: Valley Drift Club Event
+    promoter: Valley Drift Club
+    start: "2026-07-11 07:00"
+    end: "2026-07-11 17:00"
+    location: NASA Crows Landing Airport
+    url: https://www.valleydriftclub.com/
+    notes: Valley Drift Club event.
+
+  - id: vdc-2026-08-29
+    title: Valley Drift Club Event
+    promoter: Valley Drift Club
+    start: "2026-08-29 07:00"
+    end: "2026-08-29 17:00"
+    location: NASA Crows Landing Airport
+    url: https://www.valleydriftclub.com/
+    notes: Valley Drift Club event.
+
+  - id: vdc-2026-09-26
+    title: Valley Drift Club Event
+    promoter: Valley Drift Club
+    start: "2026-09-26 07:00"
+    end: "2026-09-26 17:00"
+    location: NASA Crows Landing Airport
+    url: https://www.valleydriftclub.com/
+    notes: Valley Drift Club event.
+
+  - id: vdc-2026-11-21
+    title: Valley Drift Club Event
+    promoter: Valley Drift Club
+    start: "2026-11-21 07:00"
+    end: "2026-11-21 17:00"
+    location: NASA Crows Landing Airport
+    url: https://www.valleydriftclub.com/
+    notes: Valley Drift Club event.
+
+  - id: vdc-2026-12-19
+    title: Valley Drift Club Event
+    promoter: Valley Drift Club
+    start: "2026-12-19 07:00"
+    end: "2026-12-19 17:00"
+    location: NASA Crows Landing Airport
+    url: https://www.valleydriftclub.com/
+    notes: Valley Drift Club event.
+
+  # ==========================
   # Bay Area Drifting
   # ==========================
 
-  - title: Thunderhill Drift School
+  - id: bad-2026-08-08
+    title: Thunderhill Drift School
     promoter: Bay Area Drifting
     start: "2026-08-08 08:00"
     end: "2026-08-08 17:00"
@@ -88,7 +147,8 @@ events:
     url: https://bayareadrifting.com/schedule
     notes: Beginner & Intermediate Drift School.
 
-  - title: Thunderhill Drift School - Day 2
+  - id: bad-2026-08-09
+    title: Thunderhill Drift School - Day 2
     promoter: Bay Area Drifting
     start: "2026-08-09 08:00"
     end: "2026-08-09 17:00"
@@ -96,7 +156,8 @@ events:
     url: https://bayareadrifting.com/schedule
     notes: Beginner & Intermediate Drift School.
 
-  - title: Thunderhill Drift School
+  - id: bad-2026-09-12
+    title: Thunderhill Drift School
     promoter: Bay Area Drifting
     start: "2026-09-12 08:00"
     end: "2026-09-12 17:00"
@@ -104,7 +165,8 @@ events:
     url: https://bayareadrifting.com/schedule
     notes: Beginner & Intermediate Drift School.
 
-  - title: Thunderhill Drift School - Day 2
+  - id: bad-2026-09-13
+    title: Thunderhill Drift School - Day 2
     promoter: Bay Area Drifting
     start: "2026-09-13 08:00"
     end: "2026-09-13 17:00"
@@ -116,7 +178,8 @@ events:
   # Sonoma Raceway
   # ==========================
 
-  - title: Fast In Fast Out Drift
+  - id: fifo-2026-09-18
+    title: Fast In Fast Out Drift
     promoter: Fast In Fast Out
     start: "2026-09-18 08:00"
     end: "2026-09-18 18:00"
@@ -124,7 +187,8 @@ events:
     url: https://fastinfastouttrackdays.com/products/drift-september-18th-20th-2026-sonoma-raceway-copy
     notes: Friday.
 
-  - title: Fast In Fast Out Drift
+  - id: fifo-2026-09-19
+    title: Fast In Fast Out Drift
     promoter: Fast In Fast Out
     start: "2026-09-19 08:00"
     end: "2026-09-19 18:00"
@@ -132,7 +196,8 @@ events:
     url: https://fastinfastouttrackdays.com/products/drift-september-18th-20th-2026-sonoma-raceway-copy
     notes: Saturday.
 
-  - title: Fast In Fast Out Drift
+  - id: fifo-2026-09-20
+    title: Fast In Fast Out Drift
     promoter: Fast In Fast Out
     start: "2026-09-20 08:00"
     end: "2026-09-20 18:00"
