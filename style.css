@@ -2,111 +2,90 @@
 html{scroll-behavior:smooth}
 body{background:#020202;color:white;font-family:Arial,Helvetica,sans-serif;overflow-x:hidden}
 
-.smoke{
-  position:absolute;
-  width:70vw;
-  height:260px;
-  top:120px;
-  background:
-    radial-gradient(circle at 20% 50%, rgba(255,255,255,.22), transparent 18%),
-    radial-gradient(circle at 45% 35%, rgba(255,255,255,.14), transparent 20%),
-    radial-gradient(circle at 70% 55%, rgba(255,255,255,.18), transparent 18%),
-    radial-gradient(circle at 90% 40%, rgba(255,255,255,.12), transparent 20%);
-  filter:blur(24px);
-  opacity:.45;
-  pointer-events:none;
-  z-index:1;
-}
-
-.smoke-one{
-  left:-20vw;
-  animation:smokeLeft 24s ease-in-out infinite alternate;
-}
-
-.smoke-two{
-  right:-20vw;
-  animation:smokeRight 28s ease-in-out infinite alternate;
-}
-
-.smoke-three{
-  left:15vw;
-  top:190px;
-  opacity:.25;
-  animation:smokeSlow 36s ease-in-out infinite alternate;
-}
-
-@keyframes smokeLeft{
-  from{transform:translateX(-40px) scale(1)}
-  to{transform:translateX(90px) scale(1.15)}
-}
-
-@keyframes smokeRight{
-  from{transform:translateX(70px) scale(1.05)}
-  to{transform:translateX(-90px) scale(1.18)}
-}
-
-@keyframes smokeSlow{
-  from{transform:translateX(-30px) translateY(0)}
-  to{transform:translateX(40px) translateY(-18px)}
-}
-
 .hero{
   min-height:100vh;
   padding:32px 22px 70px;
+  background:
+    radial-gradient(circle at center top, rgba(255,255,255,.08), transparent 38%),
+    linear-gradient(#050505,#000);
+}
+
+.nav{
+  width:100%;
+  max-width:1200px;
+  margin:0 auto 70px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.nav-logo{
+  font-weight:900;
+  font-style:italic;
+  font-size:25px;
+  letter-spacing:-1px;
+}
+
+.nav-logo span{
+  color:#e10600;
+}
+
+.nav-links{
+  display:flex;
+  gap:40px;
+  align-items:center;
+}
+
+.nav-links a{
   position:relative;
-  overflow:hidden;
-  background:
-    radial-gradient(circle at center 28%, rgba(225,6,0,.20), transparent 18%),
-    radial-gradient(circle at center top, rgba(255,255,255,.10), transparent 34%),
-    linear-gradient(#030303 0%, #000 60%, #030303 100%);
+  color:white;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:900;
+  letter-spacing:1px;
+  transition:.25s;
+  padding-bottom:6px;
 }
 
-.hero::before{
+.nav-links a:hover{
+  color:#e10600;
+  transform:translateY(-2px);
+  text-shadow:0 0 14px rgba(225,6,0,.9);
+}
+
+.nav-links a::after{
   content:"";
   position:absolute;
-  inset:80px -12% auto -12%;
-  height:380px;
-  background:
-    radial-gradient(circle at 12% 50%, rgba(255,255,255,.26), transparent 16%),
-    radial-gradient(circle at 30% 30%, rgba(255,255,255,.14), transparent 18%),
-    radial-gradient(circle at 64% 34%, rgba(255,255,255,.18), transparent 18%),
-    radial-gradient(circle at 88% 50%, rgba(255,255,255,.26), transparent 18%);
-  filter:blur(30px);
-  opacity:.58;
-  animation:smokeDrift 18s ease-in-out infinite alternate;
-  pointer-events:none;
+  left:0;
+  bottom:0;
+  width:0;
+  height:2px;
+  background:#e10600;
+  transition:.25s;
 }
 
-.hero::after{
-  content:"";
-  position:absolute;
-  inset:auto -10% 0 -10%;
-  height:48%;
-  background:
-    repeating-linear-gradient(165deg, rgba(255,255,255,.045) 0 2px, transparent 2px 34px),
-    radial-gradient(ellipse at center top, rgba(225,6,0,.14), transparent 42%);
-  opacity:.34;
-  transform:skewY(-3deg);
-  pointer-events:none;
+.nav-links a:hover::after{
+  width:100%;
 }
 
-@keyframes smokeDrift{
-  from{transform:translateX(-35px) scale(1)}
-  to{transform:translateX(40px) scale(1.08)}
+.logo-wrap{
+  text-align:center;
 }
 
-.nav{position:relative;z-index:3;width:100%;max-width:1200px;margin:0 auto 58px;display:flex;justify-content:space-between;align-items:center}
-.nav-logo{font-weight:900;font-style:italic;font-size:25px;letter-spacing:-1px;text-shadow:0 0 12px rgba(225,6,0,.35)}
-.nav-logo span{color:#e10600}
-.nav-links{display:flex;gap:40px;align-items:center}
-.nav-links a{position:relative;color:white;text-decoration:none;font-size:14px;font-weight:900;letter-spacing:1px;transition:.25s;padding-bottom:6px}
-.nav-links a:hover{color:#e10600;transform:translateY(-2px);text-shadow:0 0 14px rgba(225,6,0,.9)}
-.nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:#e10600;transition:.25s}
-.nav-links a:hover::after{width:100%}
+.main-logo{
+  width:min(850px,96vw);
+  display:block;
+  margin:0 auto;
+}
 
-.logo-wrap{position:relative;z-index:2;text-align:center}
-.main-logo{width:min(980px,98vw);display:block;margin:0 auto;filter:drop-shadow(0 0 18px rgba(225,6,0,.45)) drop-shadow(0 0 40px rgba(255,255,255,.10))}
-.tagline{margin-top:-18px;font-size:18px;letter-spacing:12px;color:#eee;font-style:italic;text-align:center;text-shadow:0 0 14px rgba(255,255,255,.35)}
+.tagline{
+  margin-top:-10px;
+  font-size:18px;
+  letter-spacing:10px;
+  color:#ddd;
+  font-style:italic;
+  text-align:center;
+}
 
 .subscribe{margin-top:36px;display:inline-block;background:#e10600;color:white;text-decoration:none;font-weight:900;font-size:18px;letter-spacing:1px;padding:18px 38px;border-radius:8px;border:1px solid rgba(255,255,255,.20);box-shadow:0 0 30px rgba(225,6,0,.75), inset 0 0 18px rgba(255,255,255,.12);transition:.2s}
 .subscribe:hover{transform:translateY(-3px);box-shadow:0 0 55px rgba(225,6,0,.95), inset 0 0 18px rgba(255,255,255,.18)}
