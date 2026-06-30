@@ -307,41 +307,6 @@ function openEventModal(eventId){
 
   document.getElementById("modal-body").innerHTML = `
     <div class="modal-title">${e.title}</div>
-
-    <div class="modal-meta">
-      📅 ${p.full}<br>
-      📍 ${e.location}<br>
-      🏁 ${e.promoter}
-    </div>
-
-    <div class="modal-section">
-      <h3>EVENT NOTES</h3>
-      <div class="modal-meta">${e.notes || "More details coming soon."}</div>
-    </div>
-
-    <div class="modal-section">
-      <h3>MEDIA</h3>
-      <div class="modal-meta">Photos and videos will be added after the event.</div>
-    </div>
-
-    <a class="modal-link" href="${eventUrl(e)}" target="_blank">REGISTRATION / INFO ›</a>
-  `;
-
-  document.getElementById("event-modal").style.display = "flex";
-}
-
-function closeEventModal(){
-  document.getElementById("event-modal").style.display = "none";
-}
-
-function openEventModal(eventId){
-  const e = allEvents.find(x => x.id === eventId);
-  if(!e) return;
-
-  const p = formatDateParts(e.start);
-
-  document.getElementById("modal-body").innerHTML = `
-    <div class="modal-title">${e.title}</div>
     <div class="modal-meta">
       📅 ${p.full}<br>
       📍 ${e.location}<br>
