@@ -1,24 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>DriftCal</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DriftCal</title>
 
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
-<link rel="stylesheet" href="style.css?v=2">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="style.css?v=1">
 </head>
 
 <body>
 
 <section class="hero">
-
-  <div class="smoke smoke-one"></div>
-  <div class="smoke smoke-two"></div>
-  <div class="smoke smoke-three"></div>
-
   <nav class="nav">
     <div class="nav-logo">DRIFT<span>CAL</span></div>
+
     <div class="nav-links">
       <a href="#events">EVENTS</a>
       <a href="#calendar">CALENDAR</a>
@@ -27,14 +23,17 @@
     </div>
   </nav>
 
-  <div class="logo-wrap hero-showcase">
+  <div class="logo-wrap">
     <img class="main-logo" src="assets/driftcal-logo.png?v=10" alt="DriftCal Logo">
-    <div class="tagline">NORTHERN CALIFORNIA DRIFT EVENTS</div>
+
+    <div class="tagline">NEVER MISS A DRIFT EVENT.</div>
 
     <a class="subscribe" href="webcal://nickdecarli74.github.io/norcal-drift-calendar/norcal_drift_calendar.ics">
       📅 SUBSCRIBE TO DRIFTCAL
     </a>
   </div>
+
+  <div class="down">⌄</div>
 
   <div id="next-event" class="event-card"></div>
 
@@ -49,16 +48,17 @@
       <div id="calendar-title" class="calendar-title"></div>
       <button class="cal-btn" onclick="changeMonth(1)">NEXT ›</button>
     </div>
+
     <div id="calendar-grid" class="calendar-grid"></div>
   </div>
 
   <div id="tracks" class="section">
     <div class="section-title">TRACK MAP</div>
+
     <div class="map-wrap">
       <div id="track-map"></div>
     </div>
   </div>
-
 </section>
 
 <div id="event-modal" class="modal">
@@ -68,10 +68,12 @@
   </div>
 </div>
 
-<footer>© DriftCal</footer>
+<footer>
+  © DriftCal
+</footer>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="script.js?v=2"></script>
+<script src="script.js?v=1"></script>
 
 </body>
 </html>
