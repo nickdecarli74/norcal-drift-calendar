@@ -286,7 +286,7 @@ function renderCalendar(){
     html += `
       <div class="day-cell">
         <div class="day-number">${day}</div>
-        ${dayEvents.map(e => `<a class="event-pill" href="javascript:void(0)" onclick="openEventModal('${e.id}')">${e.promoter}</a>`).join("")}
+        ${dayEvents.map(e => `<button class="event-pill" type="button" onclick="openEventModal('${e.id}')">${e.promoter}</button>`).join("")}
       </div>
     `;
   }
