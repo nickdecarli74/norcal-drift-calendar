@@ -2,48 +2,39 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
-DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway\nRegistration / Info: https://bayareadrifting.com/schedule\n\nBeginner & Intermediate Drift School.
-DTEND:20260912T170000Z
-LOCATION:Thunderhill Raceway
-DTSTART:20260912T080000Z
-SUMMARY:Bay Area Drifting - Thunderhill Drift School
-UID:0cea469b-65cc-4ccd-9b53-88c1f0243518@0cea.org
-URL:https://bayareadrifting.com/schedule
-END:VEVENT
-BEGIN:VEVENT
 DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/2026-schedule\n\nAuto-imported from Drift Central schedule.
 DTEND:20260705T170000Z
 LOCATION:Salinas Municipal Airport
 DTSTART:20260705T070000Z
 SUMMARY:Drift Central - Drift Event
-UID:c4b672bf-e6c1-4ca0-bfd2-58490525413b@c4b6.org
-URL:https://driftcentral.com/2026-schedule
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/2026-schedule\n\nAuto-imported from Drift Central schedule.
-DTEND:20260607T170000Z
-LOCATION:Salinas Municipal Airport
-DTSTART:20260607T070000Z
-SUMMARY:Drift Central - 2 Drift Event - Day 2
-UID:0c6642d7-a9e1-49dc-9fe9-048895796df1@0c66.org
+UID:890388d7-3fcd-4121-b920-963d686ea9c4@8903.org
 URL:https://driftcentral.com/2026-schedule
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Promoter: Valley Drift Club\nLocation: NASA Crows Landing Airport\nRegistration / Info: https://www.valleydriftclub.com/\n\nValley Drift Club event.
-DTEND:20260711T170000Z
+DTEND:20261219T170000Z
 LOCATION:NASA Crows Landing Airport
-DTSTART:20260711T070000Z
+DTSTART:20261219T070000Z
 SUMMARY:Valley Drift Club - Valley Drift Club Event
-UID:053ecc01-44bb-4b6e-bba8-f472c49bc51e@053e.org
+UID:9671283c-664b-4fb3-8261-81a92a7b8c7e@9671.org
 URL:https://www.valleydriftclub.com/
 END:VEVENT
 BEGIN:VEVENT
+DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway\nRegistration / Info: https://bayareadrifting.com/schedule\n\nBeginner & Intermediate Drift School.
+DTEND:20260809T170000Z
+LOCATION:Thunderhill Raceway
+DTSTART:20260809T080000Z
+SUMMARY:Bay Area Drifting - Thunderhill Drift School - Day 2
+UID:1dd2d183-ded6-4313-b6bc-16a9a182ffc7@1dd2.org
+URL:https://bayareadrifting.com/schedule
+END:VEVENT
+BEGIN:VEVENT
 DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/2026-schedule\n\nAuto-imported from Drift Central schedule.
-DTEND:20260405T170000Z
+DTEND:20260606T170000Z
 LOCATION:Salinas Municipal Airport
-DTSTART:20260405T070000Z
-SUMMARY:Drift Central - 2 Drift Event - Day 2
-UID:b2517f4f-7f4c-4de0-b3c6-6a79aa0d1b68@b251.org
+DTSTART:20260606T070000Z
+SUMMARY:Drift Central - 2 Drift Event
+UID:e4cc0488-598a-49ff-a34c-db903c7e0f37@e4cc.org
 URL:https://driftcentral.com/2026-schedule
 END:VEVENT
 BEGIN:VEVENT
@@ -52,7 +43,7 @@ DTEND:20260829T170000Z
 LOCATION:NASA Crows Landing Airport
 DTSTART:20260829T070000Z
 SUMMARY:Valley Drift Club - Valley Drift Club Event
-UID:dcf37a69-de91-4e20-a18d-781f5532a683@dcf3.org
+UID:4d14efb8-8dbc-4650-b0d6-e80da1814ddf@4d14.org
 URL:https://www.valleydriftclub.com/
 END:VEVENT
 BEGIN:VEVENT
@@ -61,7 +52,7 @@ DTEND:20260913T170000Z
 LOCATION:Thunderhill Raceway
 DTSTART:20260913T080000Z
 SUMMARY:Bay Area Drifting - Thunderhill Drift School - Day 2
-UID:bb584790-4c61-4ae2-b004-a8e1755b3206@bb58.org
+UID:6528be2f-21fc-4ebb-ac97-ca8c5ffd018f@6528.org
 URL:https://bayareadrifting.com/schedule
 END:VEVENT
 BEGIN:VEVENT
@@ -70,61 +61,7 @@ DTEND:20260307T170000Z
 LOCATION:Salinas Municipal Airport
 DTSTART:20260307T070000Z
 SUMMARY:Drift Central - 2 Drift Event
-UID:3cb51a77-e2f1-4ec9-96f3-2bb13008c55f@3cb5.org
-URL:https://driftcentral.com/2026-schedule
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway\nRegistration / Info: https://bayareadrifting.com/schedule\n\nBeginner & Intermediate Drift School.
-DTEND:20260808T170000Z
-LOCATION:Thunderhill Raceway
-DTSTART:20260808T080000Z
-SUMMARY:Bay Area Drifting - Thunderhill Drift School
-UID:26f61075-3889-45ab-9df4-65c187550dac@26f6.org
-URL:https://bayareadrifting.com/schedule
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/2026-schedule\n\nAuto-imported from Drift Central schedule.
-DTEND:20260809T170000Z
-LOCATION:Salinas Municipal Airport
-DTSTART:20260809T070000Z
-SUMMARY:Drift Central - 2 Day Drift Event - Day 2
-UID:e3f7f155-df11-467d-869e-775887a45497@e3f7.org
-URL:https://driftcentral.com/2026-schedule
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Fast In Fast Out\nLocation: Sonoma Raceway\nRegistration / Info: https://fastinfastouttrackdays.com/products/drift-september-18th-20th-2026-sonoma-raceway-copy\n\nFriday.
-DTEND:20260918T180000Z
-LOCATION:Sonoma Raceway
-DTSTART:20260918T080000Z
-SUMMARY:Fast In Fast Out - Fast In Fast Out Drift
-UID:26a2de6e-024e-45c1-b889-f115efe79052@26a2.org
-URL:https://fastinfastouttrackdays.com/products/drift-september-18th-20th-2026-sonoma-raceway-copy
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Valley Drift Club\nLocation: NASA Crows Landing Airport\nRegistration / Info: https://www.valleydriftclub.com/\n\nValley Drift Club event.
-DTEND:20261219T170000Z
-LOCATION:NASA Crows Landing Airport
-DTSTART:20261219T070000Z
-SUMMARY:Valley Drift Club - Valley Drift Club Event
-UID:9db30c8e-e4e2-49d1-9c81-58dfe86ba327@9db3.org
-URL:https://www.valleydriftclub.com/
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Fast In Fast Out\nLocation: Sonoma Raceway\nRegistration / Info: https://fastinfastouttrackdays.com/products/drift-september-18th-20th-2026-sonoma-raceway-copy\n\nSaturday.
-DTEND:20260919T180000Z
-LOCATION:Sonoma Raceway
-DTSTART:20260919T080000Z
-SUMMARY:Fast In Fast Out - Fast In Fast Out Drift
-UID:4d7b7bb4-40d6-4ede-8a31-97de0d6525a1@4d7b.org
-URL:https://fastinfastouttrackdays.com/products/drift-september-18th-20th-2026-sonoma-raceway-copy
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/2026-schedule\n\nAuto-imported from Drift Central schedule.
-DTEND:20260404T170000Z
-LOCATION:Salinas Municipal Airport
-DTSTART:20260404T070000Z
-SUMMARY:Drift Central - 2 Drift Event
-UID:f8acbddf-9cd9-407e-8b54-2c94118f420d@f8ac.org
+UID:0e839fee-16e9-4c9d-8876-b523ea4f6aea@0e83.org
 URL:https://driftcentral.com/2026-schedule
 END:VEVENT
 BEGIN:VEVENT
@@ -133,43 +70,16 @@ DTEND:20260308T170000Z
 LOCATION:Salinas Municipal Airport
 DTSTART:20260308T070000Z
 SUMMARY:Drift Central - 2 Drift Event - Day 2
-UID:9804e80a-c50b-464f-890f-e855f6c1d729@9804.org
+UID:6d818736-f7e1-46a5-8a6b-aa47d7c038f0@6d81.org
 URL:https://driftcentral.com/2026-schedule
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway\nRegistration / Info: https://bayareadrifting.com/schedule\n\nBeginner & Intermediate Drift School.
+DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/2026-schedule\n\nAuto-imported from Drift Central schedule.
 DTEND:20260809T170000Z
-LOCATION:Thunderhill Raceway
-DTSTART:20260809T080000Z
-SUMMARY:Bay Area Drifting - Thunderhill Drift School - Day 2
-UID:b55863cd-8c14-416f-8031-ff3c8d9e2a57@b558.org
-URL:https://bayareadrifting.com/schedule
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/2026-schedule\n\nAuto-imported from Drift Central schedule.
-DTEND:20260808T170000Z
 LOCATION:Salinas Municipal Airport
-DTSTART:20260808T070000Z
-SUMMARY:Drift Central - 2 Day Drift Event
-UID:939e13d7-8710-48bd-8bf2-d99d16d4c6a7@939e.org
-URL:https://driftcentral.com/2026-schedule
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Valley Drift Club\nLocation: NASA Crows Landing Airport\nRegistration / Info: https://www.valleydriftclub.com/\n\nValley Drift Club event.
-DTEND:20260926T170000Z
-LOCATION:NASA Crows Landing Airport
-DTSTART:20260926T070000Z
-SUMMARY:Valley Drift Club - Valley Drift Club Event
-UID:8b446a46-ee21-4bbe-a41d-cc644db99ceb@8b44.org
-URL:https://www.valleydriftclub.com/
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/2026-schedule\n\nAuto-imported from Drift Central schedule.
-DTEND:20260606T170000Z
-LOCATION:Salinas Municipal Airport
-DTSTART:20260606T070000Z
-SUMMARY:Drift Central - 2 Drift Event
-UID:02adda01-029f-4496-903a-ca7dbbd2f764@02ad.org
+DTSTART:20260809T070000Z
+SUMMARY:Drift Central - 2 Day Drift Event - Day 2
+UID:8a50ce51-e95e-4787-b91d-67839ad23a9b@8a50.org
 URL:https://driftcentral.com/2026-schedule
 END:VEVENT
 BEGIN:VEVENT
@@ -178,8 +88,44 @@ DTEND:20261121T170000Z
 LOCATION:NASA Crows Landing Airport
 DTSTART:20261121T070000Z
 SUMMARY:Valley Drift Club - Valley Drift Club Event
-UID:1a7ac412-c2ab-4cc6-9823-5c945d40fd9a@1a7a.org
+UID:f1253370-4262-47c5-933f-30e63f5e74a9@f125.org
 URL:https://www.valleydriftclub.com/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway\nRegistration / Info: https://bayareadrifting.com/schedule\n\nBeginner & Intermediate Drift School.
+DTEND:20260912T170000Z
+LOCATION:Thunderhill Raceway
+DTSTART:20260912T080000Z
+SUMMARY:Bay Area Drifting - Thunderhill Drift School
+UID:11715b37-c0e1-44e0-bb0d-a7f39412cb4d@1171.org
+URL:https://bayareadrifting.com/schedule
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/2026-schedule\n\nAuto-imported from Drift Central schedule.
+DTEND:20260405T170000Z
+LOCATION:Salinas Municipal Airport
+DTSTART:20260405T070000Z
+SUMMARY:Drift Central - 2 Drift Event - Day 2
+UID:9436ddb1-0cb8-40b6-8153-235ca94ad6c9@9436.org
+URL:https://driftcentral.com/2026-schedule
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/2026-schedule\n\nAuto-imported from Drift Central schedule.
+DTEND:20260808T170000Z
+LOCATION:Salinas Municipal Airport
+DTSTART:20260808T070000Z
+SUMMARY:Drift Central - 2 Day Drift Event
+UID:a0714fce-89ce-4a06-b040-1b0f491f672f@a071.org
+URL:https://driftcentral.com/2026-schedule
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway\nRegistration / Info: https://bayareadrifting.com/schedule\n\nBeginner & Intermediate Drift School.
+DTEND:20260808T170000Z
+LOCATION:Thunderhill Raceway
+DTSTART:20260808T080000Z
+SUMMARY:Bay Area Drifting - Thunderhill Drift School
+UID:9b2fd537-0510-4de1-a086-79f563c12d6a@9b2f.org
+URL:https://bayareadrifting.com/schedule
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Promoter: Fast In Fast Out\nLocation: Sonoma Raceway\nRegistration / Info: https://fastinfastouttrackdays.com/products/drift-september-18th-20th-2026-sonoma-raceway-copy\n\nSunday.
@@ -187,7 +133,61 @@ DTEND:20260920T180000Z
 LOCATION:Sonoma Raceway
 DTSTART:20260920T080000Z
 SUMMARY:Fast In Fast Out - Fast In Fast Out Drift
-UID:48b67c5c-2282-450f-8777-a725a9fa7134@48b6.org
+UID:be937934-bd35-48c7-856e-2e0bd67e2a3a@be93.org
 URL:https://fastinfastouttrackdays.com/products/drift-september-18th-20th-2026-sonoma-raceway-copy
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Fast In Fast Out\nLocation: Sonoma Raceway\nRegistration / Info: https://fastinfastouttrackdays.com/products/drift-september-18th-20th-2026-sonoma-raceway-copy\n\nFriday.
+DTEND:20260918T180000Z
+LOCATION:Sonoma Raceway
+DTSTART:20260918T080000Z
+SUMMARY:Fast In Fast Out - Fast In Fast Out Drift
+UID:158ab3c7-69f3-4244-be46-c1d106dad527@158a.org
+URL:https://fastinfastouttrackdays.com/products/drift-september-18th-20th-2026-sonoma-raceway-copy
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/2026-schedule\n\nAuto-imported from Drift Central schedule.
+DTEND:20260404T170000Z
+LOCATION:Salinas Municipal Airport
+DTSTART:20260404T070000Z
+SUMMARY:Drift Central - 2 Drift Event
+UID:cf2c4062-9383-4eac-8796-a2bb96f235ad@cf2c.org
+URL:https://driftcentral.com/2026-schedule
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Fast In Fast Out\nLocation: Sonoma Raceway\nRegistration / Info: https://fastinfastouttrackdays.com/products/drift-september-18th-20th-2026-sonoma-raceway-copy\n\nSaturday.
+DTEND:20260919T180000Z
+LOCATION:Sonoma Raceway
+DTSTART:20260919T080000Z
+SUMMARY:Fast In Fast Out - Fast In Fast Out Drift
+UID:18dff589-5874-406e-be20-8ed49343d408@18df.org
+URL:https://fastinfastouttrackdays.com/products/drift-september-18th-20th-2026-sonoma-raceway-copy
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Valley Drift Club\nLocation: NASA Crows Landing Airport\nRegistration / Info: https://www.valleydriftclub.com/\n\nValley Drift Club event.
+DTEND:20260926T170000Z
+LOCATION:NASA Crows Landing Airport
+DTSTART:20260926T070000Z
+SUMMARY:Valley Drift Club - Valley Drift Club Event
+UID:5a0b0eff-0c71-4be7-8277-6018cb8294a0@5a0b.org
+URL:https://www.valleydriftclub.com/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/2026-schedule\n\nAuto-imported from Drift Central schedule.
+DTEND:20260607T170000Z
+LOCATION:Salinas Municipal Airport
+DTSTART:20260607T070000Z
+SUMMARY:Drift Central - 2 Drift Event - Day 2
+UID:a2b9d022-c84b-40e6-b925-97feb3efbad3@a2b9.org
+URL:https://driftcentral.com/2026-schedule
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Valley Drift Club\nLocation: NASA Crows Landing Airport\nRegistration / Info: https://www.valleydriftclub.com/\n\nValley Drift Club event.
+DTEND:20260711T170000Z
+LOCATION:NASA Crows Landing Airport
+DTSTART:20260711T070000Z
+SUMMARY:Valley Drift Club - Valley Drift Club Event
+UID:27162363-46b2-4500-9589-7066a6efdd1c@2716.org
+URL:https://www.valleydriftclub.com/
 END:VEVENT
 END:VCALENDAR
