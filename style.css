@@ -2,6 +2,54 @@
 html{scroll-behavior:smooth}
 body{background:#020202;color:white;font-family:Arial,Helvetica,sans-serif;overflow-x:hidden}
 
+.smoke{
+  position:absolute;
+  width:70vw;
+  height:260px;
+  top:120px;
+  background:
+    radial-gradient(circle at 20% 50%, rgba(255,255,255,.22), transparent 18%),
+    radial-gradient(circle at 45% 35%, rgba(255,255,255,.14), transparent 20%),
+    radial-gradient(circle at 70% 55%, rgba(255,255,255,.18), transparent 18%),
+    radial-gradient(circle at 90% 40%, rgba(255,255,255,.12), transparent 20%);
+  filter:blur(24px);
+  opacity:.45;
+  pointer-events:none;
+  z-index:1;
+}
+
+.smoke-one{
+  left:-20vw;
+  animation:smokeLeft 24s ease-in-out infinite alternate;
+}
+
+.smoke-two{
+  right:-20vw;
+  animation:smokeRight 28s ease-in-out infinite alternate;
+}
+
+.smoke-three{
+  left:15vw;
+  top:190px;
+  opacity:.25;
+  animation:smokeSlow 36s ease-in-out infinite alternate;
+}
+
+@keyframes smokeLeft{
+  from{transform:translateX(-40px) scale(1)}
+  to{transform:translateX(90px) scale(1.15)}
+}
+
+@keyframes smokeRight{
+  from{transform:translateX(70px) scale(1.05)}
+  to{transform:translateX(-90px) scale(1.18)}
+}
+
+@keyframes smokeSlow{
+  from{transform:translateX(-30px) translateY(0)}
+  to{transform:translateX(40px) translateY(-18px)}
+}
+
 .hero{
   min-height:100vh;
   padding:32px 22px 70px;
