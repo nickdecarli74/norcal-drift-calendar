@@ -233,16 +233,4 @@ footer{text-align:center;color:#666;padding:34px}
     font-size:42px;
   }
 }
-  .nav-links{display:none}
-  .nav{margin-bottom:46px}
-  .main-logo{width:min(760px,112vw)}
-  .tagline{font-size:13px;letter-spacing:4px;margin-top:8px}
-  .subscribe{font-size:15px;padding:16px 22px}
-  .event-inner{grid-template-columns:1fr}
-  .date{border-right:none;border-bottom:1px solid rgba(255,255,255,.18);padding-right:0;padding-bottom:22px}
-  .calendar-grid{gap:5px}
-  .day-cell{min-height:78px;padding:7px}
-  .event-pill{font-size:10px;padding:5px}
-  #track-map{height:430px}
-  .map-wrap::before{font-size:42px}
-}
+  
