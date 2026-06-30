@@ -1,6 +1,7 @@
 import yaml
 from scrapers import drift_central
 from scrapers import bay_area_drifting
+from scrapers import fast_in_fast_out
 
 EVENTS_FILE = "events.yaml"
 MIN_EVENTS_REQUIRED = 1
@@ -44,6 +45,7 @@ incoming_events = []
 
 drift_central_events = drift_central.get_events()
 bay_area_events = bay_area_drifting.get_events()
+fifo_events = fast_in_fast_out.get_events()
 
 if len(drift_central_events) < MIN_EVENTS_REQUIRED:
     raise RuntimeError(
@@ -54,6 +56,7 @@ if len(drift_central_events) < MIN_EVENTS_REQUIRED:
 
 incoming_events.extend(drift_central_events)
 incoming_events.extend(bay_area_events)
+incoming_events.extend(fifo_events)
 
 merged_events, added, updated = merge_events(existing_events, incoming_events)
 
