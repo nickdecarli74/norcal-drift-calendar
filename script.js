@@ -224,6 +224,7 @@ fetch("events.json?v=" + Date.now())
     renderNextEvent(allEvents);
     renderUpcoming(allEvents);
     renderCalendar();
+    renderTrackMap();
   })
   .catch(() => {
     document.getElementById("next-event").innerHTML = "<div class='event-inner'>Could not load events.</div>";
