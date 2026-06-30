@@ -224,7 +224,13 @@ function renderTrackMap(){
       .bindPopup(popupHtml);
   });
 }
+function openSubscribeModal(){
+  document.getElementById("subscribe-modal").style.display = "flex";
+}
 
+function closeSubscribeModal(){
+  document.getElementById("subscribe-modal").style.display = "none";
+}
 fetch("events.json?v=" + Date.now())
   .then(res => res.json())
   .then(events => {
