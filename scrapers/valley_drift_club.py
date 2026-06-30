@@ -10,5 +10,4 @@ def get_events():
             "url": "https://www.valleydriftclub.com/",
             "notes": "VDC schedule manually verified from Instagram."
         },
-        ...
     ]
