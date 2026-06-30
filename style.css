@@ -211,6 +211,41 @@ footer{text-align:center;color:#666;padding:34px}
   line-height:1.5;
 }
 
+.drift-marker{
+  position:relative;
+}
+
+.marker-core{
+  position:absolute;
+  left:10px;
+  top:10px;
+  width:14px;
+  height:14px;
+  background:#e10600;
+  border:2px solid white;
+  border-radius:50%;
+  box-shadow:
+    0 0 18px rgba(225,6,0,.9),
+    0 0 34px rgba(225,6,0,.55);
+  z-index:2;
+}
+
+.marker-pulse{
+  position:absolute;
+  left:3px;
+  top:3px;
+  width:28px;
+  height:28px;
+  border-radius:50%;
+  background:rgba(225,6,0,.28);
+  animation:pulse 1.8s infinite;
+}
+
+@keyframes pulse{
+  0%{transform:scale(.8);opacity:.9}
+  100%{transform:scale(1.9);opacity:0}
+}
+
 @media(max-width:700px){
 .nav-links{display:none}
 .nav{margin-bottom:46px}
