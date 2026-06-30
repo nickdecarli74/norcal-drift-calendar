@@ -43,6 +43,7 @@ existing_events = load_existing_events()
 incoming_events = []
 
 drift_central_events = drift_central.get_events()
+bay_area_events = bay_area_drifting.get_events()
 
 if len(drift_central_events) < MIN_EVENTS_REQUIRED:
     raise RuntimeError(
@@ -52,6 +53,7 @@ if len(drift_central_events) < MIN_EVENTS_REQUIRED:
     )
 
 incoming_events.extend(drift_central_events)
+incoming_events.extend(bay_area_events)
 
 merged_events, added, updated = merge_events(existing_events, incoming_events)
 
