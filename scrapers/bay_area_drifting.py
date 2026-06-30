@@ -1,11 +1,21 @@
 import re
-from datetime import datetime
 import requests
 from bs4 import BeautifulSoup
 
 URL = "https://bayareadrifting.com/schedule"
 YEAR = 2026
 LOCATION = "Thunderhill Raceway Park"
+
+ALLOWED_DATES = {
+    "2026-08-08",
+    "2026-08-09",
+    "2026-09-12",
+    "2026-09-13",
+    "2026-10-17",
+    "2026-10-18",
+    "2026-11-14",
+    "2026-11-15",
+}
 
 MONTHS = {
     "january": 1, "february": 2, "march": 3, "april": 4,
@@ -36,8 +46,12 @@ def get_events():
         month_name = match.group(2).lower()
         day = clean_day(match.group(3))
         month = MONTHS[month_name]
+        date_key = f"{YEAR}-{month:02d}-{day:02d}"
 
-        event_id = f"bad-2026-{month:02d}-{day:02d}"
+        if date_key not in ALLOWED_DATES:
+            continue
+
+        event_id = f"bad-{date_key}"
 
         if event_id in seen:
             continue
@@ -48,8 +62,8 @@ def get_events():
             "id": event_id,
             "title": "Thunderhill Drift School",
             "promoter": "Bay Area Drifting",
-            "start": f"{YEAR}-{month:02d}-{day:02d} 08:00",
-            "end": f"{YEAR}-{month:02d}-{day:02d} 17:00",
+            "start": f"{date_key} 08:00",
+            "end": f"{date_key} 17:00",
             "location": LOCATION,
             "url": URL,
             "notes": f"{weekday}. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule."
