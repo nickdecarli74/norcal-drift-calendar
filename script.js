@@ -139,7 +139,77 @@ function openEventModal(eventId){
 function closeEventModal(){
   document.getElementById("event-modal").style.display = "none";
 }
-  
+
+function renderTrackMap(){
+  const mapEl = document.getElementById("track-map");
+  if(!mapEl || typeof L === "undefined") return;
+
+  const tracks = [
+    {
+      name: "Sonoma Raceway",
+      location: "Sonoma, CA",
+      lat: 38.1608,
+      lng: -122.4544
+    },
+    {
+      name: "Thunderhill Raceway",
+      location: "Willows, CA",
+      lat: 39.5393,
+      lng: -122.3321
+    },
+    {
+      name: "NASA Crows Landing Airport",
+      location: "Crows Landing, CA",
+      lat: 37.4083,
+      lng: -121.1108
+    },
+    {
+      name: "Salinas Municipal Airport",
+      location: "Salinas, CA",
+      lat: 36.6628,
+      lng: -121.6063
+    }
+  ];
+
+  const map = L.map("track-map", {
+    scrollWheelZoom: false
+  }).setView([37.95, -121.85], 7);
+
+  L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
+    attribution: "&copy; OpenStreetMap &copy; CARTO",
+    maxZoom: 19
+  }).addTo(map);
+
+  tracks.forEach(track => {
+    const trackEvents = allEvents.filter(e =>
+      e.location.toLowerCase().includes(track.name.toLowerCase()) ||
+      track.name.toLowerCase().includes(e.location.toLowerCase()) ||
+      (track.name.includes("Crows") && e.location.toLowerCase().includes("crows")) ||
+      (track.name.includes("Salinas") && e.location.toLowerCase().includes("salinas")) ||
+      (track.name.includes("Thunderhill") && e.location.toLowerCase().includes("thunderhill")) ||
+      (track.name.includes("Sonoma") && e.location.toLowerCase().includes("sonoma"))
+    );
+
+    const popupHtml = `
+      <div class="map-popup-title">${track.name}</div>
+      <div class="map-popup-meta">
+        📍 ${track.location}<br>
+        🏁 ${trackEvents.length} event${trackEvents.length === 1 ? "" : "s"} listed
+      </div>
+    `;
+
+    L.circleMarker([track.lat, track.lng], {
+      radius: 9,
+      color: "#e10600",
+      fillColor: "#e10600",
+      fillOpacity: 0.9,
+      weight: 2
+    })
+    .addTo(map)
+    .bindPopup(popupHtml);
+  });
+}
+
 fetch("events.json?v=" + Date.now())
   .then(res => res.json())
   .then(events => {
