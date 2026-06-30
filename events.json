@@ -63,6 +63,15 @@
     "notes": "Single-day Drift Central event."
   },
   {
+    "title": "Valley Drift Club Event",
+    "promoter": "Valley Drift Club",
+    "start": "2026-07-11 07:00",
+    "end": "2026-07-11 17:00",
+    "location": "NASA Crows Landing Airport",
+    "url": "https://www.valleydriftclub.com/",
+    "notes": "Valley Drift Club event."
+  },
+  {
     "title": "August Drift Event",
     "promoter": "Drift Central",
     "start": "2026-08-08 07:00",
@@ -97,6 +106,15 @@
     "location": "Thunderhill Raceway",
     "url": "https://bayareadrifting.com/schedule",
     "notes": "Beginner & Intermediate Drift School."
+  },
+  {
+    "title": "Valley Drift Club Event",
+    "promoter": "Valley Drift Club",
+    "start": "2026-08-29 07:00",
+    "end": "2026-08-29 17:00",
+    "location": "NASA Crows Landing Airport",
+    "url": "https://www.valleydriftclub.com/",
+    "notes": "Valley Drift Club event."
   },
   {
     "title": "Thunderhill Drift School",
@@ -142,5 +160,32 @@
     "location": "Sonoma Raceway",
     "url": "https://fastinfastouttrackdays.com/products/drift-september-18th-20th-2026-sonoma-raceway-copy",
     "notes": "Sunday."
+  },
+  {
+    "title": "Valley Drift Club Event",
+    "promoter": "Valley Drift Club",
+    "start": "2026-09-26 07:00",
+    "end": "2026-09-26 17:00",
+    "location": "NASA Crows Landing Airport",
+    "url": "https://www.valleydriftclub.com/",
+    "notes": "Valley Drift Club event."
+  },
+  {
+    "title": "Valley Drift Club Event",
+    "promoter": "Valley Drift Club",
+    "start": "2026-11-21 07:00",
+    "end": "2026-11-21 17:00",
+    "location": "NASA Crows Landing Airport",
+    "url": "https://www.valleydriftclub.com/",
+    "notes": "Valley Drift Club event."
+  },
+  {
+    "title": "Valley Drift Club Event",
+    "promoter": "Valley Drift Club",
+    "start": "2026-12-19 07:00",
+    "end": "2026-12-19 17:00",
+    "location": "NASA Crows Landing Airport",
+    "url": "https://www.valleydriftclub.com/",
+    "notes": "Valley Drift Club event."
   }
 ]
