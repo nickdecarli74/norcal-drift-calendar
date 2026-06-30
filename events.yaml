@@ -255,24 +255,24 @@ events:
   start: 2026-09-18 08:00
   end: 2026-09-18 18:00
   location: Sonoma Raceway
-  url: https://fastinfastouttrackdays.com/products/drift-september-18th-20th-2026-sonoma-raceway-copy
-  notes: Friday.
+  url: https://fastinfastouttrackdays.com/pages/upcoming-events
+  notes: Auto-imported from Fast In Fast Out upcoming events.
 - id: fifo-2026-09-19
   title: Fast In Fast Out Drift
   promoter: Fast In Fast Out
   start: 2026-09-19 08:00
   end: 2026-09-19 18:00
   location: Sonoma Raceway
-  url: https://fastinfastouttrackdays.com/products/drift-september-18th-20th-2026-sonoma-raceway-copy
-  notes: Saturday.
+  url: https://fastinfastouttrackdays.com/pages/upcoming-events
+  notes: Auto-imported from Fast In Fast Out upcoming events.
 - id: fifo-2026-09-20
   title: Fast In Fast Out Drift
   promoter: Fast In Fast Out
   start: 2026-09-20 08:00
   end: 2026-09-20 18:00
   location: Sonoma Raceway
-  url: https://fastinfastouttrackdays.com/products/drift-september-18th-20th-2026-sonoma-raceway-copy
-  notes: Sunday.
+  url: https://fastinfastouttrackdays.com/pages/upcoming-events
+  notes: Auto-imported from Fast In Fast Out upcoming events.
 - id: vdc-2026-09-26
   title: Valley Drift Club Event
   promoter: Valley Drift Club
@@ -325,6 +325,22 @@ events:
   location: NASA Crows Landing Airport
   url: https://www.valleydriftclub.com/
   notes: Valley Drift Club event.
+- id: fifo-2026-11-21
+  title: Fast In Fast Out Drift
+  promoter: Fast In Fast Out
+  start: 2026-11-21 08:00
+  end: 2026-11-21 18:00
+  location: Sonoma Raceway
+  url: https://fastinfastouttrackdays.com/pages/upcoming-events
+  notes: Auto-imported from Fast In Fast Out upcoming events.
+- id: fifo-2026-11-22
+  title: Fast In Fast Out Drift
+  promoter: Fast In Fast Out
+  start: 2026-11-22 08:00
+  end: 2026-11-22 18:00
+  location: Sonoma Raceway
+  url: https://fastinfastouttrackdays.com/pages/upcoming-events
+  notes: Auto-imported from Fast In Fast Out upcoming events.
 - id: vdc-2026-12-19
   title: Valley Drift Club Event
   promoter: Valley Drift Club
