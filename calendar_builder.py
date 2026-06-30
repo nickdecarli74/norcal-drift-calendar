@@ -1,9 +1,11 @@
 from ics import Calendar, Event
 from datetime import datetime
 import yaml
+import json
 
 INPUT_FILE = "events.yaml"
-OUTPUT_FILE = "norcal_drift_calendar.ics"
+ICS_OUTPUT = "norcal_drift_calendar.ics"
+JSON_OUTPUT = "events.json"
 
 def parse_dt(value):
     return datetime.strptime(value, "%Y-%m-%d %H:%M")
@@ -11,28 +13,47 @@ def parse_dt(value):
 with open(INPUT_FILE, "r", encoding="utf-8") as f:
     data = yaml.safe_load(f)
 
+events = data.get("events", [])
 cal = Calendar()
+json_events = []
 
-for item in data.get("events", []):
+for item in events:
+    start = parse_dt(item["start"])
+    end = parse_dt(item["end"])
+
     e = Event()
     e.name = f"{item.get('promoter', 'Drift')} - {item['title']}"
-    e.begin = parse_dt(item["start"])
-    e.end = parse_dt(item["end"])
+    e.begin = start
+    e.end = end
     e.location = item.get("location", "")
 
-    description_parts = [
+    e.description = "\n".join([
         f"Promoter: {item.get('promoter', '')}",
         f"Location: {item.get('location', '')}",
         f"Registration / Info: {item.get('url', '')}",
         "",
         item.get("notes", "")
-    ]
-    e.description = "\n".join(description_parts)
+    ])
 
     if item.get("url"):
         e.url = item["url"]
 
     cal.events.add(e)
 
-with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+    json_events.append({
+        "title": item["title"],
+        "promoter": item.get("promoter", ""),
+        "start": item["start"],
+        "end": item["end"],
+        "location": item.get("location", ""),
+        "url": item.get("url", ""),
+        "notes": item.get("notes", "")
+    })
+
+json_events.sort(key=lambda x: x["start"])
+
+with open(ICS_OUTPUT, "w", encoding="utf-8") as f:
     f.writelines(cal)
+
+with open(JSON_OUTPUT, "w", encoding="utf-8") as f:
+    json.dump(json_events, f, indent=2)
