@@ -2,6 +2,7 @@ import yaml
 from scrapers import drift_central
 
 EVENTS_FILE = "events.yaml"
+MIN_EVENTS_REQUIRED = 1
 
 def load_existing_events():
     with open(EVENTS_FILE, "r", encoding="utf-8") as f:
@@ -20,7 +21,6 @@ def save_events(events):
 
 def merge_events(existing, incoming):
     by_id = {event["id"]: event for event in existing if event.get("id")}
-
     added = 0
     updated = 0
 
@@ -41,7 +41,16 @@ print("DriftCal auto-updater started.")
 existing_events = load_existing_events()
 incoming_events = []
 
-incoming_events.extend(drift_central.get_events())
+drift_central_events = drift_central.get_events()
+
+if len(drift_central_events) < MIN_EVENTS_REQUIRED:
+    raise RuntimeError(
+        "Drift Central scraper found 0 events. "
+        "Website structure may have changed. "
+        "events.yaml was not modified."
+    )
+
+incoming_events.extend(drift_central_events)
 
 merged_events, added, updated = merge_events(existing_events, incoming_events)
 
