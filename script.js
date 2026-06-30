@@ -144,69 +144,84 @@ function renderTrackMap(){
   const mapEl = document.getElementById("track-map");
   if(!mapEl || typeof L === "undefined") return;
 
+  if(mapEl.dataset.loaded === "true") return;
+  mapEl.dataset.loaded = "true";
+
   const tracks = [
     {
       name: "Sonoma Raceway",
+      short: "Sonoma",
       location: "Sonoma, CA",
       lat: 38.1608,
-      lng: -122.4544
+      lng: -122.4544,
+      search: ["sonoma"]
     },
     {
       name: "Thunderhill Raceway",
+      short: "Thunderhill",
       location: "Willows, CA",
       lat: 39.5393,
-      lng: -122.3321
+      lng: -122.3321,
+      search: ["thunderhill"]
     },
     {
       name: "NASA Crows Landing Airport",
+      short: "Crows Landing",
       location: "Crows Landing, CA",
       lat: 37.4083,
-      lng: -121.1108
+      lng: -121.1108,
+      search: ["crows", "nasa crows"]
     },
     {
       name: "Salinas Municipal Airport",
+      short: "Salinas",
       location: "Salinas, CA",
       lat: 36.6628,
-      lng: -121.6063
+      lng: -121.6063,
+      search: ["salinas"]
     }
   ];
 
   const map = L.map("track-map", {
-    scrollWheelZoom: false
-  }).setView([37.95, -121.85], 7);
+    scrollWheelZoom: false,
+    zoomControl: true
+  }).setView([37.8, -121.8], 7);
 
   L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
     attribution: "&copy; OpenStreetMap &copy; CARTO",
     maxZoom: 19
   }).addTo(map);
 
+  const driftIcon = L.divIcon({
+    className: "drift-marker",
+    html: "<div class='marker-core'></div><div class='marker-pulse'></div>",
+    iconSize: [34,34],
+    iconAnchor: [17,17]
+  });
+
   tracks.forEach(track => {
-    const trackEvents = allEvents.filter(e =>
-      e.location.toLowerCase().includes(track.name.toLowerCase()) ||
-      track.name.toLowerCase().includes(e.location.toLowerCase()) ||
-      (track.name.includes("Crows") && e.location.toLowerCase().includes("crows")) ||
-      (track.name.includes("Salinas") && e.location.toLowerCase().includes("salinas")) ||
-      (track.name.includes("Thunderhill") && e.location.toLowerCase().includes("thunderhill")) ||
-      (track.name.includes("Sonoma") && e.location.toLowerCase().includes("sonoma"))
-    );
+    const trackEvents = allEvents.filter(e => {
+      const loc = (e.location || "").toLowerCase();
+      return track.search.some(term => loc.includes(term));
+    });
+
+    const nextEvent = trackEvents
+      .filter(e => new Date(e.start.replace(" ","T")) >= new Date())
+      .sort((a,b) => new Date(a.start.replace(" ","T")) - new Date(b.start.replace(" ","T")))[0];
 
     const popupHtml = `
       <div class="map-popup-title">${track.name}</div>
       <div class="map-popup-meta">
         📍 ${track.location}<br>
-        🏁 ${trackEvents.length} event${trackEvents.length === 1 ? "" : "s"} listed
+        🏁 ${trackEvents.length} event${trackEvents.length === 1 ? "" : "s"} listed<br>
+        ${nextEvent ? `🔥 Next: ${nextEvent.title}` : "No upcoming events listed"}
       </div>
+      <a class="map-popup-button" href="#calendar">VIEW CALENDAR</a>
     `;
 
-    L.circleMarker([track.lat, track.lng], {
-      radius: 9,
-      color: "#e10600",
-      fillColor: "#e10600",
-      fillOpacity: 0.9,
-      weight: 2
-    })
-    .addTo(map)
-    .bindPopup(popupHtml);
+    L.marker([track.lat, track.lng], {icon: driftIcon})
+      .addTo(map)
+      .bindPopup(popupHtml);
   });
 }
 
