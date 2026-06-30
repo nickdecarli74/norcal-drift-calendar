@@ -40,18 +40,16 @@ for item in events:
 
     cal.events.add(e)
 
-json_events.append({
-    "id": item.get("id", ""),
-    "title": item["title"],
-    "promoter": item.get("promoter", ""),
-    "start": item["start"],
-    "end": item["end"],
-    "location": item.get("location", ""),
-    "url": item.get("url", ""),
-    "notes": item.get("notes", "")
-})
-
-})
+    json_events.append({
+        "id": item.get("id", ""),
+        "title": item["title"],
+        "promoter": item.get("promoter", ""),
+        "start": item["start"],
+        "end": item["end"],
+        "location": item.get("location", ""),
+        "url": item.get("url", ""),
+        "notes": item.get("notes", "")
+    })
 
 json_events.sort(key=lambda x: x["start"])
 
