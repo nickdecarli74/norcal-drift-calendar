@@ -5,18 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>DriftCal</title>
 
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<link rel="stylesheet" href="style.css?v=2">
 </head>
 
-<link
-  rel="stylesheet"
-  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-/>
-  
-<link rel="stylesheet" href="style.css?v=1">
-  
 <body>
 
 <section class="hero">
+
+  <div class="smoke smoke-one"></div>
+  <div class="smoke smoke-two"></div>
+  <div class="smoke smoke-three"></div>
+
   <nav class="nav">
     <div class="nav-logo">DRIFT<span>CAL</span></div>
     <div class="nav-links">
@@ -27,15 +27,14 @@
     </div>
   </nav>
 
-  <div class="logo-wrap">
+  <div class="logo-wrap hero-showcase">
     <img class="main-logo" src="assets/driftcal-logo.png?v=10" alt="DriftCal Logo">
-    <div class="tagline">NEVER MISS A DRIFT EVENT.</div>
+    <div class="tagline">NORTHERN CALIFORNIA DRIFT EVENTS</div>
+
     <a class="subscribe" href="webcal://nickdecarli74.github.io/norcal-drift-calendar/norcal_drift_calendar.ics">
       📅 SUBSCRIBE TO DRIFTCAL
     </a>
   </div>
-
-  <div class="down">⌄</div>
 
   <div id="next-event" class="event-card"></div>
 
@@ -53,25 +52,26 @@
     <div id="calendar-grid" class="calendar-grid"></div>
   </div>
 
-<div id="tracks" class="section">
-  <div class="section-title">TRACK MAP</div>
-  <div class="map-wrap">
-  <div id="track-map"></div>
-</div>
-  
+  <div id="tracks" class="section">
+    <div class="section-title">TRACK MAP</div>
+    <div class="map-wrap">
+      <div id="track-map"></div>
+    </div>
+  </div>
+
 </section>
+
 <div id="event-modal" class="modal">
   <div class="modal-content">
     <button class="modal-close" onclick="closeEventModal()">×</button>
     <div id="modal-body"></div>
   </div>
 </div>
-<footer>
-  © DriftCal
-</footer>
 
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script> 
-<script src="script.js?v=1"></script>
+<footer>© DriftCal</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="script.js?v=2"></script>
 
 </body>
 </html>
