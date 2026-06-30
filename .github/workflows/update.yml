@@ -36,6 +36,6 @@ jobs:
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add norcal_drift_calendar.ics events.json
+          git add norcal_drift_calendar.ics events.json events.yaml
           git commit -m "Update drift calendar" || exit 0
           git push
