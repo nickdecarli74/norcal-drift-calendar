@@ -26,6 +26,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install ics pyyaml python-dateutil requests
 
+      - name: Update event sources
+        run: python update_events.py
+
       - name: Build calendar
         run: python calendar_builder.py
 
