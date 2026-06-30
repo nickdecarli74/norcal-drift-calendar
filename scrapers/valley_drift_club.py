@@ -9,5 +9,5 @@ def get_events():
             "location": "NASA Crows Landing Airport",
             "url": "https://www.valleydriftclub.com/",
             "notes": "VDC schedule manually verified from Instagram."
-        },
+        }
     ]
