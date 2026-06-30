@@ -1,5 +1,6 @@
 [
   {
+    "id": "dc-2026-03-07",
     "title": "March Drift Event",
     "promoter": "Drift Central",
     "start": "2026-03-07 07:00",
@@ -9,6 +10,7 @@
     "notes": "Day 1 of 2-day Drift Central event."
   },
   {
+    "id": "dc-2026-03-08",
     "title": "March Drift Event - Day 2",
     "promoter": "Drift Central",
     "start": "2026-03-08 07:00",
@@ -18,6 +20,7 @@
     "notes": "Day 2 of 2-day Drift Central event."
   },
   {
+    "id": "dc-2026-04-04",
     "title": "April Drift Event",
     "promoter": "Drift Central",
     "start": "2026-04-04 07:00",
@@ -27,6 +30,7 @@
     "notes": "Day 1 of 2-day Drift Central event."
   },
   {
+    "id": "dc-2026-04-05",
     "title": "April Drift Event - Day 2",
     "promoter": "Drift Central",
     "start": "2026-04-05 07:00",
@@ -36,6 +40,7 @@
     "notes": "Day 2 of 2-day Drift Central event."
   },
   {
+    "id": "dc-2026-06-06",
     "title": "June Drift Event",
     "promoter": "Drift Central",
     "start": "2026-06-06 07:00",
@@ -45,6 +50,7 @@
     "notes": "Day 1 of 2-day Drift Central event."
   },
   {
+    "id": "dc-2026-06-07",
     "title": "June Drift Event - Day 2",
     "promoter": "Drift Central",
     "start": "2026-06-07 07:00",
@@ -54,6 +60,7 @@
     "notes": "Day 2 of 2-day Drift Central event."
   },
   {
+    "id": "dc-2026-07-05",
     "title": "July Drift Event",
     "promoter": "Drift Central",
     "start": "2026-07-05 07:00",
@@ -63,6 +70,7 @@
     "notes": "Single-day Drift Central event."
   },
   {
+    "id": "vdc-2026-07-11",
     "title": "Valley Drift Club Event",
     "promoter": "Valley Drift Club",
     "start": "2026-07-11 07:00",
@@ -72,6 +80,7 @@
     "notes": "Valley Drift Club event."
   },
   {
+    "id": "dc-2026-08-08",
     "title": "August Drift Event",
     "promoter": "Drift Central",
     "start": "2026-08-08 07:00",
@@ -81,6 +90,7 @@
     "notes": "Day 1 of 2-day Drift Central event."
   },
   {
+    "id": "bad-2026-08-08",
     "title": "Thunderhill Drift School",
     "promoter": "Bay Area Drifting",
     "start": "2026-08-08 08:00",
@@ -90,6 +100,7 @@
     "notes": "Beginner & Intermediate Drift School."
   },
   {
+    "id": "dc-2026-08-09",
     "title": "August Drift Event - Day 2",
     "promoter": "Drift Central",
     "start": "2026-08-09 07:00",
@@ -99,6 +110,7 @@
     "notes": "Day 2 of 2-day Drift Central event."
   },
   {
+    "id": "bad-2026-08-09",
     "title": "Thunderhill Drift School - Day 2",
     "promoter": "Bay Area Drifting",
     "start": "2026-08-09 08:00",
@@ -108,6 +120,7 @@
     "notes": "Beginner & Intermediate Drift School."
   },
   {
+    "id": "vdc-2026-08-29",
     "title": "Valley Drift Club Event",
     "promoter": "Valley Drift Club",
     "start": "2026-08-29 07:00",
@@ -117,6 +130,7 @@
     "notes": "Valley Drift Club event."
   },
   {
+    "id": "bad-2026-09-12",
     "title": "Thunderhill Drift School",
     "promoter": "Bay Area Drifting",
     "start": "2026-09-12 08:00",
@@ -126,6 +140,7 @@
     "notes": "Beginner & Intermediate Drift School."
   },
   {
+    "id": "bad-2026-09-13",
     "title": "Thunderhill Drift School - Day 2",
     "promoter": "Bay Area Drifting",
     "start": "2026-09-13 08:00",
@@ -135,6 +150,7 @@
     "notes": "Beginner & Intermediate Drift School."
   },
   {
+    "id": "fifo-2026-09-18",
     "title": "Fast In Fast Out Drift",
     "promoter": "Fast In Fast Out",
     "start": "2026-09-18 08:00",
@@ -144,6 +160,7 @@
     "notes": "Friday."
   },
   {
+    "id": "fifo-2026-09-19",
     "title": "Fast In Fast Out Drift",
     "promoter": "Fast In Fast Out",
     "start": "2026-09-19 08:00",
@@ -153,6 +170,7 @@
     "notes": "Saturday."
   },
   {
+    "id": "fifo-2026-09-20",
     "title": "Fast In Fast Out Drift",
     "promoter": "Fast In Fast Out",
     "start": "2026-09-20 08:00",
@@ -162,6 +180,7 @@
     "notes": "Sunday."
   },
   {
+    "id": "vdc-2026-09-26",
     "title": "Valley Drift Club Event",
     "promoter": "Valley Drift Club",
     "start": "2026-09-26 07:00",
@@ -171,6 +190,7 @@
     "notes": "Valley Drift Club event."
   },
   {
+    "id": "vdc-2026-11-21",
     "title": "Valley Drift Club Event",
     "promoter": "Valley Drift Club",
     "start": "2026-11-21 07:00",
@@ -180,6 +200,7 @@
     "notes": "Valley Drift Club event."
   },
   {
+    "id": "vdc-2026-12-19",
     "title": "Valley Drift Club Event",
     "promoter": "Valley Drift Club",
     "start": "2026-12-19 07:00",
