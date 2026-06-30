@@ -1,5 +1,6 @@
 import yaml
 from scrapers import drift_central
+from scrapers import bay_area_drifting
 
 EVENTS_FILE = "events.yaml"
 MIN_EVENTS_REQUIRED = 1
