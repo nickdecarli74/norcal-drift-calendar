@@ -201,55 +201,7 @@ footer{text-align:center;color:#666;padding:34px}
     margin:0 auto;
     display:block;
   }
-.hero-logo-wrap{
-  position:relative;
-  display:inline-block;
-  isolation:isolate;
-}
 
-.hero-logo{
-  position:relative;
-  z-index:2;
-}
-
-.smoke{
-  position:absolute;
-  z-index:1;
-  pointer-events:none;
-  width:55%;
-  height:35%;
-  bottom:8%;
-  left:22%;
-  border-radius:999px;
-  background:
-    radial-gradient(circle at 30% 50%, rgba(255,255,255,.18), transparent 45%),
-    radial-gradient(circle at 65% 45%, rgba(255,255,255,.12), transparent 50%),
-    radial-gradient(circle at 50% 70%, rgba(255,255,255,.08), transparent 55%);
-  filter:blur(14px);
-  opacity:.45;
-  animation:tireSmoke 7s ease-in-out infinite;
-}
-
-.smoke-two{
-  width:65%;
-  height:42%;
-  bottom:3%;
-  left:12%;
-  opacity:.28;
-  filter:blur(20px);
-  animation-duration:10s;
-  animation-delay:-3s;
-}
-
-@keyframes tireSmoke{
-  0%{
-    transform:translateX(0) translateY(0) scale(.9);
-    opacity:.18;
-  }
-  35%{
-    opacity:.42;
-  }
-  70%{
     transform:translateX(-18px) translateY(-16px) scale(1.25);
     opacity:.28;
   }
