@@ -118,9 +118,9 @@ body{
   margin-top:10px;
   margin-bottom:18px;
   color:#bdbdbd;
-  font-size:14px;
+  font-size:12px;
   font-weight:800;
-  letter-spacing:3px;
+  letter-spacing:2px;
   text-transform:uppercase;
   opacity:.9;
 }
@@ -130,7 +130,7 @@ body{
 }
 
 .subscribe{
-  margin-top:18px;
+  margin-top:12px;
   display:inline-block;
   background:#e10600;
   color:white;
