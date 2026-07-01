@@ -287,4 +287,29 @@ footer{text-align:center;color:#666;padding:34px}
     font-size:42px;
   }
 }
-  
+  /* Mobile hero spacing fix */
+@media (max-width: 700px) {
+  .hero-logo,
+  .hero img,
+  .hero-logo img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 28px;
+  }
+
+  .hero-tagline,
+  .slogan {
+    display: block;
+    margin-top: 18px;
+    line-height: 1.45;
+    letter-spacing: 0.45em;
+    font-size: clamp(1rem, 4vw, 1.35rem);
+    text-align: center;
+  }
+
+  .location-pin,
+  .hero-location {
+    margin-top: 22px;
+  }
+}
