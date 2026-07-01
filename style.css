@@ -218,10 +218,26 @@ footer{text-align:center;color:#666;padding:34px}
   }
 
   .subscribe{
-    font-size:14px;
-    padding:15px 18px;
-    max-width:92vw;
-  }
+  margin-top:36px;
+  display:inline-block;
+  background:#e10600;
+  color:white;
+  text-decoration:none;
+  font-weight:900;
+  font-size:18px;
+  letter-spacing:1px;
+  padding:18px 38px;
+  border-radius:8px;
+  border:1px solid rgba(255,255,255,.20);
+  box-shadow:0 0 30px rgba(225,6,0,.75), inset 0 0 18px rgba(255,255,255,.12);
+  transition:.2s;
+  cursor:pointer;
+}
+
+.subscribe:hover{
+  transform:translateY(-3px);
+  box-shadow:0 0 55px rgba(225,6,0,.95), inset 0 0 18px rgba(255,255,255,.18);
+}
 
   .event-inner{
     grid-template-columns:1fr;
