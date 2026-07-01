@@ -239,6 +239,20 @@ footer{text-align:center;color:#666;padding:34px}
   box-shadow:0 0 55px rgba(225,6,0,.95), inset 0 0 18px rgba(255,255,255,.18);
 }
 
+.region{
+    margin-top:18px;
+    color:#bdbdbd;
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    opacity:.85;
+}
+
+.region .pin{
+    color:#e10600;
+    margin-right:6px;
+}
   .event-inner{
     grid-template-columns:1fr;
   }
