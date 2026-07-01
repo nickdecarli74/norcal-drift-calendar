@@ -107,10 +107,11 @@ body{
 .tagline{
   margin-top:-10px;
   font-size:18px;
-  letter-spacing:10px;
+  letter-spacing:6px;
   color:#ddd;
   font-style:italic;
   text-align:center;
+  font-weight:700;
 }
 
 .region{
@@ -643,11 +644,12 @@ footer{
   }
 
   .tagline{
-    font-size:12px;
-    letter-spacing:4px;
-    margin-top:8px;
-    padding:0 10px;
-  }
+  font-size:12px;
+  letter-spacing:2px;
+  margin-top:8px;
+  padding:0 10px;
+  line-height:1.5;
+}
 
   .region{
     margin-top:10px;
