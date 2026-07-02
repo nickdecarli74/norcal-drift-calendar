@@ -59,3 +59,12 @@ with open(ICS_OUTPUT, "w", encoding="utf-8") as f:
 
 with open(JSON_OUTPUT, "w", encoding="utf-8") as f:
     json.dump(json_events, f, indent=2)
+
+with open("status.json", "w", encoding="utf-8") as f:
+    json.dump({
+        "lastUpdated": datetime.now(timezone.utc).isoformat(),
+        "newestEvent": json_events[-1]["title"] if json_events else "No events listed",
+        "eventCount": len(json_events),
+        "trackCount": len(set(e.get("location", "") for e in json_events if e.get("location"))),
+        "promoterCount": len(set(e.get("promoter", "") for e in json_events if e.get("promoter")))
+    }, f, indent=2)
