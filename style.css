@@ -151,6 +151,45 @@ body{
   box-shadow:0 0 55px rgba(225,6,0,.95), inset 0 0 18px rgba(255,255,255,.18);
 }
 
+.update-strip {
+  margin: 34px auto 26px;
+  width: min(520px, 88%);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  border: 1px solid rgba(255, 0, 0, 0.35);
+  border-radius: 18px;
+  background: rgba(0, 0, 0, 0.45);
+  box-shadow: 0 0 28px rgba(255, 0, 0, 0.16);
+  color: #ddd;
+  text-align: left;
+}
+
+.live-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ff1a1a;
+  box-shadow: 0 0 12px #ff1a1a;
+  flex: 0 0 auto;
+}
+
+.update-title {
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  color: #ff1a1a;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+#updateText {
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  color: #bdbdbd;
+  line-height: 1.4;
+}
+
 .down{
   position:relative;
   z-index:2;
