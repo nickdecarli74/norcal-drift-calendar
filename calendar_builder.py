@@ -2,6 +2,7 @@ from ics import Calendar, Event
 from datetime import datetime
 import yaml
 import json
+from datetime import datetime, timezone
 
 INPUT_FILE = "events.yaml"
 ICS_OUTPUT = "norcal_drift_calendar.ics"
