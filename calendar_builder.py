@@ -68,3 +68,5 @@ with open("status.json", "w", encoding="utf-8") as f:
         "trackCount": len(set(e.get("location", "") for e in json_events if e.get("location"))),
         "promoterCount": len(set(e.get("promoter", "") for e in json_events if e.get("promoter")))
     }, f, indent=2)
+
+print("✅ status.json written successfully")
