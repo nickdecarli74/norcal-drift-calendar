@@ -1,0 +1,41 @@
+promoters:
+  good_luck_league:
+    name: Good Luck League
+    color: blue
+    urls:
+      - https://www.goodluckleague.com
+
+  drift_sf:
+    name: DriftSF
+    color: orange
+    urls:
+      - https://www.drift-sf.com
+
+  valley_drift_club:
+    name: Valley Drift Club
+    color: green
+    urls:
+      - https://www.instagram.com/valleydriftclub/
+
+  drift_central:
+    name: Drift Central
+    color: purple
+    urls:
+      - https://www.driftcentral.com
+
+tracks:
+  sonoma_raceway:
+    name: Sonoma Raceway
+    color: red
+
+  thunderhill:
+    name: Thunderhill Raceway
+    color: black
+
+  crows_landing:
+    name: Crows Landing
+    color: yellow
+
+  salinas_airport:
+    name: Salinas Airport
+    color: cyan

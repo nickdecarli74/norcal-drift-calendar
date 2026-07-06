@@ -1,0 +1,412 @@
+[
+  {
+    "id": "bad-2026-01-17",
+    "title": "Thunderhill Drift School",
+    "promoter": "Bay Area Drifting",
+    "start": "2026-01-17 08:00",
+    "end": "2026-01-17 17:00",
+    "location": "Thunderhill Raceway Park",
+    "url": "https://bayareadrifting.com/schedule",
+    "notes": "Saturday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule."
+  },
+  {
+    "id": "bad-2026-01-18",
+    "title": "Thunderhill Drift School",
+    "promoter": "Bay Area Drifting",
+    "start": "2026-01-18 08:00",
+    "end": "2026-01-18 17:00",
+    "location": "Thunderhill Raceway Park",
+    "url": "https://bayareadrifting.com/schedule",
+    "notes": "Sunday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule."
+  },
+  {
+    "id": "bad-2026-02-14",
+    "title": "Thunderhill Drift School",
+    "promoter": "Bay Area Drifting",
+    "start": "2026-02-14 08:00",
+    "end": "2026-02-14 17:00",
+    "location": "Thunderhill Raceway Park",
+    "url": "https://bayareadrifting.com/schedule",
+    "notes": "Saturday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule."
+  },
+  {
+    "id": "bad-2026-02-15",
+    "title": "Thunderhill Drift School",
+    "promoter": "Bay Area Drifting",
+    "start": "2026-02-15 08:00",
+    "end": "2026-02-15 17:00",
+    "location": "Thunderhill Raceway Park",
+    "url": "https://bayareadrifting.com/schedule",
+    "notes": "Sunday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule."
+  },
+  {
+    "id": "dc-2026-03-07",
+    "title": "2 Drift Event",
+    "promoter": "Drift Central",
+    "start": "2026-03-07 07:00",
+    "end": "2026-03-07 17:00",
+    "location": "Salinas Municipal Airport",
+    "url": "https://driftcentral.com/2026-schedule",
+    "notes": "Auto-imported from Drift Central schedule."
+  },
+  {
+    "id": "dc-2026-03-08",
+    "title": "2 Drift Event - Day 2",
+    "promoter": "Drift Central",
+    "start": "2026-03-08 07:00",
+    "end": "2026-03-08 17:00",
+    "location": "Salinas Municipal Airport",
+    "url": "https://driftcentral.com/2026-schedule",
+    "notes": "Auto-imported from Drift Central schedule."
+  },
+  {
+    "id": "bad-2026-03-14",
+    "title": "Thunderhill Drift School",
+    "promoter": "Bay Area Drifting",
+    "start": "2026-03-14 08:00",
+    "end": "2026-03-14 17:00",
+    "location": "Thunderhill Raceway Park",
+    "url": "https://bayareadrifting.com/schedule",
+    "notes": "Saturday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule."
+  },
+  {
+    "id": "bad-2026-03-15",
+    "title": "Thunderhill Drift School",
+    "promoter": "Bay Area Drifting",
+    "start": "2026-03-15 08:00",
+    "end": "2026-03-15 17:00",
+    "location": "Thunderhill Raceway Park",
+    "url": "https://bayareadrifting.com/schedule",
+    "notes": "Sunday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule."
+  },
+  {
+    "id": "dc-2026-04-04",
+    "title": "2 Drift Event",
+    "promoter": "Drift Central",
+    "start": "2026-04-04 07:00",
+    "end": "2026-04-04 17:00",
+    "location": "Salinas Municipal Airport",
+    "url": "https://driftcentral.com/2026-schedule",
+    "notes": "Auto-imported from Drift Central schedule."
+  },
+  {
+    "id": "dc-2026-04-05",
+    "title": "2 Drift Event - Day 2",
+    "promoter": "Drift Central",
+    "start": "2026-04-05 07:00",
+    "end": "2026-04-05 17:00",
+    "location": "Salinas Municipal Airport",
+    "url": "https://driftcentral.com/2026-schedule",
+    "notes": "Auto-imported from Drift Central schedule."
+  },
+  {
+    "id": "bad-2026-04-18",
+    "title": "Thunderhill Drift School",
+    "promoter": "Bay Area Drifting",
+    "start": "2026-04-18 08:00",
+    "end": "2026-04-18 17:00",
+    "location": "Thunderhill Raceway Park",
+    "url": "https://bayareadrifting.com/schedule",
+    "notes": "Saturday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule."
+  },
+  {
+    "id": "bad-2026-04-19",
+    "title": "Thunderhill Drift School",
+    "promoter": "Bay Area Drifting",
+    "start": "2026-04-19 08:00",
+    "end": "2026-04-19 17:00",
+    "location": "Thunderhill Raceway Park",
+    "url": "https://bayareadrifting.com/schedule",
+    "notes": "Sunday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule."
+  },
+  {
+    "id": "bad-2026-05-23",
+    "title": "Thunderhill Drift School",
+    "promoter": "Bay Area Drifting",
+    "start": "2026-05-23 08:00",
+    "end": "2026-05-23 17:00",
+    "location": "Thunderhill Raceway Park",
+    "url": "https://bayareadrifting.com/schedule",
+    "notes": "Saturday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule."
+  },
+  {
+    "id": "bad-2026-05-24",
+    "title": "Thunderhill Drift School",
+    "promoter": "Bay Area Drifting",
+    "start": "2026-05-24 08:00",
+    "end": "2026-05-24 17:00",
+    "location": "Thunderhill Raceway Park",
+    "url": "https://bayareadrifting.com/schedule",
+    "notes": "Sunday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule."
+  },
+  {
+    "id": "dc-2026-06-06",
+    "title": "2 Drift Event",
+    "promoter": "Drift Central",
+    "start": "2026-06-06 07:00",
+    "end": "2026-06-06 17:00",
+    "location": "Salinas Municipal Airport",
+    "url": "https://driftcentral.com/2026-schedule",
+    "notes": "Auto-imported from Drift Central schedule."
+  },
+  {
+    "id": "dc-2026-06-07",
+    "title": "2 Drift Event - Day 2",
+    "promoter": "Drift Central",
+    "start": "2026-06-07 07:00",
+    "end": "2026-06-07 17:00",
+    "location": "Salinas Municipal Airport",
+    "url": "https://driftcentral.com/2026-schedule",
+    "notes": "Auto-imported from Drift Central schedule."
+  },
+  {
+    "id": "bad-2026-06-13",
+    "title": "Thunderhill Drift School",
+    "promoter": "Bay Area Drifting",
+    "start": "2026-06-13 08:00",
+    "end": "2026-06-13 17:00",
+    "location": "Thunderhill Raceway Park",
+    "url": "https://bayareadrifting.com/schedule",
+    "notes": "Saturday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule."
+  },
+  {
+    "id": "bad-2026-06-14",
+    "title": "Thunderhill Drift School",
+    "promoter": "Bay Area Drifting",
+    "start": "2026-06-14 08:00",
+    "end": "2026-06-14 17:00",
+    "location": "Thunderhill Raceway Park",
+    "url": "https://bayareadrifting.com/schedule",
+    "notes": "Sunday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule."
+  },
+  {
+    "id": "dc-2026-07-05",
+    "title": "Drift Event",
+    "promoter": "Drift Central",
+    "start": "2026-07-05 07:00",
+    "end": "2026-07-05 17:00",
+    "location": "Salinas Municipal Airport",
+    "url": "https://driftcentral.com/2026-schedule",
+    "notes": "Auto-imported from Drift Central schedule."
+  },
+  {
+    "id": "vdc-2026-07-11",
+    "title": "Valley Drift Club Event",
+    "promoter": "Valley Drift Club",
+    "start": "2026-07-11 07:00",
+    "end": "2026-07-11 17:00",
+    "location": "NASA Crows Landing Airport",
+    "url": "https://www.valleydriftclub.com/",
+    "notes": "VDC schedule manually verified from Instagram."
+  },
+  {
+    "id": "bad-2026-07-11",
+    "title": "Thunderhill Drift School",
+    "promoter": "Bay Area Drifting",
+    "start": "2026-07-11 08:00",
+    "end": "2026-07-11 17:00",
+    "location": "Thunderhill Raceway Park",
+    "url": "https://bayareadrifting.com/schedule",
+    "notes": "Saturday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule."
+  },
+  {
+    "id": "bad-2026-07-12",
+    "title": "Thunderhill Drift School",
+    "promoter": "Bay Area Drifting",
+    "start": "2026-07-12 08:00",
+    "end": "2026-07-12 17:00",
+    "location": "Thunderhill Raceway Park",
+    "url": "https://bayareadrifting.com/schedule",
+    "notes": "Sunday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule."
+  },
+  {
+    "id": "dc-2026-08-08",
+    "title": "2 Day Drift Event",
+    "promoter": "Drift Central",
+    "start": "2026-08-08 07:00",
+    "end": "2026-08-08 17:00",
+    "location": "Salinas Municipal Airport",
+    "url": "https://driftcentral.com/2026-schedule",
+    "notes": "Auto-imported from Drift Central schedule."
+  },
+  {
+    "id": "bad-2026-08-08",
+    "title": "Thunderhill Drift School",
+    "promoter": "Bay Area Drifting",
+    "start": "2026-08-08 08:00",
+    "end": "2026-08-08 17:00",
+    "location": "Thunderhill Raceway Park",
+    "url": "https://bayareadrifting.com/schedule",
+    "notes": "Saturday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule."
+  },
+  {
+    "id": "dc-2026-08-09",
+    "title": "2 Day Drift Event - Day 2",
+    "promoter": "Drift Central",
+    "start": "2026-08-09 07:00",
+    "end": "2026-08-09 17:00",
+    "location": "Salinas Municipal Airport",
+    "url": "https://driftcentral.com/2026-schedule",
+    "notes": "Auto-imported from Drift Central schedule."
+  },
+  {
+    "id": "bad-2026-08-09",
+    "title": "Thunderhill Drift School",
+    "promoter": "Bay Area Drifting",
+    "start": "2026-08-09 08:00",
+    "end": "2026-08-09 17:00",
+    "location": "Thunderhill Raceway Park",
+    "url": "https://bayareadrifting.com/schedule",
+    "notes": "Sunday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule."
+  },
+  {
+    "id": "vdc-2026-08-29",
+    "title": "Valley Drift Club Event",
+    "promoter": "Valley Drift Club",
+    "start": "2026-08-29 07:00",
+    "end": "2026-08-29 17:00",
+    "location": "NASA Crows Landing Airport",
+    "url": "https://www.valleydriftclub.com/",
+    "notes": "Valley Drift Club event."
+  },
+  {
+    "id": "bad-2026-09-12",
+    "title": "Thunderhill Drift School",
+    "promoter": "Bay Area Drifting",
+    "start": "2026-09-12 08:00",
+    "end": "2026-09-12 17:00",
+    "location": "Thunderhill Raceway Park",
+    "url": "https://bayareadrifting.com/schedule",
+    "notes": "Saturday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule."
+  },
+  {
+    "id": "bad-2026-09-13",
+    "title": "Thunderhill Drift School",
+    "promoter": "Bay Area Drifting",
+    "start": "2026-09-13 08:00",
+    "end": "2026-09-13 17:00",
+    "location": "Thunderhill Raceway Park",
+    "url": "https://bayareadrifting.com/schedule",
+    "notes": "Sunday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule."
+  },
+  {
+    "id": "fifo-2026-09-18",
+    "title": "Fast In Fast Out Drift",
+    "promoter": "Fast In Fast Out",
+    "start": "2026-09-18 08:00",
+    "end": "2026-09-18 18:00",
+    "location": "Sonoma Raceway",
+    "url": "https://fastinfastouttrackdays.com/pages/upcoming-events",
+    "notes": "Auto-imported from Fast In Fast Out upcoming events."
+  },
+  {
+    "id": "fifo-2026-09-19",
+    "title": "Fast In Fast Out Drift",
+    "promoter": "Fast In Fast Out",
+    "start": "2026-09-19 08:00",
+    "end": "2026-09-19 18:00",
+    "location": "Sonoma Raceway",
+    "url": "https://fastinfastouttrackdays.com/pages/upcoming-events",
+    "notes": "Auto-imported from Fast In Fast Out upcoming events."
+  },
+  {
+    "id": "fifo-2026-09-20",
+    "title": "Fast In Fast Out Drift",
+    "promoter": "Fast In Fast Out",
+    "start": "2026-09-20 08:00",
+    "end": "2026-09-20 18:00",
+    "location": "Sonoma Raceway",
+    "url": "https://fastinfastouttrackdays.com/pages/upcoming-events",
+    "notes": "Auto-imported from Fast In Fast Out upcoming events."
+  },
+  {
+    "id": "vdc-2026-09-26",
+    "title": "Valley Drift Club Event",
+    "promoter": "Valley Drift Club",
+    "start": "2026-09-26 07:00",
+    "end": "2026-09-26 17:00",
+    "location": "NASA Crows Landing Airport",
+    "url": "https://www.valleydriftclub.com/",
+    "notes": "Valley Drift Club event."
+  },
+  {
+    "id": "bad-2026-10-17",
+    "title": "Thunderhill Drift School",
+    "promoter": "Bay Area Drifting",
+    "start": "2026-10-17 08:00",
+    "end": "2026-10-17 17:00",
+    "location": "Thunderhill Raceway Park",
+    "url": "https://bayareadrifting.com/schedule",
+    "notes": "Saturday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule."
+  },
+  {
+    "id": "bad-2026-10-18",
+    "title": "Thunderhill Drift School",
+    "promoter": "Bay Area Drifting",
+    "start": "2026-10-18 08:00",
+    "end": "2026-10-18 17:00",
+    "location": "Thunderhill Raceway Park",
+    "url": "https://bayareadrifting.com/schedule",
+    "notes": "Sunday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule."
+  },
+  {
+    "id": "bad-2026-11-14",
+    "title": "Thunderhill Drift School",
+    "promoter": "Bay Area Drifting",
+    "start": "2026-11-14 08:00",
+    "end": "2026-11-14 17:00",
+    "location": "Thunderhill Raceway Park",
+    "url": "https://bayareadrifting.com/schedule",
+    "notes": "Saturday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule."
+  },
+  {
+    "id": "bad-2026-11-15",
+    "title": "Thunderhill Drift School",
+    "promoter": "Bay Area Drifting",
+    "start": "2026-11-15 08:00",
+    "end": "2026-11-15 17:00",
+    "location": "Thunderhill Raceway Park",
+    "url": "https://bayareadrifting.com/schedule",
+    "notes": "Sunday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule."
+  },
+  {
+    "id": "vdc-2026-11-21",
+    "title": "Valley Drift Club Event",
+    "promoter": "Valley Drift Club",
+    "start": "2026-11-21 07:00",
+    "end": "2026-11-21 17:00",
+    "location": "NASA Crows Landing Airport",
+    "url": "https://www.valleydriftclub.com/",
+    "notes": "Valley Drift Club event."
+  },
+  {
+    "id": "fifo-2026-11-21",
+    "title": "Fast In Fast Out Drift",
+    "promoter": "Fast In Fast Out",
+    "start": "2026-11-21 08:00",
+    "end": "2026-11-21 18:00",
+    "location": "Sonoma Raceway",
+    "url": "https://fastinfastouttrackdays.com/pages/upcoming-events",
+    "notes": "Auto-imported from Fast In Fast Out upcoming events."
+  },
+  {
+    "id": "fifo-2026-11-22",
+    "title": "Fast In Fast Out Drift",
+    "promoter": "Fast In Fast Out",
+    "start": "2026-11-22 08:00",
+    "end": "2026-11-22 18:00",
+    "location": "Sonoma Raceway",
+    "url": "https://fastinfastouttrackdays.com/pages/upcoming-events",
+    "notes": "Auto-imported from Fast In Fast Out upcoming events."
+  },
+  {
+    "id": "vdc-2026-12-19",
+    "title": "Valley Drift Club Event",
+    "promoter": "Valley Drift Club",
+    "start": "2026-12-19 07:00",
+    "end": "2026-12-19 17:00",
+    "location": "NASA Crows Landing Airport",
+    "url": "https://www.valleydriftclub.com/",
+    "notes": "Valley Drift Club event."
+  }
+]

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DriftCal</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="style.css?v=4">
+</head>
+
+<body>
+
+<section class="hero">
+  <nav class="nav">
+    <div class="nav-logo">DRIFT<span>CAL</span></div>
+
+    <div class="nav-links">
+      <a href="#events">EVENTS</a>
+      <a href="#calendar">CALENDAR</a>
+      <a href="#tracks">TRACKS</a>
+      <a href="#media">MEDIA</a>
+    </div>
+  </nav>
+
+  <div class="logo-wrap">
+  <img class="main-logo" src="assets/driftcal-logo.png?v=10" alt="DriftCal Logo">
+
+  <div class="tagline">EVERY EVENT. EVERY TRACK. EVERY SHOT.</div>
+
+  <div class="region">
+    <span class="pin">📍</span> NORTHERN CALIFORNIA
+  </div>
+
+  <button class="subscribe" onclick="openSubscribeModal()">
+    SUBSCRIBE
+  </button>
+</div>
+
+<div class="update-strip">
+  <span class="live-dot"></span>
+  <div>
+    <div class="update-title">LIVE EVENT FEED</div>
+    <div id="updateText">Checking latest events...</div>
+  </div>
+</div>
+  
+  <div class="down">⌄</div>
+
+  <div id="next-event" class="event-card"></div>
+
+  <div id="events" class="section">
+    <div class="section-title">UPCOMING EVENTS</div>
+    <div id="upcoming-events" class="upcoming-grid"></div>
+  </div>
+
+  <div id="calendar" class="section">
+    <div class="calendar-head">
+      <button class="cal-btn" onclick="changeMonth(-1)">‹ PREV</button>
+      <div id="calendar-title" class="calendar-title"></div>
+      <button class="cal-btn" onclick="changeMonth(1)">NEXT ›</button>
+    </div>
+
+    <div id="calendar-grid" class="calendar-grid"></div>
+  </div>
+
+  <div id="tracks" class="section">
+    <div class="section-title">TRACK MAP</div>
+
+    <div class="map-wrap">
+      <div id="track-map"></div>
+    </div>
+  </div>
+
+  <div id="media" class="section">
+    <div class="section-title">MEDIA</div>
+    <div class="media-intro">
+      Galleries and edits from photographers &amp; videographers, event by event. Pick an event to see everyone who shot it.
+    </div>
+    <div id="media-grid" class="media-grid"></div>
+  </div>
+</section>
+
+<div id="event-modal" class="modal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeEventModal()">×</button>
+    <div id="modal-body"></div>
+  </div>
+</div>
+<div id="subscribe-modal" class="modal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeSubscribeModal()">×</button>
+
+    <div class="modal-title">Subscribe to DriftCal</div>
+
+    <div class="modal-meta">
+      Keep every NorCal drift event automatically updated in your calendar.
+    </div>
+
+    <div class="modal-section">
+      <a class="modal-link" href="webcal://nickdecarli74.github.io/norcal-drift-calendar/norcal_drift_calendar.ics">
+        🍎 Apple Calendar
+      </a>
+
+      <a class="modal-link" href="https://calendar.google.com/calendar/render?cid=https://nickdecarli74.github.io/norcal-drift-calendar/norcal_drift_calendar.ics" target="_blank">
+        📅 Google Calendar
+      </a>
+
+      <a class="modal-link" href="https://outlook.live.com/calendar/0/addcalendar?url=https://nickdecarli74.github.io/norcal-drift-calendar/norcal_drift_calendar.ics" target="_blank">
+        💼 Outlook
+      </a>
+
+      <a class="modal-link" href="https://nickdecarli74.github.io/norcal-drift-calendar/norcal_drift_calendar.ics" target="_blank">
+        ⬇ Download .ICS
+      </a>
+    </div>
+  </div>
+</div>
+<footer>
+  © DriftCal
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="media.js?v=1"></script>
+<script src="script.js?v=1"></script>
+
+<script>
+  function timeAgo(dateString) {
+    const updated = new Date(dateString);
+    const now = new Date();
+    const diffMs = now - updated;
+
+    const minutes = Math.floor(diffMs / 60000);
+    const hours = Math.floor(diffMs / 3600000);
+    const days = Math.floor(diffMs / 86400000);
+
+    if (minutes < 1) return "just now";
+    if (minutes < 60) return `${minutes} minute${minutes === 1 ? "" : "s"} ago`;
+    if (hours < 24) return `${hours} hour${hours === 1 ? "" : "s"} ago`;
+    return `${days} day${days === 1 ? "" : "s"} ago`;
+  }
+
+  fetch("status.json")
+    .then(response => response.json())
+    .then(status => {
+      document.getElementById("updateText").textContent =
+        `Updated ${timeAgo(status.lastUpdated)} · Newest event added: ${status.newestEvent}`;
+    })
+    .catch(() => {
+      document.getElementById("updateText").textContent =
+        "Live feed temporarily unavailable";
+    });
+</script>
+  
+</body>
+</html>

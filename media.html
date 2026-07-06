@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Media | DriftCal</title>
+  <link rel="stylesheet" href="style.css?v=4">
+</head>
+
+<body>
+
+<section class="hero media-hero">
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">DRIFT<span>CAL</span></a>
+
+    <div class="nav-links">
+      <a href="index.html#events">EVENTS</a>
+      <a href="index.html#calendar">CALENDAR</a>
+      <a href="index.html#tracks">TRACKS</a>
+      <a href="index.html#media">MEDIA</a>
+    </div>
+  </nav>
+
+  <div id="media-page" class="media-page"></div>
+</section>
+
+<footer>
+  © DriftCal
+</footer>
+
+<script src="media.js?v=1"></script>
+<script>
+  Promise.all([
+    fetch("events.json?v=" + Date.now()).then(res => res.json()),
+    fetch("media.json?v=" + Date.now()).then(res => res.json()).catch(() => [])
+  ]).then(([events, mediaData]) => {
+    renderMediaPage(events, mediaData);
+  }).catch(() => {
+    document.getElementById("media-page").innerHTML =
+      "<div class='modal-meta'>Could not load event media.</div>";
+  });
+</script>
+
+</body>
+</html>
