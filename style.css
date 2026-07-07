@@ -211,14 +211,6 @@ body{
   box-shadow:0 0 55px rgba(225,6,0,.95), inset 0 0 18px rgba(255,255,255,.18);
 }
 
-.subscribe-hint{
-  margin-top:12px;
-  color:#999;
-  font-size:12px;
-  font-style:italic;
-  text-align:center;
-}
-
 .update-strip {
   margin: 34px auto 26px;
   width: min(520px, 88%);
