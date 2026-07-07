@@ -3,6 +3,9 @@ from scrapers import drift_central
 from scrapers import bay_area_drifting
 from scrapers import fast_in_fast_out
 from scrapers import valley_drift_club
+from scrapers import outlaw_drift
+from scrapers import super_d
+from scrapers import apple_valley
 
 EVENTS_FILE = "events.yaml"
 MIN_EVENTS_REQUIRED = 1
@@ -48,6 +51,9 @@ drift_central_events = drift_central.get_events()
 bay_area_events = bay_area_drifting.get_events()
 fifo_events = fast_in_fast_out.get_events()
 vdc_events = valley_drift_club.get_events()
+outlaw_drift_events = outlaw_drift.get_events()
+super_d_events = super_d.get_events()
+apple_valley_events = apple_valley.get_events()
 
 if len(drift_central_events) < MIN_EVENTS_REQUIRED:
     raise RuntimeError(
@@ -60,6 +66,9 @@ incoming_events.extend(drift_central_events)
 incoming_events.extend(bay_area_events)
 incoming_events.extend(fifo_events)
 incoming_events.extend(vdc_events)
+incoming_events.extend(outlaw_drift_events)
+incoming_events.extend(super_d_events)
+incoming_events.extend(apple_valley_events)
 
 merged_events, added, updated = merge_events(existing_events, incoming_events)
 
