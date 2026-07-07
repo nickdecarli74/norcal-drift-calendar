@@ -29,8 +29,9 @@ const FIELD_NOTES = "Notes";
 // ---- Entry point ----
 
 function onFormSubmit(e) {
-  var raw = e && e.namedValues;
+  var raw = null;
   try {
+    raw = extractNamedValues_(e);
     if (!raw) throw new Error("No form data on trigger event.");
 
     var name = firstValue_(raw, FIELD_NAME);
@@ -89,6 +90,23 @@ function onFormSubmit(e) {
 }
 
 // ---- Field helpers ----
+
+// Normalizes the two different trigger event shapes Apps Script can hand us:
+// a form-bound "On form submit" trigger gives e.response (a FormResponse),
+// while a spreadsheet-bound one gives e.namedValues (question title -> [answer]).
+// Returns the namedValues shape either way so the rest of the script doesn't care
+// which container the script ended up bound to.
+function extractNamedValues_(e) {
+  if (e && e.response) {
+    var map = {};
+    e.response.getItemResponses().forEach(function (ir) {
+      map[ir.getItem().getTitle()] = [String(ir.getResponse())];
+    });
+    return map;
+  }
+  if (e && e.namedValues) return e.namedValues;
+  return null;
+}
 
 function firstValue_(namedValues, field) {
   var arr = namedValues[field];

@@ -33,9 +33,15 @@ and GitHub accounts.
 ## 4. Create the trigger
 
 1. In the Apps Script editor: **Triggers** (clock icon) → **Add Trigger**.
-2. Function: `onFormSubmit`. Event source: **From spreadsheet**. Event type: **On form submit**.
+2. Function: `onFormSubmit`. Event source: **From spreadsheet** or **From form** —
+   whichever this project is bound to (depends on whether you opened Apps Script from
+   the form's response Sheet or the Form itself). `Code.gs` handles both event shapes
+   via `extractNamedValues_`, so either works. Event type: **On form submit**.
 3. Save — you'll be prompted to authorize the script (it needs permission to make
-   external requests and send email on your behalf). Approve it.
+   external requests and send email on your behalf). You'll likely see an
+   "unverified app" warning first since this is a personal script, not a published
+   one — click **Advanced** → **Go to \<project name\> (unsafe)** → **Allow**. This is
+   expected and safe since you're both the developer and the user.
 
 ## 5. Keep the "Event" dropdown labels in sync
 
