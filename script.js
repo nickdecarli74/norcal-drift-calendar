@@ -168,13 +168,31 @@ function renderTrackMap(){
       lat: 36.6628,
       lng: -121.6063,
       search: ["salinas"]
+    },
+    {
+      name: "San Joaquin County Fairgrounds",
+      short: "Stockton",
+      location: "Stockton, CA",
+      lat: 37.9364,
+      lng: -121.2657,
+      search: ["san joaquin", "stockton"]
+    },
+    {
+      name: "Apple Valley Speedway",
+      short: "Apple Valley",
+      location: "Apple Valley, CA",
+      lat: 34.6221,
+      lng: -117.1695,
+      search: ["apple valley"]
     }
   ];
+
+  const bounds = L.latLngBounds(tracks.map(t => [t.lat, t.lng]));
 
   const map = L.map("track-map", {
     scrollWheelZoom: false,
     zoomControl: true
-  }).setView([37.8, -121.8], 7);
+  }).fitBounds(bounds, {padding: [40, 40]});
 
   L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
     attribution: "&copy; OpenStreetMap &copy; CARTO",
@@ -190,8 +208,8 @@ function renderTrackMap(){
 
   tracks.forEach(track => {
     const trackEvents = allEvents.filter(e => {
-      const loc = (e.location || "").toLowerCase();
-      return track.search.some(term => loc.includes(term));
+      const haystack = `${e.location || ""} ${e.promoter || ""}`.toLowerCase();
+      return track.search.some(term => haystack.includes(term));
     });
 
     const nextEvent = trackEvents
