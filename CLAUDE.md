@@ -1,10 +1,23 @@
-# DriftCal — Project Notes for Claude Code
+# DriftWest — Project Notes for Claude Code
 
-Static site for a NorCal drift event calendar (GitHub Pages). No build step —
+Static site for a West Coast drift event calendar (GitHub Pages). No build step —
 plain HTML/CSS/JS, data lives in JSON files, content is hand-curated.
+
+**Brand vs. repo name**: the site rebranded from "DriftCal" to "DriftWest" (name
+collision with an unrelated existing driftcal.net, plus a scope broadening from
+NorCal-only to West Coast). The GitHub repo itself is still named
+`norcal-drift-calendar` and file names like `norcal_drift_calendar.ics` are
+unchanged on purpose — renaming those would break calendar subscription links
+people already added. Don't "fix" the repo/file names to match the brand unless
+the user explicitly asks — it's intentional, not leftover cruft.
 
 ## Stack
 - `index.html` / `style.css` / `script.js` — homepage (hero, events, calendar, track map)
+- Hero logo is `.hero-logo`/`.wordmark` in `index.html` + `style.css` — an inline
+  animated CSS wordmark (DRIFT/WEST + slowly drifting blurred smoke blobs), not an
+  image file. There's no logo asset to replace if the brand changes again — just
+  the text in the `.wordmark` element and the `assets/` folder has some pre-rebrand
+  logo PNGs left over that are unused (`driftcal-logo_nb.png`, `logo.png`, etc.).
 - `events.json` — event data (manually curated + scraper output from `scrapers/`)
 - `calendar_builder.py`, `update_events.py` — generate `norcal_drift_calendar.ics` / `status.json`
 - Design language: black background, red accent (`#e10600`), bold italic headers,
@@ -12,7 +25,7 @@ plain HTML/CSS/JS, data lives in JSON files, content is hand-curated.
   in `style.css` before adding new components — match the existing look.
 
 ## MEDIA tab
-Goal: make the MEDIA tab a hub where photographers/videographers who shoot NorCal
+Goal: make the MEDIA tab a hub where photographers/videographers who shoot West Coast
 drift events can share links to their albums/reels, organized **per event**, and
 **per photographer within that event**. We are NOT hosting media files on the site
 — just linking out to wherever the photographer already posted (Instagram, YouTube,

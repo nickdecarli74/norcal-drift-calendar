@@ -39,7 +39,7 @@ def merge_events(existing, incoming):
 
     return list(by_id.values()), added, updated
 
-print("DriftCal auto-updater started.")
+print("DriftWest auto-updater started.")
 
 existing_events = load_existing_events()
 incoming_events = []

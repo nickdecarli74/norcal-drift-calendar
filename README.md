@@ -1,2 +1,2 @@
-# norcal-drift-calendar
-A calendar of all upcoming drifting events in northern California, automatically updating
+# DriftWest
+A calendar of all upcoming drifting events across the West Coast, automatically updating

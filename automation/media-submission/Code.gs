@@ -1,10 +1,10 @@
 /**
- * DriftCal media submission automation.
+ * DriftWest media submission automation.
  *
  * Bound to the Google Sheet that collects responses from the "SHOT THIS EVENT?"
  * form. An installable "On form submit" trigger calls onFormSubmit(e) below,
  * which resolves the submitted event to a media.json eventId, opens a PR against
- * the DriftCal GitHub repo with the new submission, and emails the owner a
+ * the DriftWest GitHub repo with the new submission, and emails the owner a
  * summary (including the private Contact field, which never goes in the PR).
  *
  * Setup: see README.md in this same folder. Do not hardcode the GitHub token —
@@ -241,7 +241,7 @@ function commitFile_(token, path, newContent, sha, branch, message) {
 
 function openPullRequest_(token, branch, name, role, eventId) {
   var body = [
-    "Automated media submission from the DriftCal form.",
+    "Automated media submission from the DriftWest form.",
     "",
     "- **Name/handle:** " + name,
     "- **Role:** " + role,
@@ -298,7 +298,7 @@ function sendOwnerEmail_(prUrl, s) {
     "Contact (not in the PR): " + (s.contact || "(not provided)")
   ].filter(function (l) { return l !== null; }).join("\n");
 
-  MailApp.sendEmail(OWNER_EMAIL, "DriftCal media submission: " + s.name, lines);
+  MailApp.sendEmail(OWNER_EMAIL, "DriftWest media submission: " + s.name, lines);
 }
 
 function sendAlertEmail_(err, raw) {
@@ -306,7 +306,7 @@ function sendAlertEmail_(err, raw) {
     "Error: " + (err && err.message ? err.message : err) + "\n\n" +
     "Raw form data:\n" + JSON.stringify(raw, null, 2);
   try {
-    MailApp.sendEmail(OWNER_EMAIL, "DriftCal media submission FAILED", body);
+    MailApp.sendEmail(OWNER_EMAIL, "DriftWest media submission FAILED", body);
   } catch (mailErr) {
     // If email itself fails, the Apps Script execution log is the last resort.
     console.error(body);

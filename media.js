@@ -99,7 +99,7 @@ function renderMediaPage(events, mediaData){
   }
 
   const p = formatDateParts(event.start);
-  document.title = `${event.title} — Media | DriftCal`;
+  document.title = `${event.title} — Media | DriftWest`;
 
   const submissions = meta ? meta.submissions : [];
 
