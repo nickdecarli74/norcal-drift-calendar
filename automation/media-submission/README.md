@@ -43,24 +43,22 @@ and GitHub accounts.
    one — click **Advanced** → **Go to \<project name\> (unsafe)** → **Allow**. This is
    expected and safe since you're both the developer and the user.
 
-## 5. Keep the "Event" dropdown labels in sync
+## 5. How the "Event" dropdown gets matched
 
-The script matches your form's `Event` answer against `events.json` by building this
-exact label for every event and comparing it verbatim:
+The script doesn't require a rigid dropdown format. It fetches `events.json` and, for
+each event, checks whether the submitted answer contains **both**: the event's date
+(tried in a few common formats) **and** the event's title or promoter name, somewhere
+in the text. So `"Valley Drift Club - July 11, 2026"` matches fine, and so would
+`"Jul 11 2026 — VDC"` as long as "VDC" isn't how you'd write "Valley Drift Club" (it
+needs the actual promoter/title text, not an abbreviation the script doesn't know).
 
-```
-<title> — <promoter> — <date>
-```
+Whenever a new event needs to be selectable in the form, just add a dropdown option
+that includes that event's promoter (or title) plus its date, in whatever readable
+format you'd naturally write — no special syntax needed. This is already a manual step
+today (the dropdown doesn't update itself).
 
-Example: `Valley Drift Club Event — Valley Drift Club — Jul 11, 2026`
-
-Whenever a new event needs to be selectable in the form, add its dropdown option using
-this exact format (em dash `—`, not a hyphen). This is already a manual step today
-(the dropdown doesn't update itself) — the automation just requires the label format
-to be consistent so it can find the right `eventId`.
-
-If the script can't match an answer, it emails you the raw submission instead of
-silently failing or guessing.
+If the script can't find exactly one matching event (none, or an ambiguous multiple
+match), it emails you the raw submission instead of silently failing or guessing.
 
 ## 6. Test it
 

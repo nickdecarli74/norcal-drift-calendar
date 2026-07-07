@@ -61,9 +61,11 @@ they just merge a PR instead of hand-editing JSON:
    as before.
 
 This form link is placeholder-free and real — do not swap it back to a mailto
-unless the user asks. The event dropdown's option text must exactly match
-`<title> — <promoter> — <date>` (see `automation/media-submission/README.md` §5) so
-the script can resolve it — update the dropdown when adding new events.
+unless the user asks. The event dropdown doesn't need a rigid format — the script
+fuzzy-matches an answer to an `eventId` if it contains both that event's date and its
+title/promoter somewhere in the text (see `automation/media-submission/README.md` §5).
+Still needs a new dropdown option whenever a new event is added, just not a specific
+syntax.
 
 ### Seeded/placeholder data
 `media.json` currently has **placeholder entries** for the first event

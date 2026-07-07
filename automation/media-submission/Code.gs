@@ -22,9 +22,9 @@ const OWNER_EMAIL = "nickdecarli74@gmail.com";
 const FIELD_NAME = "Name/Handle";
 const FIELD_EVENT = "Event";
 const FIELD_ROLE = "Role";
-const FIELD_LINK = "Link";
-const FIELD_CONTACT = "Contact";
-const FIELD_NOTES = "Notes";
+const FIELD_LINK = "Link to your album, reel or channel";
+const FIELD_CONTACT = "Your Email or Instagram handle (so we can reach you if needed)";
+const FIELD_NOTES = "Anything else we should know?";
 
 // ---- Entry point ----
 
@@ -124,6 +124,12 @@ function mapRole_(answer) {
 
 // ---- Event matching ----
 
+// Fuzzy on purpose: the Google Form's "Event" dropdown is free-text edited by the
+// owner and its exact wording can drift (dashes, month format, whether it includes
+// the title vs. just the promoter). Rather than requiring the dropdown to follow a
+// rigid convention, we check whether the event's date AND its title-or-promoter both
+// appear somewhere in the answer. If that's ambiguous (0 or 2+ matches), we bail out
+// to the failure email rather than guess.
 function resolveEventId_(eventAnswer) {
   var url = "https://raw.githubusercontent.com/" + GITHUB_OWNER + "/" +
     GITHUB_REPO + "/" + BASE_BRANCH + "/events.json";
@@ -132,20 +138,27 @@ function resolveEventId_(eventAnswer) {
     throw new Error("Failed to fetch events.json: " + resp.getContentText());
   }
   var events = JSON.parse(resp.getContentText());
-  var target = (eventAnswer || "").trim();
+  var answer = (eventAnswer || "").trim().toLowerCase();
 
-  for (var i = 0; i < events.length; i++) {
-    var ev = events[i];
-    var label = eventLabel_(ev);
-    if (label === target) return ev.id;
-  }
-  return null;
-}
+  var matches = events.filter(function (ev) {
+    var d = new Date(ev.start.replace(" ", "T"));
+    var dateVariants = [
+      Utilities.formatDate(d, "America/Los_Angeles", "yyyy-MM-dd"),
+      Utilities.formatDate(d, "America/Los_Angeles", "MMMM d, yyyy"),
+      Utilities.formatDate(d, "America/Los_Angeles", "MMM d, yyyy"),
+      Utilities.formatDate(d, "America/Los_Angeles", "M/d/yyyy")
+    ].map(function (s) { return s.toLowerCase(); });
 
-function eventLabel_(ev) {
-  var d = new Date(ev.start.replace(" ", "T"));
-  var dateStr = Utilities.formatDate(d, "America/Los_Angeles", "MMM d, yyyy");
-  return ev.title + " — " + ev.promoter + " — " + dateStr;
+    var hasDate = dateVariants.some(function (dv) {
+      return answer.indexOf(dv) !== -1;
+    });
+    var hasName = answer.indexOf(ev.title.toLowerCase()) !== -1 ||
+      answer.indexOf(ev.promoter.toLowerCase()) !== -1;
+
+    return hasDate && hasName;
+  });
+
+  return matches.length === 1 ? matches[0].id : null;
 }
 
 // ---- GitHub REST helpers ----
