@@ -51,6 +51,16 @@ def get_events():
             "notes": "Main Track. Manually verified from Apple Valley Speedway's calendar."
         },
         {
+            "id": "av-2026-07-29",
+            "title": "Drift School USA",
+            "promoter": "Apple Valley Speedway",
+            "start": "2026-07-29 08:00",
+            "end": "2026-07-29 17:00",
+            "location": "Apple Valley Speedway",
+            "url": "https://applevalleyspeedway.com/calendar/",
+            "notes": "Skid Pad. Manually verified from Apple Valley Speedway's calendar."
+        },
+        {
             "id": "av-2026-08-08",
             "title": "Endless Summer Nights 6",
             "promoter": "Apple Valley Speedway",
