@@ -190,21 +190,6 @@ body{
   font-weight:700;
 }
 
-.region{
-  margin-top:10px;
-  margin-bottom:18px;
-  color:#bdbdbd;
-  font-size:12px;
-  font-weight:800;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  opacity:.9;
-}
-
-.region .pin{
-  color:#e10600;
-}
-
 .subscribe{
   margin-top:12px;
   display:inline-block;
@@ -971,13 +956,6 @@ footer{
   padding:0 10px;
   line-height:1.5;
 }
-
-  .region{
-    margin-top:10px;
-    margin-bottom:16px;
-    font-size:12px;
-    letter-spacing:2.5px;
-  }
 
   .subscribe{
     margin-top:14px;
