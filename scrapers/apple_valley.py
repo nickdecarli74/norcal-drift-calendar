@@ -6,9 +6,9 @@ def get_events():
             "promoter": "Apple Valley Speedway",
             "start": "2026-07-10 08:00",
             "end": "2026-07-10 17:00",
-            "location": "Apple Valley Speedway",
+            "location": "Main Track",
             "url": "https://applevalleyspeedway.com/calendar/",
-            "notes": "Main Track. Manually verified from Apple Valley Speedway's calendar."
+            "notes": "Manually verified from Apple Valley Speedway's calendar."
         },
         {
             "id": "av-2026-07-11",
@@ -16,9 +16,9 @@ def get_events():
             "promoter": "Apple Valley Speedway",
             "start": "2026-07-11 08:00",
             "end": "2026-07-11 17:00",
-            "location": "Apple Valley Speedway",
+            "location": "Main & Skid",
             "url": "https://applevalleyspeedway.com/calendar/",
-            "notes": "Main & Skid. Manually verified from Apple Valley Speedway's calendar."
+            "notes": "Manually verified from Apple Valley Speedway's calendar."
         },
         {
             "id": "av-2026-07-12",
@@ -26,9 +26,9 @@ def get_events():
             "promoter": "Apple Valley Speedway",
             "start": "2026-07-12 08:00",
             "end": "2026-07-12 17:00",
-            "location": "Apple Valley Speedway",
+            "location": "Main & Skid",
             "url": "https://applevalleyspeedway.com/calendar/",
-            "notes": "Main & Skid. Manually verified from Apple Valley Speedway's calendar."
+            "notes": "Manually verified from Apple Valley Speedway's calendar."
         },
         {
             "id": "av-2026-07-18",
@@ -36,9 +36,9 @@ def get_events():
             "promoter": "Apple Valley Speedway",
             "start": "2026-07-18 08:00",
             "end": "2026-07-18 17:00",
-            "location": "Apple Valley Speedway",
+            "location": "Main Track",
             "url": "https://applevalleyspeedway.com/calendar/",
-            "notes": "Main Track. Manually verified from Apple Valley Speedway's calendar."
+            "notes": "Manually verified from Apple Valley Speedway's calendar."
         },
         {
             "id": "av-2026-07-24",
@@ -46,9 +46,9 @@ def get_events():
             "promoter": "Apple Valley Speedway",
             "start": "2026-07-24 08:00",
             "end": "2026-07-24 17:00",
-            "location": "Apple Valley Speedway",
+            "location": "Main Track",
             "url": "https://applevalleyspeedway.com/calendar/",
-            "notes": "Main Track. Manually verified from Apple Valley Speedway's calendar."
+            "notes": "Manually verified from Apple Valley Speedway's calendar."
         },
         {
             "id": "av-2026-07-29",
@@ -56,9 +56,9 @@ def get_events():
             "promoter": "Apple Valley Speedway",
             "start": "2026-07-29 08:00",
             "end": "2026-07-29 17:00",
-            "location": "Apple Valley Speedway",
+            "location": "Skid Pad",
             "url": "https://applevalleyspeedway.com/calendar/",
-            "notes": "Skid Pad. Manually verified from Apple Valley Speedway's calendar."
+            "notes": "Manually verified from Apple Valley Speedway's calendar."
         },
         {
             "id": "av-2026-08-08",
@@ -66,9 +66,9 @@ def get_events():
             "promoter": "Apple Valley Speedway",
             "start": "2026-08-08 08:00",
             "end": "2026-08-08 17:00",
-            "location": "Apple Valley Speedway",
+            "location": "Main & Skid",
             "url": "https://applevalleyspeedway.com/calendar/",
-            "notes": "Main & Skid. Manually verified from Apple Valley Speedway's calendar."
+            "notes": "Manually verified from Apple Valley Speedway's calendar."
         },
         {
             "id": "av-2026-08-09",
@@ -76,9 +76,9 @@ def get_events():
             "promoter": "Apple Valley Speedway",
             "start": "2026-08-09 08:00",
             "end": "2026-08-09 17:00",
-            "location": "Apple Valley Speedway",
+            "location": "Main Track",
             "url": "https://applevalleyspeedway.com/calendar/",
-            "notes": "Main Track. Manually verified from Apple Valley Speedway's calendar."
+            "notes": "Manually verified from Apple Valley Speedway's calendar."
         },
         {
             "id": "av-2026-08-21",
@@ -86,9 +86,9 @@ def get_events():
             "promoter": "Apple Valley Speedway",
             "start": "2026-08-21 08:00",
             "end": "2026-08-21 17:00",
-            "location": "Apple Valley Speedway",
+            "location": "Main Track",
             "url": "https://applevalleyspeedway.com/calendar/",
-            "notes": "Main Track. Manually verified from Apple Valley Speedway's calendar."
+            "notes": "Manually verified from Apple Valley Speedway's calendar."
         },
         {
             "id": "av-2026-08-22",
@@ -96,9 +96,9 @@ def get_events():
             "promoter": "Apple Valley Speedway",
             "start": "2026-08-22 08:00",
             "end": "2026-08-22 17:00",
-            "location": "Apple Valley Speedway",
+            "location": "Main Track",
             "url": "https://applevalleyspeedway.com/calendar/",
-            "notes": "Main Track. Manually verified from Apple Valley Speedway's calendar."
+            "notes": "Manually verified from Apple Valley Speedway's calendar."
         },
         {
             "id": "av-2026-08-23",
@@ -106,9 +106,9 @@ def get_events():
             "promoter": "Apple Valley Speedway",
             "start": "2026-08-23 08:00",
             "end": "2026-08-23 17:00",
-            "location": "Apple Valley Speedway",
+            "location": "Main & Skid",
             "url": "https://applevalleyspeedway.com/calendar/",
-            "notes": "Main & Skid. Manually verified from Apple Valley Speedway's calendar."
+            "notes": "Manually verified from Apple Valley Speedway's calendar."
         },
         {
             "id": "av-2026-08-29",
@@ -116,9 +116,9 @@ def get_events():
             "promoter": "Apple Valley Speedway",
             "start": "2026-08-29 08:00",
             "end": "2026-08-29 17:00",
-            "location": "Apple Valley Speedway",
+            "location": "Main & Skid",
             "url": "https://applevalleyspeedway.com/calendar/",
-            "notes": "Main & Skid. Manually verified from Apple Valley Speedway's calendar."
+            "notes": "Manually verified from Apple Valley Speedway's calendar."
         },
         {
             "id": "av-2026-08-30",
@@ -126,9 +126,9 @@ def get_events():
             "promoter": "Apple Valley Speedway",
             "start": "2026-08-30 08:00",
             "end": "2026-08-30 17:00",
-            "location": "Apple Valley Speedway",
+            "location": "Main Track",
             "url": "https://applevalleyspeedway.com/calendar/",
-            "notes": "Main Track. Manually verified from Apple Valley Speedway's calendar."
+            "notes": "Manually verified from Apple Valley Speedway's calendar."
         },
         {
             "id": "av-2026-09-05",
@@ -136,9 +136,9 @@ def get_events():
             "promoter": "Apple Valley Speedway",
             "start": "2026-09-05 08:00",
             "end": "2026-09-05 17:00",
-            "location": "Apple Valley Speedway",
+            "location": "Main Track",
             "url": "https://applevalleyspeedway.com/calendar/",
-            "notes": "Main Track. Manually verified from Apple Valley Speedway's calendar."
+            "notes": "Manually verified from Apple Valley Speedway's calendar."
         },
         {
             "id": "av-2026-09-18",
@@ -146,8 +146,8 @@ def get_events():
             "promoter": "Apple Valley Speedway",
             "start": "2026-09-18 08:00",
             "end": "2026-09-18 17:00",
-            "location": "Apple Valley Speedway",
+            "location": "Main Track",
             "url": "https://applevalleyspeedway.com/calendar/",
-            "notes": "Main Track. Manually verified from Apple Valley Speedway's calendar."
+            "notes": "Manually verified from Apple Valley Speedway's calendar."
         }
     ]
