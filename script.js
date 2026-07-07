@@ -1,8 +1,144 @@
 let allEvents = [];
 let calendarDate = new Date(2026, 6, 1);
+let weatherData = {};
+
+const TRACKS = [
+  {
+    name: "Sonoma Raceway",
+    short: "Sonoma",
+    location: "Sonoma, CA",
+    lat: 38.1608,
+    lng: -122.4544,
+    search: ["sonoma"]
+  },
+  {
+    name: "Thunderhill Raceway",
+    short: "Thunderhill",
+    location: "Willows, CA",
+    lat: 39.5393,
+    lng: -122.3321,
+    search: ["thunderhill"]
+  },
+  {
+    name: "NASA Crows Landing Airport",
+    short: "Crows Landing",
+    location: "Crows Landing, CA",
+    lat: 37.4083,
+    lng: -121.1108,
+    search: ["crows", "nasa crows"]
+  },
+  {
+    name: "Salinas Municipal Airport",
+    short: "Salinas",
+    location: "Salinas, CA",
+    lat: 36.6628,
+    lng: -121.6063,
+    search: ["salinas"]
+  },
+  {
+    name: "San Joaquin County Fairgrounds",
+    short: "Stockton",
+    location: "Stockton, CA",
+    lat: 37.9364,
+    lng: -121.2657,
+    search: ["san joaquin", "stockton"]
+  },
+  {
+    name: "Apple Valley Speedway",
+    short: "Apple Valley",
+    location: "Apple Valley, CA",
+    lat: 34.6221,
+    lng: -117.1695,
+    search: ["apple valley"]
+  }
+];
+
+const WEATHER_ICONS = {
+  0: "☀️", 1: "🌤️", 2: "⛅", 3: "☁️",
+  45: "🌫️", 48: "🌫️",
+  51: "🌦️", 53: "🌦️", 55: "🌦️",
+  56: "🌧️", 57: "🌧️",
+  61: "🌧️", 63: "🌧️", 65: "🌧️",
+  66: "🌧️", 67: "🌧️",
+  71: "🌨️", 73: "🌨️", 75: "🌨️", 77: "🌨️",
+  80: "🌦️", 81: "🌦️", 82: "🌦️",
+  85: "🌨️", 86: "🌨️",
+  95: "⛈️", 96: "⛈️", 99: "⛈️"
+};
 
 function eventUrl(e){
   return e.url || "#";
+}
+
+function findTrackForEvent(e){
+  const haystack = `${e.location || ""} ${e.promoter || ""}`.toLowerCase();
+  return TRACKS.find(track => track.search.some(term => haystack.includes(term))) || null;
+}
+
+function weatherFor(e){
+  const track = findTrackForEvent(e);
+  if(!track) return null;
+  const byDate = weatherData[track.short];
+  if(!byDate) return null;
+  return byDate[e.start.slice(0,10)] || null;
+}
+
+function weatherBadge(e){
+  const w = weatherFor(e);
+  if(!w) return "";
+  const icon = WEATHER_ICONS[w.code] || "🌡️";
+  return `<span class="weather-badge">${icon} ${w.temp}°F</span>`;
+}
+
+function loadWeather(events){
+  const now = new Date();
+  const horizon = new Date();
+  horizon.setDate(horizon.getDate() + 16);
+
+  const neededTracks = [];
+  const seen = new Set();
+
+  events.forEach(e => {
+    const start = new Date(e.start.replace(" ","T"));
+    if(start < now || start > horizon) return;
+
+    const track = findTrackForEvent(e);
+    if(track && !seen.has(track.short)){
+      seen.add(track.short);
+      neededTracks.push(track);
+    }
+  });
+
+  if(!neededTracks.length) return Promise.resolve();
+
+  const lats = neededTracks.map(t => t.lat).join(",");
+  const lngs = neededTracks.map(t => t.lng).join(",");
+
+  const url = `https://api.open-meteo.com/v1/forecast?latitude=${lats}&longitude=${lngs}` +
+    `&daily=weathercode,temperature_2m_max&temperature_unit=fahrenheit` +
+    `&timezone=America%2FLos_Angeles&forecast_days=16`;
+
+  return fetch(url)
+    .then(res => res.json())
+    .then(data => {
+      const results = Array.isArray(data) ? data : [data];
+
+      results.forEach((result, i) => {
+        const track = neededTracks[i];
+        if(!track || !result.daily) return;
+
+        const byDate = {};
+        result.daily.time.forEach((dateKey, idx) => {
+          byDate[dateKey] = {
+            code: result.daily.weathercode[idx],
+            temp: Math.round(result.daily.temperature_2m_max[idx])
+          };
+        });
+
+        weatherData[track.short] = byDate;
+      });
+    })
+    .catch(() => {});
 }
 
 function renderNextEvent(events){
@@ -48,7 +184,7 @@ function renderUpcoming(events){
     const p = formatDateParts(e.start);
     return `
       <a class="small-card" href="${eventUrl(e)}" target="_blank" style="text-decoration:none;color:white">
-        <div class="small-date">${p.full}</div>
+        <div class="small-date">${p.full}${weatherBadge(e)}</div>
         <div class="small-title">${e.title}</div>
         <div class="small-meta">
           ${e.promoter}<br>
@@ -103,13 +239,14 @@ function openEventModal(eventId){
   if(!e) return;
 
   const p = formatDateParts(e.start);
+  const w = weatherBadge(e);
 
   document.getElementById("modal-body").innerHTML = `
     <div class="modal-title">${e.title}</div>
     <div class="modal-meta">
       📅 ${p.full}<br>
       📍 ${e.location}<br>
-      🏁 ${e.promoter}
+      🏁 ${e.promoter}${w ? `<br>${w}` : ""}
     </div>
     <div class="modal-section">
       <h3>EVENT NOTES</h3>
@@ -136,58 +273,7 @@ function renderTrackMap(){
   if(mapEl.dataset.loaded === "true") return;
   mapEl.dataset.loaded = "true";
 
-  const tracks = [
-    {
-      name: "Sonoma Raceway",
-      short: "Sonoma",
-      location: "Sonoma, CA",
-      lat: 38.1608,
-      lng: -122.4544,
-      search: ["sonoma"]
-    },
-    {
-      name: "Thunderhill Raceway",
-      short: "Thunderhill",
-      location: "Willows, CA",
-      lat: 39.5393,
-      lng: -122.3321,
-      search: ["thunderhill"]
-    },
-    {
-      name: "NASA Crows Landing Airport",
-      short: "Crows Landing",
-      location: "Crows Landing, CA",
-      lat: 37.4083,
-      lng: -121.1108,
-      search: ["crows", "nasa crows"]
-    },
-    {
-      name: "Salinas Municipal Airport",
-      short: "Salinas",
-      location: "Salinas, CA",
-      lat: 36.6628,
-      lng: -121.6063,
-      search: ["salinas"]
-    },
-    {
-      name: "San Joaquin County Fairgrounds",
-      short: "Stockton",
-      location: "Stockton, CA",
-      lat: 37.9364,
-      lng: -121.2657,
-      search: ["san joaquin", "stockton"]
-    },
-    {
-      name: "Apple Valley Speedway",
-      short: "Apple Valley",
-      location: "Apple Valley, CA",
-      lat: 34.6221,
-      lng: -117.1695,
-      search: ["apple valley"]
-    }
-  ];
-
-  const bounds = L.latLngBounds(tracks.map(t => [t.lat, t.lng]));
+  const bounds = L.latLngBounds(TRACKS.map(t => [t.lat, t.lng]));
 
   const map = L.map("track-map", {
     scrollWheelZoom: false,
@@ -206,11 +292,8 @@ function renderTrackMap(){
     iconAnchor: [17,17]
   });
 
-  tracks.forEach(track => {
-    const trackEvents = allEvents.filter(e => {
-      const haystack = `${e.location || ""} ${e.promoter || ""}`.toLowerCase();
-      return track.search.some(term => haystack.includes(term));
-    });
+  TRACKS.forEach(track => {
+    const trackEvents = allEvents.filter(e => findTrackForEvent(e) === track);
 
     const nextEvent = trackEvents
       .filter(e => new Date(e.start.replace(" ","T")) >= new Date())
@@ -256,6 +339,10 @@ Promise.all([
     renderCalendar();
     renderTrackMap();
     renderMediaSection(allEvents, mediaData);
+
+    loadWeather(allEvents).then(() => {
+      renderUpcoming(allEvents);
+    });
   })
   .catch(() => {
     document.getElementById("next-event").innerHTML = "<div class='event-inner'>Could not load events.</div>";

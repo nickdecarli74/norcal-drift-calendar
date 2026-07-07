@@ -400,6 +400,14 @@ body{
   margin-bottom:8px;
 }
 
+.weather-badge{
+  margin-left:8px;
+  color:#ccc;
+  font-weight:700;
+  font-size:12px;
+  letter-spacing:0;
+}
+
 .small-title{
   font-weight:900;
   font-size:20px;
