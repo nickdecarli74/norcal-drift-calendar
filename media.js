@@ -36,6 +36,7 @@ function platformLabel(url){
 function roleLabel(role){
   if(role === "video") return "🎥 Videographer";
   if(role === "photo") return "📷 Photographer";
+  if(role === "both") return "📸 Photographer & Videographer";
   return "📸 Media";
 }
 

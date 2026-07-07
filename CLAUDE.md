@@ -11,10 +11,7 @@ plain HTML/CSS/JS, data lives in JSON files, content is hand-curated.
   card grids with hover glow. See existing `.small-card` / `.event-card` patterns
   in `style.css` before adding new components — match the existing look.
 
-## Current branch: `media-tab-feature`
-Do not merge into `main` without the user's review — `main` is the live site.
-
-## What we're building: MEDIA tab
+## MEDIA tab
 Goal: make the MEDIA tab a hub where photographers/videographers who shoot NorCal
 drift events can share links to their albums/reels, organized **per event**, and
 **per photographer within that event**. We are NOT hosting media files on the site
@@ -25,7 +22,7 @@ Google Drive, etc).
 - `media.json` — data file, one object per event:
   ```json
   { "eventId": "vdc-2026-07-11", "submissions": [
-    { "name": "...", "role": "photo" | "video", "url": "...", "note": "optional" }
+    { "name": "...", "role": "photo" | "video" | "both", "url": "...", "note": "optional" }
   ]}
   ```
   `eventId` must match an id in `events.json`. This is the file the site owner
@@ -39,20 +36,34 @@ Google Drive, etc).
   `platformLabel()` / `roleLabel()` helpers.
 - Homepage `#media` section (in `index.html`) lists events with galleries, links to
   `media.html?event=<id>` for each.
+- `automation/media-submission/Code.gs` — Google Apps Script, bound to the form's
+  response Sheet, triggered on form submit. Resolves the submitted event to an
+  `eventId`, opens a GitHub PR adding the submission to `media.json`, and emails the
+  owner a summary (contact info goes in the email only, never the PR — repo is
+  public). See `automation/media-submission/README.md` for one-time setup (Apps
+  Script trigger, GitHub PAT in Script Properties) — Claude Code can't do that setup
+  itself, it needs the owner's Google/GitHub accounts.
 
 ### Submission workflow (decided, already built)
-Self-serve, not fully automated — the site owner manually approves before anything
-goes live:
+Self-serve, review-gated via GitHub PR — the site owner still approves everything,
+they just merge a PR instead of hand-editing JSON:
 1. Photographer fills out a Google Form (already created, live):
    https://docs.google.com/forms/d/e/1FAIpQLSfgvWh9QZlCBY46bMQCUbZy4DMaewADwCGHScMELIs4Wby_Rg/viewform
    Fields: Name/Handle, Event (dropdown), Role (photo/video/both), Link, Contact, Notes.
-2. Responses land in a linked Google Sheet.
-3. Owner reviews, copies approved entries into `media.json` by hand, pushes.
-4. This mirrors the existing manual-curation pattern already used for VDC events
-   in `events.json` — no new infra, no backend/database added.
+2. Responses land in a linked Google Sheet, which fires the Apps Script trigger
+   (`automation/media-submission/Code.gs`).
+3. The script opens a PR adding the submission to `media.json` and emails the owner
+   the details (including Contact, which is deliberately excluded from the public PR).
+4. Owner reviews the PR on GitHub and merges (or closes it) — that's the approval step.
+5. Fallback: if the automation is down, or the event dropdown's label doesn't match
+   `events.json` (the script emails a failure alert with the raw submission in that
+   case), the owner can still copy entries into `media.json` by hand and push, exactly
+   as before.
 
 This form link is placeholder-free and real — do not swap it back to a mailto
-unless the user asks.
+unless the user asks. The event dropdown's option text must exactly match
+`<title> — <promoter> — <date>` (see `automation/media-submission/README.md` §5) so
+the script can resolve it — update the dropdown when adding new events.
 
 ### Seeded/placeholder data
 `media.json` currently has **placeholder entries** for the first event
@@ -61,12 +72,18 @@ so the layout is visible. Replace with real submissions once the user approves t
 from the Google Form responses. Don't invent real photographer names.
 
 ### Not yet decided / open for later
-- No real backend for auto-publishing approved submissions (Option 3 from earlier
-  discussion — a proper approve/reject queue) — deliberately deferred. Only build
-  this if the user asks; don't add infra unprompted.
 - No file/photo hosting on-site — links out only, by design.
+- The Apps Script role mapping (`mapRole_` in `Code.gs`) guesses "photo" for
+  unrecognized Role answers rather than dropping the submission — revisit if the
+  form's Role options ever change wording.
 
 ## Working agreement
 - Match existing code style (vanilla JS, no frameworks, no build tools).
-- Don't push to `main` directly — work on branches, let the user review/merge.
+- This repo pushes directly to `main` (no long-lived feature branches) — `main` is
+  the live site, so still confirm before pushing, but branch-per-feature isn't the
+  pattern here.
 - When adding new events to `media.json`, cross-check `eventId` exists in `events.json`.
+- `norcal_drift_calendar.ics`, `events.json`, `status.json`, `events.yaml` are
+  auto-generated by `.github/workflows/update.yml` (daily cron, runs
+  `update_events.py` + `calendar_builder.py`) — don't hand-edit them, and prefer
+  origin's version of these files if a merge conflict ever comes up.
