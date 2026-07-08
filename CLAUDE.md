@@ -18,7 +18,13 @@ the user explicitly asks — it's intentional, not leftover cruft.
   image file. There's no logo asset to replace if the brand changes again — just
   the text in the `.wordmark` element and the `assets/` folder has some pre-rebrand
   logo PNGs left over that are unused (`driftcal-logo_nb.png`, `logo.png`, etc.).
-- `events.json` — event data (manually curated + scraper output from `scrapers/`)
+- `events.json` — event data (manually curated + scraper output from `scrapers/`).
+  Optional `"featured": true` field overrides the homepage "JUST HAPPENED" card
+  (`renderJustHappened()` in `script.js`), which otherwise auto-picks the most
+  recent past event still inside its media submission window. Use it to correct
+  the automatic pick when a more recent-but-less-notable event would otherwise
+  win (e.g. a routine practice day happening a day after the event people are
+  actually sharing media from).
 - `calendar_builder.py`, `update_events.py` — generate `norcal_drift_calendar.ics` / `status.json`
 - Design language: black background, red accent (`#e10600`), bold italic headers,
   card grids with hover glow. See existing `.small-card` / `.event-card` patterns

@@ -188,6 +188,53 @@ function renderNextEvent(events){
   `;
 }
 
+function renderJustHappened(events){
+  const container = document.getElementById("just-happened");
+  if(!container) return;
+
+  const now = new Date();
+  const pastEvents = events.filter(e => new Date(e.start.replace(" ","T")) < now);
+
+  const featured = pastEvents
+    .filter(e => e.featured)
+    .sort((a,b) => new Date(b.start.replace(" ","T")) - new Date(a.start.replace(" ","T")))[0];
+
+  const automatic = pastEvents
+    .filter(e => mediaWindowOpen(e))
+    .sort((a,b) => new Date(b.start.replace(" ","T")) - new Date(a.start.replace(" ","T")))[0];
+
+  const event = featured || automatic;
+
+  if(!event){
+    container.innerHTML = "";
+    container.style.display = "none";
+    return;
+  }
+
+  container.style.display = "";
+  const p = formatDateParts(event.start);
+
+  container.innerHTML = `
+    <div class="event-inner">
+      <div class="date">
+        <div class="next">JUST HAPPENED</div>
+        <div class="month">${p.month}</div>
+        <div class="day">${p.day}</div>
+        <div class="year">${p.year}</div>
+      </div>
+      <div>
+        <div class="event-title">${event.title}</div>
+        <div class="event-info">
+          📍 ${event.location}<br>
+          🏁 ${event.promoter}<br>
+          🕘 ${p.full}
+        </div>
+        <a class="view-btn" href="media.html?event=${encodeURIComponent(event.id)}">VIEW MEDIA ›</a>
+      </div>
+    </div>
+  `;
+}
+
 function renderUpcoming(events){
   const now = new Date();
   const upcoming = events
@@ -361,6 +408,7 @@ Promise.all([
     }
 
     renderNextEvent(allEvents);
+    renderJustHappened(allEvents);
     renderUpcoming(allEvents);
     renderCalendar();
     renderTrackMap();
