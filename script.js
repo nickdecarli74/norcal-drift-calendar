@@ -71,6 +71,14 @@ function eventUrl(e){
   return e.url || "#";
 }
 
+const PROMOTER_ABBREV = {
+  "Apple Valley Speedway": "AVS"
+};
+
+function pillLabel(promoter){
+  return PROMOTER_ABBREV[promoter] || promoter;
+}
+
 function findTrackForEvent(e){
   const haystack = `${e.location || ""} ${e.promoter || ""}`.toLowerCase();
   return TRACKS.find(track => track.search.some(term => haystack.includes(term))) || null;
@@ -222,7 +230,7 @@ function renderCalendar(){
     html += `
       <div class="day-cell">
         <div class="day-number">${day}</div>
-        ${dayEvents.map(e => `<button class="event-pill" type="button" onclick="openEventModal('${e.id}')">${e.promoter}</button>`).join("")}
+        ${dayEvents.map(e => `<button class="event-pill" type="button" onclick="openEventModal('${e.id}')">${pillLabel(e.promoter)}</button>`).join("")}
       </div>
     `;
   }
