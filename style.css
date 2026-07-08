@@ -962,7 +962,7 @@ footer{
   }
 
   .wordmark{
-    font-size:clamp(36px,13vw,64px);
+    font-size:clamp(40px,14vw,68px);
   }
 
   .tagline{
