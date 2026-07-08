@@ -213,6 +213,10 @@ body{
   box-shadow:0 0 55px rgba(225,6,0,.95), inset 0 0 18px rgba(255,255,255,.18);
 }
 
+.mobile-quick-tabs{
+  display:none;
+}
+
 .update-strip {
   margin: 34px auto 26px;
   width: min(520px, 88%);
@@ -972,6 +976,41 @@ footer{
     font-size:14px;
     padding:15px 18px;
     max-width:92vw;
+  }
+
+  .mobile-quick-tabs{
+    display:flex;
+    gap:8px;
+    overflow-x:auto;
+    padding:14px 4px 4px;
+    margin:18px auto 0;
+    max-width:100%;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+  }
+
+  .mobile-quick-tabs::-webkit-scrollbar{
+    display:none;
+  }
+
+  .mobile-quick-tabs a{
+    flex:0 0 auto;
+    padding:10px 16px;
+    border:1px solid rgba(255,255,255,.18);
+    border-radius:999px;
+    color:white;
+    text-decoration:none;
+    font-size:12px;
+    font-weight:900;
+    letter-spacing:.5px;
+    background:rgba(255,255,255,.06);
+  }
+
+  .mobile-quick-tabs a:hover,
+  .mobile-quick-tabs a:active{
+    border-color:#e10600;
+    color:#e10600;
+    background:rgba(225,6,0,.14);
   }
 
   .event-inner{
