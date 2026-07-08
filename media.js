@@ -140,7 +140,7 @@ function renderMediaPage(events, mediaData){
           ${s.note ? `<div class="photog-note">${s.note}</div>` : ""}
         </a>
       `).join("")
-    : `<div class="media-empty">No galleries posted yet for this event. Shot it? <a class="modal-link" href="https://docs.google.com/forms/d/e/1FAIpQLSfgvWh9QZlCBY46bMQCUbZy4DMaewADwCGHScMELIs4Wby_Rg/viewform" target="_blank" rel="noopener">Submit your link</a>.</div>`;
+    : `<div class="media-empty">No galleries posted yet for this event.</div>`;
 
   container.innerHTML = `
     <div class="media-page-head">
