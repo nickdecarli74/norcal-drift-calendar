@@ -1,4 +1,5 @@
 let allEvents = [];
+let allMedia = [];
 let calendarDate = new Date(2026, 6, 1);
 let weatherData = {};
 
@@ -241,6 +242,17 @@ function openEventModal(eventId){
   const p = formatDateParts(e.start);
   const w = weatherBadge(e);
 
+  const mediaMeta = allMedia.find(m => m.eventId === e.id);
+  const mediaCount = mediaMeta ? mediaMeta.submissions.length : 0;
+  let mediaHtml;
+  if(mediaCount){
+    mediaHtml = `${mediaCount} ${mediaCount === 1 ? "submission" : "submissions"} posted. <a class="modal-link" href="media.html?event=${encodeURIComponent(e.id)}">View gallery ›</a>`;
+  } else if(mediaWindowOpen(e)){
+    mediaHtml = `Shot this event? <a class="modal-link" href="media.html?event=${encodeURIComponent(e.id)}">Submit your link ›</a>`;
+  } else {
+    mediaHtml = `Photos and videos will be added after the event.`;
+  }
+
   document.getElementById("modal-body").innerHTML = `
     <div class="modal-title">${e.title}</div>
     <div class="modal-meta">
@@ -254,7 +266,7 @@ function openEventModal(eventId){
     </div>
     <div class="modal-section">
       <h3>MEDIA</h3>
-      <div class="modal-meta">Photos and videos will be added after the event.</div>
+      <div class="modal-meta">${mediaHtml}</div>
     </div>
     <a class="modal-link" href="${eventUrl(e)}" target="_blank">REGISTRATION / INFO ›</a>
   `;
@@ -327,6 +339,7 @@ Promise.all([
 ])
   .then(([events, mediaData]) => {
     allEvents = events.sort((a,b) => new Date(a.start.replace(" ","T")) - new Date(b.start.replace(" ","T")));
+    allMedia = mediaData;
 
     const future = allEvents.find(e => new Date(e.start.replace(" ","T")) >= new Date());
     if(future){

@@ -40,37 +40,65 @@ function roleLabel(role){
   return "📸 Media";
 }
 
+const MEDIA_WINDOW_BEFORE_DAYS = 7;
+const MEDIA_WINDOW_AFTER_DAYS = 60;
+
+// Submissions are open from 7 days before an event through 60 days after it.
+function mediaWindowOpen(event){
+  const start = new Date(event.start.replace(" ","T"));
+  const opens = new Date(start);
+  opens.setDate(opens.getDate() - MEDIA_WINDOW_BEFORE_DAYS);
+  const closes = new Date(start);
+  closes.setDate(closes.getDate() + MEDIA_WINDOW_AFTER_DAYS);
+
+  const now = new Date();
+  return now >= opens && now <= closes;
+}
+
 /* ---- Homepage: MEDIA section (event grid) ---- */
 
 function renderMediaSection(events, mediaData){
   const grid = document.getElementById("media-grid");
   if(!grid) return;
 
-  if(!mediaData.length){
-    grid.innerHTML = `<div class="media-empty">No event galleries posted yet. Check back after the next event.</div>`;
-    return;
-  }
-
-  const withEvents = mediaData
+  const withSubmissions = mediaData
     .map(m => {
       const e = events.find(ev => ev.id === m.eventId);
       return e ? {meta: m, event: e} : null;
     })
-    .filter(Boolean)
+    .filter(Boolean);
+
+  const submittedIds = new Set(withSubmissions.map(x => x.event.id));
+
+  const openForSubmission = events
+    .filter(e => !submittedIds.has(e.id) && mediaWindowOpen(e))
+    .map(e => ({meta: {eventId: e.id, submissions: []}, event: e}));
+
+  const cards = [...withSubmissions, ...openForSubmission]
     .sort((a,b) => new Date(b.event.start.replace(" ","T")) - new Date(a.event.start.replace(" ","T")));
 
-  grid.innerHTML = withEvents.map(({meta, event}) => {
+  if(!cards.length){
+    grid.innerHTML = `<div class="media-empty">No event galleries posted yet. Check back after the next event.</div>`;
+    return;
+  }
+
+  grid.innerHTML = cards.map(({meta, event}) => {
     const p = formatDateParts(event.start);
     const count = meta.submissions.length;
+    const metaLine = count
+      ? `${count} ${count === 1 ? "submission" : "submissions"} posted`
+      : "Shot this event? Be the first to submit";
+    const linkLabel = count ? "VIEW GALLERY ›" : "SUBMIT YOUR LINK ›";
+
     return `
       <a class="media-card" href="media.html?event=${encodeURIComponent(event.id)}">
         <div class="media-card-date">${p.full}</div>
         <div class="media-card-title">${event.title}</div>
         <div class="media-card-meta">
           📍 ${event.location}<br>
-          ${count} ${count === 1 ? "submission" : "submissions"} posted
+          ${metaLine}
         </div>
-        <div class="media-card-link">VIEW GALLERY ›</div>
+        <div class="media-card-link">${linkLabel}</div>
       </a>
     `;
   }).join("");

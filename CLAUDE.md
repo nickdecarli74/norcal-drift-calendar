@@ -43,12 +43,18 @@ Google Drive, etc).
 - `media.html` — the "page per event" gallery, loaded as `media.html?event=<id>`.
   Reads `events.json` for event details + `media.json` for that event's submissions.
   Has a "SHOT THIS EVENT? SUBMIT YOUR LINK" banner linking to the Google Form (see below).
-- `media.js` — shared logic: `renderMediaSection()` (homepage grid of events-with-media,
-  called from `script.js`) and `renderMediaPage()` (the per-event page). Also has
-  `formatDateParts()` (moved here from `script.js`, loaded before it) and
-  `platformLabel()` / `roleLabel()` helpers.
-- Homepage `#media` section (in `index.html`) lists events with galleries, links to
-  `media.html?event=<id>` for each.
+- `media.js` — shared logic: `renderMediaSection()` (homepage grid), `renderMediaPage()`
+  (the per-event page), `formatDateParts()` (loaded before `script.js`, which also uses
+  it), `platformLabel()` / `roleLabel()` helpers, and `mediaWindowOpen(event)` — returns
+  true from 7 days before an event's start through 60 days after. Both the homepage
+  grid and the calendar event modal (`openEventModal()` in `script.js`) use it to decide
+  whether to show a "submit your link" call-to-action for events that don't have
+  submissions yet, vs. the static "added after the event" placeholder for events outside
+  that window. `script.js` keeps its own `allMedia` array (populated alongside
+  `allEvents`) so the modal can look up submission counts without re-fetching.
+- Homepage `#media` section (in `index.html`) lists events with existing galleries *and*
+  events currently inside the submission window with no submissions yet (as a "be the
+  first to submit" card) — links to `media.html?event=<id>` for each either way.
 - `automation/media-submission/Code.gs` — Google Apps Script, bound to the form's
   response Sheet, triggered on form submit. Resolves the submitted event to an
   `eventId`, opens a GitHub PR adding the submission to `media.json`, and emails the
