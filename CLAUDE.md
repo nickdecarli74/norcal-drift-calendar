@@ -86,12 +86,6 @@ title/promoter somewhere in the text (see `automation/media-submission/README.md
 Still needs a new dropdown option whenever a new event is added, just not a specific
 syntax.
 
-### Seeded/placeholder data
-`media.json` currently has **placeholder entries** for the first event
-(`vdc-2026-07-11`, the Valley Drift Club event on July 11, 2026) — fake names/links
-so the layout is visible. Replace with real submissions once the user approves them
-from the Google Form responses. Don't invent real photographer names.
-
 ### Not yet decided / open for later
 - No file/photo hosting on-site — links out only, by design.
 - The Apps Script role mapping (`mapRole_` in `Code.gs`) guesses "photo" for
