@@ -37,6 +37,7 @@ function roleLabel(role){
   if(role === "video") return "🎥 Videographer";
   if(role === "photo") return "📷 Photographer";
   if(role === "both") return "📸 Photographer & Videographer";
+  if(role === "driver") return "🚗 Driver Clip";
   return "📸 Media";
 }
 
@@ -130,17 +131,25 @@ function renderMediaPage(events, mediaData){
   document.title = `${event.title} — Media | DriftWest`;
 
   const submissions = meta ? meta.submissions : [];
+  const photogSubs = submissions.filter(s => s.role !== "driver");
+  const driverSubs = submissions.filter(s => s.role === "driver");
 
-  const cardsHtml = submissions.length
-    ? submissions.map(s => `
-        <a class="photog-card" href="${s.url}" target="_blank" rel="noopener">
-          <div class="photog-role">${roleLabel(s.role)}</div>
-          <div class="photog-name">${s.name}</div>
-          <div class="photog-platform">${platformLabel(s.url)} ›</div>
-          ${s.note ? `<div class="photog-note">${s.note}</div>` : ""}
-        </a>
-      `).join("")
+  const cardHtml = s => `
+    <a class="photog-card" href="${s.url}" target="_blank" rel="noopener">
+      <div class="photog-role">${roleLabel(s.role)}</div>
+      <div class="photog-name">${s.name}</div>
+      <div class="photog-platform">${platformLabel(s.url)} ›</div>
+      ${s.note ? `<div class="photog-note">${s.note}</div>` : ""}
+    </a>
+  `;
+
+  const photogHtml = photogSubs.length
+    ? photogSubs.map(cardHtml).join("")
     : `<div class="media-empty">No galleries posted yet for this event.</div>`;
+
+  const driverHtml = driverSubs.length
+    ? driverSubs.map(cardHtml).join("")
+    : `<div class="media-empty">No driver clips posted yet for this event.</div>`;
 
   container.innerHTML = `
     <div class="media-page-head">
@@ -154,12 +163,16 @@ function renderMediaPage(events, mediaData){
     </div>
 
     <div class="section-title" style="margin-top:40px;">PHOTOGRAPHERS &amp; VIDEOGRAPHERS</div>
-    <div class="photog-grid">${cardsHtml}</div>
+    <div class="photog-grid">${photogHtml}</div>
+
+    <div class="section-title" style="margin-top:40px;">DRIVER CLIPS</div>
+    <div class="photog-grid">${driverHtml}</div>
 
     <div class="submit-banner">
       <div class="submit-banner-title">SHOT THIS EVENT?</div>
       <div class="submit-banner-text">
-        Submit your album, reel, or channel link and we'll add it here so drivers can find your work.
+        Photographer, videographer, or a driver with clips on your phone — submit your
+        link and we'll add it here so everyone can find it.
       </div>
       <a class="modal-link" href="https://docs.google.com/forms/d/e/1FAIpQLSfgvWh9QZlCBY46bMQCUbZy4DMaewADwCGHScMELIs4Wby_Rg/viewform" target="_blank" rel="noopener">SUBMIT YOUR LINK ›</a>
     </div>

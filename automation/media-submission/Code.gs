@@ -115,6 +115,7 @@ function firstValue_(namedValues, field) {
 
 function mapRole_(answer) {
   var norm = (answer || "").trim().toLowerCase();
+  if (norm.indexOf("driver") !== -1) return "driver";
   if (norm.indexOf("both") !== -1) return "both";
   if (norm.indexOf("video") !== -1) return "video";
   if (norm.indexOf("photo") !== -1) return "photo";

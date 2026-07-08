@@ -41,11 +41,15 @@ Google Drive, etc).
 - `media.json` — data file, one object per event:
   ```json
   { "eventId": "vdc-2026-07-11", "submissions": [
-    { "name": "...", "role": "photo" | "video" | "both", "url": "...", "note": "optional" }
+    { "name": "...", "role": "photo" | "video" | "both" | "driver", "url": "...", "note": "optional" }
   ]}
   ```
   `eventId` must match an id in `events.json`. This is the file the site owner
-  edits by hand after approving a submission (see workflow below).
+  edits by hand after approving a submission (see workflow below). `role: "driver"`
+  is for drivers sharing their own clips who aren't dedicated photographers/
+  videographers — rendered in its own "DRIVER CLIPS" section on `media.html`,
+  separate from the "PHOTOGRAPHERS & VIDEOGRAPHERS" grid, via `renderMediaPage()`
+  in `media.js` splitting `submissions` on `role === "driver"`.
 - `media.html` — the "page per event" gallery, loaded as `media.html?event=<id>`.
   Reads `events.json` for event details + `media.json` for that event's submissions.
   Has a "SHOT THIS EVENT? SUBMIT YOUR LINK" banner linking to the Google Form (see below).
