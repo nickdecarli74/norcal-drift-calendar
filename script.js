@@ -72,7 +72,12 @@ function eventUrl(e){
 }
 
 const PROMOTER_ABBREV = {
-  "Apple Valley Speedway": "AVS"
+  "Apple Valley Speedway": "AVS",
+  "Valley Drift Club": "VDC",
+  "Bay Area Drifting": "BAD",
+  "Fast In Fast Out": "FIFO",
+  "Drift Central": "DC",
+  "Outlaw Drift": "OD"
 };
 
 function pillLabel(promoter){
