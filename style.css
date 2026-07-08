@@ -44,8 +44,9 @@ body{
 .nav-logo{
   font-weight:900;
   font-style:italic;
-  font-size:25px;
-  letter-spacing:-1px;
+  font-size:34px;
+  letter-spacing:-3px;
+  text-decoration:none;
 }
 
 .nav-logo span{
@@ -919,7 +920,8 @@ footer{
   }
 
   .nav-logo{
-    font-size:22px;
+    font-size:26px;
+    letter-spacing:-2px;
   }
 
   .nav-links{
