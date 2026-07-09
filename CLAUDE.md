@@ -25,7 +25,20 @@ the user explicitly asks — it's intentional, not leftover cruft.
   the automatic pick when a more recent-but-less-notable event would otherwise
   win (e.g. a routine practice day happening a day after the event people are
   actually sharing media from).
-- `calendar_builder.py`, `update_events.py` — generate `norcal_drift_calendar.ics` / `status.json`
+- Every event carries an `addedAt` ISO timestamp, stamped once by `merge_events()`
+  in `update_events.py` when the id is first seen and preserved on later updates
+  (never touched again after that). `calendar_builder.py` uses the max `addedAt`
+  across all events — not the max `start` date — to compute `status.json`'s
+  `newestEvent`, since "newest" here means "most recently added to the site," not
+  "happening furthest in the future." When hand-adding an event directly to
+  `events.json`/`events.yaml` (bypassing the scrapers), set `addedAt` yourself to
+  the current time so it still shows up correctly in the "LIVE EVENT FEED" strip.
+- `calendar_builder.py`, `update_events.py` — generate `norcal_drift_calendar.ics` / `status.json`.
+  `calendar_builder.py` fully rewrites `events.json` from `events.yaml` on every run
+  using a hardcoded field whitelist (id/title/promoter/start/end/location/url/notes,
+  plus `featured`/`addedAt` if present) — if you add a new optional field to events,
+  it must be added to that whitelist too or it'll silently get dropped on the next
+  automated run.
 - Design language: black background, red accent (`#e10600`), bold italic headers,
   card grids with hover glow. See existing `.small-card` / `.event-card` patterns
   in `style.css` before adding new components — match the existing look.

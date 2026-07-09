@@ -1,4 +1,5 @@
 import yaml
+from datetime import datetime, timezone
 from scrapers import drift_central
 from scrapers import bay_area_drifting
 from scrapers import fast_in_fast_out
@@ -30,16 +31,24 @@ def merge_events(existing, incoming):
     by_id = {event["id"]: event for event in existing if event.get("id")}
     added = 0
     updated = 0
+    now = datetime.now(timezone.utc).isoformat()
 
     for event in incoming:
         event_id = event["id"]
 
         if event_id not in by_id:
+            event = dict(event)
+            event["addedAt"] = now
             by_id[event_id] = event
             added += 1
-        elif by_id[event_id] != event:
-            by_id[event_id] = event
-            updated += 1
+        else:
+            # Refresh scraped fields but keep the original addedAt - it
+            # marks when the event was first added, not last touched.
+            merged_event = dict(event)
+            merged_event["addedAt"] = by_id[event_id].get("addedAt", now)
+            if by_id[event_id] != merged_event:
+                by_id[event_id] = merged_event
+                updated += 1
 
     return list(by_id.values()), added, updated
 
