@@ -41,7 +41,7 @@ for item in events:
 
     cal.events.add(e)
 
-    json_events.append({
+    json_event = {
         "id": item.get("id", ""),
         "title": item["title"],
         "promoter": item.get("promoter", ""),
@@ -50,7 +50,11 @@ for item in events:
         "location": item.get("location", ""),
         "url": item.get("url", ""),
         "notes": item.get("notes", "")
-    })
+    }
+    if item.get("featured"):
+        json_event["featured"] = True
+
+    json_events.append(json_event)
 
 json_events.sort(key=lambda x: x["start"])
 
