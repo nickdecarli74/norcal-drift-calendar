@@ -251,7 +251,9 @@
     "location": "NASA Crows Landing Airport",
     "url": "https://www.valleydriftclub.com/",
     "notes": "VDC schedule manually verified from Instagram.",
-    "addedAt": "2026-07-08T00:00:00+00:00"
+    "addedAt": "2026-07-08T00:00:00+00:00",
+    "featured": true,
+    "featuredNext": true
   },
   {
     "id": "bad-2026-07-11",

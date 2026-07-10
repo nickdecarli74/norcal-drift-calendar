@@ -8,6 +8,8 @@ def get_events():
             "end": "2026-07-11 17:00",
             "location": "NASA Crows Landing Airport",
             "url": "https://www.valleydriftclub.com/",
-            "notes": "VDC schedule manually verified from Instagram."
+            "notes": "VDC schedule manually verified from Instagram.",
+            "featured": True,
+            "featuredNext": True
         }
     ]

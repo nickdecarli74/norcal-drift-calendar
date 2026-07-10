@@ -164,7 +164,12 @@ function loadWeather(events){
 function renderNextEvent(events){
   const now = new Date();
   const upcoming = events.filter(e => new Date(e.start.replace(" ","T")) >= now);
-  const next = upcoming.length ? upcoming[0] : events[0];
+
+  const featuredNext = upcoming
+    .filter(e => e.featuredNext)
+    .sort((a,b) => new Date(a.start.replace(" ","T")) - new Date(b.start.replace(" ","T")))[0];
+
+  const next = featuredNext || (upcoming.length ? upcoming[0] : events[0]);
 
   if(!next){
     document.getElementById("next-event").innerHTML = "";

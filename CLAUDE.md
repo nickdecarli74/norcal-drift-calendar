@@ -25,6 +25,15 @@ the user explicitly asks — it's intentional, not leftover cruft.
   the automatic pick when a more recent-but-less-notable event would otherwise
   win (e.g. a routine practice day happening a day after the event people are
   actually sharing media from).
+- Optional `"featuredNext": true` field is the same idea for the "NEXT EVENT" card
+  (`renderNextEvent()`), which otherwise auto-picks the soonest event with a start
+  time still in the future. Use it to pin a specific upcoming event ahead of
+  something chronologically sooner but less notable. Self-expiring: once the
+  event's start time passes it drops out of the "upcoming" filter entirely, so the
+  flag can just be left in place afterward — no cleanup needed. Combine with
+  `featured` on the same event so it also becomes "JUST HAPPENED" the moment it
+  passes (a featured past event beats other featured-but-older past events, so the
+  newer one naturally takes over).
 - Every event carries an `addedAt` ISO timestamp, stamped once by `merge_events()`
   in `update_events.py` when the id is first seen and preserved on later updates
   (never touched again after that). `calendar_builder.py` uses the max `addedAt`
@@ -36,7 +45,7 @@ the user explicitly asks — it's intentional, not leftover cruft.
 - `calendar_builder.py`, `update_events.py` — generate `norcal_drift_calendar.ics` / `status.json`.
   `calendar_builder.py` fully rewrites `events.json` from `events.yaml` on every run
   using a hardcoded field whitelist (id/title/promoter/start/end/location/url/notes,
-  plus `featured`/`addedAt` if present) — if you add a new optional field to events,
+  plus `featured`/`featuredNext`/`addedAt` if present) — if you add a new optional field to events,
   it must be added to that whitelist too or it'll silently get dropped on the next
   automated run.
 - Design language: black background, red accent (`#e10600`), bold italic headers,

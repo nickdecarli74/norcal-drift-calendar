@@ -53,6 +53,8 @@ for item in events:
     }
     if item.get("featured"):
         json_event["featured"] = True
+    if item.get("featuredNext"):
+        json_event["featuredNext"] = True
     if item.get("addedAt"):
         json_event["addedAt"] = item["addedAt"]
 
