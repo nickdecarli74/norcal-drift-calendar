@@ -202,7 +202,6 @@ events:
   url: https://applevalleyspeedway.com/calendar/
   notes: Manually verified from Apple Valley Speedway's calendar.
 - id: vdc-2026-07-11
-  addedAt: '2026-07-08T00:00:00+00:00'
   title: Valley Drift Club Event
   promoter: Valley Drift Club
   start: 2026-07-11 07:00
@@ -210,6 +209,9 @@ events:
   location: NASA Crows Landing Airport
   url: https://www.valleydriftclub.com/
   notes: VDC schedule manually verified from Instagram.
+  featured: true
+  featuredNext: true
+  addedAt: '2026-07-08T00:00:00+00:00'
 - id: bad-2026-07-11
   addedAt: '2026-07-08T00:00:00+00:00'
   title: Thunderhill Drift School
@@ -229,6 +231,15 @@ events:
   location: Main & Skid
   url: https://applevalleyspeedway.com/calendar/
   notes: Manually verified from Apple Valley Speedway's calendar.
+- id: d4d-2026-07-11
+  title: Cabin Preshure 2.0
+  promoter: Donutz4Dollarz
+  start: 2026-07-11 08:00
+  end: 2026-07-12 17:00
+  location: Foresthill, CA
+  url: https://www.eventbrite.com/e/cabin-preshure-20-tickets-1991483852813
+  notes: Manually added by the site owner.
+  addedAt: '2026-07-10T13:28:59.554987+00:00'
 - id: bad-2026-07-12
   addedAt: '2026-07-08T00:00:00+00:00'
   title: Thunderhill Drift School
