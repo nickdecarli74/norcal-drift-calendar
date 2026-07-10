@@ -71,6 +71,12 @@ function eventUrl(e){
   return e.url || "#";
 }
 
+function eventSpansDay(e, dateKey){
+  const startDate = e.start.slice(0, 10);
+  const endDate = (e.end || e.start).slice(0, 10);
+  return dateKey >= startDate && dateKey <= endDate;
+}
+
 const PROMOTER_ABBREV = {
   "Apple Valley Speedway": "AVS",
   "Valley Drift Club": "VDC",
@@ -277,7 +283,7 @@ function renderCalendar(){
 
   for(let day=1;day<=daysInMonth;day++){
     const dateKey = `${year}-${String(month+1).padStart(2,"0")}-${String(day).padStart(2,"0")}`;
-    const dayEvents = allEvents.filter(e => e.start.startsWith(dateKey));
+    const dayEvents = allEvents.filter(e => eventSpansDay(e, dateKey));
 
     html += `
       <div class="day-cell">
