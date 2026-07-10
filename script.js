@@ -51,6 +51,14 @@ const TRACKS = [
     lat: 34.6221,
     lng: -117.1695,
     search: ["apple valley"]
+  },
+  {
+    name: "Foresthill",
+    short: "Foresthill",
+    location: "Foresthill, CA",
+    lat: 39.0020,
+    lng: -120.8254,
+    search: ["foresthill"]
   }
 ];
 
