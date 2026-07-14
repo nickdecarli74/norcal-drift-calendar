@@ -440,6 +440,7 @@ Promise.all([
     renderCalendar();
     renderTrackMap();
     renderMediaSection(allEvents, mediaData);
+    renderRecentSubmissions(allEvents, mediaData);
 
     loadWeather(allEvents).then(() => {
       renderUpcoming(allEvents);

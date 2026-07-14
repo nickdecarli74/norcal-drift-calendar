@@ -41,6 +41,33 @@ function roleLabel(role){
   return "📸 Media";
 }
 
+function roleIcon(role){
+  if(role === "video") return "🎥";
+  if(role === "both") return "📸";
+  return "📷";
+}
+
+function roleName(role){
+  if(role === "video") return "Videographer";
+  if(role === "both") return "Photographer & Videographer";
+  return "Photographer";
+}
+
+function timeAgo(dateString){
+  const then = new Date(dateString);
+  const now = new Date();
+  const diffMs = now - then;
+
+  const minutes = Math.floor(diffMs / 60000);
+  const hours = Math.floor(diffMs / 3600000);
+  const days = Math.floor(diffMs / 86400000);
+
+  if(minutes < 1) return "just now";
+  if(minutes < 60) return `${minutes} minute${minutes === 1 ? "" : "s"} ago`;
+  if(hours < 24) return `${hours} hour${hours === 1 ? "" : "s"} ago`;
+  return `${days} day${days === 1 ? "" : "s"} ago`;
+}
+
 const MEDIA_WINDOW_BEFORE_DAYS = 7;
 const MEDIA_WINDOW_AFTER_DAYS = 60;
 
@@ -103,6 +130,47 @@ function renderMediaSection(events, mediaData){
       </a>
     `;
   }).join("");
+}
+
+/* ---- Homepage: recent submissions feed ---- */
+
+const RECENT_SUBMISSIONS_LIMIT = 6;
+
+function renderRecentSubmissions(events, mediaData){
+  const wrap = document.getElementById("recent-submissions-wrap");
+  const list = document.getElementById("recent-submissions");
+  if(!wrap || !list) return;
+
+  const entries = mediaData.flatMap(m => {
+    const event = events.find(ev => ev.id === m.eventId);
+    if(!event) return [];
+    return m.submissions
+      .filter(s => s.role !== "driver" && s.addedAt)
+      .map(s => ({submission: s, event}));
+  });
+
+  entries.sort((a,b) => new Date(b.submission.addedAt) - new Date(a.submission.addedAt));
+  const recent = entries.slice(0, RECENT_SUBMISSIONS_LIMIT);
+
+  if(!recent.length){
+    wrap.style.display = "none";
+    return;
+  }
+
+  wrap.style.display = "";
+  list.innerHTML = recent.map(({submission, event}) => `
+    <a class="feed-row" href="media.html?event=${encodeURIComponent(event.id)}">
+      <div class="feed-icon">${roleIcon(submission.role)}</div>
+      <div class="feed-body">
+        <div class="feed-line1">${submission.name} <span class="event-tag">${event.title}</span></div>
+        <div class="feed-line2">${roleName(submission.role)}<span class="dot-sep">·</span>${platformLabel(submission.url)}</div>
+      </div>
+      <div class="feed-right">
+        <span class="feed-time">${timeAgo(submission.addedAt)}</span>
+        <span class="feed-chevron">›</span>
+      </div>
+    </a>
+  `).join("");
 }
 
 /* ---- media.html: single event gallery page ---- */

@@ -63,7 +63,8 @@ Google Drive, etc).
 - `media.json` — data file, one object per event:
   ```json
   { "eventId": "vdc-2026-07-11", "submissions": [
-    { "name": "...", "role": "photo" | "video" | "both" | "driver", "url": "...", "note": "optional" }
+    { "name": "...", "role": "photo" | "video" | "both" | "driver", "url": "...",
+      "note": "optional", "addedAt": "optional ISO timestamp" }
   ]}
   ```
   `eventId` must match an id in `events.json`. This is the file the site owner
@@ -72,6 +73,11 @@ Google Drive, etc).
   videographers — rendered in its own "DRIVER CLIPS" section on `media.html`,
   separate from the "PHOTOGRAPHERS & VIDEOGRAPHERS" grid, via `renderMediaPage()`
   in `media.js` splitting `submissions` on `role === "driver"`.
+  `addedAt` is stamped automatically by `automation/media-submission/Code.gs` when
+  a submission comes in through the form/PR pipeline; when adding a submission by
+  hand, set it yourself (ISO 8601) if you want it picked up by the "RECENT
+  SUBMISSIONS" feed below — entries without `addedAt` are just excluded from that
+  feed, not an error.
 - `media.html` — the "page per event" gallery, loaded as `media.html?event=<id>`.
   Reads `events.json` for event details + `media.json` for that event's submissions.
   Has a "SHOT THIS EVENT? SUBMIT YOUR LINK" banner linking to the Google Form (see below).
@@ -87,6 +93,15 @@ Google Drive, etc).
 - Homepage `#media` section (in `index.html`) lists events with existing galleries *and*
   events currently inside the submission window with no submissions yet (as a "be the
   first to submit" card) — links to `media.html?event=<id>` for each either way.
+- `renderRecentSubmissions()` in `media.js` renders the "RECENT SUBMISSIONS" feed
+  (`#recent-submissions-wrap` in `index.html`, above "BROWSE BY EVENT") — a flat,
+  most-recent-first list of individual photo/video/both submissions across all
+  events, sorted by `addedAt` and capped at `RECENT_SUBMISSIONS_LIMIT` (6). Driver
+  clips (`role: "driver"`) are always excluded — that content stays scoped to the
+  per-event "DRIVER CLIPS" section on `media.html` only. Submissions missing
+  `addedAt` are silently excluded from this feed (not an error) since there's
+  nothing to sort them by. The whole wrapper is hidden via inline `display:none`
+  when there's nothing to show.
 - `automation/media-submission/Code.gs` — Google Apps Script, bound to the form's
   response Sheet, triggered on form submit. Resolves the submitted event to an
   `eventId`, opens a GitHub PR adding the submission to `media.json`, and emails the

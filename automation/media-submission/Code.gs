@@ -55,6 +55,7 @@ function onFormSubmit(e) {
     var role = mapRole_(roleAnswer);
     var submission = { name: name, role: role, url: link };
     if (notes) submission.note = notes;
+    submission.addedAt = new Date().toISOString();
 
     var token = getGithubToken_();
     var branch = "media-submission-" + Utilities.formatDate(

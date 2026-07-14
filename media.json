@@ -5,17 +5,20 @@
       {
         "name": "Jadin.fiannaca",
         "role": "photo",
-        "url": "https://jfphotography8.pixieset.com/superd/"
+        "url": "https://jfphotography8.pixieset.com/superd/",
+        "addedAt": "2026-07-08T20:02:15+00:00"
       },
       {
         "name": "sht_n_fck",
         "role": "photo",
-        "url": "https://www.instagram.com/p/DavrbmiATVh/?igsh=MThkcGs1YWVtYnlkag=="
+        "url": "https://www.instagram.com/p/DavrbmiATVh/?igsh=MThkcGs1YWVtYnlkag==",
+        "addedAt": "2026-07-14T20:01:46+00:00"
       },
       {
         "name": "sht_n_fck",
         "role": "photo",
-        "url": "https://drive.google.com/drive/folders/1zuKYKI2Bctb9UzjIhjC0tvqzQKGWbLfc"
+        "url": "https://drive.google.com/drive/folders/1zuKYKI2Bctb9UzjIhjC0tvqzQKGWbLfc",
+        "addedAt": "2026-07-14T20:58:52+00:00"
       }
     ]
   },
@@ -26,12 +29,14 @@
         "name": "Dan / @danroleal",
         "role": "photo",
         "url": "https://www.instagram.com/stories/danroleal/3939733472944321206?utm_source=ig_story_item_share&igsh=NTc4MTIwNjQ2YQ==",
-        "note": "Nice!"
+        "note": "Nice!",
+        "addedAt": "2026-07-12T17:03:21+00:00"
       },
       {
         "name": "ghst_media",
         "role": "photo",
-        "url": "https://www.instagram.com/ghst_media?igsh=NTc4MTIwNjQ2YQ=="
+        "url": "https://www.instagram.com/ghst_media?igsh=NTc4MTIwNjQ2YQ==",
+        "addedAt": "2026-07-14T18:13:44+00:00"
       }
     ]
   },
@@ -41,7 +46,8 @@
       {
         "name": "Harry Chriest",
         "role": "photo",
-        "url": "https://www.instagram.com/p/DawTyXRGiVZ/?igsh=Yzh1NHRvejVoZGtp"
+        "url": "https://www.instagram.com/p/DawTyXRGiVZ/?igsh=Yzh1NHRvejVoZGtp",
+        "addedAt": "2026-07-14T16:57:01+00:00"
       }
     ]
   },
@@ -51,7 +57,8 @@
       {
         "name": "alexandru.bruda",
         "role": "video",
-        "url": "https://www.instagram.com/reel/DawTJOfpWiM/?igsh=MTdmMGtoeTJzN3Nsaw=="
+        "url": "https://www.instagram.com/reel/DawTJOfpWiM/?igsh=MTdmMGtoeTJzN3Nsaw==",
+        "addedAt": "2026-07-14T20:03:21+00:00"
       }
     ]
   }

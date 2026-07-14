@@ -134,6 +134,16 @@
     <div class="media-intro">
       Galleries, edits, and driver clips, event by event. Pick an event to see everyone who shot it.
     </div>
+
+    <div id="recent-submissions-wrap" class="recent-feed-wrap" style="display:none;">
+      <div class="recent-feed-label">
+        <span class="recent-feed-dot"></span>
+        RECENT SUBMISSIONS
+      </div>
+      <div id="recent-submissions" class="recent-feed"></div>
+    </div>
+
+    <div class="browse-label">BROWSE BY EVENT</div>
     <div id="media-grid" class="media-grid"></div>
   </div>
 </section>
@@ -178,25 +188,10 @@
 </footer>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="media.js?v=4"></script>
-<script src="script.js?v=9"></script>
+<script src="media.js?v=5"></script>
+<script src="script.js?v=10"></script>
 
 <script>
-  function timeAgo(dateString) {
-    const updated = new Date(dateString);
-    const now = new Date();
-    const diffMs = now - updated;
-
-    const minutes = Math.floor(diffMs / 60000);
-    const hours = Math.floor(diffMs / 3600000);
-    const days = Math.floor(diffMs / 86400000);
-
-    if (minutes < 1) return "just now";
-    if (minutes < 60) return `${minutes} minute${minutes === 1 ? "" : "s"} ago`;
-    if (hours < 24) return `${hours} hour${hours === 1 ? "" : "s"} ago`;
-    return `${days} day${days === 1 ? "" : "s"} ago`;
-  }
-
   fetch("status.json")
     .then(response => response.json())
     .then(status => {
