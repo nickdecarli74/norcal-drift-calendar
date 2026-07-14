@@ -59,6 +59,14 @@ const TRACKS = [
     lat: 39.0020,
     lng: -120.8254,
     search: ["foresthill"]
+  },
+  {
+    name: "Alameda County Fairgrounds",
+    short: "Alameda Co. Fairgrounds",
+    location: "Pleasanton, CA",
+    lat: 37.6621,
+    lng: -121.8747,
+    search: ["alameda"]
   }
 ];
 
