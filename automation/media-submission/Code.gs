@@ -149,7 +149,27 @@ function resolveEventId_(eventAnswer) {
       Utilities.formatDate(d, "America/Los_Angeles", "MMMM d, yyyy"),
       Utilities.formatDate(d, "America/Los_Angeles", "MMM d, yyyy"),
       Utilities.formatDate(d, "America/Los_Angeles", "M/d/yyyy")
-    ].map(function (s) { return s.toLowerCase(); });
+    ];
+
+    // Multi-day events (single entry spanning start/end, e.g. "RaceWorz" or
+    // "Independence D-Day") are often written as a date range on the form
+    // ("June 13-14, 2026") rather than the start date alone - accept that too.
+    if (ev.end) {
+      var endDate = new Date(ev.end.replace(" ", "T"));
+      var sameMonth = Utilities.formatDate(d, "America/Los_Angeles", "yyyy-MM") ===
+        Utilities.formatDate(endDate, "America/Los_Angeles", "yyyy-MM");
+      var startDay = Utilities.formatDate(d, "America/Los_Angeles", "d");
+      var endDay = Utilities.formatDate(endDate, "America/Los_Angeles", "d");
+
+      if (sameMonth && startDay !== endDay) {
+        dateVariants.push(
+          Utilities.formatDate(d, "America/Los_Angeles", "MMMM") + " " + startDay + "-" + endDay + ", " + Utilities.formatDate(d, "America/Los_Angeles", "yyyy"),
+          Utilities.formatDate(d, "America/Los_Angeles", "MMM") + " " + startDay + "-" + endDay + ", " + Utilities.formatDate(d, "America/Los_Angeles", "yyyy")
+        );
+      }
+    }
+
+    dateVariants = dateVariants.map(function (s) { return s.toLowerCase(); });
 
     var hasDate = dateVariants.some(function (dv) {
       return answer.indexOf(dv) !== -1;
