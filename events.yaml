@@ -322,6 +322,33 @@ events:
   location: Skid Pad
   url: https://applevalleyspeedway.com/calendar/
   notes: Manually verified from Apple Valley Speedway's calendar.
+- id: cr-2026-07-31
+  addedAt: '2026-07-16T00:00:00+00:00'
+  title: Hottest August Nights
+  promoter: Club Rowdy
+  start: 2026-07-31 08:00
+  end: 2026-07-31 17:00
+  location: Reno Fernley Raceway
+  url: https://clubrowdy.com/?utm_source=ig&utm_medium=social&utm_content=link_in_bio
+  notes: Day 1 of 3. Manually added by the site owner.
+- id: cr-2026-08-01
+  addedAt: '2026-07-16T00:00:00+00:00'
+  title: Hottest August Nights
+  promoter: Club Rowdy
+  start: 2026-08-01 08:00
+  end: 2026-08-01 17:00
+  location: Reno Fernley Raceway
+  url: https://clubrowdy.com/?utm_source=ig&utm_medium=social&utm_content=link_in_bio
+  notes: Day 2 of 3. Manually added by the site owner.
+- id: cr-2026-08-02
+  addedAt: '2026-07-16T00:00:00+00:00'
+  title: Hottest August Nights
+  promoter: Club Rowdy
+  start: 2026-08-02 08:00
+  end: 2026-08-02 17:00
+  location: Reno Fernley Raceway
+  url: https://clubrowdy.com/?utm_source=ig&utm_medium=social&utm_content=link_in_bio
+  notes: Day 3 of 3. Manually added by the site owner.
 - id: dc-2026-08-08
   addedAt: '2026-07-08T00:00:00+00:00'
   title: 2 Day Drift Event

@@ -67,6 +67,14 @@ const TRACKS = [
     lat: 37.6621,
     lng: -121.8747,
     search: ["alameda"]
+  },
+  {
+    name: "Reno Fernley Raceway",
+    short: "Reno Fernley",
+    location: "Fernley, NV",
+    lat: 39.5716,
+    lng: -119.1855,
+    search: ["fernley"]
   }
 ];
 
