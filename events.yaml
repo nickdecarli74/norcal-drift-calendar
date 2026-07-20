@@ -414,6 +414,15 @@ events:
   location: Thunderhill Raceway Park
   url: https://super-d.net/pages/schedule
   notes: SuperD schedule manually verified from super-d.net.
+- id: ck-2026-08-16
+  addedAt: '2026-07-20T00:00:00+00:00'
+  title: CK7
+  promoter: Cali Kansai
+  start: 2026-08-16 09:00
+  end: 2026-08-16 17:00
+  location: Thunderhill Raceway Park
+  url: https://calikansai.com/products/ck7-driver-registration
+  notes: Manually added by the site owner.
 - id: av-2026-08-21
   addedAt: '2026-07-08T00:00:00+00:00'
   title: BackroadBucket Birthday Bash
