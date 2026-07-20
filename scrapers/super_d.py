@@ -8,8 +8,7 @@ def get_events():
             "end": "2026-07-05 17:00",
             "location": "Affinity Circuit",
             "url": "https://super-d.net/pages/schedule",
-            "notes": "Manually added by the site owner; not listed on super-d.net at time of scraping.",
-            "featured": True
+            "notes": "Manually added by the site owner; not listed on super-d.net at time of scraping."
         },
         {
             "id": "sd-2026-08-15",

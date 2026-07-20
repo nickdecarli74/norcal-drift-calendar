@@ -199,7 +199,6 @@ events:
   location: Affinity Circuit
   url: https://super-d.net/pages/schedule
   notes: Manually added by the site owner; not listed on super-d.net at time of scraping.
-  featured: true
   addedAt: '2026-07-08T18:00:00+00:00'
 - id: dc-2026-07-05
   addedAt: '2026-07-08T00:00:00+00:00'
@@ -227,8 +226,6 @@ events:
   location: NASA Crows Landing Airport
   url: https://www.valleydriftclub.com/
   notes: VDC schedule manually verified from Instagram.
-  featured: true
-  featuredNext: true
   addedAt: '2026-07-08T00:00:00+00:00'
 - id: bad-2026-07-11
   addedAt: '2026-07-08T00:00:00+00:00'
