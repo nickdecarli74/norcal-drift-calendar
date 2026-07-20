@@ -193,7 +193,6 @@ events:
     Drifting schedule.
 - id: sd-2026-07-04
   addedAt: '2026-07-08T18:00:00+00:00'
-  featured: true
   title: Independence D-Day
   promoter: SuperD
   start: 2026-07-04 08:00
@@ -227,7 +226,6 @@ events:
   location: NASA Crows Landing Airport
   url: https://www.valleydriftclub.com/
   notes: VDC schedule manually verified from Instagram.
-  featured: true
   featuredNext: true
   addedAt: '2026-07-08T00:00:00+00:00'
 - id: bad-2026-07-11
