@@ -42,15 +42,9 @@ body{
 }
 
 .nav-logo{
-  font-weight:900;
-  font-style:italic;
-  font-size:34px;
-  letter-spacing:-3px;
-  text-decoration:none;
-}
-
-.nav-logo span{
-  color:#e10600;
+  height:40px;
+  width:auto;
+  display:block;
 }
 
 .nav-links{
@@ -100,85 +94,10 @@ body{
 }
 
 .hero-logo{
-  position:relative;
+  display:block;
   width:min(850px,96vw);
-  height:180px;
+  height:auto;
   margin:0 auto;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  overflow:hidden;
-}
-
-.hero-logo .smoke{
-  position:absolute;
-  border-radius:50%;
-  filter:blur(44px);
-  pointer-events:none;
-}
-
-.hero-logo .smoke-1{
-  left:6%;
-  top:10%;
-  width:260px;
-  height:260px;
-  background:radial-gradient(circle,rgba(255,255,255,.14),transparent 70%);
-  animation:smokeDrift1 34s ease-in-out infinite;
-}
-
-.hero-logo .smoke-2{
-  right:4%;
-  top:18%;
-  width:300px;
-  height:300px;
-  background:radial-gradient(circle,rgba(255,255,255,.10),transparent 70%);
-  animation:smokeDrift2 42s ease-in-out infinite;
-}
-
-.hero-logo .smoke-3{
-  left:38%;
-  top:0;
-  width:220px;
-  height:220px;
-  background:radial-gradient(circle,rgba(225,6,0,.12),transparent 70%);
-  animation:smokeDrift3 50s ease-in-out infinite;
-}
-
-.wordmark{
-  position:relative;
-  z-index:2;
-  font-size:clamp(44px,9.5vw,110px);
-  font-weight:900;
-  font-style:italic;
-  letter-spacing:-3px;
-  color:white;
-  margin:0;
-  text-shadow:0 0 40px rgba(225,6,0,.5);
-}
-
-.wordmark span{
-  color:#e10600;
-}
-
-@keyframes smokeDrift1{
-  0%,100%{transform:translate(-10%,-6%) scale(1);}
-  50%{transform:translate(14%,10%) scale(1.2);}
-}
-
-@keyframes smokeDrift2{
-  0%,100%{transform:translate(6%,-8%) scale(1.1);}
-  50%{transform:translate(-14%,6%) scale(.9);}
-}
-
-@keyframes smokeDrift3{
-  0%,100%{transform:translate(-8%,4%) scale(1);}
-  50%{transform:translate(10%,-10%) scale(1.25);}
-}
-
-@media(prefers-reduced-motion:reduce){
-  .hero-logo .smoke{
-    animation:none;
-  }
 }
 
 .tagline{
@@ -1071,8 +990,7 @@ footer{
   }
 
   .nav-logo{
-    font-size:26px;
-    letter-spacing:-2px;
+    height:30px;
   }
 
   .nav-links{
@@ -1087,27 +1005,8 @@ footer{
   .hero-logo{
     width:100%;
     max-width:430px;
-    height:170px;
+    height:auto;
     margin:0 auto;
-  }
-
-  .hero-logo .smoke-1{
-    width:190px;
-    height:190px;
-  }
-
-  .hero-logo .smoke-2{
-    width:210px;
-    height:210px;
-  }
-
-  .hero-logo .smoke-3{
-    width:150px;
-    height:150px;
-  }
-
-  .wordmark{
-    font-size:clamp(40px,14vw,68px);
   }
 
   .tagline{
