@@ -107,7 +107,8 @@ const PROMOTER_ABBREV = {
   "Bay Area Drifting": "BAD",
   "Fast In Fast Out": "FIFO",
   "Drift Central": "DC",
-  "Outlaw Drift": "OD"
+  "Outlaw Drift": "OD",
+  "GoodLuckLeague": "GLL"
 };
 
 function pillLabel(promoter){
