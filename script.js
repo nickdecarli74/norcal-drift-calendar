@@ -611,6 +611,16 @@ function renderTrackMap(){
       .addTo(map)
       .bindPopup(popupHtml);
   });
+
+  // Mobile browsers resize the viewport after init (address bar collapsing
+  // on scroll, orientation change) without firing a window resize event Leaflet
+  // catches on its own - if the container's real size drifts from what Leaflet
+  // measured at init, its pixel math goes stale and markers visibly wander/fly
+  // off-screen as you zoom. Keep it in sync whenever the container's size changes.
+  if(typeof ResizeObserver !== "undefined"){
+    new ResizeObserver(() => map.invalidateSize()).observe(mapEl);
+  }
+  window.addEventListener("orientationchange", () => setTimeout(() => map.invalidateSize(), 300));
 }
 function openSubscribeModal(){
   document.getElementById("subscribe-modal").style.display = "flex";
