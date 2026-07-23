@@ -75,6 +75,22 @@ const TRACKS = [
     lat: 39.5716,
     lng: -119.1855,
     search: ["fernley"]
+  },
+  {
+    name: "Qlispe Raceway Park",
+    short: "Qlispe",
+    location: "Airway Heights, WA",
+    lat: 47.6672,
+    lng: -117.5610,
+    search: ["qlispe", "airway heights"]
+  },
+  {
+    name: "The Mill Drift Track",
+    short: "Sweet Home",
+    location: "Sweet Home, OR",
+    lat: 44.4031,
+    lng: -122.7185,
+    search: ["mill drift track", "sweet home"]
   }
 ];
 
