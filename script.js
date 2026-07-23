@@ -186,6 +186,180 @@ function loadWeather(events){
     .catch(() => {});
 }
 
+function formatFeaturedDate(startStr, endStr){
+  const start = new Date(startStr.replace(" ","T"));
+  const sameDay = !endStr || startStr.slice(0,10) === endStr.slice(0,10);
+
+  if(sameDay){
+    return start.toLocaleDateString("en-US",{weekday:"short",month:"short",day:"numeric",year:"numeric"});
+  }
+
+  const end = new Date(endStr.replace(" ","T"));
+  const startFmt = start.toLocaleDateString("en-US",{weekday:"short",month:"short",day:"numeric"});
+  const endFmt = end.toLocaleDateString("en-US",{weekday:"short",month:"short",day:"numeric"});
+  return `${startFmt} – ${endFmt}, ${end.getFullYear()}`;
+}
+
+function formatFeaturedTimeRange(startStr, endStr){
+  const fmt = str => new Date(str.replace(" ","T")).toLocaleTimeString("en-US",{hour:"numeric",minute:"2-digit",hour12:true});
+  return `${fmt(startStr)} – ${fmt(endStr)}`;
+}
+
+function renderFeaturedPartnerEvent(events){
+  const container = document.getElementById("featured-partner-event");
+  if(!container) return;
+
+  const event = events.find(e => e.featuredPartner);
+
+  if(!event){
+    container.innerHTML = "";
+    container.style.display = "none";
+    return;
+  }
+
+  container.style.display = "";
+
+  const roundMatch = event.title.match(/^(.*?)\s+Round\s+(\d+)$/i);
+  const brandName = roundMatch ? roundMatch[1] : event.title;
+  const roundLabel = roundMatch ? roundMatch[2].padStart(2,"0") : "";
+  const initials = brandName.split(/\s+/).map(w => w[0]).join("").toUpperCase();
+
+  const w = weatherFor(event);
+  const forecastValue = w ? `${w.temp}°F` : "—";
+
+  container.innerHTML = `
+    <section class="dw-featured-event" aria-labelledby="dw-featured-event-title">
+      <div class="dw-featured-event__header">
+        <span class="dw-featured-event__eyebrow">Featured Event</span>
+        <span class="dw-featured-event__header-line" aria-hidden="true"></span>
+        <span class="dw-featured-event__slashes" aria-hidden="true">
+          <i></i><i></i><i></i><i></i>
+        </span>
+      </div>
+
+      <div class="dw-featured-event__layout">
+        <div class="dw-featured-event__content">
+          <div class="dw-featured-event__branding">
+            <img
+              class="dw-featured-event__logo"
+              src="${event.logo || ""}"
+              alt="${brandName}"
+              onerror="this.hidden=true; this.nextElementSibling.hidden=false;"
+            >
+            <div class="dw-featured-event__logo-fallback" hidden>${initials}</div>
+
+            ${roundLabel ? `<h3 class="dw-featured-event__round" id="dw-featured-event-title">Round <span>${roundLabel}</span></h3>` : ""}
+          </div>
+
+          <div class="dw-featured-event__details" aria-label="Event details">
+            <div class="dw-featured-event__detail">
+              <div class="dw-featured-event__icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48">
+                  <rect x="7" y="10" width="34" height="31" rx="3"></rect>
+                  <path d="M15 6v8M33 6v8M7 19h34"></path>
+                  <path d="M15 26h1M24 26h1M33 26h1M15 34h1M24 34h1M33 34h1"></path>
+                </svg>
+              </div>
+              <div>
+                <span class="dw-featured-event__label">Date</span>
+                <span class="dw-featured-event__value">${formatFeaturedDate(event.start, event.end)}</span>
+              </div>
+            </div>
+
+            <div class="dw-featured-event__detail">
+              <div class="dw-featured-event__icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48">
+                  <circle cx="24" cy="24" r="17"></circle>
+                  <path d="M24 14v11l8 5"></path>
+                </svg>
+              </div>
+              <div>
+                <span class="dw-featured-event__label">Time</span>
+                <span class="dw-featured-event__value">${formatFeaturedTimeRange(event.start, event.end)}</span>
+              </div>
+            </div>
+
+            <div class="dw-featured-event__detail">
+              <div class="dw-featured-event__icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48">
+                  <path d="M24 44s13-13.5 13-25A13 13 0 1 0 11 19c0 11.5 13 25 13 25z"></path>
+                  <circle cx="24" cy="19" r="4.5"></circle>
+                </svg>
+              </div>
+              <div>
+                <span class="dw-featured-event__label">Location</span>
+                <span class="dw-featured-event__value">${event.promoter} — ${event.location}</span>
+              </div>
+            </div>
+
+            <div class="dw-featured-event__detail">
+              <div class="dw-featured-event__icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48">
+                  <path d="M17.5 19a4.5 4.5 0 0 0 0-9 6 6 0 0 0-11.4-1.7A4 4 0 0 0 6 16"></path>
+                </svg>
+              </div>
+              <div>
+                <span class="dw-featured-event__label">Forecast</span>
+                <span class="dw-featured-event__value">${forecastValue}</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="dw-featured-event__actions">
+            <a
+              class="dw-featured-event__button dw-featured-event__button--primary"
+              href="${eventUrl(event)}"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>Register</span>
+              <span aria-hidden="true">→</span>
+            </a>
+
+            <a
+              class="dw-featured-event__button dw-featured-event__button--secondary"
+              href="media.html?event=${encodeURIComponent(event.id)}"
+            >
+              <span>View Media</span>
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+
+        <aside class="dw-featured-event__track-card" aria-label="Track map">
+          <div class="dw-featured-event__track-header">
+            <div>
+              <h3>Track Map</h3>
+              <span class="dw-featured-event__track-accent" aria-hidden="true"></span>
+            </div>
+            <strong>${event.promoter}</strong>
+          </div>
+
+          <div class="dw-featured-event__map-frame">
+            <img
+              src="${event.trackMapImage || ""}"
+              alt="${event.promoter} ${event.trackConfig || ""} configuration"
+            >
+          </div>
+
+          <div class="dw-featured-event__track-meta">
+            <span>Config: <b>${event.trackConfig || ""}</b></span>
+            <span>Direction: <b>${event.trackDirection || ""}</b></span>
+          </div>
+
+          <div class="dw-featured-event__north" aria-hidden="true">
+            <span>N</span>
+            <span class="dw-featured-event__north-arrow">▲</span>
+            <span class="dw-featured-event__compass">N</span>
+          </div>
+
+          <p class="dw-featured-event__track-note">${event.trackNote || ""}</p>
+        </aside>
+      </div>
+    </section>
+  `;
+}
+
 function renderNextEvent(events){
   const now = new Date();
   const upcoming = events.filter(e => new Date(e.start.replace(" ","T")) >= now);
@@ -443,6 +617,7 @@ Promise.all([
       calendarDate = new Date(d.getFullYear(), d.getMonth(), 1);
     }
 
+    renderFeaturedPartnerEvent(allEvents);
     renderNextEvent(allEvents);
     renderJustHappened(allEvents);
     renderUpcoming(allEvents);
@@ -452,6 +627,7 @@ Promise.all([
     renderRecentSubmissions(allEvents, mediaData);
 
     loadWeather(allEvents).then(() => {
+      renderFeaturedPartnerEvent(allEvents);
       renderUpcoming(allEvents);
     });
   })

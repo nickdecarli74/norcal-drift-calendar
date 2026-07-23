@@ -55,6 +55,18 @@ for item in events:
         json_event["featured"] = True
     if item.get("featuredNext"):
         json_event["featuredNext"] = True
+    if item.get("featuredPartner"):
+        json_event["featuredPartner"] = True
+    if item.get("logo"):
+        json_event["logo"] = item["logo"]
+    if item.get("trackMapImage"):
+        json_event["trackMapImage"] = item["trackMapImage"]
+    if item.get("trackConfig"):
+        json_event["trackConfig"] = item["trackConfig"]
+    if item.get("trackDirection"):
+        json_event["trackDirection"] = item["trackDirection"]
+    if item.get("trackNote"):
+        json_event["trackNote"] = item["trackNote"]
     if item.get("addedAt"):
         json_event["addedAt"] = item["addedAt"]
 
