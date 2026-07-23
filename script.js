@@ -308,7 +308,7 @@ function renderFeaturedPartnerEvent(events){
           <div class="dw-featured-event__actions">
             <a
               class="dw-featured-event__button dw-featured-event__button--primary"
-              href="${eventUrl(event)}"
+              href="${event.registerUrl || eventUrl(event)}"
               target="_blank"
               rel="noopener noreferrer"
             >

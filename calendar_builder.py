@@ -59,6 +59,8 @@ for item in events:
         json_event["featuredPartner"] = True
     if item.get("logo"):
         json_event["logo"] = item["logo"]
+    if item.get("registerUrl"):
+        json_event["registerUrl"] = item["registerUrl"]
     if item.get("trackMapImage"):
         json_event["trackMapImage"] = item["trackMapImage"]
     if item.get("trackConfig"):

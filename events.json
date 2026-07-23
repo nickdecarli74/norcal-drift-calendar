@@ -362,6 +362,7 @@
     "notes": "2-day event, Friday-Saturday, 8:00 AM-6:00 PM both days. Manually verified from Apple Valley Speedway's calendar.",
     "featuredPartner": true,
     "logo": "assets/udc-logo.png",
+    "registerUrl": "https://ultimatedriftingchallenge.com/collections/registration",
     "trackMapImage": "assets/apple-valley-track-map.webp",
     "trackConfig": "Main Track",
     "trackDirection": "Clockwise",
