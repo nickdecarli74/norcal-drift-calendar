@@ -318,6 +318,15 @@ events:
   trackConfig: Main Track
   trackDirection: Clockwise
   trackNote: Official Apple Valley Speedway Main Track configuration.
+- id: dnd-2026-07-25
+  addedAt: '2026-07-23T00:00:00+00:00'
+  title: Drift N Drag
+  promoter: Qlispe Raceway Park
+  start: 2026-07-25 15:00
+  end: 2026-07-25 23:00
+  location: Airway Heights, WA
+  url: https://tickets.thefoat.com/TheTrackatWildhorsePass/QLISPE+RACEWAY+DRIFT+N+DRAGS++SPOKANE+WA./tickets/id-tw65g8YOTIgv/clear_cart-1?fbclid=IwRlRTSATPU6FwZG9mBWZkaWQWULEmVpeEt1oYjtYXiBBFokOn0xHJGGV4dG4DYWVtAjEwAHNydGMGYXBwX2lkCjY2Mjg1NjgzNzkAAR6bOiOsld7ME4kKhi_naByRRifGZqe0D31lBtu8rsFBLWBVGTYg6IgGbfb08Q_aem_0Ab9YUYtI6SmnSaCfMHbNA
+  notes: Manually added by the site owner.
 - id: od-2026-07-26
   addedAt: '2026-07-08T00:00:00+00:00'
   title: Outlaw Drift Series Practice Day - Drifting
