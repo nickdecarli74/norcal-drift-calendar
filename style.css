@@ -510,7 +510,22 @@ body{
    TRACK MAP
    ========================================= */
 
+/* The border/radius/shadow live on .map-wrap, not on #track-map itself.
+   #track-map is the element Leaflet turns into its map container, and Leaflet
+   sizes all of its internal pixel math off clientWidth/clientHeight, which
+   (under our global box-sizing:border-box reset) excludes any border applied
+   directly to that element. A border here would make Leaflet's internal frame
+   a few px smaller than the box actually painted on screen, so markers near
+   the edge of the fitted bounds compute correctly by Leaflet's own math but
+   render outside the visible box - exactly the "dots hanging off the map"
+   and "drifts as you zoom" symptoms. Keep #track-map border-free. */
 #track-map{
+  width:100%;
+  height:100%;
+}
+
+.map-wrap{
+  position:relative;
   width:100%;
   height:720px;
   border:1px solid rgba(255,255,255,.14);
@@ -519,10 +534,6 @@ body{
   overflow:hidden;
   box-shadow:0 0 60px rgba(0,0,0,.9),0 0 45px rgba(225,6,0,.12);
   background:#050505;
-}
-
-.map-wrap{
-  position:relative;
 }
 
 .map-wrap::before{
@@ -586,9 +597,15 @@ body{
   border-radius:7px;
 }
 
-.drift-marker{
-  position:relative;
-}
+/* No position rule here on purpose: Leaflet requires .leaflet-marker-icon
+   (which this class is combined with) to stay position:absolute so it can
+   place markers via a CSS transform. style.css loads after leaflet.css, so
+   a position:relative here of equal specificity would silently win the
+   cascade and override it - every marker still renders somewhere, but at
+   the wrong pixel (compounding with each marker's DOM flow position), which
+   is what caused dots clipping off the map and appearing to drift on zoom.
+   position:absolute from leaflet.css already gives .marker-core/.marker-pulse
+   a containing block, so no override is needed. */
 
 .marker-core{
   position:absolute;
@@ -1085,7 +1102,7 @@ footer{
     padding:5px;
   }
 
-  #track-map{
+  .map-wrap{
     height:560px;
   }
 

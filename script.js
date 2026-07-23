@@ -575,8 +575,12 @@ function renderTrackMap(){
 
   const map = L.map("track-map", {
     scrollWheelZoom: false,
-    zoomControl: true
-  }).fitBounds(bounds, {padding: [40, 40]});
+    zoomControl: true,
+    // Finer zoom increments let fitBounds land closer to the exact padding
+    // requested instead of snapping to the nearest whole zoom level - extra
+    // headroom now that tracks span all the way from WA to Southern CA.
+    zoomSnap: 0.25
+  }).fitBounds(bounds, {padding: [55, 55]});
 
   L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
     attribution: "&copy; OpenStreetMap &copy; CARTO",
