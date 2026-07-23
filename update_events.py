@@ -42,6 +42,11 @@ def merge_events(existing, incoming):
             event["addedAt"] = now
             by_id[event_id] = event
             added += 1
+        elif by_id[event_id].get("locked"):
+            # Site owner has manually customized this event (e.g. overridden
+            # times, or added featured-partner fields) - never let a scraper
+            # refresh clobber it, even though the source site still lists it.
+            continue
         else:
             # Refresh scraped fields but keep the original addedAt - it
             # marks when the event was first added, not last touched.
