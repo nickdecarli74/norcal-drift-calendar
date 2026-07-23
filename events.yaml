@@ -437,6 +437,15 @@ events:
   location: Thunderhill Raceway Park
   url: https://super-d.net/pages/schedule
   notes: SuperD schedule manually verified from super-d.net.
+- id: mill-2026-08-15
+  addedAt: '2026-07-23T00:00:00+00:00'
+  title: Open Drift Day
+  promoter: The Mill Drift Track
+  start: 2026-08-15 09:00
+  end: 2026-08-15 16:00
+  location: Sweet Home, OR
+  url: https://themilldrifttrack.com/event/open-drift-day-august-15th/
+  notes: Manually added by the site owner.
 - id: ck-2026-08-16
   addedAt: '2026-07-20T00:00:00+00:00'
   title: CK7

@@ -513,6 +513,17 @@
     "addedAt": "2026-07-08T00:00:00+00:00"
   },
   {
+    "id": "mill-2026-08-15",
+    "title": "Open Drift Day",
+    "promoter": "The Mill Drift Track",
+    "start": "2026-08-15 09:00",
+    "end": "2026-08-15 16:00",
+    "location": "Sweet Home, OR",
+    "url": "https://themilldrifttrack.com/event/open-drift-day-august-15th/",
+    "notes": "Manually added by the site owner.",
+    "addedAt": "2026-07-23T00:00:00+00:00"
+  },
+  {
     "id": "ck-2026-08-16",
     "title": "CK7",
     "promoter": "Cali Kansai",
