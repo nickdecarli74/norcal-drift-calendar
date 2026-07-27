@@ -127,8 +127,8 @@ const PROMOTER_ABBREV = {
   "GoodLuckLeague": "GLL"
 };
 
-function pillLabel(promoter){
-  return PROMOTER_ABBREV[promoter] || promoter;
+function pillLabel(event){
+  return event.calendarLabel || PROMOTER_ABBREV[event.promoter] || event.promoter;
 }
 
 function findTrackForEvent(e){
@@ -508,7 +508,7 @@ function renderCalendar(){
     html += `
       <div class="day-cell">
         <div class="day-number">${day}</div>
-        ${dayEvents.map(e => `<button class="event-pill" type="button" onclick="openEventModal('${e.id}')">${pillLabel(e.promoter)}</button>`).join("")}
+        ${dayEvents.map(e => `<button class="event-pill" type="button" onclick="openEventModal('${e.id}')">${pillLabel(e)}</button>`).join("")}
       </div>
     `;
   }
