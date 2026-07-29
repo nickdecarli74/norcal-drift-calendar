@@ -402,7 +402,7 @@ events:
   url: https://applevalleyspeedway.com/calendar/
   notes: Manually verified from Apple Valley Speedway's calendar.
 - id: ki-2026-08-08
-  addedAt: '2026-07-29T00:00:00+00:00'
+  addedAt: '2026-07-29T17:00:00+00:00'
   title: Kansei Invitational
   promoter: Kansei Wheels
   start: 2026-08-08 08:00
@@ -448,7 +448,7 @@ events:
   url: https://super-d.net/pages/schedule
   notes: SuperD schedule manually verified from super-d.net.
 - id: dlux-2026-08-15
-  addedAt: '2026-07-29T00:00:00+00:00'
+  addedAt: '2026-07-29T18:00:00+00:00'
   title: DLUX Invitational
   promoter: DLUX
   start: 2026-08-15 08:00
@@ -503,7 +503,7 @@ events:
   url: https://applevalleyspeedway.com/calendar/
   notes: Manually verified from Apple Valley Speedway's calendar.
 - id: nava-2026-08-28
-  addedAt: '2026-07-29T00:00:00+00:00'
+  addedAt: '2026-07-29T20:30:00+00:00'
   title: Navapalooza 8
   promoter: Don Racing
   start: 2026-08-28 08:00
