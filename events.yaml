@@ -456,6 +456,15 @@ events:
   location: Sweet Home, OR
   url: https://themilldrifttrack.com/event/open-drift-day-august-15th/
   notes: Manually added by the site owner.
+- id: dlux-2026-08-15
+  addedAt: '2026-07-29T00:00:00+00:00'
+  title: DLUX Invitational
+  promoter: DLUX
+  start: 2026-08-15 08:00
+  end: 2026-08-16 17:00
+  location: Affinity Circuit
+  url: https://www.instagram.com/p/DYU4Oi4lI2i/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==
+  notes: Manually added by the site owner. Invite-only; registration link points to the Instagram announcement post.
 - id: ck-2026-08-16
   addedAt: '2026-07-20T00:00:00+00:00'
   title: CK7
