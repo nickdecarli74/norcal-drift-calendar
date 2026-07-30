@@ -91,6 +91,14 @@ const TRACKS = [
     lat: 44.4031,
     lng: -122.7185,
     search: ["mill drift track", "sweet home"]
+  },
+  {
+    name: "Affinity Circuit",
+    short: "Affinity Circuit",
+    location: "Central Point, OR",
+    lat: 42.3733,
+    lng: -122.9106,
+    search: ["affinity"]
   }
 ];
 
