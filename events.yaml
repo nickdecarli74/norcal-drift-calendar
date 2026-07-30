@@ -312,13 +312,6 @@ events:
   url: https://applevalleyspeedway.com/calendar/
   notes: 2-day event, Friday-Saturday, 8:00 AM-6:00 PM both days. Manually verified
     from Apple Valley Speedway's calendar.
-  featuredPartner: true
-  logo: assets/udc-logo.png
-  registerUrl: https://ultimatedriftingchallenge.com/collections/registration
-  trackMapImage: assets/apple-valley-track-map.webp
-  trackConfig: Main Track
-  trackDirection: Clockwise
-  trackNote: Official Apple Valley Speedway Main Track configuration.
 - id: dnd-2026-07-25
   addedAt: '2026-07-23T00:00:00+00:00'
   title: Drift N Drag
