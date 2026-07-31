@@ -1077,5 +1077,38 @@
     "url": "http://www.pacificdriftteam.com/",
     "notes": "Manually verified from Apple Valley Speedway's calendar.",
     "addedAt": "2026-07-31T15:30:00+00:00"
+  },
+  {
+    "id": "dm-2026-10-10",
+    "title": "DriftMaybe",
+    "promoter": "DriftMaybe",
+    "start": "2026-10-10 08:00",
+    "end": "2026-10-10 17:00",
+    "location": "Thunderhill Raceway Park",
+    "url": "https://www.instagram.com/DRIFTMAYBE/",
+    "notes": "Manually added by the site owner.",
+    "addedAt": "2026-07-31T16:00:00+00:00"
+  },
+  {
+    "id": "dm-2026-11-14",
+    "title": "DriftMaybe",
+    "promoter": "DriftMaybe",
+    "start": "2026-11-14 08:00",
+    "end": "2026-11-14 17:00",
+    "location": "Thunderhill Raceway Park",
+    "url": "https://www.instagram.com/DRIFTMAYBE/",
+    "notes": "Manually added by the site owner.",
+    "addedAt": "2026-07-31T16:05:00+00:00"
+  },
+  {
+    "id": "dm-2026-12-12",
+    "title": "DriftMaybe",
+    "promoter": "DriftMaybe",
+    "start": "2026-12-12 08:00",
+    "end": "2026-12-12 17:00",
+    "location": "Thunderhill Raceway Park",
+    "url": "https://www.instagram.com/DRIFTMAYBE/",
+    "notes": "Manually added by the site owner.",
+    "addedAt": "2026-07-31T16:10:00+00:00"
   }
 ]
