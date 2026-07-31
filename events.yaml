@@ -740,3 +740,174 @@ events:
   location: Thunderhill Raceway Park
   url: https://super-d.net/pages/schedule
   notes: SuperD schedule manually verified from super-d.net.
+- id: av-2026-08-19
+  addedAt: '2026-07-31T14:00:00+00:00'
+  title: Ctrl-Drive
+  promoter: Apple Valley Speedway
+  start: 2026-08-19 08:00
+  end: 2026-08-19 17:00
+  location: Main & Skid
+  url: https://applevalleyspeedway.com/calendar/
+  notes: Manually verified from Apple Valley Speedway's calendar.
+- id: av-2026-09-06
+  addedAt: '2026-07-31T14:05:00+00:00'
+  title: Family & Friends Practice Event
+  promoter: Apple Valley Speedway
+  start: 2026-09-06 08:00
+  end: 2026-09-06 17:00
+  location: Main & Skid
+  url: https://applevalleyspeedway.com/calendar/
+  notes: Manually verified from Apple Valley Speedway's calendar.
+- id: av-2026-09-20
+  addedAt: '2026-07-31T14:10:00+00:00'
+  title: Corner Exit Touge Challenge
+  promoter: Apple Valley Speedway
+  start: 2026-09-20 08:00
+  end: 2026-09-20 17:00
+  location: Main Track
+  url: https://applevalleyspeedway.com/calendar/
+  notes: Manually verified from Apple Valley Speedway's calendar.
+- id: av-2026-10-04
+  addedAt: '2026-07-31T14:15:00+00:00'
+  title: N.A. Nonsuri
+  promoter: Apple Valley Speedway
+  start: 2026-10-04 08:00
+  end: 2026-10-04 17:00
+  location: Main & Skid
+  url: https://applevalleyspeedway.com/calendar/
+  notes: Manually verified from Apple Valley Speedway's calendar.
+- id: av-2026-10-11
+  addedAt: '2026-07-31T14:20:00+00:00'
+  title: Corner Exit Touge Challenge
+  promoter: Apple Valley Speedway
+  start: 2026-10-11 08:00
+  end: 2026-10-11 17:00
+  location: Main Track
+  url: https://applevalleyspeedway.com/calendar/
+  notes: Manually verified from Apple Valley Speedway's calendar.
+- id: av-2026-10-16
+  addedAt: '2026-07-31T14:25:00+00:00'
+  title: Drivers Ed
+  promoter: Apple Valley Speedway
+  start: 2026-10-16 08:00
+  end: 2026-10-16 17:00
+  location: Main & Skid
+  url: https://applevalleyspeedway.com/calendar/
+  notes: Manually verified from Apple Valley Speedway's calendar.
+- id: av-2026-10-17
+  addedAt: '2026-07-31T14:30:00+00:00'
+  title: Drift or Treat 2
+  promoter: Apple Valley Speedway
+  start: 2026-10-17 08:00
+  end: 2026-10-17 17:00
+  location: Main & Skid
+  url: https://applevalleyspeedway.com/calendar/
+  notes: Manually verified from Apple Valley Speedway's calendar.
+- id: av-2026-10-31
+  addedAt: '2026-07-31T14:35:00+00:00'
+  title: Soso Halloween Bash
+  promoter: Apple Valley Speedway
+  start: 2026-10-31 08:00
+  end: 2026-10-31 17:00
+  location: Main & Skid
+  url: https://applevalleyspeedway.com/calendar/
+  notes: Manually verified from Apple Valley Speedway's calendar.
+- id: av-2026-11-01
+  addedAt: '2026-07-31T14:40:00+00:00'
+  title: KINOD Miataween
+  promoter: Apple Valley Speedway
+  start: 2026-11-01 08:00
+  end: 2026-11-01 17:00
+  location: Main & Skid
+  url: https://applevalleyspeedway.com/calendar/
+  notes: Manually verified from Apple Valley Speedway's calendar.
+- id: av-2026-11-07
+  addedAt: '2026-07-31T14:45:00+00:00'
+  title: DriftGala
+  promoter: Apple Valley Speedway
+  start: 2026-11-07 08:00
+  end: 2026-11-07 17:00
+  location: Main Track
+  url: https://applevalleyspeedway.com/calendar/
+  notes: Manually verified from Apple Valley Speedway's calendar.
+- id: av-2026-11-13
+  addedAt: '2026-07-31T14:50:00+00:00'
+  title: Runit Promotions
+  promoter: Apple Valley Speedway
+  start: 2026-11-13 08:00
+  end: 2026-11-15 17:00
+  location: Main & Skid
+  url: https://applevalleyspeedway.com/calendar/
+  notes: 3-day event. Manually verified from Apple Valley Speedway's calendar.
+- id: av-2026-11-21
+  addedAt: '2026-07-31T14:55:00+00:00'
+  title: Pacific Drift Event
+  promoter: Apple Valley Speedway
+  start: 2026-11-21 08:00
+  end: 2026-11-21 17:00
+  location: Main Track
+  url: https://applevalleyspeedway.com/calendar/
+  notes: Manually verified from Apple Valley Speedway's calendar.
+- id: av-2026-12-05
+  addedAt: '2026-07-31T15:00:00+00:00'
+  title: Section 8 Drifting Invitational
+  promoter: Apple Valley Speedway
+  start: 2026-12-05 08:00
+  end: 2026-12-05 17:00
+  location: Main Track
+  url: https://applevalleyspeedway.com/calendar/
+  notes: Manually verified from Apple Valley Speedway's calendar.
+- id: av-2026-12-06
+  addedAt: '2026-07-31T15:05:00+00:00'
+  title: Section 8 Drifting Invitational - Day 2
+  promoter: Apple Valley Speedway
+  start: 2026-12-06 08:00
+  end: 2026-12-06 17:00
+  location: Main Track
+  url: https://applevalleyspeedway.com/calendar/
+  notes: Manually verified from Apple Valley Speedway's calendar.
+- id: av-2026-12-12
+  addedAt: '2026-07-31T15:10:00+00:00'
+  title: Charity Drift 3
+  promoter: Apple Valley Speedway
+  start: 2026-12-12 08:00
+  end: 2026-12-12 17:00
+  location: Main & Skid
+  url: https://applevalleyspeedway.com/calendar/
+  notes: Manually verified from Apple Valley Speedway's calendar.
+- id: av-2026-12-19
+  addedAt: '2026-07-31T15:15:00+00:00'
+  title: Three's Racing Drift Day
+  promoter: Apple Valley Speedway
+  start: 2026-12-19 08:00
+  end: 2026-12-19 17:00
+  location: Main & Skid
+  url: https://applevalleyspeedway.com/calendar/
+  notes: Manually verified from Apple Valley Speedway's calendar.
+- id: av-2026-12-31
+  addedAt: '2026-07-31T15:20:00+00:00'
+  title: Hayden's Birthday / New Years Bash
+  promoter: Apple Valley Speedway
+  start: 2026-12-31 08:00
+  end: 2026-12-31 17:00
+  location: Main Track
+  url: https://applevalleyspeedway.com/calendar/
+  notes: Manually verified from Apple Valley Speedway's calendar.
+- id: av-2027-01-01
+  addedAt: '2026-07-31T15:25:00+00:00'
+  title: Hayden's Birthday / New Years Bash - Day 2
+  promoter: Apple Valley Speedway
+  start: 2027-01-01 08:00
+  end: 2027-01-01 17:00
+  location: Main Track
+  url: https://applevalleyspeedway.com/calendar/
+  notes: Manually verified from Apple Valley Speedway's calendar.
+- id: av-2027-01-16
+  addedAt: '2026-07-31T15:30:00+00:00'
+  title: Pacific Drift Event
+  promoter: Apple Valley Speedway
+  start: 2027-01-16 08:00
+  end: 2027-01-16 17:00
+  location: Main Track
+  url: https://applevalleyspeedway.com/calendar/
+  notes: Manually verified from Apple Valley Speedway's calendar.
