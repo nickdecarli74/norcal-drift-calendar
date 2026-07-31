@@ -550,6 +550,17 @@
     "addedAt": "2026-07-20T00:00:00+00:00"
   },
   {
+    "id": "av-2026-08-19",
+    "title": "Ctrl-Drive",
+    "promoter": "Apple Valley Speedway",
+    "start": "2026-08-19 08:00",
+    "end": "2026-08-19 17:00",
+    "location": "Main & Skid",
+    "url": "https://applevalleyspeedway.com/calendar/",
+    "notes": "Manually verified from Apple Valley Speedway's calendar.",
+    "addedAt": "2026-07-31T14:00:00+00:00"
+  },
+  {
     "id": "av-2026-08-21",
     "title": "BackroadBucket Birthday Bash",
     "promoter": "Apple Valley Speedway",
@@ -649,6 +660,17 @@
     "addedAt": "2026-07-08T00:00:00+00:00"
   },
   {
+    "id": "av-2026-09-06",
+    "title": "Family & Friends Practice Event",
+    "promoter": "Apple Valley Speedway",
+    "start": "2026-09-06 08:00",
+    "end": "2026-09-06 17:00",
+    "location": "Main & Skid",
+    "url": "https://applevalleyspeedway.com/calendar/",
+    "notes": "Manually verified from Apple Valley Speedway's calendar.",
+    "addedAt": "2026-07-31T14:05:00+00:00"
+  },
+  {
     "id": "bad-2026-09-12",
     "title": "Thunderhill Drift School",
     "promoter": "Bay Area Drifting",
@@ -715,6 +737,17 @@
     "addedAt": "2026-07-08T00:00:00+00:00"
   },
   {
+    "id": "av-2026-09-20",
+    "title": "Corner Exit Touge Challenge",
+    "promoter": "Apple Valley Speedway",
+    "start": "2026-09-20 08:00",
+    "end": "2026-09-20 17:00",
+    "location": "Main Track",
+    "url": "http://www.corner-exit.com/",
+    "notes": "Manually verified from Apple Valley Speedway's calendar.",
+    "addedAt": "2026-07-31T14:10:00+00:00"
+  },
+  {
     "id": "vdc-2026-09-26",
     "title": "Valley Drift Club Event",
     "promoter": "Valley Drift Club",
@@ -738,6 +771,50 @@
     "addedAt": "2026-07-27T00:00:00+00:00"
   },
   {
+    "id": "av-2026-10-04",
+    "title": "N.A. Nonsuri",
+    "promoter": "Apple Valley Speedway",
+    "start": "2026-10-04 08:00",
+    "end": "2026-10-04 17:00",
+    "location": "Main & Skid",
+    "url": "https://applevalleyspeedway.com/calendar/",
+    "notes": "Manually verified from Apple Valley Speedway's calendar.",
+    "addedAt": "2026-07-31T14:15:00+00:00"
+  },
+  {
+    "id": "dm-2026-10-10",
+    "title": "DriftMaybe",
+    "promoter": "DriftMaybe",
+    "start": "2026-10-10 08:00",
+    "end": "2026-10-10 17:00",
+    "location": "Thunderhill Raceway Park",
+    "url": "https://www.instagram.com/p/DSyh94eFBve/",
+    "notes": "Manually added by the site owner.",
+    "addedAt": "2026-07-31T16:00:00+00:00"
+  },
+  {
+    "id": "av-2026-10-11",
+    "title": "Corner Exit Touge Challenge",
+    "promoter": "Apple Valley Speedway",
+    "start": "2026-10-11 08:00",
+    "end": "2026-10-11 17:00",
+    "location": "Main Track",
+    "url": "http://www.corner-exit.com/",
+    "notes": "Manually verified from Apple Valley Speedway's calendar.",
+    "addedAt": "2026-07-31T14:20:00+00:00"
+  },
+  {
+    "id": "av-2026-10-16",
+    "title": "Drivers Ed",
+    "promoter": "Apple Valley Speedway",
+    "start": "2026-10-16 08:00",
+    "end": "2026-10-16 17:00",
+    "location": "Main & Skid",
+    "url": "https://applevalleyspeedway.com/calendar/",
+    "notes": "Manually verified from Apple Valley Speedway's calendar.",
+    "addedAt": "2026-07-31T14:25:00+00:00"
+  },
+  {
     "id": "bad-2026-10-17",
     "title": "Thunderhill Drift School",
     "promoter": "Bay Area Drifting",
@@ -747,6 +824,17 @@
     "url": "https://bayareadrifting.com/schedule",
     "notes": "Saturday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.",
     "addedAt": "2026-07-08T00:00:00+00:00"
+  },
+  {
+    "id": "av-2026-10-17",
+    "title": "Drift or Treat 2",
+    "promoter": "Apple Valley Speedway",
+    "start": "2026-10-17 08:00",
+    "end": "2026-10-17 17:00",
+    "location": "Main & Skid",
+    "url": "http://flavorexpress.co/",
+    "notes": "Manually verified from Apple Valley Speedway's calendar.",
+    "addedAt": "2026-07-31T14:30:00+00:00"
   },
   {
     "id": "bad-2026-10-18",
@@ -780,171 +868,6 @@
     "url": "https://super-d.net/pages/schedule",
     "notes": "SuperD schedule manually verified from super-d.net.",
     "addedAt": "2026-07-08T00:00:00+00:00"
-  },
-  {
-    "id": "bad-2026-11-14",
-    "title": "Thunderhill Drift School",
-    "promoter": "Bay Area Drifting",
-    "start": "2026-11-14 08:00",
-    "end": "2026-11-14 17:00",
-    "location": "Thunderhill Raceway Park",
-    "url": "https://bayareadrifting.com/schedule",
-    "notes": "Saturday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.",
-    "addedAt": "2026-07-08T00:00:00+00:00"
-  },
-  {
-    "id": "bad-2026-11-15",
-    "title": "Thunderhill Drift School",
-    "promoter": "Bay Area Drifting",
-    "start": "2026-11-15 08:00",
-    "end": "2026-11-15 17:00",
-    "location": "Thunderhill Raceway Park",
-    "url": "https://bayareadrifting.com/schedule",
-    "notes": "Sunday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.",
-    "addedAt": "2026-07-08T00:00:00+00:00"
-  },
-  {
-    "id": "vdc-2026-11-21",
-    "title": "Valley Drift Club Event",
-    "promoter": "Valley Drift Club",
-    "start": "2026-11-21 07:00",
-    "end": "2026-11-21 17:00",
-    "location": "NASA Crows Landing Airport",
-    "url": "https://www.valleydriftclub.com/",
-    "notes": "Valley Drift Club event.",
-    "addedAt": "2026-07-08T00:00:00+00:00"
-  },
-  {
-    "id": "fifo-2026-11-21",
-    "title": "Fast In Fast Out Drift",
-    "promoter": "Fast In Fast Out",
-    "start": "2026-11-21 08:00",
-    "end": "2026-11-21 18:00",
-    "location": "Sonoma Raceway",
-    "url": "https://fastinfastouttrackdays.com/pages/upcoming-events",
-    "notes": "Auto-imported from Fast In Fast Out upcoming events.",
-    "addedAt": "2026-07-08T00:00:00+00:00"
-  },
-  {
-    "id": "fifo-2026-11-22",
-    "title": "Fast In Fast Out Drift",
-    "promoter": "Fast In Fast Out",
-    "start": "2026-11-22 08:00",
-    "end": "2026-11-22 18:00",
-    "location": "Sonoma Raceway",
-    "url": "https://fastinfastouttrackdays.com/pages/upcoming-events",
-    "notes": "Auto-imported from Fast In Fast Out upcoming events.",
-    "addedAt": "2026-07-08T00:00:00+00:00"
-  },
-  {
-    "id": "sd-2026-11-29",
-    "title": "D-Day",
-    "promoter": "SuperD",
-    "start": "2026-11-29 08:00",
-    "end": "2026-11-29 17:00",
-    "location": "Thunderhill Raceway Park",
-    "url": "https://super-d.net/pages/schedule",
-    "notes": "SuperD schedule manually verified from super-d.net.",
-    "addedAt": "2026-07-08T00:00:00+00:00"
-  },
-  {
-    "id": "vdc-2026-12-19",
-    "title": "Valley Drift Club Event",
-    "promoter": "Valley Drift Club",
-    "start": "2026-12-19 07:00",
-    "end": "2026-12-19 17:00",
-    "location": "NASA Crows Landing Airport",
-    "url": "https://www.valleydriftclub.com/",
-    "notes": "Valley Drift Club event.",
-    "addedAt": "2026-07-08T00:00:00+00:00"
-  },
-  {
-    "id": "sd-2026-12-27",
-    "title": "SuperD NYE",
-    "promoter": "SuperD",
-    "start": "2026-12-27 08:00",
-    "end": "2026-12-27 17:00",
-    "location": "Thunderhill Raceway Park",
-    "url": "https://super-d.net/pages/schedule",
-    "notes": "SuperD schedule manually verified from super-d.net.",
-    "addedAt": "2026-07-08T00:00:00+00:00"
-  },
-  {
-    "id": "av-2026-08-19",
-    "title": "Ctrl-Drive",
-    "promoter": "Apple Valley Speedway",
-    "start": "2026-08-19 08:00",
-    "end": "2026-08-19 17:00",
-    "location": "Main & Skid",
-    "url": "https://applevalleyspeedway.com/calendar/",
-    "notes": "Manually verified from Apple Valley Speedway's calendar.",
-    "addedAt": "2026-07-31T14:00:00+00:00"
-  },
-  {
-    "id": "av-2026-09-06",
-    "title": "Family & Friends Practice Event",
-    "promoter": "Apple Valley Speedway",
-    "start": "2026-09-06 08:00",
-    "end": "2026-09-06 17:00",
-    "location": "Main & Skid",
-    "url": "https://applevalleyspeedway.com/calendar/",
-    "notes": "Manually verified from Apple Valley Speedway's calendar.",
-    "addedAt": "2026-07-31T14:05:00+00:00"
-  },
-  {
-    "id": "av-2026-09-20",
-    "title": "Corner Exit Touge Challenge",
-    "promoter": "Apple Valley Speedway",
-    "start": "2026-09-20 08:00",
-    "end": "2026-09-20 17:00",
-    "location": "Main Track",
-    "url": "http://www.corner-exit.com/",
-    "notes": "Manually verified from Apple Valley Speedway's calendar.",
-    "addedAt": "2026-07-31T14:10:00+00:00"
-  },
-  {
-    "id": "av-2026-10-04",
-    "title": "N.A. Nonsuri",
-    "promoter": "Apple Valley Speedway",
-    "start": "2026-10-04 08:00",
-    "end": "2026-10-04 17:00",
-    "location": "Main & Skid",
-    "url": "https://applevalleyspeedway.com/calendar/",
-    "notes": "Manually verified from Apple Valley Speedway's calendar.",
-    "addedAt": "2026-07-31T14:15:00+00:00"
-  },
-  {
-    "id": "av-2026-10-11",
-    "title": "Corner Exit Touge Challenge",
-    "promoter": "Apple Valley Speedway",
-    "start": "2026-10-11 08:00",
-    "end": "2026-10-11 17:00",
-    "location": "Main Track",
-    "url": "http://www.corner-exit.com/",
-    "notes": "Manually verified from Apple Valley Speedway's calendar.",
-    "addedAt": "2026-07-31T14:20:00+00:00"
-  },
-  {
-    "id": "av-2026-10-16",
-    "title": "Drivers Ed",
-    "promoter": "Apple Valley Speedway",
-    "start": "2026-10-16 08:00",
-    "end": "2026-10-16 17:00",
-    "location": "Main & Skid",
-    "url": "https://applevalleyspeedway.com/calendar/",
-    "notes": "Manually verified from Apple Valley Speedway's calendar.",
-    "addedAt": "2026-07-31T14:25:00+00:00"
-  },
-  {
-    "id": "av-2026-10-17",
-    "title": "Drift or Treat 2",
-    "promoter": "Apple Valley Speedway",
-    "start": "2026-10-17 08:00",
-    "end": "2026-10-17 17:00",
-    "location": "Main & Skid",
-    "url": "http://flavorexpress.co/",
-    "notes": "Manually verified from Apple Valley Speedway's calendar.",
-    "addedAt": "2026-07-31T14:30:00+00:00"
   },
   {
     "id": "av-2026-10-31",
@@ -991,6 +914,61 @@
     "addedAt": "2026-07-31T14:50:00+00:00"
   },
   {
+    "id": "bad-2026-11-14",
+    "title": "Thunderhill Drift School",
+    "promoter": "Bay Area Drifting",
+    "start": "2026-11-14 08:00",
+    "end": "2026-11-14 17:00",
+    "location": "Thunderhill Raceway Park",
+    "url": "https://bayareadrifting.com/schedule",
+    "notes": "Saturday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.",
+    "addedAt": "2026-07-08T00:00:00+00:00"
+  },
+  {
+    "id": "dm-2026-11-14",
+    "title": "DriftMaybe",
+    "promoter": "DriftMaybe",
+    "start": "2026-11-14 08:00",
+    "end": "2026-11-14 17:00",
+    "location": "Thunderhill Raceway Park",
+    "url": "https://www.instagram.com/p/DSyh94eFBve/",
+    "notes": "Manually added by the site owner.",
+    "addedAt": "2026-07-31T16:05:00+00:00"
+  },
+  {
+    "id": "bad-2026-11-15",
+    "title": "Thunderhill Drift School",
+    "promoter": "Bay Area Drifting",
+    "start": "2026-11-15 08:00",
+    "end": "2026-11-15 17:00",
+    "location": "Thunderhill Raceway Park",
+    "url": "https://bayareadrifting.com/schedule",
+    "notes": "Sunday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.",
+    "addedAt": "2026-07-08T00:00:00+00:00"
+  },
+  {
+    "id": "vdc-2026-11-21",
+    "title": "Valley Drift Club Event",
+    "promoter": "Valley Drift Club",
+    "start": "2026-11-21 07:00",
+    "end": "2026-11-21 17:00",
+    "location": "NASA Crows Landing Airport",
+    "url": "https://www.valleydriftclub.com/",
+    "notes": "Valley Drift Club event.",
+    "addedAt": "2026-07-08T00:00:00+00:00"
+  },
+  {
+    "id": "fifo-2026-11-21",
+    "title": "Fast In Fast Out Drift",
+    "promoter": "Fast In Fast Out",
+    "start": "2026-11-21 08:00",
+    "end": "2026-11-21 18:00",
+    "location": "Sonoma Raceway",
+    "url": "https://fastinfastouttrackdays.com/pages/upcoming-events",
+    "notes": "Auto-imported from Fast In Fast Out upcoming events.",
+    "addedAt": "2026-07-08T00:00:00+00:00"
+  },
+  {
     "id": "av-2026-11-21",
     "title": "Pacific Drift Event",
     "promoter": "Apple Valley Speedway",
@@ -1000,6 +978,28 @@
     "url": "http://www.pacificdriftteam.com/",
     "notes": "Manually verified from Apple Valley Speedway's calendar.",
     "addedAt": "2026-07-31T14:55:00+00:00"
+  },
+  {
+    "id": "fifo-2026-11-22",
+    "title": "Fast In Fast Out Drift",
+    "promoter": "Fast In Fast Out",
+    "start": "2026-11-22 08:00",
+    "end": "2026-11-22 18:00",
+    "location": "Sonoma Raceway",
+    "url": "https://fastinfastouttrackdays.com/pages/upcoming-events",
+    "notes": "Auto-imported from Fast In Fast Out upcoming events.",
+    "addedAt": "2026-07-08T00:00:00+00:00"
+  },
+  {
+    "id": "sd-2026-11-29",
+    "title": "D-Day",
+    "promoter": "SuperD",
+    "start": "2026-11-29 08:00",
+    "end": "2026-11-29 17:00",
+    "location": "Thunderhill Raceway Park",
+    "url": "https://super-d.net/pages/schedule",
+    "notes": "SuperD schedule manually verified from super-d.net.",
+    "addedAt": "2026-07-08T00:00:00+00:00"
   },
   {
     "id": "av-2026-12-05",
@@ -1035,6 +1035,28 @@
     "addedAt": "2026-07-31T15:10:00+00:00"
   },
   {
+    "id": "dm-2026-12-12",
+    "title": "DriftMaybe",
+    "promoter": "DriftMaybe",
+    "start": "2026-12-12 08:00",
+    "end": "2026-12-12 17:00",
+    "location": "Thunderhill Raceway Park",
+    "url": "https://www.instagram.com/p/DSyh94eFBve/",
+    "notes": "Manually added by the site owner.",
+    "addedAt": "2026-07-31T16:10:00+00:00"
+  },
+  {
+    "id": "vdc-2026-12-19",
+    "title": "Valley Drift Club Event",
+    "promoter": "Valley Drift Club",
+    "start": "2026-12-19 07:00",
+    "end": "2026-12-19 17:00",
+    "location": "NASA Crows Landing Airport",
+    "url": "https://www.valleydriftclub.com/",
+    "notes": "Valley Drift Club event.",
+    "addedAt": "2026-07-08T00:00:00+00:00"
+  },
+  {
     "id": "av-2026-12-19",
     "title": "Three's Racing Drift Day",
     "promoter": "Apple Valley Speedway",
@@ -1044,6 +1066,17 @@
     "url": "https://applevalleyspeedway.com/calendar/",
     "notes": "Manually verified from Apple Valley Speedway's calendar.",
     "addedAt": "2026-07-31T15:15:00+00:00"
+  },
+  {
+    "id": "sd-2026-12-27",
+    "title": "SuperD NYE",
+    "promoter": "SuperD",
+    "start": "2026-12-27 08:00",
+    "end": "2026-12-27 17:00",
+    "location": "Thunderhill Raceway Park",
+    "url": "https://super-d.net/pages/schedule",
+    "notes": "SuperD schedule manually verified from super-d.net.",
+    "addedAt": "2026-07-08T00:00:00+00:00"
   },
   {
     "id": "av-2026-12-31",
@@ -1077,38 +1110,5 @@
     "url": "http://www.pacificdriftteam.com/",
     "notes": "Manually verified from Apple Valley Speedway's calendar.",
     "addedAt": "2026-07-31T15:30:00+00:00"
-  },
-  {
-    "id": "dm-2026-10-10",
-    "title": "DriftMaybe",
-    "promoter": "DriftMaybe",
-    "start": "2026-10-10 08:00",
-    "end": "2026-10-10 17:00",
-    "location": "Thunderhill Raceway Park",
-    "url": "https://www.instagram.com/p/DSyh94eFBve/",
-    "notes": "Manually added by the site owner.",
-    "addedAt": "2026-07-31T16:00:00+00:00"
-  },
-  {
-    "id": "dm-2026-11-14",
-    "title": "DriftMaybe",
-    "promoter": "DriftMaybe",
-    "start": "2026-11-14 08:00",
-    "end": "2026-11-14 17:00",
-    "location": "Thunderhill Raceway Park",
-    "url": "https://www.instagram.com/p/DSyh94eFBve/",
-    "notes": "Manually added by the site owner.",
-    "addedAt": "2026-07-31T16:05:00+00:00"
-  },
-  {
-    "id": "dm-2026-12-12",
-    "title": "DriftMaybe",
-    "promoter": "DriftMaybe",
-    "start": "2026-12-12 08:00",
-    "end": "2026-12-12 17:00",
-    "location": "Thunderhill Raceway Park",
-    "url": "https://www.instagram.com/p/DSyh94eFBve/",
-    "notes": "Manually added by the site owner.",
-    "addedAt": "2026-07-31T16:10:00+00:00"
   }
 ]
