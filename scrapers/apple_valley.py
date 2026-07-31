@@ -177,7 +177,7 @@ def get_events():
             "start": "2026-09-20 08:00",
             "end": "2026-09-20 17:00",
             "location": "Main Track",
-            "url": "https://applevalleyspeedway.com/calendar/",
+            "url": "http://www.corner-exit.com/",
             "notes": "Manually verified from Apple Valley Speedway's calendar."
         },
         {
@@ -197,7 +197,7 @@ def get_events():
             "start": "2026-10-11 08:00",
             "end": "2026-10-11 17:00",
             "location": "Main Track",
-            "url": "https://applevalleyspeedway.com/calendar/",
+            "url": "http://www.corner-exit.com/",
             "notes": "Manually verified from Apple Valley Speedway's calendar."
         },
         {
@@ -217,7 +217,7 @@ def get_events():
             "start": "2026-10-17 08:00",
             "end": "2026-10-17 17:00",
             "location": "Main & Skid",
-            "url": "https://applevalleyspeedway.com/calendar/",
+            "url": "http://flavorexpress.co/",
             "notes": "Manually verified from Apple Valley Speedway's calendar."
         },
         {
@@ -267,7 +267,7 @@ def get_events():
             "start": "2026-11-21 08:00",
             "end": "2026-11-21 17:00",
             "location": "Main Track",
-            "url": "https://applevalleyspeedway.com/calendar/",
+            "url": "http://www.pacificdriftteam.com/",
             "notes": "Manually verified from Apple Valley Speedway's calendar."
         },
         {
@@ -297,7 +297,7 @@ def get_events():
             "start": "2026-12-12 08:00",
             "end": "2026-12-12 17:00",
             "location": "Main & Skid",
-            "url": "https://applevalleyspeedway.com/calendar/",
+            "url": "http://flavorexpress.co/",
             "notes": "Manually verified from Apple Valley Speedway's calendar."
         },
         {
@@ -317,7 +317,7 @@ def get_events():
             "start": "2026-12-31 08:00",
             "end": "2026-12-31 17:00",
             "location": "Main Track",
-            "url": "https://applevalleyspeedway.com/calendar/",
+            "url": "http://www.udc.news/",
             "notes": "Manually verified from Apple Valley Speedway's calendar."
         },
         {
@@ -327,7 +327,7 @@ def get_events():
             "start": "2027-01-01 08:00",
             "end": "2027-01-01 17:00",
             "location": "Main Track",
-            "url": "https://applevalleyspeedway.com/calendar/",
+            "url": "http://www.udc.news/",
             "notes": "Manually verified from Apple Valley Speedway's calendar."
         },
         {
@@ -337,7 +337,7 @@ def get_events():
             "start": "2027-01-16 08:00",
             "end": "2027-01-16 17:00",
             "location": "Main Track",
-            "url": "https://applevalleyspeedway.com/calendar/",
+            "url": "http://www.pacificdriftteam.com/",
             "notes": "Manually verified from Apple Valley Speedway's calendar."
         }
     ]
