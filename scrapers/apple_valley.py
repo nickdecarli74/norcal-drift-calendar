@@ -121,26 +121,6 @@ def get_events():
             "notes": "Manually verified from Apple Valley Speedway's calendar."
         },
         {
-            "id": "av-2026-08-30",
-            "title": "Purple Soukoukai",
-            "promoter": "Apple Valley Speedway",
-            "start": "2026-08-30 08:00",
-            "end": "2026-08-30 17:00",
-            "location": "Main Track",
-            "url": "https://applevalleyspeedway.com/calendar/",
-            "notes": "Manually verified from Apple Valley Speedway's calendar."
-        },
-        {
-            "id": "av-2026-09-05",
-            "title": "Pacific Drift Event",
-            "promoter": "Apple Valley Speedway",
-            "start": "2026-09-05 08:00",
-            "end": "2026-09-05 17:00",
-            "location": "Main Track",
-            "url": "https://applevalleyspeedway.com/calendar/",
-            "notes": "Manually verified from Apple Valley Speedway's calendar."
-        },
-        {
             "id": "av-2026-09-18",
             "title": "Ultimate Drifting Challenge Round 4",
             "promoter": "Apple Valley Speedway",

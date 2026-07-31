@@ -542,24 +542,6 @@ events:
   location: Main & Skid
   url: https://applevalleyspeedway.com/calendar/
   notes: Manually verified from Apple Valley Speedway's calendar.
-- id: av-2026-08-30
-  addedAt: '2026-07-08T00:00:00+00:00'
-  title: Purple Soukoukai
-  promoter: Apple Valley Speedway
-  start: 2026-08-30 08:00
-  end: 2026-08-30 17:00
-  location: Main Track
-  url: https://applevalleyspeedway.com/calendar/
-  notes: Manually verified from Apple Valley Speedway's calendar.
-- id: av-2026-09-05
-  addedAt: '2026-07-08T00:00:00+00:00'
-  title: Pacific Drift Event
-  promoter: Apple Valley Speedway
-  start: 2026-09-05 08:00
-  end: 2026-09-05 17:00
-  location: Main Track
-  url: https://applevalleyspeedway.com/calendar/
-  notes: Manually verified from Apple Valley Speedway's calendar.
 - id: av-2026-09-06
   addedAt: '2026-07-31T14:05:00+00:00'
   title: Family & Friends Practice Event
