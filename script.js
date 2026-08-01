@@ -99,6 +99,14 @@ const TRACKS = [
     lat: 42.3733,
     lng: -122.9106,
     search: ["affinity"]
+  },
+  {
+    name: "Firebird Motorsports Park",
+    short: "Firebird",
+    location: "Chandler, AZ",
+    lat: 33.2689,
+    lng: -111.9661,
+    search: ["firebird"]
   }
 ];
 
