@@ -6,17 +6,6 @@ URL = "https://bayareadrifting.com/schedule"
 YEAR = 2026
 LOCATION = "Thunderhill Raceway Park"
 
-ALLOWED_DATES = {
-    "2026-08-08",
-    "2026-08-09",
-    "2026-09-12",
-    "2026-09-13",
-    "2026-10-17",
-    "2026-10-18",
-    "2026-11-14",
-    "2026-11-15",
-}
-
 MONTHS = {
     "january": 1, "february": 2, "march": 3, "april": 4,
     "may": 5, "june": 6, "july": 7, "august": 8,
@@ -47,9 +36,6 @@ def get_events():
         day = clean_day(match.group(3))
         month = MONTHS[month_name]
         date_key = f"{YEAR}-{month:02d}-{day:02d}"
-
-        if date_key not in ALLOWED_DATES:
-            continue
 
         event_id = f"bad-{date_key}"
 
