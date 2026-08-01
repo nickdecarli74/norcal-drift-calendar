@@ -418,6 +418,17 @@
     "addedAt": "2026-07-16T00:00:00+00:00"
   },
   {
+    "id": "fmp-2026-08-01",
+    "title": "West Track Drift N Drags",
+    "promoter": "Firebird Motorsports Park",
+    "start": "2026-08-01 08:00",
+    "end": "2026-08-01 17:00",
+    "location": "West Track",
+    "url": "https://gofastent.com/drift-n-drag",
+    "notes": "Manually added by the site owner.",
+    "addedAt": "2026-08-01T00:50:00+00:00"
+  },
+  {
     "id": "cr-2026-08-02",
     "title": "Hottest August Nights",
     "promoter": "Club Rowdy",
@@ -594,6 +605,17 @@
     "addedAt": "2026-07-29T21:00:00+00:00"
   },
   {
+    "id": "dnd-2026-08-22",
+    "title": "Drift N Drags",
+    "promoter": "Qlispe Raceway Park",
+    "start": "2026-08-22 08:00",
+    "end": "2026-08-22 17:00",
+    "location": "Airway Heights, WA",
+    "url": "https://gofastent.com/drift-n-drag",
+    "notes": "Manually added by the site owner.",
+    "addedAt": "2026-08-01T00:55:00+00:00"
+  },
+  {
     "id": "av-2026-08-23",
     "title": "Hawt August Night",
     "promoter": "Apple Valley Speedway",
@@ -660,6 +682,28 @@
     "addedAt": "2026-07-08T00:00:00+00:00"
   },
   {
+    "id": "gll-2026-09-12",
+    "title": "GLL Practice Day",
+    "promoter": "GoodLuckLeague",
+    "start": "2026-09-12 08:00",
+    "end": "2026-09-12 17:00",
+    "location": "Thunderhill Raceway Park",
+    "url": "https://www.goodluckleague.com/schedule",
+    "notes": "Manually added by the site owner.",
+    "addedAt": "2026-08-01T00:05:00+00:00"
+  },
+  {
+    "id": "de-2026-09-12",
+    "title": "THUNDERDRIFT",
+    "promoter": "Drift Evolution",
+    "start": "2026-09-12 08:00",
+    "end": "2026-09-13 17:00",
+    "location": "Affinity Circuit",
+    "url": "https://driftevolution.trackrabbit.com/",
+    "notes": "2-day event. Manually added by the site owner.",
+    "addedAt": "2026-08-01T00:35:00+00:00"
+  },
+  {
     "id": "bad-2026-09-13",
     "title": "Thunderhill Drift School",
     "promoter": "Bay Area Drifting",
@@ -669,6 +713,17 @@
     "url": "https://bayareadrifting.com/schedule",
     "notes": "Sunday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.",
     "addedAt": "2026-07-08T00:00:00+00:00"
+  },
+  {
+    "id": "dlux-2026-09-13",
+    "title": "DLUX Drift Practice Day",
+    "promoter": "DLUX",
+    "start": "2026-09-13 08:00",
+    "end": "2026-09-13 17:00",
+    "location": "Thunderhill Raceway Park",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSdPFCbJi7wmdKqm7CjqEVwW6W4S8ZKKofZj0U0lRUvwTFXlIg/viewform?fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnhcIPkC9N4JSyq6qchrc9CswEPdntrivA3xAzz3hvajxX4xoG7HmfpD1b73Y_aem_gl2-589OhrJDireBOJGslw",
+    "notes": "Manually added by the site owner.",
+    "addedAt": "2026-08-01T00:00:00+00:00"
   },
   {
     "id": "fifo-2026-09-18",
@@ -702,6 +757,17 @@
     "url": "https://fastinfastouttrackdays.com/pages/upcoming-events",
     "notes": "Auto-imported from Fast In Fast Out upcoming events.",
     "addedAt": "2026-07-08T00:00:00+00:00"
+  },
+  {
+    "id": "fmp-2026-09-19",
+    "title": "Drift N Drags",
+    "promoter": "Firebird Motorsports Park",
+    "start": "2026-09-19 08:00",
+    "end": "2026-09-19 17:00",
+    "location": "Main Track",
+    "url": "https://gofastent.com/drift-n-drag",
+    "notes": "Manually added by the site owner.",
+    "addedAt": "2026-08-01T01:00:00+00:00"
   },
   {
     "id": "fifo-2026-09-20",
@@ -771,6 +837,17 @@
     "addedAt": "2026-07-31T16:00:00+00:00"
   },
   {
+    "id": "de-2026-10-10",
+    "title": "Pumpkin Bash",
+    "promoter": "Drift Evolution",
+    "start": "2026-10-10 08:00",
+    "end": "2026-10-11 17:00",
+    "location": "Affinity Circuit",
+    "url": "https://driftevolution.trackrabbit.com/",
+    "notes": "2-day event. Manually added by the site owner.",
+    "addedAt": "2026-08-01T00:40:00+00:00"
+  },
+  {
     "id": "av-2026-10-11",
     "title": "Corner Exit Touge Challenge",
     "promoter": "Apple Valley Speedway",
@@ -780,6 +857,17 @@
     "url": "http://www.corner-exit.com/",
     "notes": "Manually verified from Apple Valley Speedway's calendar.",
     "addedAt": "2026-07-31T14:20:00+00:00"
+  },
+  {
+    "id": "gll-2026-10-11",
+    "title": "GLL Battle Comp",
+    "promoter": "GoodLuckLeague",
+    "start": "2026-10-11 08:00",
+    "end": "2026-10-11 17:00",
+    "location": "Thunderhill Raceway Park",
+    "url": "https://www.goodluckleague.com/schedule",
+    "notes": "Manually added by the site owner.",
+    "addedAt": "2026-08-01T00:10:00+00:00"
   },
   {
     "id": "av-2026-10-16",
@@ -914,6 +1002,17 @@
     "addedAt": "2026-07-31T16:05:00+00:00"
   },
   {
+    "id": "de-2026-11-14",
+    "title": "Cold Winter Nights",
+    "promoter": "Drift Evolution",
+    "start": "2026-11-14 08:00",
+    "end": "2026-11-15 17:00",
+    "location": "Affinity Circuit",
+    "url": "https://driftevolution.trackrabbit.com/",
+    "notes": "2-day event. Manually added by the site owner.",
+    "addedAt": "2026-08-01T00:45:00+00:00"
+  },
+  {
     "id": "bad-2026-11-15",
     "title": "Thunderhill Drift School",
     "promoter": "Bay Area Drifting",
@@ -958,6 +1057,17 @@
     "addedAt": "2026-07-31T14:55:00+00:00"
   },
   {
+    "id": "fmp-2026-11-21",
+    "title": "Drift N Drags",
+    "promoter": "Firebird Motorsports Park",
+    "start": "2026-11-21 08:00",
+    "end": "2026-11-21 17:00",
+    "location": "Firebird Motorsports Park",
+    "url": "https://gofastent.com/drift-n-drag",
+    "notes": "Manually added by the site owner.",
+    "addedAt": "2026-08-01T01:05:00+00:00"
+  },
+  {
     "id": "fifo-2026-11-22",
     "title": "Fast In Fast Out Drift",
     "promoter": "Fast In Fast Out",
@@ -967,6 +1077,17 @@
     "url": "https://fastinfastouttrackdays.com/pages/upcoming-events",
     "notes": "Auto-imported from Fast In Fast Out upcoming events.",
     "addedAt": "2026-07-08T00:00:00+00:00"
+  },
+  {
+    "id": "gll-2026-11-28",
+    "title": "GLL Drift Day",
+    "promoter": "GoodLuckLeague",
+    "start": "2026-11-28 08:00",
+    "end": "2026-11-28 17:00",
+    "location": "Thunderhill Raceway Park",
+    "url": "https://www.goodluckleague.com/schedule",
+    "notes": "Manually added by the site owner.",
+    "addedAt": "2026-08-01T00:20:00+00:00"
   },
   {
     "id": "sd-2026-11-29",
@@ -1046,6 +1167,28 @@
     "addedAt": "2026-07-31T15:15:00+00:00"
   },
   {
+    "id": "gll-2026-12-19",
+    "title": "GLL Practice Day",
+    "promoter": "GoodLuckLeague",
+    "start": "2026-12-19 08:00",
+    "end": "2026-12-19 17:00",
+    "location": "Thunderhill Raceway Park",
+    "url": "https://www.goodluckleague.com/schedule",
+    "notes": "Manually added by the site owner.",
+    "addedAt": "2026-08-01T00:15:00+00:00"
+  },
+  {
+    "id": "fmp-2026-12-19",
+    "title": "Winter Drift",
+    "promoter": "Firebird Motorsports Park",
+    "start": "2026-12-19 08:00",
+    "end": "2026-12-19 17:00",
+    "location": "Firebird Motorsports Park",
+    "url": "https://gofastent.com/event-schedule",
+    "notes": "Manually added by the site owner.",
+    "addedAt": "2026-08-01T01:10:00+00:00"
+  },
+  {
     "id": "sd-2026-12-27",
     "title": "SuperD NYE",
     "promoter": "SuperD",
@@ -1090,61 +1233,6 @@
     "addedAt": "2026-07-31T15:30:00+00:00"
   },
   {
-    "id": "dlux-2026-09-13",
-    "title": "DLUX Drift Practice Day",
-    "promoter": "DLUX",
-    "start": "2026-09-13 08:00",
-    "end": "2026-09-13 17:00",
-    "location": "Thunderhill Raceway Park",
-    "url": "https://docs.google.com/forms/d/e/1FAIpQLSdPFCbJi7wmdKqm7CjqEVwW6W4S8ZKKofZj0U0lRUvwTFXlIg/viewform?fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnhcIPkC9N4JSyq6qchrc9CswEPdntrivA3xAzz3hvajxX4xoG7HmfpD1b73Y_aem_gl2-589OhrJDireBOJGslw",
-    "notes": "Manually added by the site owner.",
-    "addedAt": "2026-08-01T00:00:00+00:00"
-  },
-  {
-    "id": "gll-2026-09-12",
-    "title": "GLL Practice Day",
-    "promoter": "GoodLuckLeague",
-    "start": "2026-09-12 08:00",
-    "end": "2026-09-12 17:00",
-    "location": "Thunderhill Raceway Park",
-    "url": "https://www.goodluckleague.com/schedule",
-    "notes": "Manually added by the site owner.",
-    "addedAt": "2026-08-01T00:05:00+00:00"
-  },
-  {
-    "id": "gll-2026-10-11",
-    "title": "GLL Battle Comp",
-    "promoter": "GoodLuckLeague",
-    "start": "2026-10-11 08:00",
-    "end": "2026-10-11 17:00",
-    "location": "Thunderhill Raceway Park",
-    "url": "https://www.goodluckleague.com/schedule",
-    "notes": "Manually added by the site owner.",
-    "addedAt": "2026-08-01T00:10:00+00:00"
-  },
-  {
-    "id": "gll-2026-12-19",
-    "title": "GLL Practice Day",
-    "promoter": "GoodLuckLeague",
-    "start": "2026-12-19 08:00",
-    "end": "2026-12-19 17:00",
-    "location": "Thunderhill Raceway Park",
-    "url": "https://www.goodluckleague.com/schedule",
-    "notes": "Manually added by the site owner.",
-    "addedAt": "2026-08-01T00:15:00+00:00"
-  },
-  {
-    "id": "gll-2026-11-28",
-    "title": "GLL Drift Day",
-    "promoter": "GoodLuckLeague",
-    "start": "2026-11-28 08:00",
-    "end": "2026-11-28 17:00",
-    "location": "Thunderhill Raceway Park",
-    "url": "https://www.goodluckleague.com/schedule",
-    "notes": "Manually added by the site owner.",
-    "addedAt": "2026-08-01T00:20:00+00:00"
-  },
-  {
     "id": "sr-2027-01-16",
     "title": "Winter Jam",
     "promoter": "Sonoma Raceway",
@@ -1154,93 +1242,5 @@
     "url": "https://www.sonomaraceway.com/events/winter-jam/",
     "notes": "2-day event. Manually added by the site owner.",
     "addedAt": "2026-08-01T00:30:00+00:00"
-  },
-  {
-    "id": "de-2026-09-12",
-    "title": "THUNDERDRIFT",
-    "promoter": "Drift Evolution",
-    "start": "2026-09-12 08:00",
-    "end": "2026-09-13 17:00",
-    "location": "Affinity Circuit",
-    "url": "https://driftevolution.trackrabbit.com/",
-    "notes": "2-day event. Manually added by the site owner.",
-    "addedAt": "2026-08-01T00:35:00+00:00"
-  },
-  {
-    "id": "de-2026-10-10",
-    "title": "Pumpkin Bash",
-    "promoter": "Drift Evolution",
-    "start": "2026-10-10 08:00",
-    "end": "2026-10-11 17:00",
-    "location": "Affinity Circuit",
-    "url": "https://driftevolution.trackrabbit.com/",
-    "notes": "2-day event. Manually added by the site owner.",
-    "addedAt": "2026-08-01T00:40:00+00:00"
-  },
-  {
-    "id": "de-2026-11-14",
-    "title": "Cold Winter Nights",
-    "promoter": "Drift Evolution",
-    "start": "2026-11-14 08:00",
-    "end": "2026-11-15 17:00",
-    "location": "Affinity Circuit",
-    "url": "https://driftevolution.trackrabbit.com/",
-    "notes": "2-day event. Manually added by the site owner.",
-    "addedAt": "2026-08-01T00:45:00+00:00"
-  },
-  {
-    "id": "fmp-2026-08-01",
-    "title": "West Track Drift N Drags",
-    "promoter": "Firebird Motorsports Park",
-    "start": "2026-08-01 08:00",
-    "end": "2026-08-01 17:00",
-    "location": "West Track",
-    "url": "https://gofastent.com/drift-n-drag",
-    "notes": "Manually added by the site owner.",
-    "addedAt": "2026-08-01T00:50:00+00:00"
-  },
-  {
-    "id": "dnd-2026-08-22",
-    "title": "Drift N Drags",
-    "promoter": "Qlispe Raceway Park",
-    "start": "2026-08-22 08:00",
-    "end": "2026-08-22 17:00",
-    "location": "Airway Heights, WA",
-    "url": "https://gofastent.com/drift-n-drag",
-    "notes": "Manually added by the site owner.",
-    "addedAt": "2026-08-01T00:55:00+00:00"
-  },
-  {
-    "id": "fmp-2026-09-19",
-    "title": "Drift N Drags",
-    "promoter": "Firebird Motorsports Park",
-    "start": "2026-09-19 08:00",
-    "end": "2026-09-19 17:00",
-    "location": "Main Track",
-    "url": "https://gofastent.com/drift-n-drag",
-    "notes": "Manually added by the site owner.",
-    "addedAt": "2026-08-01T01:00:00+00:00"
-  },
-  {
-    "id": "fmp-2026-11-21",
-    "title": "Drift N Drags",
-    "promoter": "Firebird Motorsports Park",
-    "start": "2026-11-21 08:00",
-    "end": "2026-11-21 17:00",
-    "location": "Firebird Motorsports Park",
-    "url": "https://gofastent.com/drift-n-drag",
-    "notes": "Manually added by the site owner.",
-    "addedAt": "2026-08-01T01:05:00+00:00"
-  },
-  {
-    "id": "fmp-2026-12-19",
-    "title": "Winter Drift",
-    "promoter": "Firebird Motorsports Park",
-    "start": "2026-12-19 08:00",
-    "end": "2026-12-19 17:00",
-    "location": "Firebird Motorsports Park",
-    "url": "https://gofastent.com/event-schedule",
-    "notes": "Manually added by the site owner.",
-    "addedAt": "2026-08-01T01:10:00+00:00"
   }
 ]
