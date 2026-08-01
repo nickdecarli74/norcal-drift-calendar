@@ -1143,5 +1143,49 @@
     "url": "https://www.goodluckleague.com/schedule",
     "notes": "Manually added by the site owner.",
     "addedAt": "2026-08-01T00:20:00+00:00"
+  },
+  {
+    "id": "sr-2027-01-16",
+    "title": "Winter Jam",
+    "promoter": "Sonoma Raceway",
+    "start": "2027-01-16 08:00",
+    "end": "2027-01-17 17:00",
+    "location": "Sonoma Raceway",
+    "url": "https://www.sonomaraceway.com/events/winter-jam/",
+    "notes": "2-day event. Manually added by the site owner.",
+    "addedAt": "2026-08-01T00:30:00+00:00"
+  },
+  {
+    "id": "de-2026-09-12",
+    "title": "THUNDERDRIFT",
+    "promoter": "Drift Evolution",
+    "start": "2026-09-12 08:00",
+    "end": "2026-09-13 17:00",
+    "location": "Affinity Circuit",
+    "url": "https://driftevolution.trackrabbit.com/",
+    "notes": "2-day event. Manually added by the site owner.",
+    "addedAt": "2026-08-01T00:35:00+00:00"
+  },
+  {
+    "id": "de-2026-10-10",
+    "title": "Pumpkin Bash",
+    "promoter": "Drift Evolution",
+    "start": "2026-10-10 08:00",
+    "end": "2026-10-11 17:00",
+    "location": "Affinity Circuit",
+    "url": "https://driftevolution.trackrabbit.com/",
+    "notes": "2-day event. Manually added by the site owner.",
+    "addedAt": "2026-08-01T00:40:00+00:00"
+  },
+  {
+    "id": "de-2026-11-14",
+    "title": "Cold Winter Nights",
+    "promoter": "Drift Evolution",
+    "start": "2026-11-14 08:00",
+    "end": "2026-11-15 17:00",
+    "location": "Affinity Circuit",
+    "url": "https://driftevolution.trackrabbit.com/",
+    "notes": "2-day event. Manually added by the site owner.",
+    "addedAt": "2026-08-01T00:45:00+00:00"
   }
 ]
