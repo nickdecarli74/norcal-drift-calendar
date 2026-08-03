@@ -1244,5 +1244,16 @@
     "url": "https://www.sonomaraceway.com/events/winter-jam/",
     "notes": "2-day event. Manually added by the site owner.",
     "addedAt": "2026-08-01T00:30:00+00:00"
+  },
+  {
+    "id": "ddsl-2026-08-15",
+    "title": "Desert Drift Street League Round Two",
+    "promoter": "Desert Drift Street League",
+    "start": "2026-08-15 18:00",
+    "end": "2026-08-15 23:59",
+    "location": "Radford Racing School",
+    "url": "https://www.desertdriftstreetleague.com",
+    "notes": "Manually added by the site owner from a flyer image. Night event, 6PM-12AM.",
+    "addedAt": "2026-08-03T00:05:00+00:00"
   }
 ]

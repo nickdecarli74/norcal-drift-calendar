@@ -106,7 +106,7 @@ const TRACKS = [
     location: "Chandler, AZ",
     lat: 33.2689,
     lng: -111.9661,
-    search: ["firebird"]
+    search: ["firebird", "radford"]
   },
   {
     name: "Redding Motorsports Park",
