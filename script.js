@@ -109,6 +109,14 @@ const TRACKS = [
     search: ["firebird", "radford"]
   },
   {
+    name: "Musselman Honda Circuit",
+    short: "MHC AZ",
+    location: "Tucson, AZ",
+    lat: 32.0855,
+    lng: -110.789,
+    search: ["musselman", "mhc"]
+  },
+  {
     name: "Redding Motorsports Park",
     short: "Redding",
     location: "Redding, CA",
@@ -148,7 +156,8 @@ const PROMOTER_ABBREV = {
   "Fast In Fast Out": "FIFO",
   "Drift Central": "DC",
   "Outlaw Drift": "OD",
-  "GoodLuckLeague": "GLL"
+  "GoodLuckLeague": "GLL",
+  "Musselman Honda Circuit": "MHC AZ"
 };
 
 function pillLabel(event){
