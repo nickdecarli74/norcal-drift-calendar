@@ -693,13 +693,13 @@ events:
   addedAt: '2026-07-27T00:00:00+00:00'
   locked: true
   title: Slide City 16
-  promoter: PowerSlidePat
+  promoter: Slide City
   calendarLabel: Slide City 16
   start: 2026-10-03 14:00
   end: 2026-10-04 00:00
   location: Apple Valley Speedway - Main Track
   url: https://www.instagram.com/slidecity_events/
-  notes: Manually added by the site owner. Hosted by PowerSlidePat at Apple Valley
+  notes: Manually added by the site owner. Hosted by Slide City at Apple Valley
     Speedway's Main Track.
 - id: av-2026-10-04
   addedAt: '2026-07-31T14:15:00+00:00'

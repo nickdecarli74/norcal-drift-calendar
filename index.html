@@ -116,6 +116,12 @@
   </div>
 
   <div id="calendar" class="section">
+    <div class="filterbar" id="calendar-filterbar">
+      <span class="fb-label">FILTER</span>
+      <button class="fb-clearall" id="calendar-clearall">✕ Clear all filters</button>
+    </div>
+    <div class="chiprow" id="calendar-chiprow"></div>
+
     <div class="calendar-head">
       <button class="cal-btn" onclick="changeMonth(-1)">‹ PREV</button>
       <div id="calendar-title" class="calendar-title"></div>
@@ -148,6 +154,13 @@
     </div>
 
     <div class="browse-label">BROWSE BY EVENT</div>
+
+    <div class="filterbar" id="media-filterbar">
+      <span class="fb-label">FILTER</span>
+      <button class="fb-clearall" id="media-clearall">✕ Clear all filters</button>
+    </div>
+    <div class="chiprow" id="media-chiprow"></div>
+
     <div id="media-grid" class="media-grid"></div>
   </div>
 </section>
@@ -192,8 +205,8 @@
 </footer>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="media.js?v=5"></script>
-<script src="script.js?v=10"></script>
+<script src="media.js?v=6"></script>
+<script src="script.js?v=11"></script>
 
 <script>
   fetch("status.json")

@@ -85,6 +85,10 @@ function mediaWindowOpen(event){
 
 /* ---- Homepage: MEDIA section (event grid) ---- */
 
+let mediaCards = [];
+const mediaFilterState = {promoter:new Set(), track:new Set(), month:new Set(), media:new Set()};
+let mediaFilterDefs = [];
+
 function renderMediaSection(events, mediaData){
   const grid = document.getElementById("media-grid");
   if(!grid) return;
@@ -105,10 +109,20 @@ function renderMediaSection(events, mediaData){
   const cards = [...withSubmissions, ...openForSubmission]
     .sort((a,b) => new Date(b.event.start.replace(" ","T")) - new Date(a.event.start.replace(" ","T")));
 
+  mediaCards = cards;
+
+  const bar = document.getElementById("media-filterbar");
+  const chipRow = document.getElementById("media-chiprow");
+
   if(!cards.length){
     grid.innerHTML = `<div class="media-empty">No event galleries posted yet. Check back after the next event.</div>`;
+    if(bar) bar.style.display = "none";
+    if(chipRow) chipRow.style.display = "none";
     return;
   }
+
+  if(bar) bar.style.display = "";
+  if(chipRow) chipRow.style.display = "";
 
   grid.innerHTML = cards.map(({meta, event}) => {
     const p = formatDateParts(event.start);
@@ -119,7 +133,7 @@ function renderMediaSection(events, mediaData){
     const linkLabel = count ? "VIEW GALLERY ›" : "SUBMIT YOUR LINK ›";
 
     return `
-      <a class="media-card" href="media.html?event=${encodeURIComponent(event.id)}">
+      <a class="media-card" data-id="${event.id}" href="media.html?event=${encodeURIComponent(event.id)}">
         <div class="media-card-date">${p.full}</div>
         <div class="media-card-title">${event.title}</div>
         <div class="media-card-meta">
@@ -130,6 +144,130 @@ function renderMediaSection(events, mediaData){
       </a>
     `;
   }).join("");
+
+  buildMediaFilterDefs();
+  renderMediaFilterBar();
+  applyMediaFilters();
+}
+
+function buildMediaFilterDefs(){
+  const trackOf = e => { const t = findTrackForEvent(e); return t ? t.name : null; };
+
+  const promoterCounts = {};
+  const trackCounts = {};
+  const monthCounts = {};
+  const mediaTypeCounts = {photo:0, video:0, driver:0};
+
+  mediaCards.forEach(({meta, event}) => {
+    promoterCounts[event.promoter] = (promoterCounts[event.promoter]||0)+1;
+    const t = trackOf(event);
+    if(t) trackCounts[t] = (trackCounts[t]||0)+1;
+    const m = event.start.slice(0,7);
+    monthCounts[m] = (monthCounts[m]||0)+1;
+    if(meta.submissions.some(s=>s.role==="photo"||s.role==="both")) mediaTypeCounts.photo++;
+    if(meta.submissions.some(s=>s.role==="video"||s.role==="both")) mediaTypeCounts.video++;
+    if(meta.submissions.some(s=>s.role==="driver")) mediaTypeCounts.driver++;
+  });
+
+  mediaFilterDefs = [
+    {
+      key:"promoter", label:"Promoter", searchable:true, multi:true,
+      options: [...new Set(mediaCards.map(c=>c.event.promoter))]
+        .filter(v => !VENUE_PROMOTERS.has(v))
+        .sort()
+        .map(v=>({value:v, label:v, n:promoterCounts[v]}))
+    },
+    {
+      key:"track", label:"Track", searchable:true, multi:true,
+      options: [...new Set(mediaCards.map(c=>trackOf(c.event)).filter(Boolean))]
+        .sort()
+        .map(v=>({value:v, label:v, n:trackCounts[v]}))
+    },
+    {
+      key:"month", label:"Month", searchable:false, multi:true,
+      options: [...new Set(mediaCards.map(c=>c.event.start.slice(0,7)))]
+        .sort()
+        .map(v=>({value:v, label:monthLabel(v), n:monthCounts[v]}))
+    },
+    {
+      key:"media", label:"Media Type", searchable:false, multi:true,
+      options: [
+        {value:"photo", label:"Photo", n:mediaTypeCounts.photo},
+        {value:"video", label:"Video", n:mediaTypeCounts.video},
+        {value:"driver", label:"Driver Clips", n:mediaTypeCounts.driver}
+      ]
+    }
+  ];
+}
+
+function mediaCardMatches({meta, event}){
+  if(mediaFilterState.promoter.size && !mediaFilterState.promoter.has(event.promoter)) return false;
+  if(mediaFilterState.track.size){
+    const t = findTrackForEvent(event);
+    if(!t || !mediaFilterState.track.has(t.name)) return false;
+  }
+  if(mediaFilterState.month.size && !mediaFilterState.month.has(event.start.slice(0,7))) return false;
+  if(mediaFilterState.media.size){
+    const ok = [...mediaFilterState.media].some(type => {
+      if(type === "driver") return meta.submissions.some(s=>s.role==="driver");
+      return meta.submissions.some(s=>s.role===type || s.role==="both");
+    });
+    if(!ok) return false;
+  }
+  return true;
+}
+
+function applyMediaFilters(){
+  const grid = document.getElementById("media-grid");
+  if(!grid) return;
+
+  let shown = 0;
+  grid.querySelectorAll(".media-card").forEach(card => {
+    const c = mediaCards.find(x => x.event.id === card.dataset.id);
+    const match = c ? mediaCardMatches(c) : true;
+    card.classList.toggle("filtered-out", !match);
+    if(match) shown++;
+  });
+
+  let emptyNote = document.getElementById("media-filter-empty");
+  const anyFilterActive = mediaFilterDefs.some(f => mediaFilterState[f.key].size);
+
+  if(shown === 0 && anyFilterActive){
+    if(!emptyNote){
+      emptyNote = document.createElement("div");
+      emptyNote.id = "media-filter-empty";
+      emptyNote.className = "filter-empty-note";
+      grid.insertAdjacentElement("afterend", emptyNote);
+    }
+    emptyNote.textContent = "No galleries match this combination — try clearing a filter.";
+    emptyNote.style.display = "";
+  } else if(emptyNote){
+    emptyNote.style.display = "none";
+  }
+}
+
+function onMediaFilterChange(){
+  renderMediaFilterBar();
+  applyMediaFilters();
+}
+
+function renderMediaFilterBar(){
+  const bar = document.getElementById("media-filterbar");
+  const clearAll = document.getElementById("media-clearall");
+  const chipRow = document.getElementById("media-chiprow");
+  if(!bar || !clearAll || !chipRow) return;
+
+  renderFilterBar(bar, clearAll, mediaFilterDefs, mediaFilterState, onMediaFilterChange);
+  renderFilterChips(chipRow, mediaFilterDefs, mediaFilterState, onMediaFilterChange);
+
+  if(!clearAll.dataset.wired){
+    clearAll.dataset.wired = "1";
+    clearAll.addEventListener("click", () => {
+      mediaFilterDefs.forEach(f => mediaFilterState[f.key].clear());
+      renderMediaFilterBar();
+      applyMediaFilters();
+    });
+  }
 }
 
 /* ---- Homepage: recent submissions feed ---- */
