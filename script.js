@@ -107,6 +107,14 @@ const TRACKS = [
     lat: 33.2689,
     lng: -111.9661,
     search: ["firebird"]
+  },
+  {
+    name: "Redding Motorsports Park",
+    short: "Redding",
+    location: "Redding, CA",
+    lat: 40.5138,
+    lng: -122.2903,
+    search: ["redding"]
   }
 ];
 
