@@ -4,8 +4,10 @@ import requests
 from bs4 import BeautifulSoup
 
 URL = "https://driftcentral.com/2026-schedule"
+REGISTER_URL = "https://driftcentral.com/registration"
 YEAR = 2026
 LOCATION = "Salinas Municipal Airport"
+TITLE = "Drift Central"
 
 MONTHS = {
     "jan": 1, "feb": 2, "mar": 3, "apr": 4,
@@ -30,16 +32,6 @@ def parse_date_range(date_text):
     month = MONTHS[month_name]
 
     return [(month, day) for day in range(start_day, end_day + 1)]
-
-def clean_title(title, day_index, total_days):
-    title = title.strip()
-
-    if total_days > 1:
-        if day_index == 1:
-            return title
-        return f"{title} - Day {day_index}"
-
-    return title
 
 def get_events():
     response = requests.get(URL, timeout=20)
@@ -66,12 +58,10 @@ def get_events():
 
     for match in pattern.finditer(text):
         date_text = match.group(1)
-        title = " ".join(match.group(2).split())
 
         dates = parse_date_range(date_text)
-        total_days = len(dates)
 
-        for index, (month, day) in enumerate(dates, start=1):
+        for month, day in dates:
             event_id = make_event_id(month, day)
 
             if event_id in seen_ids:
@@ -81,12 +71,12 @@ def get_events():
 
             events.append({
                 "id": event_id,
-                "title": clean_title(title, index, total_days),
+                "title": TITLE,
                 "promoter": "Drift Central",
                 "start": f"{YEAR}-{month:02d}-{day:02d} 07:00",
                 "end": f"{YEAR}-{month:02d}-{day:02d} 17:00",
                 "location": LOCATION,
-                "url": URL,
+                "url": REGISTER_URL,
                 "notes": "Auto-imported from Drift Central schedule."
             })
 

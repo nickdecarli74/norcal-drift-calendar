@@ -45,23 +45,23 @@
   },
   {
     "id": "dc-2026-03-07",
-    "title": "2 Drift Event",
+    "title": "Drift Central",
     "promoter": "Drift Central",
     "start": "2026-03-07 07:00",
     "end": "2026-03-07 17:00",
     "location": "Salinas Municipal Airport",
-    "url": "https://driftcentral.com/2026-schedule",
+    "url": "https://driftcentral.com/registration",
     "notes": "Auto-imported from Drift Central schedule.",
     "addedAt": "2026-07-08T00:00:00+00:00"
   },
   {
     "id": "dc-2026-03-08",
-    "title": "2 Drift Event - Day 2",
+    "title": "Drift Central",
     "promoter": "Drift Central",
     "start": "2026-03-08 07:00",
     "end": "2026-03-08 17:00",
     "location": "Salinas Municipal Airport",
-    "url": "https://driftcentral.com/2026-schedule",
+    "url": "https://driftcentral.com/registration",
     "notes": "Auto-imported from Drift Central schedule.",
     "addedAt": "2026-07-08T00:00:00+00:00"
   },
@@ -89,23 +89,23 @@
   },
   {
     "id": "dc-2026-04-04",
-    "title": "2 Drift Event",
+    "title": "Drift Central",
     "promoter": "Drift Central",
     "start": "2026-04-04 07:00",
     "end": "2026-04-04 17:00",
     "location": "Salinas Municipal Airport",
-    "url": "https://driftcentral.com/2026-schedule",
+    "url": "https://driftcentral.com/registration",
     "notes": "Auto-imported from Drift Central schedule.",
     "addedAt": "2026-07-08T00:00:00+00:00"
   },
   {
     "id": "dc-2026-04-05",
-    "title": "2 Drift Event - Day 2",
+    "title": "Drift Central",
     "promoter": "Drift Central",
     "start": "2026-04-05 07:00",
     "end": "2026-04-05 17:00",
     "location": "Salinas Municipal Airport",
-    "url": "https://driftcentral.com/2026-schedule",
+    "url": "https://driftcentral.com/registration",
     "notes": "Auto-imported from Drift Central schedule.",
     "addedAt": "2026-07-08T00:00:00+00:00"
   },
@@ -166,23 +166,23 @@
   },
   {
     "id": "dc-2026-06-06",
-    "title": "2 Drift Event",
+    "title": "Drift Central",
     "promoter": "Drift Central",
     "start": "2026-06-06 07:00",
     "end": "2026-06-06 17:00",
     "location": "Salinas Municipal Airport",
-    "url": "https://driftcentral.com/2026-schedule",
+    "url": "https://driftcentral.com/registration",
     "notes": "Auto-imported from Drift Central schedule.",
     "addedAt": "2026-07-08T00:00:00+00:00"
   },
   {
     "id": "dc-2026-06-07",
-    "title": "2 Drift Event - Day 2",
+    "title": "Drift Central",
     "promoter": "Drift Central",
     "start": "2026-06-07 07:00",
     "end": "2026-06-07 17:00",
     "location": "Salinas Municipal Airport",
-    "url": "https://driftcentral.com/2026-schedule",
+    "url": "https://driftcentral.com/registration",
     "notes": "Auto-imported from Drift Central schedule.",
     "addedAt": "2026-07-08T00:00:00+00:00"
   },
@@ -243,12 +243,12 @@
   },
   {
     "id": "dc-2026-07-05",
-    "title": "Drift Event",
+    "title": "Drift Central",
     "promoter": "Drift Central",
     "start": "2026-07-05 07:00",
     "end": "2026-07-05 17:00",
     "location": "Salinas Municipal Airport",
-    "url": "https://driftcentral.com/2026-schedule",
+    "url": "https://driftcentral.com/registration",
     "notes": "Auto-imported from Drift Central schedule.",
     "addedAt": "2026-07-08T00:00:00+00:00"
   },
@@ -441,12 +441,12 @@
   },
   {
     "id": "dc-2026-08-08",
-    "title": "2 Day Drift Event",
+    "title": "Drift Central",
     "promoter": "Drift Central",
     "start": "2026-08-08 07:00",
     "end": "2026-08-08 17:00",
     "location": "Salinas Municipal Airport",
-    "url": "https://driftcentral.com/2026-schedule",
+    "url": "https://driftcentral.com/registration",
     "notes": "Auto-imported from Drift Central schedule.",
     "addedAt": "2026-07-08T00:00:00+00:00"
   },
@@ -485,12 +485,12 @@
   },
   {
     "id": "dc-2026-08-09",
-    "title": "2 Day Drift Event - Day 2",
+    "title": "Drift Central",
     "promoter": "Drift Central",
     "start": "2026-08-09 07:00",
     "end": "2026-08-09 17:00",
     "location": "Salinas Municipal Airport",
-    "url": "https://driftcentral.com/2026-schedule",
+    "url": "https://driftcentral.com/registration",
     "notes": "Auto-imported from Drift Central schedule.",
     "addedAt": "2026-07-08T00:00:00+00:00"
   },
@@ -1375,5 +1375,49 @@
     "url": "https://mhcircuit.com/event/open-drift-day-12/",
     "notes": "Auto-imported from Musselman Honda Circuit's calendar.",
     "addedAt": "2026-08-03T01:05:00+00:00"
+  },
+  {
+    "id": "dc-2026-10-10",
+    "title": "Drift Central",
+    "promoter": "Drift Central",
+    "start": "2026-10-10 07:00",
+    "end": "2026-10-10 17:00",
+    "location": "Salinas Municipal Airport",
+    "url": "https://driftcentral.com/registration",
+    "notes": "Auto-imported from Drift Central schedule.",
+    "addedAt": "2026-08-04T00:00:00+00:00"
+  },
+  {
+    "id": "dc-2026-10-11",
+    "title": "Drift Central",
+    "promoter": "Drift Central",
+    "start": "2026-10-11 07:00",
+    "end": "2026-10-11 17:00",
+    "location": "Salinas Municipal Airport",
+    "url": "https://driftcentral.com/registration",
+    "notes": "Auto-imported from Drift Central schedule.",
+    "addedAt": "2026-08-04T00:05:00+00:00"
+  },
+  {
+    "id": "dc-2026-11-28",
+    "title": "Drift Central",
+    "promoter": "Drift Central",
+    "start": "2026-11-28 07:00",
+    "end": "2026-11-28 17:00",
+    "location": "Salinas Municipal Airport",
+    "url": "https://driftcentral.com/registration",
+    "notes": "Auto-imported from Drift Central schedule.",
+    "addedAt": "2026-08-04T00:10:00+00:00"
+  },
+  {
+    "id": "dc-2026-11-29",
+    "title": "Drift Central",
+    "promoter": "Drift Central",
+    "start": "2026-11-29 07:00",
+    "end": "2026-11-29 17:00",
+    "location": "Salinas Municipal Airport",
+    "url": "https://driftcentral.com/registration",
+    "notes": "Auto-imported from Drift Central schedule.",
+    "addedAt": "2026-08-04T00:15:00+00:00"
   }
 ]
