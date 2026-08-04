@@ -62,23 +62,13 @@ def get_events():
         },
         {
             "id": "av-2026-08-08",
-            "title": "Endless Summer Nights 6",
+            "title": "Ultra Summer Nights",
             "promoter": "Apple Valley Speedway",
             "start": "2026-08-08 08:00",
-            "end": "2026-08-08 17:00",
-            "location": "Main & Skid",
-            "url": "https://applevalleyspeedway.com/calendar/",
-            "notes": "Manually verified from Apple Valley Speedway's calendar."
-        },
-        {
-            "id": "av-2026-08-09",
-            "title": "Ultra Bash",
-            "promoter": "Apple Valley Speedway",
-            "start": "2026-08-09 08:00",
             "end": "2026-08-09 17:00",
             "location": "Main Track",
             "url": "https://applevalleyspeedway.com/calendar/",
-            "notes": "Manually verified from Apple Valley Speedway's calendar."
+            "notes": "2-day event. AVS's calendar still lists this as two separate listings (Endless Summer Nights 6 / Ultra Bash) - merged here since it's one event."
         },
         {
             "id": "av-2026-08-21",
