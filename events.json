@@ -672,6 +672,17 @@
     "addedAt": "2026-07-08T00:00:00+00:00"
   },
   {
+    "id": "mhc-2026-09-05",
+    "title": "Drift Night",
+    "promoter": "Musselman Honda Circuit",
+    "start": "2026-09-05 16:00",
+    "end": "2026-09-05 22:00",
+    "location": "Musselman Honda Circuit",
+    "url": "https://mhcircuit.com/event/drift-night-14/",
+    "notes": "Auto-imported from Musselman Honda Circuit's calendar.",
+    "addedAt": "2026-08-03T00:10:00+00:00"
+  },
+  {
     "id": "av-2026-09-06",
     "title": "Family & Friends Practice Event",
     "promoter": "Apple Valley Speedway",
@@ -815,6 +826,17 @@
     "addedAt": "2026-07-08T00:00:00+00:00"
   },
   {
+    "id": "mhc-2026-10-03",
+    "title": "DDSL Drift Clinic and Tandem Practice",
+    "promoter": "Musselman Honda Circuit",
+    "start": "2026-10-03 10:00",
+    "end": "2026-10-03 16:00",
+    "location": "Musselman Honda Circuit",
+    "url": "https://mhcircuit.com/event/ddsl-drift-clinic-tandem-practice-2026-10-03/",
+    "notes": "Auto-imported from Musselman Honda Circuit's calendar.",
+    "addedAt": "2026-08-03T00:15:00+00:00"
+  },
+  {
     "id": "av-2026-10-03",
     "title": "Slide City 16",
     "promoter": "Slide City",
@@ -926,6 +948,17 @@
     "addedAt": "2026-07-08T00:00:00+00:00"
   },
   {
+    "id": "mhc-2026-10-23",
+    "title": "Spooky Drift",
+    "promoter": "Musselman Honda Circuit",
+    "start": "2026-10-23 17:00",
+    "end": "2026-10-23 22:00",
+    "location": "Musselman Honda Circuit",
+    "url": "https://mhcircuit.com/event/spooky-drift-7/",
+    "notes": "Auto-imported from Musselman Honda Circuit's calendar.",
+    "addedAt": "2026-08-03T00:20:00+00:00"
+  },
+  {
     "id": "sd-2026-10-24",
     "title": "SuperD Cup",
     "promoter": "SuperD",
@@ -937,6 +970,17 @@
     "addedAt": "2026-07-08T00:00:00+00:00"
   },
   {
+    "id": "mhc-2026-10-24",
+    "title": "Spooky Drift 6",
+    "promoter": "Musselman Honda Circuit",
+    "start": "2026-10-24 17:00",
+    "end": "2026-10-24 22:00",
+    "location": "Musselman Honda Circuit",
+    "url": "https://mhcircuit.com/event/spooky-drift-8/",
+    "notes": "Auto-imported from Musselman Honda Circuit's calendar.",
+    "addedAt": "2026-08-03T00:25:00+00:00"
+  },
+  {
     "id": "sd-2026-10-25",
     "title": "SuperD Cup - Day 2",
     "promoter": "SuperD",
@@ -946,6 +990,17 @@
     "url": "https://super-d.net/pages/schedule",
     "notes": "SuperD schedule manually verified from super-d.net.",
     "addedAt": "2026-07-08T00:00:00+00:00"
+  },
+  {
+    "id": "mhc-2026-10-25",
+    "title": "Spooky Drift 6",
+    "promoter": "Musselman Honda Circuit",
+    "start": "2026-10-25 17:00",
+    "end": "2026-10-25 22:00",
+    "location": "Musselman Honda Circuit",
+    "url": "https://mhcircuit.com/event/spooky-drift-9/",
+    "notes": "Auto-imported from Musselman Honda Circuit's calendar.",
+    "addedAt": "2026-08-03T00:30:00+00:00"
   },
   {
     "id": "av-2026-10-31",
@@ -970,6 +1025,17 @@
     "addedAt": "2026-07-31T14:40:00+00:00"
   },
   {
+    "id": "mhc-2026-11-01",
+    "title": "Open Drift Day",
+    "promoter": "Musselman Honda Circuit",
+    "start": "2026-11-01 10:00",
+    "end": "2026-11-01 17:00",
+    "location": "Musselman Honda Circuit",
+    "url": "https://mhcircuit.com/event/open-drift-day-7/",
+    "notes": "Auto-imported from Musselman Honda Circuit's calendar.",
+    "addedAt": "2026-08-03T00:35:00+00:00"
+  },
+  {
     "id": "av-2026-11-07",
     "title": "DriftGala",
     "promoter": "Apple Valley Speedway",
@@ -979,6 +1045,17 @@
     "url": "https://applevalleyspeedway.com/calendar/",
     "notes": "Manually verified from Apple Valley Speedway's calendar.",
     "addedAt": "2026-07-31T14:45:00+00:00"
+  },
+  {
+    "id": "mhc-2026-11-07",
+    "title": "Desert Drift Street League",
+    "promoter": "Musselman Honda Circuit",
+    "start": "2026-11-07 09:00",
+    "end": "2026-11-07 16:00",
+    "location": "Musselman Honda Circuit",
+    "url": "https://mhcircuit.com/event/desert-drift-street-league-6/",
+    "notes": "Auto-imported from Musselman Honda Circuit's calendar.",
+    "addedAt": "2026-08-03T00:40:00+00:00"
   },
   {
     "id": "av-2026-11-13",
@@ -1135,6 +1212,17 @@
     "addedAt": "2026-07-31T15:05:00+00:00"
   },
   {
+    "id": "mhc-2026-12-06",
+    "title": "Open Drift Day",
+    "promoter": "Musselman Honda Circuit",
+    "start": "2026-12-06 10:00",
+    "end": "2026-12-06 17:00",
+    "location": "Musselman Honda Circuit",
+    "url": "https://mhcircuit.com/event/open-drift-day-8/",
+    "notes": "Auto-imported from Musselman Honda Circuit's calendar.",
+    "addedAt": "2026-08-03T00:45:00+00:00"
+  },
+  {
     "id": "av-2026-12-12",
     "title": "Charity Drift 3",
     "promoter": "Apple Valley Speedway",
@@ -1234,6 +1322,17 @@
     "addedAt": "2026-07-31T15:25:00+00:00"
   },
   {
+    "id": "mhc-2027-01-03",
+    "title": "Open Drift Day",
+    "promoter": "Musselman Honda Circuit",
+    "start": "2027-01-03 10:00",
+    "end": "2027-01-03 17:00",
+    "location": "Musselman Honda Circuit",
+    "url": "https://mhcircuit.com/event/open-drift-day-9/",
+    "notes": "Auto-imported from Musselman Honda Circuit's calendar.",
+    "addedAt": "2026-08-03T00:50:00+00:00"
+  },
+  {
     "id": "av-2027-01-16",
     "title": "Pacific Drift Event",
     "promoter": "Apple Valley Speedway",
@@ -1254,105 +1353,6 @@
     "url": "https://www.sonomaraceway.com/events/winter-jam/",
     "notes": "2-day event. Manually added by the site owner.",
     "addedAt": "2026-08-01T00:30:00+00:00"
-  },
-  {
-    "id": "mhc-2026-09-05",
-    "title": "Drift Night",
-    "promoter": "Musselman Honda Circuit",
-    "start": "2026-09-05 16:00",
-    "end": "2026-09-05 22:00",
-    "location": "Musselman Honda Circuit",
-    "url": "https://mhcircuit.com/event/drift-night-14/",
-    "notes": "Auto-imported from Musselman Honda Circuit's calendar.",
-    "addedAt": "2026-08-03T00:10:00+00:00"
-  },
-  {
-    "id": "mhc-2026-10-03",
-    "title": "DDSL Drift Clinic and Tandem Practice",
-    "promoter": "Musselman Honda Circuit",
-    "start": "2026-10-03 10:00",
-    "end": "2026-10-03 16:00",
-    "location": "Musselman Honda Circuit",
-    "url": "https://mhcircuit.com/event/ddsl-drift-clinic-tandem-practice-2026-10-03/",
-    "notes": "Auto-imported from Musselman Honda Circuit's calendar.",
-    "addedAt": "2026-08-03T00:15:00+00:00"
-  },
-  {
-    "id": "mhc-2026-10-23",
-    "title": "Spooky Drift",
-    "promoter": "Musselman Honda Circuit",
-    "start": "2026-10-23 17:00",
-    "end": "2026-10-23 22:00",
-    "location": "Musselman Honda Circuit",
-    "url": "https://mhcircuit.com/event/spooky-drift-7/",
-    "notes": "Auto-imported from Musselman Honda Circuit's calendar.",
-    "addedAt": "2026-08-03T00:20:00+00:00"
-  },
-  {
-    "id": "mhc-2026-10-24",
-    "title": "Spooky Drift 6",
-    "promoter": "Musselman Honda Circuit",
-    "start": "2026-10-24 17:00",
-    "end": "2026-10-24 22:00",
-    "location": "Musselman Honda Circuit",
-    "url": "https://mhcircuit.com/event/spooky-drift-8/",
-    "notes": "Auto-imported from Musselman Honda Circuit's calendar.",
-    "addedAt": "2026-08-03T00:25:00+00:00"
-  },
-  {
-    "id": "mhc-2026-10-25",
-    "title": "Spooky Drift 6",
-    "promoter": "Musselman Honda Circuit",
-    "start": "2026-10-25 17:00",
-    "end": "2026-10-25 22:00",
-    "location": "Musselman Honda Circuit",
-    "url": "https://mhcircuit.com/event/spooky-drift-9/",
-    "notes": "Auto-imported from Musselman Honda Circuit's calendar.",
-    "addedAt": "2026-08-03T00:30:00+00:00"
-  },
-  {
-    "id": "mhc-2026-11-01",
-    "title": "Open Drift Day",
-    "promoter": "Musselman Honda Circuit",
-    "start": "2026-11-01 10:00",
-    "end": "2026-11-01 17:00",
-    "location": "Musselman Honda Circuit",
-    "url": "https://mhcircuit.com/event/open-drift-day-7/",
-    "notes": "Auto-imported from Musselman Honda Circuit's calendar.",
-    "addedAt": "2026-08-03T00:35:00+00:00"
-  },
-  {
-    "id": "mhc-2026-11-07",
-    "title": "Desert Drift Street League",
-    "promoter": "Musselman Honda Circuit",
-    "start": "2026-11-07 09:00",
-    "end": "2026-11-07 16:00",
-    "location": "Musselman Honda Circuit",
-    "url": "https://mhcircuit.com/event/desert-drift-street-league-6/",
-    "notes": "Auto-imported from Musselman Honda Circuit's calendar.",
-    "addedAt": "2026-08-03T00:40:00+00:00"
-  },
-  {
-    "id": "mhc-2026-12-06",
-    "title": "Open Drift Day",
-    "promoter": "Musselman Honda Circuit",
-    "start": "2026-12-06 10:00",
-    "end": "2026-12-06 17:00",
-    "location": "Musselman Honda Circuit",
-    "url": "https://mhcircuit.com/event/open-drift-day-8/",
-    "notes": "Auto-imported from Musselman Honda Circuit's calendar.",
-    "addedAt": "2026-08-03T00:45:00+00:00"
-  },
-  {
-    "id": "mhc-2027-01-03",
-    "title": "Open Drift Day",
-    "promoter": "Musselman Honda Circuit",
-    "start": "2027-01-03 10:00",
-    "end": "2027-01-03 17:00",
-    "location": "Musselman Honda Circuit",
-    "url": "https://mhcircuit.com/event/open-drift-day-9/",
-    "notes": "Auto-imported from Musselman Honda Circuit's calendar.",
-    "addedAt": "2026-08-03T00:50:00+00:00"
   },
   {
     "id": "mhc-2027-02-07",
