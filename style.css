@@ -85,6 +85,12 @@ body{
   width:100%;
 }
 
+.nav-social-group{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+
 .nav-social{
   display:flex;
   align-items:center;
