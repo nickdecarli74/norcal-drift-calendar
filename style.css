@@ -85,6 +85,32 @@ body{
   width:100%;
 }
 
+.nav-social{
+  display:flex;
+  align-items:center;
+  color:white;
+  padding-bottom:0!important;
+}
+
+.nav-social svg{
+  width:20px;
+  height:20px;
+  transition:.25s;
+}
+
+.nav-social:hover{
+  color:#e10600;
+  transform:translateY(-2px);
+}
+
+.nav-social:hover svg{
+  filter:drop-shadow(0 0 8px rgba(225,6,0,.9));
+}
+
+.nav-social::after{
+  display:none;
+}
+
 /* =========================================
    HERO LOGO AREA
    ========================================= */
