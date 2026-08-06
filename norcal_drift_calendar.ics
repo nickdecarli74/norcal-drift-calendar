@@ -2,220 +2,67 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
-DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main Track\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\n2-day event\, Friday-Saturday\, 8:00 AM-6:00 PM both days. Manually verified from Apple Valley Speedway's calendar.
-DTEND:20260725T180000Z
-LOCATION:Main Track
-DTSTART:20260724T080000Z
-SUMMARY:Apple Valley Speedway - Ultimate Drifting Challenge Round 3
-UID:a8591708-e0c8-4763-8159-c17e86766215@a859.org
-URL:https://applevalleyspeedway.com/calendar/
+DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://bayareadrifting.com/schedule\n\nSaturday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.
+DTEND:20260214T170000Z
+LOCATION:Thunderhill Raceway Park
+DTSTART:20260214T080000Z
+SUMMARY:Bay Area Drifting - Thunderhill Drift School
+UID:1004cb26-3e72-4660-93a1-b36577247a56@1004.org
+URL:https://bayareadrifting.com/schedule
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Promoter: DLUX\nLocation: Affinity Circuit\nRegistration / Info: https://www.instagram.com/p/DYU4Oi4lI2i/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==\n\nManually added by the site owner. Invite-only\; registration link points to the Instagram announcement post.
-DTEND:20260816T170000Z
-LOCATION:Affinity Circuit
-DTSTART:20260815T080000Z
-SUMMARY:DLUX - DLUX Invitational
-UID:2a012df0-0d3a-4b81-b014-2eb0840be6ba@2a01.org
-URL:https://www.instagram.com/p/DYU4Oi4lI2i/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main & Skid\nRegistration / Info: http://flavorexpress.co/\n\nManually verified from Apple Valley Speedway's calendar.
+DESCRIPTION:Promoter: DriftMaybe\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://www.instagram.com/p/DSyh94eFBve/\n\nManually added by the site owner.
 DTEND:20261212T170000Z
-LOCATION:Main & Skid
+LOCATION:Thunderhill Raceway Park
 DTSTART:20261212T080000Z
-SUMMARY:Apple Valley Speedway - Charity Drift 3
-UID:948a35f7-90a9-4a8b-b8e2-3ef37d721ac2@948a.org
-URL:http://flavorexpress.co/
+SUMMARY:DriftMaybe - DriftMaybe
+UID:7d0ca063-8e4e-4f88-9d96-05f2cdbbbd32@7d0c.org
+URL:https://www.instagram.com/p/DSyh94eFBve/
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/registration\n\nAuto-imported from Drift Central schedule.
-DTEND:20260606T170000Z
-LOCATION:Salinas Municipal Airport
-DTSTART:20260606T070000Z
-SUMMARY:Drift Central - Drift Central
-UID:5ac87402-b6ae-4bcd-971e-204428f26439@5ac8.org
-URL:https://driftcentral.com/registration
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: SuperD\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://super-d.net/pages/schedule\n\nSuperD schedule manually verified from super-d.net.
-DTEND:20261129T170000Z
+DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://bayareadrifting.com/schedule\n\nSaturday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.
+DTEND:20260314T170000Z
 LOCATION:Thunderhill Raceway Park
-DTSTART:20261129T080000Z
-SUMMARY:SuperD - D-Day
-UID:ddc8c178-f5a5-4ab6-85ab-7361b9abd907@ddc8.org
-URL:https://super-d.net/pages/schedule
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://bayareadrifting.com/schedule\n\nSunday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.
-DTEND:20260215T170000Z
-LOCATION:Thunderhill Raceway Park
-DTSTART:20260215T080000Z
+DTSTART:20260314T080000Z
 SUMMARY:Bay Area Drifting - Thunderhill Drift School
-UID:1b7d271b-a46d-41fc-904a-4642f7454879@1b7d.org
+UID:8cd47885-705b-4cd3-85f3-29edc7d51bd8@8cd4.org
 URL:https://bayareadrifting.com/schedule
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Promoter: Club Rowdy\nLocation: Reno Fernley Raceway\nRegistration / Info: https://clubrowdy.com/products/hottest-august-nights-july-31-august-1-2\n\nDay 3 of 3. Manually added by the site owner.
-DTEND:20260802T170000Z
-LOCATION:Reno Fernley Raceway
-DTSTART:20260802T080000Z
-SUMMARY:Club Rowdy - Hottest August Nights
-UID:8d189ed5-ed3b-4a45-ab47-c2f51065e20c@8d18.org
-URL:https://clubrowdy.com/products/hottest-august-nights-july-31-august-1-2
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Musselman Honda Circuit\nLocation: Musselman Honda Circuit\nRegistration / Info: https://mhcircuit.com/event/open-drift-day-8/\n\nAuto-imported from Musselman Honda Circuit's calendar.
-DTEND:20261206T170000Z
+DESCRIPTION:Promoter: Musselman Honda Circuit\nLocation: Musselman Honda Circuit\nRegistration / Info: https://mhcircuit.com/event/spooky-drift-9/\n\nAuto-imported from Musselman Honda Circuit's calendar.
+DTEND:20261025T220000Z
 LOCATION:Musselman Honda Circuit
-DTSTART:20261206T100000Z
-SUMMARY:Musselman Honda Circuit - Open Drift Day
-UID:62708fe9-1498-4065-be9a-aed9eb23a667@6270.org
-URL:https://mhcircuit.com/event/open-drift-day-8/
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main Track\nRegistration / Info: http://www.pacificdriftteam.com/\n\nManually verified from Apple Valley Speedway's calendar.
-DTEND:20270116T170000Z
-LOCATION:Main Track
-DTSTART:20270116T080000Z
-SUMMARY:Apple Valley Speedway - Pacific Drift Event
-UID:335d39cd-cd1f-4435-90e3-c6d88484e65e@335d.org
-URL:http://www.pacificdriftteam.com/
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Skid Pad\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\nManually verified from Apple Valley Speedway's calendar.
-DTEND:20260729T170000Z
-LOCATION:Skid Pad
-DTSTART:20260729T080000Z
-SUMMARY:Apple Valley Speedway - Drift School USA
-UID:d1c4707f-f5ff-4498-9fcc-59e614229562@d1c4.org
-URL:https://applevalleyspeedway.com/calendar/
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Fast In Fast Out\nLocation: Sonoma Raceway\nRegistration / Info: https://fastinfastouttrackdays.com/pages/upcoming-events\n\nAuto-imported from Fast In Fast Out upcoming events.
-DTEND:20261122T180000Z
-LOCATION:Sonoma Raceway
-DTSTART:20261122T080000Z
-SUMMARY:Fast In Fast Out - Fast In Fast Out Drift
-UID:5664a65c-9529-490c-81c1-c792fbc3f928@5664.org
-URL:https://fastinfastouttrackdays.com/pages/upcoming-events
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Fast In Fast Out\nLocation: Sonoma Raceway\nRegistration / Info: https://fastinfastouttrackdays.com/pages/upcoming-events\n\nAuto-imported from Fast In Fast Out upcoming events.
-DTEND:20260918T180000Z
-LOCATION:Sonoma Raceway
-DTSTART:20260918T080000Z
-SUMMARY:Fast In Fast Out - Fast In Fast Out Drift
-UID:80ad74d6-9ef8-40b4-8223-f494445bae2f@80ad.org
-URL:https://fastinfastouttrackdays.com/pages/upcoming-events
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main & Skid\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\nManually verified from Apple Valley Speedway's calendar.
-DTEND:20260819T170000Z
-LOCATION:Main & Skid
-DTSTART:20260819T080000Z
-SUMMARY:Apple Valley Speedway - Ctrl-Drive
-UID:427dd91b-83b2-4046-a8e7-797a05e94962@427d.org
-URL:https://applevalleyspeedway.com/calendar/
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main Track\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\nManually verified from Apple Valley Speedway's calendar.
-DTEND:20260822T170000Z
-LOCATION:Main Track
-DTSTART:20260822T080000Z
-SUMMARY:Apple Valley Speedway - BackroadBucket Birthday Bash - Day 2
-UID:922ab259-6bce-4761-9da9-66a058e7c0de@922a.org
-URL:https://applevalleyspeedway.com/calendar/
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main & Skid\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\nManually verified from Apple Valley Speedway's calendar.
-DTEND:20261101T170000Z
-LOCATION:Main & Skid
-DTSTART:20261101T080000Z
-SUMMARY:Apple Valley Speedway - KINOD Miataween
-UID:cf0a2e3f-1416-4453-bf77-09598cdbd413@cf0a.org
-URL:https://applevalleyspeedway.com/calendar/
+DTSTART:20261025T170000Z
+SUMMARY:Musselman Honda Circuit - Spooky Drift 6
+UID:a354db99-0d82-4eeb-b88f-d9ca9c777cbd@a354.org
+URL:https://mhcircuit.com/event/spooky-drift-9/
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://bayareadrifting.com/schedule\n\nSaturday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.
-DTEND:20260711T170000Z
+DTEND:20260117T170000Z
 LOCATION:Thunderhill Raceway Park
-DTSTART:20260711T080000Z
+DTSTART:20260117T080000Z
 SUMMARY:Bay Area Drifting - Thunderhill Drift School
-UID:53b0e229-d9aa-4928-932b-a8d9515384e3@53b0.org
+UID:62f24f08-0d95-48a1-a0bd-359c5226c913@62f2.org
 URL:https://bayareadrifting.com/schedule
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Promoter: Valley Drift Club\nLocation: NASA Crows Landing Airport\nRegistration / Info: https://www.valleydriftclub.com/\n\nValley Drift Club event.
-DTEND:20260829T170000Z
-LOCATION:NASA Crows Landing Airport
-DTSTART:20260829T070000Z
-SUMMARY:Valley Drift Club - Valley Drift Club Event
-UID:3746bb7e-5556-4423-a3d5-23461b6e3607@3746.org
-URL:https://www.valleydriftclub.com/
+DESCRIPTION:Promoter: Musselman Honda Circuit\nLocation: Musselman Honda Circuit\nRegistration / Info: https://mhcircuit.com/event/spooky-drift-8/\n\nAuto-imported from Musselman Honda Circuit's calendar.
+DTEND:20261024T220000Z
+LOCATION:Musselman Honda Circuit
+DTSTART:20261024T170000Z
+SUMMARY:Musselman Honda Circuit - Spooky Drift 6
+UID:8408c662-c1ed-4861-bfeb-b7a68bbadf19@8408.org
+URL:https://mhcircuit.com/event/spooky-drift-8/
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Promoter: Kansei Wheels\nLocation: Affinity Circuit\nRegistration / Info: https://www.trackrabbit.com/event/details/10019541-Kansei-Invitational--2026-08-08\n\nManually added by the site owner.
-DTEND:20260809T170000Z
-LOCATION:Affinity Circuit
-DTSTART:20260808T080000Z
-SUMMARY:Kansei Wheels - Kansei Invitational
-UID:fd054bd0-2bb5-4664-839c-b35d99c544b6@fd05.org
-URL:https://www.trackrabbit.com/event/details/10019541-Kansei-Invitational--2026-08-08
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://bayareadrifting.com/schedule\n\nSaturday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.
-DTEND:20260808T170000Z
-LOCATION:Thunderhill Raceway Park
-DTSTART:20260808T080000Z
-SUMMARY:Bay Area Drifting - Thunderhill Drift School
-UID:e095f59d-2044-4998-9ce8-54c5b6d45843@e095.org
-URL:https://bayareadrifting.com/schedule
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: SuperD\nLocation: Apple Valley Speedway\nRegistration / Info: https://super-d.net/pages/schedule\n\nSuperD schedule manually verified from super-d.net.
-DTEND:20261025T170000Z
-LOCATION:Apple Valley Speedway
-DTSTART:20261025T080000Z
-SUMMARY:SuperD - SuperD Cup - Day 2
-UID:413779c1-98c7-488f-8642-d0e6271feec0@4137.org
-URL:https://super-d.net/pages/schedule
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://bayareadrifting.com/schedule\n\nSunday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.
-DTEND:20260419T170000Z
-LOCATION:Thunderhill Raceway Park
-DTSTART:20260419T080000Z
-SUMMARY:Bay Area Drifting - Thunderhill Drift School
-UID:7f8fd1f5-44b8-499e-8566-ed14195239eb@7f8f.org
-URL:https://bayareadrifting.com/schedule
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Fast In Fast Out\nLocation: Sonoma Raceway\nRegistration / Info: https://fastinfastouttrackdays.com/pages/upcoming-events\n\nAuto-imported from Fast In Fast Out upcoming events.
-DTEND:20261121T180000Z
-LOCATION:Sonoma Raceway
-DTSTART:20261121T080000Z
-SUMMARY:Fast In Fast Out - Fast In Fast Out Drift
-UID:ddfa31ae-33cf-4734-aecb-5726ccaa86ea@ddfa.org
-URL:https://fastinfastouttrackdays.com/pages/upcoming-events
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: SuperD\nLocation: Affinity Circuit\nRegistration / Info: https://super-d.net/pages/schedule\n\nManually added by the site owner\; not listed on super-d.net at time of scraping.
-DTEND:20260705T170000Z
-LOCATION:Affinity Circuit
-DTSTART:20260704T080000Z
-SUMMARY:SuperD - Independence D-Day
-UID:b7ccd3a5-d07e-48d9-bad7-74ae4efbf476@b7cc.org
-URL:https://super-d.net/pages/schedule
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/registration\n\nAuto-imported from Drift Central schedule.
-DTEND:20260809T170000Z
-LOCATION:Salinas Municipal Airport
-DTSTART:20260809T070000Z
-SUMMARY:Drift Central - Drift Central
-UID:3db60b4e-bfa7-4fac-bf1e-6c9ad8d1cca0@3db6.org
-URL:https://driftcentral.com/registration
+DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main & Skid\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\nManually verified from Apple Valley Speedway's calendar.
+DTEND:20260906T170000Z
+LOCATION:Main & Skid
+DTSTART:20260906T080000Z
+SUMMARY:Apple Valley Speedway - Family & Friends Practice Event
+UID:9a7ff098-e626-4299-b757-8328b34725a1@9a7f.org
+URL:https://applevalleyspeedway.com/calendar/
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Promoter: Fuel Fest Bay Area\nLocation: Alameda County Fairgrounds\nRegistration / Info: \n\nManually added by the site owner for media purposes\; event has already passed.
@@ -223,96 +70,42 @@ DTEND:20260530T170000Z
 LOCATION:Alameda County Fairgrounds
 DTSTART:20260530T080000Z
 SUMMARY:Fuel Fest Bay Area - Fuel Fest Bay Area
-UID:133f4c22-b3fd-4aaf-ab5a-58d148dccd6e@133f.org
+UID:1782f487-5117-4a43-a3d0-724e79640533@1782.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/registration\n\nAuto-imported from Drift Central schedule.
-DTEND:20260607T170000Z
-LOCATION:Salinas Municipal Airport
-DTSTART:20260607T070000Z
-SUMMARY:Drift Central - Drift Central
-UID:0764c83d-e904-4714-87e3-ddf3c7f2acc6@0764.org
-URL:https://driftcentral.com/registration
+DESCRIPTION:Promoter: Musselman Honda Circuit\nLocation: Musselman Honda Circuit\nRegistration / Info: https://mhcircuit.com/event/ddsl-drift-clinic-tandem-practice-2026-10-03/\n\nAuto-imported from Musselman Honda Circuit's calendar.
+DTEND:20261003T160000Z
+LOCATION:Musselman Honda Circuit
+DTSTART:20261003T100000Z
+SUMMARY:Musselman Honda Circuit - DDSL Drift Clinic and Tandem Practice
+UID:4e3daf4c-b9d2-4c7e-bb46-0f8c8602e1a0@4e3d.org
+URL:https://mhcircuit.com/event/ddsl-drift-clinic-tandem-practice-2026-10-03/
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Promoter: RaceWorz\nLocation: Sonoma Raceway\nRegistration / Info: https://raceworzusa.com\n\n2-day event. Manually added by the site owner.
-DTEND:20260614T170000Z
-LOCATION:Sonoma Raceway
-DTSTART:20260613T080000Z
-SUMMARY:RaceWorz - RaceWorz
-UID:757951aa-55d9-47c9-8a83-4299521e2116@7579.org
-URL:https://raceworzusa.com
+DESCRIPTION:Promoter: SuperD\nLocation: Apple Valley Speedway\nRegistration / Info: https://super-d.net/pages/schedule\n\nSuperD schedule manually verified from super-d.net.
+DTEND:20261024T170000Z
+LOCATION:Apple Valley Speedway
+DTSTART:20261024T080000Z
+SUMMARY:SuperD - SuperD Cup
+UID:0188c72f-9b0a-4056-9643-2a399e5da708@0188.org
+URL:https://super-d.net/pages/schedule
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Promoter: Valley Drift Club\nLocation: NASA Crows Landing Airport\nRegistration / Info: https://www.valleydriftclub.com/\n\nValley Drift Club event.
-DTEND:20261219T170000Z
-LOCATION:NASA Crows Landing Airport
-DTSTART:20261219T070000Z
-SUMMARY:Valley Drift Club - Valley Drift Club Event
-UID:7da98eeb-3038-412a-8833-3d9b841559aa@7da9.org
-URL:https://www.valleydriftclub.com/
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://bayareadrifting.com/schedule\n\nSaturday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.
-DTEND:20260912T170000Z
-LOCATION:Thunderhill Raceway Park
-DTSTART:20260912T080000Z
-SUMMARY:Bay Area Drifting - Thunderhill Drift School
-UID:7d84e732-2d37-48e5-b691-840c18453d7d@7d84.org
-URL:https://bayareadrifting.com/schedule
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/registration\n\nAuto-imported from Drift Central schedule.
-DTEND:20260705T170000Z
-LOCATION:Salinas Municipal Airport
-DTSTART:20260705T070000Z
-SUMMARY:Drift Central - Drift Central
-UID:735597a9-eaa4-4754-9146-b6ea64251352@7355.org
-URL:https://driftcentral.com/registration
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main & Skid\nRegistration / Info: http://flavorexpress.co/\n\nManually verified from Apple Valley Speedway's calendar.
-DTEND:20261017T170000Z
-LOCATION:Main & Skid
-DTSTART:20261017T080000Z
-SUMMARY:Apple Valley Speedway - Drift or Treat 2
-UID:cdc843b1-d1cb-479f-acba-d2afdbde04b6@cdc8.org
-URL:http://flavorexpress.co/
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: GoodLuckLeague\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://www.goodluckleague.com/schedule\n\nManually added by the site owner.
-DTEND:20260912T170000Z
-LOCATION:Thunderhill Raceway Park
-DTSTART:20260912T080000Z
-SUMMARY:GoodLuckLeague - GLL Practice Day
-UID:0f1c1217-cc07-4f8d-a5f1-23097ad789e5@0f1c.org
-URL:https://www.goodluckleague.com/schedule
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main & Skid\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\nManually verified from Apple Valley Speedway's calendar.
-DTEND:20260829T170000Z
-LOCATION:Main & Skid
-DTSTART:20260829T080000Z
-SUMMARY:Apple Valley Speedway - ClubTouge
-UID:40a6fa59-ee7a-43e0-9b34-57a9e4797488@40a6.org
+DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Skid Pad\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\nManually verified from Apple Valley Speedway's calendar.
+DTEND:20260729T170000Z
+LOCATION:Skid Pad
+DTSTART:20260729T080000Z
+SUMMARY:Apple Valley Speedway - Drift School USA
+UID:dc3e2ae4-a4c4-4ceb-a9d7-3d26151388ff@dc3e.org
 URL:https://applevalleyspeedway.com/calendar/
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Promoter: GoodLuckLeague\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://www.goodluckleague.com/schedule\n\nManually added by the site owner.
-DTEND:20261219T170000Z
-LOCATION:Thunderhill Raceway Park
-DTSTART:20261219T080000Z
-SUMMARY:GoodLuckLeague - GLL Practice Day
-UID:cab4ea79-5f75-4ef3-8ca1-b9f024d41da1@cab4.org
-URL:https://www.goodluckleague.com/schedule
-END:VEVENT
-BEGIN:VEVENT
 DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://bayareadrifting.com/schedule\n\nSunday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.
-DTEND:20260118T170000Z
+DTEND:20260809T170000Z
 LOCATION:Thunderhill Raceway Park
-DTSTART:20260118T080000Z
+DTSTART:20260809T080000Z
 SUMMARY:Bay Area Drifting - Thunderhill Drift School
-UID:751ca1d9-8034-458a-8e8d-bbd3dde6366a@751c.org
+UID:246758b4-b40e-4614-88fa-447321975abb@2467.org
 URL:https://bayareadrifting.com/schedule
 END:VEVENT
 BEGIN:VEVENT
@@ -321,485 +114,8 @@ DTEND:20261101T170000Z
 LOCATION:Musselman Honda Circuit
 DTSTART:20261101T100000Z
 SUMMARY:Musselman Honda Circuit - Open Drift Day
-UID:ed84ad23-082a-4058-95a4-94c73061cf33@ed84.org
+UID:a7acc4b0-9f2f-48af-a8db-40f80b019bdd@a7ac.org
 URL:https://mhcircuit.com/event/open-drift-day-7/
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: The Mill Drift Track\nLocation: Sweet Home\, OR\nRegistration / Info: https://themilldrifttrack.com/event/open-drift-day-august-15th/\n\nManually added by the site owner.
-DTEND:20260815T160000Z
-LOCATION:Sweet Home\, OR
-DTSTART:20260815T090000Z
-SUMMARY:The Mill Drift Track - Open Drift Day
-UID:af7f233b-04f3-4521-8ca2-4962d0836935@af7f.org
-URL:https://themilldrifttrack.com/event/open-drift-day-august-15th/
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Musselman Honda Circuit\nLocation: Musselman Honda Circuit\nRegistration / Info: https://mhcircuit.com/event/spooky-drift-9/\n\nAuto-imported from Musselman Honda Circuit's calendar.
-DTEND:20261025T220000Z
-LOCATION:Musselman Honda Circuit
-DTSTART:20261025T170000Z
-SUMMARY:Musselman Honda Circuit - Spooky Drift 6
-UID:054cc396-845c-474f-914a-736b93bab8bc@054c.org
-URL:https://mhcircuit.com/event/spooky-drift-9/
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Musselman Honda Circuit\nLocation: Musselman Honda Circuit\nRegistration / Info: https://mhcircuit.com/event/open-drift-day-12/\n\nAuto-imported from Musselman Honda Circuit's calendar.
-DTEND:20270404T170000Z
-LOCATION:Musselman Honda Circuit
-DTSTART:20270404T100000Z
-SUMMARY:Musselman Honda Circuit - Open Drift Day
-UID:2ef5b512-b855-4d17-a85d-b28d796006e5@2ef5.org
-URL:https://mhcircuit.com/event/open-drift-day-12/
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: GoodLuckLeague\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://www.goodluckleague.com/schedule\n\nManually added by the site owner.
-DTEND:20260620T170000Z
-LOCATION:Thunderhill Raceway Park
-DTSTART:20260620T080000Z
-SUMMARY:GoodLuckLeague - Skidpad Social
-UID:ce344601-d517-4c7a-a631-c4b65c0708bb@ce34.org
-URL:https://www.goodluckleague.com/schedule
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://bayareadrifting.com/schedule\n\nSunday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.
-DTEND:20260809T170000Z
-LOCATION:Thunderhill Raceway Park
-DTSTART:20260809T080000Z
-SUMMARY:Bay Area Drifting - Thunderhill Drift School
-UID:c4c0fd81-68fa-49e1-9f5a-d026c7a33b57@c4c0.org
-URL:https://bayareadrifting.com/schedule
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Firebird Motorsports Park\nLocation: Main Track\nRegistration / Info: https://gofastent.com/drift-n-drag\n\nManually added by the site owner.
-DTEND:20260919T170000Z
-LOCATION:Main Track
-DTSTART:20260919T080000Z
-SUMMARY:Firebird Motorsports Park - Drift N Drags
-UID:3de130c1-0201-4ab6-b688-40aa774a7b35@3de1.org
-URL:https://gofastent.com/drift-n-drag
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Club Rowdy\nLocation: Reno Fernley Raceway\nRegistration / Info: https://clubrowdy.com/products/hottest-august-nights-july-31-august-1-2\n\nDay 2 of 3. Manually added by the site owner.
-DTEND:20260801T170000Z
-LOCATION:Reno Fernley Raceway
-DTSTART:20260801T080000Z
-SUMMARY:Club Rowdy - Hottest August Nights
-UID:841b7b9f-0046-497d-a7d9-601ab76d240f@841b.org
-URL:https://clubrowdy.com/products/hottest-august-nights-july-31-august-1-2
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main Track\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\nManually verified from Apple Valley Speedway's calendar.
-DTEND:20260821T170000Z
-LOCATION:Main Track
-DTSTART:20260821T080000Z
-SUMMARY:Apple Valley Speedway - BackroadBucket Birthday Bash
-UID:660b584b-7766-43b7-8743-a49e1456cc3e@660b.org
-URL:https://applevalleyspeedway.com/calendar/
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Musselman Honda Circuit\nLocation: Musselman Honda Circuit\nRegistration / Info: https://mhcircuit.com/event/open-drift-day-10/\n\nAuto-imported from Musselman Honda Circuit's calendar.
-DTEND:20270207T170000Z
-LOCATION:Musselman Honda Circuit
-DTSTART:20270207T100000Z
-SUMMARY:Musselman Honda Circuit - Open Drift Day
-UID:ced0a3f7-9af4-470a-a69f-0ebc15e444e7@ced0.org
-URL:https://mhcircuit.com/event/open-drift-day-10/
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Musselman Honda Circuit\nLocation: Musselman Honda Circuit\nRegistration / Info: https://mhcircuit.com/event/desert-drift-street-league-6/\n\nAuto-imported from Musselman Honda Circuit's calendar.
-DTEND:20261107T160000Z
-LOCATION:Musselman Honda Circuit
-DTSTART:20261107T090000Z
-SUMMARY:Musselman Honda Circuit - Desert Drift Street League
-UID:5edd04fc-380b-4708-b293-0ca8e05a2685@5edd.org
-URL:https://mhcircuit.com/event/desert-drift-street-league-6/
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://bayareadrifting.com/schedule\n\nSunday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.
-DTEND:20260524T170000Z
-LOCATION:Thunderhill Raceway Park
-DTSTART:20260524T080000Z
-SUMMARY:Bay Area Drifting - Thunderhill Drift School
-UID:21e5feb5-dc32-4420-9415-5908977e7c89@21e5.org
-URL:https://bayareadrifting.com/schedule
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Don Racing\nLocation: Affinity Circuit\nRegistration / Info: https://www.instagram.com/reel/DX9wqVBRgvz/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==\n\nManually added by the site owner. Registration link points to the Instagram announcement reel.
-DTEND:20260830T170000Z
-LOCATION:Affinity Circuit
-DTSTART:20260828T080000Z
-SUMMARY:Don Racing - Navapalooza 8
-UID:01131e8d-84d2-41ac-9145-8c9c204e20ca@0113.org
-URL:https://www.instagram.com/reel/DX9wqVBRgvz/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Drift Evolution\nLocation: Affinity Circuit\nRegistration / Info: https://driftevolution.trackrabbit.com/\n\n2-day event. Manually added by the site owner.
-DTEND:20260913T170000Z
-LOCATION:Affinity Circuit
-DTSTART:20260912T080000Z
-SUMMARY:Drift Evolution - THUNDERDRIFT
-UID:79b94fa2-e317-4417-8a5f-1d3c3d04862d@79b9.org
-URL:https://driftevolution.trackrabbit.com/
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Valley Drift Club\nLocation: NASA Crows Landing Airport\nRegistration / Info: https://www.valleydriftclub.com/\n\nValley Drift Club event.
-DTEND:20260926T170000Z
-LOCATION:NASA Crows Landing Airport
-DTSTART:20260926T070000Z
-SUMMARY:Valley Drift Club - Valley Drift Club Event
-UID:1af0c065-2eac-4763-8942-e7e22a60b103@1af0.org
-URL:https://www.valleydriftclub.com/
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main Track\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\nManually verified from Apple Valley Speedway's calendar.
-DTEND:20260918T170000Z
-LOCATION:Main Track
-DTSTART:20260918T080000Z
-SUMMARY:Apple Valley Speedway - Ultimate Drifting Challenge Round 4
-UID:b2b0a191-110c-4037-8c01-ceb2834eaed0@b2b0.org
-URL:https://applevalleyspeedway.com/calendar/
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main Track\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\n2-day event. Manually corrected by the site owner - was previously listed as two separate events (Endless Summer Nights 6 / Ultra Bash).
-DTEND:20260809T170000Z
-LOCATION:Main Track
-DTSTART:20260808T080000Z
-SUMMARY:Apple Valley Speedway - Ultra Summer Nights
-UID:fde9c540-b91e-4cb5-8dd2-47cbbebae946@fde9.org
-URL:https://applevalleyspeedway.com/calendar/
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main Track\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\nManually verified from Apple Valley Speedway's calendar.
-DTEND:20260718T170000Z
-LOCATION:Main Track
-DTSTART:20260718T080000Z
-SUMMARY:Apple Valley Speedway - Slide City 15
-UID:5398e398-98e9-4157-a9f2-80a2a301b12b@5398.org
-URL:https://applevalleyspeedway.com/calendar/
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/registration\n\nAuto-imported from Drift Central schedule.
-DTEND:20260404T170000Z
-LOCATION:Salinas Municipal Airport
-DTSTART:20260404T070000Z
-SUMMARY:Drift Central - Drift Central
-UID:59a420d1-9f9d-435e-9909-33a9309ece67@59a4.org
-URL:https://driftcentral.com/registration
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main Track\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\nManually verified from Apple Valley Speedway's calendar.
-DTEND:20261205T170000Z
-LOCATION:Main Track
-DTSTART:20261205T080000Z
-SUMMARY:Apple Valley Speedway - Section 8 Drifting Invitational
-UID:3afff846-4b49-4fa0-94d6-299fffb9c027@3aff.org
-URL:https://applevalleyspeedway.com/calendar/
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Drift Evolution\nLocation: Affinity Circuit\nRegistration / Info: https://driftevolution.trackrabbit.com/\n\n2-day event. Manually added by the site owner.
-DTEND:20261115T170000Z
-LOCATION:Affinity Circuit
-DTSTART:20261114T080000Z
-SUMMARY:Drift Evolution - Cold Winter Nights
-UID:49ae5830-714e-4475-9924-2a3159c48f87@49ae.org
-URL:https://driftevolution.trackrabbit.com/
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Musselman Honda Circuit\nLocation: Musselman Honda Circuit\nRegistration / Info: https://mhcircuit.com/event/open-drift-day-9/\n\nAuto-imported from Musselman Honda Circuit's calendar.
-DTEND:20270103T170000Z
-LOCATION:Musselman Honda Circuit
-DTSTART:20270103T100000Z
-SUMMARY:Musselman Honda Circuit - Open Drift Day
-UID:e7e4c541-8a1d-4030-a596-3e68df064474@e7e4.org
-URL:https://mhcircuit.com/event/open-drift-day-9/
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Fast In Fast Out\nLocation: Sonoma Raceway\nRegistration / Info: https://fastinfastouttrackdays.com/pages/upcoming-events\n\nAuto-imported from Fast In Fast Out upcoming events.
-DTEND:20260920T180000Z
-LOCATION:Sonoma Raceway
-DTSTART:20260920T080000Z
-SUMMARY:Fast In Fast Out - Fast In Fast Out Drift
-UID:ea120dd5-fa74-4839-8a92-3991ad80a78b@ea12.org
-URL:https://fastinfastouttrackdays.com/pages/upcoming-events
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Club Rowdy\nLocation: Reno Fernley Raceway\nRegistration / Info: https://clubrowdy.com/products/hottest-august-nights-july-31-august-1-2\n\nDay 1 of 3. Manually added by the site owner.
-DTEND:20260731T170000Z
-LOCATION:Reno Fernley Raceway
-DTSTART:20260731T080000Z
-SUMMARY:Club Rowdy - Hottest August Nights
-UID:9e3aae69-efcb-49ca-827c-fbe7823da534@9e3a.org
-URL:https://clubrowdy.com/products/hottest-august-nights-july-31-august-1-2
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Drift Evolution\nLocation: Affinity Circuit\nRegistration / Info: https://driftevolution.trackrabbit.com/\n\n2-day event. Manually added by the site owner.
-DTEND:20261011T170000Z
-LOCATION:Affinity Circuit
-DTSTART:20261010T080000Z
-SUMMARY:Drift Evolution - Pumpkin Bash
-UID:1b06b26c-9f6d-4dd2-859a-dca895bc883a@1b06.org
-URL:https://driftevolution.trackrabbit.com/
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Musselman Honda Circuit\nLocation: Musselman Honda Circuit\nRegistration / Info: https://mhcircuit.com/event/ddsl-drift-clinic-tandem-practice-2026-10-03/\n\nAuto-imported from Musselman Honda Circuit's calendar.
-DTEND:20261003T160000Z
-LOCATION:Musselman Honda Circuit
-DTSTART:20261003T100000Z
-SUMMARY:Musselman Honda Circuit - DDSL Drift Clinic and Tandem Practice
-UID:a661be2e-31aa-408d-be38-39929d3f5c0c@a661.org
-URL:https://mhcircuit.com/event/ddsl-drift-clinic-tandem-practice-2026-10-03/
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: GoodLuckLeague\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://www.goodluckleague.com/schedule\n\nManually added by the site owner.
-DTEND:20261128T170000Z
-LOCATION:Thunderhill Raceway Park
-DTSTART:20261128T080000Z
-SUMMARY:GoodLuckLeague - GLL Drift Day
-UID:abd5ba56-a3a9-473e-a640-0fa6e47aa4c9@abd5.org
-URL:https://www.goodluckleague.com/schedule
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/registration\n\nAuto-imported from Drift Central schedule.
-DTEND:20261010T170000Z
-LOCATION:Salinas Municipal Airport
-DTSTART:20261010T070000Z
-SUMMARY:Drift Central - Drift Central
-UID:ed81c2ae-7b3a-49c8-b483-29b1e80de045@ed81.org
-URL:https://driftcentral.com/registration
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Firebird Motorsports Park\nLocation: West Track\nRegistration / Info: https://gofastent.com/drift-n-drag\n\nManually added by the site owner.
-DTEND:20260801T170000Z
-LOCATION:West Track
-DTSTART:20260801T080000Z
-SUMMARY:Firebird Motorsports Park - West Track Drift N Drags
-UID:61e1a2de-7b58-4a9c-bfc7-23535dd3b1fa@61e1.org
-URL:https://gofastent.com/drift-n-drag
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Nice Tires\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://nicetires.shop/pages/events\n\nManually added by the site owner.
-DTEND:20260717T170000Z
-LOCATION:Thunderhill Raceway Park
-DTSTART:20260717T080000Z
-SUMMARY:Nice Tires - Nice Tires Drift Day
-UID:7eec03fc-06e3-47cd-baf8-8021130ce722@7eec.org
-URL:https://nicetires.shop/pages/events
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://bayareadrifting.com/schedule\n\nSaturday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.
-DTEND:20260117T170000Z
-LOCATION:Thunderhill Raceway Park
-DTSTART:20260117T080000Z
-SUMMARY:Bay Area Drifting - Thunderhill Drift School
-UID:d0eb882b-b74e-4191-8eb1-576d6efc4418@d0eb.org
-URL:https://bayareadrifting.com/schedule
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main & Skid\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\nManually verified from Apple Valley Speedway's calendar.
-DTEND:20260906T170000Z
-LOCATION:Main & Skid
-DTSTART:20260906T080000Z
-SUMMARY:Apple Valley Speedway - Family & Friends Practice Event
-UID:6ec4b268-bf4e-4b15-960b-65c564996425@6ec4.org
-URL:https://applevalleyspeedway.com/calendar/
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Musselman Honda Circuit\nLocation: Musselman Honda Circuit\nRegistration / Info: https://mhcircuit.com/event/drift-night-14/\n\nAuto-imported from Musselman Honda Circuit's calendar.
-DTEND:20260905T220000Z
-LOCATION:Musselman Honda Circuit
-DTSTART:20260905T160000Z
-SUMMARY:Musselman Honda Circuit - Drift Night
-UID:2b928382-919a-48e7-adeb-3782ff34c784@2b92.org
-URL:https://mhcircuit.com/event/drift-night-14/
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: SuperD\nLocation: Apple Valley Speedway\nRegistration / Info: https://super-d.net/pages/schedule\n\nSuperD schedule manually verified from super-d.net.
-DTEND:20261024T170000Z
-LOCATION:Apple Valley Speedway
-DTSTART:20261024T080000Z
-SUMMARY:SuperD - SuperD Cup
-UID:cbc18f5c-37f4-4bce-b80e-e0bf78ec7439@cbc1.org
-URL:https://super-d.net/pages/schedule
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main Track\nRegistration / Info: http://www.corner-exit.com/\n\nManually verified from Apple Valley Speedway's calendar.
-DTEND:20261011T170000Z
-LOCATION:Main Track
-DTSTART:20261011T080000Z
-SUMMARY:Apple Valley Speedway - Corner Exit Touge Challenge
-UID:496eed61-5740-41d3-9046-c5869a0202cb@496e.org
-URL:http://www.corner-exit.com/
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main & Skid\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\nManually verified from Apple Valley Speedway's calendar.
-DTEND:20261219T170000Z
-LOCATION:Main & Skid
-DTSTART:20261219T080000Z
-SUMMARY:Apple Valley Speedway - Three's Racing Drift Day
-UID:0ab675df-8389-4dfb-a999-a08cc47a1c9e@0ab6.org
-URL:https://applevalleyspeedway.com/calendar/
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main & Skid\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\n3-day event. Manually verified from Apple Valley Speedway's calendar.
-DTEND:20261115T170000Z
-LOCATION:Main & Skid
-DTSTART:20261113T080000Z
-SUMMARY:Apple Valley Speedway - Runit Promotions
-UID:e18ed0d0-ee1e-4908-9ae3-2f6e0bd80489@e18e.org
-URL:https://applevalleyspeedway.com/calendar/
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Cali Kansai\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://calikansai.com/products/ck7-driver-registration\n\nManually added by the site owner.
-DTEND:20260816T170000Z
-LOCATION:Thunderhill Raceway Park
-DTSTART:20260816T090000Z
-SUMMARY:Cali Kansai - CK7
-UID:d19a2512-defc-471f-a150-3c2cacdf2be7@d19a.org
-URL:https://calikansai.com/products/ck7-driver-registration
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Qlispe Raceway Park\nLocation: Airway Heights\, WA\nRegistration / Info: https://gofastent.com/drift-n-drag\n\nManually added by the site owner.
-DTEND:20260822T170000Z
-LOCATION:Airway Heights\, WA
-DTSTART:20260822T080000Z
-SUMMARY:Qlispe Raceway Park - Drift N Drags
-UID:9d1dfbc7-08af-4a57-9e34-32e4309ae6f8@9d1d.org
-URL:https://gofastent.com/drift-n-drag
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/registration\n\nAuto-imported from Drift Central schedule.
-DTEND:20260307T170000Z
-LOCATION:Salinas Municipal Airport
-DTSTART:20260307T070000Z
-SUMMARY:Drift Central - Drift Central
-UID:245d5cf0-596d-4998-a6e0-8010a6ac7ab8@245d.org
-URL:https://driftcentral.com/registration
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://bayareadrifting.com/schedule\n\nSunday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.
-DTEND:20260614T170000Z
-LOCATION:Thunderhill Raceway Park
-DTSTART:20260614T080000Z
-SUMMARY:Bay Area Drifting - Thunderhill Drift School
-UID:e1f1ca88-1785-4268-a9b3-9a93f3ac35fd@e1f1.org
-URL:https://bayareadrifting.com/schedule
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main Track\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\nManually verified from Apple Valley Speedway's calendar.
-DTEND:20260710T170000Z
-LOCATION:Main Track
-DTSTART:20260710T080000Z
-SUMMARY:Apple Valley Speedway - UDC x Drift Japan Tours Benkei Birthday Bash
-UID:f3283466-308c-47d4-89f0-fd97c61f9a3f@f328.org
-URL:https://applevalleyspeedway.com/calendar/
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main & Skid\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\nManually verified from Apple Valley Speedway's calendar.
-DTEND:20261016T170000Z
-LOCATION:Main & Skid
-DTSTART:20261016T080000Z
-SUMMARY:Apple Valley Speedway - Drivers Ed
-UID:6f4a7570-f68f-4ded-8553-ac57b8c34bad@6f4a.org
-URL:https://applevalleyspeedway.com/calendar/
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main & Skid\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\nManually verified from Apple Valley Speedway's calendar.
-DTEND:20261004T170000Z
-LOCATION:Main & Skid
-DTSTART:20261004T080000Z
-SUMMARY:Apple Valley Speedway - N.A. Nonsuri
-UID:12d704a6-a126-468c-a190-f32f79e86661@12d7.org
-URL:https://applevalleyspeedway.com/calendar/
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: SuperD\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://super-d.net/pages/schedule\n\nSuperD schedule manually verified from super-d.net.
-DTEND:20260815T170000Z
-LOCATION:Thunderhill Raceway Park
-DTSTART:20260815T080000Z
-SUMMARY:SuperD - D-Day
-UID:acb2fbb3-b5a3-4527-96d6-fb7848860c03@acb2.org
-URL:https://super-d.net/pages/schedule
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Valley Drift Club\nLocation: NASA Crows Landing Airport\nRegistration / Info: https://www.valleydriftclub.com/\n\nValley Drift Club event.
-DTEND:20261121T170000Z
-LOCATION:NASA Crows Landing Airport
-DTSTART:20261121T070000Z
-SUMMARY:Valley Drift Club - Valley Drift Club Event
-UID:e4e62140-8f4a-4bab-a8ea-f6c7666193af@e4e6.org
-URL:https://www.valleydriftclub.com/
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://bayareadrifting.com/schedule\n\nSunday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.
-DTEND:20260315T170000Z
-LOCATION:Thunderhill Raceway Park
-DTSTART:20260315T080000Z
-SUMMARY:Bay Area Drifting - Thunderhill Drift School
-UID:9a770d20-00fa-4a19-9b10-061c8e4f8437@9a77.org
-URL:https://bayareadrifting.com/schedule
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://bayareadrifting.com/schedule\n\nSaturday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.
-DTEND:20260523T170000Z
-LOCATION:Thunderhill Raceway Park
-DTSTART:20260523T080000Z
-SUMMARY:Bay Area Drifting - Thunderhill Drift School
-UID:301a45ed-bb72-4cab-a678-b4a3d6a42bdd@301a.org
-URL:https://bayareadrifting.com/schedule
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Sonoma Raceway\nLocation: Sonoma Raceway\nRegistration / Info: https://www.sonomaraceway.com/events/winter-jam/\n\n2-day event. Manually added by the site owner.
-DTEND:20270117T170000Z
-LOCATION:Sonoma Raceway
-DTSTART:20270116T080000Z
-SUMMARY:Sonoma Raceway - Winter Jam
-UID:eafdc266-da12-4c99-935d-545d1683f8ba@eafd.org
-URL:https://www.sonomaraceway.com/events/winter-jam/
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: GoodLuckLeague\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://www.goodluckleague.com/schedule\n\nManually added by the site owner.
-DTEND:20261011T170000Z
-LOCATION:Thunderhill Raceway Park
-DTSTART:20261011T080000Z
-SUMMARY:GoodLuckLeague - GLL Battle Comp
-UID:9de192c6-1b12-4b90-8614-4e7fdb73fc95@9de1.org
-URL:https://www.goodluckleague.com/schedule
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main & Skid\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\nManually verified from Apple Valley Speedway's calendar.
-DTEND:20260711T170000Z
-LOCATION:Main & Skid
-DTSTART:20260711T080000Z
-SUMMARY:Apple Valley Speedway - BAY2APPLEVALLEY
-UID:d0992ea4-6f72-413b-b64d-1a264212f53a@d099.org
-URL:https://applevalleyspeedway.com/calendar/
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main Track\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\nManually verified from Apple Valley Speedway's calendar.
-DTEND:20261206T170000Z
-LOCATION:Main Track
-DTSTART:20261206T080000Z
-SUMMARY:Apple Valley Speedway - Section 8 Drifting Invitational - Day 2
-UID:d5c0ecff-4763-461b-8d1d-2fc4e60f8153@d5c0.org
-URL:https://applevalleyspeedway.com/calendar/
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://bayareadrifting.com/schedule\n\nSaturday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.
-DTEND:20261114T170000Z
-LOCATION:Thunderhill Raceway Park
-DTSTART:20261114T080000Z
-SUMMARY:Bay Area Drifting - Thunderhill Drift School
-UID:336d67ef-a8e5-41c2-9f8a-6e56a0100909@336d.org
-URL:https://bayareadrifting.com/schedule
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://bayareadrifting.com/schedule\n\nSunday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.
-DTEND:20261115T170000Z
-LOCATION:Thunderhill Raceway Park
-DTSTART:20261115T080000Z
-SUMMARY:Bay Area Drifting - Thunderhill Drift School
-UID:52f2ee0e-4278-4811-bd74-4b46821e0101@52f2.org
-URL:https://bayareadrifting.com/schedule
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Promoter: Cursed Chassis\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://www.instagram.com/ouija_boi/\n\nManually added by the site owner. Registration link points to the promoter's Instagram.
@@ -807,53 +123,35 @@ DTEND:20260822T170000Z
 LOCATION:Thunderhill Raceway Park
 DTSTART:20260822T080000Z
 SUMMARY:Cursed Chassis - Cursed Chassis Drift Event
-UID:ed90a769-9773-4b26-bedf-48c25cf00c1e@ed90.org
+UID:2f18ee79-00fc-4824-ad6f-ce85e9c50d77@2f18.org
 URL:https://www.instagram.com/ouija_boi/
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main & Skid\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\nManually verified from Apple Valley Speedway's calendar.
-DTEND:20260823T170000Z
-LOCATION:Main & Skid
-DTSTART:20260823T080000Z
-SUMMARY:Apple Valley Speedway - Hawt August Night
-UID:78ef8d19-9522-4bee-90ed-f7eb33bee0a2@78ef.org
-URL:https://applevalleyspeedway.com/calendar/
+DESCRIPTION:Promoter: Club Rowdy\nLocation: Reno Fernley Raceway\nRegistration / Info: https://clubrowdy.com/products/hottest-august-nights-july-31-august-1-2\n\nDay 3 of 3. Manually added by the site owner.
+DTEND:20260802T170000Z
+LOCATION:Reno Fernley Raceway
+DTSTART:20260802T080000Z
+SUMMARY:Club Rowdy - Hottest August Nights
+UID:5fee0a2f-964e-49f0-b00b-12a73190e2be@5fee.org
+URL:https://clubrowdy.com/products/hottest-august-nights-july-31-august-1-2
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://bayareadrifting.com/schedule\n\nSaturday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.
-DTEND:20260418T170000Z
+DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://bayareadrifting.com/schedule\n\nSunday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.
+DTEND:20260913T170000Z
 LOCATION:Thunderhill Raceway Park
-DTSTART:20260418T080000Z
+DTSTART:20260913T080000Z
 SUMMARY:Bay Area Drifting - Thunderhill Drift School
-UID:64559dde-9d05-426d-957c-f7f1c18fd05a@6455.org
+UID:75d01385-9428-4fac-b73a-50049a43248a@75d0.org
 URL:https://bayareadrifting.com/schedule
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Promoter: Outlaw Drift\nLocation: San Joaquin County Fairgrounds\nRegistration / Info: https://stockton99.com/outlaw-drift\n\nAuto-imported from Outlaw Drift's Stockton 99 schedule page.
-DTEND:20260726T160000Z
-LOCATION:San Joaquin County Fairgrounds
-DTSTART:20260726T100000Z
-SUMMARY:Outlaw Drift - Outlaw Drift Series Practice Day - Drifting
-UID:3d234a63-e5c3-408d-8cfa-f357fa21ba92@3d23.org
-URL:https://stockton99.com/outlaw-drift
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/registration\n\nAuto-imported from Drift Central schedule.
-DTEND:20261129T170000Z
-LOCATION:Salinas Municipal Airport
-DTSTART:20261129T070000Z
-SUMMARY:Drift Central - Drift Central
-UID:7f111ac6-7c3e-4797-b251-088dab14fe6b@7f11.org
-URL:https://driftcentral.com/registration
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://bayareadrifting.com/schedule\n\nSaturday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.
-DTEND:20260613T170000Z
-LOCATION:Thunderhill Raceway Park
-DTSTART:20260613T080000Z
-SUMMARY:Bay Area Drifting - Thunderhill Drift School
-UID:6e054f4f-3a8d-49e2-878e-32e40dd9ccdc@6e05.org
-URL:https://bayareadrifting.com/schedule
+DESCRIPTION:Promoter: Musselman Honda Circuit\nLocation: Musselman Honda Circuit\nRegistration / Info: https://mhcircuit.com/event/open-drift-day-9/\n\nAuto-imported from Musselman Honda Circuit's calendar.
+DTEND:20270103T170000Z
+LOCATION:Musselman Honda Circuit
+DTSTART:20270103T100000Z
+SUMMARY:Musselman Honda Circuit - Open Drift Day
+UID:ea1f0097-1ff0-4947-9ca8-e4c74cfcde2b@ea1f.org
+URL:https://mhcircuit.com/event/open-drift-day-9/
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main Track\nRegistration / Info: http://www.udc.news/\n\nManually verified from Apple Valley Speedway's calendar.
@@ -861,251 +159,17 @@ DTEND:20270101T170000Z
 LOCATION:Main Track
 DTSTART:20270101T080000Z
 SUMMARY:Apple Valley Speedway - Hayden's Birthday / New Years Bash - Day 2
-UID:8d8172d1-d65e-4632-b8ec-989cb1ded56c@8d81.org
+UID:acfb2399-d9ff-4033-8ab3-3fe43fe01675@acfb.org
 URL:http://www.udc.news/
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main Track\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\nManually verified from Apple Valley Speedway's calendar.
-DTEND:20261107T170000Z
-LOCATION:Main Track
-DTSTART:20261107T080000Z
-SUMMARY:Apple Valley Speedway - DriftGala
-UID:7799234d-d8c4-4796-a1dc-52521d92cadf@7799.org
-URL:https://applevalleyspeedway.com/calendar/
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: DriftMaybe\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://www.instagram.com/p/DSyh94eFBve/\n\nManually added by the site owner.
-DTEND:20261010T170000Z
-LOCATION:Thunderhill Raceway Park
-DTSTART:20261010T080000Z
-SUMMARY:DriftMaybe - DriftMaybe
-UID:4dd1f96c-1d08-42ae-a0f6-b26c354ba022@4dd1.org
-URL:https://www.instagram.com/p/DSyh94eFBve/
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Musselman Honda Circuit\nLocation: Musselman Honda Circuit\nRegistration / Info: https://mhcircuit.com/event/spooky-drift-8/\n\nAuto-imported from Musselman Honda Circuit's calendar.
-DTEND:20261024T220000Z
-LOCATION:Musselman Honda Circuit
-DTSTART:20261024T170000Z
-SUMMARY:Musselman Honda Circuit - Spooky Drift 6
-UID:bde84584-2810-4548-82ed-2cb4fc88a811@bde8.org
-URL:https://mhcircuit.com/event/spooky-drift-8/
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/registration\n\nAuto-imported from Drift Central schedule.
-DTEND:20261011T170000Z
-LOCATION:Salinas Municipal Airport
-DTSTART:20261011T070000Z
-SUMMARY:Drift Central - Drift Central
-UID:a408989a-4335-464b-accc-c0d0eac95b94@a408.org
-URL:https://driftcentral.com/registration
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main & Skid\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\nManually verified from Apple Valley Speedway's calendar.
-DTEND:20261031T170000Z
-LOCATION:Main & Skid
-DTSTART:20261031T080000Z
-SUMMARY:Apple Valley Speedway - Soso Halloween Bash
-UID:cf9fbc16-adf2-4111-9413-064c5137705e@cf9f.org
-URL:https://applevalleyspeedway.com/calendar/
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://bayareadrifting.com/schedule\n\nSaturday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.
-DTEND:20260214T170000Z
-LOCATION:Thunderhill Raceway Park
-DTSTART:20260214T080000Z
-SUMMARY:Bay Area Drifting - Thunderhill Drift School
-UID:1fe1695a-d0b4-4294-8791-f2290906fd32@1fe1.org
-URL:https://bayareadrifting.com/schedule
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: DriftMaybe\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://www.instagram.com/p/DSyh94eFBve/\n\nManually added by the site owner.
-DTEND:20261114T170000Z
-LOCATION:Thunderhill Raceway Park
-DTSTART:20261114T080000Z
-SUMMARY:DriftMaybe - DriftMaybe
-UID:ca53ff0a-ba71-4016-bf46-871fa143ab97@ca53.org
-URL:https://www.instagram.com/p/DSyh94eFBve/
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/registration\n\nAuto-imported from Drift Central schedule.
-DTEND:20260808T170000Z
-LOCATION:Salinas Municipal Airport
-DTSTART:20260808T070000Z
-SUMMARY:Drift Central - Drift Central
-UID:60908597-c2da-46eb-ba4d-d82e19a31c80@6090.org
-URL:https://driftcentral.com/registration
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Firebird Motorsports Park\nLocation: Firebird Motorsports Park\nRegistration / Info: https://gofastent.com/event-schedule\n\nManually added by the site owner.
-DTEND:20261219T170000Z
-LOCATION:Firebird Motorsports Park
-DTSTART:20261219T080000Z
-SUMMARY:Firebird Motorsports Park - Winter Drift
-UID:6c046991-a74a-4853-816f-a094cbb504e1@6c04.org
-URL:https://gofastent.com/event-schedule
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://bayareadrifting.com/schedule\n\nSunday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.
-DTEND:20260913T170000Z
-LOCATION:Thunderhill Raceway Park
-DTSTART:20260913T080000Z
-SUMMARY:Bay Area Drifting - Thunderhill Drift School
-UID:35079a8d-99ba-467f-b462-03922c0af2f9@3507.org
-URL:https://bayareadrifting.com/schedule
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Musselman Honda Circuit\nLocation: Musselman Honda Circuit\nRegistration / Info: https://mhcircuit.com/event/spooky-drift-7/\n\nAuto-imported from Musselman Honda Circuit's calendar.
-DTEND:20261023T220000Z
-LOCATION:Musselman Honda Circuit
-DTSTART:20261023T170000Z
-SUMMARY:Musselman Honda Circuit - Spooky Drift
-UID:a2230809-f032-44e5-87ff-a0bead811197@a223.org
-URL:https://mhcircuit.com/event/spooky-drift-7/
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/registration\n\nAuto-imported from Drift Central schedule.
-DTEND:20260405T170000Z
-LOCATION:Salinas Municipal Airport
-DTSTART:20260405T070000Z
-SUMMARY:Drift Central - Drift Central
-UID:35282543-fac4-4516-8f26-509c11f9f319@3528.org
-URL:https://driftcentral.com/registration
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/registration\n\nAuto-imported from Drift Central schedule.
-DTEND:20261128T170000Z
-LOCATION:Salinas Municipal Airport
-DTSTART:20261128T070000Z
-SUMMARY:Drift Central - Drift Central
-UID:08b19b6c-f697-4834-abe0-2747be3b3a6f@08b1.org
-URL:https://driftcentral.com/registration
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Desert Drift Street League\nLocation: Radford Racing School\nRegistration / Info: https://www.desertdriftstreetleague.com\n\nManually added by the site owner from a flyer image. Night event\, 6PM-12AM.
-DTEND:20260815T235900Z
-LOCATION:Radford Racing School
-DTSTART:20260815T180000Z
-SUMMARY:Desert Drift Street League - Desert Drift Street League Round Two
-UID:481a0598-9352-49cd-859f-17a057deeffc@481a.org
-URL:https://www.desertdriftstreetleague.com
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Fast In Fast Out\nLocation: Sonoma Raceway\nRegistration / Info: https://fastinfastouttrackdays.com/pages/upcoming-events\n\nAuto-imported from Fast In Fast Out upcoming events.
-DTEND:20260919T180000Z
-LOCATION:Sonoma Raceway
-DTSTART:20260919T080000Z
-SUMMARY:Fast In Fast Out - Fast In Fast Out Drift
-UID:0129bd0a-6ecc-410b-984a-983047910ca8@0129.org
-URL:https://fastinfastouttrackdays.com/pages/upcoming-events
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main Track\nRegistration / Info: http://www.udc.news/\n\nManually verified from Apple Valley Speedway's calendar.
-DTEND:20261231T170000Z
-LOCATION:Main Track
-DTSTART:20261231T080000Z
-SUMMARY:Apple Valley Speedway - Hayden's Birthday / New Years Bash
-UID:85d3da97-e619-477a-b08d-90fb5baf288e@85d3.org
-URL:http://www.udc.news/
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/registration\n\nAuto-imported from Drift Central schedule.
-DTEND:20260308T170000Z
-LOCATION:Salinas Municipal Airport
-DTSTART:20260308T070000Z
-SUMMARY:Drift Central - Drift Central
-UID:11ff4a04-6ffb-4b78-b92f-dd7589dd99d3@11ff.org
-URL:https://driftcentral.com/registration
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: DLUX\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://docs.google.com/forms/d/e/1FAIpQLSdPFCbJi7wmdKqm7CjqEVwW6W4S8ZKKofZj0U0lRUvwTFXlIg/viewform?fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnhcIPkC9N4JSyq6qchrc9CswEPdntrivA3xAzz3hvajxX4xoG7HmfpD1b73Y_aem_gl2-589OhrJDireBOJGslw\n\nManually added by the site owner.
-DTEND:20260913T170000Z
-LOCATION:Thunderhill Raceway Park
-DTSTART:20260913T080000Z
-SUMMARY:DLUX - DLUX Drift Practice Day
-UID:0e84e1da-927a-41a4-a6c5-6ed9d78ffd40@0e84.org
-URL:https://docs.google.com/forms/d/e/1FAIpQLSdPFCbJi7wmdKqm7CjqEVwW6W4S8ZKKofZj0U0lRUvwTFXlIg/viewform?fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnhcIPkC9N4JSyq6qchrc9CswEPdntrivA3xAzz3hvajxX4xoG7HmfpD1b73Y_aem_gl2-589OhrJDireBOJGslw
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Firebird Motorsports Park\nLocation: Firebird Motorsports Park\nRegistration / Info: https://gofastent.com/drift-n-drag\n\nManually added by the site owner.
-DTEND:20261121T170000Z
-LOCATION:Firebird Motorsports Park
-DTSTART:20261121T080000Z
-SUMMARY:Firebird Motorsports Park - Drift N Drags
-UID:90ee07c0-f479-4c5a-ac6f-f6f0ad150c2d@90ee.org
-URL:https://gofastent.com/drift-n-drag
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Musselman Honda Circuit\nLocation: Musselman Honda Circuit\nRegistration / Info: https://mhcircuit.com/event/open-drift-day-11/\n\nAuto-imported from Musselman Honda Circuit's calendar.
-DTEND:20270307T170000Z
-LOCATION:Musselman Honda Circuit
-DTSTART:20270307T100000Z
-SUMMARY:Musselman Honda Circuit - Open Drift Day
-UID:63ddb896-34b8-4f2c-a954-9229904afd12@63dd.org
-URL:https://mhcircuit.com/event/open-drift-day-11/
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Slide City\nLocation: Apple Valley Speedway - Main Track\nRegistration / Info: https://www.instagram.com/slidecity_events/\n\nManually added by the site owner. Hosted by Slide City at Apple Valley Speedway's Main Track.
-DTEND:20261004T000000Z
-LOCATION:Apple Valley Speedway - Main Track
-DTSTART:20261003T140000Z
-SUMMARY:Slide City - Slide City 16
-UID:d61b7b4f-56c8-4639-887f-cfb5f0ca415c@d61b.org
-URL:https://www.instagram.com/slidecity_events/
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: SuperD\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://super-d.net/pages/schedule\n\nSuperD schedule manually verified from super-d.net.
-DTEND:20261227T170000Z
-LOCATION:Thunderhill Raceway Park
-DTSTART:20261227T080000Z
-SUMMARY:SuperD - SuperD NYE
-UID:f3260955-ea8f-47ee-b733-fa8e89554dd8@f326.org
-URL:https://super-d.net/pages/schedule
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://bayareadrifting.com/schedule\n\nSaturday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.
-DTEND:20261017T170000Z
-LOCATION:Thunderhill Raceway Park
-DTSTART:20261017T080000Z
-SUMMARY:Bay Area Drifting - Thunderhill Drift School
-UID:8f18525a-8305-46ad-b73f-92dda9424ef9@8f18.org
-URL:https://bayareadrifting.com/schedule
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://bayareadrifting.com/schedule\n\nSaturday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.
-DTEND:20260314T170000Z
-LOCATION:Thunderhill Raceway Park
-DTSTART:20260314T080000Z
-SUMMARY:Bay Area Drifting - Thunderhill Drift School
-UID:6a8bdf85-8fbb-43fd-8d30-55ba15a2e9b1@6a8b.org
-URL:https://bayareadrifting.com/schedule
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Donutz4Dollarz\nLocation: Foresthill\, CA\nRegistration / Info: https://www.eventbrite.com/e/cabin-preshure-20-tickets-1991483852813\n\nManually added by the site owner.
-DTEND:20260712T170000Z
-LOCATION:Foresthill\, CA
-DTSTART:20260711T080000Z
-SUMMARY:Donutz4Dollarz - Cabin Preshure 2.0
-UID:1533e52f-2af3-41fb-82b1-8830cc2d6305@1533.org
-URL:https://www.eventbrite.com/e/cabin-preshure-20-tickets-1991483852813
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://bayareadrifting.com/schedule\n\nSunday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.
-DTEND:20260712T170000Z
-LOCATION:Thunderhill Raceway Park
-DTSTART:20260712T080000Z
-SUMMARY:Bay Area Drifting - Thunderhill Drift School
-UID:6f7e9113-20c1-4845-8ea1-681b2e6447a5@6f7e.org
-URL:https://bayareadrifting.com/schedule
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://bayareadrifting.com/schedule\n\nSunday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.
-DTEND:20261018T170000Z
-LOCATION:Thunderhill Raceway Park
-DTSTART:20261018T080000Z
-SUMMARY:Bay Area Drifting - Thunderhill Drift School
-UID:f0d00662-1d59-426e-9ca7-58072f84a37d@f0d0.org
-URL:https://bayareadrifting.com/schedule
+DESCRIPTION:Promoter: Valley Drift Club\nLocation: NASA Crows Landing Airport\nRegistration / Info: https://www.valleydriftclub.com/\n\nValley Drift Club event.
+DTEND:20260926T170000Z
+LOCATION:NASA Crows Landing Airport
+DTSTART:20260926T070000Z
+SUMMARY:Valley Drift Club - Valley Drift Club Event
+UID:7bfa7f30-2cce-4dc4-994e-5821c0716133@7bfa.org
+URL:https://www.valleydriftclub.com/
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main Track\nRegistration / Info: http://www.pacificdriftteam.com/\n\nManually verified from Apple Valley Speedway's calendar.
@@ -1113,34 +177,196 @@ DTEND:20261121T170000Z
 LOCATION:Main Track
 DTSTART:20261121T080000Z
 SUMMARY:Apple Valley Speedway - Pacific Drift Event
-UID:093afdcd-57b7-4f6c-8fef-93dd8a8100cb@093a.org
+UID:1ca8343e-ee11-414b-9d1e-f5d6a9091739@1ca8.org
 URL:http://www.pacificdriftteam.com/
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Promoter: DriftMaybe\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://www.instagram.com/p/DSyh94eFBve/\n\nManually added by the site owner.
-DTEND:20261212T170000Z
-LOCATION:Thunderhill Raceway Park
-DTSTART:20261212T080000Z
-SUMMARY:DriftMaybe - DriftMaybe
-UID:8e46a2d3-e94c-4292-beec-fb2eb4260725@8e46.org
-URL:https://www.instagram.com/p/DSyh94eFBve/
+DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main & Skid\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\nManually verified from Apple Valley Speedway's calendar.
+DTEND:20260819T170000Z
+LOCATION:Main & Skid
+DTSTART:20260819T080000Z
+SUMMARY:Apple Valley Speedway - Ctrl-Drive
+UID:0d7bb344-3ad4-446c-9776-b2ba5adad2aa@0d7b.org
+URL:https://applevalleyspeedway.com/calendar/
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Promoter: Qlispe Raceway Park\nLocation: Airway Heights\, WA\nRegistration / Info: https://tickets.thefoat.com/TheTrackatWildhorsePass/QLISPE+RACEWAY+DRIFT+N+DRAGS++SPOKANE+WA./tickets/id-tw65g8YOTIgv/clear_cart-1?fbclid=IwRlRTSATPU6FwZG9mBWZkaWQWULEmVpeEt1oYjtYXiBBFokOn0xHJGGV4dG4DYWVtAjEwAHNydGMGYXBwX2lkCjY2Mjg1NjgzNzkAAR6bOiOsld7ME4kKhi_naByRRifGZqe0D31lBtu8rsFBLWBVGTYg6IgGbfb08Q_aem_0Ab9YUYtI6SmnSaCfMHbNA\n\nManually added by the site owner.
-DTEND:20260725T230000Z
-LOCATION:Airway Heights\, WA
-DTSTART:20260725T150000Z
-SUMMARY:Qlispe Raceway Park - Drift N Drag
-UID:5a673bae-bb56-4b33-bf98-853f993df4ce@5a67.org
-URL:https://tickets.thefoat.com/TheTrackatWildhorsePass/QLISPE+RACEWAY+DRIFT+N+DRAGS++SPOKANE+WA./tickets/id-tw65g8YOTIgv/clear_cart-1?fbclid=IwRlRTSATPU6FwZG9mBWZkaWQWULEmVpeEt1oYjtYXiBBFokOn0xHJGGV4dG4DYWVtAjEwAHNydGMGYXBwX2lkCjY2Mjg1NjgzNzkAAR6bOiOsld7ME4kKhi_naByRRifGZqe0D31lBtu8rsFBLWBVGTYg6IgGbfb08Q_aem_0Ab9YUYtI6SmnSaCfMHbNA
+DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main Track\nRegistration / Info: http://www.corner-exit.com/\n\nManually verified from Apple Valley Speedway's calendar.
+DTEND:20260920T170000Z
+LOCATION:Main Track
+DTSTART:20260920T080000Z
+SUMMARY:Apple Valley Speedway - Corner Exit Touge Challenge
+UID:5dc20f1a-c9fe-423c-a35e-5c5d83917c8e@5dc2.org
+URL:http://www.corner-exit.com/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Fast In Fast Out\nLocation: Sonoma Raceway\nRegistration / Info: https://fastinfastouttrackdays.com/pages/upcoming-events\n\nAuto-imported from Fast In Fast Out upcoming events.
+DTEND:20260919T180000Z
+LOCATION:Sonoma Raceway
+DTSTART:20260919T080000Z
+SUMMARY:Fast In Fast Out - Fast In Fast Out Drift
+UID:11716f48-9911-47f7-8ec2-6d1c97fcf7e0@1171.org
+URL:https://fastinfastouttrackdays.com/pages/upcoming-events
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Fast In Fast Out\nLocation: Sonoma Raceway\nRegistration / Info: https://fastinfastouttrackdays.com/pages/upcoming-events\n\nAuto-imported from Fast In Fast Out upcoming events.
+DTEND:20260920T180000Z
+LOCATION:Sonoma Raceway
+DTSTART:20260920T080000Z
+SUMMARY:Fast In Fast Out - Fast In Fast Out Drift
+UID:204970bf-bcc5-4de6-968c-6ad19f49601d@2049.org
+URL:https://fastinfastouttrackdays.com/pages/upcoming-events
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main Track\nRegistration / Info: http://www.pacificdriftteam.com/\n\nManually verified from Apple Valley Speedway's calendar.
+DTEND:20270116T170000Z
+LOCATION:Main Track
+DTSTART:20270116T080000Z
+SUMMARY:Apple Valley Speedway - Pacific Drift Event
+UID:27a94712-9100-4893-b63c-43f7ba59926c@27a9.org
+URL:http://www.pacificdriftteam.com/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main & Skid\nRegistration / Info: http://flavorexpress.co/\n\nManually verified from Apple Valley Speedway's calendar.
+DTEND:20261212T170000Z
+LOCATION:Main & Skid
+DTSTART:20261212T080000Z
+SUMMARY:Apple Valley Speedway - Charity Drift 3
+UID:ad0bdc67-f9e0-4322-8594-346cdf0ee0b0@ad0b.org
+URL:http://flavorexpress.co/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: GoodLuckLeague\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://www.goodluckleague.com/schedule\n\nManually added by the site owner.
+DTEND:20260620T170000Z
+LOCATION:Thunderhill Raceway Park
+DTSTART:20260620T080000Z
+SUMMARY:GoodLuckLeague - Skidpad Social
+UID:0d60b3fb-78d8-45ef-9fa8-49db69b582d7@0d60.org
+URL:https://www.goodluckleague.com/schedule
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://bayareadrifting.com/schedule\n\nSaturday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.
+DTEND:20261114T170000Z
+LOCATION:Thunderhill Raceway Park
+DTSTART:20261114T080000Z
+SUMMARY:Bay Area Drifting - Thunderhill Drift School
+UID:7885dfb4-0625-48d6-9401-e48e6e72d53b@7885.org
+URL:https://bayareadrifting.com/schedule
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main & Skid\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\nManually verified from Apple Valley Speedway's calendar.
-DTEND:20260712T170000Z
+DTEND:20260829T170000Z
 LOCATION:Main & Skid
-DTSTART:20260712T080000Z
-SUMMARY:Apple Valley Speedway - Run It Up
-UID:e7051061-3826-431f-a77b-ce5ca87890b1@e705.org
+DTSTART:20260829T080000Z
+SUMMARY:Apple Valley Speedway - ClubTouge
+UID:17996ede-3b4b-42fc-8817-d5ae1136859f@1799.org
+URL:https://applevalleyspeedway.com/calendar/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Musselman Honda Circuit\nLocation: Musselman Honda Circuit\nRegistration / Info: https://mhcircuit.com/event/open-drift-day-12/\n\nAuto-imported from Musselman Honda Circuit's calendar.
+DTEND:20270404T170000Z
+LOCATION:Musselman Honda Circuit
+DTSTART:20270404T100000Z
+SUMMARY:Musselman Honda Circuit - Open Drift Day
+UID:51eb374f-da04-4b2e-8a0f-8339eb85ce98@51eb.org
+URL:https://mhcircuit.com/event/open-drift-day-12/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://bayareadrifting.com/schedule\n\nSunday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.
+DTEND:20260614T170000Z
+LOCATION:Thunderhill Raceway Park
+DTSTART:20260614T080000Z
+SUMMARY:Bay Area Drifting - Thunderhill Drift School
+UID:635d4b87-c607-48a7-bc01-c8130ca2f26b@635d.org
+URL:https://bayareadrifting.com/schedule
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main & Skid\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\nManually verified from Apple Valley Speedway's calendar.
+DTEND:20261004T170000Z
+LOCATION:Main & Skid
+DTSTART:20261004T080000Z
+SUMMARY:Apple Valley Speedway - N.A. Nonsuri
+UID:9b0c4b73-bb0b-48c1-89e4-172bbe336ebe@9b0c.org
+URL:https://applevalleyspeedway.com/calendar/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: The Mill Drift Track\nLocation: Sweet Home\, OR\nRegistration / Info: https://themilldrifttrack.com/event/open-drift-day-august-15th/\n\nManually added by the site owner.
+DTEND:20260815T160000Z
+LOCATION:Sweet Home\, OR
+DTSTART:20260815T090000Z
+SUMMARY:The Mill Drift Track - Open Drift Day
+UID:ecf1dc40-e12f-47ad-b77e-afd8ee5556c3@ecf1.org
+URL:https://themilldrifttrack.com/event/open-drift-day-august-15th/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main & Skid\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\nManually verified from Apple Valley Speedway's calendar.
+DTEND:20261219T170000Z
+LOCATION:Main & Skid
+DTSTART:20261219T080000Z
+SUMMARY:Apple Valley Speedway - Three's Racing Drift Day
+UID:430710f5-6f3a-4d91-86ef-9e73cd874bb4@4307.org
+URL:https://applevalleyspeedway.com/calendar/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/registration\n\nAuto-imported from Drift Central schedule.
+DTEND:20260809T170000Z
+LOCATION:Salinas Municipal Airport
+DTSTART:20260809T070000Z
+SUMMARY:Drift Central - Drift Central
+UID:9171670a-eb66-44b6-ab30-36587085627b@9171.org
+URL:https://driftcentral.com/registration
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main & Skid\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\nManually verified from Apple Valley Speedway's calendar.
+DTEND:20260823T170000Z
+LOCATION:Main & Skid
+DTSTART:20260823T080000Z
+SUMMARY:Apple Valley Speedway - Hawt August Night
+UID:fa59f5e6-c4c7-4fec-a22a-fe1561bb0557@fa59.org
+URL:https://applevalleyspeedway.com/calendar/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Slide City\nLocation: Apple Valley Speedway - Main Track\nRegistration / Info: https://www.instagram.com/slidecity_events/\n\nManually added by the site owner. Hosted by Slide City at Apple Valley Speedway's Main Track.
+DTEND:20261004T000000Z
+LOCATION:Apple Valley Speedway - Main Track
+DTSTART:20261003T140000Z
+SUMMARY:Slide City - Slide City 16
+UID:2de7f7f8-9a0e-4f23-9ff0-577bbf87a44a@2de7.org
+URL:https://www.instagram.com/slidecity_events/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main Track\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\nManually verified from Apple Valley Speedway's calendar.
+DTEND:20260822T170000Z
+LOCATION:Main Track
+DTSTART:20260822T080000Z
+SUMMARY:Apple Valley Speedway - BackroadBucket Birthday Bash - Day 2
+UID:a90a4345-7bdd-4bc9-858f-70eafb30c04e@a90a.org
+URL:https://applevalleyspeedway.com/calendar/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/registration\n\nAuto-imported from Drift Central schedule.
+DTEND:20260808T170000Z
+LOCATION:Salinas Municipal Airport
+DTSTART:20260808T070000Z
+SUMMARY:Drift Central - Drift Central
+UID:adad405f-a6cb-48d1-9d95-1e364e3e1331@adad.org
+URL:https://driftcentral.com/registration
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main Track\nRegistration / Info: http://www.corner-exit.com/\n\nManually verified from Apple Valley Speedway's calendar.
+DTEND:20261011T170000Z
+LOCATION:Main Track
+DTSTART:20261011T080000Z
+SUMMARY:Apple Valley Speedway - Corner Exit Touge Challenge
+UID:56a58069-9222-453d-ad2c-b07e3f0e914d@56a5.org
+URL:http://www.corner-exit.com/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main & Skid\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\n3-day event. Manually verified from Apple Valley Speedway's calendar.
+DTEND:20261115T170000Z
+LOCATION:Main & Skid
+DTSTART:20261113T080000Z
+SUMMARY:Apple Valley Speedway - Runit Promotions
+UID:290e6133-68c9-44fe-be3e-2ad90b97b04a@290e.org
 URL:https://applevalleyspeedway.com/calendar/
 END:VEVENT
 BEGIN:VEVENT
@@ -1149,16 +375,790 @@ DTEND:20260711T170000Z
 LOCATION:NASA Crows Landing Airport
 DTSTART:20260711T070000Z
 SUMMARY:Valley Drift Club - Valley Drift Club Event
-UID:819be46f-7a52-4f51-b586-feafd41a0781@819b.org
+UID:264fd1be-cff1-4b1b-add4-5dc441ede593@264f.org
 URL:https://www.valleydriftclub.com/
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main Track\nRegistration / Info: http://www.corner-exit.com/\n\nManually verified from Apple Valley Speedway's calendar.
-DTEND:20260920T170000Z
+DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main Track\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\nManually verified from Apple Valley Speedway's calendar.
+DTEND:20260821T170000Z
 LOCATION:Main Track
-DTSTART:20260920T080000Z
-SUMMARY:Apple Valley Speedway - Corner Exit Touge Challenge
-UID:46c85020-dfd4-4210-93f8-44bdf280377a@46c8.org
-URL:http://www.corner-exit.com/
+DTSTART:20260821T080000Z
+SUMMARY:Apple Valley Speedway - BackroadBucket Birthday Bash
+UID:1ea62d0b-3837-4389-b33a-caf22f3931e3@1ea6.org
+URL:https://applevalleyspeedway.com/calendar/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/registration\n\nAuto-imported from Drift Central schedule.
+DTEND:20260308T170000Z
+LOCATION:Salinas Municipal Airport
+DTSTART:20260308T070000Z
+SUMMARY:Drift Central - Drift Central
+UID:6651b37e-4d28-4181-8a17-d281da55f653@6651.org
+URL:https://driftcentral.com/registration
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://bayareadrifting.com/schedule\n\nSaturday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.
+DTEND:20260613T170000Z
+LOCATION:Thunderhill Raceway Park
+DTSTART:20260613T080000Z
+SUMMARY:Bay Area Drifting - Thunderhill Drift School
+UID:8cf27aad-0065-4608-a6f4-dd870bf5a0f2@8cf2.org
+URL:https://bayareadrifting.com/schedule
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Qlispe Raceway Park\nLocation: Airway Heights\, WA\nRegistration / Info: https://gofastent.com/drift-n-drag\n\nManually added by the site owner.
+DTEND:20260822T170000Z
+LOCATION:Airway Heights\, WA
+DTSTART:20260822T080000Z
+SUMMARY:Qlispe Raceway Park - Drift N Drags
+UID:ee438371-902e-47d8-82c6-fded7a627ae3@ee43.org
+URL:https://gofastent.com/drift-n-drag
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main Track\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\nManually verified from Apple Valley Speedway's calendar.
+DTEND:20260710T170000Z
+LOCATION:Main Track
+DTSTART:20260710T080000Z
+SUMMARY:Apple Valley Speedway - UDC x Drift Japan Tours Benkei Birthday Bash
+UID:3d3327a7-67e7-4db2-9b1d-74f52a30e6d2@3d33.org
+URL:https://applevalleyspeedway.com/calendar/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Firebird Motorsports Park\nLocation: West Track\nRegistration / Info: https://gofastent.com/drift-n-drag\n\nManually added by the site owner.
+DTEND:20260801T170000Z
+LOCATION:West Track
+DTSTART:20260801T080000Z
+SUMMARY:Firebird Motorsports Park - West Track Drift N Drags
+UID:8ff953cf-713c-4b37-986e-e2428ef61127@8ff9.org
+URL:https://gofastent.com/drift-n-drag
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Nice Tires\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://nicetires.shop/pages/events\n\nManually added by the site owner.
+DTEND:20260717T170000Z
+LOCATION:Thunderhill Raceway Park
+DTSTART:20260717T080000Z
+SUMMARY:Nice Tires - Nice Tires Drift Day
+UID:f702d07d-770f-49b7-80f9-a813b5389cc0@f702.org
+URL:https://nicetires.shop/pages/events
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: GoodLuckLeague\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://www.goodluckleague.com/schedule\n\nManually added by the site owner.
+DTEND:20261128T170000Z
+LOCATION:Thunderhill Raceway Park
+DTSTART:20261128T080000Z
+SUMMARY:GoodLuckLeague - GLL Drift Day
+UID:23a29b85-a1e4-469b-a2de-e09de5a77ba3@23a2.org
+URL:https://www.goodluckleague.com/schedule
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main Track\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\nManually verified from Apple Valley Speedway's calendar.
+DTEND:20261206T170000Z
+LOCATION:Main Track
+DTSTART:20261206T080000Z
+SUMMARY:Apple Valley Speedway - Section 8 Drifting Invitational - Day 2
+UID:ddae2b83-51f1-494e-8500-873fe2f52788@ddae.org
+URL:https://applevalleyspeedway.com/calendar/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/registration\n\nAuto-imported from Drift Central schedule.
+DTEND:20260307T170000Z
+LOCATION:Salinas Municipal Airport
+DTSTART:20260307T070000Z
+SUMMARY:Drift Central - Drift Central
+UID:78184860-f117-4083-b5fa-294ea7f7e2c2@7818.org
+URL:https://driftcentral.com/registration
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main & Skid\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\nManually verified from Apple Valley Speedway's calendar.
+DTEND:20261031T170000Z
+LOCATION:Main & Skid
+DTSTART:20261031T080000Z
+SUMMARY:Apple Valley Speedway - Soso Halloween Bash
+UID:c8eed362-d07a-45ae-b68d-57dae738f5fc@c8ee.org
+URL:https://applevalleyspeedway.com/calendar/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/registration\n\nAuto-imported from Drift Central schedule.
+DTEND:20260607T170000Z
+LOCATION:Salinas Municipal Airport
+DTSTART:20260607T070000Z
+SUMMARY:Drift Central - Drift Central
+UID:46e8fb60-38c0-4845-969b-e8ed04c712ec@46e8.org
+URL:https://driftcentral.com/registration
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Musselman Honda Circuit\nLocation: Musselman Honda Circuit\nRegistration / Info: https://mhcircuit.com/event/spooky-drift-7/\n\nAuto-imported from Musselman Honda Circuit's calendar.
+DTEND:20261023T220000Z
+LOCATION:Musselman Honda Circuit
+DTSTART:20261023T170000Z
+SUMMARY:Musselman Honda Circuit - Spooky Drift
+UID:7011daf7-5524-467c-bb33-b0e823ac018c@7011.org
+URL:https://mhcircuit.com/event/spooky-drift-7/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/registration\n\nAuto-imported from Drift Central schedule.
+DTEND:20260404T170000Z
+LOCATION:Salinas Municipal Airport
+DTSTART:20260404T070000Z
+SUMMARY:Drift Central - Drift Central
+UID:8a3ba2d4-ff93-4c69-a121-d4f2f7962e0e@8a3b.org
+URL:https://driftcentral.com/registration
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Firebird Motorsports Park\nLocation: Firebird Motorsports Park\nRegistration / Info: https://gofastent.com/event-schedule\n\nManually added by the site owner.
+DTEND:20261219T170000Z
+LOCATION:Firebird Motorsports Park
+DTSTART:20261219T080000Z
+SUMMARY:Firebird Motorsports Park - Winter Drift
+UID:2748d926-e8e2-479e-9933-8d5f5c9544f8@2748.org
+URL:https://gofastent.com/event-schedule
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Valley Drift Club\nLocation: NASA Crows Landing Airport\nRegistration / Info: https://www.valleydriftclub.com/\n\nValley Drift Club event.
+DTEND:20261121T170000Z
+LOCATION:NASA Crows Landing Airport
+DTSTART:20261121T070000Z
+SUMMARY:Valley Drift Club - Valley Drift Club Event
+UID:af4f410b-e05f-4422-b082-fd75ea6ae0bf@af4f.org
+URL:https://www.valleydriftclub.com/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://bayareadrifting.com/schedule\n\nSunday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.
+DTEND:20260118T170000Z
+LOCATION:Thunderhill Raceway Park
+DTSTART:20260118T080000Z
+SUMMARY:Bay Area Drifting - Thunderhill Drift School
+UID:ff349cda-96d9-4af8-80fd-07a3214b674b@ff34.org
+URL:https://bayareadrifting.com/schedule
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Outlaw Drift\nLocation: San Joaquin County Fairgrounds\nRegistration / Info: https://stockton99.com/outlaw-drift\n\nAuto-imported from Outlaw Drift's Stockton 99 schedule page.
+DTEND:20260726T160000Z
+LOCATION:San Joaquin County Fairgrounds
+DTSTART:20260726T100000Z
+SUMMARY:Outlaw Drift - Outlaw Drift Series Practice Day - Drifting
+UID:4f47b4dd-b26b-4efe-ac40-00f8944d5f48@4f47.org
+URL:https://stockton99.com/outlaw-drift
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: GoodLuckLeague\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://www.goodluckleague.com/schedule\n\nManually added by the site owner.
+DTEND:20261219T170000Z
+LOCATION:Thunderhill Raceway Park
+DTSTART:20261219T080000Z
+SUMMARY:GoodLuckLeague - GLL Practice Day
+UID:de1b7cc4-128c-4291-b57f-c5348c8e1460@de1b.org
+URL:https://www.goodluckleague.com/schedule
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Club Rowdy\nLocation: Reno Fernley Raceway\nRegistration / Info: https://clubrowdy.com/products/hottest-august-nights-july-31-august-1-2\n\nDay 1 of 3. Manually added by the site owner.
+DTEND:20260731T170000Z
+LOCATION:Reno Fernley Raceway
+DTSTART:20260731T080000Z
+SUMMARY:Club Rowdy - Hottest August Nights
+UID:17fc443c-d485-4f3f-b8df-472ae1905359@17fc.org
+URL:https://clubrowdy.com/products/hottest-august-nights-july-31-august-1-2
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://bayareadrifting.com/schedule\n\nSunday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.
+DTEND:20260524T170000Z
+LOCATION:Thunderhill Raceway Park
+DTSTART:20260524T080000Z
+SUMMARY:Bay Area Drifting - Thunderhill Drift School
+UID:83c8a149-4bfe-4076-8e93-45cd4def1801@83c8.org
+URL:https://bayareadrifting.com/schedule
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/registration\n\nAuto-imported from Drift Central schedule.
+DTEND:20260705T170000Z
+LOCATION:Salinas Municipal Airport
+DTSTART:20260705T070000Z
+SUMMARY:Drift Central - Drift Central
+UID:60165e47-e360-4bd1-9c09-df70b213a210@6016.org
+URL:https://driftcentral.com/registration
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Valley Drift Club\nLocation: NASA Crows Landing Airport\nRegistration / Info: https://www.valleydriftclub.com/\n\nValley Drift Club event.
+DTEND:20260829T170000Z
+LOCATION:NASA Crows Landing Airport
+DTSTART:20260829T070000Z
+SUMMARY:Valley Drift Club - Valley Drift Club Event
+UID:71be8289-22f5-4bfb-ab17-6576fd39ecb6@71be.org
+URL:https://www.valleydriftclub.com/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://bayareadrifting.com/schedule\n\nSunday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.
+DTEND:20261018T170000Z
+LOCATION:Thunderhill Raceway Park
+DTSTART:20261018T080000Z
+SUMMARY:Bay Area Drifting - Thunderhill Drift School
+UID:07b3cd2c-20ac-4f02-a621-974091f2f602@07b3.org
+URL:https://bayareadrifting.com/schedule
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Cali Kansai\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://calikansai.com/products/ck7-driver-registration\n\nManually added by the site owner.
+DTEND:20260816T170000Z
+LOCATION:Thunderhill Raceway Park
+DTSTART:20260816T090000Z
+SUMMARY:Cali Kansai - CK7
+UID:3b44e47a-b73a-4e95-b307-86621cd74dfa@3b44.org
+URL:https://calikansai.com/products/ck7-driver-registration
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://bayareadrifting.com/schedule\n\nSaturday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.
+DTEND:20260711T170000Z
+LOCATION:Thunderhill Raceway Park
+DTSTART:20260711T080000Z
+SUMMARY:Bay Area Drifting - Thunderhill Drift School
+UID:d440fc4d-6c36-47dd-90f8-f7e41534975a@d440.org
+URL:https://bayareadrifting.com/schedule
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Musselman Honda Circuit\nLocation: Musselman Honda Circuit\nRegistration / Info: https://mhcircuit.com/event/desert-drift-street-league-6/\n\nAuto-imported from Musselman Honda Circuit's calendar.
+DTEND:20261107T160000Z
+LOCATION:Musselman Honda Circuit
+DTSTART:20261107T090000Z
+SUMMARY:Musselman Honda Circuit - Desert Drift Street League
+UID:9c98a843-7b2c-44c7-8d10-b6b014f03701@9c98.org
+URL:https://mhcircuit.com/event/desert-drift-street-league-6/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://bayareadrifting.com/schedule\n\nSunday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.
+DTEND:20261115T170000Z
+LOCATION:Thunderhill Raceway Park
+DTSTART:20261115T080000Z
+SUMMARY:Bay Area Drifting - Thunderhill Drift School
+UID:5a5d0ee2-0003-4e0e-91c7-a6c1b7645634@5a5d.org
+URL:https://bayareadrifting.com/schedule
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main Track\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\nManually verified from Apple Valley Speedway's calendar.
+DTEND:20260718T170000Z
+LOCATION:Main Track
+DTSTART:20260718T080000Z
+SUMMARY:Apple Valley Speedway - Slide City 15
+UID:92e08860-d2a0-4be0-8135-1fd3e486f6bb@92e0.org
+URL:https://applevalleyspeedway.com/calendar/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: DriftMaybe\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://www.instagram.com/p/DSyh94eFBve/\n\nManually added by the site owner.
+DTEND:20261010T170000Z
+LOCATION:Thunderhill Raceway Park
+DTSTART:20261010T080000Z
+SUMMARY:DriftMaybe - DriftMaybe
+UID:68714601-56b9-435a-9fd2-34b78becd81d@6871.org
+URL:https://www.instagram.com/p/DSyh94eFBve/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/registration\n\nAuto-imported from Drift Central schedule.
+DTEND:20261011T170000Z
+LOCATION:Salinas Municipal Airport
+DTSTART:20261011T070000Z
+SUMMARY:Drift Central - Drift Central
+UID:a2e86da0-5fdd-44ca-8fc5-c299734d1bdd@a2e8.org
+URL:https://driftcentral.com/registration
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://bayareadrifting.com/schedule\n\nSaturday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.
+DTEND:20261017T170000Z
+LOCATION:Thunderhill Raceway Park
+DTSTART:20261017T080000Z
+SUMMARY:Bay Area Drifting - Thunderhill Drift School
+UID:aebf4974-1c42-4e73-a2e9-c890d5268f89@aebf.org
+URL:https://bayareadrifting.com/schedule
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Fast In Fast Out\nLocation: Sonoma Raceway\nRegistration / Info: https://fastinfastouttrackdays.com/pages/upcoming-events\n\nAuto-imported from Fast In Fast Out upcoming events.
+DTEND:20260918T180000Z
+LOCATION:Sonoma Raceway
+DTSTART:20260918T080000Z
+SUMMARY:Fast In Fast Out - Fast In Fast Out Drift
+UID:356236ae-35a8-40bf-9301-0d7c442cb52e@3562.org
+URL:https://fastinfastouttrackdays.com/pages/upcoming-events
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://bayareadrifting.com/schedule\n\nSaturday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.
+DTEND:20260912T170000Z
+LOCATION:Thunderhill Raceway Park
+DTSTART:20260912T080000Z
+SUMMARY:Bay Area Drifting - Thunderhill Drift School
+UID:e8ebf1ec-64e5-4c5f-bb00-889865513f75@e8eb.org
+URL:https://bayareadrifting.com/schedule
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Drift Evolution\nLocation: Affinity Circuit\nRegistration / Info: https://driftevolution.trackrabbit.com/\n\n2-day event. Manually added by the site owner.
+DTEND:20261115T170000Z
+LOCATION:Affinity Circuit
+DTSTART:20261114T080000Z
+SUMMARY:Drift Evolution - Cold Winter Nights
+UID:90b1ce2f-a5be-4074-950b-7059b82eb332@90b1.org
+URL:https://driftevolution.trackrabbit.com/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: GoodLuckLeague\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://www.goodluckleague.com/schedule\n\nManually added by the site owner.
+DTEND:20261011T170000Z
+LOCATION:Thunderhill Raceway Park
+DTSTART:20261011T080000Z
+SUMMARY:GoodLuckLeague - GLL Battle Comp
+UID:388766a1-eaf4-4949-ba90-9fee343a987c@3887.org
+URL:https://www.goodluckleague.com/schedule
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://bayareadrifting.com/schedule\n\nSaturday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.
+DTEND:20260418T170000Z
+LOCATION:Thunderhill Raceway Park
+DTSTART:20260418T080000Z
+SUMMARY:Bay Area Drifting - Thunderhill Drift School
+UID:eb71b980-1d1e-49b4-a63e-4b22d67c9ea9@eb71.org
+URL:https://bayareadrifting.com/schedule
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/registration\n\nAuto-imported from Drift Central schedule.
+DTEND:20260405T170000Z
+LOCATION:Salinas Municipal Airport
+DTSTART:20260405T070000Z
+SUMMARY:Drift Central - Drift Central
+UID:fb5dba77-5868-4af5-9c1c-b438707040d3@fb5d.org
+URL:https://driftcentral.com/registration
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://bayareadrifting.com/schedule\n\nSunday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.
+DTEND:20260215T170000Z
+LOCATION:Thunderhill Raceway Park
+DTSTART:20260215T080000Z
+SUMMARY:Bay Area Drifting - Thunderhill Drift School
+UID:3fb79559-cd48-45d3-8ef6-4905cd3935ab@3fb7.org
+URL:https://bayareadrifting.com/schedule
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/registration\n\nAuto-imported from Drift Central schedule.
+DTEND:20261129T170000Z
+LOCATION:Salinas Municipal Airport
+DTSTART:20261129T070000Z
+SUMMARY:Drift Central - Drift Central
+UID:01af2160-aa8e-4514-b03a-2f96ac27f545@01af.org
+URL:https://driftcentral.com/registration
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Valley Drift Club\nLocation: NASA Crows Landing Airport\nRegistration / Info: https://www.valleydriftclub.com/\n\nValley Drift Club event.
+DTEND:20261219T170000Z
+LOCATION:NASA Crows Landing Airport
+DTSTART:20261219T070000Z
+SUMMARY:Valley Drift Club - Valley Drift Club Event
+UID:21741a23-09dc-4ac0-9bb4-2388828b1d8a@2174.org
+URL:https://www.valleydriftclub.com/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://bayareadrifting.com/schedule\n\nSunday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.
+DTEND:20260419T170000Z
+LOCATION:Thunderhill Raceway Park
+DTSTART:20260419T080000Z
+SUMMARY:Bay Area Drifting - Thunderhill Drift School
+UID:7ce2f137-54cd-4737-8d81-92f1468095fe@7ce2.org
+URL:https://bayareadrifting.com/schedule
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: SuperD\nLocation: Affinity Circuit\nRegistration / Info: https://super-d.net/pages/schedule\n\nManually added by the site owner\; not listed on super-d.net at time of scraping.
+DTEND:20260705T170000Z
+LOCATION:Affinity Circuit
+DTSTART:20260704T080000Z
+SUMMARY:SuperD - Independence D-Day
+UID:3aa8830c-7c9a-4eec-b8c4-b845737acc25@3aa8.org
+URL:https://super-d.net/pages/schedule
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Musselman Honda Circuit\nLocation: Musselman Honda Circuit\nRegistration / Info: https://mhcircuit.com/event/drift-night-14/\n\nAuto-imported from Musselman Honda Circuit's calendar.
+DTEND:20260905T220000Z
+LOCATION:Musselman Honda Circuit
+DTSTART:20260905T160000Z
+SUMMARY:Musselman Honda Circuit - Drift Night
+UID:d57e3a6c-f3c6-4e05-9d61-85350946343d@d57e.org
+URL:https://mhcircuit.com/event/drift-night-14/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Drift Evolution\nLocation: Affinity Circuit\nRegistration / Info: https://driftevolution.trackrabbit.com/\n\n2-day event. Manually added by the site owner.
+DTEND:20261011T170000Z
+LOCATION:Affinity Circuit
+DTSTART:20261010T080000Z
+SUMMARY:Drift Evolution - Pumpkin Bash
+UID:55aec7a7-7596-40a4-b84e-0c9fec700103@55ae.org
+URL:https://driftevolution.trackrabbit.com/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Firebird Motorsports Park\nLocation: Firebird Motorsports Park\nRegistration / Info: https://gofastent.com/drift-n-drag\n\nManually added by the site owner.
+DTEND:20261121T170000Z
+LOCATION:Firebird Motorsports Park
+DTSTART:20261121T080000Z
+SUMMARY:Firebird Motorsports Park - Drift N Drags
+UID:b9360443-14d5-40f6-8356-e3a291d0be18@b936.org
+URL:https://gofastent.com/drift-n-drag
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main Track\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\nManually verified from Apple Valley Speedway's calendar.
+DTEND:20261205T170000Z
+LOCATION:Main Track
+DTSTART:20261205T080000Z
+SUMMARY:Apple Valley Speedway - Section 8 Drifting Invitational
+UID:af6d6451-f25c-47fb-ac02-572ba8c0e1a0@af6d.org
+URL:https://applevalleyspeedway.com/calendar/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Fast In Fast Out\nLocation: Sonoma Raceway\nRegistration / Info: https://fastinfastouttrackdays.com/pages/upcoming-events\n\nAuto-imported from Fast In Fast Out upcoming events.
+DTEND:20261122T180000Z
+LOCATION:Sonoma Raceway
+DTSTART:20261122T080000Z
+SUMMARY:Fast In Fast Out - Fast In Fast Out Drift
+UID:f3c84db2-911e-4da5-b838-7b95adf54be8@f3c8.org
+URL:https://fastinfastouttrackdays.com/pages/upcoming-events
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Club Rowdy\nLocation: Reno Fernley Raceway\nRegistration / Info: https://clubrowdy.com/products/hottest-august-nights-july-31-august-1-2\n\nDay 2 of 3. Manually added by the site owner.
+DTEND:20260801T170000Z
+LOCATION:Reno Fernley Raceway
+DTSTART:20260801T080000Z
+SUMMARY:Club Rowdy - Hottest August Nights
+UID:9146acdf-1229-4a27-8f3b-61fbe49f2042@9146.org
+URL:https://clubrowdy.com/products/hottest-august-nights-july-31-august-1-2
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Musselman Honda Circuit\nLocation: Musselman Honda Circuit\nRegistration / Info: https://mhcircuit.com/event/open-drift-day-8/\n\nAuto-imported from Musselman Honda Circuit's calendar.
+DTEND:20261206T170000Z
+LOCATION:Musselman Honda Circuit
+DTSTART:20261206T100000Z
+SUMMARY:Musselman Honda Circuit - Open Drift Day
+UID:267b97fa-753a-4a06-8e10-b4162da7a0d1@267b.org
+URL:https://mhcircuit.com/event/open-drift-day-8/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://bayareadrifting.com/schedule\n\nSunday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.
+DTEND:20260712T170000Z
+LOCATION:Thunderhill Raceway Park
+DTSTART:20260712T080000Z
+SUMMARY:Bay Area Drifting - Thunderhill Drift School
+UID:c8d66d41-194e-4340-99ca-c0a8a38228d0@c8d6.org
+URL:https://bayareadrifting.com/schedule
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main Track\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\nManually verified from Apple Valley Speedway's calendar.
+DTEND:20261107T170000Z
+LOCATION:Main Track
+DTSTART:20261107T080000Z
+SUMMARY:Apple Valley Speedway - DriftGala
+UID:fdcdfc80-75ee-400a-b079-4f95bdf04e43@fdcd.org
+URL:https://applevalleyspeedway.com/calendar/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main & Skid\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\nManually verified from Apple Valley Speedway's calendar.
+DTEND:20261101T170000Z
+LOCATION:Main & Skid
+DTSTART:20261101T080000Z
+SUMMARY:Apple Valley Speedway - KINOD Miataween
+UID:f8639f33-0d72-4016-b294-ca30fd36279c@f863.org
+URL:https://applevalleyspeedway.com/calendar/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Drift Evolution\nLocation: Affinity Circuit\nRegistration / Info: https://driftevolution.trackrabbit.com/\n\n2-day event. Manually added by the site owner.
+DTEND:20260913T170000Z
+LOCATION:Affinity Circuit
+DTSTART:20260912T080000Z
+SUMMARY:Drift Evolution - THUNDERDRIFT
+UID:4d692d2a-35b9-4d3e-ba34-42374e60aa51@4d69.org
+URL:https://driftevolution.trackrabbit.com/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: DLUX\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://docs.google.com/forms/d/e/1FAIpQLSdPFCbJi7wmdKqm7CjqEVwW6W4S8ZKKofZj0U0lRUvwTFXlIg/viewform?fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnhcIPkC9N4JSyq6qchrc9CswEPdntrivA3xAzz3hvajxX4xoG7HmfpD1b73Y_aem_gl2-589OhrJDireBOJGslw\n\nManually added by the site owner.
+DTEND:20260913T170000Z
+LOCATION:Thunderhill Raceway Park
+DTSTART:20260913T080000Z
+SUMMARY:DLUX - DLUX Drift Practice Day
+UID:fb808860-2e82-4af1-8f2e-1f858683afd4@fb80.org
+URL:https://docs.google.com/forms/d/e/1FAIpQLSdPFCbJi7wmdKqm7CjqEVwW6W4S8ZKKofZj0U0lRUvwTFXlIg/viewform?fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnhcIPkC9N4JSyq6qchrc9CswEPdntrivA3xAzz3hvajxX4xoG7HmfpD1b73Y_aem_gl2-589OhrJDireBOJGslw
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: DLUX\nLocation: Affinity Circuit\nRegistration / Info: https://www.instagram.com/p/DYU4Oi4lI2i/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==\n\nManually added by the site owner. Invite-only\; registration link points to the Instagram announcement post.
+DTEND:20260816T170000Z
+LOCATION:Affinity Circuit
+DTSTART:20260815T080000Z
+SUMMARY:DLUX - DLUX Invitational
+UID:70a510e5-488a-446f-bdce-b43a3752ca5e@70a5.org
+URL:https://www.instagram.com/p/DYU4Oi4lI2i/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Sonoma Raceway\nLocation: Sonoma Raceway\nRegistration / Info: https://www.sonomaraceway.com/events/winter-jam/\n\n2-day event. Manually added by the site owner.
+DTEND:20270117T170000Z
+LOCATION:Sonoma Raceway
+DTSTART:20270116T080000Z
+SUMMARY:Sonoma Raceway - Winter Jam
+UID:e151d38c-b6dc-40f6-92c7-d543b137597f@e151.org
+URL:https://www.sonomaraceway.com/events/winter-jam/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Desert Drift Street League\nLocation: Radford Racing School\nRegistration / Info: https://www.desertdriftstreetleague.com\n\nManually added by the site owner from a flyer image. Night event\, 6PM-12AM.
+DTEND:20260815T235900Z
+LOCATION:Radford Racing School
+DTSTART:20260815T180000Z
+SUMMARY:Desert Drift Street League - Desert Drift Street League Round Two
+UID:877e1765-3d94-44b2-b8d5-491dc18b2951@877e.org
+URL:https://www.desertdriftstreetleague.com
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main Track\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\nManually verified from Apple Valley Speedway's calendar.
+DTEND:20260918T170000Z
+LOCATION:Main Track
+DTSTART:20260918T080000Z
+SUMMARY:Apple Valley Speedway - Ultimate Drifting Challenge Round 4
+UID:1690a1c2-d3d0-4741-ae41-0915ac8021e5@1690.org
+URL:https://applevalleyspeedway.com/calendar/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/registration\n\nAuto-imported from Drift Central schedule.
+DTEND:20261010T170000Z
+LOCATION:Salinas Municipal Airport
+DTSTART:20261010T070000Z
+SUMMARY:Drift Central - Drift Central
+UID:9c8d9003-8b96-44ba-b357-deb8ab0101d7@9c8d.org
+URL:https://driftcentral.com/registration
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/registration\n\nAuto-imported from Drift Central schedule.
+DTEND:20261128T170000Z
+LOCATION:Salinas Municipal Airport
+DTSTART:20261128T070000Z
+SUMMARY:Drift Central - Drift Central
+UID:9d1aa23d-a6eb-4d24-845c-45ab5611dd14@9d1a.org
+URL:https://driftcentral.com/registration
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Musselman Honda Circuit\nLocation: Musselman Honda Circuit\nRegistration / Info: https://mhcircuit.com/event/open-drift-day-11/\n\nAuto-imported from Musselman Honda Circuit's calendar.
+DTEND:20270307T170000Z
+LOCATION:Musselman Honda Circuit
+DTSTART:20270307T100000Z
+SUMMARY:Musselman Honda Circuit - Open Drift Day
+UID:45fcdb84-04fb-4206-ab8a-c01f9fcc9e10@45fc.org
+URL:https://mhcircuit.com/event/open-drift-day-11/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Qlispe Raceway Park\nLocation: Airway Heights\, WA\nRegistration / Info: https://tickets.thefoat.com/TheTrackatWildhorsePass/QLISPE+RACEWAY+DRIFT+N+DRAGS++SPOKANE+WA./tickets/id-tw65g8YOTIgv/clear_cart-1?fbclid=IwRlRTSATPU6FwZG9mBWZkaWQWULEmVpeEt1oYjtYXiBBFokOn0xHJGGV4dG4DYWVtAjEwAHNydGMGYXBwX2lkCjY2Mjg1NjgzNzkAAR6bOiOsld7ME4kKhi_naByRRifGZqe0D31lBtu8rsFBLWBVGTYg6IgGbfb08Q_aem_0Ab9YUYtI6SmnSaCfMHbNA\n\nManually added by the site owner.
+DTEND:20260725T230000Z
+LOCATION:Airway Heights\, WA
+DTSTART:20260725T150000Z
+SUMMARY:Qlispe Raceway Park - Drift N Drag
+UID:0c70bcd8-9793-4bcd-9f94-85a7a7c4da0b@0c70.org
+URL:https://tickets.thefoat.com/TheTrackatWildhorsePass/QLISPE+RACEWAY+DRIFT+N+DRAGS++SPOKANE+WA./tickets/id-tw65g8YOTIgv/clear_cart-1?fbclid=IwRlRTSATPU6FwZG9mBWZkaWQWULEmVpeEt1oYjtYXiBBFokOn0xHJGGV4dG4DYWVtAjEwAHNydGMGYXBwX2lkCjY2Mjg1NjgzNzkAAR6bOiOsld7ME4kKhi_naByRRifGZqe0D31lBtu8rsFBLWBVGTYg6IgGbfb08Q_aem_0Ab9YUYtI6SmnSaCfMHbNA
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: GoodLuckLeague\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://www.goodluckleague.com/schedule\n\nManually added by the site owner.
+DTEND:20260912T170000Z
+LOCATION:Thunderhill Raceway Park
+DTSTART:20260912T080000Z
+SUMMARY:GoodLuckLeague - GLL Practice Day
+UID:9e9cf971-b6ab-4a85-aa12-9113309f6b3b@9e9c.org
+URL:https://www.goodluckleague.com/schedule
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Firebird Motorsports Park\nLocation: Main Track\nRegistration / Info: https://gofastent.com/drift-n-drag\n\nManually added by the site owner.
+DTEND:20260919T170000Z
+LOCATION:Main Track
+DTSTART:20260919T080000Z
+SUMMARY:Firebird Motorsports Park - Drift N Drags
+UID:d3e517eb-17cb-4054-b43e-7f79ca1206af@d3e5.org
+URL:https://gofastent.com/drift-n-drag
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main & Skid\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\nManually verified from Apple Valley Speedway's calendar.
+DTEND:20260712T170000Z
+LOCATION:Main & Skid
+DTSTART:20260712T080000Z
+SUMMARY:Apple Valley Speedway - Run It Up
+UID:aa7a37ff-e3e2-4c3a-b12d-50a43b95f262@aa7a.org
+URL:https://applevalleyspeedway.com/calendar/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main Track\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\n2-day event\, Friday-Saturday\, 8:00 AM-6:00 PM both days. Manually verified from Apple Valley Speedway's calendar.
+DTEND:20260725T180000Z
+LOCATION:Main Track
+DTSTART:20260724T080000Z
+SUMMARY:Apple Valley Speedway - Ultimate Drifting Challenge Round 3
+UID:6e028796-0fcc-4cb5-b6ec-bbe2713c8019@6e02.org
+URL:https://applevalleyspeedway.com/calendar/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://bayareadrifting.com/schedule\n\nSunday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.
+DTEND:20260315T170000Z
+LOCATION:Thunderhill Raceway Park
+DTSTART:20260315T080000Z
+SUMMARY:Bay Area Drifting - Thunderhill Drift School
+UID:25c898a3-34ce-44c2-affd-0ece9dd74eba@25c8.org
+URL:https://bayareadrifting.com/schedule
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://bayareadrifting.com/schedule\n\nSaturday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.
+DTEND:20260808T170000Z
+LOCATION:Thunderhill Raceway Park
+DTSTART:20260808T080000Z
+SUMMARY:Bay Area Drifting - Thunderhill Drift School
+UID:d223303e-5133-4959-bac7-11e32c7fdb2c@d223.org
+URL:https://bayareadrifting.com/schedule
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: SuperD\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://super-d.net/pages/schedule\n\nSuperD schedule manually verified from super-d.net.
+DTEND:20261227T170000Z
+LOCATION:Thunderhill Raceway Park
+DTSTART:20261227T080000Z
+SUMMARY:SuperD - SuperD NYE
+UID:56d28076-8083-4eb2-8c17-c8ca3a292cf1@56d2.org
+URL:https://super-d.net/pages/schedule
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: SuperD\nLocation: Apple Valley Speedway\nRegistration / Info: https://super-d.net/pages/schedule\n\nSuperD schedule manually verified from super-d.net.
+DTEND:20261025T170000Z
+LOCATION:Apple Valley Speedway
+DTSTART:20261025T080000Z
+SUMMARY:SuperD - SuperD Cup - Day 2
+UID:9ec95547-aca0-43bf-97f8-4bc9976d2bfb@9ec9.org
+URL:https://super-d.net/pages/schedule
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main Track\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\n2-day event. Manually corrected by the site owner - was previously listed as two separate events (Endless Summer Nights 6 / Ultra Bash).
+DTEND:20260809T170000Z
+LOCATION:Main Track
+DTSTART:20260808T080000Z
+SUMMARY:Apple Valley Speedway - Ultra Summer Nights
+UID:af30d857-93f0-49c5-8342-aa92be88611f@af30.org
+URL:https://applevalleyspeedway.com/calendar/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Donutz4Dollarz\nLocation: Foresthill\, CA\nRegistration / Info: https://www.eventbrite.com/e/cabin-preshure-20-tickets-1991483852813\n\nManually added by the site owner.
+DTEND:20260712T170000Z
+LOCATION:Foresthill\, CA
+DTSTART:20260711T080000Z
+SUMMARY:Donutz4Dollarz - Cabin Preshure 2.0
+UID:6fb22295-43da-4264-b04a-394522bd8a5d@6fb2.org
+URL:https://www.eventbrite.com/e/cabin-preshure-20-tickets-1991483852813
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Don Racing\nLocation: Affinity Circuit\nRegistration / Info: https://www.instagram.com/reel/DX9wqVBRgvz/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==\n\nManually added by the site owner. Registration link points to the Instagram announcement reel.
+DTEND:20260830T170000Z
+LOCATION:Affinity Circuit
+DTSTART:20260828T080000Z
+SUMMARY:Don Racing - Navapalooza 8
+UID:4d69aaf3-b4ea-441b-b81b-d3ea3e9370ff@4d69.org
+URL:https://www.instagram.com/reel/DX9wqVBRgvz/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: DriftMaybe\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://www.instagram.com/p/DSyh94eFBve/\n\nManually added by the site owner.
+DTEND:20261114T170000Z
+LOCATION:Thunderhill Raceway Park
+DTSTART:20261114T080000Z
+SUMMARY:DriftMaybe - DriftMaybe
+UID:e9772a90-aab3-4de3-a75e-e33f7b4fc7a8@e977.org
+URL:https://www.instagram.com/p/DSyh94eFBve/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main & Skid\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\nManually verified from Apple Valley Speedway's calendar.
+DTEND:20260711T170000Z
+LOCATION:Main & Skid
+DTSTART:20260711T080000Z
+SUMMARY:Apple Valley Speedway - BAY2APPLEVALLEY
+UID:49c9245c-be27-43cf-a205-29cf35ad724d@49c9.org
+URL:https://applevalleyspeedway.com/calendar/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main & Skid\nRegistration / Info: http://flavorexpress.co/\n\nManually verified from Apple Valley Speedway's calendar.
+DTEND:20261017T170000Z
+LOCATION:Main & Skid
+DTSTART:20261017T080000Z
+SUMMARY:Apple Valley Speedway - Drift or Treat 2
+UID:6df7feea-e02a-4a78-b0e2-04a894ecca6d@6df7.org
+URL:http://flavorexpress.co/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main & Skid\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\nManually verified from Apple Valley Speedway's calendar.
+DTEND:20261016T170000Z
+LOCATION:Main & Skid
+DTSTART:20261016T080000Z
+SUMMARY:Apple Valley Speedway - Drivers Ed
+UID:4a3e6466-7ea2-40db-a3be-6cbeb53320d6@4a3e.org
+URL:https://applevalleyspeedway.com/calendar/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Fast In Fast Out\nLocation: Sonoma Raceway\nRegistration / Info: https://fastinfastouttrackdays.com/pages/upcoming-events\n\nAuto-imported from Fast In Fast Out upcoming events.
+DTEND:20261121T180000Z
+LOCATION:Sonoma Raceway
+DTSTART:20261121T080000Z
+SUMMARY:Fast In Fast Out - Fast In Fast Out Drift
+UID:29ce468f-8c4d-44c1-acf1-47d2a5362993@29ce.org
+URL:https://fastinfastouttrackdays.com/pages/upcoming-events
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/registration\n\nAuto-imported from Drift Central schedule.
+DTEND:20260606T170000Z
+LOCATION:Salinas Municipal Airport
+DTSTART:20260606T070000Z
+SUMMARY:Drift Central - Drift Central
+UID:a14340f8-9c38-4bf8-b3a0-9563970370db@a143.org
+URL:https://driftcentral.com/registration
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: SuperD\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://super-d.net/pages/schedule\n\nSuperD schedule manually verified from super-d.net.
+DTEND:20260815T170000Z
+LOCATION:Thunderhill Raceway Park
+DTSTART:20260815T080000Z
+SUMMARY:SuperD - D-Day
+UID:d2a8bc3c-7bb8-4c46-9ca1-79a95e585dac@d2a8.org
+URL:https://super-d.net/pages/schedule
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: SuperD\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://super-d.net/pages/schedule\n\nSuperD schedule manually verified from super-d.net.
+DTEND:20261129T170000Z
+LOCATION:Thunderhill Raceway Park
+DTSTART:20261129T080000Z
+SUMMARY:SuperD - D-Day
+UID:76b608c1-3737-4994-85c6-bbba26d85bb3@76b6.org
+URL:https://super-d.net/pages/schedule
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Musselman Honda Circuit\nLocation: Musselman Honda Circuit\nRegistration / Info: https://mhcircuit.com/event/open-drift-day-10/\n\nAuto-imported from Musselman Honda Circuit's calendar.
+DTEND:20270207T170000Z
+LOCATION:Musselman Honda Circuit
+DTSTART:20270207T100000Z
+SUMMARY:Musselman Honda Circuit - Open Drift Day
+UID:a275b14d-5d10-4780-b4de-d1c0cd67ecce@a275.org
+URL:https://mhcircuit.com/event/open-drift-day-10/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Kansei Wheels\nLocation: Affinity Circuit\nRegistration / Info: https://www.trackrabbit.com/event/details/10019541-Kansei-Invitational--2026-08-08\n\nManually added by the site owner.
+DTEND:20260809T170000Z
+LOCATION:Affinity Circuit
+DTSTART:20260808T080000Z
+SUMMARY:Kansei Wheels - Kansei Invitational
+UID:67f50042-398b-4486-a9ea-c39d4f5866c2@67f5.org
+URL:https://www.trackrabbit.com/event/details/10019541-Kansei-Invitational--2026-08-08
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main Track\nRegistration / Info: http://www.udc.news/\n\nManually verified from Apple Valley Speedway's calendar.
+DTEND:20261231T170000Z
+LOCATION:Main Track
+DTSTART:20261231T080000Z
+SUMMARY:Apple Valley Speedway - Hayden's Birthday / New Years Bash
+UID:17d58832-79b1-4bb8-b612-0ea7ff0e0587@17d5.org
+URL:http://www.udc.news/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: RaceWorz\nLocation: Sonoma Raceway\nRegistration / Info: https://raceworzusa.com\n\n2-day event. Manually added by the site owner.
+DTEND:20260614T170000Z
+LOCATION:Sonoma Raceway
+DTSTART:20260613T080000Z
+SUMMARY:RaceWorz - RaceWorz
+UID:685b924d-0c5a-479b-ac5b-5bbfc27066ad@685b.org
+URL:https://raceworzusa.com
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://bayareadrifting.com/schedule\n\nSaturday. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.
+DTEND:20260523T170000Z
+LOCATION:Thunderhill Raceway Park
+DTSTART:20260523T080000Z
+SUMMARY:Bay Area Drifting - Thunderhill Drift School
+UID:ccf1f878-54f2-4783-8db8-325af2b4cac4@ccf1.org
+URL:https://bayareadrifting.com/schedule
 END:VEVENT
 END:VCALENDAR
