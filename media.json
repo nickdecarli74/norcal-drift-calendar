@@ -226,5 +226,16 @@
         "addedAt": "2026-08-10T01:55:55.060Z"
       }
     ]
+  },
+  {
+    "eventId": "av-2026-08-08",
+    "submissions": [
+      {
+        "name": "@kameranfpv",
+        "role": "video",
+        "url": "https://kameranfpv.com/g/flavor-express-summer-nights-day-one?fbclid=PAZnRzaATmzf9wZG9mAmZkaWQWUMMpr1NpRZlENE647M76x52RwiRlzmV4dG4DYWVtAjExAHNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABp-RH8wlLv9l8bkILAxE-k1BLfzqJaWe0xNeFYlG8uzm0zCZXuxJ4hsxcZ_zT_aem_RWqGRGqUP1Fucyt5F1Bp9A",
+        "addedAt": "2026-08-10T15:32:52.522Z"
+      }
+    ]
   }
 ]
