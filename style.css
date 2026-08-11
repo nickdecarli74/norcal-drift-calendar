@@ -233,10 +233,11 @@ body{
 
 .featured-row-title{
   color:#e10600;
-  font-size:15px;
+  font-size:28px;
   font-weight:900;
-  letter-spacing:3px;
-  margin-bottom:16px;
+  font-style:italic;
+  letter-spacing:1px;
+  margin-bottom:18px;
 }
 
 .featured-grid{
