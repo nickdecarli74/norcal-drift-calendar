@@ -415,89 +415,83 @@ function renderFeaturedPartnerEvent(events){
   `;
 }
 
-function renderNextEvent(events){
-  const now = new Date();
-  const upcoming = events.filter(e => new Date(e.start.replace(" ","T")) >= now);
+const FEATURED_ROW_MAX = 3;
 
-  const featuredNext = upcoming
-    .filter(e => e.featuredNext)
-    .sort((a,b) => new Date(a.start.replace(" ","T")) - new Date(b.start.replace(" ","T")))[0];
-
-  const next = featuredNext || (upcoming.length ? upcoming[0] : events[0]);
-
-  if(!next){
-    document.getElementById("next-event").innerHTML = "";
-    return;
-  }
-
-  const p = formatDateParts(next.start);
-
-  document.getElementById("next-event").innerHTML = `
-    <div class="event-inner">
-      <div class="date">
-        <div class="next">NEXT EVENT</div>
-        <div class="month">${p.month}</div>
-        <div class="day">${p.day}</div>
-        <div class="year">${p.year}</div>
+function featuredCardHtml(event, ctaLabel, href, external){
+  const p = formatDateParts(event.start);
+  return `
+    <a class="featured-card" href="${href}"${external ? ' target="_blank" rel="noopener"' : ""}>
+      <div class="featured-card-date">${p.full}${weatherBadge(event)}</div>
+      <div class="featured-card-title">${event.title}</div>
+      <div class="featured-card-info">
+        📍 ${event.location}<br>
+        🏁 ${event.promoter}
       </div>
-      <div>
-        <div class="event-title">${next.title}</div>
-        <div class="event-info">
-          📍 ${next.location}<br>
-          🏁 ${next.promoter}<br>
-          🕘 ${p.full}
-        </div>
-        <a class="view-btn" href="${eventUrl(next)}" target="_blank">VIEW EVENT ›</a>
-      </div>
-    </div>
+      <div class="featured-card-link">${ctaLabel}</div>
+    </a>
   `;
 }
 
+// Picks up to FEATURED_ROW_MAX events from `pool` (pinned candidates first,
+// e.g. featured/featuredNext events), skipping duplicates.
+function pickFeaturedEvents(pinned, pool){
+  const picks = [];
+  for(const e of [...pinned, ...pool]){
+    if(picks.length >= FEATURED_ROW_MAX) break;
+    if(!picks.includes(e)) picks.push(e);
+  }
+  return picks;
+}
+
+function renderNextEvent(events){
+  const wrap = document.getElementById("next-events-wrap");
+  const container = document.getElementById("next-events");
+  if(!container) return;
+
+  const now = new Date();
+  const upcoming = events
+    .filter(e => new Date(e.start.replace(" ","T")) >= now)
+    .sort((a,b) => new Date(a.start.replace(" ","T")) - new Date(b.start.replace(" ","T")));
+
+  const featuredNext = upcoming.filter(e => e.featuredNext);
+  const picks = pickFeaturedEvents(featuredNext, upcoming);
+
+  if(!picks.length){
+    container.innerHTML = "";
+    if(wrap) wrap.style.display = "none";
+    return;
+  }
+
+  if(wrap) wrap.style.display = "";
+  container.innerHTML = picks
+    .map(e => featuredCardHtml(e, "VIEW EVENT ›", eventUrl(e), true))
+    .join("");
+}
+
 function renderJustHappened(events){
+  const wrap = document.getElementById("just-happened-wrap");
   const container = document.getElementById("just-happened");
   if(!container) return;
 
   const now = new Date();
-  const pastEvents = events.filter(e => new Date(e.start.replace(" ","T")) < now);
+  const pastEvents = events
+    .filter(e => new Date(e.start.replace(" ","T")) < now)
+    .sort((a,b) => new Date(b.start.replace(" ","T")) - new Date(a.start.replace(" ","T")));
 
-  const featured = pastEvents
-    .filter(e => e.featured)
-    .sort((a,b) => new Date(b.start.replace(" ","T")) - new Date(a.start.replace(" ","T")))[0];
+  const featured = pastEvents.filter(e => e.featured);
+  const automatic = pastEvents.filter(e => mediaWindowOpen(e));
+  const picks = pickFeaturedEvents(featured, automatic);
 
-  const automatic = pastEvents
-    .filter(e => mediaWindowOpen(e))
-    .sort((a,b) => new Date(b.start.replace(" ","T")) - new Date(a.start.replace(" ","T")))[0];
-
-  const event = featured || automatic;
-
-  if(!event){
+  if(!picks.length){
     container.innerHTML = "";
-    container.style.display = "none";
+    if(wrap) wrap.style.display = "none";
     return;
   }
 
-  container.style.display = "";
-  const p = formatDateParts(event.start);
-
-  container.innerHTML = `
-    <div class="event-inner">
-      <div class="date">
-        <div class="next">JUST HAPPENED</div>
-        <div class="month">${p.month}</div>
-        <div class="day">${p.day}</div>
-        <div class="year">${p.year}</div>
-      </div>
-      <div>
-        <div class="event-title">${event.title}</div>
-        <div class="event-info">
-          📍 ${event.location}<br>
-          🏁 ${event.promoter}<br>
-          🕘 ${p.full}
-        </div>
-        <a class="view-btn" href="media.html?event=${encodeURIComponent(event.id)}">VIEW MEDIA ›</a>
-      </div>
-    </div>
-  `;
+  if(wrap) wrap.style.display = "";
+  container.innerHTML = picks
+    .map(e => featuredCardHtml(e, "VIEW MEDIA ›", `media.html?event=${encodeURIComponent(e.id)}`, false))
+    .join("");
 }
 
 function renderUpcoming(events){
@@ -911,5 +905,5 @@ Promise.all([
     });
   })
   .catch(() => {
-    document.getElementById("next-event").innerHTML = "<div class='event-inner'>Could not load events.</div>";
+    document.getElementById("next-events").innerHTML = "<div class='media-empty'>Could not load events.</div>";
   });
