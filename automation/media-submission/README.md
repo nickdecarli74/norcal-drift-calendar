@@ -69,7 +69,10 @@ match), it emails you the raw submission instead of silently failing or guessing
 3. Check GitHub for a new PR titled `Media submission: <name> (<eventId>)`. The PR
    should only touch `media.json` and add exactly one submission.
 4. Check your email for the notification — it should include the link, role, and the
-   private contact info (which is intentionally not in the PR).
+   Contact field's value. If Contact looks like an email it stays private (not in the
+   PR); if it looks like an Instagram handle instead, it's pulled into the PR as the
+   submission's `instagram` field (public, since that's the point of the media page) —
+   the email tells you which happened.
 5. Close the test PR without merging (or merge it and then remove the entry from
    `media.json` in a follow-up commit) — same pattern as manually testing the form
    before this automation existed.

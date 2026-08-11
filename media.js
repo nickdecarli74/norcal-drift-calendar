@@ -311,6 +311,50 @@ function renderRecentSubmissions(events, mediaData){
   `).join("");
 }
 
+/* ---- Instagram handle detection ----
+   Most submitters put their Instagram handle straight into the "Name/Handle"
+   form field. We derive a profile link from that (or an @mention inside it)
+   rather than requiring a separate form field, and skip it when the main
+   submission link already points at that same Instagram profile. */
+
+function instagramProfileHandleFromUrl(url){
+  try{
+    const u = new URL(url);
+    if(!u.hostname.replace("www.","").includes("instagram")) return null;
+    const parts = u.pathname.split("/").filter(Boolean);
+    if(!parts.length) return null;
+    const reserved = new Set(["p","reel","reels","stories","tv","explore"]);
+    if(reserved.has(parts[0].toLowerCase())) return null;
+    return parts[0].toLowerCase();
+  }catch(e){
+    return null;
+  }
+}
+
+function instagramHandleFor(s){
+  let handle = null;
+
+  if(s.instagram){
+    handle = s.instagram.trim().replace(/^@/,"");
+  }else{
+    const mention = s.name.match(/@([a-zA-Z0-9_.]{2,30})/);
+    if(mention){
+      handle = mention[1];
+    }else{
+      const trimmed = s.name.trim();
+      if(/^[a-zA-Z0-9_.]{2,30}$/.test(trimmed)) handle = trimmed;
+    }
+  }
+
+  if(!handle) return null;
+  handle = handle.replace(/\.+$/,"");
+
+  const linkedProfile = instagramProfileHandleFromUrl(s.url);
+  if(linkedProfile && linkedProfile === handle.toLowerCase()) return null;
+
+  return handle;
+}
+
 /* ---- media.html: single event gallery page ---- */
 
 function renderMediaPage(events, mediaData){
@@ -340,14 +384,32 @@ function renderMediaPage(events, mediaData){
   const photogSubs = submissions.filter(s => s.role !== "driver");
   const driverSubs = submissions.filter(s => s.role === "driver");
 
-  const cardHtml = s => `
-    <a class="photog-card" href="${s.url}" target="_blank" rel="noopener">
-      <div class="photog-role">${roleLabel(s.role)}</div>
-      <div class="photog-name">${s.name}</div>
-      <div class="photog-platform">${platformLabel(s.url)} ›</div>
-      ${s.note ? `<div class="photog-note">${s.note}</div>` : ""}
-    </a>
+  const igIcon = `
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+      <circle cx="12" cy="12" r="4"></circle>
+      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle>
+    </svg>
   `;
+
+  const cardHtml = s => {
+    const igHandle = instagramHandleFor(s);
+    return `
+    <div class="photog-card">
+      <a class="photog-card-link" href="${s.url}" target="_blank" rel="noopener">
+        <div class="photog-role">${roleLabel(s.role)}</div>
+        <div class="photog-name">${s.name}</div>
+        <div class="photog-platform">${platformLabel(s.url)} ›</div>
+        ${s.note ? `<div class="photog-note">${s.note}</div>` : ""}
+      </a>
+      ${igHandle ? `
+        <a class="photog-ig-btn" href="https://instagram.com/${igHandle}" target="_blank" rel="noopener">
+          ${igIcon}<span>@${igHandle}</span>
+        </a>
+      ` : ""}
+    </div>
+  `;
+  };
 
   const photogHtml = photogSubs.length
     ? photogSubs.map(cardHtml).join("")

@@ -5,7 +5,10 @@
  * form. An installable "On form submit" trigger calls onFormSubmit(e) below,
  * which resolves the submitted event to a media.json eventId, opens a PR against
  * the DriftWest GitHub repo with the new submission, and emails the owner a
- * summary (including the private Contact field, which never goes in the PR).
+ * summary. The Contact field ("Email or Instagram handle") stays private and out
+ * of the PR when it looks like an email; when it looks like an Instagram handle
+ * instead, that handle is pulled into the PR as the submission's public
+ * `instagram` field.
  *
  * Setup: see README.md in this same folder. Do not hardcode the GitHub token —
  * it's read from Script Properties (GITHUB_TOKEN) at runtime.
@@ -55,6 +58,15 @@ function onFormSubmit(e) {
     var role = mapRole_(roleAnswer);
     var submission = { name: name, role: role, url: link };
     if (notes) submission.note = notes;
+
+    // The Contact field asks for "Email or Instagram handle" - if what they gave us
+    // isn't an email, it's very likely their handle, and unlike an email that's fine
+    // to publish (that's the whole point of the media page). This is a fallback for
+    // submitters whose Name/Handle answer was a real name rather than their @, since
+    // media.js otherwise can only infer the handle from that field.
+    var igFromContact = extractInstagramHandle_(contact);
+    if (igFromContact) submission.instagram = igFromContact;
+
     submission.addedAt = new Date().toISOString();
 
     var token = getGithubToken_();
@@ -79,11 +91,12 @@ function onFormSubmit(e) {
       "Add media submission: " + name + " (" + role + ") for " + eventId
     );
 
-    var prUrl = openPullRequest_(token, branch, name, role, eventId);
+    var prUrl = openPullRequest_(token, branch, name, role, eventId, igFromContact);
 
     sendOwnerEmail_(prUrl, {
       name: name, role: role, link: link, note: notes,
-      contact: contact, eventId: eventId, eventAnswer: eventAnswer
+      contact: contact, instagram: igFromContact,
+      eventId: eventId, eventAnswer: eventAnswer
     });
   } catch (err) {
     sendAlertEmail_(err, raw);
@@ -112,6 +125,25 @@ function extractNamedValues_(e) {
 function firstValue_(namedValues, field) {
   var arr = namedValues[field];
   return arr && arr.length ? String(arr[0]).trim() : "";
+}
+
+// Pulls an Instagram handle out of the Contact field ("Email or Instagram handle"),
+// but only when it's clearly NOT an email - genuine emails must never end up in the
+// PR/media.json, only in the owner's notification email. Handles multi-value answers
+// like "myhandle / me@gmail.com" by checking each whitespace/slash/comma-separated
+// token independently rather than the whole string at once.
+function extractInstagramHandle_(contact) {
+  if (!contact) return null;
+  var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  var tokens = contact.trim().split(/[\s,\/|]+/).filter(Boolean);
+
+  for (var i = 0; i < tokens.length; i++) {
+    var token = tokens[i];
+    if (emailPattern.test(token)) continue;
+    var handle = token.replace(/^@/, "").replace(/\.+$/, "");
+    if (/^[a-zA-Z0-9_.]{2,30}$/.test(handle)) return handle;
+  }
+  return null;
 }
 
 function mapRole_(answer) {
@@ -261,16 +293,17 @@ function commitFile_(token, path, newContent, sha, branch, message) {
   );
 }
 
-function openPullRequest_(token, branch, name, role, eventId) {
+function openPullRequest_(token, branch, name, role, eventId, instagram) {
   var body = [
     "Automated media submission from the DriftWest form.",
     "",
     "- **Name/handle:** " + name,
     "- **Role:** " + role,
     "- **Event:** " + eventId,
+    instagram ? "- **Instagram (from Contact field):** @" + instagram : null,
     "",
-    "Contact info was emailed to the site owner separately and is not included here."
-  ].join("\n");
+    "Contact info (if an email) was emailed to the site owner separately and is not included here."
+  ].filter(function (l) { return l !== null; }).join("\n");
 
   var pr = githubFetch_(
     token,
@@ -317,7 +350,9 @@ function sendOwnerEmail_(prUrl, s) {
     "Link: " + s.link,
     s.note ? "Note: " + s.note : null,
     "",
-    "Contact (not in the PR): " + (s.contact || "(not provided)")
+    s.instagram
+      ? "Contact: " + s.contact + " (Instagram handle @" + s.instagram + " was included in the PR - it's meant to be public)"
+      : "Contact (not in the PR): " + (s.contact || "(not provided)")
   ].filter(function (l) { return l !== null; }).join("\n");
 
   MailApp.sendEmail(OWNER_EMAIL, "DriftWest media submission: " + s.name, lines);

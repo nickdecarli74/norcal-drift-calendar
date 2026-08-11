@@ -1280,8 +1280,6 @@ body{
   border-radius:14px;
   padding:22px;
   background:rgba(255,255,255,.04);
-  text-decoration:none;
-  color:white;
   transition:.2s;
 }
 
@@ -1289,6 +1287,39 @@ body{
   border-color:#e10600;
   transform:translateY(-3px);
   box-shadow:0 0 28px rgba(225,6,0,.16);
+}
+
+.photog-card-link{
+  display:block;
+  text-decoration:none;
+  color:white;
+}
+
+.photog-ig-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  margin-top:16px;
+  padding:6px 12px;
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:20px;
+  color:#aaa;
+  font-size:12px;
+  font-weight:700;
+  text-decoration:none;
+  transition:.2s;
+}
+
+.photog-ig-btn:hover{
+  border-color:#e10600;
+  color:white;
+  background:rgba(225,6,0,.1);
+}
+
+.photog-ig-btn svg{
+  width:14px;
+  height:14px;
+  flex-shrink:0;
 }
 
 .photog-role{
