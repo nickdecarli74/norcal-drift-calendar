@@ -4,14 +4,32 @@
    and media.html (per-event gallery page)
    ========================================= */
 
-function formatDateParts(dateStr){
+function formatDateParts(dateStr, endStr){
   const d = new Date(dateStr.replace(" ", "T"));
+  const sameDay = !endStr || dateStr.slice(0,10) === endStr.slice(0,10);
+
+  let full;
+  if(sameDay){
+    full = d.toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"});
+  } else {
+    const end = new Date(endStr.replace(" ","T"));
+    const sameMonth = d.getMonth() === end.getMonth() && d.getFullYear() === end.getFullYear();
+    const sameYear = d.getFullYear() === end.getFullYear();
+    if(sameMonth){
+      full = `${d.toLocaleDateString("en-US",{month:"short"})} ${d.getDate()}–${end.getDate()}, ${end.getFullYear()}`;
+    } else if(sameYear){
+      full = `${d.toLocaleDateString("en-US",{month:"short",day:"numeric"})} – ${end.toLocaleDateString("en-US",{month:"short",day:"numeric"})}, ${end.getFullYear()}`;
+    } else {
+      full = `${d.toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"})} – ${end.toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"})}`;
+    }
+  }
+
   return {
     date: d,
     month: d.toLocaleString("en-US",{month:"short"}).toUpperCase(),
     day: d.getDate(),
     year: d.getFullYear(),
-    full: d.toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"})
+    full
   };
 }
 
@@ -125,7 +143,7 @@ function renderMediaSection(events, mediaData){
   if(chipRow) chipRow.style.display = "";
 
   grid.innerHTML = cards.map(({meta, event}) => {
-    const p = formatDateParts(event.start);
+    const p = formatDateParts(event.start, event.end);
     const count = meta.submissions.length;
     const metaLine = count
       ? `${count} ${count === 1 ? "submission" : "submissions"} posted`
@@ -377,7 +395,7 @@ function renderMediaPage(events, mediaData){
     return;
   }
 
-  const p = formatDateParts(event.start);
+  const p = formatDateParts(event.start, event.end);
   document.title = `${event.title} — Media | DriftWest`;
 
   const submissions = meta ? meta.submissions : [];

@@ -418,7 +418,7 @@ function renderFeaturedPartnerEvent(events){
 const FEATURED_ROW_MAX = 3;
 
 function featuredCardHtml(event, ctaLabel, href, external){
-  const p = formatDateParts(event.start);
+  const p = formatDateParts(event.start, event.end);
   return `
     <a class="featured-card" href="${href}"${external ? ' target="_blank" rel="noopener"' : ""}>
       <div class="featured-card-date">${p.full}${weatherBadge(event)}</div>
@@ -501,7 +501,7 @@ function renderUpcoming(events){
     .slice(0, 8);
 
   document.getElementById("upcoming-events").innerHTML = upcoming.map(e => {
-    const p = formatDateParts(e.start);
+    const p = formatDateParts(e.start, e.end);
     return `
       <a class="small-card" href="${eventUrl(e)}" target="_blank" style="text-decoration:none;color:white">
         <div class="small-date">${p.full}${weatherBadge(e)}</div>
@@ -766,7 +766,7 @@ function openEventModal(eventId){
   const e = allEvents.find(x => x.id === eventId);
   if(!e) return;
 
-  const p = formatDateParts(e.start);
+  const p = formatDateParts(e.start, e.end);
   const w = weatherBadge(e);
 
   const mediaMeta = allMedia.find(m => m.eventId === e.id);
