@@ -60,25 +60,31 @@ def get_events():
         date_text = match.group(1)
 
         dates = parse_date_range(date_text)
+        if not dates:
+            continue
 
-        for month, day in dates:
-            event_id = make_event_id(month, day)
+        # A range like "Aug 8-9" is one weekend event, not two - use the
+        # first day for the id/start and the last day for the end so it
+        # spans the whole range as a single event (one media page).
+        first_month, first_day = dates[0]
+        last_month, last_day = dates[-1]
+        event_id = make_event_id(first_month, first_day)
 
-            if event_id in seen_ids:
-                continue
+        if event_id in seen_ids:
+            continue
 
-            seen_ids.add(event_id)
+        seen_ids.add(event_id)
 
-            events.append({
-                "id": event_id,
-                "title": TITLE,
-                "promoter": "Drift Central",
-                "start": f"{YEAR}-{month:02d}-{day:02d} 07:00",
-                "end": f"{YEAR}-{month:02d}-{day:02d} 17:00",
-                "location": LOCATION,
-                "url": REGISTER_URL,
-                "notes": "Auto-imported from Drift Central schedule."
-            })
+        events.append({
+            "id": event_id,
+            "title": TITLE,
+            "promoter": "Drift Central",
+            "start": f"{YEAR}-{first_month:02d}-{first_day:02d} 07:00",
+            "end": f"{YEAR}-{last_month:02d}-{last_day:02d} 17:00",
+            "location": LOCATION,
+            "url": REGISTER_URL,
+            "notes": "Auto-imported from Drift Central schedule."
+        })
 
     print(f"Drift Central scraper found {len(events)} events.")
 
