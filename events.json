@@ -627,6 +627,17 @@
     "addedAt": "2026-07-08T00:00:00+00:00"
   },
   {
+    "id": "av-2026-08-27",
+    "title": "Rubber4Roses",
+    "promoter": "Apple Valley Speedway",
+    "start": "2026-08-27 08:00",
+    "end": "2026-08-28 17:00",
+    "location": "Main Track",
+    "url": "https://www.instagram.com/p/Db83CpGGCot/?img_index=1",
+    "notes": "Supreme Automotive Display, presented by Manifested Illlesions. Driver Entry $100, Spectator/Track Fee $15. Contact @cuba2chaka. Manually added by the site owner.",
+    "addedAt": "2026-08-14T00:00:00+00:00"
+  },
+  {
     "id": "nava-2026-08-28",
     "title": "Navapalooza 8",
     "promoter": "Don Racing",
@@ -813,6 +824,17 @@
     "url": "https://www.valleydriftclub.com/",
     "notes": "Valley Drift Club event.",
     "addedAt": "2026-07-08T00:00:00+00:00"
+  },
+  {
+    "id": "av-2026-09-27",
+    "title": "Chaser Motorsports",
+    "promoter": "Apple Valley Speedway",
+    "start": "2026-09-27 09:00",
+    "end": "2026-09-28 00:00",
+    "location": "Main Track",
+    "url": "https://applevalleyspeedway.com/calendar/",
+    "notes": "Presented by @santanao_o. $90 driver / $15 gate fee, 55 driver spots, 16-hour track day. Manually added by the site owner.",
+    "addedAt": "2026-08-11T00:00:00+00:00"
   },
   {
     "id": "mhc-2026-10-03",
@@ -1419,27 +1441,5 @@
     "url": "https://mhcircuit.com/event/open-drift-day-12/",
     "notes": "Auto-imported from Musselman Honda Circuit's calendar.",
     "addedAt": "2026-08-03T01:05:00+00:00"
-  },
-  {
-    "id": "av-2026-09-27",
-    "title": "Chaser Motorsports",
-    "promoter": "Apple Valley Speedway",
-    "start": "2026-09-27 09:00",
-    "end": "2026-09-28 00:00",
-    "location": "Main Track",
-    "url": "https://applevalleyspeedway.com/calendar/",
-    "notes": "Presented by @santanao_o. $90 driver / $15 gate fee, 55 driver spots, 16-hour track day. Manually added by the site owner.",
-    "addedAt": "2026-08-11T00:00:00+00:00"
-  },
-  {
-    "id": "av-2026-08-27",
-    "title": "Rubber4Roses",
-    "promoter": "Apple Valley Speedway",
-    "start": "2026-08-27 08:00",
-    "end": "2026-08-28 17:00",
-    "location": "Main Track",
-    "url": "https://www.instagram.com/p/Db83CpGGCot/?img_index=1",
-    "notes": "Supreme Automotive Display, presented by Manifested Illlesions. Driver Entry $100, Spectator/Track Fee $15. Contact @cuba2chaka. Manually added by the site owner.",
-    "addedAt": "2026-08-14T00:00:00+00:00"
   }
 ]
