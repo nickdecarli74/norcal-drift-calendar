@@ -1,4 +1,5 @@
 import re
+from datetime import datetime, timedelta
 import requests
 from bs4 import BeautifulSoup
 
@@ -27,8 +28,8 @@ def get_events():
         re.IGNORECASE
     )
 
-    events = []
-    seen = set()
+    days = []
+    seen_dates = set()
 
     for match in pattern.finditer(text):
         weekday = match.group(1).title()
@@ -37,15 +38,43 @@ def get_events():
         month = MONTHS[month_name]
         date_key = f"{YEAR}-{month:02d}-{day:02d}"
 
-        event_id = f"bad-{date_key}"
-
-        if event_id in seen:
+        if date_key in seen_dates:
             continue
 
-        seen.add(event_id)
+        seen_dates.add(date_key)
+        days.append((date_key, weekday))
+
+    days.sort(key=lambda d: d[0])
+
+    # A Saturday immediately followed by its Sunday is one weekend school,
+    # not two separate events - merge them into a single event spanning
+    # both days so they share one media page.
+    events = []
+    i = 0
+    while i < len(days):
+        date_key, weekday = days[i]
+        this_date = datetime.strptime(date_key, "%Y-%m-%d")
+
+        if weekday == "Saturday" and i + 1 < len(days):
+            next_date_key, next_weekday = days[i + 1]
+            next_date = datetime.strptime(next_date_key, "%Y-%m-%d")
+
+            if next_weekday == "Sunday" and next_date - this_date == timedelta(days=1):
+                events.append({
+                    "id": f"bad-{date_key}",
+                    "title": "Thunderhill Drift School",
+                    "promoter": "Bay Area Drifting",
+                    "start": f"{date_key} 08:00",
+                    "end": f"{next_date_key} 17:00",
+                    "location": LOCATION,
+                    "url": URL,
+                    "notes": "Weekend. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule."
+                })
+                i += 2
+                continue
 
         events.append({
-            "id": event_id,
+            "id": f"bad-{date_key}",
             "title": "Thunderhill Drift School",
             "promoter": "Bay Area Drifting",
             "start": f"{date_key} 08:00",
@@ -54,6 +83,7 @@ def get_events():
             "url": URL,
             "notes": f"{weekday}. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule."
         })
+        i += 1
 
     print(f"Bay Area Drifting scraper found {len(events)} events.")
 
