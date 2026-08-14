@@ -566,6 +566,7 @@ events:
   url: https://www.udc.news/touge
   notes: Application based registration requires approval from UDC. Visit linked site
     for all event information and applications.
+  calendarLabel: Utah Touge
 - id: bad-2026-09-12
   addedAt: '2026-07-08T00:00:00+00:00'
   title: Thunderhill Drift School
