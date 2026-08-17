@@ -77,6 +77,10 @@ for item in events:
         json_event["perks"] = item["perks"]
     if item.get("registerHandles"):
         json_event["registerHandles"] = item["registerHandles"]
+    if item.get("timeLabel"):
+        json_event["timeLabel"] = item["timeLabel"]
+    if item.get("timeDetail"):
+        json_event["timeDetail"] = item["timeDetail"]
     if item.get("calendarLabel"):
         json_event["calendarLabel"] = item["calendarLabel"]
     if item.get("addedAt"):

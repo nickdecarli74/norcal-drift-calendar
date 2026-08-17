@@ -397,6 +397,11 @@ events:
       url: https://instagram.com/backroadbucket
     - label: '@matty.bs15'
       url: https://instagram.com/matty.bs15
+  timeLabel: Tracks Hot
+  timeDetail:
+    - Fri 2PM-12AM
+    - Sat 8AM-12AM
+    - Sun 8AM-12PM
   trackMapImage: assets/apple-valley-track-map.webp
   trackConfig: Main Track
   trackDirection: Clockwise

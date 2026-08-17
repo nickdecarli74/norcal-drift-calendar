@@ -337,6 +337,14 @@ function renderFeaturedPartnerEvent(events){
       </a>
     `;
 
+  // Multi-day events often run different hours each day - timeDetail lets
+  // an event override the plain start-to-end range with that breakdown
+  // (e.g. one line per day) instead of a single misleading time span.
+  const timeLabel = event.timeLabel || "Time";
+  const timeValue = event.timeDetail
+    ? (Array.isArray(event.timeDetail) ? event.timeDetail.join("<br>") : event.timeDetail)
+    : formatFeaturedTimeRange(event.start, event.end);
+
   const w = weatherFor(event);
   const forecastValue = w ? `${w.temp}°F` : "—";
 
@@ -390,8 +398,8 @@ function renderFeaturedPartnerEvent(events){
                 </svg>
               </div>
               <div>
-                <span class="dw-featured-event__label">Time</span>
-                <span class="dw-featured-event__value">${formatFeaturedTimeRange(event.start, event.end)}</span>
+                <span class="dw-featured-event__label">${timeLabel}</span>
+                <span class="dw-featured-event__value">${timeValue}</span>
               </div>
             </div>
 
