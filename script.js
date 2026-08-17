@@ -279,6 +279,64 @@ function renderFeaturedPartnerEvent(events){
   const roundLabel = roundMatch ? roundMatch[2].padStart(2,"0") : "";
   const initials = brandName.split(/\s+/).map(w => w[0]).join("").toUpperCase();
 
+  // Events with a real logo file (like UDC) show "Round N" underneath it.
+  // Events without one (no logo asset yet) show the full title instead, so
+  // they're not left with just a tiny two-letter fallback mark.
+  const titleHtml = roundLabel
+    ? `<h3 class="dw-featured-event__round" id="dw-featured-event-title">Round <span>${roundLabel}</span></h3>`
+    : `<h3 class="dw-featured-event__round dw-featured-event__round--title" id="dw-featured-event-title">${event.title}</h3>`;
+
+  const presentedByHtml = event.presentedBy
+    ? `<div class="dw-featured-event__presented-by">A <b>${event.presentedBy}</b> Event</div>`
+    : "";
+
+  const taglineHtml = event.tagline
+    ? `<p class="dw-featured-event__tagline">${event.tagline}</p>`
+    : "";
+
+  const perksHtml = (event.perks && event.perks.length)
+    ? `<div class="dw-featured-event__perks">${event.perks.map(p => `<span class="dw-featured-event__perk-chip">${p}</span>`).join("")}</div>`
+    : "";
+
+  // Some partners run registration through DMs rather than a single link -
+  // when registerHandles is set, show those as clickable profile buttons
+  // above the actions row instead of a single "Register" button inside it.
+  const usesDmRegister = event.registerHandles && event.registerHandles.length;
+
+  const registerBlockHtml = usesDmRegister
+    ? `
+      <div class="dw-featured-event__register-block">
+        <span class="dw-featured-event__register-label">To Register — DM To Book Your Spot</span>
+        <div class="dw-featured-event__ig-row">
+          ${event.registerHandles.map(h => `
+            <a class="dw-featured-event__ig-btn" href="${h.url}" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                <circle cx="12" cy="12" r="4"></circle>
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle>
+              </svg>
+              <span>${h.label}</span>
+            </a>
+          `).join("")}
+        </div>
+      </div>
+    `
+    : "";
+
+  const registerButtonHtml = usesDmRegister
+    ? ""
+    : `
+      <a
+        class="dw-featured-event__button dw-featured-event__button--primary"
+        href="${event.registerUrl || eventUrl(event)}"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span>Register</span>
+        <span aria-hidden="true">→</span>
+      </a>
+    `;
+
   const w = weatherFor(event);
   const forecastValue = w ? `${w.temp}°F` : "—";
 
@@ -295,15 +353,18 @@ function renderFeaturedPartnerEvent(events){
       <div class="dw-featured-event__layout">
         <div class="dw-featured-event__content">
           <div class="dw-featured-event__branding">
-            <img
-              class="dw-featured-event__logo"
-              src="${event.logo || ""}"
-              alt="${brandName}"
-              onerror="this.hidden=true; this.nextElementSibling.hidden=false;"
-            >
-            <div class="dw-featured-event__logo-fallback" hidden>${initials}</div>
-
-            ${roundLabel ? `<h3 class="dw-featured-event__round" id="dw-featured-event-title">Round <span>${roundLabel}</span></h3>` : ""}
+            ${presentedByHtml}
+            ${event.logo ? `
+              <img
+                class="dw-featured-event__logo"
+                src="${event.logo}"
+                alt="${brandName}"
+                onerror="this.hidden=true; this.nextElementSibling.hidden=false;"
+              >
+              <div class="dw-featured-event__logo-fallback" hidden>${initials}</div>
+            ` : ""}
+            ${titleHtml}
+            ${taglineHtml}
           </div>
 
           <div class="dw-featured-event__details" aria-label="Event details">
@@ -360,16 +421,11 @@ function renderFeaturedPartnerEvent(events){
             </div>
           </div>
 
-          <div class="dw-featured-event__actions">
-            <a
-              class="dw-featured-event__button dw-featured-event__button--primary"
-              href="${event.registerUrl || eventUrl(event)}"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span>Register</span>
-              <span aria-hidden="true">→</span>
-            </a>
+          ${perksHtml}
+          ${registerBlockHtml}
+
+          <div class="dw-featured-event__actions${usesDmRegister ? " dw-featured-event__actions--single" : ""}">
+            ${registerButtonHtml}
 
             <a
               class="dw-featured-event__button dw-featured-event__button--secondary"

@@ -69,6 +69,14 @@ for item in events:
         json_event["trackDirection"] = item["trackDirection"]
     if item.get("trackNote"):
         json_event["trackNote"] = item["trackNote"]
+    if item.get("presentedBy"):
+        json_event["presentedBy"] = item["presentedBy"]
+    if item.get("tagline"):
+        json_event["tagline"] = item["tagline"]
+    if item.get("perks"):
+        json_event["perks"] = item["perks"]
+    if item.get("registerHandles"):
+        json_event["registerHandles"] = item["registerHandles"]
     if item.get("calendarLabel"):
         json_event["calendarLabel"] = item["calendarLabel"]
     if item.get("addedAt"):

@@ -384,6 +384,23 @@ events:
     sun. Bash driving all weekend, no comps, all seat time. Driver tickets $199.99
     (includes all driver media); all drivers get a meal on Saturday. Track hot Fri
     2PM-12AM, Sat 8AM-12AM, Sun 8AM-12PM. Manually added by the site owner.
+  featuredPartner: true
+  presentedBy: best!spec
+  tagline: Celebrating another @backroadbucket hotlap around the sun. Bash driving
+    all weekend - no comps, all seat time.
+  perks:
+    - Driver Entry $199.99
+    - Includes All Driver Media
+    - Meal Sat. For All Drivers
+  registerHandles:
+    - label: '@backroadbucket'
+      url: https://instagram.com/backroadbucket
+    - label: '@matty.bs15'
+      url: https://instagram.com/matty.bs15
+  trackMapImage: assets/apple-valley-track-map.webp
+  trackConfig: Main Track
+  trackDirection: Clockwise
+  trackNote: Official Apple Valley Speedway Main Track configuration.
 - id: cc-2026-08-22
   addedAt: '2026-07-29T21:00:00+00:00'
   title: Cursed Chassis Drift Event

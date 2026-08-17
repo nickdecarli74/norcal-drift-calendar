@@ -183,6 +183,106 @@ No car image. No smoke image. No AI-generated artwork.
   color: var(--dw-fe-red);
 }
 
+/* Title-only variant (no logo/Round pattern) needs to fit a full event
+   name rather than "Round NN", so it runs smaller and left-aligned. */
+.dw-featured-event__round--title {
+  font-size: clamp(34px, 3.4vw, 54px);
+  text-align: center;
+}
+
+.dw-featured-event__presented-by {
+  margin-bottom: 4px;
+  color: var(--dw-fe-muted);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.dw-featured-event__presented-by b {
+  color: var(--dw-fe-red-bright);
+  font-style: italic;
+}
+
+.dw-featured-event__tagline {
+  max-width: 56ch;
+  margin: 14px 0 0;
+  color: #ccc;
+  font-size: clamp(15px, 1.1vw, 18px);
+  line-height: 1.5;
+}
+
+.dw-featured-event__perks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.dw-featured-event__perk-chip {
+  border: 1px solid rgba(235, 11, 11, 0.4);
+  border-radius: 999px;
+  padding: 7px 16px;
+  background: rgba(235, 11, 11, 0.08);
+  color: var(--dw-fe-red-bright);
+  font-size: 12.5px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.dw-featured-event__register-block {
+  margin-top: 22px;
+}
+
+.dw-featured-event__register-label {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--dw-fe-muted);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.dw-featured-event__ig-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.dw-featured-event__ig-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 12px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: 999px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 800;
+  transition: border-color 180ms ease, background-color 180ms ease, transform 180ms ease;
+}
+
+.dw-featured-event__ig-btn:hover,
+.dw-featured-event__ig-btn:focus-visible {
+  border-color: var(--dw-fe-red-bright);
+  background: rgba(235, 11, 11, 0.1);
+  transform: translateY(-2px);
+}
+
+.dw-featured-event__ig-btn svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: var(--dw-fe-red-bright);
+}
+
+.dw-featured-event__actions--single {
+  grid-template-columns: 1fr;
+}
+
 .dw-featured-event__details {
   overflow: hidden;
   border: 1px solid var(--dw-fe-border);
@@ -522,6 +622,15 @@ No car image. No smoke image. No AI-generated artwork.
 
   .dw-featured-event__round {
     margin-top: 20px;
+  }
+
+  .dw-featured-event__round--title {
+    font-size: clamp(28px, 8vw, 40px);
+  }
+
+  .dw-featured-event__ig-btn {
+    padding: 10px 16px;
+    font-size: 14px;
   }
 
   .dw-featured-event__detail {
