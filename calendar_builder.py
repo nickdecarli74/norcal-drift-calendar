@@ -23,6 +23,12 @@ for item in events:
     end = parse_dt(item["end"])
 
     e = Event()
+    # ics.py assigns a random UID per Event() call by default, which would
+    # regenerate on every run even for unchanged events - calendar apps use
+    # UID to recognize "this is the same event, just updated" vs. a new one,
+    # so a stable UID (derived from our own event id) keeps subscribers'
+    # calendars updating events in place instead of accumulating duplicates.
+    e.uid = f"{item.get('id', '')}@driftwestnet.com"
     e.name = f"{item.get('promoter', 'Drift')} - {item['title']}"
     e.begin = start
     e.end = end
