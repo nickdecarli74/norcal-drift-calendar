@@ -5,7 +5,7 @@
  * form. An installable "On form submit" trigger calls onFormSubmit(e) below,
  * which resolves the submitted event to a media.json eventId, opens a PR against
  * the DriftWest GitHub repo with the new submission, and emails the owner a
- * summary. The Contact field ("Email or Instagram handle") stays private and out
+ * summary. The Contact field ("Instagram handle or email") stays private and out
  * of the PR when it looks like an email; when it looks like an Instagram handle
  * instead, that handle is pulled into the PR as the submission's public
  * `instagram` field.
@@ -26,7 +26,7 @@ const FIELD_NAME = "Name/Handle";
 const FIELD_EVENT = "Event";
 const FIELD_ROLE = "Role";
 const FIELD_LINK = "Link to your album, reel or channel";
-const FIELD_CONTACT = "Your Email or Instagram handle (so we can reach you if needed)";
+const FIELD_CONTACT = "Your Instagram handle or email (so we can reach you if needed)";
 const FIELD_NOTES = "Anything else we should know?";
 
 // ---- Entry point ----
@@ -59,7 +59,7 @@ function onFormSubmit(e) {
     var submission = { name: name, role: role, url: link };
     if (notes) submission.note = notes;
 
-    // The Contact field asks for "Email or Instagram handle" - if what they gave us
+    // The Contact field asks for "Instagram handle or email" - if what they gave us
     // isn't an email, it's very likely their handle, and unlike an email that's fine
     // to publish (that's the whole point of the media page). This is a fallback for
     // submitters whose Name/Handle answer was a real name rather than their @, since
@@ -127,7 +127,7 @@ function firstValue_(namedValues, field) {
   return arr && arr.length ? String(arr[0]).trim() : "";
 }
 
-// Pulls an Instagram handle out of the Contact field ("Email or Instagram handle"),
+// Pulls an Instagram handle out of the Contact field ("Instagram handle or email"),
 // but only when it's clearly NOT an email - genuine emails must never end up in the
 // PR/media.json, only in the owner's notification email. Handles multi-value answers
 // like "myhandle / me@gmail.com" by checking each whitespace/slash/comma-separated
