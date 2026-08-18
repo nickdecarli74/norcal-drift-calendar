@@ -72,23 +72,13 @@ def get_events():
         },
         {
             "id": "av-2026-08-21",
-            "title": "BackroadBucket Birthday Bash",
+            "title": "Backie Bonanza III",
             "promoter": "Apple Valley Speedway",
-            "start": "2026-08-21 08:00",
-            "end": "2026-08-21 17:00",
+            "start": "2026-08-21 14:00",
+            "end": "2026-08-23 12:00",
             "location": "Main Track",
-            "url": "https://applevalleyspeedway.com/calendar/",
-            "notes": "Manually verified from Apple Valley Speedway's calendar."
-        },
-        {
-            "id": "av-2026-08-22",
-            "title": "BackroadBucket Birthday Bash - Day 2",
-            "promoter": "Apple Valley Speedway",
-            "start": "2026-08-22 08:00",
-            "end": "2026-08-22 17:00",
-            "location": "Main Track",
-            "url": "https://applevalleyspeedway.com/calendar/",
-            "notes": "Manually verified from Apple Valley Speedway's calendar."
+            "url": "https://www.instagram.com/p/DZc_6iKiM3C/",
+            "notes": "3-day event, Fri-Sun. AVS's calendar lists this as two separate listings (BackroadBucket Birthday Bash / Day 2) - merged here since it's one event. This entry is locked in events.yaml (real name/hours/featured-partner fields are hand-maintained there), so this content is never actually used - kept in sync anyway so the source doesn't read as stale."
         },
         {
             "id": "av-2026-08-23",
