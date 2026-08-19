@@ -31,24 +31,24 @@
             position: relative;
         }
 
-        /* Outer Frame Container */
+        /* Outer Frame Container - Expanded Left Column to 440px */
         .graphic-container {
             display: grid;
-            grid-template-columns: 380px 1fr;
+            grid-template-columns: 440px 1fr;
             width: 100%;
             height: 100%;
-            padding: 90px 80px;
+            padding: 90px 70px;
             position: relative;
             z-index: 2;
         }
 
-        /* Central Vertical Divider Line */
+        /* Central Vertical Divider Line - Moved Right to 470px */
         .graphic-container::before {
             content: "";
             position: absolute;
             top: 90px;
             bottom: 90px;
-            left: 420px;
+            left: 470px;
             width: 1px;
             background-color: var(--border-dark);
         }
@@ -58,7 +58,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            padding-right: 40px;
+            padding-right: 30px;
             height: 100%;
         }
 
@@ -85,12 +85,12 @@
             background-color: var(--red-accent);
         }
 
-        /* Big Headline Block */
+        /* Headline Block - Font Size & Letter Spacing Fitted to Frame */
         .title-main {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: 155px;
+            font-size: 130px;
             line-height: 0.88;
-            letter-spacing: 2px;
+            letter-spacing: 0px;
             margin-top: 40px;
             margin-bottom: auto;
             padding-top: 60px;
@@ -155,18 +155,18 @@
 
         /* --- RIGHT COLUMN --- */
         .col-right {
-            padding-left: 60px;
+            padding-left: 50px;
             display: flex;
             flex-direction: column;
-            gap: 30px;
-            padding-top: 70px;
+            gap: 24px;
+            padding-top: 50px;
         }
 
         /* Date Group Section */
         .date-section {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 16px;
         }
 
         .date-header {
@@ -191,8 +191,8 @@
         .event-card {
             display: grid;
             grid-template-columns: 75px 1fr;
-            gap: 24px;
-            padding-bottom: 22px;
+            gap: 20px;
+            padding-bottom: 16px;
             border-bottom: 1px solid var(--border-dark);
             align-items: flex-start;
         }
@@ -206,7 +206,7 @@
 
         .date-num {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: 82px;
+            font-size: 78px;
             color: var(--red-accent);
             letter-spacing: 1px;
         }
@@ -222,14 +222,14 @@
         .event-details {
             display: flex;
             flex-direction: column;
-            padding-top: 8px;
+            padding-top: 6px;
         }
 
         .event-title {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: 34px;
+            font-size: 32px;
             color: var(--text-white);
-            letter-spacing: 2px;
+            letter-spacing: 1.5px;
             line-height: 1;
         }
 
@@ -237,11 +237,11 @@
             width: 18px;
             height: 2px;
             background-color: var(--red-accent);
-            margin: 8px 0 10px 0;
+            margin: 6px 0 8px 0;
         }
 
         .event-venue {
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 600;
             color: var(--text-grey);
             letter-spacing: 1.5px;
