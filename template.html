@@ -31,7 +31,7 @@
             position: relative;
         }
 
-        /* Outer Frame Container - Expanded Left Column to 440px */
+        /* Outer Frame Container */
         .graphic-container {
             display: grid;
             grid-template-columns: 440px 1fr;
@@ -42,7 +42,7 @@
             z-index: 2;
         }
 
-        /* Central Vertical Divider Line - Moved Right to 470px */
+        /* Central Vertical Divider Line */
         .graphic-container::before {
             content: "";
             position: absolute;
@@ -85,7 +85,7 @@
             background-color: var(--red-accent);
         }
 
-        /* Headline Block - Font Size & Letter Spacing Fitted to Frame */
+        /* Headline Block */
         .title-main {
             font-family: 'Bebas Neue', sans-serif;
             font-size: 130px;
@@ -100,37 +100,17 @@
             color: var(--red-accent);
         }
 
-        /* Left Footer Block */
+        /* Left Footer Block (Simplified Text Only) */
         .left-footer {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 16px;
         }
 
         .footer-line {
             width: 70px;
             height: 2px;
             background-color: var(--red-accent);
-        }
-
-        .footer-brand {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-
-        .dw-box {
-            width: 54px;
-            height: 54px;
-            border: 2px solid var(--red-accent);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 34px;
-            color: var(--red-accent);
-            letter-spacing: 1px;
-            font-style: italic;
         }
 
         .footer-text {
@@ -248,17 +228,6 @@
             text-transform: uppercase;
             line-height: 1.4;
         }
-
-        /* Bottom Right Decorative Lines */
-        .accent-lines {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            width: 260px;
-            height: 260px;
-            pointer-events: none;
-            z-index: 1;
-        }
     </style>
 </head>
 <body>
@@ -280,12 +249,9 @@
 
             <div class="left-footer">
                 <div class="footer-line"></div>
-                <div class="footer-brand">
-                    <div class="dw-box">DW</div>
-                    <div class="footer-text">
-                        <div class="sub">EVENT REGISTRATION & MEDIA</div>
-                        <div class="url">DRIFTWEST.NET</div>
-                    </div>
+                <div class="footer-text">
+                    <div class="sub">EVENT REGISTRATION & MEDIA</div>
+                    <div class="url">DRIFTWEST.NET</div>
                 </div>
             </div>
         </div>
@@ -295,14 +261,6 @@
             <!-- EVENTS_PLACEHOLDER -->
         </div>
     </div>
-
-    <!-- BOTTOM RIGHT ACCENT LINES SVG -->
-    <svg class="accent-lines" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <line x1="120" y1="200" x2="200" y2="120" stroke="#d3202a" stroke-width="2"/>
-        <line x1="140" y1="200" x2="200" y2="140" stroke="#d3202a" stroke-width="2"/>
-        <line x1="160" y1="200" x2="200" y2="160" stroke="#d3202a" stroke-width="2"/>
-        <polygon points="175,170 178,175 183,175 179,178 181,183 175,180 169,183 171,178 167,175 172,175" fill="#808388"/>
-    </svg>
 
 </body>
 </html>
