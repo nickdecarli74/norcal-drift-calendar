@@ -161,7 +161,7 @@ with open("rendered.html", "w", encoding="utf-8") as f:
 # 5. Render Screenshot with Playwright
 with sync_playwright() as p:
   browser = p.chromium.launch()
-  page = browser.new_page(viewport={"width": 1080, "height": 1620})
+  page = browser.new_page(viewport={"width": 1080, "height": 1350})
   page.goto(f"file://{os.path.abspath('rendered.html')}")
   page.screenshot(path="drift_west_weekend.jpg", type="jpeg", quality=100)
   browser.close()
