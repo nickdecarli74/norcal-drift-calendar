@@ -2,36 +2,52 @@ from datetime import datetime, timedelta
 from email.message import EmailMessage
 import json
 import os
-
-from playwright.sync_api import sync_playwright
 import smtplib
 
-# 1. Load JSON and handle potential dictionary wrapper
+from playwright.sync_api import sync_playwright
+
+# 1. Load JSON
 if not os.path.exists("events.json"):
   raise FileNotFoundError("events.json not found in root directory.")
 
 with open("events.json", "r") as f:
   raw_data = json.load(f)
 
-events = raw_data.get("events", raw_data) if isinstance(raw_data, dict) else raw_data
-print(f"Loaded {len(events)} total events from events.json.")
+events = (
+    raw_data.get("events", raw_data) if isinstance(raw_data, dict) else raw_data
+)
 
-# 2. Filter for upcoming Friday - Sunday
+# 2. Calculate Weekend Range (Fri - Sun)
 today = datetime.now()
 this_friday = today + timedelta(days=(4 - today.weekday()) % 7)
 this_sunday = this_friday + timedelta(days=2)
 
-friday_str = this_friday.strftime("%Y-%m-%d")
-sunday_str = this_sunday.strftime("%Y-%m-%d")
+friday_date = this_friday.date()
+sunday_date = this_sunday.date()
 
 weekend_events = []
 for e in events:
-  # Check common date field keys
-  event_date = e.get("date") or e.get("start_date") or e.get("startDate") or ""
-  if friday_str <= event_date <= sunday_str:
-    weekend_events.append(e)
+  # Check start, date, or start_date
+  raw_date_str = (
+      e.get("start") or e.get("date") or e.get("start_date") or e.get("startDate")
+  )
+  if not raw_date_str:
+    continue
 
-print(f"Found {len(weekend_events)} events for weekend {friday_str} to {sunday_str}.")
+  # Extract YYYY-MM-DD regardless of timestamp hours
+  clean_date_str = raw_date_str.split(" ")[0].split("T")[0]
+
+  try:
+    event_dt = datetime.strptime(clean_date_str, "%Y-%m-%d").date()
+    if friday_date <= event_dt <= sunday_date:
+      weekend_events.append((e, event_dt))
+  except ValueError:
+    continue
+
+print(
+    f"Found {len(weekend_events)} events for weekend {friday_date} to"
+    f" {sunday_date}."
+)
 
 # 3. Read HTML Template & Inject Data
 if not os.path.exists("template.html"):
@@ -41,19 +57,11 @@ with open("template.html", "r") as f:
   html_content = f.read()
 
 events_html = ""
-for e in weekend_events:
+for e, event_dt in weekend_events:
   title = e.get("title") or e.get("name") or "Drift Event"
-  location = e.get("location") or e.get("venue") or ""
-  date_str = e.get("date") or e.get("start_date") or ""
-
-  # Parse date for day display
-  try:
-    dt = datetime.strptime(date_str, "%Y-%m-%d")
-    day_num = dt.strftime("%d")
-    day_str = dt.strftime("%a").upper()
-  except ValueError:
-    day_num = ""
-    day_str = ""
+  location = e.get("location") or e.get("promoter") or ""
+  day_num = event_dt.strftime("%d")
+  day_str = event_dt.strftime("%a").upper()
 
   events_html += f"""
     <div class="event-card">
