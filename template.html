@@ -1,31 +1,172 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;600&display=swap');
-  body {
-    width: 1080px; height: 1620px; margin: 0; background: #0A0A0A;
-    font-family: 'Oswald', sans-serif; color: #E1E1E1; display: flex; box-sizing: border-box;
-  }
-  .left-col { width: 35%; border-right: 1px solid #1A1A1A; padding: 60px 40px; }
-  .right-col { width: 65%; padding: 60px 40px; }
-  .title-stack { font-family: 'Bebas Neue'; font-size: 130px; line-height: 0.9; text-transform: uppercase; }
-  .red { color: #D01C1C; }
-  .sub-text { color: #8A8A8A; font-size: 20px; }
-  .event-card { margin-bottom: 30px; display: flex; gap: 20px; align-items: flex-start; }
-  .date-num { font-size: 50px; color: #D01C1C; font-weight: bold; line-height: 1; text-align: center; min-width: 60px; }
-  .accent-line { width: 25px; height: 2px; background: #D01C1C; margin: 6px 0; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriftWest Weekend Schedule</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto+Condensed:wght@400;700&display=swap');
+
+        :root {
+            --bg-color: #121416; /* Near Black / Dark Slate */
+            --text-main: #FFFFFF; /* White */
+            --text-accent: #8A8D91; /* Grey Sub-text */
+            --red: #BF1E2E; /* Signature Red */
+            --divider: #262A2E; /* Muted separator lines */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            width: 1080px;
+            height: 1620px;
+            font-family: 'Roboto Condensed', sans-serif;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* 2-Column Grid Layout */
+        .wrapper {
+            display: grid;
+            grid-template-columns: 320px 1fr; /* Fixed left column, flexible right */
+            width: 100%;
+            height: 100%;
+            padding: 80px; /* Base container margin */
+        }
+
+        /* --- LEFT COLUMN STYLES --- */
+        .col-left {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Vertical spacing top/bottom */
+            padding-right: 40px;
+        }
+
+        .header-prefix {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
+            font-size: 30px;
+            color: var(--text-main);
+            letter-spacing: 2px;
+            line-height: 1.1;
+        }
+
+        .title-main {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
+            font-size: 110px; /* Main headline */
+            color: var(--text-main);
+            line-height: 0.95;
+            letter-spacing: -2px;
+            margin-top: 100px;
+        }
+
+        .red-highlight {
+            color: var(--red);
+        }
+
+        .date-range {
+            font-size: 24px;
+            color: var(--text-accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        /* --- RIGHT COLUMN STYLES --- */
+        .col-right {
+            display: flex;
+            flex-direction: column;
+            padding-left: 60px;
+            padding-top: 40px; /* Shift list down slightly */
+        }
+
+        /* Date Group Separator (e.g., SATURDAY, AUG 15) */
+        .date-separator {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
+            font-size: 20px;
+            color: var(--text-main);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding-bottom: 8px;
+            margin-bottom: 25px;
+            border-bottom: 1px solid var(--divider);
+            display: flex;
+            align-items: center;
+        }
+
+        /* Event Card (Grid item with inner vertical stacking) */
+        .event-card {
+            display: grid;
+            grid-template-columns: 80px 1fr; /* Date block width */
+            gap: 20px;
+            margin-bottom: 40px;
+            align-items: flex-start;
+        }
+
+        /* Date Block (Stacked 15 / SAT) */
+        .date-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            line-height: 1;
+            padding-top: 5px; /* Alignment shift */
+        }
+
+        .date-num {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
+            font-size: 70px; /* Big Date Number */
+            color: var(--red);
+            letter-spacing: -3px;
+        }
+
+        .date-day {
+            font-size: 20px; /* Small Day Abbr */
+            color: var(--text-accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: -5px; /* Pull tighter */
+        }
+
+        /* Event Details (Title and Location) */
+        .event-details {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .event-title {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
+            font-size: 32px; /* Event Title */
+            color: var(--text-main);
+            line-height: 1;
+            text-transform: uppercase; /* Match target image exactly */
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .event-location {
+            font-size: 18px; /* Sub-text size */
+            color: var(--text-accent);
+            text-transform: uppercase;
+            line-height: 1.3;
+        }
+
+    </style>
 </head>
 <body>
-  <div class="left-col">
-    <div style="letter-spacing: 6px; font-weight: bold;">DRIFT <span class="red">WEST</span></div>
-    <div class="title-stack" style="margin-top: 120px;">
-      DRIFT<br>EVENTS<br><span class="red">THIS</span><br>WEEKEND
+    <div class="wrapper">
+        <!-- LAYOUT_PLACEHOLDER -->
     </div>
-  </div>
-  <div class="right-col">
-    <!-- EVENTS_PLACEHOLDER -->
-  </div>
 </body>
 </html>
