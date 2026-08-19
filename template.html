@@ -85,22 +85,24 @@
             background-color: var(--red-accent);
         }
 
-        /* Headline Block */
+        /* Vertically Stretched Headline */
         .title-main {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: 130px;
-            line-height: 0.88;
+            font-size: 135px;
+            line-height: 0.80;
             letter-spacing: 0px;
+            transform: scaleY(1.38); /* Stretches text vertically */
+            transform-origin: top left;
             margin-top: 40px;
             margin-bottom: auto;
-            padding-top: 60px;
+            padding-top: 40px;
         }
 
         .title-main .red {
             color: var(--red-accent);
         }
 
-        /* Left Footer Block (Simplified Text Only) */
+        /* Left Footer Block */
         .left-footer {
             display: flex;
             flex-direction: column;
@@ -133,20 +135,23 @@
             letter-spacing: 2px;
         }
 
-        /* --- RIGHT COLUMN --- */
+        /* --- RIGHT COLUMN (Dynamic Vertical Auto-Spacing) --- */
         .col-right {
             padding-left: 50px;
             display: flex;
             flex-direction: column;
-            gap: 24px;
-            padding-top: 50px;
+            justify-content: space-between; /* Evenly distributes sections vertically */
+            height: 100%;
+            padding-top: 10px;
+            padding-bottom: 10px;
         }
 
         /* Date Group Section */
         .date-section {
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            gap: 18px;
+            justify-content: space-between;
         }
 
         .date-header {
