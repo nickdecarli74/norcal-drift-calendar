@@ -25,7 +25,7 @@
             background-color: var(--bg-color);
             color: var(--text-white);
             width: 1080px;
-            height: 1620px;
+            height: 1350px; /* Instagram 4:5 Aspect Ratio */
             font-family: 'Inter', sans-serif;
             overflow: hidden;
             position: relative;
@@ -34,10 +34,10 @@
         /* Outer Frame Container */
         .graphic-container {
             display: grid;
-            grid-template-columns: 440px 1fr;
+            grid-template-columns: 410px 1fr;
             width: 100%;
             height: 100%;
-            padding: 90px 70px;
+            padding: 60px 60px;
             position: relative;
             z-index: 2;
         }
@@ -46,9 +46,9 @@
         .graphic-container::before {
             content: "";
             position: absolute;
-            top: 90px;
-            bottom: 90px;
-            left: 470px;
+            top: 60px;
+            bottom: 60px;
+            left: 430px;
             width: 1px;
             background-color: var(--border-dark);
         }
@@ -58,7 +58,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            padding-right: 30px;
+            padding-right: 25px;
             height: 100%;
         }
 
@@ -66,13 +66,13 @@
         .brand-header {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 10px;
         }
 
         .brand-logo {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: 32px;
-            letter-spacing: 12px;
+            font-size: 28px;
+            letter-spacing: 10px;
             line-height: 1;
         }
 
@@ -80,7 +80,7 @@
         .brand-logo .red { color: var(--red-accent); }
 
         .brand-line {
-            width: 55px;
+            width: 48px;
             height: 3px;
             background-color: var(--red-accent);
         }
@@ -88,14 +88,14 @@
         /* Vertically Stretched Headline */
         .title-main {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: 135px;
+            font-size: 116px;
             line-height: 0.80;
             letter-spacing: 0px;
-            transform: scaleY(1.38); /* Stretches text vertically */
+            transform: scaleY(1.30);
             transform-origin: top left;
-            margin-top: 40px;
+            margin-top: 25px;
             margin-bottom: auto;
-            padding-top: 40px;
+            padding-top: 25px;
         }
 
         .title-main .red {
@@ -106,11 +106,11 @@
         .left-footer {
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            gap: 12px;
         }
 
         .footer-line {
-            width: 70px;
+            width: 60px;
             height: 2px;
             background-color: var(--red-accent);
         }
@@ -122,14 +122,14 @@
         }
 
         .footer-text .sub {
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 700;
             color: var(--text-grey);
             letter-spacing: 2px;
         }
 
         .footer-text .url {
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 700;
             color: var(--red-accent);
             letter-spacing: 2px;
@@ -137,32 +137,32 @@
 
         /* --- RIGHT COLUMN (Dynamic Vertical Auto-Spacing) --- */
         .col-right {
-            padding-left: 50px;
+            padding-left: 40px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between; /* Evenly distributes sections vertically */
+            justify-content: space-between;
             height: 100%;
-            padding-top: 10px;
-            padding-bottom: 10px;
+            padding-top: 5px;
+            padding-bottom: 5px;
         }
 
         /* Date Group Section */
         .date-section {
             display: flex;
             flex-direction: column;
-            gap: 18px;
+            gap: 14px;
             justify-content: space-between;
         }
 
         .date-header {
             display: flex;
             align-items: center;
-            gap: 16px;
+            gap: 14px;
             font-family: 'Inter', sans-serif;
             font-weight: 700;
-            font-size: 18px;
+            font-size: 16px;
             color: var(--text-white);
-            letter-spacing: 3px;
+            letter-spacing: 2.5px;
             text-transform: uppercase;
         }
 
@@ -175,9 +175,9 @@
         /* Event Row Item */
         .event-card {
             display: grid;
-            grid-template-columns: 75px 1fr;
-            gap: 20px;
-            padding-bottom: 16px;
+            grid-template-columns: 65px 1fr;
+            gap: 18px;
+            padding-bottom: 12px;
             border-bottom: 1px solid var(--border-dark);
             align-items: flex-start;
         }
@@ -191,47 +191,47 @@
 
         .date-num {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: 78px;
+            font-size: 68px;
             color: var(--red-accent);
             letter-spacing: 1px;
         }
 
         .date-day {
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 700;
             color: var(--text-grey);
             letter-spacing: 2px;
-            margin-top: 4px;
+            margin-top: 2px;
         }
 
         .event-details {
             display: flex;
             flex-direction: column;
-            padding-top: 6px;
+            padding-top: 4px;
         }
 
         .event-title {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: 32px;
+            font-size: 28px;
             color: var(--text-white);
             letter-spacing: 1.5px;
             line-height: 1;
         }
 
         .event-dash {
-            width: 18px;
+            width: 16px;
             height: 2px;
             background-color: var(--red-accent);
-            margin: 6px 0 8px 0;
+            margin: 5px 0 6px 0;
         }
 
         .event-venue {
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 600;
             color: var(--text-grey);
-            letter-spacing: 1.5px;
+            letter-spacing: 1.2px;
             text-transform: uppercase;
-            line-height: 1.4;
+            line-height: 1.35;
         }
     </style>
 </head>
