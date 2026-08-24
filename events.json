@@ -557,6 +557,17 @@
     "addedAt": "2026-07-08T00:00:00+00:00"
   },
   {
+    "id": "av-2026-09-05",
+    "title": "Last Minute Drift Event",
+    "promoter": "SUSBOYZ",
+    "start": "2026-09-05 15:00",
+    "end": "2026-09-06 00:00",
+    "location": "Apple Valley Speedway - Main Track & Skid Pad",
+    "url": "https://www.susboyz.com/category/events?utm_source=ig&utm_medium=social&utm_content=link_in_bio",
+    "notes": "All driver levels welcome. $85 driver fee (40 driver cap), $15 spectator gate fee. Manually added by the site owner.",
+    "addedAt": "2026-08-24T18:00:00+00:00"
+  },
+  {
     "id": "mhc-2026-09-05",
     "title": "Drift Night",
     "promoter": "Musselman Honda Circuit",
@@ -1305,16 +1316,5 @@
     "url": "https://mhcircuit.com/event/open-drift-day-12/",
     "notes": "Auto-imported from Musselman Honda Circuit's calendar.",
     "addedAt": "2026-08-03T01:05:00+00:00"
-  },
-  {
-    "id": "av-2026-09-05",
-    "title": "Last Minute Drift Event",
-    "promoter": "SUSBOYZ",
-    "start": "2026-09-05 15:00",
-    "end": "2026-09-06 00:00",
-    "location": "Apple Valley Speedway - Main Track & Skid Pad",
-    "url": "https://www.susboyz.com/category/events?utm_source=ig&utm_medium=social&utm_content=link_in_bio",
-    "notes": "All driver levels welcome. $85 driver fee (40 driver cap), $15 spectator gate fee. Manually added by the site owner.",
-    "addedAt": "2026-08-24T18:00:00+00:00"
   }
 ]
