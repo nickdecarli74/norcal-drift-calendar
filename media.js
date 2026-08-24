@@ -375,6 +375,25 @@ function instagramHandleFor(s){
 
 /* ---- media.html: single event gallery page ---- */
 
+function setEventMetaTags(event){
+  const url = `https://driftwest.net/media.html?event=${encodeURIComponent(event.id)}`;
+  const title = `${event.title} — Media | DriftWest`;
+  const description = `Photo and video galleries from ${event.title}, shared by the photographers and videographers who shot it.`;
+
+  const canonical = document.querySelector('link[rel="canonical"]');
+  if(canonical) canonical.href = url;
+
+  const setMeta = selector => {
+    const el = document.querySelector(selector);
+    return el ? content => { el.content = content; } : () => {};
+  };
+  setMeta('meta[property="og:url"]')(url);
+  setMeta('meta[property="og:title"]')(title);
+  setMeta('meta[property="og:description"]')(description);
+  setMeta('meta[name="twitter:title"]')(title);
+  setMeta('meta[name="twitter:description"]')(description);
+}
+
 function renderMediaPage(events, mediaData){
   const params = new URLSearchParams(window.location.search);
   const eventId = params.get("event");
@@ -397,6 +416,7 @@ function renderMediaPage(events, mediaData){
 
   const p = formatDateParts(event.start, event.end);
   document.title = `${event.title} — Media | DriftWest`;
+  setEventMetaTags(event);
 
   const submissions = meta ? meta.submissions : [];
   const photogSubs = submissions.filter(s => s.role !== "driver");
