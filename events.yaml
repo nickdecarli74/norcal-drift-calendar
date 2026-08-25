@@ -435,19 +435,6 @@ events:
   location: Main & Skid
   url: https://applevalleyspeedway.com/calendar/
   notes: Manually verified from Apple Valley Speedway's calendar.
-- id: av-2026-10-30
-  addedAt: '2026-08-14T00:00:00+00:00'
-  title: Grassroots Drift Days
-  promoter: Apple Valley Speedway
-  start: 2026-10-30 09:00
-  end: 2026-10-30 23:00
-  location: Main Track & Skid Pad (Grange)
-  url: https://www.instagram.com/p/Db83CpGGCot/?img_index=1
-  notes: Strict 36-car cap track weekend, no grid lines, max track time. $100 entry
-    gives access to Main Track and Skid Pad. Drivers must pre-register to lock in
-    a spot (cashapp/zelle) - no gate entries once the cap is hit. Small run groups
-    for non-stop hot laps, trackside mechanical/tire support, night driving under
-    the lights until 11 PM. Contact @cuba2chaka. Manually updated by the site owner.
 - id: nava-2026-08-28
   addedAt: '2026-07-29T20:30:00+00:00'
   title: Navapalooza 8
@@ -783,6 +770,19 @@ events:
   location: Musselman Honda Circuit
   url: https://mhcircuit.com/event/spooky-drift-9/
   notes: Auto-imported from Musselman Honda Circuit's calendar.
+- id: av-2026-10-30
+  addedAt: '2026-08-14T00:00:00+00:00'
+  title: Grassroots Drift Days
+  promoter: Apple Valley Speedway
+  start: 2026-10-30 09:00
+  end: 2026-10-30 23:00
+  location: Main Track & Skid Pad (Grange)
+  url: https://www.instagram.com/p/Db83CpGGCot/?img_index=1
+  notes: Strict 36-car cap track weekend, no grid lines, max track time. $100 entry
+    gives access to Main Track and Skid Pad. Drivers must pre-register to lock in
+    a spot (cashapp/zelle) - no gate entries once the cap is hit. Small run groups
+    for non-stop hot laps, trackside mechanical/tire support, night driving under
+    the lights until 11 PM. Contact @cuba2chaka. Manually updated by the site owner.
 - id: av-2026-10-31
   addedAt: '2026-07-31T14:35:00+00:00'
   title: Soso Halloween Bash

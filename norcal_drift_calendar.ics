@@ -434,15 +434,6 @@ UID:dc-2026-11-28@driftwestnet.com
 URL:https://driftcentral.com/registration
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main Track\nRegistration / Info: https://www.instagram.com/p/Db83CpGGCot/?img_index=1\n\nSupreme Automotive Display\, presented by Manifested Illlesions. Driver Entry $100\, Spectator/Track Fee $15. Contact @cuba2chaka. Manually added by the site owner.
-DTEND:20260828T170000Z
-LOCATION:Main Track
-DTSTART:20260827T080000Z
-SUMMARY:Apple Valley Speedway - Rubber4Roses
-UID:av-2026-08-27@driftwestnet.com
-URL:https://www.instagram.com/p/Db83CpGGCot/?img_index=1
-END:VEVENT
-BEGIN:VEVENT
 DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/registration\n\nAuto-imported from Drift Central schedule.
 DTEND:20261011T170000Z
 LOCATION:Salinas Municipal Airport
@@ -504,6 +495,15 @@ DTSTART:20260913T080000Z
 SUMMARY:DLUX - DLUX Drift Practice Day
 UID:dlux-2026-09-13@driftwestnet.com
 URL:https://docs.google.com/forms/d/e/1FAIpQLSdPFCbJi7wmdKqm7CjqEVwW6W4S8ZKKofZj0U0lRUvwTFXlIg/viewform?fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnhcIPkC9N4JSyq6qchrc9CswEPdntrivA3xAzz3hvajxX4xoG7HmfpD1b73Y_aem_gl2-589OhrJDireBOJGslw
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main Track & Skid Pad (Grange)\nRegistration / Info: https://www.instagram.com/p/Db83CpGGCot/?img_index=1\n\nStrict 36-car cap track weekend\, no grid lines\, max track time. $100 entry gives access to Main Track and Skid Pad. Drivers must pre-register to lock in a spot (cashapp/zelle) - no gate entries once the cap is hit. Small run groups for non-stop hot laps\, trackside mechanical/tire support\, night driving under the lights until 11 PM. Contact @cuba2chaka. Manually updated by the site owner.
+DTEND:20261030T230000Z
+LOCATION:Main Track & Skid Pad (Grange)
+DTSTART:20261030T090000Z
+SUMMARY:Apple Valley Speedway - Grassroots Drift Days
+UID:av-2026-10-30@driftwestnet.com
+URL:https://www.instagram.com/p/Db83CpGGCot/?img_index=1
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main & Skid\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\nManually verified from Apple Valley Speedway's calendar.
