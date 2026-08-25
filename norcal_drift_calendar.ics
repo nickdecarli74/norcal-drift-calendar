@@ -533,6 +533,15 @@ UID:av-2026-10-16@driftwestnet.com
 URL:https://applevalleyspeedway.com/calendar/
 END:VEVENT
 BEGIN:VEVENT
+DESCRIPTION:Promoter: SUSBOYZ\nLocation: Apple Valley Speedway - Main Track & Skid Pad\nRegistration / Info: https://www.susboyz.com/category/events?utm_source=ig&utm_medium=social&utm_content=link_in_bio\n\nAll driver levels welcome. $85 driver fee (40 driver cap)\, $15 spectator gate fee. Manually added by the site owner.
+DTEND:20260906T000000Z
+LOCATION:Apple Valley Speedway - Main Track & Skid Pad
+DTSTART:20260905T150000Z
+SUMMARY:SUSBOYZ - Last Minute Drift Event
+UID:av-2026-09-05@driftwestnet.com
+URL:https://www.susboyz.com/category/events?utm_source=ig&utm_medium=social&utm_content=link_in_bio
+END:VEVENT
+BEGIN:VEVENT
 DESCRIPTION:Promoter: Cursed Chassis\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://www.instagram.com/ouija_boi/\n\nManually added by the site owner. Registration link points to the promoter's Instagram.
 DTEND:20260822T170000Z
 LOCATION:Thunderhill Raceway Park
