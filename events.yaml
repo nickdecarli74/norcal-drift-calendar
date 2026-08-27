@@ -440,8 +440,9 @@ events:
   start: 2026-08-29 08:00
   end: 2026-08-29 17:00
   location: Main & Skid
-  url: https://applevalleyspeedway.com/calendar/
-  notes: Manually verified from Apple Valley Speedway's calendar.
+  url: https://www.clubtouge.com/
+  notes: Manually verified from Apple Valley Speedway's calendar. Registration link
+    manually updated by the site owner.
 - id: av-2026-09-05
   addedAt: '2026-08-24T18:00:00+00:00'
   title: Last Minute Drift Event
