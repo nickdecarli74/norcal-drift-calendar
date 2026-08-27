@@ -916,6 +916,17 @@
     "addedAt": "2026-07-31T14:35:00+00:00"
   },
   {
+    "id": "nd-2026-10-31",
+    "title": "NOTADRIFT Halloween Event",
+    "promoter": "NOTADRIFT",
+    "start": "2026-10-31 09:00",
+    "end": "2026-10-31 17:00",
+    "location": "Big Skid Pad, Thunderhill Raceway Park",
+    "url": "https://instagram.com/notacargirl",
+    "notes": "$170 per spot. Hosted by @notadriftevent. Manually added by the site owner.",
+    "addedAt": "2026-08-27T20:56:20+00:00"
+  },
+  {
     "id": "av-2026-11-01",
     "title": "KINOD Miataween",
     "promoter": "Apple Valley Speedway",
@@ -1299,16 +1310,5 @@
     "url": "https://mhcircuit.com/event/open-drift-day-12/",
     "notes": "Auto-imported from Musselman Honda Circuit's calendar.",
     "addedAt": "2026-08-03T01:05:00+00:00"
-  },
-  {
-    "id": "nd-2026-10-31",
-    "title": "NOTADRIFT Halloween Event",
-    "promoter": "NOTADRIFT",
-    "start": "2026-10-31 09:00",
-    "end": "2026-10-31 17:00",
-    "location": "Big Skid Pad, Thunderhill Raceway Park",
-    "url": "https://instagram.com/notacargirl",
-    "notes": "$170 per spot. Hosted by @notadriftevent. Manually added by the site owner.",
-    "addedAt": "2026-08-27T20:56:20+00:00"
   }
 ]

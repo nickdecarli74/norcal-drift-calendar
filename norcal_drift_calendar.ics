@@ -821,6 +821,15 @@ UID:sd-2026-11-29@driftwestnet.com
 URL:https://super-d.net/pages/schedule
 END:VEVENT
 BEGIN:VEVENT
+DESCRIPTION:Promoter: NOTADRIFT\nLocation: Big Skid Pad\, Thunderhill Raceway Park\nRegistration / Info: https://instagram.com/notacargirl\n\n$170 per spot. Hosted by @notadriftevent. Manually added by the site owner.
+DTEND:20261031T170000Z
+LOCATION:Big Skid Pad\, Thunderhill Raceway Park
+DTSTART:20261031T090000Z
+SUMMARY:NOTADRIFT - NOTADRIFT Halloween Event
+UID:nd-2026-10-31@driftwestnet.com
+URL:https://instagram.com/notacargirl
+END:VEVENT
+BEGIN:VEVENT
 DESCRIPTION:Promoter: Cali Kansai\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://calikansai.com/products/ck7-driver-registration\n\nManually added by the site owner.
 DTEND:20260816T170000Z
 LOCATION:Thunderhill Raceway Park
