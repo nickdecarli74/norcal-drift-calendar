@@ -880,14 +880,14 @@ body{
    ========================================= */
 
 /* The border/radius/shadow live on .map-wrap, not on #track-map itself.
-   #track-map is the element Leaflet turns into its map container, and Leaflet
-   sizes all of its internal pixel math off clientWidth/clientHeight, which
-   (under our global box-sizing:border-box reset) excludes any border applied
-   directly to that element. A border here would make Leaflet's internal frame
-   a few px smaller than the box actually painted on screen, so markers near
-   the edge of the fitted bounds compute correctly by Leaflet's own math but
-   render outside the visible box - exactly the "dots hanging off the map"
-   and "drifts as you zoom" symptoms. Keep #track-map border-free. */
+   #track-map is the element MapLibre turns into its map container, and
+   MapLibre sizes all of its internal pixel math off clientWidth/clientHeight,
+   which (under our global box-sizing:border-box reset) excludes any border
+   applied directly to that element. A border here would make MapLibre's
+   internal frame a few px smaller than the box actually painted on screen, so
+   markers near the edge of the fitted bounds compute correctly by MapLibre's
+   own math but render outside the visible box - exactly the "dots hanging off
+   the map" and "drifts as you zoom" symptoms. Keep #track-map border-free. */
 #track-map{
   width:100%;
   height:100%;
@@ -919,28 +919,44 @@ body{
   pointer-events:none;
 }
 
-.leaflet-container{
+.maplibregl-map{
   background:#050505;
   font-family:Arial, Helvetica, sans-serif;
 }
 
-.leaflet-control-zoom a{
+.maplibregl-ctrl-group{
   background:#0b0b0b!important;
-  color:white!important;
-  border-color:rgba(255,255,255,.15)!important;
+  border:1px solid rgba(255,255,255,.15)!important;
 }
 
-.leaflet-popup-content-wrapper{
+.maplibregl-ctrl-group button{
+  background:#0b0b0b!important;
+}
+
+.maplibregl-ctrl-icon{
+  filter:invert(1);
+}
+
+.maplibregl-popup-content{
   background:linear-gradient(135deg,#0b0b0b,#000);
   color:white;
   border-radius:16px;
   border:1px solid rgba(255,255,255,.16);
   border-top:3px solid #e10600;
   box-shadow:0 0 28px rgba(225,6,0,.25);
+  padding:14px 18px;
 }
 
-.leaflet-popup-tip{
-  background:#090909;
+.maplibregl-popup-close-button{
+  color:white;
+}
+
+.maplibregl-popup-anchor-bottom .maplibregl-popup-tip{
+  border-top-color:#0b0b0b;
+}
+
+.maplibregl-popup-anchor-top .maplibregl-popup-tip{
+  border-bottom-color:#0b0b0b;
 }
 
 .map-popup-title{
@@ -966,15 +982,17 @@ body{
   border-radius:7px;
 }
 
-/* No position rule here on purpose: Leaflet requires .leaflet-marker-icon
-   (which this class is combined with) to stay position:absolute so it can
-   place markers via a CSS transform. style.css loads after leaflet.css, so
-   a position:relative here of equal specificity would silently win the
-   cascade and override it - every marker still renders somewhere, but at
-   the wrong pixel (compounding with each marker's DOM flow position), which
-   is what caused dots clipping off the map and appearing to drift on zoom.
-   position:absolute from leaflet.css already gives .marker-core/.marker-pulse
-   a containing block, so no override is needed. */
+/* MapLibre gives the element passed to `new maplibregl.Marker({element})`
+   position:absolute itself (via its own .maplibregl-marker class) and places
+   it with a CSS transform, so it's already a positioned containing block for
+   .marker-core/.marker-pulse below - no position rule needed here. Explicit
+   size keeps the marker's clickable/hoverable box matching the old Leaflet
+   iconSize instead of collapsing to 0x0 (its only children are removed from
+   flow via position:absolute). */
+.drift-marker{
+  width:34px;
+  height:34px;
+}
 
 .marker-core{
   position:absolute;

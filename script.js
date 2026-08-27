@@ -871,69 +871,64 @@ function closeEventModal(){
 
 function renderTrackMap(){
   const mapEl = document.getElementById("track-map");
-  if(!mapEl || typeof L === "undefined") return;
+  if(!mapEl || typeof maplibregl === "undefined") return;
 
   if(mapEl.dataset.loaded === "true") return;
   mapEl.dataset.loaded = "true";
 
-  const bounds = L.latLngBounds(TRACKS.map(t => [t.lat, t.lng]));
+  const bounds = TRACKS.reduce(
+    (b, t) => b.extend([t.lng, t.lat]),
+    new maplibregl.LngLatBounds([TRACKS[0].lng, TRACKS[0].lat], [TRACKS[0].lng, TRACKS[0].lat])
+  );
 
-  const map = L.map("track-map", {
-    scrollWheelZoom: false,
-    zoomControl: true,
-    // Finer zoom increments let fitBounds land closer to the exact padding
-    // requested instead of snapping to the nearest whole zoom level - extra
-    // headroom now that tracks span all the way from WA to Southern CA.
-    zoomSnap: 0.25
-  }).fitBounds(bounds, {padding: [55, 55]});
-
-  // CARTO's basemap tiles now require a registered API key - unauthenticated
-  // requests still return 200s but the tile images are a repeating "API KEY
-  // REQUIRED" watermark instead of the map. Esri's dark canvas basemap is a
-  // free, no-key equivalent with the same minimal dark styling.
-  L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}", {
-    attribution: "&copy; Esri, HERE, Garmin, &copy; OpenStreetMap contributors",
-    maxZoom: 16
-  }).addTo(map);
-
-  const driftIcon = L.divIcon({
-    className: "drift-marker",
-    html: "<div class='marker-core'></div><div class='marker-pulse'></div>",
-    iconSize: [34,34],
-    iconAnchor: [17,17]
+  // OpenFreeMap's "dark" style is a free vector basemap with no API key or
+  // signup required (unlike CARTO's raster tiles, which now gate the same
+  // dark_all look behind a registered key).
+  const map = new maplibregl.Map({
+    container: "track-map",
+    style: "https://tiles.openfreemap.org/styles/dark",
+    bounds: bounds,
+    fitBoundsOptions: {padding: 55},
+    scrollZoom: false,
+    attributionControl: {compact: true}
   });
 
-  TRACKS.forEach(track => {
-    const trackEvents = allEvents.filter(e => findTrackForEvent(e) === track);
+  map.addControl(new maplibregl.NavigationControl({showCompass: false}), "top-left");
 
-    const nextEvent = trackEvents
-      .filter(e => new Date(e.start.replace(" ","T")) >= new Date())
-      .sort((a,b) => new Date(a.start.replace(" ","T")) - new Date(b.start.replace(" ","T")))[0];
+  map.on("load", () => {
+    TRACKS.forEach(track => {
+      const trackEvents = allEvents.filter(e => findTrackForEvent(e) === track);
 
-    const popupHtml = `
-      <div class="map-popup-title">${track.name}</div>
-      <div class="map-popup-meta">
-        📍 ${track.location}<br>
-        🏁 ${trackEvents.length} event${trackEvents.length === 1 ? "" : "s"} listed<br>
-        ${nextEvent ? `🔥 Next: ${nextEvent.title}` : "No upcoming events listed"}
-      </div>
-      <a class="map-popup-button" href="#calendar">VIEW CALENDAR</a>
-    `;
+      const nextEvent = trackEvents
+        .filter(e => new Date(e.start.replace(" ","T")) >= new Date())
+        .sort((a,b) => new Date(a.start.replace(" ","T")) - new Date(b.start.replace(" ","T")))[0];
 
-    L.marker([track.lat, track.lng], {icon: driftIcon})
-      .addTo(map)
-      .bindPopup(popupHtml);
+      const popupHtml = `
+        <div class="map-popup-title">${track.name}</div>
+        <div class="map-popup-meta">
+          📍 ${track.location}<br>
+          🏁 ${trackEvents.length} event${trackEvents.length === 1 ? "" : "s"} listed<br>
+          ${nextEvent ? `🔥 Next: ${nextEvent.title}` : "No upcoming events listed"}
+        </div>
+        <a class="map-popup-button" href="#calendar">VIEW CALENDAR</a>
+      `;
+
+      const el = document.createElement("div");
+      el.className = "drift-marker";
+      el.innerHTML = "<div class='marker-core'></div><div class='marker-pulse'></div>";
+
+      new maplibregl.Marker({element: el})
+        .setLngLat([track.lng, track.lat])
+        .setPopup(new maplibregl.Popup({offset: 17}).setHTML(popupHtml))
+        .addTo(map);
+    });
   });
 
   // Mobile browsers resize the viewport after init (address bar collapsing
-  // on scroll, orientation change) without firing a window resize event Leaflet
-  // catches on its own - if the container's real size drifts from what Leaflet
-  // measured at init, its pixel math goes stale and markers visibly wander/fly
-  // off-screen as you zoom. Keep it in sync whenever the container's size changes.
-  if(typeof ResizeObserver !== "undefined"){
-    new ResizeObserver(() => map.invalidateSize()).observe(mapEl);
-  }
-  window.addEventListener("orientationchange", () => setTimeout(() => map.invalidateSize(), 300));
+  // on scroll, orientation change) without firing a window resize event -
+  // keep the map's internal size in sync so it doesn't render into a stale
+  // canvas size.
+  window.addEventListener("orientationchange", () => setTimeout(() => map.resize(), 300));
 }
 function openSubscribeModal(){
   document.getElementById("subscribe-modal").style.display = "flex";
