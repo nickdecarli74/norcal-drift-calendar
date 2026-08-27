@@ -416,6 +416,15 @@ UID:od-2026-07-26@driftwestnet.com
 URL:https://stockton99.com/outlaw-drift
 END:VEVENT
 BEGIN:VEVENT
+DESCRIPTION:Promoter: Flavor Express\nLocation: Orange Show Speedway\nRegistration / Info: https://www.flavorexpress.co/products/socal-am-slam-2026\n\nRound 3 of the SoCal AM Slam series at Orange Show Speedway\, 689 South E Street\, San Bernardino. Gates 2PM\, Practice 3PM\, Qualifying 5PM\, Top 32 6PM\, event ends 10PM. Manually added by the site owner.
+DTEND:20260822T220000Z
+LOCATION:Orange Show Speedway
+DTSTART:20260822T140000Z
+SUMMARY:Flavor Express - SoCal AM Slam Round 3
+UID:sas-2026-08-22@driftwestnet.com
+URL:https://www.flavorexpress.co/products/socal-am-slam-2026
+END:VEVENT
+BEGIN:VEVENT
 DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main Track\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\n2-day event. Manually corrected by the site owner - was previously listed as two separate events (Endless Summer Nights 6 / Ultra Bash).
 DTEND:20260809T170000Z
 LOCATION:Main Track
