@@ -448,34 +448,6 @@
     "location": "Main Track",
     "url": "https://www.instagram.com/p/DZc_6iKiM3C/",
     "notes": "A best!spec event celebrating another @backroadbucket hotlap around the sun. Bash driving all weekend, no comps, all seat time. Driver tickets $199.99 (includes all driver media); all drivers get a meal on Saturday. Track hot Fri 2PM-12AM, Sat 8AM-12AM, Sun 8AM-12PM. Manually added by the site owner.",
-    "featuredPartner": true,
-    "trackMapImage": "assets/apple-valley-track-map.webp",
-    "trackConfig": "Main Track",
-    "trackDirection": "Clockwise",
-    "trackNote": "Official Apple Valley Speedway Main Track configuration.",
-    "presentedBy": "best!spec",
-    "tagline": "Celebrating another @backroadbucket hotlap around the sun. Bash driving all weekend - no comps, all seat time.",
-    "perks": [
-      "Driver Entry $199.99",
-      "Includes All Driver Media",
-      "Meal Sat. For All Drivers"
-    ],
-    "registerHandles": [
-      {
-        "label": "@backroadbucket",
-        "url": "https://instagram.com/backroadbucket"
-      },
-      {
-        "label": "@matty.bs15",
-        "url": "https://instagram.com/matty.bs15"
-      }
-    ],
-    "timeLabel": "Tracks Hot",
-    "timeDetail": [
-      "Fri 2PM-12AM",
-      "Sat 8AM-12AM",
-      "Sun 8AM-12PM"
-    ],
     "addedAt": "2026-07-08T00:00:00+00:00"
   },
   {
