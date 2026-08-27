@@ -887,9 +887,13 @@ function renderTrackMap(){
     zoomSnap: 0.25
   }).fitBounds(bounds, {padding: [55, 55]});
 
-  L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
-    attribution: "&copy; OpenStreetMap &copy; CARTO",
-    maxZoom: 19
+  // CARTO's basemap tiles now require a registered API key - unauthenticated
+  // requests still return 200s but the tile images are a repeating "API KEY
+  // REQUIRED" watermark instead of the map. Esri's dark canvas basemap is a
+  // free, no-key equivalent with the same minimal dark styling.
+  L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}", {
+    attribution: "&copy; Esri, HERE, Garmin, &copy; OpenStreetMap contributors",
+    maxZoom: 16
   }).addTo(map);
 
   const driftIcon = L.divIcon({
