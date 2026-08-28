@@ -695,6 +695,17 @@
     "addedAt": "2026-07-08T00:00:00+00:00"
   },
   {
+    "id": "ldc-2026-09-26",
+    "title": "Drift Comp at The Mill",
+    "promoter": "The Lion's Den Corporation",
+    "start": "2026-09-26 08:00",
+    "end": "2026-09-26 17:00",
+    "location": "The Mill, Anderson, CA",
+    "url": "https://www.instagram.com/thelionsdencorporation/",
+    "notes": "Private gathering, no public access - DM @thelionsdencorporation on Instagram to register. $145 entry (40 driver cap). $500/$150 cash for 1st/2nd plus custom trophies 1st-3rd, 50/50 raffle, camping available Fri & Sat evenings for out-of-town drivers. 20811 Industry Road, Anderson, CA. Manually added by the site owner.",
+    "addedAt": "2026-08-27T23:56:25+00:00"
+  },
+  {
     "id": "av-2026-09-27",
     "title": "Chaser Motorsports",
     "promoter": "Apple Valley Speedway",
@@ -1310,16 +1321,5 @@
     "url": "https://mhcircuit.com/event/open-drift-day-12/",
     "notes": "Auto-imported from Musselman Honda Circuit's calendar.",
     "addedAt": "2026-08-03T01:05:00+00:00"
-  },
-  {
-    "id": "ldc-2026-09-26",
-    "title": "Drift Comp at The Mill",
-    "promoter": "The Lion's Den Corporation",
-    "start": "2026-09-26 08:00",
-    "end": "2026-09-26 17:00",
-    "location": "The Mill, Anderson, CA",
-    "url": "https://www.instagram.com/thelionsdencorporation/",
-    "notes": "Private gathering, no public access - DM @thelionsdencorporation on Instagram to register. $145 entry (40 driver cap). $500/$150 cash for 1st/2nd plus custom trophies 1st-3rd, 50/50 raffle, camping available Fri & Sat evenings for out-of-town drivers. 20811 Industry Road, Anderson, CA. Manually added by the site owner.",
-    "addedAt": "2026-08-27T23:56:25+00:00"
   }
 ]

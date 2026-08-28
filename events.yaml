@@ -592,6 +592,18 @@ events:
   location: NASA Crows Landing Airport
   url: https://www.valleydriftclub.com/
   notes: Valley Drift Club event.
+- id: ldc-2026-09-26
+  addedAt: '2026-08-27T23:56:25+00:00'
+  title: Drift Comp at The Mill
+  promoter: The Lion's Den Corporation
+  start: 2026-09-26 08:00
+  end: 2026-09-26 17:00
+  location: The Mill, Anderson, CA
+  url: https://www.instagram.com/thelionsdencorporation/
+  notes: Private gathering, no public access - DM @thelionsdencorporation on Instagram
+    to register. $145 entry (40 driver cap). $500/$150 cash for 1st/2nd plus custom
+    trophies 1st-3rd, 50/50 raffle, camping available Fri & Sat evenings for out-of-town
+    drivers. 20811 Industry Road, Anderson, CA. Manually added by the site owner.
 - id: av-2026-09-27
   addedAt: '2026-08-11T00:00:00+00:00'
   title: Chaser Motorsports
@@ -1106,15 +1118,3 @@ events:
   location: Musselman Honda Circuit
   url: https://mhcircuit.com/event/open-drift-day-12/
   notes: Auto-imported from Musselman Honda Circuit's calendar.
-- id: ldc-2026-09-26
-  addedAt: '2026-08-27T23:56:25+00:00'
-  title: Drift Comp at The Mill
-  promoter: The Lion's Den Corporation
-  start: 2026-09-26 08:00
-  end: 2026-09-26 17:00
-  location: The Mill, Anderson, CA
-  url: https://www.instagram.com/thelionsdencorporation/
-  notes: Private gathering, no public access - DM @thelionsdencorporation on Instagram
-    to register. $145 entry (40 driver cap). $500/$150 cash for 1st/2nd plus custom
-    trophies 1st-3rd, 50/50 raffle, camping available Fri & Sat evenings for out-of-town
-    drivers. 20811 Industry Road, Anderson, CA. Manually added by the site owner.

@@ -182,6 +182,15 @@ UID:bad-2026-06-13@driftwestnet.com
 URL:https://bayareadrifting.com/schedule
 END:VEVENT
 BEGIN:VEVENT
+DESCRIPTION:Promoter: The Lion's Den Corporation\nLocation: The Mill\, Anderson\, CA\nRegistration / Info: https://www.instagram.com/thelionsdencorporation/\n\nPrivate gathering\, no public access - DM @thelionsdencorporation on Instagram to register. $145 entry (40 driver cap). $500/$150 cash for 1st/2nd plus custom trophies 1st-3rd\, 50/50 raffle\, camping available Fri & Sat evenings for out-of-town drivers. 20811 Industry Road\, Anderson\, CA. Manually added by the site owner.
+DTEND:20260926T170000Z
+LOCATION:The Mill\, Anderson\, CA
+DTSTART:20260926T080000Z
+SUMMARY:The Lion's Den Corporation - Drift Comp at The Mill
+UID:ldc-2026-09-26@driftwestnet.com
+URL:https://www.instagram.com/thelionsdencorporation/
+END:VEVENT
+BEGIN:VEVENT
 DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main & Skid\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\nManually verified from Apple Valley Speedway's calendar.
 DTEND:20261219T170000Z
 LOCATION:Main & Skid
