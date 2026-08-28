@@ -980,6 +980,7 @@ Promise.all([
 
     loadWeather(allEvents).then(() => {
       renderFeaturedPartnerEvent(allEvents);
+      renderNextEvent(allEvents);
       renderUpcoming(allEvents);
     });
   })
