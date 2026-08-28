@@ -412,7 +412,7 @@ body{
   margin-bottom:16px;
 }
 
-.cal-nav-group{
+.cal-prev-next{
   display:flex;
   align-items:center;
   gap:10px;
@@ -1527,6 +1527,15 @@ footer{
     border-color:#e10600;
     color:#e10600;
     background:rgba(225,6,0,.14);
+  }
+
+  .calendar-head{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .calendar-title{
+    order:-1;
   }
 
   .calendar-grid{

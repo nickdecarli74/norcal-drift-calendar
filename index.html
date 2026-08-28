@@ -143,12 +143,12 @@
     <div class="chiprow" id="calendar-chiprow"></div>
 
     <div class="calendar-head">
-      <button class="cal-btn" onclick="changeMonth(-1)">‹ PREV</button>
-      <div id="calendar-title" class="calendar-title"></div>
-      <div class="cal-nav-group">
+      <div class="cal-prev-next">
+        <button class="cal-btn" onclick="changeMonth(-1)">‹ PREV</button>
         <button class="cal-btn" onclick="changeMonth(1)">NEXT ›</button>
-        <button class="subscribe" onclick="openSubscribeModal()">ADD TO CALENDAR</button>
       </div>
+      <div id="calendar-title" class="calendar-title"></div>
+      <button class="subscribe" onclick="openSubscribeModal()">ADD TO CALENDAR</button>
     </div>
 
     <div id="calendar-grid" class="calendar-grid"></div>
