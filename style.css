@@ -125,43 +125,65 @@ body{
   text-align:center;
 }
 
-.hero-logo{
-  display:block;
+.hero-logo-wrap{
   width:min(850px,96vw);
-  height:auto;
+  aspect-ratio:1536/320;
   margin:0 auto;
+  overflow:hidden;
 }
 
-.tagline{
-  margin-top:18px;
-  font-size:18px;
-  letter-spacing:6px;
-  color:#ddd;
+.hero-logo{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center 42%;
+}
+
+.tagline-eyebrow{
+  margin-top:4px;
+  font-size:12px;
+  letter-spacing:.3em;
+  color:#888;
+  font-style:normal;
+  text-align:center;
+  font-weight:800;
+  text-transform:uppercase;
+}
+
+.tagline-headline{
+  margin-top:6px;
+  font-size:19px;
+  letter-spacing:2.5px;
+  color:#eee;
   font-style:italic;
   text-align:center;
-  font-weight:700;
+  font-weight:900;
+}
+
+.tagline-headline .accent{
+  color:#e10600;
 }
 
 .subscribe{
-  margin-top:12px;
-  display:inline-block;
-  background:#e10600;
-  color:white;
-  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  background:transparent;
+  color:#e10600;
   font-weight:900;
-  font-size:18px;
-  letter-spacing:1px;
-  padding:18px 38px;
+  font-size:12.5px;
+  letter-spacing:.6px;
+  padding:10px 16px;
   border-radius:8px;
-  border:1px solid rgba(255,255,255,.20);
-  box-shadow:0 0 30px rgba(225,6,0,.75), inset 0 0 18px rgba(255,255,255,.12);
-  transition:.2s;
+  border:1px solid rgba(225,6,0,.55);
   cursor:pointer;
+  transition:.2s;
 }
 
 .subscribe:hover{
-  transform:translateY(-3px);
-  box-shadow:0 0 55px rgba(225,6,0,.95), inset 0 0 18px rgba(255,255,255,.18);
+  background:rgba(225,6,0,.12);
+  box-shadow:0 0 18px rgba(225,6,0,.3);
 }
 
 .mobile-quick-tabs{
@@ -385,7 +407,15 @@ body{
   display:flex;
   justify-content:space-between;
   align-items:center;
+  flex-wrap:wrap;
+  gap:12px;
   margin-bottom:16px;
+}
+
+.cal-nav-group{
+  display:flex;
+  align-items:center;
+  gap:10px;
 }
 
 .cal-btn{
@@ -1437,26 +1467,30 @@ footer{
     overflow:hidden;
   }
 
-  .hero-logo{
+  .hero-logo-wrap{
     width:100%;
     max-width:430px;
-    height:auto;
     margin:0 auto;
   }
 
-  .tagline{
-  font-size:12px;
-  letter-spacing:2px;
-  margin-top:8px;
-  padding:0 10px;
-  line-height:1.5;
-}
+  .tagline-eyebrow{
+    font-size:10px;
+    letter-spacing:.2em;
+    margin-top:8px;
+    padding:0 10px;
+  }
+
+  .tagline-headline{
+    font-size:14px;
+    letter-spacing:1.5px;
+    margin-top:5px;
+    padding:0 10px;
+    line-height:1.5;
+  }
 
   .subscribe{
-    margin-top:14px;
-    font-size:14px;
-    padding:15px 18px;
-    max-width:92vw;
+    font-size:11px;
+    padding:8px 12px;
   }
 
   .mobile-quick-tabs{

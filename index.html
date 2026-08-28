@@ -93,14 +93,12 @@
   </nav>
 
   <div class="logo-wrap">
-  <img class="hero-logo" src="assets/driftwest-3d-hero.png" alt="DriftWest">
+  <div class="hero-logo-wrap">
+    <img class="hero-logo" src="assets/driftwest-3d-hero.png" alt="DriftWest">
+  </div>
 
-  <div class="tagline">THE WEST COAST DRIFT HUB</div>
-
-
-  <button class="subscribe" onclick="openSubscribeModal()">
-    ADD TO CALENDAR
-  </button>
+  <div class="tagline-eyebrow">West Coast Drift Hub</div>
+  <div class="tagline-headline">ALL EVENTS. ALL MEDIA. <span class="accent">ONE PLACE.</span></div>
 
   <nav class="mobile-quick-tabs">
     <a href="#events">Events</a>
@@ -147,7 +145,10 @@
     <div class="calendar-head">
       <button class="cal-btn" onclick="changeMonth(-1)">‹ PREV</button>
       <div id="calendar-title" class="calendar-title"></div>
-      <button class="cal-btn" onclick="changeMonth(1)">NEXT ›</button>
+      <div class="cal-nav-group">
+        <button class="cal-btn" onclick="changeMonth(1)">NEXT ›</button>
+        <button class="subscribe" onclick="openSubscribeModal()">ADD TO CALENDAR</button>
+      </div>
     </div>
 
     <div id="calendar-grid" class="calendar-grid"></div>
