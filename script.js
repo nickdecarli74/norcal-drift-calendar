@@ -123,6 +123,22 @@ const TRACKS = [
     lat: 40.5138,
     lng: -122.2903,
     search: ["redding"]
+  },
+  {
+    name: "The Mill (Anderson)",
+    short: "Anderson",
+    location: "Anderson, CA",
+    lat: 40.4308,
+    lng: -122.2754,
+    search: ["anderson, ca"]
+  },
+  {
+    name: "Orange Show Speedway",
+    short: "San Bernardino",
+    location: "San Bernardino, CA",
+    lat: 34.088,
+    lng: -117.2939,
+    search: ["orange show"]
   }
 ];
 
