@@ -437,6 +437,7 @@ events:
   calendarLabel: Navapalooza 8
 - id: vgd-2026-08-28
   addedAt: '2026-08-31T00:00:00+00:00'
+  locked: true
   featured: true
   title: VegasDrift Summer Nights
   promoter: VegasDrift

@@ -9,6 +9,7 @@ from scrapers import super_d
 from scrapers import apple_valley
 from scrapers import nice_tires
 from scrapers import donutz4dollarz
+from scrapers import vegasdrift
 
 EVENTS_FILE = "events.yaml"
 MIN_EVENTS_REQUIRED = 1
@@ -72,6 +73,7 @@ super_d_events = super_d.get_events()
 apple_valley_events = apple_valley.get_events()
 nice_tires_events = nice_tires.get_events()
 donutz4dollarz_events = donutz4dollarz.get_events()
+vegasdrift_events = vegasdrift.get_events()
 
 if len(drift_central_events) < MIN_EVENTS_REQUIRED:
     raise RuntimeError(
@@ -89,6 +91,7 @@ incoming_events.extend(super_d_events)
 incoming_events.extend(apple_valley_events)
 incoming_events.extend(nice_tires_events)
 incoming_events.extend(donutz4dollarz_events)
+incoming_events.extend(vegasdrift_events)
 
 merged_events, added, updated = merge_events(existing_events, incoming_events)
 

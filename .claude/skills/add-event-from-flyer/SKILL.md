@@ -1,6 +1,6 @@
 ---
 name: add-event-from-flyer
-description: Add drift events to this site's calendar (events.yaml/events.json) from a photo of a promoter's schedule flyer or Instagram graphic, instead of a live website. Use this whenever the user shares/pastes an image of an event schedule, poster, or flyer and wants the date(s) added to the calendar - especially for GoodLuckLeague (GLL) and Valley Drift Club (VDC), who only ever publish their schedules as Instagram images with no real website to scrape. Also applies to any other promoter's flyer image, one-off event poster, or screenshot of a schedule graphic.
+description: Add drift events to this site's calendar (events.yaml/events.json) from a photo of a promoter's schedule flyer or Instagram graphic, instead of a live website. Use this whenever the user shares/pastes an image of an event schedule, poster, or flyer and wants the date(s) added to the calendar - especially for GoodLuckLeague (GLL), Valley Drift Club (VDC), and VegasDrift, who only ever publish their schedules as Instagram images/flyers with no scrapeable live schedule (VegasDrift's own site just embeds a ticketing widget with no listing when nothing's on sale). Also applies to any other promoter's flyer image, one-off event poster, or screenshot of a schedule graphic.
 ---
 
 # Add Event From Flyer
@@ -35,6 +35,7 @@ match whatever you find. As of now:
 |---|---|---|---|---|
 | GoodLuckLeague | `gll-` | `GoodLuckLeague` (shows as "GLL" via `PROMOTER_ABBREV` in script.js) | Thunderhill Raceway Park | `https://www.goodluckleague.com/schedule` |
 | Valley Drift Club | `vdc-` | `Valley Drift Club` (shows as "VDC") | NASA Crows Landing Airport | `https://www.valleydriftclub.com/` |
+| VegasDrift | `vgd-` | `VegasDrift` | Las Vegas Motor Speedway - North Drag Lot | `https://vegasdrift.com/` |
 
 For a promoter not in that table (or not yet in `events.yaml` at all), pick a
 short lowercase prefix from their name (e.g. "Cursed Chassis" -> `cc-`), check
