@@ -506,6 +506,15 @@ UID:av-2026-10-11@driftwestnet.com
 URL:http://www.corner-exit.com/
 END:VEVENT
 BEGIN:VEVENT
+DESCRIPTION:Promoter: VegasDrift\nLocation: Las Vegas Motor Speedway - North Drag Lot\nRegistration / Info: https://vegasdrift.com/\n\nCircuit-style grassroots night event. Gates 4PM\, track hot 6PM-12AM. Manually added by the site owner from the event flyer and TheFOAT listing — first Las Vegas-area event on the calendar.
+DTEND:20260829T000000Z
+LOCATION:Las Vegas Motor Speedway - North Drag Lot
+DTSTART:20260828T160000Z
+SUMMARY:VegasDrift - VegasDrift Summer Nights
+UID:vgd-2026-08-28@driftwestnet.com
+URL:https://vegasdrift.com/
+END:VEVENT
+BEGIN:VEVENT
 DESCRIPTION:Promoter: DLUX\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://docs.google.com/forms/d/e/1FAIpQLSdPFCbJi7wmdKqm7CjqEVwW6W4S8ZKKofZj0U0lRUvwTFXlIg/viewform?fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnhcIPkC9N4JSyq6qchrc9CswEPdntrivA3xAzz3hvajxX4xoG7HmfpD1b73Y_aem_gl2-589OhrJDireBOJGslw\n\nManually added by the site owner.
 DTEND:20260913T170000Z
 LOCATION:Thunderhill Raceway Park
