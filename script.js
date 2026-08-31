@@ -139,6 +139,14 @@ const TRACKS = [
     lat: 34.088,
     lng: -117.2939,
     search: ["orange show"]
+  },
+  {
+    name: "Las Vegas Motor Speedway",
+    short: "Las Vegas",
+    location: "Las Vegas, NV",
+    lat: 36.2713,
+    lng: -115.0111,
+    search: ["las vegas motor speedway", "north drag lot"]
   }
 ];
 

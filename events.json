@@ -507,6 +507,18 @@
     "addedAt": "2026-07-29T20:30:00+00:00"
   },
   {
+    "id": "vgd-2026-08-28",
+    "title": "VegasDrift Summer Nights",
+    "promoter": "VegasDrift",
+    "start": "2026-08-28 16:00",
+    "end": "2026-08-29 00:00",
+    "location": "Las Vegas Motor Speedway - North Drag Lot",
+    "url": "https://vegasdrift.com/",
+    "notes": "Circuit-style grassroots night event. Gates 4PM, track hot 6PM-12AM. Manually added by the site owner from the event flyer and TheFOAT listing — first Las Vegas-area event on the calendar.",
+    "featured": true,
+    "addedAt": "2026-08-31T00:00:00+00:00"
+  },
+  {
     "id": "vdc-2026-08-29",
     "title": "FOMO",
     "promoter": "Valley Drift Club",
