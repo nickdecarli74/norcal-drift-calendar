@@ -434,5 +434,16 @@
         "addedAt": "2026-09-04T19:30:00.266Z"
       }
     ]
+  },
+  {
+    "eventId": "bad-2026-01-17",
+    "submissions": [
+      {
+        "name": "DriftWest TEST submission (Web App) - please ignore/close",
+        "role": "photo",
+        "url": "https://example.com/driftwest-webapp-test",
+        "addedAt": "2026-09-04T20:54:23.964Z"
+      }
+    ]
   }
 ]
