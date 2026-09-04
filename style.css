@@ -1395,6 +1395,98 @@ body{
   margin:0 auto 18px;
 }
 
+.submit-form{
+  text-align:left;
+  max-width:420px;
+  margin:0 auto;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+.submit-form-row{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+
+.submit-form-row label{
+  font-size:13px;
+  font-weight:700;
+  color:#eee;
+}
+
+.submit-form-hint{
+  display:block;
+  font-size:11px;
+  font-weight:400;
+  color:#888;
+  margin-top:2px;
+}
+
+.submit-form-row input,
+.submit-form-row select{
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.15);
+  border-radius:8px;
+  padding:10px 12px;
+  font-size:14px;
+  color:#fff;
+  font-family:inherit;
+}
+
+.submit-form-row input:focus,
+.submit-form-row select:focus{
+  outline:none;
+  border-color:#e10600;
+  box-shadow:0 0 0 1px #e10600 inset;
+}
+
+.submit-form-remember{
+  font-size:12px;
+  color:#999;
+  min-height:16px;
+}
+
+.submit-form-remember a{
+  color:#e10600;
+  text-decoration:none;
+}
+
+.submit-form-remember a:hover{
+  text-decoration:underline;
+}
+
+.submit-form-btn{
+  background:#e10600;
+  color:#fff;
+  border:none;
+  border-radius:8px;
+  padding:12px;
+  font-size:14px;
+  font-weight:900;
+  letter-spacing:.5px;
+  cursor:pointer;
+}
+
+.submit-form-btn:hover{
+  filter:brightness(1.1);
+}
+
+.submit-form-status{
+  font-size:14px;
+  color:#4caf50;
+  font-weight:700;
+  text-align:center;
+}
+
+.submit-form-fallback{
+  text-align:center;
+  font-size:12px;
+  color:#777;
+  margin-top:16px;
+}
+
 /* =========================================
    FOOTER
    ========================================= */

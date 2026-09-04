@@ -112,26 +112,59 @@ Google Drive, etc).
 
 ### Submission workflow (decided, already built)
 Self-serve, review-gated via GitHub PR — the site owner still approves everything,
-they just merge a PR instead of hand-editing JSON:
-1. Photographer fills out a Google Form (already created, live):
-   https://docs.google.com/forms/d/e/1FAIpQLSfgvWh9QZlCBY46bMQCUbZy4DMaewADwCGHScMELIs4Wby_Rg/viewform
-   Fields: Name/Handle, Event (dropdown), Role (photo/video/both), Link, Contact, Notes.
-2. Responses land in a linked Google Sheet, which fires the Apps Script trigger
-   (`automation/media-submission/Code.gs`).
-3. The script opens a PR adding the submission to `media.json` and emails the owner
-   the details (including Contact, which is deliberately excluded from the public PR).
-4. Owner reviews the PR on GitHub and merges (or closes it) — that's the approval step.
-5. Fallback: if the automation is down, or the event dropdown's label doesn't match
-   `events.json` (the script emails a failure alert with the raw submission in that
-   case), the owner can still copy entries into `media.json` by hand and push, exactly
-   as before.
+they just merge a PR instead of hand-editing JSON. There are two independent
+submission paths that both end up opening a PR against `media.json`:
 
-This form link is placeholder-free and real — do not swap it back to a mailto
-unless the user asks. The event dropdown doesn't need a rigid format — the script
-fuzzy-matches an answer to an `eventId` if it contains both that event's date and its
-title/promoter somewhere in the text (see `automation/media-submission/README.md` §5).
-Still needs a new dropdown option whenever a new event is added, just not a specific
-syntax.
+**Path A — the on-site form (primary UI).** `media.html`'s "SHOT THIS EVENT?"
+banner shows a custom-styled form (`media.js`: `mediaSubmitFormHtml()` /
+`wireMediaSubmitForm()`) instead of linking straight to the Google Form. It
+remembers Name/Handle, Role, and Contact in `localStorage`
+(`SUBMITTER_STORAGE_KEY`) so a repeat submitter just pastes their link and hits
+submit. It POSTs JSON directly to a dedicated Apps Script Web app deployment
+(`MEDIA_SUBMIT_WEBAPP_URL` in `media.js` → `doPost(e)` in `Code.gs`), which opens
+the GitHub PR itself using the exact `eventId` the page already knows — it does
+**not** go through the Google Form or Sheet at all for this path. An earlier
+version tried POSTing straight into the Google Form's `/formResponse` endpoint
+(the classic custom-Google-Form-UI trick) so both paths would share one backend,
+but real end-to-end testing found Google enforces the Event question's dropdown
+option list server-side and silently rejects (HTTP 400) any value that isn't an
+exact existing option — which the on-site form can't produce since it generates
+its own event text rather than picking from that hand-maintained list. The
+Web-app approach was built instead specifically to avoid that dependency.
+Until `MEDIA_SUBMIT_WEBAPP_URL` is filled in (a one-time deploy only the owner
+can do — see `automation/media-submission/README.md` §7), `media.js`
+deliberately hides the custom form entirely and shows only the fallback link
+below, rather than showing visitors a false "submitted" message.
+**Web app deployments don't auto-update from source** — editing `Code.gs` needs
+a new deployment version (Deploy → Manage deployments → edit → Version: New
+version) or the live endpoint silently keeps running the old code.
+
+**Path B — the real Google Form (fallback).** Kept live as a fallback for
+JS-disabled visitors or if the on-site form ever breaks:
+https://docs.google.com/forms/d/e/1FAIpQLSfgvWh9QZlCBY46bMQCUbZy4DMaewADwCGHScMELIs4Wby_Rg/viewform
+Fields: Name/Handle, Event (dropdown — must contain the exact option text,
+manually added by the owner per event), Role (photo/video/both/driver), Link,
+Contact, and "Can this be featured on DriftWest instagram?" (owner-email-only,
+not stored in `media.json`). There is no Notes field anymore — the form used to
+have one but it was swapped out for the Featured question at some point without
+anyone updating `Code.gs` to match, so Notes silently stopped being captured;
+`note` remains a valid optional field in `media.json` for hand-added entries,
+it's just no longer populated by either submission path. Responses land in a
+linked Google Sheet, which fires the "On form submit" Apps Script trigger
+(`onFormSubmit` in `Code.gs`) — this path still does the fuzzy event-matching
+(date + title/promoter both present in the answer text) documented in
+`automation/media-submission/README.md` §5, since it's the human filling in
+free text against a dropdown, not the site generating it.
+**If you ever edit the live Google Form's questions, update `Code.gs`'s
+`FIELD_*` constants to match — this exact drift is what broke Notes capture
+last time, silently.**
+
+Both paths converge from here: the script opens a PR adding the submission to
+`media.json` and emails the owner the details (including Contact, which is
+deliberately excluded from the public PR). Owner reviews the PR on GitHub and
+merges (or closes it) — that's the approval step. Fallback within the fallback:
+if the automation is down entirely, or Path B's event-matching fails, the owner
+can still copy entries into `media.json` by hand and push, exactly as before.
 
 ### Not yet decided / open for later
 - No file/photo hosting on-site — links out only, by design.

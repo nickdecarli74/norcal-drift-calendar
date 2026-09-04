@@ -329,6 +329,161 @@ function renderRecentSubmissions(events, mediaData){
   `).join("");
 }
 
+/* ---- On-site submit form ----
+   Custom-styled stand-in for the Google Form, embedded on media.html. Remembers
+   a returning submitter's Name/Handle, Role, and Contact via localStorage, then
+   POSTs JSON straight to a dedicated Apps Script Web app deployment (doPost() in
+   Code.gs) which opens the GitHub PR directly using the exact eventId this page
+   already knows — it does NOT go through the Google Form/Sheet at all, since
+   Google enforces that form's Event dropdown option list server-side and
+   silently rejects anything else (confirmed by testing before landing on this
+   approach). MEDIA_SUBMIT_WEBAPP_URL must be filled in with that deployment's
+   URL — see automation/media-submission/README.md's "On-site submit form"
+   section for the one-time setup and what breaks if Code.gs and this file drift
+   out of sync. Until it's filled in, the form is hidden and only the fallback
+   link to the real Google Form is shown, so visitors never see a false
+   "submitted" message for a submission that silently went nowhere. */
+
+const GOOGLE_FORM_ID = "1FAIpQLSfgvWh9QZlCBY46bMQCUbZy4DMaewADwCGHScMELIs4Wby_Rg";
+const MEDIA_SUBMIT_WEBAPP_URL = "https://script.google.com/macros/s/AKfycbz2-IjmINk9n7WhQoaAXB9OdHDrxOxfCHFg0mfnMbVfxu1Qt5l4eiWMM-PwGQuKexDDtA/exec";
+const SUBMITTER_STORAGE_KEY = "driftwest_media_submitter_v1";
+
+function loadSavedSubmitter(){
+  try{
+    const raw = localStorage.getItem(SUBMITTER_STORAGE_KEY);
+    return raw ? JSON.parse(raw) : null;
+  }catch(e){
+    return null;
+  }
+}
+
+function saveSubmitter(data){
+  try{ localStorage.setItem(SUBMITTER_STORAGE_KEY, JSON.stringify(data)); }catch(e){}
+}
+
+function clearSavedSubmitter(){
+  try{ localStorage.removeItem(SUBMITTER_STORAGE_KEY); }catch(e){}
+}
+
+// Fire-and-forget: Apps Script Web apps don't send CORS headers, so the
+// response can't be read cross-origin. mode:"no-cors" avoids a failed fetch
+// over that (and, since the body is plain JSON text, avoids a CORS preflight
+// too) at the cost of never being able to confirm success client-side — the
+// on-site form's "submitted" message is always optimistic, same as the real
+// Google Form's own confirmation page.
+function submitMediaForm(payload){
+  fetch(MEDIA_SUBMIT_WEBAPP_URL, {
+    method: "POST",
+    mode: "no-cors",
+    body: JSON.stringify(payload)
+  }).catch(() => {});
+}
+
+function mediaSubmitFormHtml(){
+  if(!MEDIA_SUBMIT_WEBAPP_URL){
+    return `
+      <div class="submit-form-fallback">
+        <a class="modal-link" href="https://docs.google.com/forms/d/e/${GOOGLE_FORM_ID}/viewform" target="_blank" rel="noopener">SUBMIT YOUR LINK ›</a>
+      </div>
+    `;
+  }
+
+  return `
+    <form class="submit-form" id="media-submit-form" autocomplete="off" novalidate>
+      <div class="submit-form-row">
+        <label for="submit-name">Name / Handle</label>
+        <input type="text" id="submit-name" required maxlength="100">
+      </div>
+      <div class="submit-form-row">
+        <label for="submit-role">Role</label>
+        <select id="submit-role" required>
+          <option value="" disabled selected>Select...</option>
+          <option value="Photographer">Photographer</option>
+          <option value="Videographer">Videographer</option>
+          <option value="Both">Photographer &amp; Videographer</option>
+          <option value="Driver Clip">Driver Clip</option>
+        </select>
+      </div>
+      <div class="submit-form-row">
+        <label for="submit-link">Link to your album, reel, or channel</label>
+        <input type="url" id="submit-link" required maxlength="500" placeholder="https://...">
+      </div>
+      <div class="submit-form-row">
+        <label for="submit-contact">Instagram handle or email<span class="submit-form-hint">so we can reach you if needed — stays private unless it's your public handle</span></label>
+        <input type="text" id="submit-contact" required maxlength="200">
+      </div>
+      <div class="submit-form-row">
+        <label for="submit-featured">OK to feature on DriftWest's Instagram?</label>
+        <select id="submit-featured">
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+      <div class="submit-form-remember">
+        <span id="submit-form-remembered" hidden>Using your saved info. <a href="#" id="submit-form-clear">Not you?</a></span>
+      </div>
+      <button type="submit" class="submit-form-btn">SUBMIT ›</button>
+      <div class="submit-form-status" id="submit-form-status" hidden></div>
+    </form>
+    <div class="submit-form-fallback">
+      Having trouble? <a class="modal-link" href="https://docs.google.com/forms/d/e/${GOOGLE_FORM_ID}/viewform" target="_blank" rel="noopener">use the form directly ›</a>
+    </div>
+  `;
+}
+
+function wireMediaSubmitForm(event){
+  const form = document.getElementById("media-submit-form");
+  if(!form) return;
+
+  const nameEl = document.getElementById("submit-name");
+  const roleEl = document.getElementById("submit-role");
+  const linkEl = document.getElementById("submit-link");
+  const contactEl = document.getElementById("submit-contact");
+  const featuredEl = document.getElementById("submit-featured");
+  const statusEl = document.getElementById("submit-form-status");
+  const rememberedEl = document.getElementById("submit-form-remembered");
+  const clearLink = document.getElementById("submit-form-clear");
+
+  const saved = loadSavedSubmitter();
+  if(saved){
+    if(saved.name) nameEl.value = saved.name;
+    if(saved.role) roleEl.value = saved.role;
+    if(saved.contact) contactEl.value = saved.contact;
+    rememberedEl.hidden = false;
+  }
+
+  clearLink.addEventListener("click", (e) => {
+    e.preventDefault();
+    clearSavedSubmitter();
+    nameEl.value = "";
+    roleEl.value = "";
+    contactEl.value = "";
+    rememberedEl.hidden = true;
+  });
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    if(!form.reportValidity()) return;
+
+    const name = nameEl.value.trim();
+    const role = roleEl.value;
+    const link = linkEl.value.trim();
+    const contact = contactEl.value.trim();
+    const featured = featuredEl.value;
+
+    submitMediaForm({
+      name, role, link, contact, featured,
+      eventId: event.id
+    });
+
+    saveSubmitter({name, role, contact});
+
+    form.hidden = true;
+    statusEl.hidden = false;
+    statusEl.textContent = "Thanks! Your submission is queued for review and will appear here once approved.";
+  });
+}
+
 /* ---- Instagram handle detection ----
    Most submitters put their Instagram handle straight into the "Name/Handle"
    form field. We derive a profile link from that (or an @mention inside it)
@@ -480,7 +635,9 @@ function renderMediaPage(events, mediaData){
         Photographer, videographer, or a driver with clips on your phone — submit your
         link and we'll add it here so everyone can find it.
       </div>
-      <a class="modal-link" href="https://docs.google.com/forms/d/e/1FAIpQLSfgvWh9QZlCBY46bMQCUbZy4DMaewADwCGHScMELIs4Wby_Rg/viewform" target="_blank" rel="noopener">SUBMIT YOUR LINK ›</a>
+      ${mediaSubmitFormHtml()}
     </div>
   `;
+
+  wireMediaSubmitForm(event);
 }

@@ -10,6 +10,15 @@
  * instead, that handle is pulled into the PR as the submission's public
  * `instagram` field.
  *
+ * Submissions arrive two ways: someone filling out the live Google Form
+ * directly (onFormSubmit, triggered on Sheet row add), or media.js's on-site
+ * submit form on media.html POSTing JSON straight to doPost(e) below (see
+ * wireMediaSubmitForm() in media.js), which repeat submitters see instead of
+ * the raw Google Form since it remembers their name/role/contact. The two
+ * paths are independent: doPost() opens PRs itself using the exact eventId the
+ * page already knows, rather than going through the Google Form/Sheet at all.
+ * doPost() requires its own separate "Web app" deployment - see README.md.
+ *
  * Setup: see README.md in this same folder. Do not hardcode the GitHub token —
  * it's read from Script Properties (GITHUB_TOKEN) at runtime.
  */
@@ -27,7 +36,7 @@ const FIELD_EVENT = "Event";
 const FIELD_ROLE = "Role";
 const FIELD_LINK = "Link to your album, reel or channel";
 const FIELD_CONTACT = "Your Instagram handle or email (so we can reach you if needed)";
-const FIELD_NOTES = "Anything else we should know?";
+const FIELD_FEATURED = "Can this be featured on DriftWest instagram?";
 
 // ---- Entry point ----
 
@@ -42,7 +51,7 @@ function onFormSubmit(e) {
     var roleAnswer = firstValue_(raw, FIELD_ROLE);
     var link = firstValue_(raw, FIELD_LINK);
     var contact = firstValue_(raw, FIELD_CONTACT);
-    var notes = firstValue_(raw, FIELD_NOTES);
+    var featuredAnswer = firstValue_(raw, FIELD_FEATURED);
 
     if (!name || !eventAnswer || !roleAnswer || !link) {
       throw new Error("Missing a required field (name/event/role/link).");
@@ -57,7 +66,6 @@ function onFormSubmit(e) {
 
     var role = mapRole_(roleAnswer);
     var submission = { name: name, role: role, url: link };
-    if (notes) submission.note = notes;
 
     // The Contact field asks for "Instagram handle or email" - if what they gave us
     // isn't an email, it's very likely their handle, and unlike an email that's fine
@@ -94,13 +102,103 @@ function onFormSubmit(e) {
     var prUrl = openPullRequest_(token, branch, name, role, eventId, igFromContact);
 
     sendOwnerEmail_(prUrl, {
-      name: name, role: role, link: link, note: notes,
+      name: name, role: role, link: link, featured: featuredAnswer,
       contact: contact, instagram: igFromContact,
       eventId: eventId, eventAnswer: eventAnswer
     });
   } catch (err) {
     sendAlertEmail_(err, raw);
   }
+}
+
+// Web app endpoint for media.js's on-site submit form (media.html). Takes the
+// exact eventId directly from the page instead of a free-text Event answer, so
+// unlike onFormSubmit it never depends on resolveEventId_'s fuzzy matching or on
+// the live Google Form's Event dropdown at all. Google enforces that dropdown's
+// option list server-side, silently rejecting any submitted value that isn't an
+// exact existing option - this endpoint sidesteps that entirely by not routing
+// through the Google Form at all for this path.
+//
+// Requires a "Web app" deployment (Execute as: Me, Access: Anyone) separate from
+// the "On form submit" trigger above - see README.md. IMPORTANT: editing this
+// script does NOT update an existing Web app deployment's live code; you must
+// create a new version via Deploy > Manage deployments > edit > Version: New
+// version, or changes here silently never take effect for on-site submissions.
+function doPost(e) {
+  var raw = null;
+  try {
+    raw = e && e.postData ? e.postData.contents : null;
+    if (!raw) throw new Error("No POST body.");
+    var data = JSON.parse(raw);
+
+    var name = (data.name || "").trim();
+    var eventId = (data.eventId || "").trim();
+    var roleAnswer = (data.role || "").trim();
+    var link = (data.link || "").trim();
+    var contact = (data.contact || "").trim();
+    var featuredAnswer = (data.featured || "").trim();
+
+    if (!name || !eventId || !roleAnswer || !link) {
+      throw new Error("Missing a required field (name/eventId/role/link).");
+    }
+    if (!eventExists_(eventId)) {
+      throw new Error("Unknown eventId: \"" + eventId + "\"");
+    }
+
+    var role = mapRole_(roleAnswer);
+    var submission = { name: name, role: role, url: link };
+
+    var igFromContact = extractInstagramHandle_(contact);
+    if (igFromContact) submission.instagram = igFromContact;
+
+    submission.addedAt = new Date().toISOString();
+
+    var token = getGithubToken_();
+    var branch = "media-submission-" + Utilities.formatDate(
+      new Date(), "UTC", "yyyyMMdd-HHmmss"
+    );
+
+    var baseSha = getBranchHeadSha_(token, BASE_BRANCH);
+    createBranch_(token, branch, baseSha);
+
+    var file = getFileOnBranch_(token, "media.json", branch);
+    var mediaData = JSON.parse(file.content);
+    var updated = addSubmission_(mediaData, eventId, submission);
+    var newContent = JSON.stringify(updated, null, 2) + "\n";
+
+    commitFile_(
+      token,
+      "media.json",
+      newContent,
+      file.sha,
+      branch,
+      "Add media submission: " + name + " (" + role + ") for " + eventId
+    );
+
+    var prUrl = openPullRequest_(token, branch, name, role, eventId, igFromContact);
+
+    sendOwnerEmail_(prUrl, {
+      name: name, role: role, link: link, featured: featuredAnswer,
+      contact: contact, instagram: igFromContact,
+      eventId: eventId, eventAnswer: "(submitted via on-site form, not the Google Form)"
+    });
+
+    return ContentService.createTextOutput(JSON.stringify({ ok: true, prUrl: prUrl }))
+      .setMimeType(ContentService.MimeType.JSON);
+  } catch (err) {
+    sendAlertEmail_(err, raw);
+    return ContentService.createTextOutput(JSON.stringify({ ok: false, error: String(err) }))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+}
+
+function eventExists_(eventId) {
+  var url = "https://raw.githubusercontent.com/" + GITHUB_OWNER + "/" +
+    GITHUB_REPO + "/" + BASE_BRANCH + "/events.json";
+  var resp = UrlFetchApp.fetch(url, { muteHttpExceptions: true });
+  if (resp.getResponseCode() !== 200) return false;
+  var events = JSON.parse(resp.getContentText());
+  return events.some(function (ev) { return ev.id === eventId; });
 }
 
 // ---- Field helpers ----
@@ -348,7 +446,7 @@ function sendOwnerEmail_(prUrl, s) {
     "Name/handle: " + s.name,
     "Role: " + s.role,
     "Link: " + s.link,
-    s.note ? "Note: " + s.note : null,
+    s.featured ? "OK to feature on DriftWest Instagram: " + s.featured : null,
     "",
     s.instagram
       ? "Contact: " + s.contact + " (Instagram handle @" + s.instagram + " was included in the PR - it's meant to be public)"

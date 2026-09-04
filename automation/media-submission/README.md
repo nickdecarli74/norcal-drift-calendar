@@ -20,9 +20,11 @@ and GitHub accounts.
 3. At the top of the file, check the constants match reality:
    - `GITHUB_OWNER` / `GITHUB_REPO` — should already be correct.
    - `OWNER_EMAIL` — where submission/failure notifications go.
-   - `FIELD_NAME`, `FIELD_EVENT`, `FIELD_ROLE`, `FIELD_LINK`, `FIELD_CONTACT`, `FIELD_NOTES` —
+   - `FIELD_NAME`, `FIELD_EVENT`, `FIELD_ROLE`, `FIELD_LINK`, `FIELD_CONTACT`, `FIELD_FEATURED` —
      these must exactly match your form's question titles. Open the form in edit mode
-     and compare word-for-word (including capitalization).
+     and compare word-for-word (including capitalization). Missing this step is exactly
+     how a past field swap here went unnoticed for a long time: the field was silently
+     empty on every submission with no error anywhere.
 
 ## 3. Store the GitHub token
 
@@ -76,6 +78,53 @@ match), it emails you the raw submission instead of silently failing or guessing
 5. Close the test PR without merging (or merge it and then remove the entry from
    `media.json` in a follow-up commit) — same pattern as manually testing the form
    before this automation existed.
+
+## 7. Deploy the on-site submission Web app
+
+`media.html` shows a custom-styled submission form (built in `media.js`, see
+`mediaSubmitFormHtml()` / `wireMediaSubmitForm()`) instead of linking straight to
+the Google Form. It remembers a returning submitter's Name/Handle, Role, and
+Contact in the browser's `localStorage` so repeat photographers just paste their
+event link and hit submit.
+
+It does **not** submit through the Google Form. An earlier version tried
+POSTing straight into the Form's `/formResponse` endpoint (the classic
+custom-Google-Form-UI trick), but Google enforces the Event question's dropdown
+option list server-side and silently rejects any value that isn't an exact
+existing option — confirmed by testing, since the on-site form necessarily
+generates its own event text rather than picking from that hand-maintained
+list. Instead, the on-site form POSTs JSON directly to `doPost(e)` in this same
+`Code.gs`, which opens the PR itself using the exact `eventId` the page already
+knows — no Google Form, Sheet, or fuzzy event-matching involved for this path.
+
+This needs its own deployment, separate from the trigger in step 4:
+
+1. In the same Apps Script project: **Deploy → New deployment**.
+2. Click the gear icon next to "Select type" → **Web app**.
+3. Execute as: **Me**. Who has access: **Anyone**.
+4. Deploy — you'll likely see the same "unverified app" authorization prompt as
+   step 4; click through it the same way.
+5. Copy the **Web app URL** (ends in `/exec`).
+6. Paste that URL into `MEDIA_SUBMIT_WEBAPP_URL` at the top of `media.js`,
+   replacing the empty string. Until this is filled in, `media.js` deliberately
+   hides the custom form and shows only the "use the form directly" link to the
+   real Google Form — so visitors never see a false "submitted" message for a
+   submission that has nowhere to go.
+
+**IMPORTANT — this is the deployment-equivalent of the entry-ID/field-name sync
+problem above**: editing `Code.gs` in the Apps Script editor does *not* update
+an already-deployed Web app. The `/exec` URL keeps running whatever code was
+live at its last deployed version. Whenever you change `Code.gs`, go to
+**Deploy → Manage deployments**, click the pencil icon on the existing Web app
+deployment, set **Version: New version**, and deploy again — otherwise your
+change silently never takes effect for on-site submissions, with no error
+anywhere to tell you.
+
+Test it similarly to step 6, but note this path never touches the Sheet at
+all — `doPost` opens the GitHub PR directly. Submit through the on-site form on
+a real event's `media.html` page, confirm a new PR appears titled
+`Media submission: <name> (<eventId>)`, and confirm you got the owner
+notification email, then close the test PR without merging.
 
 ## Fallback
 
