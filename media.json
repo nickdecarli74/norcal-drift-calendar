@@ -62,6 +62,12 @@
         "role": "both",
         "url": "https://photos.app.goo.gl/XFfxwj4mK3fXez49A",
         "addedAt": "2026-07-21T18:15:10.653Z"
+      },
+      {
+        "name": "CURL DIAGNOSTIC TEST 2",
+        "role": "photo",
+        "url": "https://example.com/curl-test-2",
+        "addedAt": "2026-09-04T20:41:41.954Z"
       }
     ]
   },
