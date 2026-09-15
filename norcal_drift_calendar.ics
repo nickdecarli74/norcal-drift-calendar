@@ -614,6 +614,15 @@ UID:fifo-2026-09-19@driftwestnet.com
 URL:https://fastinfastouttrackdays.com/pages/upcoming-events
 END:VEVENT
 BEGIN:VEVENT
+DESCRIPTION:Promoter: 925patty\nLocation: Apple Valley Speedway - Track & Skid Pad\nRegistration / Info: https://www.instagram.com/925patty/\n\nManually added by the site owner. $100 tickets\, track and skid pad 2PM-11PM.
+DTEND:20270103T230000Z
+LOCATION:Apple Valley Speedway - Track & Skid Pad
+DTSTART:20270103T140000Z
+SUMMARY:925patty - New Years @ AVS
+UID:av-2027-01-03@driftwestnet.com
+URL:https://www.instagram.com/925patty/
+END:VEVENT
+BEGIN:VEVENT
 DESCRIPTION:Promoter: Valley Drift Club\nLocation: NASA Crows Landing Airport\nRegistration / Info: https://www.valleydriftclub.com/\n\nValley Drift Club event.
 DTEND:20261121T170000Z
 LOCATION:NASA Crows Landing Airport

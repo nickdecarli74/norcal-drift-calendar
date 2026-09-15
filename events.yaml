@@ -1086,6 +1086,15 @@ events:
   location: Musselman Honda Circuit
   url: https://mhcircuit.com/event/open-drift-day-9/
   notes: Auto-imported from Musselman Honda Circuit's calendar.
+- id: av-2027-01-03
+  addedAt: '2026-09-15T12:00:00+00:00'
+  title: New Years @ AVS
+  promoter: 925patty
+  start: 2027-01-03 14:00
+  end: 2027-01-03 23:00
+  location: Apple Valley Speedway - Track & Skid Pad
+  url: https://www.instagram.com/925patty/
+  notes: Manually added by the site owner. $100 tickets, track and skid pad 2PM-11PM.
 - id: av-2027-01-16
   addedAt: '2026-07-31T15:30:00+00:00'
   title: Pacific Drift Event
@@ -1131,12 +1140,3 @@ events:
   location: Musselman Honda Circuit
   url: https://mhcircuit.com/event/open-drift-day-12/
   notes: Auto-imported from Musselman Honda Circuit's calendar.
-- id: av-2027-01-03
-  addedAt: '2026-09-15T12:00:00+00:00'
-  title: New Years @ AVS
-  promoter: 925patty
-  start: 2027-01-03 14:00
-  end: 2027-01-03 23:00
-  location: Apple Valley Speedway - Track & Skid Pad
-  url: https://www.instagram.com/925patty/
-  notes: Manually added by the site owner. $100 tickets, track and skid pad 2PM-11PM.
