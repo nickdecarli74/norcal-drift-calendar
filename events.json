@@ -1344,5 +1344,38 @@
     "url": "https://mhcircuit.com/event/open-drift-day-12/",
     "notes": "Auto-imported from Musselman Honda Circuit's calendar.",
     "addedAt": "2026-08-03T01:05:00+00:00"
+  },
+  {
+    "id": "cr-2026-09-25",
+    "title": "Overdrive",
+    "promoter": "Club Rowdy",
+    "start": "2026-09-25 09:00",
+    "end": "2026-09-25 21:00",
+    "location": "Reno Fernley Raceway",
+    "url": "https://clubrowdy.com/products/overdrive-september-25th-26th-27th",
+    "notes": "Day 1 of 3. Manually added by the site owner.",
+    "addedAt": "2026-09-18T14:00:00+00:00"
+  },
+  {
+    "id": "cr-2026-09-26",
+    "title": "Overdrive",
+    "promoter": "Club Rowdy",
+    "start": "2026-09-26 09:00",
+    "end": "2026-09-26 21:00",
+    "location": "Reno Fernley Raceway",
+    "url": "https://clubrowdy.com/products/overdrive-september-25th-26th-27th",
+    "notes": "Day 2 of 3. Manually added by the site owner.",
+    "addedAt": "2026-09-18T14:05:00+00:00"
+  },
+  {
+    "id": "cr-2026-09-27",
+    "title": "Overdrive",
+    "promoter": "Club Rowdy",
+    "start": "2026-09-27 09:00",
+    "end": "2026-09-27 16:00",
+    "location": "Reno Fernley Raceway",
+    "url": "https://clubrowdy.com/products/overdrive-september-25th-26th-27th",
+    "notes": "Day 3 of 3. Manually added by the site owner.",
+    "addedAt": "2026-09-18T14:10:00+00:00"
   }
 ]
