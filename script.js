@@ -173,46 +173,6 @@ function eventSpansDay(e, dateKey){
   return dateKey >= startDate && dateKey <= endDate;
 }
 
-// Multi-day events are stored as one entry per day (so the calendar grid can show
-// a pill on each day). The "Next Events" / "Upcoming Events" cards want one box per
-// event instead, so this collapses consecutive-day entries that share promoter,
-// title (minus a trailing "- Day N") and location into a single object spanning
-// first start -> last end. `days` keeps the original per-day entries.
-function baseEventTitle(title){
-  return (title || "").replace(/\s*[-–]\s*Day\s*\d+\s*$/i, "").trim();
-}
-
-function daysBetween(aStr, bStr){
-  return (new Date(bStr.slice(0, 10)) - new Date(aStr.slice(0, 10))) / 86400000;
-}
-
-function groupMultiDayEvents(events){
-  const sorted = [...events].sort((a,b) => new Date(a.start.replace(" ","T")) - new Date(b.start.replace(" ","T")));
-  const groups = [];
-  const latest = new Map();
-
-  sorted.forEach(e => {
-    const end = e.end || e.start;
-    const key = [e.promoter, baseEventTitle(e.title).toLowerCase(), e.location].join("|");
-    const g = latest.get(key);
-
-    if(g && daysBetween(g.end, e.start) <= 1){
-      g.days.push(e);
-      if(end > g.end) g.end = end;
-      g.url = g.url || e.url;
-      g.featured = g.featured || e.featured;
-      g.featuredNext = g.featuredNext || e.featuredNext;
-      g.title = baseEventTitle(g.title);
-    } else {
-      const grp = { ...e, end, days: [e] };
-      groups.push(grp);
-      latest.set(key, grp);
-    }
-  });
-
-  return groups;
-}
-
 // A grouped event is still "upcoming" while any of its days hasn't started yet.
 function groupHasUpcomingDay(g, now){
   return g.days.some(d => new Date(d.start.replace(" ","T")) >= now);
@@ -612,16 +572,6 @@ function renderNextEvent(events){
     .join("");
 }
 
-// Media submissions attach to a single day's event id, so a grouped card links to
-// the day that has the most submissions (ties and no-submissions -> first day).
-function mediaTargetId(g){
-  const count = d => {
-    const m = allMedia.find(x => x.eventId === d.id);
-    return m ? m.submissions.length : 0;
-  };
-  return g.days.reduce((best, d) => count(d) > count(best) ? d : best, g.days[0]).id;
-}
-
 function renderJustHappened(events){
   const wrap = document.getElementById("just-happened-wrap");
   const container = document.getElementById("just-happened");
@@ -648,7 +598,7 @@ function renderJustHappened(events){
 
   if(wrap) wrap.style.display = "";
   container.innerHTML = picks
-    .map(g => featuredCardHtml(g, "VIEW MEDIA ›", `media.html?event=${encodeURIComponent(mediaTargetId(g))}`, false))
+    .map(g => featuredCardHtml(g, "VIEW MEDIA ›", `media.html?event=${encodeURIComponent(g.id)}`, false))
     .join("");
 }
 

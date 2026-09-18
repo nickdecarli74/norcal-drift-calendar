@@ -49,15 +49,18 @@ the user explicitly asks — it's intentional, not leftover cruft.
   it must be added to that whitelist too or it'll silently get dropped on the next
   automated run.
 - Multi-day events are stored as one entry per day (own id each, so the calendar grid
-  shows a pill per day and media submissions attach per day). The homepage "NEXT
-  EVENTS" and "UPCOMING EVENTS" cards collapse them into one box with a date range
-  via `groupMultiDayEvents()` in `script.js`: entries merge when promoter, title
-  (ignoring a trailing "- Day N") and location match and the days are consecutive.
-  "JUST HAPPENED" groups the same way (once the last day has started); its "VIEW
-  MEDIA" link goes to the day with the most submissions (`mediaTargetId()`), since
-  submissions attach to a single day's id. The media grid and the calendar still
-  use the per-day entries.
-  For a group to merge, keep title/promoter/location identical across the day entries.
+  shows a pill on every day). Everywhere else they show as ONE event with a date
+  range: the "NEXT EVENTS" / "UPCOMING EVENTS" / "JUST HAPPENED" cards, the "BROWSE BY
+  EVENT" media grid, and `media.html` — all via `groupMultiDayEvents()` in `media.js`
+  (shared, since `media.html` loads only `media.js`). Entries merge when promoter,
+  title (ignoring a trailing "- Day N") and location match and the days are
+  consecutive, so **keep those three identical across a multi-day event's day
+  entries** and note each as "Day N of M". The group's id is the first day's id;
+  submissions are the union across all days (`submissionsForGroup()`), and any day's
+  id in `media.html?event=<id>` resolves to the whole event, so old per-day links
+  keep working. Only the calendar grid and its day modal stay per-day. A single
+  entry with a multi-day start/end range also works (the calendar spans it), it's
+  just not what's used when the days have different hours.
 - `LOW_PRIORITY_TITLES` in `script.js` (currently just "Thunderhill Drift School")
   lists recurring events that go last in line for the 3-card NEXT EVENTS / JUST
   HAPPENED rows: they still show if there's room, but any other candidate beats them.

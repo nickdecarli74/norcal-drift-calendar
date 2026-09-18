@@ -101,6 +101,57 @@ function mediaWindowOpen(event){
   return now >= opens && now <= closes;
 }
 
+/* ---- Multi-day event grouping ----
+   Multi-day events are stored as one entry per day (so the calendar grid can show
+   a pill on each day). Everywhere else (Next/Upcoming/Just Happened cards, the
+   media grid and the media page) wants ONE event, so this collapses consecutive-day
+   entries that share promoter, title (minus a trailing "- Day N") and location into
+   a single object spanning first start -> last end. `days` keeps the original
+   per-day entries; the group's `id` is the first day's id. Lives here (not in
+   script.js) because media.html loads media.js only. */
+
+function baseEventTitle(title){
+  return (title || "").replace(/\s*[-–]\s*Day\s*\d+\s*$/i, "").trim();
+}
+
+function daysBetween(aStr, bStr){
+  return (new Date(bStr.slice(0, 10)) - new Date(aStr.slice(0, 10))) / 86400000;
+}
+
+function groupMultiDayEvents(events){
+  const sorted = [...events].sort((a,b) => new Date(a.start.replace(" ","T")) - new Date(b.start.replace(" ","T")));
+  const groups = [];
+  const latest = new Map();
+
+  sorted.forEach(e => {
+    const end = e.end || e.start;
+    const key = [e.promoter, baseEventTitle(e.title).toLowerCase(), e.location].join("|");
+    const g = latest.get(key);
+
+    if(g && daysBetween(g.end, e.start) <= 1){
+      g.days.push(e);
+      if(end > g.end) g.end = end;
+      g.url = g.url || e.url;
+      g.featured = g.featured || e.featured;
+      g.featuredNext = g.featuredNext || e.featuredNext;
+      g.title = baseEventTitle(g.title);
+    } else {
+      const grp = { ...e, end, days: [e] };
+      groups.push(grp);
+      latest.set(key, grp);
+    }
+  });
+
+  return groups;
+}
+
+// Submissions attach to whichever day's id they were filed under, so a grouped
+// event's gallery is the union across all of its days.
+function submissionsForGroup(g, mediaData){
+  const ids = new Set(g.days.map(d => d.id));
+  return mediaData.filter(m => ids.has(m.eventId)).flatMap(m => m.submissions);
+}
+
 /* ---- Homepage: MEDIA section (event grid) ---- */
 
 let mediaCards = [];
@@ -111,20 +162,11 @@ function renderMediaSection(events, mediaData){
   const grid = document.getElementById("media-grid");
   if(!grid) return;
 
-  const withSubmissions = mediaData
-    .map(m => {
-      const e = events.find(ev => ev.id === m.eventId);
-      return e ? {meta: m, event: e} : null;
-    })
-    .filter(Boolean);
-
-  const submittedIds = new Set(withSubmissions.map(x => x.event.id));
-
-  const openForSubmission = events
-    .filter(e => !submittedIds.has(e.id) && mediaWindowOpen(e))
-    .map(e => ({meta: {eventId: e.id, submissions: []}, event: e}));
-
-  const cards = [...withSubmissions, ...openForSubmission]
+  // One card per event (multi-day events grouped): shown when any of its days has
+  // submissions, or while any day is inside the submission window.
+  const cards = groupMultiDayEvents(events)
+    .map(g => ({meta: {eventId: g.id, submissions: submissionsForGroup(g, mediaData)}, event: g}))
+    .filter(({meta, event}) => meta.submissions.length || event.days.some(mediaWindowOpen))
     .sort((a,b) => new Date(b.event.start.replace(" ","T")) - new Date(a.event.start.replace(" ","T")));
 
   mediaCards = cards;
@@ -556,8 +598,8 @@ function renderMediaPage(events, mediaData){
   const container = document.getElementById("media-page");
   if(!container) return;
 
-  const event = events.find(e => e.id === eventId);
-  const meta = mediaData.find(m => m.eventId === eventId);
+  // Any day's id resolves to the whole (grouped) event, so old per-day links keep working.
+  const event = groupMultiDayEvents(events).find(g => g.days.some(d => d.id === eventId));
 
   if(!event){
     container.innerHTML = `
@@ -573,7 +615,7 @@ function renderMediaPage(events, mediaData){
   document.title = `${event.title} — Media | DriftWest`;
   setEventMetaTags(event);
 
-  const submissions = meta ? meta.submissions : [];
+  const submissions = submissionsForGroup(event, mediaData);
   const photogSubs = submissions.filter(s => s.role !== "driver");
   const driverSubs = submissions.filter(s => s.role === "driver");
 

@@ -74,6 +74,15 @@ File order doesn't matter - the site sorts events by date client-side - so
 appending new entries to the end of each file is fine and faster than finding
 the chronologically "correct" insertion point.
 
+**Multi-day events = one entry per day, identical except date/hours/notes.** The
+site collapses consecutive-day entries into a single card with a date range
+(homepage cards, media grid, media page) while the calendar grid still shows every
+day, but only if `title`, `promoter` and `location` are exactly the same on each
+day's entry (a trailing "- Day N" on the title is ignored). Use ids like
+`<prefix>-YYYY-MM-DD` per day, put "Day N of M." at the start of `notes`, and
+give each day its own `start`/`end` hours if the flyer/site lists them. See the
+multi-day bullet in `CLAUDE.md`.
+
 **`addedAt` must be distinct per event.** Give each new event its own
 timestamp a few minutes apart from the others you're adding in this batch
 (e.g. `2026-08-01T00:00:00Z`, `:05:00Z`, `:10:00Z`...). The homepage's "newest
