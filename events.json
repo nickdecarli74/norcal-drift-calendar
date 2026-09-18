@@ -660,6 +660,28 @@
     "location": "WeatherTech Raceway Laguna Seca",
     "url": "https://www.tixr.com/groups/gridlife/events/gridlife-2026-gridlife-driver-registration-165652?sort=RECOMMENDED&COL=17635&A=L",
     "notes": "Day 1 of 3. Drivers, vendors and VIP can enter Thursday Sept 17 from 5 PM. Times are GRIDLIFE gate hours. Manually added by the site owner.",
+    "featuredPartner": true,
+    "logo": "assets/gridlife-laguna-logo.png",
+    "logoFull": true,
+    "registerUrl": "https://www.tixr.com/groups/gridlife/events/gridlife-2026-gridlife-driver-registration-165652?sort=RECOMMENDED&COL=17635&A=L",
+    "trackMapImage": "assets/laguna-seca-track-map.webp",
+    "trackConfig": "Full Course (2.24 mi)",
+    "trackDirection": "Clockwise",
+    "trackNote": "Official WeatherTech Raceway Laguna Seca map. The Corkscrew is Turns 8-8A.",
+    "tagline": "Vaughn Gittin Jr., Chris Forsberg and more send freestyle drift trains through the Corkscrew, plus time attack, wheel-to-wheel racing and live music.",
+    "perks": [
+      "Pro Freestyle Drift",
+      "Corkscrew Drift Trains",
+      "Time Attack & Racing",
+      "Live Music After Dark"
+    ],
+    "timeLabel": "Gates Open",
+    "timeDetail": [
+      "Thu 5PM-12AM (Early Entry)",
+      "Fri 8AM-11PM",
+      "Sat 8AM-11PM",
+      "Sun 8AM-4PM"
+    ],
     "addedAt": "2026-09-18T15:45:00+00:00"
   },
   {

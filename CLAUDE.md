@@ -61,6 +61,18 @@ the user explicitly asks — it's intentional, not leftover cruft.
   keep working. Only the calendar grid and its day modal stay per-day. A single
   entry with a multi-day start/end range also works (the calendar spans it), it's
   just not what's used when the days have different hours.
+- "Featured Event" homepage card (`renderFeaturedPartnerEvent()` in `script.js`,
+  styles in `featured-event.css`): shown for whichever event has `featuredPartner:
+  true` (put the flag and all the extra fields on the multi-day event's FIRST day
+  entry — it renders the grouped event, so the date range/forecast/media link cover
+  every day). Optional fields, all whitelisted in `calendar_builder.py`: `logo`,
+  `logoFull` (logo file is a complete transparent title card — shown uncropped and
+  the text heading becomes screen-reader-only; leave off for UDC-style logos that
+  need the crop + "Round NN" heading), `registerUrl`, `tagline`, `perks` (chips),
+  `presentedBy`, `registerHandles` (DM-to-register buttons), `timeLabel`/`timeDetail`
+  (per-day hours), `trackMapImage`/`trackConfig`/`trackDirection`/`trackNote`. The
+  card doesn't expire on its own — remove `featuredPartner` when the event is over.
+  The forecast box only works for venues listed in `TRACKS` in `script.js`.
 - `LOW_PRIORITY_TITLES` in `script.js` (currently just "Thunderhill Drift School")
   lists recurring events that go last in line for the 3-card NEXT EVENTS / JUST
   HAPPENED rows: they still show if there's room, but any other candidate beats them.

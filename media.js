@@ -134,6 +134,7 @@ function groupMultiDayEvents(events){
       g.url = g.url || e.url;
       g.featured = g.featured || e.featured;
       g.featuredNext = g.featuredNext || e.featuredNext;
+      g.featuredPartner = g.featuredPartner || e.featuredPartner;
       g.title = baseEventTitle(g.title);
     } else {
       const grp = { ...e, end, days: [e] };

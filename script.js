@@ -147,6 +147,14 @@ const TRACKS = [
     lat: 36.2713,
     lng: -115.0111,
     search: ["las vegas motor speedway", "north drag lot"]
+  },
+  {
+    name: "WeatherTech Raceway Laguna Seca",
+    short: "Laguna Seca",
+    location: "Salinas, CA",
+    lat: 36.5842,
+    lng: -121.7534,
+    search: ["laguna seca"]
   }
 ];
 
@@ -294,7 +302,9 @@ function renderFeaturedPartnerEvent(events){
   const container = document.getElementById("featured-partner-event");
   if(!container) return;
 
-  const event = events.find(e => e.featuredPartner);
+  // Grouped so a multi-day event shows its full date range (and its combined
+  // weather / media link) - the featuredPartner fields live on the first day's entry.
+  const event = groupMultiDayEvents(events).find(g => g.featuredPartner);
 
   if(!event){
     container.innerHTML = "";
@@ -312,9 +322,14 @@ function renderFeaturedPartnerEvent(events){
   // Events with a real logo file (like UDC) show "Round N" underneath it.
   // Events without one (no logo asset yet) show the full title instead, so
   // they're not left with just a tiny two-letter fallback mark.
-  const titleHtml = roundLabel
-    ? `<h3 class="dw-featured-event__round" id="dw-featured-event-title">Round <span>${roundLabel}</span></h3>`
-    : `<h3 class="dw-featured-event__round dw-featured-event__round--title" id="dw-featured-event-title">${event.title}</h3>`;
+  // logoFull = the logo file is a complete, transparent title card (event name,
+  // venue and dates already in the artwork), so it renders uncropped and the
+  // heading stays in the DOM for screen readers only instead of repeating the name.
+  const titleHtml = event.logoFull
+    ? `<h3 class="dw-featured-event__round dw-featured-event__round--sr" id="dw-featured-event-title">${event.title}</h3>`
+    : roundLabel
+      ? `<h3 class="dw-featured-event__round" id="dw-featured-event-title">Round <span>${roundLabel}</span></h3>`
+      : `<h3 class="dw-featured-event__round dw-featured-event__round--title" id="dw-featured-event-title">${event.title}</h3>`;
 
   const presentedByHtml = event.presentedBy
     ? `<div class="dw-featured-event__presented-by">A <b>${event.presentedBy}</b> Event</div>`
@@ -375,7 +390,7 @@ function renderFeaturedPartnerEvent(events){
     ? (Array.isArray(event.timeDetail) ? event.timeDetail.join("<br>") : event.timeDetail)
     : formatFeaturedTimeRange(event.start, event.end);
 
-  const w = weatherFor(event);
+  const w = (event.days || [event]).map(weatherFor).find(Boolean);
   const forecastValue = w ? `${w.temp}°F` : "—";
 
   container.innerHTML = `
@@ -394,7 +409,7 @@ function renderFeaturedPartnerEvent(events){
             ${presentedByHtml}
             ${event.logo ? `
               <img
-                class="dw-featured-event__logo"
+                class="dw-featured-event__logo${event.logoFull ? " dw-featured-event__logo--full" : ""}"
                 src="${event.logo}"
                 alt="${brandName}"
                 onerror="this.hidden=true; this.nextElementSibling.hidden=false;"
