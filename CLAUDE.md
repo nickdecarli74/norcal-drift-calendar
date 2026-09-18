@@ -48,6 +48,13 @@ the user explicitly asks — it's intentional, not leftover cruft.
   plus `featured`/`featuredNext`/`addedAt` if present) — if you add a new optional field to events,
   it must be added to that whitelist too or it'll silently get dropped on the next
   automated run.
+- Multi-day events are stored as one entry per day (own id each, so the calendar grid
+  shows a pill per day and media submissions attach per day). The homepage "NEXT
+  EVENTS" and "UPCOMING EVENTS" cards collapse them into one box with a date range
+  via `groupMultiDayEvents()` in `script.js`: entries merge when promoter, title
+  (ignoring a trailing "- Day N") and location match and the days are consecutive.
+  Just Happened, the media grid and the calendar still use the per-day entries.
+  For a group to merge, keep title/promoter/location identical across the day entries.
 - Design language: black background, red accent (`#e10600`), bold italic headers,
   card grids with hover glow. See existing `.small-card` / `.event-card` patterns
   in `style.css` before adding new components — match the existing look.

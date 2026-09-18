@@ -173,6 +173,51 @@ function eventSpansDay(e, dateKey){
   return dateKey >= startDate && dateKey <= endDate;
 }
 
+// Multi-day events are stored as one entry per day (so the calendar grid can show
+// a pill on each day). The "Next Events" / "Upcoming Events" cards want one box per
+// event instead, so this collapses consecutive-day entries that share promoter,
+// title (minus a trailing "- Day N") and location into a single object spanning
+// first start -> last end. `days` keeps the original per-day entries.
+function baseEventTitle(title){
+  return (title || "").replace(/\s*[-–]\s*Day\s*\d+\s*$/i, "").trim();
+}
+
+function daysBetween(aStr, bStr){
+  return (new Date(bStr.slice(0, 10)) - new Date(aStr.slice(0, 10))) / 86400000;
+}
+
+function groupMultiDayEvents(events){
+  const sorted = [...events].sort((a,b) => new Date(a.start.replace(" ","T")) - new Date(b.start.replace(" ","T")));
+  const groups = [];
+  const latest = new Map();
+
+  sorted.forEach(e => {
+    const end = e.end || e.start;
+    const key = [e.promoter, baseEventTitle(e.title).toLowerCase(), e.location].join("|");
+    const g = latest.get(key);
+
+    if(g && daysBetween(g.end, e.start) <= 1){
+      g.days.push(e);
+      if(end > g.end) g.end = end;
+      g.url = g.url || e.url;
+      g.featured = g.featured || e.featured;
+      g.featuredNext = g.featuredNext || e.featuredNext;
+      g.title = baseEventTitle(g.title);
+    } else {
+      const grp = { ...e, end, days: [e] };
+      groups.push(grp);
+      latest.set(key, grp);
+    }
+  });
+
+  return groups;
+}
+
+// A grouped event is still "upcoming" while any of its days hasn't started yet.
+function groupHasUpcomingDay(g, now){
+  return g.days.some(d => new Date(d.start.replace(" ","T")) >= now);
+}
+
 const PROMOTER_ABBREV = {
   "Apple Valley Speedway": "AVS",
   "Valley Drift Club": "VDC",
@@ -208,7 +253,8 @@ function weatherFor(e){
 }
 
 function weatherBadge(e){
-  const w = weatherFor(e);
+  // Grouped multi-day events show the first day that has forecast data.
+  const w = (e.days || [e]).map(weatherFor).find(Boolean);
   if(!w) return "";
   const icon = WEATHER_ICONS[w.code] || "🌡️";
   return `<span class="weather-badge">${icon} ${w.temp}°F</span>`;
@@ -537,9 +583,7 @@ function renderNextEvent(events){
   if(!container) return;
 
   const now = new Date();
-  const upcoming = events
-    .filter(e => new Date(e.start.replace(" ","T")) >= now)
-    .sort((a,b) => new Date(a.start.replace(" ","T")) - new Date(b.start.replace(" ","T")));
+  const upcoming = groupMultiDayEvents(events).filter(g => groupHasUpcomingDay(g, now));
 
   const featuredNext = upcoming.filter(e => e.featuredNext);
   const picks = pickFeaturedEvents(featuredNext, upcoming);
@@ -584,8 +628,8 @@ function renderJustHappened(events){
 
 function renderUpcoming(events){
   const now = new Date();
-  const upcoming = events
-    .filter(e => new Date(e.start.replace(" ","T")) >= now)
+  const upcoming = groupMultiDayEvents(events)
+    .filter(g => groupHasUpcomingDay(g, now))
     .slice(0, 8);
 
   document.getElementById("upcoming-events").innerHTML = upcoming.map(e => {
