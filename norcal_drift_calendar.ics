@@ -227,6 +227,15 @@ UID:dc-2026-04-04@driftwestnet.com
 URL:https://driftcentral.com/registration
 END:VEVENT
 BEGIN:VEVENT
+DESCRIPTION:Promoter: DLUX\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://docs.google.com/forms/d/e/1FAIpQLSeT80P6ymEpIl5r_gknkBV_QJNk-rSye2tJVksonGWEcY5x4w/viewform\n\nApplication based\, payment details are sent after acceptance. Tech inspection 8:30 AM\, mandatory drivers meeting 9:40 AM. Big Pad - track hot and judging 10 AM-12 PM\, Top 16 friendly comp 12:30-3:30 PM\, open driving 3:30-5 PM. Small Pad - open 10 AM-5 PM (closed for lunch 12-12:30). Drivers must be 18+ with a full-face DOT or Snell helmet. No glycol coolant\, 103 dB sound limit. Free snacks and drinks. Questions - DM DLUX on Instagram. Manually added by the site owner.
+DTEND:20261122T170000Z
+LOCATION:Thunderhill Raceway Park
+DTSTART:20261122T083000Z
+SUMMARY:DLUX - DLUX Advanced Day
+UID:dlux-2026-11-22@driftwestnet.com
+URL:https://docs.google.com/forms/d/e/1FAIpQLSeT80P6ymEpIl5r_gknkBV_QJNk-rSye2tJVksonGWEcY5x4w/viewform
+END:VEVENT
+BEGIN:VEVENT
 DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main Track\nRegistration / Info: http://www.pacificdriftteam.com/\n\nManually verified from Apple Valley Speedway's calendar.
 DTEND:20261121T170000Z
 LOCATION:Main Track
