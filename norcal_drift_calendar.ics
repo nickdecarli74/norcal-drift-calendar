@@ -20,6 +20,15 @@ UID:dc-2026-11-29@driftwestnet.com
 URL:https://driftcentral.com/registration
 END:VEVENT
 BEGIN:VEVENT
+DESCRIPTION:Promoter: GRIDLIFE\nLocation: WeatherTech Raceway Laguna Seca\nRegistration / Info: https://www.tixr.com/groups/gridlife/events/gridlife-2026-gridlife-driver-registration-165652?sort=RECOMMENDED&COL=17635&A=L\n\nDay 2 of 3. Times are GRIDLIFE gate hours. Manually added by the site owner.
+DTEND:20260919T230000Z
+LOCATION:WeatherTech Raceway Laguna Seca
+DTSTART:20260919T080000Z
+SUMMARY:GRIDLIFE - GRIDLIFE Laguna Festival
+UID:grid-2026-09-19@driftwestnet.com
+URL:https://www.tixr.com/groups/gridlife/events/gridlife-2026-gridlife-driver-registration-165652?sort=RECOMMENDED&COL=17635&A=L
+END:VEVENT
+BEGIN:VEVENT
 DESCRIPTION:Promoter: GoodLuckLeague\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://www.goodluckleague.com/schedule\n\nManually added by the site owner.
 DTEND:20261219T170000Z
 LOCATION:Thunderhill Raceway Park
@@ -60,7 +69,7 @@ DESCRIPTION:Promoter: Valley Drift Club\nLocation: NASA Crows Landing Airport\nR
 DTEND:20260926T170000Z
 LOCATION:NASA Crows Landing Airport
 DTSTART:20260926T070000Z
-SUMMARY:Valley Drift Club - Valley Drift Club Event
+SUMMARY:Valley Drift Club - Cleared Hot
 UID:vdc-2026-09-26@driftwestnet.com
 URL:https://www.valleydriftclub.com/
 END:VEVENT
@@ -164,13 +173,13 @@ UID:udc-2026-09-11@driftwestnet.com
 URL:https://www.udc.news/touge
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main Track\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\nManually verified from Apple Valley Speedway's calendar.
+DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main Track\nRegistration / Info: https://ultimatedriftingchallenge.com/collections/registration\n\nManually verified from Apple Valley Speedway's calendar.
 DTEND:20260918T170000Z
 LOCATION:Main Track
 DTSTART:20260918T080000Z
 SUMMARY:Apple Valley Speedway - Ultimate Drifting Challenge Round 4
 UID:av-2026-09-18@driftwestnet.com
-URL:https://applevalleyspeedway.com/calendar/
+URL:https://ultimatedriftingchallenge.com/collections/registration
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main Track\nRegistration / Info: http://www.pacificdriftteam.com/\n\nManually verified from Apple Valley Speedway's calendar.
@@ -407,6 +416,15 @@ UID:mhc-2026-11-01@driftwestnet.com
 URL:https://mhcircuit.com/event/open-drift-day-7/
 END:VEVENT
 BEGIN:VEVENT
+DESCRIPTION:Promoter: GRIDLIFE\nLocation: WeatherTech Raceway Laguna Seca\nRegistration / Info: https://www.tixr.com/groups/gridlife/events/gridlife-2026-gridlife-driver-registration-165652?sort=RECOMMENDED&COL=17635&A=L\n\nDay 3 of 3. Times are GRIDLIFE gate hours. Manually added by the site owner.
+DTEND:20260920T160000Z
+LOCATION:WeatherTech Raceway Laguna Seca
+DTSTART:20260920T080000Z
+SUMMARY:GRIDLIFE - GRIDLIFE Laguna Festival
+UID:grid-2026-09-20@driftwestnet.com
+URL:https://www.tixr.com/groups/gridlife/events/gridlife-2026-gridlife-driver-registration-165652?sort=RECOMMENDED&COL=17635&A=L
+END:VEVENT
+BEGIN:VEVENT
 DESCRIPTION:Promoter: Valley Drift Club\nLocation: NASA Crows Landing Airport\nRegistration / Info: https://www.valleydriftclub.com/\n\nVDC schedule manually verified from Instagram.
 DTEND:20260711T170000Z
 LOCATION:NASA Crows Landing Airport
@@ -459,6 +477,15 @@ DTSTART:20261128T070000Z
 SUMMARY:Drift Central - Drift Central
 UID:dc-2026-11-28@driftwestnet.com
 URL:https://driftcentral.com/registration
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: GRIDLIFE\nLocation: WeatherTech Raceway Laguna Seca\nRegistration / Info: https://www.tixr.com/groups/gridlife/events/gridlife-2026-gridlife-driver-registration-165652?sort=RECOMMENDED&COL=17635&A=L\n\nDay 1 of 3. Drivers\, vendors and VIP can enter Thursday Sept 17 from 5 PM. Times are GRIDLIFE gate hours. Manually added by the site owner.
+DTEND:20260918T230000Z
+LOCATION:WeatherTech Raceway Laguna Seca
+DTSTART:20260918T080000Z
+SUMMARY:GRIDLIFE - GRIDLIFE Laguna Festival
+UID:grid-2026-09-18@driftwestnet.com
+URL:https://www.tixr.com/groups/gridlife/events/gridlife-2026-gridlife-driver-registration-165652?sort=RECOMMENDED&COL=17635&A=L
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/registration\n\nAuto-imported from Drift Central schedule.
@@ -819,6 +846,15 @@ DTSTART:20270404T100000Z
 SUMMARY:Musselman Honda Circuit - Open Drift Day
 UID:mhc-2027-04-04@driftwestnet.com
 URL:https://mhcircuit.com/event/open-drift-day-12/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main Track\nRegistration / Info: https://ultimatedriftingchallenge.com/collections/registration\n\nDay 2 of 2. Manually added by the site owner.
+DTEND:20260919T170000Z
+LOCATION:Main Track
+DTSTART:20260919T080000Z
+SUMMARY:Apple Valley Speedway - Ultimate Drifting Challenge Round 4
+UID:av-2026-09-19@driftwestnet.com
+URL:https://ultimatedriftingchallenge.com/collections/registration
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Promoter: SuperD\nLocation: Affinity Circuit\nRegistration / Info: https://super-d.net/pages/schedule\n\nManually added by the site owner\; not listed on super-d.net at time of scraping.
