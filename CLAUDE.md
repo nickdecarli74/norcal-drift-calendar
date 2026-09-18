@@ -53,8 +53,16 @@ the user explicitly asks — it's intentional, not leftover cruft.
   EVENTS" and "UPCOMING EVENTS" cards collapse them into one box with a date range
   via `groupMultiDayEvents()` in `script.js`: entries merge when promoter, title
   (ignoring a trailing "- Day N") and location match and the days are consecutive.
-  Just Happened, the media grid and the calendar still use the per-day entries.
+  "JUST HAPPENED" groups the same way (once the last day has started); its "VIEW
+  MEDIA" link goes to the day with the most submissions (`mediaTargetId()`), since
+  submissions attach to a single day's id. The media grid and the calendar still
+  use the per-day entries.
   For a group to merge, keep title/promoter/location identical across the day entries.
+- `LOW_PRIORITY_TITLES` in `script.js` (currently just "Thunderhill Drift School")
+  lists recurring events that go last in line for the 3-card NEXT EVENTS / JUST
+  HAPPENED rows: they still show if there's room, but any other candidate beats them.
+  Pinned `featured`/`featuredNext` events still win over it. Add titles (lowercase)
+  to that set to deprioritize more.
 - Design language: black background, red accent (`#e10600`), bold italic headers,
   card grids with hover glow. See existing `.small-card` / `.event-card` patterns
   in `style.css` before adding new components — match the existing look.

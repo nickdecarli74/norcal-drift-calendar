@@ -566,11 +566,23 @@ function featuredCardHtml(event, ctaLabel, href, external){
   `;
 }
 
+// Recurring, low-stakes events that shouldn't crowd out one-off events in the
+// 3-card NEXT EVENTS / JUST HAPPENED rows. They still fill a slot when there's
+// room, they just come after everything else (pinned featured/featuredNext
+// events still win). Matched on the base title, so "- Day N" suffixes are fine.
+const LOW_PRIORITY_TITLES = new Set(["thunderhill drift school"]);
+
+function isLowPriorityEvent(e){
+  return LOW_PRIORITY_TITLES.has(baseEventTitle(e.title).toLowerCase());
+}
+
 // Picks up to FEATURED_ROW_MAX events from `pool` (pinned candidates first,
-// e.g. featured/featuredNext events), skipping duplicates.
+// e.g. featured/featuredNext events), skipping duplicates. Within `pool`,
+// low-priority events go last but otherwise keep their order.
 function pickFeaturedEvents(pinned, pool){
+  const ordered = [...pool.filter(e => !isLowPriorityEvent(e)), ...pool.filter(isLowPriorityEvent)];
   const picks = [];
-  for(const e of [...pinned, ...pool]){
+  for(const e of [...pinned, ...ordered]){
     if(picks.length >= FEATURED_ROW_MAX) break;
     if(!picks.includes(e)) picks.push(e);
   }
@@ -600,18 +612,32 @@ function renderNextEvent(events){
     .join("");
 }
 
+// Media submissions attach to a single day's event id, so a grouped card links to
+// the day that has the most submissions (ties and no-submissions -> first day).
+function mediaTargetId(g){
+  const count = d => {
+    const m = allMedia.find(x => x.eventId === d.id);
+    return m ? m.submissions.length : 0;
+  };
+  return g.days.reduce((best, d) => count(d) > count(best) ? d : best, g.days[0]).id;
+}
+
 function renderJustHappened(events){
   const wrap = document.getElementById("just-happened-wrap");
   const container = document.getElementById("just-happened");
   if(!container) return;
 
   const now = new Date();
-  const pastEvents = events
-    .filter(e => new Date(e.start.replace(" ","T")) < now)
-    .sort((a,b) => new Date(b.start.replace(" ","T")) - new Date(a.start.replace(" ","T")));
+  // A grouped multi-day event counts as "just happened" once its last day has
+  // started (so an in-progress weekend only shows under Next Events), and stays
+  // while any of its days is still inside the media submission window.
+  const lastDayStart = g => new Date(g.days[g.days.length - 1].start.replace(" ","T"));
+  const pastEvents = groupMultiDayEvents(events)
+    .filter(g => lastDayStart(g) < now)
+    .sort((a,b) => lastDayStart(b) - lastDayStart(a));
 
-  const featured = pastEvents.filter(e => e.featured);
-  const automatic = pastEvents.filter(e => mediaWindowOpen(e));
+  const featured = pastEvents.filter(g => g.featured);
+  const automatic = pastEvents.filter(g => g.days.some(mediaWindowOpen));
   const picks = pickFeaturedEvents(featured, automatic);
 
   if(!picks.length){
@@ -622,7 +648,7 @@ function renderJustHappened(events){
 
   if(wrap) wrap.style.display = "";
   container.innerHTML = picks
-    .map(e => featuredCardHtml(e, "VIEW MEDIA ›", `media.html?event=${encodeURIComponent(e.id)}`, false))
+    .map(g => featuredCardHtml(g, "VIEW MEDIA ›", `media.html?event=${encodeURIComponent(mediaTargetId(g))}`, false))
     .join("");
 }
 
