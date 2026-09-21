@@ -1251,3 +1251,12 @@ events:
   location: Orange Show Speedway
   url: https://www.flavorexpress.co/
   notes: Thursday night open practice, 5PM-10PM. $100 to drive. Manually added by the site owner.
+- id: mill-2026-10-31
+  addedAt: '2026-09-21T15:00:00+00:00'
+  title: Halloween Drift Day
+  promoter: The Mill Drift Track
+  start: 2026-10-31 09:00
+  end: 2026-10-31 16:00
+  location: Sweet Home, OR
+  url: https://themilldrifttrack.com/product/halloween-drift-day-oct-31st/
+  notes: Driver tickets $100 (only 50 available), $5 for spectators. Trunk or treat 12PM-2PM, costume contest for drivers, food truck, skid pad and tire machine on site. 2210 Tamarack St, Sweet Home, OR. Manually added by the site owner.
