@@ -2,6 +2,15 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:Promoter: Villains Sportsland\nLocation: Villains Sportsland\nRegistration / Info: https://villainssportsland.com/events\n\nDay 1 of 2. Drivers meeting 11:30AM\, track runs until 10PM. Drivers $165/weekend. Spectators $20/day or $40/weekend. Free camping. Pit areas are first-come first-serve. 1212 Middle Waitsburg Rd\, Walla Walla\, WA. Manually added by the site owner.
+DTEND:20261114T220000Z
+LOCATION:Villains Sportsland
+DTSTART:20261114T100000Z
+SUMMARY:Villains Sportsland - 2026 Season Closer
+UID:vsl-2026-11-14@driftwestnet.com
+URL:https://villainssportsland.com/events
+END:VEVENT
+BEGIN:VEVENT
 DESCRIPTION:Promoter: Fast In Fast Out\nLocation: Sonoma Raceway\nRegistration / Info: https://fastinfastouttrackdays.com/pages/upcoming-events\n\nAuto-imported from Fast In Fast Out upcoming events.
 DTEND:20261121T180000Z
 LOCATION:Sonoma Raceway
@@ -45,6 +54,15 @@ DTSTART:20260711T080000Z
 SUMMARY:Apple Valley Speedway - BAY2APPLEVALLEY
 UID:av-2026-07-11@driftwestnet.com
 URL:https://applevalleyspeedway.com/calendar/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: The Mill Drift Track\nLocation: Sweet Home\, OR\nRegistration / Info: https://themilldrifttrack.com/product/halloween-drift-day-oct-31st/\n\nDriver tickets $100 (only 50 available)\, $5 for spectators. Trunk or treat 12PM-2PM\, costume contest for drivers\, food truck\, skid pad and tire machine on site. 2210 Tamarack St\, Sweet Home\, OR. Manually added by the site owner.
+DTEND:20261031T160000Z
+LOCATION:Sweet Home\, OR
+DTSTART:20261031T090000Z
+SUMMARY:The Mill Drift Track - Halloween Drift Day
+UID:mill-2026-10-31@driftwestnet.com
+URL:https://themilldrifttrack.com/product/halloween-drift-day-oct-31st/
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://bayareadrifting.com/schedule\n\nWeekend. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.
@@ -632,6 +650,15 @@ UID:cc-2026-08-22@driftwestnet.com
 URL:https://www.instagram.com/ouija_boi/
 END:VEVENT
 BEGIN:VEVENT
+DESCRIPTION:Promoter: Villains Sportsland\nLocation: Villains Sportsland\nRegistration / Info: https://villainssportsland.com/events\n\nDay 2 of 3. Gates 10AM\, drivers meeting 11:30AM\, full course until 10PM. Manually added by the site owner.
+DTEND:20260919T220000Z
+LOCATION:Villains Sportsland
+DTSTART:20260919T100000Z
+SUMMARY:Villains Sportsland - VSL XXVII
+UID:vsl-2026-09-19@driftwestnet.com
+URL:https://villainssportsland.com/events
+END:VEVENT
+BEGIN:VEVENT
 DESCRIPTION:Promoter: Valley Drift Club\nLocation: NASA Crows Landing Airport\nRegistration / Info: https://www.valleydriftclub.com/\n\nValley Drift Club event.
 DTEND:20261219T170000Z
 LOCATION:NASA Crows Landing Airport
@@ -758,6 +785,15 @@ UID:mhc-2027-03-07@driftwestnet.com
 URL:https://mhcircuit.com/event/open-drift-day-11/
 END:VEVENT
 BEGIN:VEVENT
+DESCRIPTION:Promoter: Villains Sportsland\nLocation: Villains Sportsland\nRegistration / Info: https://villainssportsland.com/events\n\nDay 2 of 2. Track opens 10AM\, full course until 3PM. Manually added by the site owner.
+DTEND:20261115T150000Z
+LOCATION:Villains Sportsland
+DTSTART:20261115T100000Z
+SUMMARY:Villains Sportsland - 2026 Season Closer
+UID:vsl-2026-11-15@driftwestnet.com
+URL:https://villainssportsland.com/events
+END:VEVENT
+BEGIN:VEVENT
 DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main & Skid\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\n3-day event. Manually verified from Apple Valley Speedway's calendar.
 DTEND:20261115T170000Z
 LOCATION:Main & Skid
@@ -783,6 +819,15 @@ DTSTART:20260829T080000Z
 SUMMARY:Apple Valley Speedway - ClubTouge
 UID:av-2026-08-29@driftwestnet.com
 URL:https://applevalleyspeedway.com/calendar/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Flavor Express\nLocation: Orange Show Speedway\nRegistration / Info: https://www.flavorexpress.co/\n\nThursday night open practice\, 5PM-10PM. $100 to drive. Manually added by the site owner.
+DTEND:20261001T220000Z
+LOCATION:Orange Show Speedway
+DTSTART:20261001T170000Z
+SUMMARY:Flavor Express - Thursday Night Drift
+UID:fe-2026-10-01@driftwestnet.com
+URL:https://www.flavorexpress.co/
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main & Skid\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\nManually verified from Apple Valley Speedway's calendar.
@@ -991,6 +1036,15 @@ UID:mhc-2026-10-24@driftwestnet.com
 URL:https://mhcircuit.com/event/spooky-drift-8/
 END:VEVENT
 BEGIN:VEVENT
+DESCRIPTION:Promoter: Villains Sportsland\nLocation: Villains Sportsland\nRegistration / Info: https://villainssportsland.com/events\n\nDay 3 of 3. Gates 10AM\, drivers meeting 10AM\, full course until 3PM (subject to attendance). Manually added by the site owner.
+DTEND:20260920T150000Z
+LOCATION:Villains Sportsland
+DTSTART:20260920T100000Z
+SUMMARY:Villains Sportsland - VSL XXVII
+UID:vsl-2026-09-20@driftwestnet.com
+URL:https://villainssportsland.com/events
+END:VEVENT
+BEGIN:VEVENT
 DESCRIPTION:Promoter: Qlispe Raceway Park\nLocation: Airway Heights\, WA\nRegistration / Info: https://gofastent.com/drift-n-drag\n\nManually added by the site owner.
 DTEND:20260822T170000Z
 LOCATION:Airway Heights\, WA
@@ -1052,6 +1106,15 @@ DTSTART:20260925T090000Z
 SUMMARY:Club Rowdy - Overdrive
 UID:cr-2026-09-25@driftwestnet.com
 URL:https://clubrowdy.com/products/overdrive-september-25th-26th-27th
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Villains Sportsland\nLocation: Villains Sportsland\nRegistration / Info: https://villainssportsland.com/events\n\nDay 1 of 3. Gates 5PM\, drivers meeting 6PM\, full course until 10PM. Drivers $200/weekend. Spectators $20/day or $40/weekend\, kids 16 and under free. Free camping. 1212 Middle Waitsburg Rd\, Walla Walla\, WA. Manually added by the site owner.
+DTEND:20260918T220000Z
+LOCATION:Villains Sportsland
+DTSTART:20260918T170000Z
+SUMMARY:Villains Sportsland - VSL XXVII
+UID:vsl-2026-09-18@driftwestnet.com
+URL:https://villainssportsland.com/events
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Promoter: Club Rowdy\nLocation: Reno Fernley Raceway\nRegistration / Info: https://clubrowdy.com/products/hottest-august-nights-july-31-august-1-2\n\nDay 2 of 3. Manually added by the site owner.

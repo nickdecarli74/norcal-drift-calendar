@@ -592,6 +592,18 @@ events:
   trackDirection: Clockwise
   trackNote: Official WeatherTech Raceway Laguna Seca map. The Corkscrew is Turns
     8-8A.
+- id: vsl-2026-09-18
+  addedAt: '2026-09-21T21:00:00+00:00'
+  title: VSL XXVII
+  promoter: Villains Sportsland
+  start: 2026-09-18 17:00
+  end: 2026-09-18 22:00
+  location: Villains Sportsland
+  url: https://villainssportsland.com/events
+  notes: Day 1 of 3. Gates 5PM, drivers meeting 6PM, full course until 10PM. Drivers
+    $200/weekend. Spectators $20/day or $40/weekend, kids 16 and under free. Free
+    camping. 1212 Middle Waitsburg Rd, Walla Walla, WA. Manually added by the site
+    owner.
 - id: fifo-2026-09-19
   addedAt: '2026-07-08T00:00:00+00:00'
   title: Fast In Fast Out Drift
@@ -629,6 +641,16 @@ events:
   location: WeatherTech Raceway Laguna Seca
   url: https://www.tixr.com/groups/gridlife/events/gridlife-2026-gridlife-driver-registration-165652?sort=RECOMMENDED&COL=17635&A=L
   notes: Day 2 of 3. Times are GRIDLIFE gate hours. Manually added by the site owner.
+- id: vsl-2026-09-19
+  addedAt: '2026-09-21T21:03:00+00:00'
+  title: VSL XXVII
+  promoter: Villains Sportsland
+  start: 2026-09-19 10:00
+  end: 2026-09-19 22:00
+  location: Villains Sportsland
+  url: https://villainssportsland.com/events
+  notes: Day 2 of 3. Gates 10AM, drivers meeting 11:30AM, full course until 10PM.
+    Manually added by the site owner.
 - id: fifo-2026-09-20
   addedAt: '2026-07-08T00:00:00+00:00'
   title: Fast In Fast Out Drift
@@ -656,6 +678,16 @@ events:
   location: WeatherTech Raceway Laguna Seca
   url: https://www.tixr.com/groups/gridlife/events/gridlife-2026-gridlife-driver-registration-165652?sort=RECOMMENDED&COL=17635&A=L
   notes: Day 3 of 3. Times are GRIDLIFE gate hours. Manually added by the site owner.
+- id: vsl-2026-09-20
+  addedAt: '2026-09-21T21:06:00+00:00'
+  title: VSL XXVII
+  promoter: Villains Sportsland
+  start: 2026-09-20 10:00
+  end: 2026-09-20 15:00
+  location: Villains Sportsland
+  url: https://villainssportsland.com/events
+  notes: Day 3 of 3. Gates 10AM, drivers meeting 10AM, full course until 3PM (subject
+    to attendance). Manually added by the site owner.
 - id: cr-2026-09-25
   addedAt: '2026-09-18T14:00:00+00:00'
   title: Overdrive
@@ -714,6 +746,16 @@ events:
   location: Reno Fernley Raceway
   url: https://clubrowdy.com/products/overdrive-september-25th-26th-27th
   notes: Day 3 of 3. Manually added by the site owner.
+- id: fe-2026-10-01
+  addedAt: '2026-09-21T14:55:00+00:00'
+  title: Thursday Night Drift
+  promoter: Flavor Express
+  start: 2026-10-01 17:00
+  end: 2026-10-01 22:00
+  location: Orange Show Speedway
+  url: https://www.flavorexpress.co/
+  notes: Thursday night open practice, 5PM-10PM. $100 to drive. Manually added by
+    the site owner.
 - id: mhc-2026-10-03
   addedAt: '2026-08-03T00:15:00+00:00'
   title: DDSL Drift Clinic and Tandem Practice
@@ -902,6 +944,17 @@ events:
   location: Big Skid Pad, Thunderhill Raceway Park
   url: https://instagram.com/notacargirl
   notes: $170 per spot. Hosted by @notadriftevent. Manually added by the site owner.
+- id: mill-2026-10-31
+  addedAt: '2026-09-21T15:00:00+00:00'
+  title: Halloween Drift Day
+  promoter: The Mill Drift Track
+  start: 2026-10-31 09:00
+  end: 2026-10-31 16:00
+  location: Sweet Home, OR
+  url: https://themilldrifttrack.com/product/halloween-drift-day-oct-31st/
+  notes: Driver tickets $100 (only 50 available), $5 for spectators. Trunk or treat
+    12PM-2PM, costume contest for drivers, food truck, skid pad and tire machine on
+    site. 2210 Tamarack St, Sweet Home, OR. Manually added by the site owner.
 - id: av-2026-11-01
   addedAt: '2026-07-31T14:40:00+00:00'
   title: KINOD Miataween
@@ -975,6 +1028,27 @@ events:
   location: Affinity Circuit
   url: https://driftevolution.trackrabbit.com/
   notes: 2-day event. Manually added by the site owner.
+- id: vsl-2026-11-14
+  addedAt: '2026-09-21T21:40:00+00:00'
+  title: 2026 Season Closer
+  promoter: Villains Sportsland
+  start: 2026-11-14 10:00
+  end: 2026-11-14 22:00
+  location: Villains Sportsland
+  url: https://villainssportsland.com/events
+  notes: Day 1 of 2. Drivers meeting 11:30AM, track runs until 10PM. Drivers $165/weekend.
+    Spectators $20/day or $40/weekend. Free camping. Pit areas are first-come first-serve.
+    1212 Middle Waitsburg Rd, Walla Walla, WA. Manually added by the site owner.
+- id: vsl-2026-11-15
+  addedAt: '2026-09-21T21:43:00+00:00'
+  title: 2026 Season Closer
+  promoter: Villains Sportsland
+  start: 2026-11-15 10:00
+  end: 2026-11-15 15:00
+  location: Villains Sportsland
+  url: https://villainssportsland.com/events
+  notes: Day 2 of 2. Track opens 10AM, full course until 3PM. Manually added by the
+    site owner.
 - id: vdc-2026-11-21
   addedAt: '2026-07-08T00:00:00+00:00'
   title: Valley Drift Club Event
@@ -1241,66 +1315,3 @@ events:
   location: Musselman Honda Circuit
   url: https://mhcircuit.com/event/open-drift-day-12/
   notes: Auto-imported from Musselman Honda Circuit's calendar.
-- id: fe-2026-10-01
-  addedAt: '2026-09-21T14:55:00+00:00'
-  title: Thursday Night Drift
-  promoter: Flavor Express
-  start: 2026-10-01 17:00
-  end: 2026-10-01 22:00
-  location: Orange Show Speedway
-  url: https://www.flavorexpress.co/
-  notes: Thursday night open practice, 5PM-10PM. $100 to drive. Manually added by the site owner.
-- id: mill-2026-10-31
-  addedAt: '2026-09-21T15:00:00+00:00'
-  title: Halloween Drift Day
-  promoter: The Mill Drift Track
-  start: 2026-10-31 09:00
-  end: 2026-10-31 16:00
-  location: Sweet Home, OR
-  url: https://themilldrifttrack.com/product/halloween-drift-day-oct-31st/
-  notes: Driver tickets $100 (only 50 available), $5 for spectators. Trunk or treat 12PM-2PM, costume contest for drivers, food truck, skid pad and tire machine on site. 2210 Tamarack St, Sweet Home, OR. Manually added by the site owner.
-- id: vsl-2026-09-18
-  addedAt: '2026-09-21T21:00:00+00:00'
-  title: VSL XXVII
-  promoter: Villains Sportsland
-  start: 2026-09-18 17:00
-  end: 2026-09-18 22:00
-  location: Villains Sportsland
-  url: https://villainssportsland.com/events
-  notes: Day 1 of 3. Gates 5PM, drivers meeting 6PM, full course until 10PM. Drivers $200/weekend. Spectators $20/day or $40/weekend, kids 16 and under free. Free camping. 1212 Middle Waitsburg Rd, Walla Walla, WA. Manually added by the site owner.
-- id: vsl-2026-09-19
-  addedAt: '2026-09-21T21:03:00+00:00'
-  title: VSL XXVII
-  promoter: Villains Sportsland
-  start: 2026-09-19 10:00
-  end: 2026-09-19 22:00
-  location: Villains Sportsland
-  url: https://villainssportsland.com/events
-  notes: Day 2 of 3. Gates 10AM, drivers meeting 11:30AM, full course until 10PM. Manually added by the site owner.
-- id: vsl-2026-09-20
-  addedAt: '2026-09-21T21:06:00+00:00'
-  title: VSL XXVII
-  promoter: Villains Sportsland
-  start: 2026-09-20 10:00
-  end: 2026-09-20 15:00
-  location: Villains Sportsland
-  url: https://villainssportsland.com/events
-  notes: Day 3 of 3. Gates 10AM, drivers meeting 10AM, full course until 3PM (subject to attendance). Manually added by the site owner.
-- id: vsl-2026-11-14
-  addedAt: '2026-09-21T21:40:00+00:00'
-  title: 2026 Season Closer
-  promoter: Villains Sportsland
-  start: 2026-11-14 10:00
-  end: 2026-11-14 22:00
-  location: Villains Sportsland
-  url: https://villainssportsland.com/events
-  notes: Day 1 of 2. Drivers meeting 11:30AM, track runs until 10PM. Drivers $165/weekend. Spectators $20/day or $40/weekend. Free camping. Pit areas are first-come first-serve. 1212 Middle Waitsburg Rd, Walla Walla, WA. Manually added by the site owner.
-- id: vsl-2026-11-15
-  addedAt: '2026-09-21T21:43:00+00:00'
-  title: 2026 Season Closer
-  promoter: Villains Sportsland
-  start: 2026-11-15 10:00
-  end: 2026-11-15 15:00
-  location: Villains Sportsland
-  url: https://villainssportsland.com/events
-  notes: Day 2 of 2. Track opens 10AM, full course until 3PM. Manually added by the site owner.
