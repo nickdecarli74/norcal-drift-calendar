@@ -155,6 +155,14 @@ const TRACKS = [
     lat: 36.5842,
     lng: -121.7534,
     search: ["laguna seca"]
+  },
+  {
+    name: "Villains Sportsland",
+    short: "Villains Sportsland",
+    location: "Walla Walla, WA",
+    lat: 46.0823,
+    lng: -118.3254,
+    search: ["villains sportsland"]
   }
 ];
 
@@ -194,7 +202,8 @@ const PROMOTER_ABBREV = {
   "Drift Central": "DC",
   "Outlaw Drift": "OD",
   "GoodLuckLeague": "GLL",
-  "Musselman Honda Circuit": "MHC AZ"
+  "Musselman Honda Circuit": "MHC AZ",
+  "Villains Sportsland": "VSL"
 };
 
 function pillLabel(event){

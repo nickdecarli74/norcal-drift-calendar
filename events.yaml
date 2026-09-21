@@ -1260,3 +1260,30 @@ events:
   location: Sweet Home, OR
   url: https://themilldrifttrack.com/product/halloween-drift-day-oct-31st/
   notes: Driver tickets $100 (only 50 available), $5 for spectators. Trunk or treat 12PM-2PM, costume contest for drivers, food truck, skid pad and tire machine on site. 2210 Tamarack St, Sweet Home, OR. Manually added by the site owner.
+- id: vsl-2026-09-18
+  addedAt: '2026-09-21T21:00:00+00:00'
+  title: VSL XXVII
+  promoter: Villains Sportsland
+  start: 2026-09-18 17:00
+  end: 2026-09-18 22:00
+  location: Villains Sportsland
+  url: https://villainssportsland.com/events
+  notes: Day 1 of 3. Gates 5PM, drivers meeting 6PM, full course until 10PM. Drivers $200/weekend. Spectators $20/day or $40/weekend, kids 16 and under free. Free camping. 1212 Middle Waitsburg Rd, Walla Walla, WA. Manually added by the site owner.
+- id: vsl-2026-09-19
+  addedAt: '2026-09-21T21:03:00+00:00'
+  title: VSL XXVII
+  promoter: Villains Sportsland
+  start: 2026-09-19 10:00
+  end: 2026-09-19 22:00
+  location: Villains Sportsland
+  url: https://villainssportsland.com/events
+  notes: Day 2 of 3. Gates 10AM, drivers meeting 11:30AM, full course until 10PM. Manually added by the site owner.
+- id: vsl-2026-09-20
+  addedAt: '2026-09-21T21:06:00+00:00'
+  title: VSL XXVII
+  promoter: Villains Sportsland
+  start: 2026-09-20 10:00
+  end: 2026-09-20 15:00
+  location: Villains Sportsland
+  url: https://villainssportsland.com/events
+  notes: Day 3 of 3. Gates 10AM, drivers meeting 10AM, full course until 3PM (subject to attendance). Manually added by the site owner.
