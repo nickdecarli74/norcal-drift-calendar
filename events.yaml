@@ -600,10 +600,10 @@ events:
   end: 2026-09-18 22:00
   location: Villains Sportsland
   url: https://villainssportsland.com/events
-  notes: Day 1 of 3 (VSL XXVII). Gates 5PM, drivers meeting 6PM, full course until 10PM. Drivers
-    $200/weekend. Spectators $20/day or $40/weekend, kids 16 and under free. Free
-    camping. 1212 Middle Waitsburg Rd, Walla Walla, WA. Manually added by the site
-    owner.
+  notes: Day 1 of 3 (VSL XXVII). Gates 5PM, drivers meeting 6PM, full course until
+    10PM. Drivers $200/weekend. Spectators $20/day or $40/weekend, kids 16 and under
+    free. Free camping. 1212 Middle Waitsburg Rd, Walla Walla, WA. Manually added
+    by the site owner.
 - id: fifo-2026-09-19
   addedAt: '2026-07-08T00:00:00+00:00'
   title: Fast In Fast Out Drift
@@ -649,8 +649,8 @@ events:
   end: 2026-09-19 22:00
   location: Villains Sportsland
   url: https://villainssportsland.com/events
-  notes: Day 2 of 3 (VSL XXVII). Gates 10AM, drivers meeting 11:30AM, full course until 10PM.
-    Manually added by the site owner.
+  notes: Day 2 of 3 (VSL XXVII). Gates 10AM, drivers meeting 11:30AM, full course
+    until 10PM. Manually added by the site owner.
 - id: fifo-2026-09-20
   addedAt: '2026-07-08T00:00:00+00:00'
   title: Fast In Fast Out Drift
@@ -686,8 +686,8 @@ events:
   end: 2026-09-20 15:00
   location: Villains Sportsland
   url: https://villainssportsland.com/events
-  notes: Day 3 of 3 (VSL XXVII). Gates 10AM, drivers meeting 10AM, full course until 3PM (subject
-    to attendance). Manually added by the site owner.
+  notes: Day 3 of 3 (VSL XXVII). Gates 10AM, drivers meeting 10AM, full course until
+    3PM (subject to attendance). Manually added by the site owner.
 - id: cr-2026-09-25
   addedAt: '2026-09-18T14:00:00+00:00'
   title: Overdrive
@@ -1036,9 +1036,10 @@ events:
   end: 2026-11-14 22:00
   location: Villains Sportsland
   url: https://villainssportsland.com/events
-  notes: Day 1 of 2 (2026 Season Closer). Drivers meeting 11:30AM, track runs until 10PM. Drivers $165/weekend.
-    Spectators $20/day or $40/weekend. Free camping. Pit areas are first-come first-serve.
-    1212 Middle Waitsburg Rd, Walla Walla, WA. Manually added by the site owner.
+  notes: Day 1 of 2 (2026 Season Closer). Drivers meeting 11:30AM, track runs until
+    10PM. Drivers $165/weekend. Spectators $20/day or $40/weekend. Free camping. Pit
+    areas are first-come first-serve. 1212 Middle Waitsburg Rd, Walla Walla, WA. Manually
+    added by the site owner.
 - id: vsl-2026-11-15
   addedAt: '2026-09-21T21:43:00+00:00'
   title: Villains Sportsland
@@ -1047,8 +1048,8 @@ events:
   end: 2026-11-15 15:00
   location: Villains Sportsland
   url: https://villainssportsland.com/events
-  notes: Day 2 of 2 (2026 Season Closer). Track opens 10AM, full course until 3PM. Manually added by the
-    site owner.
+  notes: Day 2 of 2 (2026 Season Closer). Track opens 10AM, full course until 3PM.
+    Manually added by the site owner.
 - id: vdc-2026-11-21
   addedAt: '2026-07-08T00:00:00+00:00'
   title: Valley Drift Club Event
@@ -1171,16 +1172,6 @@ events:
   location: Musselman Honda Circuit
   url: https://mhcircuit.com/event/open-drift-day-8/
   notes: Auto-imported from Musselman Honda Circuit's calendar.
-- id: av-2026-12-12
-  addedAt: '2026-07-31T15:10:00+00:00'
-  title: Winter Charity Drift Festival
-  promoter: Apple Valley Speedway
-  start: 2026-12-12 09:00
-  end: 2026-12-12 17:00
-  locked: true
-  location: Main & Skid
-  url: https://www.flavorexpress.co/
-  notes: Presented by Cars N Anime and Flavor Express. Drivers $80. Toy drive - donate for the holidays. Manually verified from Apple Valley Speedway's calendar.
 - id: dm-2026-12-12
   addedAt: '2026-07-31T16:10:00+00:00'
   title: DriftMaybe
@@ -1190,6 +1181,17 @@ events:
   location: Thunderhill Raceway Park
   url: https://www.instagram.com/p/DSyh94eFBve/
   notes: Manually added by the site owner.
+- id: av-2026-12-12
+  addedAt: '2026-07-31T15:10:00+00:00'
+  title: Winter Charity Drift Festival
+  promoter: Apple Valley Speedway
+  start: 2026-12-12 09:00
+  end: 2026-12-12 17:00
+  locked: true
+  location: Main & Skid
+  url: https://www.flavorexpress.co/
+  notes: Presented by Cars N Anime and Flavor Express. Drivers $80. Toy drive - donate
+    for the holidays. Manually verified from Apple Valley Speedway's calendar.
 - id: vdc-2026-12-19
   addedAt: '2026-07-08T00:00:00+00:00'
   title: Valley Drift Club Event

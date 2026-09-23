@@ -1356,17 +1356,6 @@
     "addedAt": "2026-08-03T00:45:00+00:00"
   },
   {
-    "id": "av-2026-12-12",
-    "title": "Winter Charity Drift Festival",
-    "promoter": "Apple Valley Speedway",
-    "start": "2026-12-12 09:00",
-    "end": "2026-12-12 17:00",
-    "location": "Main & Skid",
-    "url": "https://www.flavorexpress.co/",
-    "notes": "Presented by Cars N Anime and Flavor Express. Drivers $80. Toy drive - donate for the holidays. Manually verified from Apple Valley Speedway's calendar.",
-    "addedAt": "2026-07-31T15:10:00+00:00"
-  },
-  {
     "id": "dm-2026-12-12",
     "title": "DriftMaybe",
     "promoter": "DriftMaybe",
@@ -1376,6 +1365,17 @@
     "url": "https://www.instagram.com/p/DSyh94eFBve/",
     "notes": "Manually added by the site owner.",
     "addedAt": "2026-07-31T16:10:00+00:00"
+  },
+  {
+    "id": "av-2026-12-12",
+    "title": "Winter Charity Drift Festival",
+    "promoter": "Apple Valley Speedway",
+    "start": "2026-12-12 09:00",
+    "end": "2026-12-12 17:00",
+    "location": "Main & Skid",
+    "url": "https://www.flavorexpress.co/",
+    "notes": "Presented by Cars N Anime and Flavor Express. Drivers $80. Toy drive - donate for the holidays. Manually verified from Apple Valley Speedway's calendar.",
+    "addedAt": "2026-07-31T15:10:00+00:00"
   },
   {
     "id": "vdc-2026-12-19",

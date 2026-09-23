@@ -2,11 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
-DESCRIPTION:Promoter: Villains Sportsland\nLocation: Villains Sportsland\nRegistration / Info: https://villainssportsland.com/events\n\nDay 1 of 2. Drivers meeting 11:30AM\, track runs until 10PM. Drivers $165/weekend. Spectators $20/day or $40/weekend. Free camping. Pit areas are first-come first-serve. 1212 Middle Waitsburg Rd\, Walla Walla\, WA. Manually added by the site owner.
+DESCRIPTION:Promoter: Villains Sportsland\nLocation: Villains Sportsland\nRegistration / Info: https://villainssportsland.com/events\n\nDay 1 of 2 (2026 Season Closer). Drivers meeting 11:30AM\, track runs until 10PM. Drivers $165/weekend. Spectators $20/day or $40/weekend. Free camping. Pit areas are first-come first-serve. 1212 Middle Waitsburg Rd\, Walla Walla\, WA. Manually added by the site owner.
 DTEND:20261114T220000Z
 LOCATION:Villains Sportsland
 DTSTART:20261114T100000Z
-SUMMARY:Villains Sportsland - 2026 Season Closer
+SUMMARY:Villains Sportsland - Villains Sportsland
 UID:vsl-2026-11-14@driftwestnet.com
 URL:https://villainssportsland.com/events
 END:VEVENT
@@ -650,11 +650,11 @@ UID:cc-2026-08-22@driftwestnet.com
 URL:https://www.instagram.com/ouija_boi/
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Promoter: Villains Sportsland\nLocation: Villains Sportsland\nRegistration / Info: https://villainssportsland.com/events\n\nDay 2 of 3. Gates 10AM\, drivers meeting 11:30AM\, full course until 10PM. Manually added by the site owner.
+DESCRIPTION:Promoter: Villains Sportsland\nLocation: Villains Sportsland\nRegistration / Info: https://villainssportsland.com/events\n\nDay 2 of 3 (VSL XXVII). Gates 10AM\, drivers meeting 11:30AM\, full course until 10PM. Manually added by the site owner.
 DTEND:20260919T220000Z
 LOCATION:Villains Sportsland
 DTSTART:20260919T100000Z
-SUMMARY:Villains Sportsland - VSL XXVII
+SUMMARY:Villains Sportsland - Villains Sportsland
 UID:vsl-2026-09-19@driftwestnet.com
 URL:https://villainssportsland.com/events
 END:VEVENT
@@ -785,11 +785,11 @@ UID:mhc-2027-03-07@driftwestnet.com
 URL:https://mhcircuit.com/event/open-drift-day-11/
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Promoter: Villains Sportsland\nLocation: Villains Sportsland\nRegistration / Info: https://villainssportsland.com/events\n\nDay 2 of 2. Track opens 10AM\, full course until 3PM. Manually added by the site owner.
+DESCRIPTION:Promoter: Villains Sportsland\nLocation: Villains Sportsland\nRegistration / Info: https://villainssportsland.com/events\n\nDay 2 of 2 (2026 Season Closer). Track opens 10AM\, full course until 3PM. Manually added by the site owner.
 DTEND:20261115T150000Z
 LOCATION:Villains Sportsland
 DTSTART:20261115T100000Z
-SUMMARY:Villains Sportsland - 2026 Season Closer
+SUMMARY:Villains Sportsland - Villains Sportsland
 UID:vsl-2026-11-15@driftwestnet.com
 URL:https://villainssportsland.com/events
 END:VEVENT
@@ -1036,11 +1036,11 @@ UID:mhc-2026-10-24@driftwestnet.com
 URL:https://mhcircuit.com/event/spooky-drift-8/
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Promoter: Villains Sportsland\nLocation: Villains Sportsland\nRegistration / Info: https://villainssportsland.com/events\n\nDay 3 of 3. Gates 10AM\, drivers meeting 10AM\, full course until 3PM (subject to attendance). Manually added by the site owner.
+DESCRIPTION:Promoter: Villains Sportsland\nLocation: Villains Sportsland\nRegistration / Info: https://villainssportsland.com/events\n\nDay 3 of 3 (VSL XXVII). Gates 10AM\, drivers meeting 10AM\, full course until 3PM (subject to attendance). Manually added by the site owner.
 DTEND:20260920T150000Z
 LOCATION:Villains Sportsland
 DTSTART:20260920T100000Z
-SUMMARY:Villains Sportsland - VSL XXVII
+SUMMARY:Villains Sportsland - Villains Sportsland
 UID:vsl-2026-09-20@driftwestnet.com
 URL:https://villainssportsland.com/events
 END:VEVENT
@@ -1108,11 +1108,11 @@ UID:cr-2026-09-25@driftwestnet.com
 URL:https://clubrowdy.com/products/overdrive-september-25th-26th-27th
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Promoter: Villains Sportsland\nLocation: Villains Sportsland\nRegistration / Info: https://villainssportsland.com/events\n\nDay 1 of 3. Gates 5PM\, drivers meeting 6PM\, full course until 10PM. Drivers $200/weekend. Spectators $20/day or $40/weekend\, kids 16 and under free. Free camping. 1212 Middle Waitsburg Rd\, Walla Walla\, WA. Manually added by the site owner.
+DESCRIPTION:Promoter: Villains Sportsland\nLocation: Villains Sportsland\nRegistration / Info: https://villainssportsland.com/events\n\nDay 1 of 3 (VSL XXVII). Gates 5PM\, drivers meeting 6PM\, full course until 10PM. Drivers $200/weekend. Spectators $20/day or $40/weekend\, kids 16 and under free. Free camping. 1212 Middle Waitsburg Rd\, Walla Walla\, WA. Manually added by the site owner.
 DTEND:20260918T220000Z
 LOCATION:Villains Sportsland
 DTSTART:20260918T170000Z
-SUMMARY:Villains Sportsland - VSL XXVII
+SUMMARY:Villains Sportsland - Villains Sportsland
 UID:vsl-2026-09-18@driftwestnet.com
 URL:https://villainssportsland.com/events
 END:VEVENT
@@ -1135,13 +1135,13 @@ UID:fifo-2026-09-18@driftwestnet.com
 URL:https://fastinfastouttrackdays.com/pages/upcoming-events
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main & Skid\nRegistration / Info: http://flavorexpress.co/\n\nManually verified from Apple Valley Speedway's calendar.
+DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main & Skid\nRegistration / Info: https://www.flavorexpress.co/\n\nPresented by Cars N Anime and Flavor Express. Drivers $80. Toy drive - donate for the holidays. Manually verified from Apple Valley Speedway's calendar.
 DTEND:20261212T170000Z
 LOCATION:Main & Skid
-DTSTART:20261212T080000Z
-SUMMARY:Apple Valley Speedway - Charity Drift 3
+DTSTART:20261212T090000Z
+SUMMARY:Apple Valley Speedway - Winter Charity Drift Festival
 UID:av-2026-12-12@driftwestnet.com
-URL:http://flavorexpress.co/
+URL:https://www.flavorexpress.co/
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Promoter: Desert Drift Street League\nLocation: Radford Racing School\nRegistration / Info: https://www.desertdriftstreetleague.com\n\nManually added by the site owner from a flyer image. Night event\, 6PM-12AM.
