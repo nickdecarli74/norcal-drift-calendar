@@ -794,17 +794,6 @@
     "addedAt": "2026-09-21T21:06:00+00:00"
   },
   {
-    "id": "cr-2026-09-25",
-    "title": "Overdrive",
-    "promoter": "Club Rowdy",
-    "start": "2026-09-25 09:00",
-    "end": "2026-09-25 21:00",
-    "location": "Reno Fernley Raceway",
-    "url": "https://clubrowdy.com/products/overdrive-september-25th-26th-27th",
-    "notes": "Day 1 of 3. Manually added by the site owner.",
-    "addedAt": "2026-09-18T14:00:00+00:00"
-  },
-  {
     "id": "vdc-2026-09-26",
     "title": "Cleared Hot",
     "promoter": "Valley Drift Club",
@@ -827,17 +816,6 @@
     "addedAt": "2026-08-27T23:56:25+00:00"
   },
   {
-    "id": "cr-2026-09-26",
-    "title": "Overdrive",
-    "promoter": "Club Rowdy",
-    "start": "2026-09-26 09:00",
-    "end": "2026-09-26 21:00",
-    "location": "Reno Fernley Raceway",
-    "url": "https://clubrowdy.com/products/overdrive-september-25th-26th-27th",
-    "notes": "Day 2 of 3. Manually added by the site owner.",
-    "addedAt": "2026-09-18T14:05:00+00:00"
-  },
-  {
     "id": "av-2026-09-27",
     "title": "Chaser Motorsports",
     "promoter": "Apple Valley Speedway",
@@ -847,17 +825,6 @@
     "url": "https://applevalleyspeedway.com/calendar/",
     "notes": "Presented by @santanao_o. $90 driver / $15 gate fee, 55 driver spots, 16-hour track day. Manually added by the site owner.",
     "addedAt": "2026-08-11T00:00:00+00:00"
-  },
-  {
-    "id": "cr-2026-09-27",
-    "title": "Overdrive",
-    "promoter": "Club Rowdy",
-    "start": "2026-09-27 09:00",
-    "end": "2026-09-27 16:00",
-    "location": "Reno Fernley Raceway",
-    "url": "https://clubrowdy.com/products/overdrive-september-25th-26th-27th",
-    "notes": "Day 3 of 3. Manually added by the site owner.",
-    "addedAt": "2026-09-18T14:10:00+00:00"
   },
   {
     "id": "fe-2026-10-01",

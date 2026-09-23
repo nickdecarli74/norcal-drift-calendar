@@ -688,15 +688,6 @@ events:
   url: https://villainssportsland.com/events
   notes: Day 3 of 3 (VSL XXVII). Gates 10AM, drivers meeting 10AM, full course until
     3PM (subject to attendance). Manually added by the site owner.
-- id: cr-2026-09-25
-  addedAt: '2026-09-18T14:00:00+00:00'
-  title: Overdrive
-  promoter: Club Rowdy
-  start: 2026-09-25 09:00
-  end: 2026-09-25 21:00
-  location: Reno Fernley Raceway
-  url: https://clubrowdy.com/products/overdrive-september-25th-26th-27th
-  notes: Day 1 of 3. Manually added by the site owner.
 - id: vdc-2026-09-26
   addedAt: '2026-07-08T00:00:00+00:00'
   title: Cleared Hot
@@ -718,15 +709,6 @@ events:
     to register. $145 entry (40 driver cap). $500/$150 cash for 1st/2nd plus custom
     trophies 1st-3rd, 50/50 raffle, camping available Fri & Sat evenings for out-of-town
     drivers. 20811 Industry Road, Anderson, CA. Manually added by the site owner.
-- id: cr-2026-09-26
-  addedAt: '2026-09-18T14:05:00+00:00'
-  title: Overdrive
-  promoter: Club Rowdy
-  start: 2026-09-26 09:00
-  end: 2026-09-26 21:00
-  location: Reno Fernley Raceway
-  url: https://clubrowdy.com/products/overdrive-september-25th-26th-27th
-  notes: Day 2 of 3. Manually added by the site owner.
 - id: av-2026-09-27
   addedAt: '2026-08-11T00:00:00+00:00'
   title: Chaser Motorsports
@@ -737,15 +719,6 @@ events:
   url: https://applevalleyspeedway.com/calendar/
   notes: Presented by @santanao_o. $90 driver / $15 gate fee, 55 driver spots, 16-hour
     track day. Manually added by the site owner.
-- id: cr-2026-09-27
-  addedAt: '2026-09-18T14:10:00+00:00'
-  title: Overdrive
-  promoter: Club Rowdy
-  start: 2026-09-27 09:00
-  end: 2026-09-27 16:00
-  location: Reno Fernley Raceway
-  url: https://clubrowdy.com/products/overdrive-september-25th-26th-27th
-  notes: Day 3 of 3. Manually added by the site owner.
 - id: fe-2026-10-01
   addedAt: '2026-09-21T14:55:00+00:00'
   title: Thursday Night Drift
