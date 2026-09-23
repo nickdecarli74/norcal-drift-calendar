@@ -137,15 +137,6 @@ UID:sd-2026-08-15@driftwestnet.com
 URL:https://super-d.net/pages/schedule
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Promoter: Club Rowdy\nLocation: Reno Fernley Raceway\nRegistration / Info: https://clubrowdy.com/products/overdrive-september-25th-26th-27th\n\nDay 3 of 3. Manually added by the site owner.
-DTEND:20260927T160000Z
-LOCATION:Reno Fernley Raceway
-DTSTART:20260927T090000Z
-SUMMARY:Club Rowdy - Overdrive
-UID:cr-2026-09-27@driftwestnet.com
-URL:https://clubrowdy.com/products/overdrive-september-25th-26th-27th
-END:VEVENT
-BEGIN:VEVENT
 DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main & Skid\nRegistration / Info: http://flavorexpress.co/\n\nManually verified from Apple Valley Speedway's calendar.
 DTEND:20261017T170000Z
 LOCATION:Main & Skid
@@ -612,15 +603,6 @@ DTSTART:20261227T080000Z
 SUMMARY:SuperD - SuperD NYE
 UID:sd-2026-12-27@driftwestnet.com
 URL:https://super-d.net/pages/schedule
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Club Rowdy\nLocation: Reno Fernley Raceway\nRegistration / Info: https://clubrowdy.com/products/overdrive-september-25th-26th-27th\n\nDay 2 of 3. Manually added by the site owner.
-DTEND:20260926T210000Z
-LOCATION:Reno Fernley Raceway
-DTSTART:20260926T090000Z
-SUMMARY:Club Rowdy - Overdrive
-UID:cr-2026-09-26@driftwestnet.com
-URL:https://clubrowdy.com/products/overdrive-september-25th-26th-27th
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main & Skid\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\nManually verified from Apple Valley Speedway's calendar.
@@ -1097,15 +1079,6 @@ DTSTART:20260711T080000Z
 SUMMARY:Bay Area Drifting - Thunderhill Drift School
 UID:bad-2026-07-11@driftwestnet.com
 URL:https://bayareadrifting.com/schedule
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Club Rowdy\nLocation: Reno Fernley Raceway\nRegistration / Info: https://clubrowdy.com/products/overdrive-september-25th-26th-27th\n\nDay 1 of 3. Manually added by the site owner.
-DTEND:20260925T210000Z
-LOCATION:Reno Fernley Raceway
-DTSTART:20260925T090000Z
-SUMMARY:Club Rowdy - Overdrive
-UID:cr-2026-09-25@driftwestnet.com
-URL:https://clubrowdy.com/products/overdrive-september-25th-26th-27th
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Promoter: Villains Sportsland\nLocation: Villains Sportsland\nRegistration / Info: https://villainssportsland.com/events\n\nDay 1 of 3 (VSL XXVII). Gates 5PM\, drivers meeting 6PM\, full course until 10PM. Drivers $200/weekend. Spectators $20/day or $40/weekend\, kids 16 and under free. Free camping. 1212 Middle Waitsburg Rd\, Walla Walla\, WA. Manually added by the site owner.
