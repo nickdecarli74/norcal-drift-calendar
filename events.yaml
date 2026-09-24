@@ -1291,3 +1291,12 @@ events:
   location: Musselman Honda Circuit
   url: https://mhcircuit.com/event/open-drift-day-12/
   notes: Auto-imported from Musselman Honda Circuit's calendar.
+- id: vgd-2026-10-10
+  addedAt: '2026-09-24T23:05:00+00:00'
+  title: Vegasdrift
+  promoter: VegasDrift
+  start: 2026-10-10 07:30
+  end: 2026-10-10 16:00
+  location: Las Vegas Motor Speedway - Outside Road Course
+  url: https://vegasdrift.com/
+  notes: Grassroots drifting all day on the Outside Road Course. Gates open 7:30AM, track hot 10AM-4PM. Driver registration and spectator tickets at TheFOAT.com. Manually added by the site owner.
