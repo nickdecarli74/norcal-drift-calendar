@@ -371,6 +371,15 @@ UID:mhc-2026-12-06@driftwestnet.com
 URL:https://mhcircuit.com/event/open-drift-day-8/
 END:VEVENT
 BEGIN:VEVENT
+DESCRIPTION:Promoter: VegasDrift\nLocation: Las Vegas Motor Speedway - Outside Road Course\nRegistration / Info: https://vegasdrift.com/\n\nGrassroots drifting all day on the Outside Road Course. Gates open 7:30AM\, track hot 10AM-4PM. Driver registration and spectator tickets at TheFOAT.com. Manually added by the site owner.
+DTEND:20261010T160000Z
+LOCATION:Las Vegas Motor Speedway - Outside Road Course
+DTSTART:20261010T073000Z
+SUMMARY:VegasDrift - Vegasdrift
+UID:vgd-2026-10-10@driftwestnet.com
+URL:https://vegasdrift.com/
+END:VEVENT
+BEGIN:VEVENT
 DESCRIPTION:Promoter: GoodLuckLeague\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://www.goodluckleague.com/schedule\n\nManually added by the site owner.
 DTEND:20260912T170000Z
 LOCATION:Thunderhill Raceway Park
@@ -882,6 +891,15 @@ DTSTART:20270404T100000Z
 SUMMARY:Musselman Honda Circuit - Open Drift Day
 UID:mhc-2027-04-04@driftwestnet.com
 URL:https://mhcircuit.com/event/open-drift-day-12/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Just Drift\nLocation: Willow Springs International Raceway - Horse Thief Mile\nRegistration / Info: https://www.instagram.com/justdrift_official/\n\nInvite-only\; driver capacity strictly capped. Gates open 7AM for drivers. Registration link points to the promoter's Instagram - media should DM for info. Manually added by the site owner.
+DTEND:20261107T170000Z
+LOCATION:Willow Springs International Raceway - Horse Thief Mile
+DTSTART:20261107T070000Z
+SUMMARY:Just Drift - ASB Reunion Drift Event
+UID:jd-2026-11-07@driftwestnet.com
+URL:https://www.instagram.com/justdrift_official/
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main Track\nRegistration / Info: https://ultimatedriftingchallenge.com/collections/registration\n\nDay 2 of 2. Manually added by the site owner.
