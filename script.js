@@ -163,6 +163,14 @@ const TRACKS = [
     lat: 46.0823,
     lng: -118.3254,
     search: ["villains sportsland"]
+  },
+  {
+    name: "Willow Springs International Raceway",
+    short: "Willow Springs",
+    location: "Rosamond, CA",
+    lat: 34.8726,
+    lng: -118.2613,
+    search: ["willow springs"]
   }
 ];
 
