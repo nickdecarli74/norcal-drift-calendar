@@ -690,6 +690,7 @@ events:
     3PM (subject to attendance). Manually added by the site owner.
 - id: vdc-2026-09-26
   addedAt: '2026-07-08T00:00:00+00:00'
+  featured: true
   title: Cleared Hot
   promoter: Valley Drift Club
   start: 2026-09-26 07:00
