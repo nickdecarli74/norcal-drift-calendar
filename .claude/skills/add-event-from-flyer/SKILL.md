@@ -97,6 +97,16 @@ project before; don't repeat it.
   site.
 - Confirm entry counts match: `grep -c "^- id:" events.yaml` should equal
   `grep -c '"id":' events.json`.
+- Confirm `events.yaml` still parses. The classic slip is a `": "` (colon +
+  space) inside an unquoted `notes`/`title` value, e.g. `notes: Takes over all
+  of Willow Springs: drifting at...` - YAML reads that as a new key and the
+  daily `update.yml` workflow dies with `mapping values are not allowed here`.
+  The site keeps working (it reads `events.json`), so nothing looks broken
+  until the Action fails. Avoid it by rewording (use " - " instead of ": ")
+  or wrapping the value in single quotes (doubling any `'` inside it). Check
+  new entries with `grep -nE "^  (notes|title): .*: " events.yaml` - any
+  unquoted hit is a bug. If Python is available, also run
+  `py -c "import yaml;yaml.safe_load(open('events.yaml',encoding='utf-8'))"`.
 
 ## Step 6: Commit and push
 
