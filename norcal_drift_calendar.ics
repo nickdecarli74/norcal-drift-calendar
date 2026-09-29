@@ -209,6 +209,15 @@ UID:bad-2026-06-13@driftwestnet.com
 URL:https://bayareadrifting.com/schedule
 END:VEVENT
 BEGIN:VEVENT
+DESCRIPTION:Promoter: Flavor Express\nLocation: Willow Springs International Raceway\nRegistration / Info: https://hustlers-express.com/\n\nDay 1 of 2. Booty Hustlers x Flavor Express take over all of Willow Springs - drifting at Horse Thief Mile and the Balcony\, SCCA at Big Willow\, SoCal Drivers Club at Streets\, paid Drift Day lessons at the oval. Spectators $15 online / $20 at the gate. Limited drift tickets - registration and tickets at hustlers-express.com. Manually added by the site owner.
+DTEND:20261121T170000Z
+LOCATION:Willow Springs International Raceway
+DTSTART:20261121T080000Z
+SUMMARY:Flavor Express - Hustlers Express
+UID:fe-2026-11-21@driftwestnet.com
+URL:https://hustlers-express.com/
+END:VEVENT
+BEGIN:VEVENT
 DESCRIPTION:Promoter: The Lion's Den Corporation\nLocation: The Mill\, Anderson\, CA\nRegistration / Info: https://www.instagram.com/thelionsdencorporation/\n\nPrivate gathering\, no public access - DM @thelionsdencorporation on Instagram to register. $145 entry (40 driver cap). $500/$150 cash for 1st/2nd plus custom trophies 1st-3rd\, 50/50 raffle\, camping available Fri & Sat evenings for out-of-town drivers. 20811 Industry Road\, Anderson\, CA. Manually added by the site owner.
 DTEND:20260926T170000Z
 LOCATION:The Mill\, Anderson\, CA
@@ -963,6 +972,15 @@ DTSTART:20261031T090000Z
 SUMMARY:NOTADRIFT - NOTADRIFT Halloween Event
 UID:nd-2026-10-31@driftwestnet.com
 URL:https://instagram.com/notacargirl
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Flavor Express\nLocation: Willow Springs International Raceway\nRegistration / Info: https://hustlers-express.com/\n\nDay 2 of 2. Booty Hustlers x Flavor Express take over all of Willow Springs - drifting at Horse Thief Mile and the Balcony\, SCCA at Big Willow\, SoCal Drivers Club at Streets\, paid Drift Day lessons at the oval. Spectators $15 online / $20 at the gate. Limited drift tickets - registration and tickets at hustlers-express.com. Manually added by the site owner.
+DTEND:20261122T170000Z
+LOCATION:Willow Springs International Raceway
+DTSTART:20261122T080000Z
+SUMMARY:Flavor Express - Hustlers Express
+UID:fe-2026-11-22@driftwestnet.com
+URL:https://hustlers-express.com/
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Promoter: Cali Kansai\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://calikansai.com/products/ck7-driver-registration\n\nManually added by the site owner.
