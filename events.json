@@ -873,6 +873,17 @@
     "addedAt": "2026-07-31T14:15:00+00:00"
   },
   {
+    "id": "dnt-2026-10-04",
+    "title": "Hi Low Finale Drift Showdown",
+    "promoter": "Donut Media",
+    "start": "2026-10-04 12:00",
+    "end": "2026-10-04 18:00",
+    "location": "Orange Show Speedway",
+    "url": "https://www.instagram.com/donutmedia/",
+    "notes": "Donut Media x Hotpit Autofest live Hi Low finale drift showdown. Professional drift car ride-alongs, food trucks and merch. Tickets only $5, limited - link in @donutmedia Instagram bio. Manually added by the site owner.",
+    "addedAt": "2026-09-29T20:25:00+00:00"
+  },
+  {
     "id": "dc-2026-10-10",
     "title": "Drift Central",
     "promoter": "Drift Central",
@@ -1542,16 +1553,5 @@
     "url": "https://mhcircuit.com/event/open-drift-day-12/",
     "notes": "Auto-imported from Musselman Honda Circuit's calendar.",
     "addedAt": "2026-08-03T01:05:00+00:00"
-  },
-  {
-    "id": "dnt-2026-10-04",
-    "title": "Hi Low Finale Drift Showdown",
-    "promoter": "Donut Media",
-    "start": "2026-10-04 12:00",
-    "end": "2026-10-04 18:00",
-    "location": "Orange Show Speedway",
-    "url": "https://www.instagram.com/donutmedia/",
-    "notes": "Donut Media x Hotpit Autofest live Hi Low finale drift showdown. Professional drift car ride-alongs, food trucks and merch. Tickets only $5, limited - link in @donutmedia Instagram bio. Manually added by the site owner.",
-    "addedAt": "2026-09-29T20:25:00+00:00"
   }
 ]

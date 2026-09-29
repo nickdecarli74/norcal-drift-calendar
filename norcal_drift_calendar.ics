@@ -407,6 +407,15 @@ UID:mill-2026-08-15@driftwestnet.com
 URL:https://themilldrifttrack.com/event/open-drift-day-august-15th/
 END:VEVENT
 BEGIN:VEVENT
+DESCRIPTION:Promoter: Donut Media\nLocation: Orange Show Speedway\nRegistration / Info: https://www.instagram.com/donutmedia/\n\nDonut Media x Hotpit Autofest live Hi Low finale drift showdown. Professional drift car ride-alongs\, food trucks and merch. Tickets only $5\, limited - link in @donutmedia Instagram bio. Manually added by the site owner.
+DTEND:20261004T180000Z
+LOCATION:Orange Show Speedway
+DTSTART:20261004T120000Z
+SUMMARY:Donut Media - Hi Low Finale Drift Showdown
+UID:dnt-2026-10-04@driftwestnet.com
+URL:https://www.instagram.com/donutmedia/
+END:VEVENT
+BEGIN:VEVENT
 DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main Track\nRegistration / Info: http://www.udc.news/\n\nManually verified from Apple Valley Speedway's calendar.
 DTEND:20270101T170000Z
 LOCATION:Main Track
