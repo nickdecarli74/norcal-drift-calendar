@@ -1351,3 +1351,21 @@ events:
   location: Musselman Honda Circuit
   url: https://mhcircuit.com/event/open-drift-day-12/
   notes: Auto-imported from Musselman Honda Circuit's calendar.
+- id: rfr-2026-10-24
+  addedAt: '2026-10-02T18:00:00+00:00'
+  title: Halloween Slides
+  promoter: Reno Fernley Raceway
+  start: 2026-10-24 09:00
+  end: 2026-10-24 21:00
+  location: Reno Fernley Raceway
+  url: https://renofernleyraceway.com/
+  notes: Day 1 of 2. Drivers $100 Sat only / $160 both days, spectators $10 (kids 12 and under free), ridealongs $10. On-site camping, food vendors, tire service. Manually added by the site owner.
+- id: rfr-2026-10-25
+  addedAt: '2026-10-02T18:05:00+00:00'
+  title: Halloween Slides
+  promoter: Reno Fernley Raceway
+  start: 2026-10-25 09:00
+  end: 2026-10-25 17:00
+  location: Reno Fernley Raceway
+  url: https://renofernleyraceway.com/
+  notes: Day 2 of 2. Drivers $80 Sun only / $160 both days, spectators $10 (kids 12 and under free), ridealongs $10. On-site camping, food vendors, tire service. Manually added by the site owner.
