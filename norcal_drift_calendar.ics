@@ -416,6 +416,15 @@ UID:dnt-2026-10-04@driftwestnet.com
 URL:https://www.instagram.com/donutmedia/
 END:VEVENT
 BEGIN:VEVENT
+DESCRIPTION:Promoter: Reno Fernley Raceway\nLocation: Reno Fernley Raceway\nRegistration / Info: https://renofernleyraceway.com/\n\nDay 1 of 2. Drivers $100 Sat only / $160 both days\, spectators $10 (kids 12 and under free)\, ridealongs $10. On-site camping\, food vendors\, tire service. Manually added by the site owner.
+DTEND:20261024T210000Z
+LOCATION:Reno Fernley Raceway
+DTSTART:20261024T090000Z
+SUMMARY:Reno Fernley Raceway - Halloween Slides
+UID:rfr-2026-10-24@driftwestnet.com
+URL:https://renofernleyraceway.com/
+END:VEVENT
+BEGIN:VEVENT
 DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main Track\nRegistration / Info: http://www.udc.news/\n\nManually verified from Apple Valley Speedway's calendar.
 DTEND:20270101T170000Z
 LOCATION:Main Track
@@ -1142,6 +1151,15 @@ DTSTART:20260801T080000Z
 SUMMARY:Club Rowdy - Hottest August Nights
 UID:cr-2026-08-01@driftwestnet.com
 URL:https://clubrowdy.com/products/hottest-august-nights-july-31-august-1-2
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Reno Fernley Raceway\nLocation: Reno Fernley Raceway\nRegistration / Info: https://renofernleyraceway.com/\n\nDay 2 of 2. Drivers $80 Sun only / $160 both days\, spectators $10 (kids 12 and under free)\, ridealongs $10. On-site camping\, food vendors\, tire service. Manually added by the site owner.
+DTEND:20261025T170000Z
+LOCATION:Reno Fernley Raceway
+DTSTART:20261025T090000Z
+SUMMARY:Reno Fernley Raceway - Halloween Slides
+UID:rfr-2026-10-25@driftwestnet.com
+URL:https://renofernleyraceway.com/
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Promoter: Fast In Fast Out\nLocation: Sonoma Raceway\nRegistration / Info: https://fastinfastouttrackdays.com/pages/upcoming-events\n\nAuto-imported from Fast In Fast Out upcoming events.
