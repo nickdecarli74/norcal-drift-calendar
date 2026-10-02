@@ -1110,16 +1110,6 @@ events:
   location: NASA Crows Landing Airport
   url: https://www.valleydriftclub.com/
   notes: Valley Drift Club event.
-- id: fifo-2026-11-21
-  addedAt: '2026-07-08T00:00:00+00:00'
-  locked: true
-  title: Fast In Fast Out Drift
-  promoter: Fast In Fast Out
-  start: 2026-11-21 09:00
-  end: 2026-11-21 17:00
-  location: Sonoma Raceway
-  url: https://www.motorsportreg.com/events/sonoma-raceway-hpde-november-fast-in-out-track-days-588407
-  notes: Last FIFO drift day of the year. Hours (9AM-5PM) from the Instagram announcement.
 - id: av-2026-11-21
   addedAt: '2026-07-31T14:55:00+00:00'
   title: Pacific Drift Event
@@ -1151,6 +1141,16 @@ events:
     Club at Streets, paid Drift Day lessons at the oval. Spectators $15 online / $20
     at the gate. Limited drift tickets - registration and tickets at hustlers-express.com.
     Manually added by the site owner.
+- id: fifo-2026-11-21
+  addedAt: '2026-07-08T00:00:00+00:00'
+  locked: true
+  title: Fast In Fast Out Drift
+  promoter: Fast In Fast Out
+  start: 2026-11-21 09:00
+  end: 2026-11-21 17:00
+  location: Sonoma Raceway
+  url: https://www.motorsportreg.com/events/sonoma-raceway-hpde-november-fast-in-out-track-days-588407
+  notes: Last FIFO drift day of the year. Hours (9AM-5PM) from the Instagram announcement.
 - id: fifo-2026-11-22
   addedAt: '2026-07-08T00:00:00+00:00'
   title: Fast In Fast Out Drift
