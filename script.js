@@ -193,7 +193,7 @@ function eventUrl(e){
 
 function eventSpansDay(e, dateKey){
   const startDate = e.start.slice(0, 10);
-  const endDate = (e.end || e.start).slice(0, 10);
+  const endDate = endDateKey(e.start, e.end);
   return dateKey >= startDate && dateKey <= endDate;
 }
 

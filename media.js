@@ -4,8 +4,21 @@
    and media.html (per-event gallery page)
    ========================================= */
 
+// "YYYY-MM-DD" of an event's last day. An end of exactly midnight (e.g. a
+// 2PM-12AM night event stored as end "2026-10-04 00:00") belongs to the day
+// before - otherwise it'd show up on an extra day in the calendar and cards.
+function endDateKey(startStr, endStr){
+  if(!endStr) return startStr.slice(0, 10);
+  const endKey = endStr.slice(0, 10);
+  if(endStr.slice(11, 16) !== "00:00" || endKey <= startStr.slice(0, 10)) return endKey;
+  const d = new Date(endKey + "T12:00");
+  d.setDate(d.getDate() - 1);
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+}
+
 function formatDateParts(dateStr, endStr){
   const d = new Date(dateStr.replace(" ", "T"));
+  if(endStr) endStr = endDateKey(dateStr, endStr) + " 12:00";
   const sameDay = !endStr || dateStr.slice(0,10) === endStr.slice(0,10);
 
   let full;
