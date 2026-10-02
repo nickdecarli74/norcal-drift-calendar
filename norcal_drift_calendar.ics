@@ -578,6 +578,15 @@ UID:sd-2026-10-25@driftwestnet.com
 URL:https://super-d.net/pages/schedule
 END:VEVENT
 BEGIN:VEVENT
+DESCRIPTION:Promoter: fxdwld\nLocation: Affinity Circuit\nRegistration / Info: https://www.instagram.com/fxdwld/\n\nDay 2 of 2. DM @fxdwld on Instagram to lock in a driver spot. Manually added by the site owner.
+DTEND:20261018T170000Z
+LOCATION:Affinity Circuit
+DTSTART:20261018T080000Z
+SUMMARY:fxdwld - FREEMODE 5
+UID:fxd-2026-10-18@driftwestnet.com
+URL:https://www.instagram.com/fxdwld/
+END:VEVENT
+BEGIN:VEVENT
 DESCRIPTION:Promoter: Musselman Honda Circuit\nLocation: Musselman Honda Circuit\nRegistration / Info: https://mhcircuit.com/event/spooky-drift-9/\n\nAuto-imported from Musselman Honda Circuit's calendar.
 DTEND:20261025T220000Z
 LOCATION:Musselman Honda Circuit
@@ -1044,6 +1053,15 @@ DTSTART:20261024T080000Z
 SUMMARY:SuperD - SuperD Cup
 UID:sd-2026-10-24@driftwestnet.com
 URL:https://super-d.net/pages/schedule
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: fxdwld\nLocation: Affinity Circuit\nRegistration / Info: https://www.instagram.com/fxdwld/\n\nDay 1 of 2. DM @fxdwld on Instagram to lock in a driver spot. Manually added by the site owner.
+DTEND:20261017T170000Z
+LOCATION:Affinity Circuit
+DTSTART:20261017T080000Z
+SUMMARY:fxdwld - FREEMODE 5
+UID:fxd-2026-10-17@driftwestnet.com
+URL:https://www.instagram.com/fxdwld/
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Promoter: Fuel Fest Bay Area\nLocation: Alameda County Fairgrounds\nRegistration / Info: \n\nManually added by the site owner for media purposes\; event has already passed.
