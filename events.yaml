@@ -1042,6 +1042,17 @@ events:
   location: Musselman Honda Circuit
   url: https://mhcircuit.com/event/desert-drift-street-league-6/
   notes: Auto-imported from Musselman Honda Circuit's calendar.
+- id: cc-2026-11-07
+  addedAt: '2026-10-06T18:00:00+00:00'
+  title: Cursed Chassis Drift Event
+  promoter: Cursed Chassis
+  start: 2026-11-07 09:00
+  end: 2026-11-07 18:00
+  location: Thunderhill Raceway Park
+  url: https://www.instagram.com/ouija_boi/
+  notes: Thunderhill Big Pad, unique track layout. 40 driver spots - contact @ouija_boi
+    on Instagram for payment. Raffle, confirmed media, tire service on site. Manually
+    added by the site owner.
 - id: av-2026-11-13
   addedAt: '2026-07-31T14:50:00+00:00'
   title: Runit Promotions
@@ -1396,12 +1407,3 @@ events:
   location: Musselman Honda Circuit
   url: https://mhcircuit.com/event/open-drift-day-12/
   notes: Auto-imported from Musselman Honda Circuit's calendar.
-- id: cc-2026-11-07
-  addedAt: '2026-10-06T18:00:00+00:00'
-  title: Cursed Chassis Drift Event
-  promoter: Cursed Chassis
-  start: 2026-11-07 09:00
-  end: 2026-11-07 18:00
-  location: Thunderhill Raceway Park
-  url: https://www.instagram.com/ouija_boi/
-  notes: Thunderhill Big Pad, unique track layout. 40 driver spots - contact @ouija_boi on Instagram for payment. Raffle, confirmed media, tire service on site. Manually added by the site owner.

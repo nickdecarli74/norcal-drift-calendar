@@ -515,6 +515,15 @@ UID:sas-2026-08-22@driftwestnet.com
 URL:https://www.flavorexpress.co/products/socal-am-slam-2026
 END:VEVENT
 BEGIN:VEVENT
+DESCRIPTION:Promoter: Cursed Chassis\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://www.instagram.com/ouija_boi/\n\nThunderhill Big Pad\, unique track layout. 40 driver spots - contact @ouija_boi on Instagram for payment. Raffle\, confirmed media\, tire service on site. Manually added by the site owner.
+DTEND:20261107T180000Z
+LOCATION:Thunderhill Raceway Park
+DTSTART:20261107T090000Z
+SUMMARY:Cursed Chassis - Cursed Chassis Drift Event
+UID:cc-2026-11-07@driftwestnet.com
+URL:https://www.instagram.com/ouija_boi/
+END:VEVENT
+BEGIN:VEVENT
 DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main Track\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\n2-day event. Manually corrected by the site owner - was previously listed as two separate events (Endless Summer Nights 6 / Ultra Bash).
 DTEND:20260809T170000Z
 LOCATION:Main Track

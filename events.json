@@ -1194,6 +1194,17 @@
     "addedAt": "2026-08-03T00:40:00+00:00"
   },
   {
+    "id": "cc-2026-11-07",
+    "title": "Cursed Chassis Drift Event",
+    "promoter": "Cursed Chassis",
+    "start": "2026-11-07 09:00",
+    "end": "2026-11-07 18:00",
+    "location": "Thunderhill Raceway Park",
+    "url": "https://www.instagram.com/ouija_boi/",
+    "notes": "Thunderhill Big Pad, unique track layout. 40 driver spots - contact @ouija_boi on Instagram for payment. Raffle, confirmed media, tire service on site. Manually added by the site owner.",
+    "addedAt": "2026-10-06T18:00:00+00:00"
+  },
+  {
     "id": "av-2026-11-13",
     "title": "Runit Promotions",
     "promoter": "Apple Valley Speedway",
@@ -1599,16 +1610,5 @@
     "url": "https://mhcircuit.com/event/open-drift-day-12/",
     "notes": "Auto-imported from Musselman Honda Circuit's calendar.",
     "addedAt": "2026-08-03T01:05:00+00:00"
-  },
-  {
-    "id": "cc-2026-11-07",
-    "title": "Cursed Chassis Drift Event",
-    "promoter": "Cursed Chassis",
-    "start": "2026-11-07 09:00",
-    "end": "2026-11-07 18:00",
-    "location": "Thunderhill Raceway Park",
-    "url": "https://www.instagram.com/ouija_boi/",
-    "notes": "Thunderhill Big Pad, unique track layout. 40 driver spots - contact @ouija_boi on Instagram for payment. Raffle, confirmed media, tire service on site. Manually added by the site owner.",
-    "addedAt": "2026-10-06T18:00:00+00:00"
   }
 ]
