@@ -835,7 +835,8 @@ events:
   end: 2026-10-11 17:00
   location: Thunderhill Raceway Park
   url: https://www.goodluckleague.com/schedule
-  notes: Women's drift event by Good Luck League (previously listed as GLL Battle Comp). Manually added by the site owner.
+  notes: Women's drift event by Good Luck League (previously listed as GLL Battle
+    Comp). Manually added by the site owner.
 - id: av-2026-10-16
   addedAt: '2026-07-31T14:25:00+00:00'
   title: Drivers Ed
