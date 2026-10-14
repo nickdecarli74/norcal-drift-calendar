@@ -6,6 +6,14 @@ Script project bound to the Google Sheet the form writes to. This file has the
 one-time setup steps — Claude Code can't do these, since they require your Google
 and GitHub accounts.
 
+Batching: if a media-submission PR is already open, a new submission is appended
+to that PR's branch instead of opening a second PR — two PRs created before
+either merges both edit the same lines in `media.json`, so the second one always
+conflicts at merge time. The owner email says whether the submission went into an
+existing PR or opened a new one. If two submissions land in the exact same second,
+the commit retries once; a scheduled PR-conflict watch rebases any PR that still
+ends up conflicted.
+
 ## 1. Create a GitHub token
 
 1. GitHub → Settings → Developer settings → Personal access tokens → Fine-grained tokens → Generate new token.

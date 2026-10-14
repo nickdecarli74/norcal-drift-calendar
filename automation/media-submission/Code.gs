@@ -10,6 +10,14 @@
  * instead, that handle is pulled into the PR as the submission's public
  * `instagram` field.
  *
+ * Submissions batch into a single PR: if a media-submission PR is already
+ * open, a new submission is appended to that PR's branch instead of opening a
+ * second PR. Two PRs created before either merges both edit the same lines in
+ * media.json, so the second one always conflicts at merge time (this bit us
+ * Oct 14, 2026 with PRs #91/#92). Batching removes the common case entirely;
+ * the rare exact-same-second race retries once, and the PR-conflict watch
+ * (see repo cron) covers anything left over.
+ *
  * Submissions arrive two ways: someone filling out the live Google Form
  * directly (onFormSubmit, triggered on Sheet row add), or media.js's on-site
  * submit form on media.html POSTing JSON straight to doPost(e) below (see
@@ -78,33 +86,13 @@ function onFormSubmit(e) {
     submission.addedAt = new Date().toISOString();
 
     var token = getGithubToken_();
-    var branch = "media-submission-" + Utilities.formatDate(
-      new Date(), "UTC", "yyyyMMdd-HHmmss"
-    );
+    var result = submitToBranch_(token, eventId, submission, name, role);
 
-    var baseSha = getBranchHeadSha_(token, BASE_BRANCH);
-    createBranch_(token, branch, baseSha);
-
-    var file = getFileOnBranch_(token, "media.json", branch);
-    var mediaData = JSON.parse(file.content);
-    var updated = addSubmission_(mediaData, eventId, submission);
-    var newContent = JSON.stringify(updated, null, 2) + "\n";
-
-    commitFile_(
-      token,
-      "media.json",
-      newContent,
-      file.sha,
-      branch,
-      "Add media submission: " + name + " (" + role + ") for " + eventId
-    );
-
-    var prUrl = openPullRequest_(token, branch, name, role, eventId, igFromContact);
-
-    sendOwnerEmail_(prUrl, {
+    sendOwnerEmail_(result.prUrl, {
       name: name, role: role, link: link, featured: featuredAnswer,
       contact: contact, instagram: igFromContact,
-      eventId: eventId, eventAnswer: eventAnswer
+      eventId: eventId, eventAnswer: eventAnswer,
+      addedToExistingPr: !result.isNewPr
     });
   } catch (err) {
     sendAlertEmail_(err, raw);
@@ -154,33 +142,13 @@ function doPost(e) {
     submission.addedAt = new Date().toISOString();
 
     var token = getGithubToken_();
-    var branch = "media-submission-" + Utilities.formatDate(
-      new Date(), "UTC", "yyyyMMdd-HHmmss"
-    );
+    var result = submitToBranch_(token, eventId, submission, name, role);
 
-    var baseSha = getBranchHeadSha_(token, BASE_BRANCH);
-    createBranch_(token, branch, baseSha);
-
-    var file = getFileOnBranch_(token, "media.json", branch);
-    var mediaData = JSON.parse(file.content);
-    var updated = addSubmission_(mediaData, eventId, submission);
-    var newContent = JSON.stringify(updated, null, 2) + "\n";
-
-    commitFile_(
-      token,
-      "media.json",
-      newContent,
-      file.sha,
-      branch,
-      "Add media submission: " + name + " (" + role + ") for " + eventId
-    );
-
-    var prUrl = openPullRequest_(token, branch, name, role, eventId, igFromContact);
-
-    sendOwnerEmail_(prUrl, {
+    sendOwnerEmail_(result.prUrl, {
       name: name, role: role, link: link, featured: featuredAnswer,
       contact: contact, instagram: igFromContact,
-      eventId: eventId, eventAnswer: "(submitted via on-site form, not the Google Form)"
+      eventId: eventId, eventAnswer: "(submitted via on-site form, not the Google Form)",
+      addedToExistingPr: !result.isNewPr
     });
 
     return ContentService.createTextOutput(JSON.stringify({ ok: true, prUrl: prUrl }))
@@ -313,6 +281,81 @@ function resolveEventId_(eventAnswer) {
   return matches.length === 1 ? matches[0].id : null;
 }
 
+// ---- Submission routing ----
+
+// Returns the most recently created open media-submission PR, if any.
+// Submissions reuse an open PR's branch instead of opening a new one: two
+// PRs created before either merges both edit the same lines in media.json,
+// so the second one always conflicts at merge time.
+function findOpenSubmissionPr_(token) {
+  var prs = githubFetch_(
+    token,
+    "/repos/" + GITHUB_OWNER + "/" + GITHUB_REPO + "/pulls?state=open&per_page=100"
+  );
+  var best = null;
+  prs.forEach(function (pr) {
+    var ref = pr.head && pr.head.ref;
+    if (!ref || ref.indexOf("media-submission-") !== 0) return;
+    if (!best || pr.created_at > best.created_at) best = pr;
+  });
+  if (!best) return null;
+  return { branch: best.head.ref, prUrl: best.html_url, createdAt: best.created_at };
+}
+
+// Adds one submission to media.json, reusing an open media-submission PR's
+// branch when one exists, otherwise opening a new PR. Returns
+// { branch, prUrl, isNewPr }. Retries once if the file changed under us
+// (two submissions landing on the same branch in the same second).
+// NOTE: if the reused PR is itself already conflicted (created before this
+// batching existed), appending to it won't un-conflict it — the PR-conflict
+// watch rebases those.
+function submitToBranch_(token, eventId, submission, name, role) {
+  var existing = findOpenSubmissionPr_(token);
+  var branch, prUrl, isNewPr;
+  if (existing) {
+    branch = existing.branch;
+    prUrl = existing.prUrl;
+    isNewPr = false;
+  } else {
+    branch = "media-submission-" + Utilities.formatDate(
+      new Date(), "UTC", "yyyyMMdd-HHmmss"
+    );
+    var baseSha = getBranchHeadSha_(token, BASE_BRANCH);
+    createBranch_(token, branch, baseSha);
+    isNewPr = true;
+  }
+
+  var lastErr = null;
+  for (var attempt = 0; attempt < 2; attempt++) {
+    try {
+      var file = getFileOnBranch_(token, "media.json", branch);
+      var mediaData = JSON.parse(file.content);
+      var updated = addSubmission_(mediaData, eventId, submission);
+      var newContent = JSON.stringify(updated, null, 2) + "\n";
+      commitFile_(
+        token,
+        "media.json",
+        newContent,
+        file.sha,
+        branch,
+        "Add media submission: " + name + " (" + role + ") for " + eventId
+      );
+      lastErr = null;
+      break;
+    } catch (err) {
+      lastErr = err;
+      // Re-read fresh and try once more (handles a concurrent submission
+      // landing on the same branch between our read and our commit).
+    }
+  }
+  if (lastErr) throw lastErr;
+
+  if (isNewPr) {
+    prUrl = openPullRequest_(token, branch, name, role, eventId, submission.instagram || null);
+  }
+  return { branch: branch, prUrl: prUrl, isNewPr: isNewPr };
+}
+
 // ---- GitHub REST helpers ----
 
 function getGithubToken_() {
@@ -439,7 +482,9 @@ function addSubmission_(mediaData, eventId, submission) {
 
 function sendOwnerEmail_(prUrl, s) {
   var lines = [
-    "New media submission ready for review:",
+    s.addedToExistingPr
+      ? "New media submission added to the already-open PR (no new PR opened):"
+      : "New media submission ready for review:",
     "",
     "PR: " + prUrl,
     "Event: " + s.eventId + " (matched from \"" + s.eventAnswer + "\")",
