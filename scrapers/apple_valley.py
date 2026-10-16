@@ -175,10 +175,10 @@ def get_events():
             "title": "Drift or Treat 2",
             "promoter": "Apple Valley Speedway",
             "start": "2026-10-17 08:00",
-            "end": "2026-10-17 17:00",
+            "end": "2026-10-18 17:00",
             "location": "Main & Skid",
             "url": "http://flavorexpress.co/",
-            "notes": "Manually verified from Apple Valley Speedway's calendar."
+            "notes": "2-day event. Flavor Express ticket page sells Weekend, Saturday Only, and Sunday Only driver passes. Sunday hours not yet confirmed."
         },
         {
             "id": "av-2026-10-31",
