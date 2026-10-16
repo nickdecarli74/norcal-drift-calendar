@@ -137,8 +137,8 @@ UID:sd-2026-08-15@driftwestnet.com
 URL:https://super-d.net/pages/schedule
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main & Skid\nRegistration / Info: http://flavorexpress.co/\n\n2-day event. Flavor Express ticket page sells Weekend\, Saturday Only\, and Sunday Only driver passes. Sunday hours not yet confirmed.
-DTEND:20261018T170000Z
+DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main & Skid\nRegistration / Info: http://flavorexpress.co/\n\nManually verified from Apple Valley Speedway's calendar.
+DTEND:20261017T170000Z
 LOCATION:Main & Skid
 DTSTART:20261017T080000Z
 SUMMARY:Apple Valley Speedway - Drift or Treat 2
