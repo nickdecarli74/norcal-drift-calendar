@@ -1493,6 +1493,266 @@ body{
 }
 
 /* =========================================
+   SUBMIT PAGES (submit-media.html / submit-event.html)
+   ========================================= */
+
+.submit-page{
+  position:relative;
+  z-index:2;
+  width:min(760px,92vw);
+  margin:50px auto 0;
+}
+
+.submit-page-head{
+  text-align:center;
+  margin-bottom:34px;
+}
+
+.submit-page-title{
+  font-size:38px;
+  font-weight:900;
+  font-style:italic;
+  letter-spacing:1px;
+  margin-bottom:12px;
+}
+
+.submit-page-intro{
+  color:#ccc;
+  font-size:15px;
+  line-height:1.6;
+  max-width:520px;
+  margin:0 auto;
+}
+
+.submit-step{
+  color:#e10600;
+  font-size:15px;
+  font-weight:900;
+  letter-spacing:1.5px;
+  margin-bottom:16px;
+}
+
+/* ---- Event finder (submit-media.html) ---- */
+
+.event-finder-search{
+  width:100%;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.15);
+  border-radius:8px;
+  padding:12px 14px;
+  font-size:15px;
+  color:#fff;
+  font-family:inherit;
+  margin-bottom:14px;
+}
+
+.event-finder-search:focus{
+  outline:none;
+  border-color:#e10600;
+  box-shadow:0 0 0 1px #e10600 inset;
+}
+
+.event-filter-chips{
+  display:flex;
+  gap:10px;
+  margin-bottom:16px;
+}
+
+.event-chip{
+  padding:9px 18px;
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:999px;
+  color:white;
+  background:rgba(255,255,255,.06);
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.5px;
+  cursor:pointer;
+  font-family:inherit;
+}
+
+.event-chip:hover{
+  border-color:#e10600;
+  color:#e10600;
+}
+
+.event-chip.active{
+  background:#e10600;
+  border-color:#e10600;
+  color:white;
+}
+
+.event-finder-list{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  max-height:420px;
+  overflow-y:auto;
+  padding-right:4px;
+}
+
+.event-finder-row{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  width:100%;
+  text-align:left;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:12px;
+  padding:14px 16px;
+  color:white;
+  cursor:pointer;
+  font-family:inherit;
+  transition:.2s;
+}
+
+.event-finder-row:hover{
+  border-color:#e10600;
+  transform:translateY(-1px);
+}
+
+.event-finder-row.selected{
+  border-color:#e10600;
+  background:rgba(225,6,0,.1);
+  box-shadow:0 0 18px rgba(225,6,0,.18);
+}
+
+.event-finder-date{
+  flex:0 0 auto;
+  color:#e10600;
+  font-weight:900;
+  font-size:13px;
+  letter-spacing:.5px;
+  min-width:110px;
+}
+
+.event-finder-main{
+  flex:1;
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+}
+
+.event-finder-title{
+  font-weight:900;
+  font-size:16px;
+  font-style:italic;
+}
+
+.event-finder-meta{
+  color:#aaa;
+  font-size:12px;
+}
+
+.event-finder-chevron{
+  flex:0 0 auto;
+  color:#e10600;
+  font-size:22px;
+  font-weight:900;
+}
+
+.event-finder-empty{
+  color:#888;
+  font-size:14px;
+  text-align:center;
+  padding:22px 0;
+}
+
+.event-finder-empty .modal-link{
+  margin-top:0;
+}
+
+.event-finder-selected{
+  text-align:center;
+  border:1px solid rgba(225,6,0,.4);
+  border-radius:16px;
+  background:rgba(225,6,0,.06);
+  padding:20px;
+  margin-bottom:20px;
+}
+
+.event-finder-selected-label{
+  color:#e10600;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:2px;
+  margin-bottom:6px;
+}
+
+.event-finder-selected-title{
+  font-weight:900;
+  font-size:22px;
+  font-style:italic;
+  margin-bottom:6px;
+}
+
+.event-finder-selected-meta{
+  color:#ccc;
+  font-size:13px;
+}
+
+/* ---- Hero CTAs (index.html) ---- */
+
+.hero-ctas{
+  display:flex;
+  justify-content:center;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-top:22px;
+}
+
+.hero-cta{
+  display:inline-block;
+  background:#e10600;
+  color:white;
+  text-decoration:none;
+  font-weight:900;
+  font-size:14px;
+  letter-spacing:.5px;
+  padding:13px 24px;
+  border-radius:8px;
+  transition:.2s;
+}
+
+.hero-cta:hover{
+  filter:brightness(1.15);
+  transform:translateY(-2px);
+}
+
+.hero-cta--outline{
+  background:transparent;
+  border:1px solid rgba(255,255,255,.35);
+  color:white;
+}
+
+.hero-cta--outline:hover{
+  border-color:#e10600;
+  color:#e10600;
+  background:rgba(225,6,0,.08);
+}
+
+/* ---- Textarea for the submit-event form (same look as its inputs) ---- */
+
+.submit-form-row textarea{
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.15);
+  border-radius:8px;
+  padding:10px 12px;
+  font-size:14px;
+  color:#fff;
+  font-family:inherit;
+  resize:vertical;
+}
+
+.submit-form-row textarea:focus{
+  outline:none;
+  border-color:#e10600;
+  box-shadow:0 0 0 1px #e10600 inset;
+}
+
+/* =========================================
    FOOTER
    ========================================= */
 
@@ -1625,5 +1885,32 @@ footer{
   .feed-row{
     padding:14px 16px;
     gap:12px;
+  }
+
+  .submit-page-title{
+    font-size:28px;
+  }
+
+  .event-finder-row{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:6px;
+  }
+
+  .event-finder-date{
+    min-width:0;
+  }
+
+  .event-finder-chevron{
+    display:none;
+  }
+
+  .hero-ctas{
+    gap:10px;
+  }
+
+  .hero-cta{
+    padding:11px 18px;
+    font-size:13px;
   }
 }

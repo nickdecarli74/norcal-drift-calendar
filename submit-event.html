@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4Q0X3NY37Y"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4Q0X3NY37Y');
+  </script>
+
+  <title>Submit an Event | DriftWest</title>
+
+  <meta name="description" content="Submit a West Coast drift event for the DriftWest calendar. Submissions are reviewed before going on the calendar.">
+
+  <link rel="canonical" href="https://driftwest.net/submit-event.html">
+
+  <meta property="og:title" content="Submit an Event | DriftWest">
+  <meta property="og:description" content="Submit a West Coast drift event for the DriftWest calendar. Reviewed before it goes live.">
+  <meta property="og:url" content="https://driftwest.net/submit-event.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="DriftWest">
+  <meta property="og:image" content="https://driftwest.net/assets/driftwest-3d-opengraph.png">
+  <meta property="og:image:width" content="1536">
+  <meta property="og:image:height" content="1024">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Submit an Event | DriftWest">
+  <meta name="twitter:description" content="Submit a West Coast drift event for the DriftWest calendar.">
+  <meta name="twitter:image" content="https://driftwest.net/assets/driftwest-3d-opengraph.png">
+
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-title" content="DriftWest">
+
+  <link rel="stylesheet" href="style.css?v=22">
+</head>
+
+<body>
+
+<section class="hero media-hero">
+  <nav class="nav">
+    <a href="index.html"><img class="nav-logo" src="assets/driftwest-3d-favicon-r1.png" alt="DriftWest"></a>
+
+    <div class="nav-links">
+      <a href="index.html#events">EVENTS</a>
+      <a href="index.html#calendar">CALENDAR</a>
+      <a href="index.html#tracks">TRACKS</a>
+      <a href="index.html#media">MEDIA</a>
+      <a href="submit-media.html">SUBMIT MEDIA</a>
+      <a href="submit-event.html">SUBMIT EVENT</a>
+    </div>
+  </nav>
+
+  <div class="submit-page">
+    <div class="submit-page-head">
+      <a class="back-link" href="index.html#events">‹ BACK TO EVENTS</a>
+      <div class="submit-page-title">SUBMIT AN EVENT</div>
+      <div class="submit-page-intro">
+        Send us the details and we'll review it before it goes on the calendar.
+      </div>
+    </div>
+
+    <form class="submit-form" id="event-submit-form" autocomplete="off">
+      <div class="submit-form-row">
+        <label for="event-name">Event name</label>
+        <input type="text" id="event-name" required maxlength="100">
+      </div>
+      <div class="submit-form-row">
+        <label for="event-promoter">Promoter</label>
+        <input type="text" id="event-promoter" required maxlength="100">
+      </div>
+      <div class="submit-form-row">
+        <label for="event-start">Start date</label>
+        <input type="date" id="event-start" required>
+      </div>
+      <div class="submit-form-row">
+        <label for="event-end">End date <span class="submit-form-hint">for multi-day events — leave blank for a single day</span></label>
+        <input type="date" id="event-end">
+      </div>
+      <div class="submit-form-row">
+        <label for="event-location">Location / track</label>
+        <input type="text" id="event-location" required maxlength="200" placeholder="e.g. Thunderhill Raceway Park">
+      </div>
+      <div class="submit-form-row">
+        <label for="event-register">Registration or ticket link</label>
+        <input type="url" id="event-register" maxlength="500" placeholder="https://...">
+      </div>
+      <div class="submit-form-row">
+        <label for="event-flyer">Flyer link</label>
+        <input type="url" id="event-flyer" maxlength="500" placeholder="https://...">
+      </div>
+      <div class="submit-form-row">
+        <label for="event-contact">Your name + contact <span class="submit-form-hint">so we can reach you if we have questions</span></label>
+        <input type="text" id="event-contact" required maxlength="200">
+      </div>
+      <div class="submit-form-row">
+        <label for="event-notes">Notes <span class="submit-form-hint">hours, prices, requirements, anything else</span></label>
+        <textarea id="event-notes" rows="4" maxlength="1000"></textarea>
+      </div>
+      <button type="submit" class="submit-form-btn">SUBMIT ›</button>
+      <div class="submit-form-status" id="event-submit-status" hidden></div>
+    </form>
+
+    <div class="submit-form-fallback">
+      Prefer Instagram? DM <a class="modal-link" href="https://www.instagram.com/driftwestnet/" target="_blank" rel="noopener">@driftwestnet</a> instead.
+    </div>
+  </div>
+</section>
+
+<footer>
+  © DriftWest
+</footer>
+
+<script>
+  // No backend: build a mailto: with every field and hand off to the
+  // visitor's email app. Nothing is sent until they hit send.
+  (function(){
+    const form = document.getElementById("event-submit-form");
+    const statusEl = document.getElementById("event-submit-status");
+    const val = id => document.getElementById(id).value.trim();
+    const orDash = v => v ? v : "—";
+
+    form.addEventListener("submit", e => {
+      e.preventDefault();
+      if(!form.reportValidity()) return;
+
+      const lines = [
+        "Event name: " + val("event-name"),
+        "Promoter: " + val("event-promoter"),
+        "Start date: " + val("event-start"),
+        "End date: " + orDash(val("event-end")),
+        "Location / track: " + val("event-location"),
+        "Registration or ticket link: " + orDash(val("event-register")),
+        "Flyer link: " + orDash(val("event-flyer")),
+        "Your name + contact: " + val("event-contact"),
+        "Notes: " + orDash(val("event-notes"))
+      ];
+
+      const subject = "New event submission: " + val("event-name");
+      const body = lines.join("\n");
+      window.location.href =
+        "mailto:driftwestnet@gmail.com" +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(body);
+
+      statusEl.hidden = false;
+      statusEl.textContent = "Your email app should have opened — hit send to submit it.";
+    });
+  })();
+</script>
+
+</body>
+</html>

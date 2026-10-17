@@ -915,7 +915,7 @@ function openEventModal(eventId){
   if(mediaCount){
     mediaHtml = `${mediaCount} ${mediaCount === 1 ? "submission" : "submissions"} posted. <a class="modal-link" href="media.html?event=${encodeURIComponent(e.id)}">View gallery ›</a>`;
   } else if(mediaWindowOpen(e)){
-    mediaHtml = `Shot this event? <a class="modal-link" href="media.html?event=${encodeURIComponent(e.id)}">Submit your link ›</a>`;
+    mediaHtml = `Shot this event? <a class="modal-link" href="submit-media.html?event=${encodeURIComponent(e.id)}">Submit your link ›</a>`;
   } else {
     mediaHtml = `Photos and videos will be added after the event.`;
   }
