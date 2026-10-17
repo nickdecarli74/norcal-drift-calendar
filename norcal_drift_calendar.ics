@@ -308,11 +308,11 @@ UID:av-2026-11-07@driftwestnet.com
 URL:https://applevalleyspeedway.com/calendar/
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Promoter: Musselman Honda Circuit\nLocation: Musselman Honda Circuit\nRegistration / Info: https://mhcircuit.com/event/spooky-drift-7/\n\nAuto-imported from Musselman Honda Circuit's calendar.
-DTEND:20261023T220000Z
+DESCRIPTION:Promoter: Musselman Honda Circuit\nLocation: Musselman Honda Circuit\nRegistration / Info: https://mhcircuit.com/event/spooky-drift-7/\n\n3-day event (Fri-Sun\, 5:00 PM - 10:00 PM each day). Manually corrected by the site owner.
+DTEND:20261025T220000Z
 LOCATION:Musselman Honda Circuit
 DTSTART:20261023T170000Z
-SUMMARY:Musselman Honda Circuit - Spooky Drift
+SUMMARY:Musselman Honda Circuit - Spooky Drift 6
 UID:mhc-2026-10-23@driftwestnet.com
 URL:https://mhcircuit.com/event/spooky-drift-7/
 END:VEVENT
@@ -621,15 +621,6 @@ DTSTART:20261018T080000Z
 SUMMARY:fxdwld - FREEMODE 5
 UID:fxd-2026-10-18@driftwestnet.com
 URL:https://www.instagram.com/fxdwld/
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Musselman Honda Circuit\nLocation: Musselman Honda Circuit\nRegistration / Info: https://mhcircuit.com/event/spooky-drift-9/\n\nAuto-imported from Musselman Honda Circuit's calendar.
-DTEND:20261025T220000Z
-LOCATION:Musselman Honda Circuit
-DTSTART:20261025T170000Z
-SUMMARY:Musselman Honda Circuit - Spooky Drift 6
-UID:mhc-2026-10-25@driftwestnet.com
-URL:https://mhcircuit.com/event/spooky-drift-9/
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main Track\nRegistration / Info: http://www.corner-exit.com/\n\nManually verified from Apple Valley Speedway's calendar.
@@ -1115,15 +1106,6 @@ DTSTART:20260912T080000Z
 SUMMARY:Drift Evolution - THUNDERDRIFT
 UID:de-2026-09-12@driftwestnet.com
 URL:https://driftevolution.trackrabbit.com/
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Musselman Honda Circuit\nLocation: Musselman Honda Circuit\nRegistration / Info: https://mhcircuit.com/event/spooky-drift-8/\n\nAuto-imported from Musselman Honda Circuit's calendar.
-DTEND:20261024T220000Z
-LOCATION:Musselman Honda Circuit
-DTSTART:20261024T170000Z
-SUMMARY:Musselman Honda Circuit - Spooky Drift 6
-UID:mhc-2026-10-24@driftwestnet.com
-URL:https://mhcircuit.com/event/spooky-drift-8/
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Promoter: Villains Sportsland\nLocation: Villains Sportsland\nRegistration / Info: https://villainssportsland.com/events\n\nDay 3 of 3 (VSL XXVII). Gates 10AM\, drivers meeting 10AM\, full course until 3PM (subject to attendance). Manually added by the site owner.
