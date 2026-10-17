@@ -101,6 +101,15 @@ UID:dc-2026-03-07@driftwestnet.com
 URL:https://driftcentral.com/registration
 END:VEVENT
 BEGIN:VEVENT
+DESCRIPTION:Promoter: OnGrid\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://www.instagram.com/reel/Dekr8fcSSGr/\n\n2-day event. FULL TRACK (East) — OnGrid is the first group to drift the freshly repaved Thunderhill East. East & West course all weekend\, triple-digit entries. Drivers must apply to be approved to drive — apply through the link in bio on @ongridtrack. Hours not yet confirmed.
+DTEND:20261129T170000Z
+LOCATION:Thunderhill Raceway Park
+DTSTART:20261128T080000Z
+SUMMARY:OnGrid - The Hill 2026
+UID:og-2026-11-28@driftwestnet.com
+URL:https://www.instagram.com/reel/Dekr8fcSSGr/
+END:VEVENT
+BEGIN:VEVENT
 DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main & Skid\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\nManually verified from Apple Valley Speedway's calendar.
 DTEND:20261031T170000Z
 LOCATION:Main & Skid

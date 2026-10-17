@@ -1223,6 +1223,23 @@ events:
   location: Thunderhill Raceway Park
   url: https://www.goodluckleague.com/schedule
   notes: Manually added by the site owner.
+- id: og-2026-11-28
+  addedAt: '2026-10-17T01:16:27+00:00'
+  locked: true
+  title: The Hill 2026
+  promoter: OnGrid
+  start: 2026-11-28 08:00
+  end: 2026-11-29 17:00
+  location: Thunderhill Raceway Park
+  url: https://www.instagram.com/reel/Dekr8fcSSGr/
+  registerUrl: https://www.instagram.com/ongridtrack
+  notes: 2-day event. FULL TRACK (East) — OnGrid is the first group to drift the freshly
+    repaved Thunderhill East. East & West course all weekend, triple-digit entries.
+    Drivers must apply to be approved to drive — apply through the link in bio on
+    @ongridtrack. Hours not yet confirmed.
+  timeDetail:
+    - 'Sat, Nov 28: Hours TBD'
+    - 'Sun, Nov 29: Hours TBD'
 - id: dc-2026-11-29
   addedAt: '2026-08-04T00:15:00+00:00'
   title: Drift Central
