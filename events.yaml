@@ -868,8 +868,8 @@ events:
   addedAt: '2026-07-31T14:30:00+00:00'
   locked: true
   timeDetail:
-    - 'Sat, Oct 17: 8:00 AM - 5:00 PM'
-    - 'Sun, Oct 18: Hours TBD'
+  - 'Sat, Oct 17: 8:00 AM - 5:00 PM'
+  - 'Sun, Oct 18: Hours TBD'
 - id: fxd-2026-10-17
   addedAt: '2026-10-02T18:30:00+00:00'
   title: FREEMODE 5
@@ -1238,8 +1238,8 @@ events:
     Drivers must apply to be approved to drive — apply through the link in bio on
     @ongridtrack. Hours not yet confirmed.
   timeDetail:
-    - 'Sat, Nov 28: Hours TBD'
-    - 'Sun, Nov 29: Hours TBD'
+  - 'Sat, Nov 28: Hours TBD'
+  - 'Sun, Nov 29: Hours TBD'
 - id: dc-2026-11-29
   addedAt: '2026-08-04T00:15:00+00:00'
   title: Drift Central
@@ -1414,13 +1414,13 @@ events:
   location: Podium Club
   url: https://southwestspeedfestival.com
   notes: 3-day event. New drift comp at Southwest Speed Festival. Must apply before
-    registering — Drift Comp Application via the Drive menu on
-    southwestspeedfestival.com. Tandem competition requires a minimum 6-point roll
-    cage. Hours not yet confirmed. Photo by @evolutionized_photography.
+    registering — Drift Comp Application via the Drive menu on southwestspeedfestival.com.
+    Tandem competition requires a minimum 6-point roll cage. Hours not yet confirmed.
+    Photo by @evolutionized_photography.
   timeDetail:
-    - 'Fri, Jan 29: Hours TBD'
-    - 'Sat, Jan 30: Hours TBD'
-    - 'Sun, Jan 31: Hours TBD'
+  - 'Fri, Jan 29: Hours TBD'
+  - 'Sat, Jan 30: Hours TBD'
+  - 'Sun, Jan 31: Hours TBD'
 - id: mhc-2027-02-07
   addedAt: '2026-08-03T00:55:00+00:00'
   title: Open Drift Day
@@ -1453,8 +1453,8 @@ events:
     Invitational — DM @okizona.jp on Instagram if interested in driving. Hours not
     yet confirmed. Photo by @doctoredgarage.
   timeDetail:
-    - 'Sat, Mar 20: Hours TBD'
-    - 'Sun, Mar 21: Hours TBD'
+  - 'Sat, Mar 20: Hours TBD'
+  - 'Sun, Mar 21: Hours TBD'
 - id: mhc-2027-04-04
   addedAt: '2026-08-03T01:05:00+00:00'
   title: Open Drift Day
