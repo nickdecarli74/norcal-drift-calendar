@@ -1583,6 +1583,22 @@
     "addedAt": "2026-08-01T00:30:00+00:00"
   },
   {
+    "id": "pc-2027-01-29",
+    "title": "SWSF Drift Comp",
+    "promoter": "Southwest Speed Festival",
+    "start": "2027-01-29 08:00",
+    "end": "2027-01-31 17:00",
+    "location": "Podium Club",
+    "url": "https://southwestspeedfestival.com",
+    "notes": "3-day event. New drift comp at Southwest Speed Festival. Must apply before registering \u2014 Drift Comp Application via the Drive menu on southwestspeedfestival.com. Tandem competition requires a minimum 6-point roll cage. Hours not yet confirmed. Photo by @evolutionized_photography.",
+    "timeDetail": [
+      "Fri, Jan 29: Hours TBD",
+      "Sat, Jan 30: Hours TBD",
+      "Sun, Jan 31: Hours TBD"
+    ],
+    "addedAt": "2026-10-17T01:08:04+00:00"
+  },
+  {
     "id": "mhc-2027-02-07",
     "title": "Open Drift Day",
     "promoter": "Musselman Honda Circuit",

@@ -533,6 +533,15 @@ UID:cc-2026-11-07@driftwestnet.com
 URL:https://www.instagram.com/ouija_boi/
 END:VEVENT
 BEGIN:VEVENT
+DESCRIPTION:Promoter: Southwest Speed Festival\nLocation: Podium Club\nRegistration / Info: https://southwestspeedfestival.com\n\n3-day event. New drift comp at Southwest Speed Festival. Must apply before registering — Drift Comp Application via the Drive menu on southwestspeedfestival.com. Tandem competition requires a minimum 6-point roll cage. Hours not yet confirmed. Photo by @evolutionized_photography.
+DTEND:20270131T170000Z
+LOCATION:Podium Club
+DTSTART:20270129T080000Z
+SUMMARY:Southwest Speed Festival - SWSF Drift Comp
+UID:pc-2027-01-29@driftwestnet.com
+URL:https://southwestspeedfestival.com
+END:VEVENT
+BEGIN:VEVENT
 DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main Track\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\n2-day event. Manually corrected by the site owner - was previously listed as two separate events (Endless Summer Nights 6 / Ultra Bash).
 DTEND:20260809T170000Z
 LOCATION:Main Track
