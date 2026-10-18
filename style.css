@@ -988,6 +988,167 @@ body{
   border-radius:7px;
 }
 
+.track-popup .maplibregl-popup-content{
+  max-width:320px;
+}
+
+.map-popup-section{
+  margin-top:10px;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.15em;
+  color:#e10600;
+}
+
+.map-popup-events{
+  max-height:230px;
+  overflow-y:auto;
+  margin:6px 0 4px;
+  padding-right:4px;
+}
+
+.map-popup-event{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  width:100%;
+  padding:8px 4px;
+  background:transparent;
+  border:0;
+  border-bottom:1px solid rgba(255,255,255,.08);
+  color:#fff;
+  font:inherit;
+  text-align:left;
+  cursor:pointer;
+}
+
+.map-popup-event:hover{
+  background:rgba(225,6,0,.12);
+}
+
+.map-popup-event-date{
+  flex:0 0 auto;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.5px;
+  color:#e10600;
+}
+
+.map-popup-event-main{
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+}
+
+.map-popup-event-title{
+  font-weight:700;
+  font-size:13px;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.map-popup-event-promoter{
+  font-size:11px;
+  color:#aaa;
+}
+
+.map-popup-event-chevron{
+  margin-left:auto;
+  color:#e10600;
+  font-weight:900;
+}
+
+.marker-count{
+  position:absolute;
+  top:-5px;
+  right:-5px;
+  z-index:3;
+  min-width:18px;
+  height:18px;
+  padding:0 4px;
+  border-radius:999px;
+  background:#e10600;
+  border:1.5px solid #fff;
+  color:#fff;
+  font-size:10px;
+  font-weight:900;
+  line-height:15px;
+  text-align:center;
+  box-shadow:0 0 10px rgba(225,6,0,.8);
+}
+
+.track-list{
+  margin-top:18px;
+}
+
+.track-list-title{
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.2em;
+  color:#888;
+  margin-bottom:10px;
+}
+
+.track-list-row{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  width:100%;
+  padding:12px 10px;
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:12px;
+  color:#fff;
+  font:inherit;
+  text-align:left;
+  cursor:pointer;
+  margin-bottom:8px;
+}
+
+.track-list-row:hover{
+  border-color:rgba(225,6,0,.6);
+  background:rgba(225,6,0,.08);
+}
+
+.track-list-main{
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+}
+
+.track-list-name{
+  font-weight:900;
+}
+
+.track-list-meta{
+  font-size:12px;
+  color:#aaa;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.track-list-count{
+  flex:0 0 auto;
+  min-width:24px;
+  height:24px;
+  padding:0 6px;
+  border-radius:999px;
+  background:#e10600;
+  color:#fff;
+  font-size:12px;
+  font-weight:900;
+  line-height:24px;
+  text-align:center;
+}
+
+.track-list-chevron{
+  margin-left:auto;
+  color:#e10600;
+  font-weight:900;
+}
+
 /* MapLibre gives the element passed to `new maplibregl.Marker({element})`
    position:absolute itself (via its own .maplibregl-marker class) and places
    it with a CSS transform, so it's already a positioned containing block for

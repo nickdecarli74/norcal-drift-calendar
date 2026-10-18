@@ -1001,9 +1001,59 @@ function closeEventModal(){
   document.getElementById("event-modal").style.display = "none";
 }
 
+let trackMap = null;
+const trackMapMarkers = [];
+
+// Fly the map to a track and open its popup (from the track list).
+function focusTrack(trackName){
+  const entry = trackMapMarkers.find(m => m.track.name === trackName);
+  if(!entry) return;
+  if(trackMap){
+    trackMap.flyTo({center: [entry.track.lng, entry.track.lat], zoom: 10, essential: true});
+  }
+  const popup = entry.marker.getPopup();
+  if(popup && !popup.isOpen()) entry.marker.togglePopup();
+}
+
+// Track list under the map: every track with its next event. Tapping a
+// row flies the map to that track and opens its popup.
+function renderTrackList(){
+  const listEl = document.getElementById("track-list");
+  if(!listEl) return;
+  const now = new Date();
+  const rows = TRACKS.map(track => {
+    const evs = allEvents.filter(e => findTrackForEvent(e) === track);
+    const up = evs
+      .filter(e => new Date(e.end.replace(" ","T")) >= now)
+      .sort((a,b) => new Date(a.start.replace(" ","T")) - new Date(b.start.replace(" ","T")));
+    return {track, count: up.length, next: up[0] || null};
+  }).sort((a,b) => b.count - a.count || a.track.name.localeCompare(b.track.name));
+
+  listEl.innerHTML = `
+    <div class="track-list-title">ALL TRACKS</div>
+    ${rows.map(({track, count, next}) => {
+      const p = next ? formatDateParts(next.start, next.end) : null;
+      return `
+        <button type="button" class="track-list-row" data-track="${track.name}">
+          <span class="track-list-main">
+            <span class="track-list-name">${track.name}</span>
+            <span class="track-list-meta">📍 ${track.location} · ${next ? `Next: ${next.title} — ${p.month} ${p.day}` : "No upcoming events"}</span>
+          </span>
+          ${count ? `<span class="track-list-count">${count}</span>` : ""}
+          <span class="track-list-chevron">›</span>
+        </button>`;
+    }).join("")}`;
+
+  listEl.querySelectorAll(".track-list-row").forEach(row => {
+    row.addEventListener("click", () => focusTrack(row.dataset.track));
+  });
+}
+
 function renderTrackMap(){
   const mapEl = document.getElementById("track-map");
-  if(!mapEl || typeof maplibregl === "undefined") return;
+  if(!mapEl) return;
+  renderTrackList();
+  if(typeof maplibregl === "undefined") return;
 
   if(mapEl.dataset.loaded === "true") return;
   mapEl.dataset.loaded = "true";
@@ -1026,33 +1076,75 @@ function renderTrackMap(){
   });
 
   map.addControl(new maplibregl.NavigationControl({showCompass: false}), "top-left");
+  trackMap = map;
 
   map.on("load", () => {
     TRACKS.forEach(track => {
       const trackEvents = allEvents.filter(e => findTrackForEvent(e) === track);
+      const now = new Date();
+      // Upcoming = ends after now, so a multi-day event in progress still
+      // shows instead of dropping to "past" mid-weekend.
+      const upcoming = trackEvents
+        .filter(e => new Date(e.end.replace(" ","T")) >= now)
+        .sort((a,b) => new Date(a.start.replace(" ","T")) - new Date(b.start.replace(" ","T")));
+      const past = trackEvents
+        .filter(e => new Date(e.end.replace(" ","T")) < now)
+        .sort((a,b) => new Date(b.start.replace(" ","T")) - new Date(a.start.replace(" ","T")));
 
-      const nextEvent = trackEvents
-        .filter(e => new Date(e.start.replace(" ","T")) >= new Date())
-        .sort((a,b) => new Date(a.start.replace(" ","T")) - new Date(b.start.replace(" ","T")))[0];
+      // Upcoming events — each row opens that event's modal.
+      const eventsHtml = upcoming.length
+        ? `<div class="map-popup-section">UPCOMING EVENTS · ${upcoming.length}</div>
+           <div class="map-popup-events">
+             ${upcoming.map(e => {
+               const p = formatDateParts(e.start, e.end);
+               return `
+                 <button type="button" class="map-popup-event" onclick="openEventModal('${e.id}')">
+                   <span class="map-popup-event-date">${p.month} ${p.day}</span>
+                   <span class="map-popup-event-main">
+                     <span class="map-popup-event-title">${e.title}</span>
+                     <span class="map-popup-event-promoter">${e.promoter}</span>
+                   </span>
+                   <span class="map-popup-event-chevron">›</span>
+                 </button>`;
+             }).join("")}
+           </div>`
+        : "";
+
+      // No upcoming events: show the most recent past one, with a gallery
+      // link when it has media.
+      let pastHtml = "";
+      if(!upcoming.length){
+        if(past.length){
+          const last = past[0];
+          const p = formatDateParts(last.start, last.end);
+          const meta = allMedia.find(m => m.eventId === last.id);
+          const hasMedia = meta && meta.submissions.length;
+          pastHtml = `
+            <div class="map-popup-section">LAST EVENT</div>
+            <div class="map-popup-meta">📅 ${p.full} — ${last.title}${hasMedia ? ` · <a class="modal-link" href="media.html?event=${encodeURIComponent(last.id)}">View gallery ›</a>` : ""}</div>`;
+        } else {
+          pastHtml = `<div class="map-popup-meta">No events listed yet.</div>`;
+        }
+      }
 
       const popupHtml = `
         <div class="map-popup-title">${track.name}</div>
-        <div class="map-popup-meta">
-          📍 ${track.location}<br>
-          🏁 ${trackEvents.length} event${trackEvents.length === 1 ? "" : "s"} listed<br>
-          ${nextEvent ? `🔥 Next: ${nextEvent.title}` : "No upcoming events listed"}
-        </div>
+        <div class="map-popup-meta">📍 ${track.location}</div>
+        ${eventsHtml}
+        ${pastHtml}
         <a class="map-popup-button" href="#calendar">VIEW CALENDAR</a>
       `;
 
       const el = document.createElement("div");
       el.className = "drift-marker";
-      el.innerHTML = "<div class='marker-core'></div><div class='marker-pulse'></div>";
+      el.innerHTML = "<div class='marker-core'></div><div class='marker-pulse'></div>"
+        + (upcoming.length ? `<div class='marker-count'>${upcoming.length}</div>` : "");
 
-      new maplibregl.Marker({element: el})
+      const marker = new maplibregl.Marker({element: el})
         .setLngLat([track.lng, track.lat])
-        .setPopup(new maplibregl.Popup({offset: 17}).setHTML(popupHtml))
+        .setPopup(new maplibregl.Popup({offset: 17, className: "track-popup"}).setHTML(popupHtml))
         .addTo(map);
+      trackMapMarkers.push({track, marker});
     });
   });
 
