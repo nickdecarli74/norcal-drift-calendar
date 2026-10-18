@@ -1770,6 +1770,34 @@ footer{
   color:#999;
 }
 
+.modal-share-btn{
+  display:inline-block;
+  margin:6px 8px 0 0;
+  padding:9px 16px;
+  border:1px solid rgba(255,255,255,.35);
+  border-radius:999px;
+  background:transparent;
+  color:#fff;
+  font:inherit;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.5px;
+  cursor:pointer;
+}
+
+.modal-share-btn:hover,
+.modal-share-btn:active{
+  border-color:#e10600;
+  color:#e10600;
+}
+
+.modal-share-status{
+  display:inline-block;
+  margin-left:4px;
+  font-size:12px;
+  color:#e10600;
+}
+
 .hero-description{
   max-width:640px;
   margin:14px auto 0;

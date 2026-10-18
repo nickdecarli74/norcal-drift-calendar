@@ -936,7 +936,63 @@ function openEventModal(eventId){
       <div class="modal-meta">${mediaHtml}</div>
     </div>
     <a class="modal-link" href="${eventUrl(e)}" target="_blank">REGISTRATION / INFO ›</a>
+    <div class="modal-section">
+      <h3>SHARE</h3>
+      <div class="modal-meta">
+        <button class="modal-share-btn" id="modal-copy-link">COPY EVENT LINK</button>
+        ${navigator.share ? `<button class="modal-share-btn" id="modal-share">SHARE ›</button>` : ""}
+        <span class="modal-share-status" id="modal-copy-status"></span>
+      </div>
+    </div>
   `;
+
+  // Shareable link = this event's media page (the only per-event URL).
+  const shareUrl = `https://driftwest.net/media.html?event=${encodeURIComponent(e.id)}`;
+  const statusEl = document.getElementById("modal-copy-status");
+  const flashStatus = (msg) => {
+    statusEl.textContent = msg;
+    setTimeout(() => { statusEl.textContent = ""; }, 2500);
+  };
+  const copyText = async (text) => {
+    try{
+      await navigator.clipboard.writeText(text);
+      return true;
+    }catch(err){
+      // Clipboard API unavailable (permissions / insecure context) — fall back
+      // to the old select + execCommand path.
+      try{
+        const ta = document.createElement("textarea");
+        ta.value = text;
+        ta.style.position = "fixed";
+        ta.style.opacity = "0";
+        document.body.appendChild(ta);
+        ta.select();
+        const ok = document.execCommand("copy");
+        document.body.removeChild(ta);
+        return ok;
+      }catch(e2){
+        return false;
+      }
+    }
+  };
+  document.getElementById("modal-copy-link").addEventListener("click", async () => {
+    const ok = await copyText(shareUrl);
+    flashStatus(ok ? "Copied!" : shareUrl);
+  });
+  const shareBtn = document.getElementById("modal-share");
+  if(shareBtn){
+    shareBtn.addEventListener("click", async () => {
+      try{
+        await navigator.share({
+          title: `${e.title} | DriftWest`,
+          text: `${e.title} — ${p.full} at ${e.location}`,
+          url: shareUrl
+        });
+      }catch(err){
+        // User dismissed the share sheet — not an error.
+      }
+    });
+  }
 
   document.getElementById("event-modal").style.display = "flex";
 }
