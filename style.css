@@ -2188,7 +2188,10 @@ footer{
 
   .mobile-quick-tabs{
     display:flex;
-    justify-content:flex-start;
+    /* safe center: centered when the pills fit, falls back to
+       left-aligned (scrollable, nothing clipped) on narrow screens -
+       plain center would clip the leftmost pills on overflow. */
+    justify-content:safe center;
     gap:6px;
     overflow-x:auto;
     padding:14px 16px 4px;
