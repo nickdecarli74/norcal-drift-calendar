@@ -1804,12 +1804,22 @@ footer{
 }
 
 .hero-description{
-  max-width:640px;
+  max-width:520px;
   margin:14px auto 0;
   font-size:16px;
   line-height:1.5;
-  color:#bbb;
+  color:#fff;
   text-align:center;
+}
+
+.hero-description::before{
+  content:"";
+  display:block;
+  width:48px;
+  height:3px;
+  margin:0 auto 14px;
+  border-radius:2px;
+  background:#e10600;
 }
 
 /* =========================================
