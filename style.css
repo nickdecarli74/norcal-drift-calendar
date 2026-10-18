@@ -1152,7 +1152,7 @@ body{
 .calendar-search-wrap{
   position:relative;
   max-width:520px;
-  margin:14px auto 0;
+  margin:14px auto 12px;
 }
 
 .calendar-search{
