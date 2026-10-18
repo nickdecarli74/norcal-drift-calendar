@@ -170,7 +170,7 @@ body{
 }
 
 .update-strip {
-  margin: 58px auto 26px;
+  margin: 36px auto 26px;
   width: min(400px, 82%);
   display: flex;
   align-items: center;
@@ -217,7 +217,7 @@ body{
   position:relative;
   z-index:2;
   text-align:center;
-  margin:42px 0 28px;
+  margin:26px 0 28px;
   color:#aaa;
   font-size:34px;
 }
@@ -2073,7 +2073,7 @@ footer{
 
 .hero-description{
   max-width:520px;
-  margin:14px auto 0;
+  margin:28px auto 0;
   font-size:16px;
   line-height:1.5;
   color:#fff;
