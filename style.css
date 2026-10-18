@@ -1754,6 +1754,10 @@ body{
   text-align:center;
 }
 
+.submit-form-status.error{
+  color:#e10600;
+}
+
 .submit-form-fallback{
   text-align:center;
   font-size:12px;

@@ -428,11 +428,16 @@ function clearSavedSubmitter(){
 // on-site form's "submitted" message is always optimistic, same as the real
 // Google Form's own confirmation page.
 function submitMediaForm(payload){
-  fetch(MEDIA_SUBMIT_WEBAPP_URL, {
+  // Returns the fetch promise so the caller can wait for the request to
+  // actually go out. With mode:"no-cors" the response is opaque, so this
+  // resolves once the request is sent and rejects only on a network-level
+  // failure (offline, unreachable endpoint) - it cannot confirm a
+  // server-side Apps Script error.
+  return fetch(MEDIA_SUBMIT_WEBAPP_URL, {
     method: "POST",
     mode: "no-cors",
     body: JSON.stringify(payload)
-  }).catch(() => {});
+  });
 }
 
 function mediaSubmitFormHtml(){
@@ -527,16 +532,28 @@ function wireMediaSubmitForm(event){
     const contact = contactEl.value.trim();
     const featured = featuredEl.value;
 
+    // Don't thank the submitter until the request has actually gone out.
+    // On a network failure, leave the form up with their data intact and
+    // say so, instead of showing a success message for a lost submission.
+    const submitBtn = form.querySelector("button[type='submit']");
+    if(submitBtn) submitBtn.disabled = true;
+    statusEl.classList.remove("error");
+
     submitMediaForm({
       name, role, link, contact, featured,
       eventId: event.id
+    }).then(() => {
+      form.hidden = true;
+      statusEl.hidden = false;
+      statusEl.textContent = "Thanks! Your submission is queued for review and will appear here once approved.";
+    }).catch(() => {
+      if(submitBtn) submitBtn.disabled = false;
+      statusEl.hidden = false;
+      statusEl.classList.add("error");
+      statusEl.textContent = "Couldn't send — check your connection and try again.";
     });
 
     saveSubmitter({name, role, contact});
-
-    form.hidden = true;
-    statusEl.hidden = false;
-    statusEl.textContent = "Thanks! Your submission is queued for review and will appear here once approved.";
   });
 }
 
