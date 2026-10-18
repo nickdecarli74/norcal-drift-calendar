@@ -165,7 +165,7 @@
       }).join("");
 
       listEl.querySelectorAll(".event-finder-row").forEach(row => {
-        row.addEventListener("click", () => selectEvent(row.dataset.id));
+        row.addEventListener("click", () => selectEvent(row.dataset.id, true));
       });
     }
 
