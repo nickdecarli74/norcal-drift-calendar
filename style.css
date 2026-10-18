@@ -1149,6 +1149,109 @@ body{
   font-weight:900;
 }
 
+.calendar-search-wrap{
+  position:relative;
+  max-width:520px;
+  margin:14px auto 0;
+}
+
+.calendar-search{
+  width:100%;
+  padding:11px 14px;
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:999px;
+  background:rgba(255,255,255,.06);
+  color:#fff;
+  font:inherit;
+  font-size:14px;
+  outline:none;
+}
+
+.calendar-search:focus{
+  border-color:#e10600;
+}
+
+.calendar-search::placeholder{
+  color:#888;
+}
+
+.calendar-search-results{
+  position:absolute;
+  top:calc(100% + 6px);
+  left:0;
+  right:0;
+  z-index:50;
+  max-height:340px;
+  overflow-y:auto;
+  background:#0b0b0b;
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:14px;
+  box-shadow:0 12px 40px rgba(0,0,0,.7);
+}
+
+.calendar-search-result{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  width:100%;
+  padding:10px 14px;
+  background:transparent;
+  border:0;
+  border-bottom:1px solid rgba(255,255,255,.06);
+  color:#fff;
+  font:inherit;
+  text-align:left;
+  cursor:pointer;
+}
+
+.calendar-search-result:hover,
+.calendar-search-result.selected{
+  background:rgba(225,6,0,.14);
+}
+
+.calendar-search-result-date{
+  flex:0 0 auto;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.5px;
+  color:#e10600;
+}
+
+.calendar-search-result-main{
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+}
+
+.calendar-search-result-title{
+  font-weight:700;
+  font-size:14px;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.calendar-search-result-meta{
+  font-size:12px;
+  color:#aaa;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.calendar-search-empty{
+  padding:12px 14px;
+  color:#888;
+  font-size:14px;
+}
+
+.event-pill.pill-highlight{
+  outline:2px solid #e10600;
+  outline-offset:1px;
+  box-shadow:0 0 14px rgba(225,6,0,.7);
+  opacity:1;
+}
+
 /* MapLibre gives the element passed to `new maplibregl.Marker({element})`
    position:absolute itself (via its own .maplibregl-marker class) and places
    it with a CSS transform, so it's already a positioned containing block for

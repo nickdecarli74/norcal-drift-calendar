@@ -887,7 +887,8 @@ function renderCalendar(){
         <div class="day-number">${day}</div>
         ${dayEvents.map(e => {
           const dimmed = filterActive && !calendarFilterMatches(e);
-          return `<button class="event-pill${dimmed ? " pill-dimmed" : ""}" type="button" onclick="openEventModal('${e.id}')">${pillLabel(e)}</button>`;
+          const highlighted = e.id === calendarSearchHighlightId;
+          return `<button class="event-pill${dimmed ? " pill-dimmed" : ""}${highlighted ? " pill-highlight" : ""}" type="button" onclick="openEventModal('${e.id}')">${pillLabel(e)}</button>`;
         }).join("")}
       </div>
     `;
@@ -898,8 +899,110 @@ function renderCalendar(){
 
 function changeMonth(offset){
   calendarDate.setMonth(calendarDate.getMonth() + offset);
+  calendarSearchHighlightId = null;
   renderCalendarFilterBar();
   renderCalendar();
+}
+
+// Calendar search: type to find events, pick one to jump the calendar to
+// its month (highlighted) and open its modal. The calendar behind the
+// modal shows the event's month, so closing the modal lands on context.
+let calendarSearchHighlightId = null;
+
+function wireCalendarSearch(){
+  const input = document.getElementById("calendar-search");
+  const resultsEl = document.getElementById("calendar-search-results");
+  if(!input || !resultsEl || input.dataset.wired) return;
+  input.dataset.wired = "1";
+
+  let matches = [];
+  let selected = -1;
+
+  const closeResults = () => {
+    resultsEl.hidden = true;
+    resultsEl.innerHTML = "";
+    matches = [];
+    selected = -1;
+  };
+
+  const renderResults = () => {
+    if(!matches.length){
+      resultsEl.innerHTML = `<div class="calendar-search-empty">No events match.</div>`;
+    } else {
+      resultsEl.innerHTML = matches.map((e, i) => {
+        const p = formatDateParts(e.start, e.end);
+        return `
+          <button type="button" class="calendar-search-result${i === selected ? " selected" : ""}" data-id="${e.id}">
+            <span class="calendar-search-result-date">${p.month} ${p.day}</span>
+            <span class="calendar-search-result-main">
+              <span class="calendar-search-result-title">${e.title}</span>
+              <span class="calendar-search-result-meta">${e.promoter} · ${e.location}</span>
+            </span>
+          </button>`;
+      }).join("");
+      resultsEl.querySelectorAll(".calendar-search-result").forEach(row => {
+        row.addEventListener("click", () => selectEvent(row.dataset.id));
+      });
+    }
+    resultsEl.hidden = false;
+  };
+
+  const selectEvent = (eventId) => {
+    const e = allEvents.find(x => x.id === eventId);
+    if(!e) return;
+    const d = new Date(e.start.replace(" ","T"));
+    calendarDate = new Date(d.getFullYear(), d.getMonth(), 1);
+    calendarSearchHighlightId = e.id;
+    renderCalendarFilterBar();
+    renderCalendar();
+    document.getElementById("calendar").scrollIntoView({behavior: "smooth", block: "start"});
+    input.value = e.title;
+    closeResults();
+    openEventModal(eventId);
+  };
+
+  input.addEventListener("input", () => {
+    const q = input.value.trim().toLowerCase();
+    if(!q){
+      calendarSearchHighlightId = null;
+      renderCalendar();
+      closeResults();
+      return;
+    }
+    matches = allEvents
+      .filter(e => `${e.title} ${e.promoter} ${e.location}`.toLowerCase().includes(q))
+      .sort((a,b) => new Date(a.start.replace(" ","T")) - new Date(b.start.replace(" ","T")))
+      .slice(0, 8);
+    selected = -1;
+    renderResults();
+  });
+
+  input.addEventListener("keydown", (e) => {
+    if(e.key === "ArrowDown"){
+      e.preventDefault();
+      if(matches.length) selected = (selected + 1) % matches.length;
+      renderResults();
+    } else if(e.key === "ArrowUp"){
+      e.preventDefault();
+      if(matches.length) selected = (selected - 1 + matches.length) % matches.length;
+      renderResults();
+    } else if(e.key === "Enter"){
+      e.preventDefault();
+      const pick = matches[selected >= 0 ? selected : 0];
+      if(pick) selectEvent(pick.id);
+    } else if(e.key === "Escape"){
+      closeResults();
+      input.blur();
+    }
+  });
+
+  // Close the dropdown when tapping elsewhere; a result click is handled
+  // by the row's own listener before this fires.
+  document.addEventListener("click", (e) => {
+    if(!resultsEl.hidden && !input.contains(e.target) && !resultsEl.contains(e.target)){
+      closeResults();
+    }
+  });
 }
 
 function openEventModal(eventId){
@@ -1185,6 +1288,7 @@ Promise.all([
     renderTrackMap();
     renderMediaSection(allEvents, mediaData);
     renderRecentSubmissions(allEvents, mediaData);
+    wireCalendarSearch();
 
     loadWeather(allEvents).then(() => {
       renderFeaturedPartnerEvent(allEvents);
