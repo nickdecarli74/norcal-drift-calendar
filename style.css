@@ -1850,6 +1850,20 @@ footer{
     white-space:nowrap;
   }
 
+  .nav-live-pill-text{
+    display:flex;
+    flex-direction:column;
+    min-width:0;
+    line-height:1.25;
+  }
+
+  .nav-live-pill-label{
+    font-size:8px;
+    font-weight:900;
+    letter-spacing:.15em;
+    color:#ff1a1a;
+  }
+
   /* Big feed strip moves into the header pill on mobile. */
   .update-strip{
     display:none;
