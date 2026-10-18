@@ -2226,21 +2226,17 @@ footer{
   }
 
   /* Calendar/media filter bar: one row on phones. The "FILTER" label
-     goes away, the dropdown buttons shrink, and the row scrolls
-     horizontally on very narrow screens instead of wrapping to two. */
+     goes away and the dropdown buttons shrink. No overflow scrolling
+     here: an overflow container would clip the dropdown panels that
+     open below the bar, making the filters look dead. On very narrow
+     screens the row wraps instead. */
   .fb-label{
     display:none;
   }
 
   .filterbar{
-    flex-wrap:nowrap;
+    flex-wrap:wrap;
     gap:6px;
-    overflow-x:auto;
-    scrollbar-width:none;
-  }
-
-  .filterbar::-webkit-scrollbar{
-    display:none;
   }
 
   .dd-btn{
