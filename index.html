@@ -48,7 +48,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;0,900;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css">
-  <link rel="stylesheet" href="style.css?v=25">
+  <link rel="stylesheet" href="style.css?v=26">
   <link rel="stylesheet" href="featured-event.css?v=2">
 
   <script type="application/ld+json">
@@ -76,6 +76,11 @@
       <a href="submit-media.html">SUBMIT MEDIA</a>
       <a href="submit-event.html">SUBMIT EVENT</a>
     </div>
+
+    <a class="nav-live-pill" href="#events" aria-label="Newest event">
+      <span class="live-dot"></span>
+      <span id="livePillText">Latest events</span>
+    </a>
 
     <div class="nav-social-group">
       <a class="nav-social" href="https://www.instagram.com/driftwestnet/" target="_blank" rel="noopener" aria-label="DriftWest on Instagram">
@@ -244,6 +249,7 @@
     .then(status => {
       document.getElementById("updateText").textContent =
         `Updated ${timeAgo(status.lastUpdated)} · Newest event added: ${status.newestEvent}`;
+      document.getElementById("livePillText").textContent = status.newestEvent;
     })
     .catch(() => {
       document.getElementById("updateText").textContent =

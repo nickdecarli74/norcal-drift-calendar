@@ -193,6 +193,11 @@ body{
   flex: 0 0 auto;
 }
 
+/* Compact live pill in the header — mobile only. Hidden on desktop. */
+.nav-live-pill{
+  display:none;
+}
+
 .update-title {
   font-size: 0.64rem;
   letter-spacing: 0.2em;
@@ -1820,6 +1825,34 @@ footer{
 
   .hero{
     padding:24px 16px 55px;
+  }
+
+  .nav-live-pill{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    min-width:0;
+    max-width:46vw;
+    padding:6px 10px;
+    border:1px solid rgba(255, 0, 0, 0.35);
+    border-radius:999px;
+    background:rgba(0, 0, 0, 0.45);
+    color:#ddd;
+    text-decoration:none;
+    font-size:11px;
+    font-weight:700;
+    white-space:nowrap;
+  }
+
+  .nav-live-pill #livePillText{
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+  }
+
+  /* Big feed strip moves into the header pill on mobile. */
+  .update-strip{
+    display:none;
   }
 
   .nav{
