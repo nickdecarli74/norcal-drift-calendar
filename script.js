@@ -677,10 +677,16 @@ function renderFilterBar(barEl, clearAllEl, defs, state, onChange){
     const currentLabel = !f.multi
       ? (f.options.find(o => state[f.key].has(o.value)) || {}).label
       : null;
+    // The month button doesn't need its "Month:" prefix - "October 2026"
+    // is self-explanatory, and shorter labels keep the filter row on one
+    // line on phones.
+    const btnLabel = f.key === "month" && currentLabel
+      ? currentLabel
+      : f.label + (currentLabel ? ": " + currentLabel : "");
 
     dd.innerHTML = `
       <button class="dd-btn" type="button">
-        <span class="lbl">${f.label}${currentLabel ? ": " + currentLabel : ""}</span>
+        <span class="lbl">${btnLabel}</span>
         ${activeN ? `<span class="count">${activeN}</span>` : ""}
         <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>

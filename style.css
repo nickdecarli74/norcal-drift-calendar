@@ -2225,6 +2225,44 @@ footer{
     background:rgba(225,6,0,.14);
   }
 
+  /* Calendar/media filter bar: one row on phones. The "FILTER" label
+     goes away, the dropdown buttons shrink, and the row scrolls
+     horizontally on very narrow screens instead of wrapping to two. */
+  .fb-label{
+    display:none;
+  }
+
+  .filterbar{
+    flex-wrap:nowrap;
+    gap:6px;
+    overflow-x:auto;
+    scrollbar-width:none;
+  }
+
+  .filterbar::-webkit-scrollbar{
+    display:none;
+  }
+
+  .dd-btn{
+    font-size:12px;
+    padding:7px 10px;
+    gap:5px;
+  }
+
+  .dd-btn svg{
+    width:9px;
+    height:9px;
+  }
+
+  .dd-panel{
+    width:min(250px, calc(100vw - 32px));
+  }
+
+  .filterbar .dd:last-of-type .dd-panel{
+    left:auto;
+    right:0;
+  }
+
   .calendar-grid{
     gap:5px;
   }
