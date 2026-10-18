@@ -194,7 +194,21 @@
       renderList();
       renderForm();
       if(scroll){
-        formWrap.scrollIntoView({behavior: "smooth", block: "start"});
+        // scrollIntoView() silently no-ops on iOS Safari when body has
+        // overflow-x:hidden, so scroll the window directly after layout
+        // settles. If the smooth scroll never moves the page at all,
+        // fall back to an instant jump (but never yank the user back if
+        // they scrolled elsewhere meanwhile).
+        const startY = window.scrollY;
+        requestAnimationFrame(() => {
+          const target = formWrap.getBoundingClientRect().top + window.scrollY - 12;
+          window.scrollTo({top: target, behavior: "smooth"});
+          setTimeout(() => {
+            if(Math.abs(window.scrollY - startY) < 4 && Math.abs(window.scrollY - target) > 4){
+              window.scrollTo({top: target});
+            }
+          }, 600);
+        });
       }
     }
 

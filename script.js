@@ -955,7 +955,21 @@ function wireCalendarSearch(){
     calendarSearchHighlightId = e.id;
     renderCalendarFilterBar();
     renderCalendar();
-    document.getElementById("calendar").scrollIntoView({behavior: "smooth", block: "start"});
+    // Same iOS-safe window scroll as the Submit Media page: scrollIntoView()
+    // silently no-ops on iOS Safari when body has overflow-x:hidden.
+    const calEl = document.getElementById("calendar");
+    if(calEl){
+      const startY = window.scrollY;
+      requestAnimationFrame(() => {
+        const target = calEl.getBoundingClientRect().top + window.scrollY - 12;
+        window.scrollTo({top: target, behavior: "smooth"});
+        setTimeout(() => {
+          if(Math.abs(window.scrollY - startY) < 4 && Math.abs(window.scrollY - target) > 4){
+            window.scrollTo({top: target});
+          }
+        }, 600);
+      });
+    }
     input.value = e.title;
     closeResults();
     openEventModal(eventId);
