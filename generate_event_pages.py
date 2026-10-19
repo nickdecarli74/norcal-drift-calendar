@@ -236,6 +236,7 @@ NAV = """  <nav class="nav">
       <a href="/#calendar">CALENDAR</a>
       <a href="/#tracks">TRACKS</a>
       <a href="/#media">MEDIA</a>
+      <a href="/contributors.html">CONTRIBUTORS</a>
       <a href="/submit-media.html">SUBMIT MEDIA</a>
       <a href="/submit-event.html">SUBMIT EVENT</a>
     </div>
@@ -475,6 +476,7 @@ def write_sitemap(groups):
     static = [
         ("https://driftwest.net/", "daily", "1.0", None),
         ("https://driftwest.net/media.html", "weekly", "0.6", None),
+        ("https://driftwest.net/contributors.html", "weekly", "0.6", None),
         ("https://driftwest.net/submit-media.html", "weekly", "0.6", None),
         ("https://driftwest.net/submit-event.html", "monthly", "0.5", None),
     ]

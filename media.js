@@ -714,3 +714,125 @@ function renderMediaPage(events, mediaData){
 
   wireMediaSubmitForm(event);
 }
+
+function renderContributorsPage(events, mediaData){
+  const container = document.getElementById("contributors-page");
+  if(!container) return;
+  document.title = "Contributors | DriftWest";
+
+  const groups = groupMultiDayEvents(events || []);
+  const groupById = new Map();
+  groups.forEach(g => g.days.forEach(d => groupById.set(d.id, g)));
+
+  // Aggregate every submission by contributor (instagram handle, else name).
+  const byKey = new Map();
+  (mediaData || []).forEach(entry => {
+    const g = groupById.get(entry.eventId);
+    (entry.submissions || []).forEach(s => {
+      const raw = (s.instagram || s.name || "").trim();
+      if(!raw) return;
+      const key = raw.replace(/^@/, "").toLowerCase();
+      if(!byKey.has(key)){
+        byKey.set(key, {
+          name: (s.name || "").trim() || raw,
+          instagram: (s.instagram || "").trim().replace(/^@/, ""),
+          subs: []
+        });
+      }
+      const c = byKey.get(key);
+      const sName = (s.name || "").trim();
+      if(sName.length > c.name.length) c.name = sName;
+      const sIg = (s.instagram || "").trim().replace(/^@/, "");
+      if(sIg && !c.instagram) c.instagram = sIg;
+      c.subs.push({ eventId: entry.eventId, group: g, role: s.role, addedAt: s.addedAt || "" });
+    });
+  });
+
+  const contributors = [...byKey.values()].map(c => {
+    const seen = new Set();
+    const evts = [];
+    c.subs.forEach(s => {
+      if(!s.group) return;
+      const gid = s.group.days[0].id;
+      if(seen.has(gid)) return;
+      seen.add(gid);
+      evts.push(s);
+    });
+    evts.sort((a, b) => (b.group.start || "").localeCompare(a.group.start || ""));
+    const latest = c.subs.map(s => s.addedAt || "").sort().pop() || "";
+    const roles = [...new Set(c.subs.map(s => s.role).filter(Boolean))];
+    return { name: c.name, instagram: c.instagram, events: evts,
+             count: evts.length, latest, roles };
+  }).filter(c => c.count > 0);
+
+  contributors.sort((a, b) => (b.count - a.count) || b.latest.localeCompare(a.latest));
+
+  const roleBadge = c => {
+    const r = c.roles;
+    if(r.includes("both") || (r.includes("photo") && r.includes("video")))
+      return "\uD83D\uDCF8 Photographer & Videographer";
+    if(r.includes("video")) return "\uD83C\uDFA5 Videographer";
+    if(r.includes("photo")) return "\uD83D\uDCF7 Photographer";
+    if(r.includes("driver")) return "\uD83D\uDE97 Driver Clips";
+    return "\uD83D\uDCF8 Media";
+  };
+
+  const igIcon = `
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+      <circle cx="12" cy="12" r="4"></circle>
+      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle>
+    </svg>
+  `;
+
+  const escHtml = s => (s || "").replace(/[&<>"']/g, ch =>
+    ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[ch]));
+
+  const igFor = c => {
+    if(c.instagram) return c.instagram;
+    const m = (c.name || "").match(/@([a-zA-Z0-9_.]{2,30})/);
+    return m ? m[1] : null;
+  };
+
+  const cardHtml = c => {
+    const ig = igFor(c);
+    const p = c.events[0] ? formatDateParts(c.events[0].group.start, c.events[0].group.end) : null;
+    const eventRows = c.events.map(s => {
+      const gid = s.group.days[0].id;
+      const dp = formatDateParts(s.group.start, s.group.end);
+      return `
+      <a class="contrib-event" href="media.html?event=${encodeURIComponent(gid)}">
+        <span class="contrib-event-title">${escHtml(s.group.title)}</span>
+        <span class="contrib-event-date">${escHtml(dp.full)}</span>
+      </a>`;
+    }).join("");
+    return `
+    <div class="contrib-card">
+      <div class="photog-role">${escHtml(roleBadge(c))} &middot; ${c.count} ${c.count === 1 ? "gallery" : "galleries"}</div>
+      <div class="contrib-name">${escHtml(c.name)}</div>
+      ${ig ? `<a class="photog-ig-btn" href="https://instagram.com/${encodeURIComponent(ig)}" target="_blank" rel="noopener">${igIcon}<span>@${escHtml(ig)}</span></a>` : ""}
+      <div class="contrib-events">${eventRows}</div>
+    </div>`;
+  };
+
+  container.innerHTML = `
+    <div class="media-page-head">
+      <a class="back-link" href="media.html">\u2039 MEDIA</a>
+      <div class="event-title">CONTRIBUTORS</div>
+      <div class="event-info">
+        ${contributors.length} photographers, videographers and drivers sharing
+        West Coast drift media \u2014 with full credit, always.
+      </div>
+    </div>
+
+    <div class="contrib-grid">${contributors.map(cardHtml).join("")}</div>
+
+    <a class="contrib-cta" href="submit-media.html">
+      <div>
+        <div class="contrib-cta-title">SHOOT DRIFT EVENTS? GET LISTED.</div>
+        <div class="contrib-cta-text">Submit your gallery link and your name goes up here, linked and credited.</div>
+      </div>
+      <div class="contrib-cta-arrow">\u203A</div>
+    </a>
+  `;
+}
