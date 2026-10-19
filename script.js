@@ -634,25 +634,54 @@ function renderJustHappened(events){
     .join("");
 }
 
-function renderUpcoming(events){
+/* Upcoming events sidebar next to the track map: the next few upcoming
+   events as cards. Tapping a card opens that event's modal and flies the
+   map to its track. */
+function relativeDays(startStr){
+  const d = new Date(startStr.replace(" ","T"));
+  const a = new Date(); a.setHours(0,0,0,0);
+  const b = new Date(d.getFullYear(), d.getMonth(), d.getDate());
+  const n = Math.round((b - a) / 86400000);
+  if(n <= 0) return "today";
+  if(n === 1) return "tomorrow";
+  return `in ${n} days`;
+}
+
+function renderTrackUpcoming(events){
+  const el = document.getElementById("track-upcoming");
+  if(!el) return;
   const now = new Date();
   const upcoming = groupMultiDayEvents(events)
     .filter(g => groupHasUpcomingDay(g, now))
-    .slice(0, 8);
+    .slice(0, 6);
 
-  document.getElementById("upcoming-events").innerHTML = upcoming.map(e => {
-    const p = formatDateParts(e.start, e.end);
+  if(!upcoming.length){
+    el.innerHTML = `<div class="media-empty">No upcoming events — check the calendar.</div>`;
+    return;
+  }
+
+  el.innerHTML = upcoming.map(g => {
+    const p = formatDateParts(g.start, g.end);
+    const track = findTrackForEvent(g.days[0]);
+    const dayId = g.days[0].id;
     return `
-      <a class="small-card" href="${eventUrl(e)}" target="_blank" style="text-decoration:none;color:white">
-        <div class="small-date">${p.full}${weatherBadge(e)}</div>
-        <div class="small-title">${e.title}</div>
-        <div class="small-meta">
-          ${e.promoter}<br>
-          ${e.location}
-        </div>
-      </a>
-    `;
+      <button type="button" class="track-upcoming-card" data-day="${dayId}" data-track="${track ? track.name : ""}">
+        <span class="tuc-main">
+          <span class="tuc-title">${g.title}</span>
+          <span class="tuc-track">${track ? track.name : g.location}</span>
+          <span class="tuc-date">${p.full} · <span class="tuc-relative">${relativeDays(g.start)}</span></span>
+        </span>
+        <span class="tuc-chevron">›</span>
+      </button>`;
   }).join("");
+
+  el.querySelectorAll(".track-upcoming-card").forEach(card => {
+    card.addEventListener("click", () => {
+      const track = TRACKS.find(t => t.name === card.dataset.track);
+      if(track) flyToTrack(track, false);
+      openEventModal(card.dataset.day);
+    });
+  });
 }
 
 /* =========================================
@@ -1154,54 +1183,23 @@ let trackMap = null;
 const trackMapMarkers = [];
 
 // Fly the map to a track and open its popup (from the track list).
-function focusTrack(trackName){
-  const entry = trackMapMarkers.find(m => m.track.name === trackName);
+/* Fly the map to a track. Sidebar cards pass openPopup=false because they
+   open the event modal instead; marker taps use the compact popup. */
+function flyToTrack(track, openPopup = true){
+  const entry = trackMapMarkers.find(m => m.track.name === track.name);
   if(!entry) return;
   if(trackMap){
-    trackMap.flyTo({center: [entry.track.lng, entry.track.lat], zoom: 10, essential: true});
+    trackMap.flyTo({center: [entry.track.lng, entry.track.lat], zoom: 9, essential: true});
   }
-  const popup = entry.marker.getPopup();
-  if(popup && !popup.isOpen()) entry.marker.togglePopup();
-}
-
-// Track list under the map: every track with its next event. Tapping a
-// row flies the map to that track and opens its popup.
-function renderTrackList(){
-  const listEl = document.getElementById("track-list");
-  if(!listEl) return;
-  const now = new Date();
-  const rows = TRACKS.map(track => {
-    const evs = allEvents.filter(e => findTrackForEvent(e) === track);
-    const up = evs
-      .filter(e => new Date(e.end.replace(" ","T")) >= now)
-      .sort((a,b) => new Date(a.start.replace(" ","T")) - new Date(b.start.replace(" ","T")));
-    return {track, count: up.length, next: up[0] || null};
-  }).sort((a,b) => b.count - a.count || a.track.name.localeCompare(b.track.name));
-
-  listEl.innerHTML = `
-    <div class="track-list-title">ALL TRACKS</div>
-    ${rows.map(({track, count, next}) => {
-      const p = next ? formatDateParts(next.start, next.end) : null;
-      return `
-        <button type="button" class="track-list-row" data-track="${track.name}">
-          <span class="track-list-main">
-            <span class="track-list-name">${track.name}</span>
-            <span class="track-list-meta">📍 ${track.location} · ${next ? `Next: ${next.title} — ${p.month} ${p.day}` : "No upcoming events"}</span>
-          </span>
-          ${count ? `<span class="track-list-count">${count}</span>` : ""}
-          <span class="track-list-chevron">›</span>
-        </button>`;
-    }).join("")}`;
-
-  listEl.querySelectorAll(".track-list-row").forEach(row => {
-    row.addEventListener("click", () => focusTrack(row.dataset.track));
-  });
+  if(openPopup){
+    const popup = entry.marker.getPopup();
+    if(popup && !popup.isOpen()) entry.marker.togglePopup();
+  }
 }
 
 function renderTrackMap(){
   const mapEl = document.getElementById("track-map");
   if(!mapEl) return;
-  renderTrackList();
   if(typeof maplibregl === "undefined") return;
 
   if(mapEl.dataset.loaded === "true") return;
@@ -1212,12 +1210,22 @@ function renderTrackMap(){
     new maplibregl.LngLatBounds([TRACKS[0].lng, TRACKS[0].lat], [TRACKS[0].lng, TRACKS[0].lat])
   );
 
-  // OpenFreeMap's "dark" style is a free vector basemap with no API key or
-  // signup required (unlike CARTO's raster tiles, which now gate the same
-  // dark_all look behind a registered key).
+  // Esri World Imagery: free satellite basemap, no API key needed.
   const map = new maplibregl.Map({
     container: "track-map",
-    style: "https://tiles.openfreemap.org/styles/dark",
+    style: {
+      version: 8,
+      sources: {
+        "esri-imagery": {
+          type: "raster",
+          tiles: ["https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"],
+          tileSize: 256,
+          maxzoom: 19,
+          attribution: "Imagery © Esri, Maxar, Earthstar Geographics"
+        }
+      },
+      layers: [{id: "esri-imagery", type: "raster", source: "esri-imagery"}]
+    },
     bounds: bounds,
     fitBoundsOptions: {padding: 55},
     scrollZoom: false,
@@ -1240,24 +1248,24 @@ function renderTrackMap(){
         .filter(e => new Date(e.end.replace(" ","T")) < now)
         .sort((a,b) => new Date(b.start.replace(" ","T")) - new Date(a.start.replace(" ","T")));
 
-      // Upcoming events — each row opens that event's modal.
-      const eventsHtml = upcoming.length
-        ? `<div class="map-popup-section">UPCOMING EVENTS · ${upcoming.length}</div>
-           <div class="map-popup-events">
-             ${upcoming.map(e => {
-               const p = formatDateParts(e.start, e.end);
-               return `
-                 <button type="button" class="map-popup-event" onclick="openEventModal('${e.id}')">
-                   <span class="map-popup-event-date">${p.month} ${p.day}</span>
-                   <span class="map-popup-event-main">
-                     <span class="map-popup-event-title">${e.title}</span>
-                     <span class="map-popup-event-promoter">${e.promoter}</span>
-                   </span>
-                   <span class="map-popup-event-chevron">›</span>
-                 </button>`;
-             }).join("")}
-           </div>`
-        : "";
+      // Compact popup: next event only. The sidebar carries the full
+      // upcoming picture, so the popup stays small.
+      let nextHtml = "";
+      if(upcoming.length){
+        const next = upcoming[0];
+        const p = formatDateParts(next.start, next.end);
+        nextHtml = `
+          <div class="map-popup-section">NEXT EVENT</div>
+          <button type="button" class="map-popup-event" onclick="openEventModal('${next.id}')">
+            <span class="map-popup-event-date">${p.month} ${p.day}</span>
+            <span class="map-popup-event-main">
+              <span class="map-popup-event-title">${next.title}</span>
+              <span class="map-popup-event-promoter">${next.promoter}</span>
+            </span>
+            <span class="map-popup-event-chevron">›</span>
+          </button>
+          ${upcoming.length > 1 ? `<div class="map-popup-meta">+ ${upcoming.length - 1} more upcoming · <a class="modal-link" href="#calendar">full calendar ›</a></div>` : ""}`;
+      }
 
       // No upcoming events: show the most recent past one, with a gallery
       // link when it has media.
@@ -1279,15 +1287,15 @@ function renderTrackMap(){
       const popupHtml = `
         <div class="map-popup-title">${track.name}</div>
         <div class="map-popup-meta">📍 ${track.location}</div>
-        ${eventsHtml}
+        ${nextHtml}
         ${pastHtml}
-        <a class="map-popup-button" href="#calendar">VIEW CALENDAR</a>
       `;
 
+      // Calm markers: small red dot when the track has upcoming events,
+      // quiet gray dot when it doesn't. No pulse, no count badges.
       const el = document.createElement("div");
-      el.className = "drift-marker";
-      el.innerHTML = "<div class='marker-core'></div><div class='marker-pulse'></div>"
-        + (upcoming.length ? `<div class='marker-count'>${upcoming.length}</div>` : "");
+      el.className = "drift-marker" + (upcoming.length ? "" : " drift-marker--quiet");
+      el.innerHTML = "<div class='marker-core'></div>";
 
       const marker = new maplibregl.Marker({element: el})
         .setLngLat([track.lng, track.lat])
@@ -1327,7 +1335,7 @@ Promise.all([
     renderFeaturedPartnerEvent(allEvents);
     renderNextEvent(allEvents);
     renderJustHappened(allEvents);
-    renderUpcoming(allEvents);
+    renderTrackUpcoming(allEvents);
     buildCalendarFilterDefs();
     renderCalendarFilterBar();
     renderCalendar();
@@ -1350,7 +1358,6 @@ Promise.all([
     loadWeather(allEvents).then(() => {
       renderFeaturedPartnerEvent(allEvents);
       renderNextEvent(allEvents);
-      renderUpcoming(allEvents);
     });
   })
   .catch(() => {

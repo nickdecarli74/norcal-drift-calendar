@@ -234,7 +234,6 @@ NAV = """  <nav class="nav">
     <div class="nav-links">
       <a href="/#events">EVENTS</a>
       <a href="/#calendar">CALENDAR</a>
-      <a href="/#tracks">TRACKS</a>
       <a href="/#media">MEDIA</a>
       <a href="/contributors.html">CONTRIBUTORS</a>
     </div>

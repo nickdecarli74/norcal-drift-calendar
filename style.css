@@ -923,7 +923,7 @@ body{
 .map-wrap{
   position:relative;
   width:100%;
-  height:720px;
+  height:580px;
   border:1px solid rgba(255,255,255,.14);
   border-top:4px solid #e10600;
   border-radius:22px;
@@ -998,17 +998,6 @@ body{
   line-height:1.6;
 }
 
-.map-popup-button{
-  display:inline-block;
-  margin-top:12px;
-  background:#e10600;
-  color:white!important;
-  text-decoration:none;
-  font-weight:900;
-  padding:9px 12px;
-  border-radius:7px;
-}
-
 .track-popup .maplibregl-popup-content{
   max-width:320px;
 }
@@ -1019,13 +1008,6 @@ body{
   font-weight:900;
   letter-spacing:.15em;
   color:#e10600;
-}
-
-.map-popup-events{
-  max-height:230px;
-  overflow-y:auto;
-  margin:6px 0 4px;
-  padding-right:4px;
 }
 
 .map-popup-event{
@@ -1075,96 +1057,6 @@ body{
 }
 
 .map-popup-event-chevron{
-  margin-left:auto;
-  color:#e10600;
-  font-weight:900;
-}
-
-.marker-count{
-  position:absolute;
-  top:-5px;
-  right:-5px;
-  z-index:3;
-  min-width:18px;
-  height:18px;
-  padding:0 4px;
-  border-radius:999px;
-  background:#e10600;
-  border:1.5px solid #fff;
-  color:#fff;
-  font-size:10px;
-  font-weight:900;
-  line-height:15px;
-  text-align:center;
-  box-shadow:0 0 10px rgba(225,6,0,.8);
-}
-
-.track-list{
-  margin-top:18px;
-}
-
-.track-list-title{
-  font-size:12px;
-  font-weight:900;
-  letter-spacing:.2em;
-  color:#888;
-  margin-bottom:10px;
-}
-
-.track-list-row{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  width:100%;
-  padding:12px 10px;
-  background:rgba(255,255,255,.03);
-  border:1px solid rgba(255,255,255,.08);
-  border-radius:12px;
-  color:#fff;
-  font:inherit;
-  text-align:left;
-  cursor:pointer;
-  margin-bottom:8px;
-}
-
-.track-list-row:hover{
-  border-color:rgba(225,6,0,.6);
-  background:rgba(225,6,0,.08);
-}
-
-.track-list-main{
-  display:flex;
-  flex-direction:column;
-  min-width:0;
-}
-
-.track-list-name{
-  font-weight:900;
-}
-
-.track-list-meta{
-  font-size:12px;
-  color:#aaa;
-  white-space:nowrap;
-  overflow:hidden;
-  text-overflow:ellipsis;
-}
-
-.track-list-count{
-  flex:0 0 auto;
-  min-width:24px;
-  height:24px;
-  padding:0 6px;
-  border-radius:999px;
-  background:#e10600;
-  color:#fff;
-  font-size:12px;
-  font-weight:900;
-  line-height:24px;
-  text-align:center;
-}
-
-.track-list-chevron{
   margin-left:auto;
   color:#e10600;
   font-weight:900;
@@ -1276,10 +1168,11 @@ body{
 /* MapLibre gives the element passed to `new maplibregl.Marker({element})`
    position:absolute itself (via its own .maplibregl-marker class) and places
    it with a CSS transform, so it's already a positioned containing block for
-   .marker-core/.marker-pulse below - no position rule needed here. Explicit
-   size keeps the marker's clickable/hoverable box matching the old Leaflet
-   iconSize instead of collapsing to 0x0 (its only children are removed from
-   flow via position:absolute). */
+   .marker-core below - no position rule needed here. Explicit
+   size keeps the marker's clickable/hoverable box instead of collapsing
+   to 0x0 (its only child is removed from flow via position:absolute).
+   (The calm marker look itself lives in the tracks-layout block near the
+   end of the file, which overrides the sizes below.) */
 .drift-marker{
   width:34px;
   height:34px;
@@ -1296,29 +1189,6 @@ body{
   border-radius:50%;
   box-shadow:0 0 18px rgba(225,6,0,.9),0 0 34px rgba(225,6,0,.55);
   z-index:2;
-}
-
-.marker-pulse{
-  position:absolute;
-  left:3px;
-  top:3px;
-  width:28px;
-  height:28px;
-  border-radius:50%;
-  background:rgba(225,6,0,.28);
-  animation:pulse 1.8s infinite;
-}
-
-@keyframes pulse{
-  0%{
-    transform:scale(.8);
-    opacity:.9;
-  }
-
-  100%{
-    transform:scale(1.9);
-    opacity:0;
-  }
 }
 
 /* =========================================
@@ -2472,4 +2342,148 @@ footer{
 
 .contrib-more:hover{
   text-decoration:underline;
+}
+
+/* Upcoming events + track map combined section */
+.tracks-layout{
+  display:flex;
+  gap:18px;
+  align-items:stretch;
+}
+
+.tracks-layout .map-wrap{
+  flex:1.65;
+  min-width:0;
+}
+
+.tracks-sidebar{
+  flex:1;
+  max-width:360px;
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+}
+
+#track-upcoming{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.track-upcoming-card{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  width:100%;
+  text-align:left;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:12px;
+  padding:14px 16px;
+  color:white;
+  cursor:pointer;
+  font-family:inherit;
+  transition:.2s;
+}
+
+.track-upcoming-card:hover{
+  border-color:#e10600;
+  transform:translateY(-2px);
+  box-shadow:0 0 24px rgba(225,6,0,.14);
+}
+
+.tuc-main{
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+  min-width:0;
+}
+
+.tuc-title{
+  font-weight:800;
+  font-size:16px;
+}
+
+.tuc-track{
+  color:#999;
+  font-size:13px;
+}
+
+.tuc-date{
+  color:#ccc;
+  font-size:13px;
+  margin-top:4px;
+}
+
+.tuc-relative{
+  color:#e10600;
+  font-weight:800;
+}
+
+.tuc-chevron{
+  color:#e10600;
+  font-size:22px;
+  font-weight:900;
+  flex-shrink:0;
+}
+
+.sidebar-cal-link{
+  margin-top:14px;
+  text-align:center;
+  color:#e10600;
+  font-weight:800;
+  font-size:13px;
+  letter-spacing:1px;
+  text-decoration:none;
+  padding:10px;
+  border:1px solid rgba(225,6,0,.35);
+  border-radius:10px;
+  transition:.2s;
+}
+
+.sidebar-cal-link:hover{
+  background:rgba(225,6,0,.1);
+}
+
+/* Calmer map markers: small red dots, no pulse, no badges.
+   Tracks with nothing upcoming go quiet gray. */
+.drift-marker{
+  width:24px;
+  height:24px;
+}
+
+.marker-core{
+  position:absolute;
+  left:7px;
+  top:7px;
+  width:10px;
+  height:10px;
+  background:#e10600;
+  border:2px solid white;
+  border-radius:50%;
+  box-shadow:0 0 12px rgba(225,6,0,.8);
+  z-index:2;
+}
+
+.drift-marker--quiet .marker-core{
+  width:8px;
+  height:8px;
+  left:8px;
+  top:8px;
+  background:#6a6a6a;
+  border:1.5px solid rgba(255,255,255,.6);
+  box-shadow:none;
+}
+
+@media(max-width:900px){
+  .tracks-layout{
+    flex-direction:column;
+  }
+  .tracks-layout .map-wrap{
+    height:380px;
+  }
+  .tracks-sidebar{
+    max-width:none;
+  }
 }

@@ -48,7 +48,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;0,900;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css">
-  <link rel="stylesheet" href="style.css?v=43">
+  <link rel="stylesheet" href="style.css?v=44">
   <link rel="stylesheet" href="featured-event.css?v=2">
 
   <script type="application/ld+json">
@@ -71,7 +71,6 @@
     <div class="nav-links">
       <a href="#events">EVENTS</a>
       <a href="#calendar">CALENDAR</a>
-      <a href="#tracks">TRACKS</a>
       <a href="#media">MEDIA</a>
       <a href="contributors.html">CONTRIBUTORS</a>
     </div>
@@ -116,7 +115,6 @@
 
   <nav class="mobile-quick-tabs">
     <a href="#events">Events</a>
-    <a href="#tracks">Tracks</a>
     <a href="#media">Media</a>
     <a href="contributors.html">Contributors</a>
     <a href="#calendar">Calendar</a>
@@ -148,7 +146,17 @@
 
   <div id="events" class="section">
     <div class="section-title">UPCOMING EVENTS</div>
-    <div id="upcoming-events" class="upcoming-grid"></div>
+
+    <div class="tracks-layout">
+      <div class="map-wrap">
+        <div id="track-map"></div>
+      </div>
+
+      <aside class="tracks-sidebar">
+        <div id="track-upcoming"></div>
+        <a class="sidebar-cal-link" href="#calendar">VIEW FULL CALENDAR ›</a>
+      </aside>
+    </div>
   </div>
 
   <div id="calendar" class="section">
@@ -177,16 +185,6 @@
     </div>
 
     <div id="calendar-grid" class="calendar-grid"></div>
-  </div>
-
-  <div id="tracks" class="section">
-    <div class="section-title">TRACK MAP</div>
-
-    <div class="map-wrap">
-      <div id="track-map"></div>
-    </div>
-
-    <div id="track-list" class="track-list"></div>
   </div>
 
   <div id="media" class="section">
@@ -257,7 +255,7 @@
 
 <script src="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js"></script>
 <script src="media.js?v=18"></script>
-<script src="script.js?v=29"></script>
+<script src="script.js?v=30"></script>
 
 <script>
   fetch("status.json")
