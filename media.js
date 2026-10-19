@@ -630,6 +630,11 @@ function renderMediaPage(events, mediaData){
   if(!container) return;
 
   // Any day's id resolves to the whole (grouped) event, so old per-day links keep working.
+  // No event param at all: this page needs one — send visitors to the media hub.
+  if(!eventId){
+    window.location.replace("index.html#media");
+    return;
+  }
   const event = groupMultiDayEvents(events).find(g => g.days.some(d => d.id === eventId));
 
   if(!event){
@@ -820,7 +825,7 @@ function renderContributorsPage(events, mediaData){
 
   container.innerHTML = `
     <div class="media-page-head">
-      <a class="back-link" href="media.html">\u2039 MEDIA</a>
+      <a class="back-link" href="index.html#media">\u2039 MEDIA</a>
       <div class="event-title">CONTRIBUTORS</div>
       <div class="event-info">
         ${contributors.length} photographers, videographers and drivers sharing
