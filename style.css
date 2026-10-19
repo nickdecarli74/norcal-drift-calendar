@@ -2449,16 +2449,16 @@ footer{
 /* Calmer map markers: small red dots, no pulse, no badges.
    Tracks with nothing upcoming go quiet gray. */
 .drift-marker{
-  width:24px;
-  height:24px;
+  width:30px;
+  height:30px;
 }
 
 .marker-core{
   position:absolute;
-  left:7px;
-  top:7px;
-  width:10px;
-  height:10px;
+  left:8px;
+  top:8px;
+  width:14px;
+  height:14px;
   background:#e10600;
   border:2px solid white;
   border-radius:50%;
@@ -2467,10 +2467,10 @@ footer{
 }
 
 .drift-marker--quiet .marker-core{
-  width:8px;
-  height:8px;
-  left:8px;
-  top:8px;
+  width:10px;
+  height:10px;
+  left:10px;
+  top:10px;
   background:#6a6a6a;
   border:1.5px solid rgba(255,255,255,.6);
   box-shadow:none;
