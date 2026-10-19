@@ -23,7 +23,7 @@ from urllib.parse import urlparse
 
 SITE = "https://driftwest.net"
 EVENTS_DIR = "events"
-OG_IMAGE = "https://driftwest.net/assets/driftwest-3d-opengraph.png"
+OG_IMAGE = "https://driftwest.net/assets/driftwest-3d-opengraph.jpg"
 
 SITE_DESCRIPTION = (
     "DriftWest is the West Coast grassroots drift calendar and media hub. "
@@ -229,7 +229,7 @@ GTAG = """  <!-- Google tag (gtag.js) -->
 """
 
 NAV = """  <nav class="nav">
-    <a href="/"><img class="nav-logo" src="/assets/driftwest-3d-favicon-r1.png" alt="DriftWest"></a>
+    <a href="/"><img class="nav-logo" src="/assets/driftwest-3d-favicon-r1.webp" alt="DriftWest"></a>
 
     <div class="nav-links">
       <a href="/#events">EVENTS</a>
@@ -351,15 +351,15 @@ def event_page_html(group, submissions, style_v):
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="DriftWest">
   <meta property="og:image" content="{OG_IMAGE}">
-  <meta property="og:image:width" content="1536">
-  <meta property="og:image:height" content="1024">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="800">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{esc(title)} | DriftWest">
   <meta name="twitter:description" content="{esc(meta_desc)}">
   <meta name="twitter:image" content="{OG_IMAGE}">
 
-  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="icon" type="image/png" href="/assets/favicon.png?v=2">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <meta name="apple-mobile-web-app-title" content="DriftWest">
 
