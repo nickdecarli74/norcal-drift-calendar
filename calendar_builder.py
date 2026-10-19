@@ -119,3 +119,8 @@ with open("status.json", "w", encoding="utf-8") as f:
     }, f, indent=2)
 
 print("✅ status.json written successfully")
+
+# Static per-event pages (events/<id>/) with Event JSON-LD + sitemap.xml.
+# Regenerated on every build so new/updated events stay in sync automatically.
+import generate_event_pages
+generate_event_pages.build(json_events)

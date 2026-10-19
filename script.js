@@ -1069,8 +1069,11 @@ function openEventModal(eventId){
     </div>
   `;
 
-  // Shareable link = this event's media page (the only per-event URL).
-  const shareUrl = `https://driftwest.net/media.html?event=${encodeURIComponent(e.id)}`;
+  // Shareable link = this event's canonical page (static, SEO-indexed).
+  // Any day's id resolves to the grouped event, matching the page generator.
+  const group = groupMultiDayEvents(allEvents).find(gr => gr.days.some(d => d.id === eventId));
+  const groupId = group ? group.days[0].id : eventId;
+  const shareUrl = `https://driftwest.net/events/${encodeURIComponent(groupId)}/`;
   const statusEl = document.getElementById("modal-copy-status");
   const flashStatus = (msg) => {
     statusEl.textContent = msg;
