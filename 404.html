@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 — Page Not Found | DriftWest</title>
+<meta name="description" content="This page drifted off track. Head back to the DriftWest events and calendar.">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    background:#000;
+    color:#fff;
+    font-family:Arial, Helvetica, sans-serif;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:32px 20px;
+  }
+  .wordmark{
+    font-size:26px;
+    font-weight:900;
+    font-style:italic;
+    letter-spacing:2px;
+  }
+  .wordmark span{color:#e10600}
+  .rule{
+    width:48px;
+    height:3px;
+    margin:18px auto 22px;
+    border-radius:2px;
+    background:#e10600;
+  }
+  .code{
+    font-size:96px;
+    font-weight:900;
+    font-style:italic;
+    line-height:1;
+  }
+  h1{
+    font-size:22px;
+    margin:14px 0 10px;
+  }
+  p{
+    color:#aaa;
+    font-size:15px;
+    line-height:1.6;
+    max-width:420px;
+  }
+  .actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    justify-content:center;
+    margin-top:28px;
+  }
+  .actions a{
+    display:inline-block;
+    padding:12px 22px;
+    border-radius:999px;
+    font-weight:900;
+    font-size:14px;
+    text-decoration:none;
+  }
+  .actions a.primary{
+    background:#e10600;
+    color:#fff;
+  }
+  .actions a.secondary{
+    border:1px solid rgba(255,255,255,.25);
+    color:#fff;
+  }
+  .actions a.secondary:hover{
+    border-color:#e10600;
+    color:#e10600;
+  }
+</style>
+</head>
+<body>
+  <div class="wordmark">DRIFT<span>WEST</span></div>
+  <div class="rule"></div>
+  <div class="code">404</div>
+  <h1>This page drifted off track.</h1>
+  <p>The link you followed doesn't exist — it may have moved or been removed.</p>
+  <div class="actions">
+    <a class="primary" href="/">Back to Events ›</a>
+    <a class="secondary" href="/#calendar">View Calendar ›</a>
+  </div>
+</body>
+</html>

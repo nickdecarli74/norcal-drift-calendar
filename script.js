@@ -1124,6 +1124,29 @@ function closeEventModal(){
   document.getElementById("event-modal").style.display = "none";
 }
 
+// Global Escape: close whichever modal is open. If the calendar search
+// dropdown is open instead, close that first. (The search input has its
+// own Escape handler that closes its dropdown; this document-level one
+// runs after it, so by the time it fires the dropdown is already closed
+// and it can safely close a modal instead.)
+document.addEventListener("keydown", (e) => {
+  if(e.key !== "Escape") return;
+  const searchResults = document.getElementById("calendar-search-results");
+  if(searchResults && !searchResults.hidden){
+    searchResults.hidden = true;
+    return;
+  }
+  const eventModal = document.getElementById("event-modal");
+  if(eventModal && eventModal.style.display === "flex"){
+    closeEventModal();
+    return;
+  }
+  const subscribeModal = document.getElementById("subscribe-modal");
+  if(subscribeModal && subscribeModal.style.display === "flex"){
+    closeSubscribeModal();
+  }
+});
+
 let trackMap = null;
 const trackMapMarkers = [];
 
