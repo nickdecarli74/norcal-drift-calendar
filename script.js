@@ -1336,6 +1336,17 @@ Promise.all([
     renderRecentSubmissions(allEvents, mediaData);
     wireCalendarSearch();
 
+    // Honor in-page anchors (#events, #media, ...) after the initial render.
+    // The browser's native anchor jump fires before the JS-rendered sections
+    // above the target finish loading, which leaves the viewport parked on
+    // the wrong section once layout settles.
+    if(location.hash){
+      try{
+        const target = document.querySelector(location.hash);
+        if(target) requestAnimationFrame(() => target.scrollIntoView());
+      }catch(e){ /* invalid hash — leave the browser default */ }
+    }
+
     loadWeather(allEvents).then(() => {
       renderFeaturedPartnerEvent(allEvents);
       renderNextEvent(allEvents);
