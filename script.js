@@ -1345,24 +1345,3 @@ Promise.all([
   .catch(() => {
     document.getElementById("next-events").innerHTML = "<div class='media-empty'>Could not load events.</div>";
   });
-
-// Back-to-top button: fades in after scrolling down, smooth-scrolls home.
-(function(){
-  var btn = document.getElementById("to-top");
-  if(!btn) return;
-  var shown = false, ticking = false;
-  function update(){
-    ticking = false;
-    var show = (window.scrollY || window.pageYOffset) > 600;
-    if(show !== shown){
-      shown = show;
-      btn.classList.toggle("show", show);
-    }
-  }
-  window.addEventListener("scroll", function(){
-    if(!ticking){ ticking = true; requestAnimationFrame(update); }
-  }, { passive:true });
-  btn.addEventListener("click", function(){
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-})();
