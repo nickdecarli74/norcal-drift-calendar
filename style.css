@@ -2431,3 +2431,24 @@ footer{
   font-weight:900;
   flex-shrink:0;
 }
+
+.contrib-event.is-hidden{
+  display:none;
+}
+
+.contrib-more{
+  background:none;
+  border:none;
+  cursor:pointer;
+  color:#e10600;
+  font-weight:800;
+  font-size:12px;
+  letter-spacing:1px;
+  padding:6px 0 0;
+  text-align:left;
+  font-family:inherit;
+}
+
+.contrib-more:hover{
+  text-decoration:underline;
+}

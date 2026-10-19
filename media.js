@@ -794,24 +794,27 @@ function renderContributorsPage(events, mediaData){
     return m ? m[1] : null;
   };
 
+  const MAX_EVENTS_SHOWN = 4;
+
   const cardHtml = c => {
     const ig = igFor(c);
-    const p = c.events[0] ? formatDateParts(c.events[0].group.start, c.events[0].group.end) : null;
-    const eventRows = c.events.map(s => {
+    const eventRows = c.events.map((s, i) => {
       const gid = s.group.days[0].id;
       const dp = formatDateParts(s.group.start, s.group.end);
       return `
-      <a class="contrib-event" href="media.html?event=${encodeURIComponent(gid)}">
+      <a class="contrib-event${i >= MAX_EVENTS_SHOWN ? " is-hidden" : ""}" href="media.html?event=${encodeURIComponent(gid)}">
         <span class="contrib-event-title">${escHtml(s.group.title)}</span>
         <span class="contrib-event-date">${escHtml(dp.full)}</span>
       </a>`;
     }).join("");
+    const moreBtn = c.events.length > MAX_EVENTS_SHOWN ? `
+      <button type="button" class="contrib-more" data-more>SHOW ALL ${c.events.length} EVENTS \u203A</button>` : "";
     return `
     <div class="contrib-card">
       <div class="photog-role">${escHtml(roleBadge(c))} &middot; ${c.count} ${c.count === 1 ? "gallery" : "galleries"}</div>
       <div class="contrib-name">${escHtml(c.name)}</div>
       ${ig ? `<a class="photog-ig-btn" href="https://instagram.com/${encodeURIComponent(ig)}" target="_blank" rel="noopener">${igIcon}<span>@${escHtml(ig)}</span></a>` : ""}
-      <div class="contrib-events">${eventRows}</div>
+      <div class="contrib-events">${eventRows}${moreBtn}</div>
     </div>`;
   };
 
@@ -835,4 +838,16 @@ function renderContributorsPage(events, mediaData){
       <div class="contrib-cta-arrow">\u203A</div>
     </a>
   `;
+
+  container.querySelectorAll("[data-more]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const card = btn.closest(".contrib-card");
+      const expanded = btn.dataset.expanded === "1";
+      card.querySelectorAll(".contrib-event.is-hidden")
+        .forEach(el => el.classList.toggle("is-hidden", expanded));
+      btn.dataset.expanded = expanded ? "" : "1";
+      const total = card.querySelectorAll(".contrib-event").length;
+      btn.textContent = expanded ? `SHOW ALL ${total} EVENTS \u203A` : "SHOW FEWER \u2039";
+    });
+  });
 }
