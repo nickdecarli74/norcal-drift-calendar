@@ -26,7 +26,7 @@ EVENTS_DIR = "events"
 OG_IMAGE = "https://driftwest.net/assets/driftwest-3d-opengraph.jpg"
 
 SITE_DESCRIPTION = (
-    "DriftWest is the West Coast grassroots drift calendar and media hub. "
+    "DriftWest is the West Coast drift calendar and media hub. "
     "Find every event, see who shot it, and get your photos and videos "
     "linked with full credit."
 )
