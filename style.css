@@ -2074,9 +2074,13 @@ footer{
 .hero-description{
   max-width:520px;
   margin:36px auto 0;
-  font-size:16px;
-  line-height:1.5;
-  color:#fff;
+  font-family:'Barlow Condensed', Arial, sans-serif;
+  font-style:italic;
+  font-weight:700;
+  font-size:20px;
+  line-height:1.4;
+  letter-spacing:0.3px;
+  color:#f2f2f2;
   text-align:center;
 }
 
