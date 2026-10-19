@@ -85,6 +85,19 @@ body{
   width:100%;
 }
 
+/* Center the nav links once the bar is wide enough that they
+   can't collide with the logo (below this they stay right-aligned). */
+@media(min-width:900px){
+  .nav{
+    position:relative;
+  }
+  .nav-links{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+  }
+}
+
 .nav-social-group{
   display:flex;
   align-items:center;
