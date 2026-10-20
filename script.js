@@ -1210,39 +1210,45 @@ function renderTrackMap(){
     new maplibregl.LngLatBounds([TRACKS[0].lng, TRACKS[0].lat], [TRACKS[0].lng, TRACKS[0].lat])
   );
 
-  // Esri World Imagery: free satellite basemap, no API key needed.
-  // The Reference overlay (transparent PNGs) draws state/county lines and
-  // city labels on top, so the satellite view stays orientable from afar.
+  // Vector labels: load OpenFreeMap's free "liberty" style (vector tiles,
+  // no key), then on load hide everything except boundary lines and place
+  // labels, restyle those for dark satellite, and slide Esri satellite
+  // imagery underneath. Vector text stays crisp at every zoom/DPI, unlike
+  // the old raster reference overlay.
   const map = new maplibregl.Map({
     container: "track-map",
-    style: {
-      version: 8,
-      sources: {
-        "esri-imagery": {
-          type: "raster",
-          tiles: ["https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"],
-          tileSize: 256,
-          maxzoom: 19,
-          attribution: "Imagery © Esri, Maxar, Earthstar Geographics"
-        },
-        "esri-reference": {
-          type: "raster",
-          tiles: ["https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}"],
-          tileSize: 256,
-          maxzoom: 19
-        }
-      },
-      layers: [
-        {id: "esri-imagery", type: "raster", source: "esri-imagery"},
-        // Contrast bump: the reference tiles are 256px rasters that upscale
-        // soft on retina screens; harder edges read as crisper text.
-        {id: "esri-reference", type: "raster", source: "esri-reference", paint: {"raster-contrast": 0.35}}
-      ]
-    },
+    style: "https://tiles.openfreemap.org/styles/liberty",
     bounds: bounds,
     fitBoundsOptions: {padding: 55},
     scrollZoom: false,
     attributionControl: {compact: true}
+  });
+
+  map.on("load", () => {
+    map.addSource("esri-imagery", {
+      type: "raster",
+      tiles: ["https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"],
+      tileSize: 256,
+      maxzoom: 19,
+      attribution: "Imagery © Esri, Maxar, Earthstar Geographics"
+    });
+    const firstLayerId = map.getStyle().layers[0].id;
+    map.addLayer({id: "esri-imagery", type: "raster", source: "esri-imagery"}, firstLayerId);
+
+    const keepLabels = ["label_state", "label_city", "label_city_capital", "label_town", "label_village"];
+    const keepBounds = ["boundary_2", "boundary_3"];
+    map.getStyle().layers.forEach(l => {
+      if(l.id === "esri-imagery") return;
+      if(keepLabels.includes(l.id)){
+        map.setPaintProperty(l.id, "text-color", "#ffffff");
+        map.setPaintProperty(l.id, "text-halo-color", "rgba(0,0,0,0.9)");
+        map.setPaintProperty(l.id, "text-halo-width", 1.4);
+      } else if(keepBounds.includes(l.id)){
+        map.setPaintProperty(l.id, "line-color", "rgba(255,255,255,0.6)");
+      } else if(map.getLayoutProperty(l.id, "visibility") !== "none"){
+        map.setLayoutProperty(l.id, "visibility", "none");
+      }
+    });
   });
 
   map.addControl(new maplibregl.NavigationControl({showCompass: false}), "top-left");
