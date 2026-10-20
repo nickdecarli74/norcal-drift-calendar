@@ -1246,6 +1246,29 @@ function wireWeekendToggle(){
   });
 }
 
+// Nav logo = back to top on the homepage (it used to be a bare image that
+// did nothing). window.scrollTo is the iOS-safe scroll on this site —
+// scrollIntoView no-ops on iOS Safari with overflow-x:hidden on the body.
+function wireLogoHome(){
+  const link = document.getElementById("nav-logo-link");
+  if(!link || link.dataset.wired === "true") return;
+  link.dataset.wired = "true";
+  link.addEventListener("click", (ev) => {
+    ev.preventDefault();
+    if(location.hash) history.replaceState(null, "", location.pathname + location.search);
+    if(window.scrollY < 4) return;
+    const startY = window.scrollY;
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    window.scrollTo({top: 0, behavior: reduce ? "auto" : "smooth"});
+    // If the smooth scroll never started (iOS quirk), snap instantly.
+    setTimeout(() => {
+      if(Math.abs(window.scrollY - startY) < 4 && window.scrollY > 4){
+        window.scrollTo({top: 0});
+      }
+    }, 600);
+  });
+}
+
 // Fly the map to a track and open its popup (from the track list).
 /* Fly the map to a track. Sidebar cards pass openPopup=false because they
    open the event modal instead; marker taps use the compact popup. */
@@ -1460,6 +1483,7 @@ Promise.all([
     renderCalendar();
     renderTrackMap();
     wireWeekendToggle();
+    wireLogoHome();
     renderMediaSection(allEvents, mediaData);
     renderRecentSubmissions(allEvents, mediaData);
     wireCalendarSearch();

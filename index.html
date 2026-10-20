@@ -48,7 +48,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;0,900;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css">
-  <link rel="stylesheet" href="style.css?v=53">
+  <link rel="stylesheet" href="style.css?v=54">
   <link rel="stylesheet" href="featured-event.css?v=2">
 
   <script type="application/ld+json">
@@ -66,7 +66,9 @@
 
 <section class="hero">
   <nav class="nav">
-    <img class="nav-logo" src="assets/driftwest-3d-favicon-r1.webp" alt="DriftWest">
+    <a class="nav-logo-link" href="#" id="nav-logo-link" aria-label="DriftWest — back to top">
+      <img class="nav-logo" src="assets/driftwest-3d-favicon-r1.webp" alt="DriftWest">
+    </a>
 
     <div class="nav-links">
       <a href="#events">EVENTS</a>
@@ -263,7 +265,7 @@
 
 <script src="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js"></script>
 <script src="media.js?v=18"></script>
-<script src="script.js?v=44"></script>
+<script src="script.js?v=45"></script>
 
 <script>
   fetch("status.json")

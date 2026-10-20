@@ -51,6 +51,16 @@ body{
   z-index:100;
 }
 
+.nav-logo-link{
+  display:block;
+  line-height:0;
+  flex:0 0 auto;
+}
+
+.nav-logo-link:hover{
+  opacity:.85;
+}
+
 .nav-logo{
   height:40px;
   width:auto;
