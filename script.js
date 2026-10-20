@@ -1293,23 +1293,27 @@ function renderTrackMap(){
         .filter(e => new Date(e.end.replace(" ","T")) < now)
         .sort((a,b) => new Date(b.start.replace(" ","T")) - new Date(a.start.replace(" ","T")));
 
-      // Compact popup: next event only. The sidebar carries the full
-      // upcoming picture, so the popup stays small.
+      // All upcoming events at the track in a scrollable list — each row
+      // opens that event's modal. (Restored at Nick's request Oct 20; the
+      // Oct 19 redesign had cut this down to next-event-only.)
       let nextHtml = "";
       if(upcoming.length){
-        const next = upcoming[0];
-        const p = formatDateParts(next.start, next.end);
         nextHtml = `
-          <div class="map-popup-section">NEXT EVENT</div>
-          <button type="button" class="map-popup-event" onclick="openEventModal('${next.id}')">
-            <span class="map-popup-event-date">${p.month} ${p.day}</span>
-            <span class="map-popup-event-main">
-              <span class="map-popup-event-title">${next.title}</span>
-              <span class="map-popup-event-promoter">${next.promoter}</span>
-            </span>
-            <span class="map-popup-event-chevron">›</span>
-          </button>
-          ${upcoming.length > 1 ? `<div class="map-popup-meta">+ ${upcoming.length - 1} more upcoming · <a class="modal-link" href="#calendar">full calendar ›</a></div>` : ""}`;
+          <div class="map-popup-section">UPCOMING EVENTS · ${upcoming.length}</div>
+          <div class="map-popup-events">
+            ${upcoming.map(e => {
+              const p = formatDateParts(e.start, e.end);
+              return `
+                <button type="button" class="map-popup-event" onclick="openEventModal('${e.id}')">
+                  <span class="map-popup-event-date">${p.month} ${p.day}</span>
+                  <span class="map-popup-event-main">
+                    <span class="map-popup-event-title">${e.title}</span>
+                    <span class="map-popup-event-promoter">${e.promoter}</span>
+                  </span>
+                  <span class="map-popup-event-chevron">›</span>
+                </button>`;
+            }).join("")}
+          </div>`;
       }
 
       // No upcoming events: show the most recent past one, with a gallery

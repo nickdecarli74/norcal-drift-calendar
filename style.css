@@ -1010,6 +1010,14 @@ body{
   color:#e10600;
 }
 
+.map-popup-events{
+  max-height:230px;
+  overflow-y:auto;
+  overscroll-behavior:contain;
+  margin:6px 0 4px;
+  padding-right:4px;
+}
+
 .map-popup-event{
   display:flex;
   align-items:center;
