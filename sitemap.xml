@@ -650,6 +650,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://driftwest.net/events/bdr-2026-11-28/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://driftwest.net/events/gll-2026-11-28/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>

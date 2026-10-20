@@ -938,6 +938,15 @@ UID:mhc-2027-02-07@driftwestnet.com
 URL:https://mhcircuit.com/event/open-drift-day-10/
 END:VEVENT
 BEGIN:VEVENT
+DESCRIPTION:Promoter: Big Dawg Racing\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://www.instagram.com/jt_cant_drift\n\nOn the SMALL DRIFT PAD at Thunderhill (not the main track). $175 driver entry. Gates open 7:00 AM\, drivers meeting 8:30 AM\, track hot 9:00 AM - 5:00 PM. Registration is by DM to @jt_cant_drift on Instagram.
+DTEND:20261128T170000Z
+LOCATION:Thunderhill Raceway Park
+DTSTART:20261128T070000Z
+SUMMARY:Big Dawg Racing - Big Dawg Racing
+UID:bdr-2026-11-28@driftwestnet.com
+URL:https://www.instagram.com/jt_cant_drift
+END:VEVENT
+BEGIN:VEVENT
 DESCRIPTION:Promoter: RaceWorz\nLocation: Sonoma Raceway\nRegistration / Info: https://raceworzusa.com\n\n2-day event. Manually added by the site owner.
 DTEND:20260614T170000Z
 LOCATION:Sonoma Raceway
