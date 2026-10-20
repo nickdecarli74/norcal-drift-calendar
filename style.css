@@ -2481,9 +2481,13 @@ footer{
     flex-direction:column;
   }
   .tracks-layout .map-wrap{
+    /* flex:none: in a column layout the desktop flex-basis:0% would
+       override this height and collapse the map to zero on WebKit. */
+    flex:none;
     height:380px;
   }
   .tracks-sidebar{
+    flex:none;
     max-width:none;
   }
 }
