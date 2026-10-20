@@ -471,6 +471,15 @@ URL:https://driftcentral.com/registration
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://bayareadrifting.com/schedule\n\nWeekend. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.
+DTEND:20260117T170000Z
+LOCATION:Thunderhill Raceway Park
+DTSTART:20260116T080000Z
+SUMMARY:Bay Area Drifting - Thunderhill Drift School
+UID:bad-2026-01-16@driftwestnet.com
+URL:https://bayareadrifting.com/schedule
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://bayareadrifting.com/schedule\n\nWeekend. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.
 DTEND:20260419T170000Z
 LOCATION:Thunderhill Raceway Park
 DTSTART:20260418T080000Z
@@ -909,6 +918,15 @@ DTSTART:20260724T080000Z
 SUMMARY:Apple Valley Speedway - Ultimate Drifting Challenge Round 3
 UID:av-2026-07-24@driftwestnet.com
 URL:https://applevalleyspeedway.com/calendar/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://bayareadrifting.com/schedule\n\nWeekend. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.
+DTEND:20260808T170000Z
+LOCATION:Thunderhill Raceway Park
+DTSTART:20260807T080000Z
+SUMMARY:Bay Area Drifting - Thunderhill Drift School
+UID:bad-2026-08-07@driftwestnet.com
+URL:https://bayareadrifting.com/schedule
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Promoter: Musselman Honda Circuit\nLocation: Musselman Honda Circuit\nRegistration / Info: https://mhcircuit.com/event/open-drift-day-10/\n\nAuto-imported from Musselman Honda Circuit's calendar.
