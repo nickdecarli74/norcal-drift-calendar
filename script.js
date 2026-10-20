@@ -1234,7 +1234,9 @@ function renderTrackMap(){
       },
       layers: [
         {id: "esri-imagery", type: "raster", source: "esri-imagery"},
-        {id: "esri-reference", type: "raster", source: "esri-reference"}
+        // Contrast bump: the reference tiles are 256px rasters that upscale
+        // soft on retina screens; harder edges read as crisper text.
+        {id: "esri-reference", type: "raster", source: "esri-reference", paint: {"raster-contrast": 0.35}}
       ]
     },
     bounds: bounds,
