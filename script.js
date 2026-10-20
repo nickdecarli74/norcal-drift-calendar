@@ -1238,8 +1238,14 @@ function renderTrackMap(){
     const keepLabels = ["label_state", "label_city", "label_city_capital", "label_town", "label_village"];
     const keepBounds = ["boundary_2", "boundary_3"];
     // State names should already show in the default West Coast view
-    // (liberty only enables them at zoom 5).
-    if(map.getLayer("label_state")) map.setLayerZoomRange("label_state", 3.5, 8);
+    // (liberty only enables them at zoom 5, at 10px, where they lose
+    // placement collisions to city labels). Raise them above the city
+    // labels and size them up so they actually read.
+    if(map.getLayer("label_state")){
+      map.setLayerZoomRange("label_state", 3.5, 8);
+      map.setLayoutProperty("label_state", "text-size", 15);
+      map.moveLayer("label_state");
+    }
     map.getStyle().layers.forEach(l => {
       if(l.id === "esri-imagery") return;
       if(keepLabels.includes(l.id)){
@@ -1247,7 +1253,14 @@ function renderTrackMap(){
         map.setPaintProperty(l.id, "text-halo-color", "rgba(0,0,0,0.9)");
         map.setPaintProperty(l.id, "text-halo-width", 1.4);
       } else if(keepBounds.includes(l.id)){
-        map.setPaintProperty(l.id, "line-color", "rgba(255,255,255,0.8)");
+        map.setPaintProperty(l.id, "line-color", "rgba(255,255,255,0.85)");
+        // Liberty's boundary widths are ~1px ramps (county lines are
+        // dotted) — too faint on satellite. Give them real width.
+        if(l.id === "boundary_2") map.setPaintProperty(l.id, "line-width", 1.6);
+        if(l.id === "boundary_3"){
+          map.setPaintProperty(l.id, "line-width", 1);
+          map.setPaintProperty(l.id, "line-dasharray", [3, 2]);
+        }
       } else if(map.getLayoutProperty(l.id, "visibility") !== "none"){
         map.setLayoutProperty(l.id, "visibility", "none");
       }
