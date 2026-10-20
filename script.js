@@ -1246,6 +1246,9 @@ function renderTrackMap(){
       map.setLayoutProperty("label_state", "text-size", 15);
       map.moveLayer("label_state");
     }
+    // State/county borders live in boundary_3, which liberty only enables
+    // at zoom 5 — just above the default view. Lower it to match.
+    if(map.getLayer("boundary_3")) map.setLayerZoomRange("boundary_3", 3.5, 24);
     map.getStyle().layers.forEach(l => {
       if(l.id === "esri-imagery") return;
       if(keepLabels.includes(l.id)){
