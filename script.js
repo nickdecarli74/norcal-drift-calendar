@@ -1232,8 +1232,6 @@ function applyWeekendFilter(){
     stateEl.textContent = weekendFilterOn ? "ON" : "OFF";
     stateEl.classList.toggle("on", weekendFilterOn);
   }
-  const countEl = document.getElementById("map-weekend-count");
-  if(countEl) countEl.textContent = weekendFilterOn ? `· ${count} tracks` : "";
   const empty = document.getElementById("map-weekend-empty");
   if(empty) empty.hidden = !(weekendFilterOn && count === 0);
 }
