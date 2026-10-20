@@ -932,6 +932,55 @@ body{
   background:#050505;
 }
 
+.map-weekend-btn{
+  position:absolute;
+  top:14px;
+  right:14px;
+  z-index:600;
+  padding:10px 18px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.3);
+  background:rgba(0,0,0,.78);
+  backdrop-filter:blur(6px);
+  color:#fff;
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:17px;
+  font-weight:700;
+  font-style:italic;
+  letter-spacing:.12em;
+  cursor:pointer;
+}
+
+.map-weekend-btn:hover{
+  border-color:#e10600;
+}
+
+.map-weekend-btn.active{
+  background:#e10600;
+  border-color:#e10600;
+  color:#fff;
+}
+
+.map-weekend-empty{
+  position:absolute;
+  top:64px;
+  right:14px;
+  z-index:600;
+  padding:8px 14px;
+  border-radius:10px;
+  background:rgba(0,0,0,.82);
+  border:1px solid rgba(255,255,255,.18);
+  color:#ddd;
+  font-size:13px;
+  font-weight:600;
+}
+
+.drift-marker.marker-dim{
+  opacity:.13;
+  filter:grayscale(1);
+  pointer-events:none;
+}
+
 .map-wrap::before{
   content:"TRACKS";
   position:absolute;

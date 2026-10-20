@@ -1182,6 +1182,67 @@ document.addEventListener("keydown", (e) => {
 let trackMap = null;
 const trackMapMarkers = [];
 
+// --- This Weekend filter helpers
+// "This weekend" = the Friday through Sunday of the current week. On Fri,
+// Sat or Sun it's the weekend in progress; Mon–Thu it's the one coming up.
+function weekendRange(now){
+  const d = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const day = d.getDay();
+  let delta;
+  if(day === 5) delta = 0;        // Friday
+  else if(day === 6) delta = -1;  // Saturday
+  else if(day === 0) delta = -2;  // Sunday
+  else delta = 5 - day;           // Mon +4, Tue +3, Wed +2, Thu +1
+  const fri = new Date(d);
+  fri.setDate(d.getDate() + delta);
+  const mon = new Date(fri);
+  mon.setDate(fri.getDate() + 3);
+  return {fri, mon};
+}
+
+function eventInWeekend(e, range){
+  const s = new Date(e.start.replace(" ", "T"));
+  const en = new Date(e.end.replace(" ", "T"));
+  return en >= range.fri && s < range.mon;
+}
+// --- end This Weekend filter helpers
+
+let weekendFilterOn = false;
+
+function applyWeekendFilter(){
+  const range = weekendRange(new Date());
+  let count = 0;
+  trackMapMarkers.forEach(entry => {
+    const has = (entry.trackEvents || []).some(e => eventInWeekend(e, range));
+    if(has) count++;
+    const el = entry.marker.getElement();
+    el.classList.toggle("marker-dim", weekendFilterOn && !has);
+    if(weekendFilterOn && !has){
+      const popup = entry.marker.getPopup();
+      if(popup && popup.isOpen()) entry.marker.togglePopup();
+    }
+  });
+  const btn = document.getElementById("map-weekend-btn");
+  if(btn){
+    btn.classList.toggle("active", weekendFilterOn);
+    btn.setAttribute("aria-pressed", String(weekendFilterOn));
+  }
+  const countEl = document.getElementById("map-weekend-count");
+  if(countEl) countEl.textContent = weekendFilterOn ? ` · ${count}` : "";
+  const empty = document.getElementById("map-weekend-empty");
+  if(empty) empty.hidden = !(weekendFilterOn && count === 0);
+}
+
+function wireWeekendToggle(){
+  const btn = document.getElementById("map-weekend-btn");
+  if(!btn || btn.dataset.wired === "true") return;
+  btn.dataset.wired = "true";
+  btn.addEventListener("click", () => {
+    weekendFilterOn = !weekendFilterOn;
+    applyWeekendFilter();
+  });
+}
+
 // Fly the map to a track and open its popup (from the track list).
 /* Fly the map to a track. Sidebar cards pass openPopup=false because they
    open the event modal instead; marker taps use the compact popup. */
@@ -1356,7 +1417,7 @@ function renderTrackMap(){
         .setLngLat([track.lng, track.lat])
         .setPopup(new maplibregl.Popup({offset: 17, className: "track-popup"}).setHTML(popupHtml))
         .addTo(map);
-      trackMapMarkers.push({track, marker});
+      trackMapMarkers.push({track, marker, trackEvents});
     });
   });
 
@@ -1395,6 +1456,7 @@ Promise.all([
     renderCalendarFilterBar();
     renderCalendar();
     renderTrackMap();
+    wireWeekendToggle();
     renderMediaSection(allEvents, mediaData);
     renderRecentSubmissions(allEvents, mediaData);
     wireCalendarSearch();
