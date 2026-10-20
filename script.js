@@ -1235,9 +1235,9 @@ function renderTrackMap(){
   map.addControl(new maplibregl.NavigationControl({showCompass: false}), "top-left");
   trackMap = map;
 
-  // Track name tags: fade in once zoomed in close (zoom 8+), so the
-  // default West Coast view stays clean.
-  const updateLabels = () => mapEl.classList.toggle("labels-on", map.getZoom() >= 8);
+  // Track name tags: fade in once zoomed a little (4.5+), so the
+  // labels appear without much zooming in.
+  const updateLabels = () => mapEl.classList.toggle("labels-on", map.getZoom() >= 4.5);
   map.on("zoom", updateLabels);
   map.on("load", updateLabels);
 
