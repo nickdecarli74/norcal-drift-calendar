@@ -1237,6 +1237,9 @@ function renderTrackMap(){
 
     const keepLabels = ["label_state", "label_city", "label_city_capital", "label_town", "label_village"];
     const keepBounds = ["boundary_2", "boundary_3"];
+    // State names should already show in the default West Coast view
+    // (liberty only enables them at zoom 5).
+    if(map.getLayer("label_state")) map.setLayerZoomRange("label_state", 3.5, 8);
     map.getStyle().layers.forEach(l => {
       if(l.id === "esri-imagery") return;
       if(keepLabels.includes(l.id)){
@@ -1244,7 +1247,7 @@ function renderTrackMap(){
         map.setPaintProperty(l.id, "text-halo-color", "rgba(0,0,0,0.9)");
         map.setPaintProperty(l.id, "text-halo-width", 1.4);
       } else if(keepBounds.includes(l.id)){
-        map.setPaintProperty(l.id, "line-color", "rgba(255,255,255,0.6)");
+        map.setPaintProperty(l.id, "line-color", "rgba(255,255,255,0.8)");
       } else if(map.getLayoutProperty(l.id, "visibility") !== "none"){
         map.setLayoutProperty(l.id, "visibility", "none");
       }
