@@ -1211,6 +1211,8 @@ function renderTrackMap(){
   );
 
   // Esri World Imagery: free satellite basemap, no API key needed.
+  // The Reference overlay (transparent PNGs) draws state/county lines and
+  // city labels on top, so the satellite view stays orientable from afar.
   const map = new maplibregl.Map({
     container: "track-map",
     style: {
@@ -1222,9 +1224,18 @@ function renderTrackMap(){
           tileSize: 256,
           maxzoom: 19,
           attribution: "Imagery © Esri, Maxar, Earthstar Geographics"
+        },
+        "esri-reference": {
+          type: "raster",
+          tiles: ["https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}"],
+          tileSize: 256,
+          maxzoom: 19
         }
       },
-      layers: [{id: "esri-imagery", type: "raster", source: "esri-imagery"}]
+      layers: [
+        {id: "esri-imagery", type: "raster", source: "esri-imagery"},
+        {id: "esri-reference", type: "raster", source: "esri-reference"}
+      ]
     },
     bounds: bounds,
     fitBoundsOptions: {padding: 55},
