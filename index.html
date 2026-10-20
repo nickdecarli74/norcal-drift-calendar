@@ -48,7 +48,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;0,900;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css">
-  <link rel="stylesheet" href="style.css?v=50">
+  <link rel="stylesheet" href="style.css?v=51">
   <link rel="stylesheet" href="featured-event.css?v=2">
 
   <script type="application/ld+json">
@@ -150,7 +150,10 @@
     <div class="tracks-layout">
       <div class="map-wrap">
         <div id="track-map"></div>
-        <button type="button" id="map-weekend-btn" class="map-weekend-btn" aria-pressed="false">THIS WEEKEND<span id="map-weekend-count"></span></button>
+        <div class="map-weekend-ctl">
+          <div class="map-weekend-label" aria-hidden="true">FILTER TO</div>
+          <button type="button" id="map-weekend-btn" class="map-weekend-btn" aria-pressed="false">THIS WEEKEND<span id="map-weekend-count"></span></button>
+        </div>
         <div id="map-weekend-empty" class="map-weekend-empty" hidden>No events this weekend (Fri–Sun)</div>
       </div>
 
