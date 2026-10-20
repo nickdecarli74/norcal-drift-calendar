@@ -1244,6 +1244,19 @@ events:
   timeDetail:
   - 'Sat, Nov 28: Hours TBD'
   - 'Sun, Nov 29: Hours TBD'
+- id: bdr-2026-11-28
+  addedAt: '2026-10-20T20:49:00+00:00'
+  locked: true
+  title: Big Dawg Racing
+  promoter: Big Dawg Racing
+  start: 2026-11-28 07:00
+  end: 2026-11-28 17:00
+  location: Thunderhill Raceway Park
+  url: https://www.instagram.com/jt_cant_drift
+  registerUrl: https://www.instagram.com/jt_cant_drift
+  notes: On the SMALL DRIFT PAD at Thunderhill (not the main track). $175 driver
+    entry. Gates open 7:00 AM, drivers meeting 8:30 AM, track hot 9:00 AM - 5:00
+    PM. Registration is by DM to @jt_cant_drift on Instagram.
 - id: dc-2026-11-29
   addedAt: '2026-08-04T00:15:00+00:00'
   title: Drift Central
