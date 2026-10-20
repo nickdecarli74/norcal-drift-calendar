@@ -1273,9 +1273,10 @@ function renderTrackMap(){
   map.addControl(new maplibregl.NavigationControl({showCompass: false}), "top-left");
   trackMap = map;
 
-  // Track name tags: fade in once zoomed a little (4.5+), so the
-  // labels appear without much zooming in.
-  const updateLabels = () => mapEl.classList.toggle("labels-on", map.getZoom() >= 4.5);
+  // Track name tags: fade in around zoom 6 — the vector state/city
+  // labels handle orientation from afar, so track tags wait until
+  // you're zooming in on an area.
+  const updateLabels = () => mapEl.classList.toggle("labels-on", map.getZoom() >= 6);
   map.on("zoom", updateLabels);
   map.on("load", updateLabels);
 
