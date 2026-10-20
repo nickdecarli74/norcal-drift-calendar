@@ -2491,3 +2491,30 @@ footer{
     max-width:none;
   }
 }
+
+/* Track name tags: hidden until zoomed in (the map gets .labels-on
+   at zoom 8+). Small black pill above the dot, DriftWest style. */
+.marker-label{
+  position:absolute;
+  left:50%;
+  bottom:100%;
+  transform:translateX(-50%) translateY(-4px);
+  white-space:nowrap;
+  background:rgba(0,0,0,.88);
+  border:1px solid rgba(255,255,255,.22);
+  border-left:3px solid #e10600;
+  color:#fff;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.02em;
+  padding:3px 8px;
+  border-radius:6px;
+  pointer-events:none;
+  opacity:0;
+  transition:opacity .25s;
+  z-index:1;
+}
+
+#track-map.labels-on .marker-label{
+  opacity:1;
+}

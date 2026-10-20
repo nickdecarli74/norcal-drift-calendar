@@ -1235,6 +1235,12 @@ function renderTrackMap(){
   map.addControl(new maplibregl.NavigationControl({showCompass: false}), "top-left");
   trackMap = map;
 
+  // Track name tags: fade in once zoomed in close (zoom 8+), so the
+  // default West Coast view stays clean.
+  const updateLabels = () => mapEl.classList.toggle("labels-on", map.getZoom() >= 8);
+  map.on("zoom", updateLabels);
+  map.on("load", updateLabels);
+
   map.on("load", () => {
     TRACKS.forEach(track => {
       const trackEvents = allEvents.filter(e => findTrackForEvent(e) === track);
@@ -1293,9 +1299,14 @@ function renderTrackMap(){
 
       // Calm markers: small red dot when the track has upcoming events,
       // quiet gray dot when it doesn't. No pulse, no count badges.
+      // The name tag fades in once zoomed in (see the map zoom handler).
       const el = document.createElement("div");
       el.className = "drift-marker" + (upcoming.length ? "" : " drift-marker--quiet");
       el.innerHTML = "<div class='marker-core'></div>";
+      const label = document.createElement("span");
+      label.className = "marker-label";
+      label.textContent = track.name;
+      el.appendChild(label);
 
       const marker = new maplibregl.Marker({element: el})
         .setLngLat([track.lng, track.lat])
