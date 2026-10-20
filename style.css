@@ -2518,3 +2518,27 @@ footer{
 #track-map.labels-on .marker-label{
   opacity:1;
 }
+
+/* Pulse ring on active (red) markers only — gray quiet markers don't get one. */
+.marker-pulse{
+  position:absolute;
+  left:1px;
+  top:1px;
+  width:28px;
+  height:28px;
+  border-radius:50%;
+  background:rgba(225,6,0,.28);
+  animation:pulse 1.8s infinite;
+  z-index:1;
+}
+
+@keyframes pulse{
+  0%{
+    transform:scale(.8);
+    opacity:.9;
+  }
+  100%{
+    transform:scale(1.9);
+    opacity:0;
+  }
+}

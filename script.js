@@ -1310,12 +1310,13 @@ function renderTrackMap(){
         ${pastHtml}
       `;
 
-      // Calm markers: small red dot when the track has upcoming events,
-      // quiet gray dot when it doesn't. No pulse, no count badges.
+      // Calm markers: red dot when the track has upcoming events (with the
+      // pulse Nick likes), quiet gray dot when it doesn't. No count badges.
       // The name tag fades in once zoomed in (see the map zoom handler).
       const el = document.createElement("div");
       el.className = "drift-marker" + (upcoming.length ? "" : " drift-marker--quiet");
-      el.innerHTML = "<div class='marker-core'></div>";
+      el.innerHTML = "<div class='marker-core'></div>"
+        + (upcoming.length ? "<div class='marker-pulse'></div>" : "");
       const label = document.createElement("span");
       label.className = "marker-label";
       label.textContent = track.name;
