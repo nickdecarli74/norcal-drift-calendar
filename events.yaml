@@ -912,6 +912,19 @@ events:
   notes: Day 2 of 2. DM @fxdwld on Instagram to lock in a driver spot. Manually added
     by the site owner.
   calendarLabel: FREEMODE 5
+- id: up-2026-10-23
+  addedAt: '2026-10-21T04:23:00+00:00'
+  locked: true
+  title: Uprise BAD D-Slide
+  promoter: Uprise
+  start: 2026-10-23 09:00
+  end: 2026-10-23 17:00
+  location: Thunderhill Raceway Park
+  url: https://www.instagram.com/notzenki
+  registerUrl: https://www.instagram.com/notzenki
+  notes: Drivers meeting 8:55 AM, track hot 9:00 AM - 5:00 PM. Running Good Luck League's
+    Ladies Class layout. Thunder Hill Cafe closes at 2:00 PM. Tire service available
+    at Garage 16, $30 per tire. Registration is by DM to @notzenki on Instagram.
 - id: mhc-2026-10-23
   addedAt: '2026-08-03T00:20:00+00:00'
   title: Spooky Drift 6
@@ -923,20 +936,6 @@ events:
   notes: 3-day event (Fri-Sun, 5:00 PM - 10:00 PM each day). Manually corrected by
     the site owner.
   locked: true
-- id: up-2026-10-23
-  addedAt: '2026-10-21T04:23:00+00:00'
-  locked: true
-  title: Uprise BAD D-Slide
-  promoter: Uprise
-  start: 2026-10-23 09:00
-  end: 2026-10-23 17:00
-  location: Thunderhill Raceway Park
-  url: https://www.instagram.com/notzenki
-  registerUrl: https://www.instagram.com/notzenki
-  notes: Drivers meeting 8:55 AM, track hot 9:00 AM - 5:00 PM. Running Good Luck
-    League's Ladies Class layout. Thunder Hill Cafe closes at 2:00 PM. Tire
-    service available at Garage 16, $30 per tire. Registration is by DM to
-    @notzenki on Instagram.
 - id: sd-2026-10-24
   addedAt: '2026-07-08T00:00:00+00:00'
   title: SuperD Cup
@@ -1231,6 +1230,19 @@ events:
   location: Salinas Municipal Airport
   url: https://driftcentral.com/registration
   notes: Auto-imported from Drift Central schedule.
+- id: bdr-2026-11-28
+  addedAt: '2026-10-20T20:49:00+00:00'
+  locked: true
+  title: Big Dawg Racing
+  promoter: Big Dawg Racing
+  start: 2026-11-28 07:00
+  end: 2026-11-28 17:00
+  location: Thunderhill Raceway Park
+  url: https://www.instagram.com/jt_cant_drift
+  registerUrl: https://www.instagram.com/jt_cant_drift
+  notes: On the SMALL DRIFT PAD at Thunderhill (not the main track). $175 driver entry.
+    Gates open 7:00 AM, drivers meeting 8:30 AM, track hot 9:00 AM - 5:00 PM. Registration
+    is by DM to @jt_cant_drift on Instagram.
 - id: gll-2026-11-28
   addedAt: '2026-08-01T00:20:00+00:00'
   locked: true
@@ -1258,19 +1270,6 @@ events:
   timeDetail:
   - 'Sat, Nov 28: Hours TBD'
   - 'Sun, Nov 29: Hours TBD'
-- id: bdr-2026-11-28
-  addedAt: '2026-10-20T20:49:00+00:00'
-  locked: true
-  title: Big Dawg Racing
-  promoter: Big Dawg Racing
-  start: 2026-11-28 07:00
-  end: 2026-11-28 17:00
-  location: Thunderhill Raceway Park
-  url: https://www.instagram.com/jt_cant_drift
-  registerUrl: https://www.instagram.com/jt_cant_drift
-  notes: On the SMALL DRIFT PAD at Thunderhill (not the main track). $175 driver
-    entry. Gates open 7:00 AM, drivers meeting 8:30 AM, track hot 9:00 AM - 5:00
-    PM. Registration is by DM to @jt_cant_drift on Instagram.
 - id: dc-2026-11-29
   addedAt: '2026-08-04T00:15:00+00:00'
   title: Drift Central
