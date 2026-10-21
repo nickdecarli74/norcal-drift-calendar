@@ -794,6 +794,15 @@ UID:nava-2026-08-28@driftwestnet.com
 URL:https://www.instagram.com/reel/DX9wqVBRgvz/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==
 END:VEVENT
 BEGIN:VEVENT
+DESCRIPTION:Promoter: Evergreen Drift\nLocation: Evergreen Speedway\nRegistration / Info: https://evergreenspeedway.com/events/october-24th-halloween-open-drift-drift-games/\n\nBack gate opens 1:00 PM\, pit meeting 2:30 PM\, track hot 3:00 PM\, track cold 8:55 PM. Halloween Drift Games start at 7:00 PM when the lights go out (no extra charge to join). Prizes for best costume and best decorated car. Driver registration $91 online (fees included) or $85 at the gate\; crew pit passes $23 online / $20 at the gate. Registration via Pit Pay or at the back gate.
+DTEND:20261024T210000Z
+LOCATION:Evergreen Speedway
+DTSTART:20261024T130000Z
+SUMMARY:Evergreen Drift - Halloween Open Drift & Drift Games
+UID:ed-2026-10-24@driftwestnet.com
+URL:https://evergreenspeedway.com/events/october-24th-halloween-open-drift-drift-games/
+END:VEVENT
+BEGIN:VEVENT
 DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main Track\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\nManually verified from Apple Valley Speedway's calendar.
 DTEND:20261206T170000Z
 LOCATION:Main Track
