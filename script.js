@@ -171,6 +171,14 @@ const TRACKS = [
     lat: 34.8726,
     lng: -118.2613,
     search: ["willow springs"]
+  },
+  {
+    name: "Evergreen Speedway",
+    short: "Evergreen",
+    location: "Monroe, WA",
+    lat: 47.8686,
+    lng: -121.9872,
+    search: ["evergreen"]
   }
 ];
 
