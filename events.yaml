@@ -936,22 +936,6 @@ events:
   notes: 3-day event (Fri-Sun, 5:00 PM - 10:00 PM each day). Manually corrected by
     the site owner.
   locked: true
-- id: ed-2026-10-24
-  addedAt: '2026-10-21T14:46:00+00:00'
-  locked: true
-  title: Halloween Open Drift & Drift Games
-  promoter: Evergreen Drift
-  start: 2026-10-24 13:00
-  end: 2026-10-24 21:00
-  location: Evergreen Speedway
-  url: https://evergreenspeedway.com/events/october-24th-halloween-open-drift-drift-games/
-  registerUrl: https://evergreenspeedway.com/events/october-24th-halloween-open-drift-drift-games/
-  notes: Back gate opens 1:00 PM, pit meeting 2:30 PM, track hot 3:00 PM, track
-    cold 8:55 PM. Halloween Drift Games start at 7:00 PM when the lights go out
-    (no extra charge to join). Prizes for best costume and best decorated car.
-    Driver registration $91 online (fees included) or $85 at the gate; crew pit
-    passes $23 online / $20 at the gate. Registration via Pit Pay or at the back
-    gate.
 - id: sd-2026-10-24
   addedAt: '2026-07-08T00:00:00+00:00'
   title: SuperD Cup
@@ -972,6 +956,21 @@ events:
   notes: Day 1 of 2. Drivers $100 Sat only / $160 both days, spectators $10 (kids
     12 and under free), ridealongs $10. On-site camping, food vendors, tire service.
     Manually added by the site owner.
+- id: ed-2026-10-24
+  addedAt: '2026-10-21T14:46:00+00:00'
+  locked: true
+  title: Halloween Open Drift & Drift Games
+  promoter: Evergreen Drift
+  start: 2026-10-24 13:00
+  end: 2026-10-24 21:00
+  location: Evergreen Speedway
+  url: https://evergreenspeedway.com/events/october-24th-halloween-open-drift-drift-games/
+  registerUrl: https://evergreenspeedway.com/events/october-24th-halloween-open-drift-drift-games/
+  notes: Back gate opens 1:00 PM, pit meeting 2:30 PM, track hot 3:00 PM, track cold
+    8:55 PM. Halloween Drift Games start at 7:00 PM when the lights go out (no extra
+    charge to join). Prizes for best costume and best decorated car. Driver registration
+    $91 online (fees included) or $85 at the gate; crew pit passes $23 online / $20
+    at the gate. Registration via Pit Pay or at the back gate.
 - id: sd-2026-10-25
   addedAt: '2026-07-08T00:00:00+00:00'
   title: SuperD Cup - Day 2
