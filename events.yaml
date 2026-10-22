@@ -1485,22 +1485,6 @@ events:
   location: Musselman Honda Circuit
   url: https://mhcircuit.com/event/open-drift-day-11/
   notes: Auto-imported from Musselman Honda Circuit's calendar.
-- id: av-2027-03-20
-  addedAt: '2026-10-17T01:05:43+00:00'
-  locked: true
-  title: GSK Bash 5
-  promoter: Gaijin Smash
-  start: 2027-03-20 08:00
-  end: 2027-03-21 17:00
-  location: Main & Skid
-  url: https://www.instagram.com/p/Deiz7PMJjW4/
-  registerUrl: https://www.instagram.com/okizona.jp
-  notes: 5th invitational Gaijin Smash Bash. 2-day event — skid pad + main track.
-    Invitational — DM @okizona.jp on Instagram if interested in driving. Hours not
-    yet confirmed. Photo by @doctoredgarage.
-  timeDetail:
-  - 'Sat, Mar 20: Hours TBD'
-  - 'Sun, Mar 21: Hours TBD'
 - id: mhc-2027-04-04
   addedAt: '2026-08-03T01:05:00+00:00'
   title: Open Drift Day
