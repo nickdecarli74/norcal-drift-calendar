@@ -205,9 +205,13 @@ function eventSpansDay(e, dateKey){
   return dateKey >= startDate && dateKey <= endDate;
 }
 
-// A grouped event is still "upcoming" while any of its days hasn't started yet.
+// A grouped event is still "upcoming" while it hasn't ended yet, so a
+// multi-day event in progress still shows instead of dropping out
+// mid-weekend. (Single-entry multi-day events have no later day entry, so
+// the end check is what keeps them visible. Matches the map popup test.)
 function groupHasUpcomingDay(g, now){
-  return g.days.some(d => new Date(d.start.replace(" ","T")) >= now);
+  return g.days.some(d => new Date(d.start.replace(" ","T")) >= now)
+      || new Date(g.end.replace(" ","T")) >= now;
 }
 
 const PROMOTER_ABBREV = {
