@@ -20,6 +20,7 @@ import re
 import shutil
 from datetime import date, datetime, timedelta
 from urllib.parse import urlparse
+from zoneinfo import ZoneInfo
 
 SITE = "https://driftwest.net"
 EVENTS_DIR = "events"
@@ -292,9 +293,12 @@ def event_json_ld(group, canonical, date_full):
         "organizer": {"@type": "Organization", "name": group.get("promoter", "DriftWest")},
     }
     # Only future/ongoing events are "scheduled"; past ones simply omit status.
+    # Event times are West Coast wall-clock: compare against PT, not the server
+    # clock (UTC), or same-day events lose their scheduled status hours early.
     try:
-        end_dt = datetime.strptime(group["end"][:16], "%Y-%m-%d %H:%M")
-        if end_dt >= datetime.now():
+        end_dt = datetime.strptime(group["end"][:16], "%Y-%m-%d %H:%M").replace(
+            tzinfo=ZoneInfo("America/Los_Angeles"))
+        if end_dt >= datetime.now(ZoneInfo("America/Los_Angeles")):
             data["eventStatus"] = "https://schema.org/EventScheduled"
     except ValueError:
         pass
