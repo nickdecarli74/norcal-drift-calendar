@@ -975,6 +975,7 @@ events:
 - id: nnd-2026-10-24
   addedAt: '2026-10-24T17:37:00+00:00'
   locked: true
+  featuredNext: true
   title: No Name Drift
   promoter: No Name Drift
   start: 2026-10-24 09:00
