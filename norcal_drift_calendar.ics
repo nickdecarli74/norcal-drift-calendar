@@ -632,6 +632,14 @@ UID:fxd-2026-10-18@driftwestnet.com
 URL:https://www.instagram.com/fxdwld/
 END:VEVENT
 BEGIN:VEVENT
+DESCRIPTION:Promoter: GRIDLIFE\nLocation: Thunderhill Raceway Park\nRegistration / Info: \n\nFeaturing the WRL 25 Hours of Thunderhill. Kicks off the 2027 GRIDLIFE season — full weekend of racing\, time attack\, drifting and community. Hours TBD. Announced by @gridlifeofficial.
+DTEND:20270404T170000Z
+LOCATION:Thunderhill Raceway Park
+DTSTART:20270402T080000Z
+SUMMARY:GRIDLIFE - GRIDLIFE Thunderhill
+UID:gl-2027-04-02@driftwestnet.com
+END:VEVENT
+BEGIN:VEVENT
 DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main Track\nRegistration / Info: http://www.corner-exit.com/\n\nManually verified from Apple Valley Speedway's calendar.
 DTEND:20261011T170000Z
 LOCATION:Main Track

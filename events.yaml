@@ -1505,6 +1505,17 @@ events:
   location: Musselman Honda Circuit
   url: https://mhcircuit.com/event/open-drift-day-11/
   notes: Auto-imported from Musselman Honda Circuit's calendar.
+- id: gl-2027-04-02
+  addedAt: '2026-10-27T14:56:41.327936+00:00'
+  locked: true
+  title: GRIDLIFE Thunderhill
+  promoter: GRIDLIFE
+  start: 2027-04-02 08:00
+  end: 2027-04-04 17:00
+  location: Thunderhill Raceway Park
+  notes: Featuring the WRL 25 Hours of Thunderhill. Kicks off the 2027 GRIDLIFE
+    season — full weekend of racing, time attack, drifting and community. Hours
+    TBD. Announced by @gridlifeofficial.
 - id: mhc-2027-04-04
   addedAt: '2026-08-03T01:05:00+00:00'
   title: Open Drift Day
