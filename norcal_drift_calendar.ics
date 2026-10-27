@@ -2,7 +2,7 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
-DESCRIPTION:Promoter: Villains Sportsland\nLocation: Villains Sportsland\nRegistration / Info: https://villainssportsland.com/events\n\nDay 1 of 2 (2026 Season Closer). Drivers meeting 11:30AM\, track runs until 10PM. Drivers $165/weekend. Spectators $20/day or $40/weekend. Free camping. Pit areas are first-come first-serve. 1212 Middle Waitsburg Rd\, Walla Walla\, WA. Manually added by the site owner.
+DESCRIPTION:Promoter: Villains Sportsland\nLocation: Villains Sportsland\nRegistration / Info: https://villainssportsland.com/events\n\nDay 1 of 2 (2026 Season Closer). Drivers meeting 11:30AM\, track hot 12PM-10PM. Drivers $165/weekend. Spectators $20/day or $40/weekend\, kids 16 and under free. Free camping. Pit areas are first-come first-serve. 1212 Middle Waitsburg Rd\, Walla Walla\, WA. Manually added by the site owner.
 DTEND:20261114T220000Z
 LOCATION:Villains Sportsland
 DTSTART:20261114T100000Z
@@ -865,7 +865,7 @@ UID:mhc-2027-03-07@driftwestnet.com
 URL:https://mhcircuit.com/event/open-drift-day-11/
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Promoter: Villains Sportsland\nLocation: Villains Sportsland\nRegistration / Info: https://villainssportsland.com/events\n\nDay 2 of 2 (2026 Season Closer). Track opens 10AM\, full course until 3PM. Manually added by the site owner.
+DESCRIPTION:Promoter: Villains Sportsland\nLocation: Villains Sportsland\nRegistration / Info: https://villainssportsland.com/events\n\nDay 2 of 2 (2026 Season Closer). Track opens 10AM\, full course until 3PM. Spectators $20/day or $40/weekend\, kids 16 and under free. Manually added by the site owner.
 DTEND:20261115T150000Z
 LOCATION:Villains Sportsland
 DTSTART:20261115T100000Z
