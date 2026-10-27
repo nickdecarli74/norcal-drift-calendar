@@ -614,15 +614,6 @@ UID:av-2026-07-10@driftwestnet.com
 URL:https://applevalleyspeedway.com/calendar/
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Promoter: SuperD\nLocation: Apple Valley Speedway\nRegistration / Info: https://super-d.net/pages/super-d-cup\n\nComp Day - gates 8:00 AM\, drivers meeting 8:30 AM\, track hot 9:00 AM\, qualifying 12:00-1:00 PM\, Top 16 announcement 1:15 PM\, Top 16 start 1:30 PM\, finish 3:00 PM\, awards 3:15 PM\, open track 3:30-5:00 PM. Spectators $25 at the gate. SuperD schedule manually verified from super-d.net.
-DTEND:20261025T170000Z
-LOCATION:Apple Valley Speedway
-DTSTART:20261025T080000Z
-SUMMARY:SuperD - SuperD Cup - Day 2
-UID:sd-2026-10-25@driftwestnet.com
-URL:https://super-d.net/pages/super-d-cup
-END:VEVENT
-BEGIN:VEVENT
 DESCRIPTION:Promoter: fxdwld\nLocation: Affinity Circuit\nRegistration / Info: https://www.instagram.com/fxdwld/\n\nDay 2 of 2. DM @fxdwld on Instagram to lock in a driver spot. Manually added by the site owner.
 DTEND:20261018T170000Z
 LOCATION:Affinity Circuit
@@ -1127,7 +1118,7 @@ URL:https://applevalleyspeedway.com/calendar/
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Promoter: SuperD\nLocation: Apple Valley Speedway\nRegistration / Info: https://super-d.net/pages/super-d-cup\n\nSuperD schedule manually verified from super-d.net. Comp Day (Sun Oct 25) - gates 8:00 AM\, drivers meeting 8:30 AM\, track hot 9:00 AM\, qualifying 12:00-1:00 PM\, Top 16 announcement 1:15 PM\, Top 16 start 1:30 PM\, finish 3:00 PM\, awards 3:15 PM\, open track 3:30-5:00 PM. Spectators $25 at the gate.
-DTEND:20261024T170000Z
+DTEND:20261025T170000Z
 LOCATION:Apple Valley Speedway
 DTSTART:20261024T080000Z
 SUMMARY:SuperD - SuperD Cup
