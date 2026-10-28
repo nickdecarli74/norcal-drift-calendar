@@ -614,6 +614,15 @@ UID:av-2026-07-10@driftwestnet.com
 URL:https://applevalleyspeedway.com/calendar/
 END:VEVENT
 BEGIN:VEVENT
+DESCRIPTION:Promoter: SuperD\nLocation: Apple Valley Speedway\nRegistration / Info: https://super-d.net/pages/schedule\n\nSuperD schedule manually verified from super-d.net.
+DTEND:20261025T170000Z
+LOCATION:Apple Valley Speedway
+DTSTART:20261025T080000Z
+SUMMARY:SuperD - SuperD Cup - Day 2
+UID:sd-2026-10-25@driftwestnet.com
+URL:https://super-d.net/pages/schedule
+END:VEVENT
+BEGIN:VEVENT
 DESCRIPTION:Promoter: fxdwld\nLocation: Affinity Circuit\nRegistration / Info: https://www.instagram.com/fxdwld/\n\nDay 2 of 2. DM @fxdwld on Instagram to lock in a driver spot. Manually added by the site owner.
 DTEND:20261018T170000Z
 LOCATION:Affinity Circuit
@@ -1052,6 +1061,15 @@ DTSTART:20260821T140000Z
 SUMMARY:Apple Valley Speedway - Backie Bonanza III
 UID:av-2026-08-21@driftwestnet.com
 URL:https://www.instagram.com/p/DZc_6iKiM3C/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: SuperD\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://super-d.net/pages/schedule\n\nSuperD schedule manually verified from super-d.net.
+DTEND:20261129T170000Z
+LOCATION:Thunderhill Raceway Park
+DTSTART:20261129T080000Z
+SUMMARY:SuperD - D-Day
+UID:sd-2026-11-29@driftwestnet.com
+URL:https://super-d.net/pages/schedule
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Promoter: NOTADRIFT\nLocation: Big Skid Pad\, Thunderhill Raceway Park\nRegistration / Info: https://instagram.com/notacargirl\n\n$170 per spot. Hosted by @notadriftevent. Manually added by the site owner.
