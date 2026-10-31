@@ -1013,6 +1013,7 @@ events:
     Manually added by the site owner.
 - id: av-2026-10-30
   addedAt: '2026-08-14T00:00:00+00:00'
+  locked: true
   title: Grassroots Drift Days
   promoter: Apple Valley Speedway
   start: 2026-10-30 09:00
@@ -1026,15 +1027,17 @@ events:
     the lights until 11 PM. Contact @cuba2chaka. Manually updated by the site owner.
 - id: av-2026-10-31
   addedAt: '2026-07-31T14:35:00+00:00'
+  locked: true
   title: Soso Halloween Bash
   promoter: Apple Valley Speedway
   start: 2026-10-31 08:00
-  end: 2026-10-31 17:00
+  end: 2026-10-31 18:00
   location: Main & Skid
   url: https://applevalleyspeedway.com/calendar/
   notes: Manually verified from Apple Valley Speedway's calendar.
 - id: nd-2026-10-31
   addedAt: '2026-08-27T20:56:20+00:00'
+  locked: true
   title: NOTADRIFT Halloween Event
   promoter: NOTADRIFT
   start: 2026-10-31 09:00
@@ -1044,6 +1047,7 @@ events:
   notes: $170 per spot. Hosted by @notadriftevent. Manually added by the site owner.
 - id: mill-2026-10-31
   addedAt: '2026-09-21T15:00:00+00:00'
+  locked: true
   title: Halloween Drift Day
   promoter: The Mill Drift Track
   start: 2026-10-31 09:00
@@ -1055,15 +1059,17 @@ events:
     site. 2210 Tamarack St, Sweet Home, OR. Manually added by the site owner.
 - id: av-2026-11-01
   addedAt: '2026-07-31T14:40:00+00:00'
+  locked: true
   title: KINOD Miataween
   promoter: Apple Valley Speedway
   start: 2026-11-01 08:00
-  end: 2026-11-01 17:00
+  end: 2026-11-01 18:00
   location: Main & Skid
   url: https://applevalleyspeedway.com/calendar/
   notes: Manually verified from Apple Valley Speedway's calendar.
 - id: mhc-2026-11-01
   addedAt: '2026-08-03T00:35:00+00:00'
+  locked: true
   title: Open Drift Day
   promoter: Musselman Honda Circuit
   start: 2026-11-01 10:00
