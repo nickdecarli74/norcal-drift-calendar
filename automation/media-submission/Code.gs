@@ -18,6 +18,18 @@
  * the rare exact-same-second race retries once, and the PR-conflict watch
  * (see repo cron) covers anything left over.
  *
+ * Duplicates are dropped (added Nov 1, 2026): submitters get no confirmation
+ * and nothing appears publicly until a PR merges, so the same link for the
+ * same event sometimes arrives twice (VSVcinema, Nov 1, 2026: two identical
+ * submissions 19 seconds apart became PRs #111/#112). Two guards now run
+ * inside submitToBranch_: the whole route-and-commit sequence is serialized
+ * with LockService (so a near-simultaneous pair can't both find "no open
+ * PR" and each open their own), and before anything is committed the
+ * submission's link is checked against media.json as it exists on the target
+ * branch - a same-link/same-event match is skipped, any branch created for
+ * it is deleted again, and the owner gets a "duplicate skipped" email
+ * (different subject from a normal submission email, on purpose).
+ *
  * Submissions arrive two ways: someone filling out the live Google Form
  * directly (onFormSubmit, triggered on Sheet row add), or media.js's on-site
  * submit form on media.html POSTing JSON straight to doPost(e) below (see
@@ -88,12 +100,19 @@ function onFormSubmit(e) {
     var token = getGithubToken_();
     var result = submitToBranch_(token, eventId, submission, name, role);
 
-    sendOwnerEmail_(result.prUrl, {
-      name: name, role: role, link: link, featured: featuredAnswer,
-      contact: contact, instagram: igFromContact,
-      eventId: eventId, eventAnswer: eventAnswer,
-      addedToExistingPr: !result.isNewPr
-    });
+    if (result.duplicate) {
+      sendDuplicateEmail_({
+        name: name, role: role, link: link, contact: contact,
+        eventId: eventId, prUrl: result.prUrl
+      });
+    } else {
+      sendOwnerEmail_(result.prUrl, {
+        name: name, role: role, link: link, featured: featuredAnswer,
+        contact: contact, instagram: igFromContact,
+        eventId: eventId, eventAnswer: eventAnswer,
+        addedToExistingPr: !result.isNewPr
+      });
+    }
   } catch (err) {
     sendAlertEmail_(err, raw);
   }
@@ -144,14 +163,21 @@ function doPost(e) {
     var token = getGithubToken_();
     var result = submitToBranch_(token, eventId, submission, name, role);
 
-    sendOwnerEmail_(result.prUrl, {
-      name: name, role: role, link: link, featured: featuredAnswer,
-      contact: contact, instagram: igFromContact,
-      eventId: eventId, eventAnswer: "(submitted via on-site form, not the Google Form)",
-      addedToExistingPr: !result.isNewPr
-    });
+    if (result.duplicate) {
+      sendDuplicateEmail_({
+        name: name, role: role, link: link, contact: contact,
+        eventId: eventId, prUrl: result.prUrl
+      });
+    } else {
+      sendOwnerEmail_(result.prUrl, {
+        name: name, role: role, link: link, featured: featuredAnswer,
+        contact: contact, instagram: igFromContact,
+        eventId: eventId, eventAnswer: "(submitted via on-site form, not the Google Form)",
+        addedToExistingPr: !result.isNewPr
+      });
+    }
 
-    return ContentService.createTextOutput(JSON.stringify({ ok: true, prUrl: prUrl }))
+    return ContentService.createTextOutput(JSON.stringify({ ok: true, prUrl: result.prUrl, duplicate: !!result.duplicate }))
       .setMimeType(ContentService.MimeType.JSON);
   } catch (err) {
     sendAlertEmail_(err, raw);
@@ -304,12 +330,32 @@ function findOpenSubmissionPr_(token) {
 
 // Adds one submission to media.json, reusing an open media-submission PR's
 // branch when one exists, otherwise opening a new PR. Returns
-// { branch, prUrl, isNewPr }. Retries once if the file changed under us
-// (two submissions landing on the same branch in the same second).
+// { branch, prUrl, isNewPr } - or { branch, prUrl, isNewPr: false,
+// duplicate: true } when the same link is already on file for the event, in
+// which case nothing is committed. Retries once if the file changed under
+// us (two submissions landing on the same branch in the same second).
 // NOTE: if the reused PR is itself already conflicted (created before this
 // batching existed), appending to it won't un-conflict it — the PR-conflict
 // watch rebases those.
+//
+// The whole sequence runs under a script lock: the find-open-PR -> create
+// branch -> commit -> open-PR steps are only safe if no second submission
+// can interleave between the check and the PR existing. Before the lock,
+// two submissions ~20 seconds apart both found "no open PR" and each opened
+// their own (VSVcinema PRs #111/#112, Nov 1, 2026). Both entry points
+// (onFormSubmit and doPost) live in this same script project, so one script
+// lock serializes them against each other.
 function submitToBranch_(token, eventId, submission, name, role) {
+  var lock = LockService.getScriptLock();
+  lock.waitLock(60000);
+  try {
+    return submitToBranchLocked_(token, eventId, submission, name, role);
+  } finally {
+    lock.releaseLock();
+  }
+}
+
+function submitToBranchLocked_(token, eventId, submission, name, role) {
   var existing = findOpenSubmissionPr_(token);
   var branch, prUrl, isNewPr;
   if (existing) {
@@ -330,6 +376,18 @@ function submitToBranch_(token, eventId, submission, name, role) {
     try {
       var file = getFileOnBranch_(token, "media.json", branch);
       var mediaData = JSON.parse(file.content);
+
+      // Duplicate guard: same link already submitted for this event - on
+      // main (merged) or on this open PR's branch (still awaiting review).
+      // Skip it; if we just created a fresh branch for it, delete that
+      // branch again so no orphan is left behind.
+      if (submissionExists_(mediaData, eventId, submission.url)) {
+        if (isNewPr) {
+          try { deleteBranch_(token, branch); } catch (delErr) { /* best effort */ }
+        }
+        return { branch: branch, prUrl: prUrl || null, isNewPr: false, duplicate: true };
+      }
+
       var updated = addSubmission_(mediaData, eventId, submission);
       var newContent = JSON.stringify(updated, null, 2) + "\n";
       commitFile_(
@@ -391,6 +449,27 @@ function getBranchHeadSha_(token, branch) {
     "/repos/" + GITHUB_OWNER + "/" + GITHUB_REPO + "/git/ref/heads/" + branch
   );
   return ref.object.sha;
+}
+
+// Deletes a branch outright (used to clean up a fresh branch that turned
+// out to hold only a duplicate submission). GitHub answers 204 No Content,
+// so this can't go through githubFetch_ (it JSON-parses the response body).
+function deleteBranch_(token, branch) {
+  var url = "https://api.github.com/repos/" + GITHUB_OWNER + "/" + GITHUB_REPO +
+    "/git/refs/heads/" + branch;
+  var resp = UrlFetchApp.fetch(url, {
+    method: "delete",
+    headers: {
+      "Authorization": "Bearer " + token,
+      "Accept": "application/vnd.github+json",
+      "X-GitHub-Api-Version": "2022-11-28"
+    },
+    muteHttpExceptions: true
+  });
+  var code = resp.getResponseCode();
+  if (code < 200 || code >= 300) {
+    throw new Error("GitHub API delete branch " + branch + " failed (" + code + ")");
+  }
 }
 
 function createBranch_(token, branch, baseSha) {
@@ -465,6 +544,26 @@ function openPullRequest_(token, branch, name, role, eventId, instagram) {
 
 // ---- media.json editing ----
 
+// True when mediaData already holds a submission for this event with the
+// same link. Comparison is forgiving about case and a trailing slash so a
+// resubmission that differs only in those still counts as the same link.
+function submissionExists_(mediaData, eventId, url) {
+  var target = normalizeUrl_(url);
+  if (!target) return false;
+  for (var i = 0; i < mediaData.length; i++) {
+    if (mediaData[i].eventId !== eventId) continue;
+    var subs = mediaData[i].submissions || [];
+    for (var j = 0; j < subs.length; j++) {
+      if (normalizeUrl_(subs[j].url) === target) return true;
+    }
+  }
+  return false;
+}
+
+function normalizeUrl_(url) {
+  return String(url || "").trim().toLowerCase().replace(/\/+$/, "");
+}
+
 function addSubmission_(mediaData, eventId, submission) {
   var entry = null;
   for (var i = 0; i < mediaData.length; i++) {
@@ -499,6 +598,33 @@ function sendOwnerEmail_(prUrl, s) {
   ].filter(function (l) { return l !== null; }).join("\n");
 
   MailApp.sendEmail(OWNER_EMAIL, "DriftWest media submission: " + s.name, lines);
+}
+
+// Sent when the duplicate guard skips a submission. The subject
+// deliberately does NOT start with "DriftWest media submission:" so the
+// new-submission email watch doesn't report a skipped duplicate as a fresh
+// submission.
+function sendDuplicateEmail_(s) {
+  var lines = [
+    "A duplicate media submission was skipped automatically: the same link",
+    "was already submitted for the same event, so nothing was added and no",
+    "new PR was opened.",
+    "",
+    s.prUrl
+      ? "Original is in the open PR: " + s.prUrl
+      : "Original is already merged/live on the site (no open PR).",
+    "Event: " + s.eventId,
+    "Name/handle: " + s.name,
+    "Role: " + s.role,
+    "Link: " + s.link,
+    "",
+    "Contact (not in any PR): " + (s.contact || "(not provided)"),
+    "",
+    "If this was really a different gallery that happens to reuse the same",
+    "link, ask the submitter for the correct link and add it manually."
+  ].join("\n");
+
+  MailApp.sendEmail(OWNER_EMAIL, "DriftWest duplicate submission skipped: " + s.name, lines);
 }
 
 function sendAlertEmail_(err, raw) {

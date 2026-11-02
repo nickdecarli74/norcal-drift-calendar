@@ -14,6 +14,13 @@ existing PR or opened a new one. If two submissions land in the exact same secon
 the commit retries once; a scheduled PR-conflict watch rebases any PR that still
 ends up conflicted.
 
+Duplicate guard (Nov 1, 2026): submissions are serialized with LockService, and a
+submission whose link is already on file for the same event (merged or sitting in
+the open PR) is skipped instead of opening a duplicate PR — the owner gets a
+"DriftWest duplicate submission skipped" email when that happens. Requires the
+updated `Code.gs` to be pasted in and, for the on-site form path, the Web app
+deployment to be bumped to a new version (Deploy → Manage deployments).
+
 ## 1. Create a GitHub token
 
 1. GitHub → Settings → Developer settings → Personal access tokens → Fine-grained tokens → Generate new token.
