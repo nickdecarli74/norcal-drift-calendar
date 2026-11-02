@@ -990,15 +990,6 @@ events:
     charge to join). Prizes for best costume and best decorated car. Driver registration
     $91 online (fees included) or $85 at the gate; crew pit passes $23 online / $20
     at the gate. Registration via Pit Pay or at the back gate.
-- id: sd-2026-10-25
-  title: SuperD Cup - Day 2
-  promoter: SuperD
-  start: 2026-10-25 08:00
-  end: 2026-10-25 17:00
-  location: Apple Valley Speedway
-  url: https://super-d.net/pages/schedule
-  notes: SuperD schedule manually verified from super-d.net.
-  addedAt: '2026-10-28T12:26:57.396430+00:00'
 - id: rfr-2026-10-25
   addedAt: '2026-10-02T18:05:00+00:00'
   locked: true
@@ -1327,15 +1318,6 @@ events:
   location: Salinas Municipal Airport
   url: https://driftcentral.com/registration
   notes: Auto-imported from Drift Central schedule.
-- id: sd-2026-11-29
-  title: D-Day
-  promoter: SuperD
-  start: 2026-11-29 08:00
-  end: 2026-11-29 17:00
-  location: Thunderhill Raceway Park
-  url: https://super-d.net/pages/schedule
-  notes: SuperD schedule manually verified from super-d.net.
-  addedAt: '2026-10-28T12:26:57.396430+00:00'
 - id: av-2026-12-05
   addedAt: '2026-07-31T15:00:00+00:00'
   title: Section 8 Drifting Invitational
