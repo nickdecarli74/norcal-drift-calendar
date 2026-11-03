@@ -820,6 +820,15 @@ UID:vdc-2026-11-21@driftwestnet.com
 URL:https://www.valleydriftclub.com/
 END:VEVENT
 BEGIN:VEVENT
+DESCRIPTION:Promoter: Crashstyle\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://www.instagram.com/p/DfBTvN0lHGe/\n\n$169 driver entry. Registration is the form linked in @crashstyle_'s bio - submit it\, then complete payment through the link emailed to you\, or you don't drive. Meihan-style layout\, same as last time\; hot laps plus run groups depending on driver count. Beginners should contact Crashstyle before signing up. Crashstyle picked up this date after SuperD cancelled D-Day.
+DTEND:20261129T170000Z
+LOCATION:Thunderhill Raceway Park
+DTSTART:20261129T090000Z
+SUMMARY:Crashstyle - Sidewinder Sunday
+UID:cs-2026-11-29@driftwestnet.com
+URL:https://www.instagram.com/p/DfBTvN0lHGe/
+END:VEVENT
+BEGIN:VEVENT
 DESCRIPTION:Promoter: Don Racing\nLocation: Affinity Circuit\nRegistration / Info: https://www.instagram.com/reel/DX9wqVBRgvz/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==\n\nManually added by the site owner. Registration link points to the Instagram announcement reel.
 DTEND:20260830T170000Z
 LOCATION:Affinity Circuit

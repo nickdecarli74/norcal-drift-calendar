@@ -1350,6 +1350,17 @@ events:
   location: Spirit Peaks Raceway
   url: https://spiritpeaksraceway.com
   notes: Gates open 9AM, track hot 11AM-4PM, mandatory driver & media meeting 10:30AM. No pre-registration - tickets purchased at the gate. Spectators $15, kids 15 and under free.
+- id: cs-2026-11-29
+  addedAt: '2026-11-03T20:41:00+00:00'
+  locked: true
+  title: Sidewinder Sunday
+  promoter: Crashstyle
+  start: 2026-11-29 09:00
+  end: 2026-11-29 17:00
+  location: Thunderhill Raceway Park
+  url: https://www.instagram.com/p/DfBTvN0lHGe/
+  registerUrl: https://www.instagram.com/crashstyle_/
+  notes: $169 driver entry. Registration is the form linked in @crashstyle_'s bio - submit it, then complete payment through the link emailed to you, or you don't drive. Meihan-style layout, same as last time; hot laps plus run groups depending on driver count. Beginners should contact Crashstyle before signing up. Crashstyle picked up this date after SuperD cancelled D-Day.
 - id: dc-2026-11-29
   addedAt: '2026-08-04T00:15:00+00:00'
   title: Drift Central
