@@ -1314,6 +1314,15 @@ UID:av-2026-08-23@driftwestnet.com
 URL:https://applevalleyspeedway.com/calendar/
 END:VEVENT
 BEGIN:VEVENT
+DESCRIPTION:Promoter: Musselman Honda Circuit\nLocation: Musselman Honda Circuit\nRegistration / Info: https://mhcircuit.com/event/desert-drift-street-league-2026-11-14/\n\nDate corrected Nov 3\, 2026 - runs Sat Nov 14 per Musselman Honda Circuit's calendar (the Nov 7 slot is XLR8 Cars and Coffee).
+DTEND:20261114T160000Z
+LOCATION:Musselman Honda Circuit
+DTSTART:20261114T090000Z
+SUMMARY:Musselman Honda Circuit - Desert Drift Street League
+UID:mhc-2026-11-14@driftwestnet.com
+URL:https://mhcircuit.com/event/desert-drift-street-league-2026-11-14/
+END:VEVENT
+BEGIN:VEVENT
 DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://bayareadrifting.com/schedule\n\nWeekend. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.
 DTEND:20261018T170000Z
 LOCATION:Thunderhill Raceway Park
@@ -1321,15 +1330,6 @@ DTSTART:20261017T080000Z
 SUMMARY:Bay Area Drifting - Thunderhill Drift School
 UID:bad-2026-10-17@driftwestnet.com
 URL:https://bayareadrifting.com/schedule
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Musselman Honda Circuit\nLocation: Musselman Honda Circuit\nRegistration / Info: https://mhcircuit.com/event/desert-drift-street-league-6/\n\nAuto-imported from Musselman Honda Circuit's calendar.
-DTEND:20261107T160000Z
-LOCATION:Musselman Honda Circuit
-DTSTART:20261107T090000Z
-SUMMARY:Musselman Honda Circuit - Desert Drift Street League
-UID:mhc-2026-11-07@driftwestnet.com
-URL:https://mhcircuit.com/event/desert-drift-street-league-6/
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://bayareadrifting.com/schedule\n\nWeekend. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.

@@ -1090,16 +1090,16 @@ events:
   location: Main Track
   url: https://applevalleyspeedway.com/calendar/
   notes: Manually verified from Apple Valley Speedway's calendar.
-- id: mhc-2026-11-07
+- id: mhc-2026-11-14
   addedAt: '2026-08-03T00:40:00+00:00'
   locked: true
   title: Desert Drift Street League
   promoter: Musselman Honda Circuit
-  start: 2026-11-07 09:00
-  end: 2026-11-07 16:00
+  start: 2026-11-14 09:00
+  end: 2026-11-14 16:00
   location: Musselman Honda Circuit
-  url: https://mhcircuit.com/event/desert-drift-street-league-6/
-  notes: Auto-imported from Musselman Honda Circuit's calendar.
+  url: https://mhcircuit.com/event/desert-drift-street-league-2026-11-14/
+  notes: Date corrected Nov 3, 2026 - runs Sat Nov 14 per Musselman Honda Circuit's calendar (the Nov 7 slot is XLR8 Cars and Coffee).
 - id: cc-2026-11-07
   addedAt: '2026-10-06T18:00:00+00:00'
   locked: true
