@@ -1048,6 +1048,16 @@ events:
   notes: Driver tickets $100 (only 50 available), $5 for spectators. Trunk or treat
     12PM-2PM, costume contest for drivers, food truck, skid pad and tire machine on
     site. 2210 Tamarack St, Sweet Home, OR. Manually added by the site owner.
+- id: spr-2026-10-31
+  addedAt: '2026-11-03T17:57:00+00:00'
+  locked: true
+  title: Paranormal Tractivity 7
+  promoter: Spirit Peaks Raceway
+  start: 2026-10-31 09:00
+  end: 2026-10-31 16:00
+  location: Spirit Peaks Raceway
+  url: https://www.instagram.com/p/De7rGXxErRX/
+  notes: Trunk or treat and costume contest with prizes, plus pumpkin smashing on track. Gates open 9AM, track hot 11AM-4PM, mandatory driver & media meeting 10:30AM. No pre-registration - tickets purchased at the gate.
 - id: av-2026-11-01
   addedAt: '2026-07-31T14:40:00+00:00'
   locked: true
@@ -1174,6 +1184,16 @@ events:
   notes: Day 2 of 2 (2026 Season Closer). Track opens 10AM, full course until 3PM.
     Spectators $20/day or $40/weekend, kids 16 and under free. Manually added by the
     site owner.
+- id: spr-2026-11-15
+  addedAt: '2026-11-03T17:57:00+00:00'
+  locked: true
+  title: Open Drift
+  promoter: Spirit Peaks Raceway
+  start: 2026-11-15 09:00
+  end: 2026-11-15 16:00
+  location: Spirit Peaks Raceway
+  url: https://spiritpeaksraceway.com
+  notes: Gates open 9AM, track hot 11AM-4PM, mandatory driver & media meeting 10:30AM. No pre-registration - tickets purchased at the gate. Spectators $15, kids 15 and under free.
 - id: vdc-2026-11-21
   addedAt: '2026-07-08T00:00:00+00:00'
   title: Valley Drift Club Event
@@ -1309,6 +1329,16 @@ events:
   timeDetail:
   - 'Sat, Nov 28: Hours TBD'
   - 'Sun, Nov 29: Hours TBD'
+- id: spr-2026-11-28
+  addedAt: '2026-11-03T17:57:00+00:00'
+  locked: true
+  title: Open Drift
+  promoter: Spirit Peaks Raceway
+  start: 2026-11-28 09:00
+  end: 2026-11-28 16:00
+  location: Spirit Peaks Raceway
+  url: https://spiritpeaksraceway.com
+  notes: Gates open 9AM, track hot 11AM-4PM, mandatory driver & media meeting 10:30AM. No pre-registration - tickets purchased at the gate. Spectators $15, kids 15 and under free.
 - id: dc-2026-11-29
   addedAt: '2026-08-04T00:15:00+00:00'
   title: Drift Central
@@ -1365,6 +1395,16 @@ events:
   url: https://www.flavorexpress.co/
   notes: Presented by Cars N Anime and Flavor Express. Drivers $80. Toy drive - donate
     for the holidays. Manually verified from Apple Valley Speedway's calendar.
+- id: spr-2026-12-12
+  addedAt: '2026-11-03T17:57:00+00:00'
+  locked: true
+  title: Open Drift
+  promoter: Spirit Peaks Raceway
+  start: 2026-12-12 09:00
+  end: 2026-12-12 16:00
+  location: Spirit Peaks Raceway
+  url: https://spiritpeaksraceway.com
+  notes: Gates open 9AM, track hot 11AM-4PM, mandatory driver & media meeting 10:30AM. No pre-registration - tickets purchased at the gate. Spectators $15, kids 15 and under free.
 - id: vdc-2026-12-19
   addedAt: '2026-07-08T00:00:00+00:00'
   title: Valley Drift Club Event
@@ -1410,6 +1450,16 @@ events:
   location: Thunderhill Raceway Park
   url: https://super-d.net/pages/schedule
   notes: SuperD schedule manually verified from super-d.net.
+- id: spr-2026-12-27
+  addedAt: '2026-11-03T17:57:00+00:00'
+  locked: true
+  title: Open Drift Christmas Giveback
+  promoter: Spirit Peaks Raceway
+  start: 2026-12-27 09:00
+  end: 2026-12-27 16:00
+  location: Spirit Peaks Raceway
+  url: https://spiritpeaksraceway.com
+  notes: Gates open 9AM, track hot 11AM-4PM, mandatory driver & media meeting 10:30AM. No pre-registration - tickets purchased at the gate. Spectators $15, kids 15 and under free.
 - id: av-2026-12-31
   addedAt: '2026-07-31T15:20:00+00:00'
   title: Hayden's Birthday / New Years Bash

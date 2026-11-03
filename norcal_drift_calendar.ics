@@ -200,6 +200,15 @@ UID:av-2026-09-18@driftwestnet.com
 URL:https://ultimatedriftingchallenge.com/collections/registration
 END:VEVENT
 BEGIN:VEVENT
+DESCRIPTION:Promoter: Spirit Peaks Raceway\nLocation: Spirit Peaks Raceway\nRegistration / Info: https://spiritpeaksraceway.com\n\nGates open 9AM\, track hot 11AM-4PM\, mandatory driver & media meeting 10:30AM. No pre-registration - tickets purchased at the gate. Spectators $15\, kids 15 and under free.
+DTEND:20261227T160000Z
+LOCATION:Spirit Peaks Raceway
+DTSTART:20261227T090000Z
+SUMMARY:Spirit Peaks Raceway - Open Drift Christmas Giveback
+UID:spr-2026-12-27@driftwestnet.com
+URL:https://spiritpeaksraceway.com
+END:VEVENT
+BEGIN:VEVENT
 DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main Track\nRegistration / Info: http://www.pacificdriftteam.com/\n\nManually verified from Apple Valley Speedway's calendar.
 DTEND:20270116T170000Z
 LOCATION:Main Track
@@ -216,6 +225,15 @@ DTSTART:20260613T080000Z
 SUMMARY:Bay Area Drifting - Thunderhill Drift School
 UID:bad-2026-06-13@driftwestnet.com
 URL:https://bayareadrifting.com/schedule
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Spirit Peaks Raceway\nLocation: Spirit Peaks Raceway\nRegistration / Info: https://spiritpeaksraceway.com\n\nGates open 9AM\, track hot 11AM-4PM\, mandatory driver & media meeting 10:30AM. No pre-registration - tickets purchased at the gate. Spectators $15\, kids 15 and under free.
+DTEND:20261115T160000Z
+LOCATION:Spirit Peaks Raceway
+DTSTART:20261115T090000Z
+SUMMARY:Spirit Peaks Raceway - Open Drift
+UID:spr-2026-11-15@driftwestnet.com
+URL:https://spiritpeaksraceway.com
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Promoter: Flavor Express\nLocation: Willow Springs International Raceway\nRegistration / Info: https://hustlers-express.com/\n\nDay 1 of 2. Booty Hustlers x Flavor Express take over all of Willow Springs - drifting at Horse Thief Mile and the Balcony\, SCCA at Big Willow\, SoCal Drivers Club at Streets\, paid Drift Day lessons at the oval. Spectators $15 online / $20 at the gate. Limited drift tickets - registration and tickets at hustlers-express.com. Manually added by the site owner.
@@ -360,6 +378,15 @@ DTSTART:20261128T080000Z
 SUMMARY:GoodLuckLeague - Battle Comp
 UID:gll-2026-11-28@driftwestnet.com
 URL:https://www.goodluckleague.com/schedule
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Spirit Peaks Raceway\nLocation: Spirit Peaks Raceway\nRegistration / Info: https://spiritpeaksraceway.com\n\nGates open 9AM\, track hot 11AM-4PM\, mandatory driver & media meeting 10:30AM. No pre-registration - tickets purchased at the gate. Spectators $15\, kids 15 and under free.
+DTEND:20261212T160000Z
+LOCATION:Spirit Peaks Raceway
+DTSTART:20261212T090000Z
+SUMMARY:Spirit Peaks Raceway - Open Drift
+UID:spr-2026-12-12@driftwestnet.com
+URL:https://spiritpeaksraceway.com
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Promoter: GoodLuckLeague\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://www.goodluckleague.com/schedule\n\nWomen's drift event by Good Luck League (previously listed as GLL Battle Comp). Manually added by the site owner.
@@ -621,6 +648,15 @@ DTSTART:20261018T080000Z
 SUMMARY:fxdwld - FREEMODE 5
 UID:fxd-2026-10-18@driftwestnet.com
 URL:https://www.instagram.com/fxdwld/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Spirit Peaks Raceway\nLocation: Spirit Peaks Raceway\nRegistration / Info: https://www.instagram.com/p/De7rGXxErRX/\n\nTrunk or treat and costume contest with prizes\, plus pumpkin smashing on track. Gates open 9AM\, track hot 11AM-4PM\, mandatory driver & media meeting 10:30AM. No pre-registration - tickets purchased at the gate.
+DTEND:20261031T160000Z
+LOCATION:Spirit Peaks Raceway
+DTSTART:20261031T090000Z
+SUMMARY:Spirit Peaks Raceway - Paranormal Tractivity 7
+UID:spr-2026-10-31@driftwestnet.com
+URL:https://www.instagram.com/p/De7rGXxErRX/
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Promoter: GRIDLIFE\nLocation: Thunderhill Raceway Park\nRegistration / Info: \n\nFeaturing the WRL 25 Hours of Thunderhill. Kicks off the 2027 GRIDLIFE season — full weekend of racing\, time attack\, drifting and community. Hours TBD. Announced by @gridlifeofficial.
@@ -1115,6 +1151,15 @@ DTSTART:20261024T080000Z
 SUMMARY:SuperD - SuperD Cup
 UID:sd-2026-10-24@driftwestnet.com
 URL:https://super-d.net/pages/super-d-cup
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Spirit Peaks Raceway\nLocation: Spirit Peaks Raceway\nRegistration / Info: https://spiritpeaksraceway.com\n\nGates open 9AM\, track hot 11AM-4PM\, mandatory driver & media meeting 10:30AM. No pre-registration - tickets purchased at the gate. Spectators $15\, kids 15 and under free.
+DTEND:20261128T160000Z
+LOCATION:Spirit Peaks Raceway
+DTSTART:20261128T090000Z
+SUMMARY:Spirit Peaks Raceway - Open Drift
+UID:spr-2026-11-28@driftwestnet.com
+URL:https://spiritpeaksraceway.com
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Promoter: fxdwld\nLocation: Affinity Circuit\nRegistration / Info: https://www.instagram.com/fxdwld/\n\nDay 1 of 2. DM @fxdwld on Instagram to lock in a driver spot. Manually added by the site owner.

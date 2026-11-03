@@ -179,6 +179,14 @@ const TRACKS = [
     lat: 47.8686,
     lng: -121.9872,
     search: ["evergreen"]
+  },
+  {
+    name: "Spirit Peaks Raceway",
+    short: "Spirit Peaks",
+    location: "Toutle, WA",
+    lat: 46.3499,
+    lng: -122.6737,
+    search: ["spirit peaks"]
   }
 ];
 
