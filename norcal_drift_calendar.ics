@@ -937,6 +937,15 @@ UID:av-2026-08-29@driftwestnet.com
 URL:https://applevalleyspeedway.com/calendar/
 END:VEVENT
 BEGIN:VEVENT
+DESCRIPTION:Promoter: Club Handz\nLocation: Apple Valley Speedway\nRegistration / Info: https://applevalleyspeedway.com/events/clubxhandzmain-skid8am-6pm/\n\nMain track & skid pad. $75 driver entry\, registration by DM to @clubxhandz. Drivers meeting 8:30AM\, media meeting 9:00AM. Tech - no fluid leaks\, fix exposed wiring\; sketchy items get pulled until fixed.
+DTEND:20261106T180000Z
+LOCATION:Apple Valley Speedway
+DTSTART:20261106T080000Z
+SUMMARY:Club Handz - Handz
+UID:av-2026-11-06@driftwestnet.com
+URL:https://applevalleyspeedway.com/events/clubxhandzmain-skid8am-6pm/
+END:VEVENT
+BEGIN:VEVENT
 DESCRIPTION:Promoter: Flavor Express\nLocation: Orange Show Speedway\nRegistration / Info: https://www.flavorexpress.co/\n\nThursday night open practice\, 5PM-10PM. $100 to drive. Manually added by the site owner.
 DTEND:20261001T220000Z
 LOCATION:Orange Show Speedway
