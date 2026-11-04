@@ -1057,7 +1057,9 @@ events:
   end: 2026-10-31 16:00
   location: Spirit Peaks Raceway
   url: https://www.instagram.com/p/De7rGXxErRX/
-  notes: Trunk or treat and costume contest with prizes, plus pumpkin smashing on track. Gates open 9AM, track hot 11AM-4PM, mandatory driver & media meeting 10:30AM. No pre-registration - tickets purchased at the gate.
+  notes: Trunk or treat and costume contest with prizes, plus pumpkin smashing on
+    track. Gates open 9AM, track hot 11AM-4PM, mandatory driver & media meeting 10:30AM.
+    No pre-registration - tickets purchased at the gate.
 - id: av-2026-11-01
   addedAt: '2026-07-31T14:40:00+00:00'
   locked: true
@@ -1078,6 +1080,19 @@ events:
   location: Musselman Honda Circuit
   url: https://mhcircuit.com/event/open-drift-day-7/
   notes: Auto-imported from Musselman Honda Circuit's calendar.
+- id: av-2026-11-06
+  addedAt: '2026-11-03T20:22:00+00:00'
+  locked: true
+  title: Handz
+  promoter: Club Handz
+  start: 2026-11-06 08:00
+  end: 2026-11-06 18:00
+  location: Apple Valley Speedway
+  url: https://applevalleyspeedway.com/events/clubxhandzmain-skid8am-6pm/
+  registerUrl: https://www.instagram.com/clubxhandz/
+  notes: Main track & skid pad. $75 driver entry, registration by DM to @clubxhandz.
+    Drivers meeting 8:30AM, media meeting 9:00AM. Tech - no fluid leaks, fix exposed
+    wiring; sketchy items get pulled until fixed.
 - id: jd-2026-11-07
   addedAt: '2026-09-24T23:15:00+00:00'
   locked: true
@@ -1090,17 +1105,6 @@ events:
   notes: Invite-only; driver capacity strictly capped. Gates open 7AM for drivers.
     Registration link points to the promoter's Instagram - media should DM for info.
     Manually added by the site owner.
-- id: av-2026-11-06
-  addedAt: '2026-11-03T20:22:00+00:00'
-  locked: true
-  title: Handz
-  promoter: Club Handz
-  start: 2026-11-06 08:00
-  end: 2026-11-06 18:00
-  location: Apple Valley Speedway
-  url: https://applevalleyspeedway.com/events/clubxhandzmain-skid8am-6pm/
-  registerUrl: https://www.instagram.com/clubxhandz/
-  notes: Main track & skid pad. $75 driver entry, registration by DM to @clubxhandz. Drivers meeting 8:30AM, media meeting 9:00AM. Tech - no fluid leaks, fix exposed wiring; sketchy items get pulled until fixed.
 - id: av-2026-11-07
   addedAt: '2026-07-31T14:45:00+00:00'
   locked: true
@@ -1111,16 +1115,6 @@ events:
   location: Main Track
   url: https://applevalleyspeedway.com/calendar/
   notes: Manually verified from Apple Valley Speedway's calendar.
-- id: mhc-2026-11-14
-  addedAt: '2026-08-03T00:40:00+00:00'
-  locked: true
-  title: Desert Drift Street League
-  promoter: Musselman Honda Circuit
-  start: 2026-11-14 09:00
-  end: 2026-11-14 16:00
-  location: Musselman Honda Circuit
-  url: https://mhcircuit.com/event/desert-drift-street-league-2026-11-14/
-  notes: Date corrected Nov 3, 2026 - runs Sat Nov 14 per Musselman Honda Circuit's calendar (the Nov 7 slot is XLR8 Cars and Coffee).
 - id: cc-2026-11-07
   addedAt: '2026-10-06T18:00:00+00:00'
   locked: true
@@ -1170,6 +1164,17 @@ events:
   location: Affinity Circuit
   url: https://driftevolution.trackrabbit.com/
   notes: 2-day event. Manually added by the site owner.
+- id: mhc-2026-11-14
+  addedAt: '2026-08-03T00:40:00+00:00'
+  locked: true
+  title: Desert Drift Street League
+  promoter: Musselman Honda Circuit
+  start: 2026-11-14 09:00
+  end: 2026-11-14 16:00
+  location: Musselman Honda Circuit
+  url: https://mhcircuit.com/event/desert-drift-street-league-2026-11-14/
+  notes: Date corrected Nov 3, 2026 - runs Sat Nov 14 per Musselman Honda Circuit's
+    calendar (the Nov 7 slot is XLR8 Cars and Coffee).
 - id: vsl-2026-11-14
   addedAt: '2026-09-21T21:40:00+00:00'
   locked: true
@@ -1183,6 +1188,18 @@ events:
     Drivers $165/weekend. Spectators $20/day or $40/weekend, kids 16 and under free.
     Free camping. Pit areas are first-come first-serve. 1212 Middle Waitsburg Rd,
     Walla Walla, WA. Manually added by the site owner.
+- id: spr-2026-11-15
+  addedAt: '2026-11-03T17:57:00+00:00'
+  locked: true
+  title: Open Drift
+  promoter: Spirit Peaks Raceway
+  start: 2026-11-15 09:00
+  end: 2026-11-15 16:00
+  location: Spirit Peaks Raceway
+  url: https://spiritpeaksraceway.com
+  notes: Gates open 9AM, track hot 11AM-4PM, mandatory driver & media meeting 10:30AM.
+    No pre-registration - tickets purchased at the gate. Spectators $15, kids 15 and
+    under free.
 - id: vsl-2026-11-15
   addedAt: '2026-09-21T21:43:00+00:00'
   locked: true
@@ -1195,16 +1212,6 @@ events:
   notes: Day 2 of 2 (2026 Season Closer). Track opens 10AM, full course until 3PM.
     Spectators $20/day or $40/weekend, kids 16 and under free. Manually added by the
     site owner.
-- id: spr-2026-11-15
-  addedAt: '2026-11-03T17:57:00+00:00'
-  locked: true
-  title: Open Drift
-  promoter: Spirit Peaks Raceway
-  start: 2026-11-15 09:00
-  end: 2026-11-15 16:00
-  location: Spirit Peaks Raceway
-  url: https://spiritpeaksraceway.com
-  notes: Gates open 9AM, track hot 11AM-4PM, mandatory driver & media meeting 10:30AM. No pre-registration - tickets purchased at the gate. Spectators $15, kids 15 and under free.
 - id: vdc-2026-11-21
   addedAt: '2026-07-08T00:00:00+00:00'
   title: Valley Drift Club Event
@@ -1349,7 +1356,18 @@ events:
   end: 2026-11-28 16:00
   location: Spirit Peaks Raceway
   url: https://spiritpeaksraceway.com
-  notes: Gates open 9AM, track hot 11AM-4PM, mandatory driver & media meeting 10:30AM. No pre-registration - tickets purchased at the gate. Spectators $15, kids 15 and under free.
+  notes: Gates open 9AM, track hot 11AM-4PM, mandatory driver & media meeting 10:30AM.
+    No pre-registration - tickets purchased at the gate. Spectators $15, kids 15 and
+    under free.
+- id: dc-2026-11-29
+  addedAt: '2026-08-04T00:15:00+00:00'
+  title: Drift Central
+  promoter: Drift Central
+  start: 2026-11-29 07:00
+  end: 2026-11-29 17:00
+  location: Salinas Municipal Airport
+  url: https://driftcentral.com/registration
+  notes: Auto-imported from Drift Central schedule.
 - id: cs-2026-11-29
   addedAt: '2026-11-03T20:41:00+00:00'
   locked: true
@@ -1360,16 +1378,11 @@ events:
   location: Thunderhill Raceway Park
   url: https://www.instagram.com/p/DfBTvN0lHGe/
   registerUrl: https://www.instagram.com/crashstyle_/
-  notes: $169 driver entry. Registration is the form linked in @crashstyle_'s bio - submit it, then complete payment through the link emailed to you, or you don't drive. Meihan-style layout, same as last time; hot laps plus run groups depending on driver count. Beginners should contact Crashstyle before signing up. Crashstyle picked up this date after SuperD cancelled D-Day.
-- id: dc-2026-11-29
-  addedAt: '2026-08-04T00:15:00+00:00'
-  title: Drift Central
-  promoter: Drift Central
-  start: 2026-11-29 07:00
-  end: 2026-11-29 17:00
-  location: Salinas Municipal Airport
-  url: https://driftcentral.com/registration
-  notes: Auto-imported from Drift Central schedule.
+  notes: $169 driver entry. Registration is the form linked in @crashstyle_'s bio
+    - submit it, then complete payment through the link emailed to you, or you don't
+    drive. Meihan-style layout, same as last time; hot laps plus run groups depending
+    on driver count. Beginners should contact Crashstyle before signing up. Crashstyle
+    picked up this date after SuperD cancelled D-Day.
 - id: av-2026-12-05
   addedAt: '2026-07-31T15:00:00+00:00'
   title: Section 8 Drifting Invitational
@@ -1426,7 +1439,9 @@ events:
   end: 2026-12-12 16:00
   location: Spirit Peaks Raceway
   url: https://spiritpeaksraceway.com
-  notes: Gates open 9AM, track hot 11AM-4PM, mandatory driver & media meeting 10:30AM. No pre-registration - tickets purchased at the gate. Spectators $15, kids 15 and under free.
+  notes: Gates open 9AM, track hot 11AM-4PM, mandatory driver & media meeting 10:30AM.
+    No pre-registration - tickets purchased at the gate. Spectators $15, kids 15 and
+    under free.
 - id: vdc-2026-12-19
   addedAt: '2026-07-08T00:00:00+00:00'
   title: Valley Drift Club Event
@@ -1481,7 +1496,9 @@ events:
   end: 2026-12-27 16:00
   location: Spirit Peaks Raceway
   url: https://spiritpeaksraceway.com
-  notes: Gates open 9AM, track hot 11AM-4PM, mandatory driver & media meeting 10:30AM. No pre-registration - tickets purchased at the gate. Spectators $15, kids 15 and under free.
+  notes: Gates open 9AM, track hot 11AM-4PM, mandatory driver & media meeting 10:30AM.
+    No pre-registration - tickets purchased at the gate. Spectators $15, kids 15 and
+    under free.
 - id: av-2026-12-31
   addedAt: '2026-07-31T15:20:00+00:00'
   title: Hayden's Birthday / New Years Bash
