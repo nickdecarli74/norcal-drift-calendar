@@ -380,6 +380,15 @@ UID:spr-2026-12-12@driftwestnet.com
 URL:https://spiritpeaksraceway.com
 END:VEVENT
 BEGIN:VEVENT
+DESCRIPTION:Promoter: The Lion's Den Corporation\nLocation: The Mill\, Anderson\, CA\nRegistration / Info: https://www.instagram.com/p/DfXwCHFPO17/\n\nOpen drift day at The Mill in Anderson. Gates open 8AM\, drifting 9AM-3PM. Registration link and rules to be posted in @thelionsdencorporation's story. 20811 Industry Road\, Anderson\, CA.
+DTEND:20261108T150000Z
+LOCATION:The Mill\, Anderson\, CA
+DTSTART:20261108T090000Z
+SUMMARY:The Lion's Den Corporation - Open Drift Day
+UID:ldc-2026-11-08@driftwestnet.com
+URL:https://www.instagram.com/p/DfXwCHFPO17/
+END:VEVENT
+BEGIN:VEVENT
 DESCRIPTION:Promoter: GoodLuckLeague\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://www.goodluckleague.com/schedule\n\nWomen's drift event by Good Luck League (previously listed as GLL Battle Comp). Manually added by the site owner.
 DTEND:20261011T170000Z
 LOCATION:Thunderhill Raceway Park
