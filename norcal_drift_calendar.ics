@@ -1233,6 +1233,15 @@ UID:av-2026-10-03@driftwestnet.com
 URL:https://www.instagram.com/slidecity_events/
 END:VEVENT
 BEGIN:VEVENT
+DESCRIPTION:Promoter: N.M. Works\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://www.instagram.com/p/DfSp79NEqxn/\n\nFirst annual West Coast JZ Drift Meeting by N.M. Works (Neo Machine Works) with NorCal JZX and SoCal JZX\, at Thunderhill. Check-in 8:30-9AM\, drivers meeting 9-9:30AM\, lunch break 12-1PM\, wrap up 5PM. Free to spectate\, and the gallery is free for JZ-swapped and JZ vehicles. Entry by application via the link in @n.m._works bio (later opened to all Toyotas and Toyota swaps). Featured vendors Part Reapers and Apollo 9 Motors.
+DTEND:20261108T170000Z
+LOCATION:Thunderhill Raceway Park
+DTSTART:20261108T083000Z
+SUMMARY:N.M. Works - West Coast JZ Drift Meeting
+UID:nmw-2026-11-08@driftwestnet.com
+URL:https://www.instagram.com/p/DfSp79NEqxn/
+END:VEVENT
+BEGIN:VEVENT
 DESCRIPTION:Promoter: Fast In Fast Out\nLocation: Sonoma Raceway\nRegistration / Info: https://fastinfastouttrackdays.com/pages/upcoming-events\n\nAuto-imported from Fast In Fast Out upcoming events.
 DTEND:20260920T180000Z
 LOCATION:Sonoma Raceway
