@@ -830,6 +830,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://driftwest.net/events/av-2027-02-07/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://driftwest.net/events/mhc-2027-02-07/</loc>
     <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
