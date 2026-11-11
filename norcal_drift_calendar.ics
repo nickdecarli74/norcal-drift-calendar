@@ -65,6 +65,15 @@ UID:mill-2026-10-31@driftwestnet.com
 URL:https://themilldrifttrack.com/product/halloween-drift-day-oct-31st/
 END:VEVENT
 BEGIN:VEVENT
+DESCRIPTION:Promoter: Reno Fernley Raceway\nLocation: Reno Fernley Raceway\nRegistration / Info: https://renofernleyraceway.com/\n\nEnd of the Year Bash - the track's final drift event of 2026. Open drifting 9AM-5PM\, gates open 7:30AM\, spectator areas\, spectators welcome. Smaller driver group expected\, so plenty of seat time. The flyer says weather permitting\, but the track's latest post says rain or shine - a little rain won't stop the drifting\, and they will post updates if conditions change. No entry fee was listed on the flyer or the announcement post.
+DTEND:20261115T170000Z
+LOCATION:Reno Fernley Raceway
+DTSTART:20261115T090000Z
+SUMMARY:Reno Fernley Raceway - End of the Year Bash
+UID:rfr-2026-11-15@driftwestnet.com
+URL:https://renofernleyraceway.com/
+END:VEVENT
+BEGIN:VEVENT
 DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://bayareadrifting.com/schedule\n\nWeekend. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.
 DTEND:20260524T170000Z
 LOCATION:Thunderhill Raceway Park
