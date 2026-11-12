@@ -785,5 +785,17 @@
         "addedAt": "2026-11-12T02:47:19.656Z"
       }
     ]
+  },
+  {
+    "eventId": "cc-2026-11-07",
+    "submissions": [
+      {
+        "name": "MediaByMars",
+        "role": "photo",
+        "url": "https://mediabymars.pixieset.com/cursedchassis2/",
+        "instagram": "MediaByMars",
+        "addedAt": "2026-11-12T09:48:03.258Z"
+      }
+    ]
   }
 ]
