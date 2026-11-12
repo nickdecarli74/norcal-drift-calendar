@@ -117,11 +117,11 @@ const TRACKS = [
     search: ["musselman", "mhc"]
   },
   {
-    name: "Redding Motorsports Park",
+    name: "Redding Road Course",
     short: "Redding",
     location: "Redding, CA",
-    lat: 40.5138,
-    lng: -122.2903,
+    lat: 40.5261,
+    lng: -122.2909,
     search: ["redding"]
   },
   {
