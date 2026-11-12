@@ -1240,9 +1240,9 @@ events:
   notes: End of the Year Bash - the track's final drift event of 2026. Open drifting
     9AM-5PM, gates open 7:30AM, spectator areas, spectators welcome. Smaller driver
     group expected, so plenty of seat time. The flyer says weather permitting, but
-    the track's latest post says rain or shine - a little rain won't stop the
-    drifting, and they will post updates if conditions change. No entry fee was
-    listed on the flyer or the announcement post.
+    the track's latest post says rain or shine - a little rain won't stop the drifting,
+    and they will post updates if conditions change. No entry fee was listed on the
+    flyer or the announcement post.
 - id: vsl-2026-11-15
   addedAt: '2026-09-21T21:43:00+00:00'
   locked: true
@@ -1574,12 +1574,11 @@ events:
   location: Redding Road Course
   url: https://www.instagram.com/p/DfoBbYfRG2g/
   registerUrl: https://www.instagram.com/shastadriftclub/
-  notes: 'Day 1 of 2. Shasta Drift Club''s first official drift event, kicking off
-    their 2027 season. First Event Special - the $200 driver entry covers both days
-    of drifting AND a Shasta Drift Club membership for the entire 2027 season.
-    Overnight camping, food vendors, music, family friendly. Online registration
-    opening soon - watch @shastadriftclub for details. Hours TBD / not yet
-    confirmed.'
+  notes: Day 1 of 2. Shasta Drift Club's first official drift event, kicking off their
+    2027 season. First Event Special - the $200 driver entry covers both days of drifting
+    AND a Shasta Drift Club membership for the entire 2027 season. Overnight camping,
+    food vendors, music, family friendly. Online registration opening soon - watch
+    @shastadriftclub for details. Hours TBD / not yet confirmed.
 - id: sdc-2027-01-10
   addedAt: '2026-11-12T03:58:54+00:00'
   locked: true
@@ -1590,12 +1589,11 @@ events:
   location: Redding Road Course
   url: https://www.instagram.com/p/DfoBbYfRG2g/
   registerUrl: https://www.instagram.com/shastadriftclub/
-  notes: 'Day 2 of 2. Shasta Drift Club''s first official drift event, kicking off
-    their 2027 season. First Event Special - the $200 driver entry covers both days
-    of drifting AND a Shasta Drift Club membership for the entire 2027 season.
-    Overnight camping, food vendors, music, family friendly. Online registration
-    opening soon - watch @shastadriftclub for details. Hours TBD / not yet
-    confirmed.'
+  notes: Day 2 of 2. Shasta Drift Club's first official drift event, kicking off their
+    2027 season. First Event Special - the $200 driver entry covers both days of drifting
+    AND a Shasta Drift Club membership for the entire 2027 season. Overnight camping,
+    food vendors, music, family friendly. Online registration opening soon - watch
+    @shastadriftclub for details. Hours TBD / not yet confirmed.
 - id: av-2027-01-16
   addedAt: '2026-07-31T15:30:00+00:00'
   title: Pacific Drift Event
@@ -1631,15 +1629,6 @@ events:
   - 'Fri, Jan 29: Hours TBD'
   - 'Sat, Jan 30: Hours TBD'
   - 'Sun, Jan 31: Hours TBD'
-- id: mhc-2027-02-07
-  addedAt: '2026-08-03T00:55:00+00:00'
-  title: Open Drift Day
-  promoter: Musselman Honda Circuit
-  start: 2027-02-07 10:00
-  end: 2027-02-07 17:00
-  location: Musselman Honda Circuit
-  url: https://mhcircuit.com/event/open-drift-day-10/
-  notes: Auto-imported from Musselman Honda Circuit's calendar.
 - id: av-2027-02-07
   addedAt: '2026-11-11T21:57:31+00:00'
   locked: true
@@ -1654,10 +1643,19 @@ events:
     $90 driver fee - register by DM to @unfulfilled.us, @peteydriftz or @roberts_z33;
     payment due at registration, no spots held without payment. Both Main Track and
     Skid Pad open, track hot 9AM sharp; tire service available (@enjoythegoods_).
-    All cars must pass tech, track etiquette enforced. All skill levels welcome;
-    beginner drivers must run a blue tape X visible to other drivers. Media and
-    vendors welcome - DM the hosts to get on the list. Spots are filling up, per
-    the hosts' Nov 10 update.
+    All cars must pass tech, track etiquette enforced. All skill levels welcome; beginner
+    drivers must run a blue tape X visible to other drivers. Media and vendors welcome
+    - DM the hosts to get on the list. Spots are filling up, per the hosts' Nov 10
+    update.
+- id: mhc-2027-02-07
+  addedAt: '2026-08-03T00:55:00+00:00'
+  title: Open Drift Day
+  promoter: Musselman Honda Circuit
+  start: 2027-02-07 10:00
+  end: 2027-02-07 17:00
+  location: Musselman Honda Circuit
+  url: https://mhcircuit.com/event/open-drift-day-10/
+  notes: Auto-imported from Musselman Honda Circuit's calendar.
 - id: mhc-2027-03-07
   addedAt: '2026-08-03T01:00:00+00:00'
   title: Open Drift Day
