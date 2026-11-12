@@ -1564,6 +1564,38 @@ events:
   location: Apple Valley Speedway - Track & Skid Pad
   url: https://www.instagram.com/925patty/
   notes: Manually added by the site owner. $100 tickets, track and skid pad 2PM-11PM.
+- id: sdc-2027-01-09
+  addedAt: '2026-11-12T03:58:54+00:00'
+  locked: true
+  title: Shasta Drift Club
+  promoter: Shasta Drift Club
+  start: 2027-01-09 08:00
+  end: 2027-01-09 17:00
+  location: Redding Road Course
+  url: https://www.instagram.com/p/DfoBbYfRG2g/
+  registerUrl: https://www.instagram.com/shastadriftclub/
+  notes: 'Day 1 of 2. Shasta Drift Club''s first official drift event, kicking off
+    their 2027 season. First Event Special - the $200 driver entry covers both days
+    of drifting AND a Shasta Drift Club membership for the entire 2027 season.
+    Overnight camping, food vendors, music, family friendly. Online registration
+    opening soon - watch @shastadriftclub for details. Hours TBD / not yet
+    confirmed.'
+- id: sdc-2027-01-10
+  addedAt: '2026-11-12T03:58:54+00:00'
+  locked: true
+  title: Shasta Drift Club
+  promoter: Shasta Drift Club
+  start: 2027-01-10 08:00
+  end: 2027-01-10 17:00
+  location: Redding Road Course
+  url: https://www.instagram.com/p/DfoBbYfRG2g/
+  registerUrl: https://www.instagram.com/shastadriftclub/
+  notes: 'Day 2 of 2. Shasta Drift Club''s first official drift event, kicking off
+    their 2027 season. First Event Special - the $200 driver entry covers both days
+    of drifting AND a Shasta Drift Club membership for the entire 2027 season.
+    Overnight camping, food vendors, music, family friendly. Online registration
+    opening soon - watch @shastadriftclub for details. Hours TBD / not yet
+    confirmed.'
 - id: av-2027-01-16
   addedAt: '2026-07-31T15:30:00+00:00'
   title: Pacific Drift Event

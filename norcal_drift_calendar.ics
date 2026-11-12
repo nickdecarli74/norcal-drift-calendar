@@ -335,6 +335,15 @@ UID:dm-2026-11-14@driftwestnet.com
 URL:https://www.instagram.com/p/DSyh94eFBve/
 END:VEVENT
 BEGIN:VEVENT
+DESCRIPTION:Promoter: Shasta Drift Club\nLocation: Redding Road Course\nRegistration / Info: https://www.instagram.com/p/DfoBbYfRG2g/\n\nDay 1 of 2. Shasta Drift Club's first official drift event\, kicking off their 2027 season. First Event Special - the $200 driver entry covers both days of drifting AND a Shasta Drift Club membership for the entire 2027 season. Overnight camping\, food vendors\, music\, family friendly. Online registration opening soon - watch @shastadriftclub for details. Hours TBD / not yet confirmed.
+DTEND:20270109T170000Z
+LOCATION:Redding Road Course
+DTSTART:20270109T080000Z
+SUMMARY:Shasta Drift Club - Shasta Drift Club
+UID:sdc-2027-01-09@driftwestnet.com
+URL:https://www.instagram.com/p/DfoBbYfRG2g/
+END:VEVENT
+BEGIN:VEVENT
 DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/registration\n\nAuto-imported from Drift Central schedule.
 DTEND:20260607T170000Z
 LOCATION:Salinas Municipal Airport
@@ -917,6 +926,15 @@ DTSTART:20270307T100000Z
 SUMMARY:Musselman Honda Circuit - Open Drift Day
 UID:mhc-2027-03-07@driftwestnet.com
 URL:https://mhcircuit.com/event/open-drift-day-11/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Shasta Drift Club\nLocation: Redding Road Course\nRegistration / Info: https://www.instagram.com/p/DfoBbYfRG2g/\n\nDay 2 of 2. Shasta Drift Club's first official drift event\, kicking off their 2027 season. First Event Special - the $200 driver entry covers both days of drifting AND a Shasta Drift Club membership for the entire 2027 season. Overnight camping\, food vendors\, music\, family friendly. Online registration opening soon - watch @shastadriftclub for details. Hours TBD / not yet confirmed.
+DTEND:20270110T170000Z
+LOCATION:Redding Road Course
+DTSTART:20270110T080000Z
+SUMMARY:Shasta Drift Club - Shasta Drift Club
+UID:sdc-2027-01-10@driftwestnet.com
+URL:https://www.instagram.com/p/DfoBbYfRG2g/
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Promoter: Villains Sportsland\nLocation: Villains Sportsland\nRegistration / Info: https://villainssportsland.com/events\n\nDay 2 of 2 (2026 Season Closer). Track opens 10AM\, full course until 3PM. Spectators $20/day or $40/weekend\, kids 16 and under free. Manually added by the site owner.
