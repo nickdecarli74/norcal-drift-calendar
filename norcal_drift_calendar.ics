@@ -1063,6 +1063,15 @@ UID:av-2026-07-29@driftwestnet.com
 URL:https://applevalleyspeedway.com/calendar/
 END:VEVENT
 BEGIN:VEVENT
+DESCRIPTION:Promoter: bywheaty\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://www.instagram.com/p/DfqGhb4jy6p/\n\nThunderhill Big Skid Pad. Wheaty & Friends volume 4 (WAF4)\, hosted by @bywheaty. Tire service on site by GARAGE16\, $30 per tire with disposal. Snacks and drinks/water provided at the booth. Driver list still being sorted out - drivers will be DM'd personally for payment\; no entry fee published. Event media by @01.ph0tos. Hours TBD / not yet confirmed.
+DTEND:20261206T170000Z
+LOCATION:Thunderhill Raceway Park
+DTSTART:20261206T080000Z
+SUMMARY:bywheaty - Wheaty & Friends Volume 4
+UID:waf-2026-12-06@driftwestnet.com
+URL:https://www.instagram.com/p/DfqGhb4jy6p/
+END:VEVENT
+BEGIN:VEVENT
 DESCRIPTION:Promoter: Nice Tires\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://nicetires.shop/pages/events\n\nManually added by the site owner.
 DTEND:20260717T170000Z
 LOCATION:Thunderhill Raceway Park

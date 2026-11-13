@@ -1430,6 +1430,21 @@ events:
   location: Main Track
   url: https://applevalleyspeedway.com/calendar/
   notes: Manually verified from Apple Valley Speedway's calendar.
+- id: waf-2026-12-06
+  addedAt: '2026-11-13T00:49:22+00:00'
+  locked: true
+  title: Wheaty & Friends Volume 4
+  promoter: bywheaty
+  start: 2026-12-06 08:00
+  end: 2026-12-06 17:00
+  location: Thunderhill Raceway Park
+  url: https://www.instagram.com/p/DfqGhb4jy6p/
+  registerUrl: https://www.instagram.com/bywheaty/
+  notes: Thunderhill Big Skid Pad. Wheaty & Friends volume 4 (WAF4), hosted by
+    @bywheaty. Tire service on site by GARAGE16, $30 per tire with disposal.
+    Snacks and drinks/water provided at the booth. Driver list still being sorted
+    out - drivers will be DM'd personally for payment; no entry fee published.
+    Event media by @01.ph0tos. Hours TBD / not yet confirmed.
 - id: mhc-2026-12-06
   addedAt: '2026-08-03T00:45:00+00:00'
   title: Open Drift Day
