@@ -219,6 +219,14 @@ IG_ICON = (
     "</svg>"
 )
 
+TIP_ICON = (
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" '
+    'stroke-linecap="round" stroke-linejoin="round">'
+    '<line x1="12" y1="2" x2="12" y2="22"></line>'
+    '<path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>'
+    "</svg>"
+)
+
 GTAG = """  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4Q0X3NY37Y"></script>
   <script>
@@ -263,6 +271,12 @@ def submission_card(s):
             f'\n      <a class="photog-ig-btn" href="https://instagram.com/{esc(ig_handle)}"'
             f' target="_blank" rel="noopener">\n        {IG_ICON}<span>@{esc(ig_handle)}</span>\n      </a>'
         )
+    tip_btn = ""
+    if s.get("tipUrl"):
+        tip_btn = (
+            f'\n      <a class="photog-tip-btn" href="{esc(s["tipUrl"])}"'
+            f' target="_blank" rel="noopener">\n        {TIP_ICON}<span>Tip Your Media</span>\n      </a>'
+        )
     return (
         '    <div class="photog-card">\n'
         f'      <a class="photog-card-link" href="{esc(s.get("url", "#"))}" target="_blank" rel="noopener">\n'
@@ -271,7 +285,7 @@ def submission_card(s):
         f'        <div class="photog-platform">{esc(platform_label(s.get("url", "")))} \u203a</div>'
         f"{note}\n"
         "      </a>"
-        f"{ig_btn}\n"
+        f"{ig_btn}{tip_btn}\n"
         "    </div>"
     )
 

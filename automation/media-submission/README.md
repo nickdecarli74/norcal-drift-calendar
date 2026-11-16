@@ -35,11 +35,17 @@ deployment to be bumped to a new version (Deploy → Manage deployments).
 3. At the top of the file, check the constants match reality:
    - `GITHUB_OWNER` / `GITHUB_REPO` — should already be correct.
    - `OWNER_EMAIL` — where submission/failure notifications go.
-   - `FIELD_NAME`, `FIELD_EVENT`, `FIELD_ROLE`, `FIELD_LINK`, `FIELD_CONTACT`, `FIELD_FEATURED` —
+   - `FIELD_NAME`, `FIELD_EVENT`, `FIELD_ROLE`, `FIELD_LINK`, `FIELD_CONTACT`, `FIELD_FEATURED`, `FIELD_TIP` —
      these must exactly match your form's question titles. Open the form in edit mode
      and compare word-for-word (including capitalization). Missing this step is exactly
      how a past field swap here went unnoticed for a long time: the field was silently
      empty on every submission with no error anywhere.
+   - `FIELD_TIP` ("Tip link (optional)") is the optional tip field: add a short-answer
+     question with exactly that title to the Google Form if you want the form path to
+     capture tips too. The on-site form (media.js) sends it as `tip` to `doPost`
+     regardless. Whatever the submitter enters is normalized by `normalizeTipUrl_`
+     into `submission.tipUrl` in media.json, and the site shows a red
+     "Tip Your Media" button next to their Instagram button. No tip = no button.
 
 ## 3. Store the GitHub token
 

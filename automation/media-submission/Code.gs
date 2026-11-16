@@ -30,6 +30,12 @@
  * it is deleted again, and the owner gets a "duplicate skipped" email
  * (different subject from a normal submission email, on purpose).
  *
+ * Optional tip link (added Nov 16, 2026): both entry points accept a tip
+ * handle/link (Venmo "@handle", Cash App "$tag", PayPal.me, a full URL...),
+ * normalize it via normalizeTipUrl_ into submission.tipUrl, and the site
+ * renders a "Tip Your Media" button next to the Instagram button on the
+ * gallery card when it's present. Blank/absent = no button.
+ *
  * Submissions arrive two ways: someone filling out the live Google Form
  * directly (onFormSubmit, triggered on Sheet row add), or media.js's on-site
  * submit form on media.html POSTing JSON straight to doPost(e) below (see
@@ -57,6 +63,7 @@ const FIELD_ROLE = "Role";
 const FIELD_LINK = "Link to your album, reel or channel";
 const FIELD_CONTACT = "Your Instagram handle or email (so we can reach you if needed)";
 const FIELD_FEATURED = "Can this be featured on DriftWest instagram?";
+const FIELD_TIP = "Tip link (optional)";
 
 // ---- Entry point ----
 
@@ -72,6 +79,7 @@ function onFormSubmit(e) {
     var link = firstValue_(raw, FIELD_LINK);
     var contact = firstValue_(raw, FIELD_CONTACT);
     var featuredAnswer = firstValue_(raw, FIELD_FEATURED);
+    var tipAnswer = firstValue_(raw, FIELD_TIP);
 
     if (!name || !eventAnswer || !roleAnswer || !link) {
       throw new Error("Missing a required field (name/event/role/link).");
@@ -95,6 +103,9 @@ function onFormSubmit(e) {
     var igFromContact = extractInstagramHandle_(contact);
     if (igFromContact) submission.instagram = igFromContact;
 
+    var tipUrl = normalizeTipUrl_(tipAnswer);
+    if (tipUrl) submission.tipUrl = tipUrl;
+
     submission.addedAt = new Date().toISOString();
 
     var token = getGithubToken_();
@@ -108,7 +119,7 @@ function onFormSubmit(e) {
     } else {
       sendOwnerEmail_(result.prUrl, {
         name: name, role: role, link: link, featured: featuredAnswer,
-        contact: contact, instagram: igFromContact,
+        contact: contact, instagram: igFromContact, tipUrl: tipUrl,
         eventId: eventId, eventAnswer: eventAnswer,
         addedToExistingPr: !result.isNewPr
       });
@@ -144,6 +155,7 @@ function doPost(e) {
     var link = (data.link || "").trim();
     var contact = (data.contact || "").trim();
     var featuredAnswer = (data.featured || "").trim();
+    var tipAnswer = (data.tip || "").trim();
 
     if (!name || !eventId || !roleAnswer || !link) {
       throw new Error("Missing a required field (name/eventId/role/link).");
@@ -158,6 +170,9 @@ function doPost(e) {
     var igFromContact = extractInstagramHandle_(contact);
     if (igFromContact) submission.instagram = igFromContact;
 
+    var tipUrl = normalizeTipUrl_(tipAnswer);
+    if (tipUrl) submission.tipUrl = tipUrl;
+
     submission.addedAt = new Date().toISOString();
 
     var token = getGithubToken_();
@@ -171,7 +186,7 @@ function doPost(e) {
     } else {
       sendOwnerEmail_(result.prUrl, {
         name: name, role: role, link: link, featured: featuredAnswer,
-        contact: contact, instagram: igFromContact,
+        contact: contact, instagram: igFromContact, tipUrl: tipUrl,
         eventId: eventId, eventAnswer: "(submitted via on-site form, not the Google Form)",
         addedToExistingPr: !result.isNewPr
       });
@@ -235,6 +250,33 @@ function extractInstagramHandle_(contact) {
     var handle = token.replace(/^@/, "").replace(/\.+$/, "");
     if (/^[a-zA-Z0-9_.]{2,30}$/.test(handle)) return handle;
   }
+  return null;
+}
+
+// Turns whatever a submitter typed into the optional Tip field into a safe,
+// linkable URL for the public "Tip Your Media" button, or null when there's
+// nothing usable. Accepts full links (Venmo, Cash App, PayPal.me, Ko-fi,
+// any https URL), "@handle" (Venmo), "$cashtag" (Cash App), bare domains
+// ("paypal.me/name"), and bare handles (treated as Venmo, the common case).
+// Anything containing quotes/brackets is rejected outright - the result
+// lands in an href on a public page.
+function normalizeTipUrl_(raw) {
+  var v = String(raw || "").trim().replace(/\s+/g, "");
+  if (!v) return null;
+  if (/["'<>`]/.test(v)) return null;
+  var lower = v.toLowerCase();
+  if (lower.indexOf("https://") === 0) return v;
+  if (lower.indexOf("http://") === 0) return "https://" + v.slice(7);
+  if (v.charAt(0) === "$") return "https://cash.app/" + v;
+  if (v.charAt(0) === "@") {
+    var h = v.slice(1);
+    return /^[a-zA-Z0-9_.-]{2,50}$/.test(h) ? "https://venmo.com/u/" + h : null;
+  }
+  if (/^(venmo\.com|cash\.app|paypal\.me|ko-fi\.com|buymeacoffee\.com)\//i.test(v)) {
+    return "https://" + v;
+  }
+  if (/^[a-zA-Z0-9_.-]+\.[a-zA-Z]{2,}(\/\S*)?$/.test(v)) return "https://" + v;
+  if (/^[a-zA-Z0-9_.-]{2,50}$/.test(v)) return "https://venmo.com/u/" + v;
   return null;
 }
 
@@ -409,7 +451,7 @@ function submitToBranchLocked_(token, eventId, submission, name, role) {
   if (lastErr) throw lastErr;
 
   if (isNewPr) {
-    prUrl = openPullRequest_(token, branch, name, role, eventId, submission.instagram || null);
+    prUrl = openPullRequest_(token, branch, name, role, eventId, submission.instagram || null, submission.tipUrl || null);
   }
   return { branch: branch, prUrl: prUrl, isNewPr: isNewPr };
 }
@@ -513,7 +555,7 @@ function commitFile_(token, path, newContent, sha, branch, message) {
   );
 }
 
-function openPullRequest_(token, branch, name, role, eventId, instagram) {
+function openPullRequest_(token, branch, name, role, eventId, instagram, tipUrl) {
   var body = [
     "Automated media submission from the DriftWest form.",
     "",
@@ -521,6 +563,7 @@ function openPullRequest_(token, branch, name, role, eventId, instagram) {
     "- **Role:** " + role,
     "- **Event:** " + eventId,
     instagram ? "- **Instagram (from Contact field):** @" + instagram : null,
+    tipUrl ? "- **Tip link:** " + tipUrl : null,
     "",
     "Contact info (if an email) was emailed to the site owner separately and is not included here."
   ].filter(function (l) { return l !== null; }).join("\n");
@@ -591,6 +634,7 @@ function sendOwnerEmail_(prUrl, s) {
     "Role: " + s.role,
     "Link: " + s.link,
     s.featured ? "OK to feature on DriftWest Instagram: " + s.featured : null,
+    s.tipUrl ? "Tip link: " + s.tipUrl : null,
     "",
     s.instagram
       ? "Contact: " + s.contact + " (Instagram handle @" + s.instagram + " was included in the PR - it's meant to be public)"

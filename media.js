@@ -480,6 +480,10 @@ function mediaSubmitFormHtml(){
           <option value="No">No</option>
         </select>
       </div>
+      <div class="submit-form-row">
+        <label for="submit-tip">Tip link<span class="submit-form-hint">optional — Venmo, Cash App, PayPal.me, Ko-fi… paste your link, or just your handle (@venmo / $cashapp). Adds a "Tip Your Media" button next to your Instagram button on your gallery.</span></label>
+        <input type="text" id="submit-tip" maxlength="200" placeholder="@venmo, $cashapp, or https://...">
+      </div>
       <div class="submit-form-remember">
         <span id="submit-form-remembered" hidden>Using your saved info. <a href="#" id="submit-form-clear">Not you?</a></span>
       </div>
@@ -501,6 +505,7 @@ function wireMediaSubmitForm(event){
   const linkEl = document.getElementById("submit-link");
   const contactEl = document.getElementById("submit-contact");
   const featuredEl = document.getElementById("submit-featured");
+  const tipEl = document.getElementById("submit-tip");
   const statusEl = document.getElementById("submit-form-status");
   const rememberedEl = document.getElementById("submit-form-remembered");
   const clearLink = document.getElementById("submit-form-clear");
@@ -510,6 +515,7 @@ function wireMediaSubmitForm(event){
     if(saved.name) nameEl.value = saved.name;
     if(saved.role) roleEl.value = saved.role;
     if(saved.contact) contactEl.value = saved.contact;
+    if(saved.tip) tipEl.value = saved.tip;
     rememberedEl.hidden = false;
   }
 
@@ -519,6 +525,7 @@ function wireMediaSubmitForm(event){
     nameEl.value = "";
     roleEl.value = "";
     contactEl.value = "";
+    tipEl.value = "";
     rememberedEl.hidden = true;
   });
 
@@ -531,6 +538,7 @@ function wireMediaSubmitForm(event){
     const link = linkEl.value.trim();
     const contact = contactEl.value.trim();
     const featured = featuredEl.value;
+    const tip = tipEl.value.trim();
 
     // Don't thank the submitter until the request has actually gone out.
     // On a network failure, leave the form up with their data intact and
@@ -540,7 +548,7 @@ function wireMediaSubmitForm(event){
     statusEl.classList.remove("error");
 
     submitMediaForm({
-      name, role, link, contact, featured,
+      name, role, link, contact, featured, tip,
       eventId: event.id
     }).then(() => {
       form.hidden = true;
@@ -553,7 +561,7 @@ function wireMediaSubmitForm(event){
       statusEl.textContent = "Couldn't send — check your connection and try again.";
     });
 
-    saveSubmitter({name, role, contact});
+    saveSubmitter({name, role, contact, tip});
   });
 }
 
@@ -663,6 +671,13 @@ function renderMediaPage(events, mediaData){
     </svg>
   `;
 
+  const tipIcon = `
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="12" y1="2" x2="12" y2="22"></line>
+      <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+    </svg>
+  `;
+
   const cardHtml = s => {
     const igHandle = instagramHandleFor(s);
     return `
@@ -676,6 +691,11 @@ function renderMediaPage(events, mediaData){
       ${igHandle ? `
         <a class="photog-ig-btn" href="https://instagram.com/${igHandle}" target="_blank" rel="noopener">
           ${igIcon}<span>@${igHandle}</span>
+        </a>
+      ` : ""}
+      ${s.tipUrl ? `
+        <a class="photog-tip-btn" href="${s.tipUrl}" target="_blank" rel="noopener">
+          ${tipIcon}<span>Tip Your Media</span>
         </a>
       ` : ""}
     </div>
@@ -749,7 +769,7 @@ function renderContributorsPage(events, mediaData){
       if(sName.length > c.name.length) c.name = sName;
       const sIg = (s.instagram || "").trim().replace(/^@/, "");
       if(sIg && !c.instagram) c.instagram = sIg;
-      c.subs.push({ eventId: entry.eventId, group: g, role: s.role, addedAt: s.addedAt || "" });
+      c.subs.push({ eventId: entry.eventId, group: g, role: s.role, addedAt: s.addedAt || "", tipUrl: s.tipUrl || "" });
     });
   });
 
@@ -766,8 +786,10 @@ function renderContributorsPage(events, mediaData){
     evts.sort((a, b) => (b.group.start || "").localeCompare(a.group.start || ""));
     const latest = c.subs.map(s => s.addedAt || "").sort().pop() || "";
     const roles = [...new Set(c.subs.map(s => s.role).filter(Boolean))];
+    const tipSub = c.subs.filter(s => s.tipUrl)
+      .sort((a, b) => (a.addedAt || "").localeCompare(b.addedAt || "")).pop();
     return { name: c.name, instagram: c.instagram, events: evts,
-             count: evts.length, latest, roles };
+             count: evts.length, latest, roles, tipUrl: tipSub ? tipSub.tipUrl : "" };
   }).filter(c => c.count > 0);
 
   contributors.sort((a, b) => (b.count - a.count) || b.latest.localeCompare(a.latest));
@@ -787,6 +809,13 @@ function renderContributorsPage(events, mediaData){
       <rect x="3" y="3" width="18" height="18" rx="5"></rect>
       <circle cx="12" cy="12" r="4"></circle>
       <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle>
+    </svg>
+  `;
+
+  const tipIcon = `
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="12" y1="2" x2="12" y2="22"></line>
+      <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
     </svg>
   `;
 
@@ -819,6 +848,7 @@ function renderContributorsPage(events, mediaData){
       <div class="photog-role">${escHtml(roleBadge(c))} &middot; ${c.count} ${c.count === 1 ? "gallery" : "galleries"}</div>
       <div class="contrib-name">${escHtml(c.name)}</div>
       ${ig ? `<a class="photog-ig-btn" href="https://instagram.com/${encodeURIComponent(ig)}" target="_blank" rel="noopener">${igIcon}<span>@${escHtml(ig)}</span></a>` : ""}
+      ${c.tipUrl ? `<a class="photog-tip-btn" href="${escHtml(c.tipUrl)}" target="_blank" rel="noopener">${tipIcon}<span>Tip Your Media</span></a>` : ""}
       <div class="contrib-events">${eventRows}${moreBtn}</div>
     </div>`;
   };
