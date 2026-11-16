@@ -1183,6 +1183,8 @@ events:
   notes: Manually added by the site owner.
 - id: de-2026-11-14
   addedAt: '2026-08-01T00:45:00+00:00'
+  locked: true
+  featured: true
   title: Cold Winter Nights
   promoter: Drift Evolution
   start: 2026-11-14 08:00
