@@ -778,6 +778,14 @@
         "url": "https://photos.app.goo.gl/JxL9HzFf639hXFc56",
         "instagram": "VSVCINEMA",
         "addedAt": "2026-11-02T04:10:45.807Z"
+      },
+      {
+        "name": "Tip Test (Muse verification)",
+        "role": "photo",
+        "url": "https://example.com/tip-test-gallery-2",
+        "instagram": "test",
+        "tipUrl": "https://venmo.com/u/driftwestnet",
+        "addedAt": "2026-11-16T21:09:26.684Z"
       }
     ]
   },
