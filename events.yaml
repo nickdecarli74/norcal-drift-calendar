@@ -1677,6 +1677,21 @@ events:
   - 'Fri, Jan 29: Hours TBD'
   - 'Sat, Jan 30: Hours TBD'
   - 'Sun, Jan 31: Hours TBD'
+- id: av-2027-01-30
+  addedAt: '2026-11-23T23:21:00+00:00'
+  locked: true
+  title: MAZDAFAST Track Day
+  promoter: MAZDAFAST
+  start: 2027-01-30 08:00
+  end: 2027-01-30 17:00
+  location: Apple Valley Speedway
+  url: https://www.instagram.com/sourmotorsports/
+  registerUrl: https://www.instagram.com/sourmotorsports/
+  notes: Private drift and grip track day hosted by MAZDAFAST at Apple Valley
+    Speedway - main track and skid pad, all day. 30 driver limit, $105 driver
+    entry, spectators free. Lunch included for drivers, provided on site by
+    @theburgergame. Message @sourmotorsports for the RSVP link to reserve a
+    spot. Hours TBD / not yet confirmed.
 - id: av-2027-02-07
   addedAt: '2026-11-11T21:57:31+00:00'
   locked: true

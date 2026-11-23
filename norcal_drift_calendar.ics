@@ -218,6 +218,15 @@ UID:spr-2026-12-27@driftwestnet.com
 URL:https://spiritpeaksraceway.com
 END:VEVENT
 BEGIN:VEVENT
+DESCRIPTION:Promoter: MAZDAFAST\nLocation: Apple Valley Speedway\nRegistration / Info: https://www.instagram.com/sourmotorsports/\n\nPrivate drift and grip track day hosted by MAZDAFAST at Apple Valley Speedway - main track and skid pad\, all day. 30 driver limit\, $105 driver entry\, spectators free. Lunch included for drivers\, provided on site by @theburgergame. Message @sourmotorsports for the RSVP link to reserve a spot. Hours TBD / not yet confirmed.
+DTEND:20270130T170000Z
+LOCATION:Apple Valley Speedway
+DTSTART:20270130T080000Z
+SUMMARY:MAZDAFAST - MAZDAFAST Track Day
+UID:av-2027-01-30@driftwestnet.com
+URL:https://www.instagram.com/sourmotorsports/
+END:VEVENT
+BEGIN:VEVENT
 DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main Track\nRegistration / Info: http://www.pacificdriftteam.com/\n\nManually verified from Apple Valley Speedway's calendar.
 DTEND:20270116T170000Z
 LOCATION:Main Track
