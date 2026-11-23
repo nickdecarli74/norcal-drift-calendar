@@ -1009,6 +1009,15 @@ UID:mhc-2026-10-03@driftwestnet.com
 URL:https://mhcircuit.com/event/ddsl-drift-clinic-tandem-practice-2026-10-03/
 END:VEVENT
 BEGIN:VEVENT
+DESCRIPTION:Promoter: The Lion's Den Corporation\nLocation: The Mill\, Anderson\, CA\nRegistration / Info: https://www.instagram.com/thelionsdencorporation/\n\nDay 1 of 2. A weekend of drifting at The Mill in Anderson\, presented by The Lion's Den Corporation. $160 weekend driver pass - registration is open now on Zeffy. Limited discount codes - 1FrostyFest takes $40 off for the first 5 redemptions\, 1Frosty takes $25 off for the first 30. Rain or shine. Parking lot camping welcome\, up to 4 pit crew free with each driver\, on-site tire service available. No spectators - drivers and approved pit crew only. Hours TBD / not yet confirmed.
+DTEND:20270109T170000Z
+LOCATION:The Mill\, Anderson\, CA
+DTSTART:20270109T080000Z
+SUMMARY:The Lion's Den Corporation - Frosty Fest 2027
+UID:ldc-2027-01-09@driftwestnet.com
+URL:https://www.instagram.com/thelionsdencorporation/
+END:VEVENT
+BEGIN:VEVENT
 DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main Track\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\n2-day event\, Friday-Saturday\, 8:00 AM-6:00 PM both days. Manually verified from Apple Valley Speedway's calendar.
 DTEND:20260725T180000Z
 LOCATION:Main Track
@@ -1447,6 +1456,15 @@ DTSTART:20261017T080000Z
 SUMMARY:Bay Area Drifting - Thunderhill Drift School
 UID:bad-2026-10-17@driftwestnet.com
 URL:https://bayareadrifting.com/schedule
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: The Lion's Den Corporation\nLocation: The Mill\, Anderson\, CA\nRegistration / Info: https://www.instagram.com/thelionsdencorporation/\n\nDay 2 of 2. A weekend of drifting at The Mill in Anderson\, presented by The Lion's Den Corporation. $160 weekend driver pass - registration is open now on Zeffy. Limited discount codes - 1FrostyFest takes $40 off for the first 5 redemptions\, 1Frosty takes $25 off for the first 30. Rain or shine. Parking lot camping welcome\, up to 4 pit crew free with each driver\, on-site tire service available. No spectators - drivers and approved pit crew only. Hours TBD / not yet confirmed.
+DTEND:20270110T170000Z
+LOCATION:The Mill\, Anderson\, CA
+DTSTART:20270110T080000Z
+SUMMARY:The Lion's Den Corporation - Frosty Fest 2027
+UID:ldc-2027-01-10@driftwestnet.com
+URL:https://www.instagram.com/thelionsdencorporation/
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Promoter: Bay Area Drifting\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://bayareadrifting.com/schedule\n\nWeekend. Beginner & Intermediate Drift School. Auto-imported from Bay Area Drifting schedule.
