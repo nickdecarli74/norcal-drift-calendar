@@ -1787,6 +1787,18 @@
     "addedAt": "2026-08-01T00:30:00+00:00"
   },
   {
+    "id": "vgd-2027-01-24",
+    "title": "Vegasdrift",
+    "promoter": "VegasDrift",
+    "start": "2027-01-24 08:00",
+    "end": "2027-01-24 17:00",
+    "location": "Las Vegas Motor Speedway - Outside Road Course",
+    "url": "https://www.instagram.com/p/DgAxhD_DRdD/",
+    "notes": "Vegas Drift 2027 season date at Las Vegas Motor Speedway, Outside Road Course. Announced Nov 21, 2026 as part of the early 2027 schedule - save the date, registration details to follow. Hours TBD / not yet confirmed.",
+    "registerUrl": "https://www.instagram.com/vegasdrift/",
+    "addedAt": "2026-11-24T01:08:00+00:00"
+  },
+  {
     "id": "pc-2027-01-29",
     "title": "SWSF Drift Comp",
     "promoter": "Southwest Speed Festival",
@@ -1827,6 +1839,18 @@
     "addedAt": "2026-11-11T21:57:31+00:00"
   },
   {
+    "id": "fmp-2027-02-07",
+    "title": "Import Face Off",
+    "promoter": "Import Face Off",
+    "start": "2027-02-07 08:00",
+    "end": "2027-02-07 16:00",
+    "location": "Firebird Motorsports Park",
+    "url": "https://tickets.thefoat.com/ImportFaceOff/Info+%26+Tickets+Chandler%2C+AZ+IFO+2027/tickets/id-QDCtyIAFOfFq/",
+    "notes": "Import Face Off at Firebird Motorsports Park, Chandler AZ - car show, drag racing and a drift program run by VegasDrift. Gates 8AM, drift tech 8:30AM, drivers meeting 9:30AM, track hot 10AM-4PM. Drift entry $145 on FOAT (approval required, capped entries). Spectators $30, kids 10 and under free.",
+    "registerUrl": "https://tickets.thefoat.com/ImportFaceOff/Info+%26+Tickets+Chandler%2C+AZ+IFO+2027/tickets/id-QDCtyIAFOfFq/",
+    "addedAt": "2026-11-24T01:08:00+00:00"
+  },
+  {
     "id": "mhc-2027-02-07",
     "title": "Open Drift Day",
     "promoter": "Musselman Honda Circuit",
@@ -1838,6 +1862,30 @@
     "addedAt": "2026-08-03T00:55:00+00:00"
   },
   {
+    "id": "av-2027-02-13",
+    "title": "Love Bug Bash",
+    "promoter": "Sugar Rush x Part Reapers",
+    "start": "2027-02-13 09:00",
+    "end": "2027-02-13 17:00",
+    "location": "Thunderhill Raceway Park",
+    "url": "https://www.instagram.com/veronisaurousrex/",
+    "notes": "Love Bug Bash on the Thunderhill Big Pad, presented by Part Reapers x Sugar Rush. $175 driver entry. Ladies-focused format - women drivers each get one male plus one, and all drivers can drive all day. Questions by DM to @veronisaurousrex.",
+    "registerUrl": "https://www.instagram.com/veronisaurousrex/",
+    "addedAt": "2026-11-24T01:08:00+00:00"
+  },
+  {
+    "id": "vgd-2027-02-27",
+    "title": "Vegasdrift",
+    "promoter": "VegasDrift",
+    "start": "2027-02-27 08:00",
+    "end": "2027-02-27 17:00",
+    "location": "Las Vegas Motor Speedway - Outside Road Course",
+    "url": "https://www.instagram.com/p/DgAxhD_DRdD/",
+    "notes": "Vegas Drift 2027 season date at Las Vegas Motor Speedway, Outside Road Course. Announced Nov 21, 2026 as part of the early 2027 schedule - save the date, registration details to follow. Hours TBD / not yet confirmed.",
+    "registerUrl": "https://www.instagram.com/vegasdrift/",
+    "addedAt": "2026-11-24T01:08:00+00:00"
+  },
+  {
     "id": "mhc-2027-03-07",
     "title": "Open Drift Day",
     "promoter": "Musselman Honda Circuit",
@@ -1847,6 +1895,42 @@
     "url": "https://mhcircuit.com/event/open-drift-day-11/",
     "notes": "Auto-imported from Musselman Honda Circuit's calendar.",
     "addedAt": "2026-08-03T01:00:00+00:00"
+  },
+  {
+    "id": "fmp-2027-03-13",
+    "title": "Slush Motorsports Festival",
+    "promoter": "Slush Motorsports",
+    "start": "2027-03-13 07:00",
+    "end": "2027-03-13 18:00",
+    "location": "Firebird Motorsports Park",
+    "url": "https://slushmotorsports.com/Arizona",
+    "notes": "Slush Motorsports Festival Arizona at Firebird Motorsports Park - open drift on new pavement with new layouts, plus autocross, drag and roll racing, hot laps, car show and burnout pit. Open Drift listed at $144.44 on Tixr. Drift drivers meeting 10:15AM at the driver grid; valid license and 18+ required, 3-point harness minimum, commercially available tires only.",
+    "registerUrl": "https://slushmotorsports.com/Arizona",
+    "addedAt": "2026-11-24T01:08:00+00:00"
+  },
+  {
+    "id": "vgd-2027-03-27",
+    "title": "Spirit of the Streets",
+    "promoter": "VegasDrift",
+    "start": "2027-03-27 08:00",
+    "end": "2027-03-27 17:00",
+    "location": "Las Vegas Motor Speedway - Outside Road Course",
+    "url": "https://www.instagram.com/p/DgAxhD_DRdD/",
+    "notes": "Vegas Drift 'Spirit of the Streets' at Las Vegas Motor Speedway. Announced Nov 21, 2026 as part of the early 2027 schedule - save the date, registration details to follow. Hours TBD / not yet confirmed.",
+    "registerUrl": "https://www.instagram.com/vegasdrift/",
+    "addedAt": "2026-11-24T01:08:00+00:00"
+  },
+  {
+    "id": "av-2027-03-27",
+    "title": "#BlackDudes DRIFT",
+    "promoter": "BlackDudes Drift",
+    "start": "2027-03-27 08:00",
+    "end": "2027-03-27 17:00",
+    "location": "Apple Valley Speedway",
+    "url": "https://www.instagram.com/jah_milli/",
+    "notes": "Fourth edition of the BlackDudes DRIFT event at Apple Valley Speedway - drifting all day, family friendly. Announced by @jah_milli; entry details to follow. Hours TBD / not yet confirmed.",
+    "registerUrl": "https://www.instagram.com/jah_milli/",
+    "addedAt": "2026-11-24T01:08:00+00:00"
   },
   {
     "id": "gl-2027-04-02",
@@ -1869,5 +1953,29 @@
     "url": "https://mhcircuit.com/event/open-drift-day-12/",
     "notes": "Auto-imported from Musselman Honda Circuit's calendar.",
     "addedAt": "2026-08-03T01:05:00+00:00"
+  },
+  {
+    "id": "vgd-2027-04-18",
+    "title": "MATS x Vegas Drift",
+    "promoter": "VegasDrift",
+    "start": "2027-04-18 08:00",
+    "end": "2027-04-18 17:00",
+    "location": "Las Vegas Motor Speedway - Outside Road Course",
+    "url": "https://www.instagram.com/p/DgAxhD_DRdD/",
+    "notes": "Vegas Drift joins Muscle Cars at the Strip (MATS) weekend at Las Vegas Motor Speedway. Announced Nov 21, 2026 as part of the early 2027 schedule - save the date, registration details to follow. Hours TBD / not yet confirmed.",
+    "registerUrl": "https://www.instagram.com/vegasdrift/",
+    "addedAt": "2026-11-24T01:08:00+00:00"
+  },
+  {
+    "id": "lsf-2027-04-23",
+    "title": "LS Fest West",
+    "promoter": "Holley LS Fest",
+    "start": "2027-04-23 08:00",
+    "end": "2027-04-25 17:00",
+    "location": "Las Vegas Motor Speedway",
+    "url": "https://www.lsfest.com/",
+    "notes": "LS Fest West at Las Vegas Motor Speedway - three-day festival including the Drift Challenge, plus drag racing, autocross, car show and more. Hours TBD / not yet confirmed.",
+    "registerUrl": "https://www.lsfest.com/",
+    "addedAt": "2026-11-24T01:08:00+00:00"
   }
 ]

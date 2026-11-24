@@ -317,6 +317,15 @@ UID:de-2026-10-10@driftwestnet.com
 URL:https://driftevolution.trackrabbit.com/
 END:VEVENT
 BEGIN:VEVENT
+DESCRIPTION:Promoter: VegasDrift\nLocation: Las Vegas Motor Speedway - Outside Road Course\nRegistration / Info: https://www.instagram.com/p/DgAxhD_DRdD/\n\nVegas Drift 2027 season date at Las Vegas Motor Speedway\, Outside Road Course. Announced Nov 21\, 2026 as part of the early 2027 schedule - save the date\, registration details to follow. Hours TBD / not yet confirmed.
+DTEND:20270124T170000Z
+LOCATION:Las Vegas Motor Speedway - Outside Road Course
+DTSTART:20270124T080000Z
+SUMMARY:VegasDrift - Vegasdrift
+UID:vgd-2027-01-24@driftwestnet.com
+URL:https://www.instagram.com/p/DgAxhD_DRdD/
+END:VEVENT
+BEGIN:VEVENT
 DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main Track\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\nManually verified from Apple Valley Speedway's calendar.
 DTEND:20261107T180000Z
 LOCATION:Main Track
@@ -387,6 +396,24 @@ DTSTART:20260718T080000Z
 SUMMARY:Apple Valley Speedway - Slide City 15
 UID:av-2026-07-18@driftwestnet.com
 URL:https://applevalleyspeedway.com/calendar/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Import Face Off\nLocation: Firebird Motorsports Park\nRegistration / Info: https://tickets.thefoat.com/ImportFaceOff/Info+%26+Tickets+Chandler%2C+AZ+IFO+2027/tickets/id-QDCtyIAFOfFq/\n\nImport Face Off at Firebird Motorsports Park\, Chandler AZ - car show\, drag racing and a drift program run by VegasDrift. Gates 8AM\, drift tech 8:30AM\, drivers meeting 9:30AM\, track hot 10AM-4PM. Drift entry $145 on FOAT (approval required\, capped entries). Spectators $30\, kids 10 and under free.
+DTEND:20270207T160000Z
+LOCATION:Firebird Motorsports Park
+DTSTART:20270207T080000Z
+SUMMARY:Import Face Off - Import Face Off
+UID:fmp-2027-02-07@driftwestnet.com
+URL:https://tickets.thefoat.com/ImportFaceOff/Info+%26+Tickets+Chandler%2C+AZ+IFO+2027/tickets/id-QDCtyIAFOfFq/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Sugar Rush x Part Reapers\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://www.instagram.com/veronisaurousrex/\n\nLove Bug Bash on the Thunderhill Big Pad\, presented by Part Reapers x Sugar Rush. $175 driver entry. Ladies-focused format - women drivers each get one male plus one\, and all drivers can drive all day. Questions by DM to @veronisaurousrex.
+DTEND:20270213T170000Z
+LOCATION:Thunderhill Raceway Park
+DTSTART:20270213T090000Z
+SUMMARY:Sugar Rush x Part Reapers - Love Bug Bash
+UID:av-2027-02-13@driftwestnet.com
+URL:https://www.instagram.com/veronisaurousrex/
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Promoter: GoodLuckLeague\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://www.goodluckleague.com/schedule\n\nManually added by the site owner.
@@ -686,6 +713,15 @@ UID:spr-2026-10-31@driftwestnet.com
 URL:https://www.instagram.com/p/De7rGXxErRX/
 END:VEVENT
 BEGIN:VEVENT
+DESCRIPTION:Promoter: BlackDudes Drift\nLocation: Apple Valley Speedway\nRegistration / Info: https://www.instagram.com/jah_milli/\n\nFourth edition of the BlackDudes DRIFT event at Apple Valley Speedway - drifting all day\, family friendly. Announced by @jah_milli\; entry details to follow. Hours TBD / not yet confirmed.
+DTEND:20270327T170000Z
+LOCATION:Apple Valley Speedway
+DTSTART:20270327T080000Z
+SUMMARY:BlackDudes Drift - #BlackDudes DRIFT
+UID:av-2027-03-27@driftwestnet.com
+URL:https://www.instagram.com/jah_milli/
+END:VEVENT
+BEGIN:VEVENT
 DESCRIPTION:Promoter: GRIDLIFE\nLocation: Thunderhill Raceway Park\nRegistration / Info: \n\nFeaturing the WRL 25 Hours of Thunderhill. Kicks off the 2027 GRIDLIFE season — full weekend of racing\, time attack\, drifting and community. Hours TBD. Announced by @gridlifeofficial.
 DTEND:20270404T170000Z
 LOCATION:Thunderhill Raceway Park
@@ -937,6 +973,24 @@ UID:mhc-2027-03-07@driftwestnet.com
 URL:https://mhcircuit.com/event/open-drift-day-11/
 END:VEVENT
 BEGIN:VEVENT
+DESCRIPTION:Promoter: Slush Motorsports\nLocation: Firebird Motorsports Park\nRegistration / Info: https://slushmotorsports.com/Arizona\n\nSlush Motorsports Festival Arizona at Firebird Motorsports Park - open drift on new pavement with new layouts\, plus autocross\, drag and roll racing\, hot laps\, car show and burnout pit. Open Drift listed at $144.44 on Tixr. Drift drivers meeting 10:15AM at the driver grid\; valid license and 18+ required\, 3-point harness minimum\, commercially available tires only.
+DTEND:20270313T180000Z
+LOCATION:Firebird Motorsports Park
+DTSTART:20270313T070000Z
+SUMMARY:Slush Motorsports - Slush Motorsports Festival
+UID:fmp-2027-03-13@driftwestnet.com
+URL:https://slushmotorsports.com/Arizona
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Holley LS Fest\nLocation: Las Vegas Motor Speedway\nRegistration / Info: https://www.lsfest.com/\n\nLS Fest West at Las Vegas Motor Speedway - three-day festival including the Drift Challenge\, plus drag racing\, autocross\, car show and more. Hours TBD / not yet confirmed.
+DTEND:20270425T170000Z
+LOCATION:Las Vegas Motor Speedway
+DTSTART:20270423T080000Z
+SUMMARY:Holley LS Fest - LS Fest West
+UID:lsf-2027-04-23@driftwestnet.com
+URL:https://www.lsfest.com/
+END:VEVENT
+BEGIN:VEVENT
 DESCRIPTION:Promoter: Shasta Drift Club\nLocation: Redding Road Course\nRegistration / Info: https://www.instagram.com/p/DfoBbYfRG2g/\n\nDay 2 of 2. Shasta Drift Club's first official drift event\, kicking off their 2027 season. First Event Special - the $200 driver entry covers both days of drifting AND a Shasta Drift Club membership for the entire 2027 season. Overnight camping\, food vendors\, music\, family friendly. Online registration opening soon - watch @shastadriftclub for details. Hours TBD / not yet confirmed.
 DTEND:20270110T170000Z
 LOCATION:Redding Road Course
@@ -1016,6 +1070,15 @@ DTSTART:20261003T100000Z
 SUMMARY:Musselman Honda Circuit - DDSL Drift Clinic and Tandem Practice
 UID:mhc-2026-10-03@driftwestnet.com
 URL:https://mhcircuit.com/event/ddsl-drift-clinic-tandem-practice-2026-10-03/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: VegasDrift\nLocation: Las Vegas Motor Speedway - Outside Road Course\nRegistration / Info: https://www.instagram.com/p/DgAxhD_DRdD/\n\nVegas Drift joins Muscle Cars at the Strip (MATS) weekend at Las Vegas Motor Speedway. Announced Nov 21\, 2026 as part of the early 2027 schedule - save the date\, registration details to follow. Hours TBD / not yet confirmed.
+DTEND:20270418T170000Z
+LOCATION:Las Vegas Motor Speedway - Outside Road Course
+DTSTART:20270418T080000Z
+SUMMARY:VegasDrift - MATS x Vegas Drift
+UID:vgd-2027-04-18@driftwestnet.com
+URL:https://www.instagram.com/p/DgAxhD_DRdD/
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Promoter: The Lion's Den Corporation\nLocation: The Mill\, Anderson\, CA\nRegistration / Info: https://www.instagram.com/thelionsdencorporation/\n\nDay 1 of 2. A weekend of drifting at The Mill in Anderson\, presented by The Lion's Den Corporation. $160 weekend driver pass - registration is open now on Zeffy. Limited discount codes - 1FrostyFest takes $40 off for the first 5 redemptions\, 1Frosty takes $25 off for the first 30. Rain or shine. Parking lot camping welcome\, up to 4 pit crew free with each driver\, on-site tire service available. No spectators - drivers and approved pit crew only. Hours TBD / not yet confirmed.
@@ -1341,6 +1404,15 @@ UID:av-2027-02-07@driftwestnet.com
 URL:https://www.instagram.com/p/DfiUJYBPQk9/
 END:VEVENT
 BEGIN:VEVENT
+DESCRIPTION:Promoter: VegasDrift\nLocation: Las Vegas Motor Speedway - Outside Road Course\nRegistration / Info: https://www.instagram.com/p/DgAxhD_DRdD/\n\nVegas Drift 'Spirit of the Streets' at Las Vegas Motor Speedway. Announced Nov 21\, 2026 as part of the early 2027 schedule - save the date\, registration details to follow. Hours TBD / not yet confirmed.
+DTEND:20270327T170000Z
+LOCATION:Las Vegas Motor Speedway - Outside Road Course
+DTSTART:20270327T080000Z
+SUMMARY:VegasDrift - Spirit of the Streets
+UID:vgd-2027-03-27@driftwestnet.com
+URL:https://www.instagram.com/p/DgAxhD_DRdD/
+END:VEVENT
+BEGIN:VEVENT
 DESCRIPTION:Promoter: Villains Sportsland\nLocation: Villains Sportsland\nRegistration / Info: https://villainssportsland.com/events\n\nDay 1 of 3 (VSL XXVII). Gates 5PM\, drivers meeting 6PM\, full course until 10PM. Drivers $200/weekend. Spectators $20/day or $40/weekend\, kids 16 and under free. Free camping. 1212 Middle Waitsburg Rd\, Walla Walla\, WA. Manually added by the site owner.
 DTEND:20260918T220000Z
 LOCATION:Villains Sportsland
@@ -1438,6 +1510,15 @@ DTSTART:20261212T080000Z
 SUMMARY:DriftMaybe - DriftMaybe
 UID:dm-2026-12-12@driftwestnet.com
 URL:https://www.instagram.com/p/DSyh94eFBve/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: VegasDrift\nLocation: Las Vegas Motor Speedway - Outside Road Course\nRegistration / Info: https://www.instagram.com/p/DgAxhD_DRdD/\n\nVegas Drift 2027 season date at Las Vegas Motor Speedway\, Outside Road Course. Announced Nov 21\, 2026 as part of the early 2027 schedule - save the date\, registration details to follow. Hours TBD / not yet confirmed.
+DTEND:20270227T170000Z
+LOCATION:Las Vegas Motor Speedway - Outside Road Course
+DTSTART:20270227T080000Z
+SUMMARY:VegasDrift - Vegasdrift
+UID:vgd-2027-02-27@driftwestnet.com
+URL:https://www.instagram.com/p/DgAxhD_DRdD/
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Promoter: Apple Valley Speedway\nLocation: Main & Skid\nRegistration / Info: https://applevalleyspeedway.com/calendar/\n\nManually verified from Apple Valley Speedway's calendar.
