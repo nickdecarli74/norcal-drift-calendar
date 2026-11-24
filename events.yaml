@@ -1590,28 +1590,10 @@ events:
   registerUrl: https://www.zeffy.com/en-US/ticketing/frosty-fest-2027
   notes: Day 1 of 2. A weekend of drifting at The Mill in Anderson, presented by The
     Lion's Den Corporation. $160 weekend driver pass - registration is open now on
-    Zeffy. Limited discount codes - 1FrostyFest takes $40 off for the first 5
-    redemptions, 1Frosty takes $25 off for the first 30. Rain or shine. Parking lot
-    camping welcome, up to 4 pit crew free with each driver, on-site tire service
-    available. No spectators - drivers and approved pit crew only. Hours TBD / not
-    yet confirmed.
-- id: ldc-2027-01-10
-  addedAt: '2026-11-23T23:15:00+00:00'
-  locked: true
-  title: Frosty Fest 2027
-  promoter: The Lion's Den Corporation
-  start: 2027-01-10 08:00
-  end: 2027-01-10 17:00
-  location: The Mill, Anderson, CA
-  url: https://www.instagram.com/thelionsdencorporation/
-  registerUrl: https://www.zeffy.com/en-US/ticketing/frosty-fest-2027
-  notes: Day 2 of 2. A weekend of drifting at The Mill in Anderson, presented by The
-    Lion's Den Corporation. $160 weekend driver pass - registration is open now on
-    Zeffy. Limited discount codes - 1FrostyFest takes $40 off for the first 5
-    redemptions, 1Frosty takes $25 off for the first 30. Rain or shine. Parking lot
-    camping welcome, up to 4 pit crew free with each driver, on-site tire service
-    available. No spectators - drivers and approved pit crew only. Hours TBD / not
-    yet confirmed.
+    Zeffy. Limited discount codes - 1FrostyFest takes $40 off for the first 5 redemptions,
+    1Frosty takes $25 off for the first 30. Rain or shine. Parking lot camping welcome,
+    up to 4 pit crew free with each driver, on-site tire service available. No spectators
+    - drivers and approved pit crew only. Hours TBD / not yet confirmed.
 - id: sdc-2027-01-09
   addedAt: '2026-11-12T03:58:54+00:00'
   locked: true
@@ -1627,6 +1609,22 @@ events:
     AND a Shasta Drift Club membership for the entire 2027 season. Overnight camping,
     food vendors, music, family friendly. Online registration opening soon - watch
     @shastadriftclub for details. Hours TBD / not yet confirmed.
+- id: ldc-2027-01-10
+  addedAt: '2026-11-23T23:15:00+00:00'
+  locked: true
+  title: Frosty Fest 2027
+  promoter: The Lion's Den Corporation
+  start: 2027-01-10 08:00
+  end: 2027-01-10 17:00
+  location: The Mill, Anderson, CA
+  url: https://www.instagram.com/thelionsdencorporation/
+  registerUrl: https://www.zeffy.com/en-US/ticketing/frosty-fest-2027
+  notes: Day 2 of 2. A weekend of drifting at The Mill in Anderson, presented by The
+    Lion's Den Corporation. $160 weekend driver pass - registration is open now on
+    Zeffy. Limited discount codes - 1FrostyFest takes $40 off for the first 5 redemptions,
+    1Frosty takes $25 off for the first 30. Rain or shine. Parking lot camping welcome,
+    up to 4 pit crew free with each driver, on-site tire service available. No spectators
+    - drivers and approved pit crew only. Hours TBD / not yet confirmed.
 - id: sdc-2027-01-10
   addedAt: '2026-11-12T03:58:54+00:00'
   locked: true
@@ -1670,9 +1668,9 @@ events:
   title: Vegasdrift
   start: 2027-01-24 08:00
   end: 2027-01-24 17:00
-  notes: Vegas Drift 2027 season date at Las Vegas Motor Speedway, Outside Road
-    Course. Announced Nov 21, 2026 as part of the early 2027 schedule - save the
-    date, registration details to follow. Hours TBD / not yet confirmed.
+  notes: Vegas Drift 2027 season date at Las Vegas Motor Speedway, Outside Road Course.
+    Announced Nov 21, 2026 as part of the early 2027 schedule - save the date, registration
+    details to follow. Hours TBD / not yet confirmed.
 - id: pc-2027-01-29
   addedAt: '2026-10-17T01:08:04+00:00'
   locked: true
@@ -1700,11 +1698,10 @@ events:
   location: Apple Valley Speedway
   url: https://www.instagram.com/sourmotorsports/
   registerUrl: https://www.instagram.com/sourmotorsports/
-  notes: Private drift and grip track day hosted by MAZDAFAST at Apple Valley
-    Speedway - main track and skid pad, all day. 30 driver limit, $105 driver
-    entry, spectators free. Lunch included for drivers, provided on site by
-    @theburgergame. Message @sourmotorsports for the RSVP link to reserve a
-    spot. Hours TBD / not yet confirmed.
+  notes: Private drift and grip track day hosted by MAZDAFAST at Apple Valley Speedway
+    - main track and skid pad, all day. 30 driver limit, $105 driver entry, spectators
+    free. Lunch included for drivers, provided on site by @theburgergame. Message
+    @sourmotorsports for the RSVP link to reserve a spot. Hours TBD / not yet confirmed.
 - id: av-2027-02-07
   addedAt: '2026-11-11T21:57:31+00:00'
   locked: true
@@ -1734,9 +1731,9 @@ events:
   url: https://tickets.thefoat.com/ImportFaceOff/Info+%26+Tickets+Chandler%2C+AZ+IFO+2027/tickets/id-QDCtyIAFOfFq/
   registerUrl: https://tickets.thefoat.com/ImportFaceOff/Info+%26+Tickets+Chandler%2C+AZ+IFO+2027/tickets/id-QDCtyIAFOfFq/
   notes: Import Face Off at Firebird Motorsports Park, Chandler AZ - car show, drag
-    racing and a drift program run by VegasDrift. Gates 8AM, drift tech 8:30AM,
-    drivers meeting 9:30AM, track hot 10AM-4PM. Drift entry $145 on FOAT (approval
-    required, capped entries). Spectators $30, kids 10 and under free.
+    racing and a drift program run by VegasDrift. Gates 8AM, drift tech 8:30AM, drivers
+    meeting 9:30AM, track hot 10AM-4PM. Drift entry $145 on FOAT (approval required,
+    capped entries). Spectators $30, kids 10 and under free.
 - id: mhc-2027-02-07
   addedAt: '2026-08-03T00:55:00+00:00'
   title: Open Drift Day
@@ -1769,9 +1766,9 @@ events:
   title: Vegasdrift
   start: 2027-02-27 08:00
   end: 2027-02-27 17:00
-  notes: Vegas Drift 2027 season date at Las Vegas Motor Speedway, Outside Road
-    Course. Announced Nov 21, 2026 as part of the early 2027 schedule - save the
-    date, registration details to follow. Hours TBD / not yet confirmed.
+  notes: Vegas Drift 2027 season date at Las Vegas Motor Speedway, Outside Road Course.
+    Announced Nov 21, 2026 as part of the early 2027 schedule - save the date, registration
+    details to follow. Hours TBD / not yet confirmed.
 - id: mhc-2027-03-07
   addedAt: '2026-08-03T01:00:00+00:00'
   title: Open Drift Day
@@ -1794,8 +1791,8 @@ events:
   notes: Slush Motorsports Festival Arizona at Firebird Motorsports Park - open drift
     on new pavement with new layouts, plus autocross, drag and roll racing, hot laps,
     car show and burnout pit. Open Drift listed at $144.44 on Tixr. Drift drivers
-    meeting 10:15AM at the driver grid; valid license and 18+ required, 3-point
-    harness minimum, commercially available tires only.
+    meeting 10:15AM at the driver grid; valid license and 18+ required, 3-point harness
+    minimum, commercially available tires only.
 - id: vgd-2027-03-27
   addedAt: '2026-11-24T01:08:00+00:00'
   locked: true
@@ -1819,8 +1816,8 @@ events:
   location: Apple Valley Speedway
   url: https://www.instagram.com/jah_milli/
   registerUrl: https://www.instagram.com/jah_milli/
-  notes: Fourth edition of the BlackDudes DRIFT event at Apple Valley Speedway - drifting all
-    day, family friendly. Announced by @jah_milli; entry details to follow. Hours
+  notes: Fourth edition of the BlackDudes DRIFT event at Apple Valley Speedway - drifting
+    all day, family friendly. Announced by @jah_milli; entry details to follow. Hours
     TBD / not yet confirmed.
 - id: gl-2027-04-02
   addedAt: '2026-10-27T14:56:41.327936+00:00'
