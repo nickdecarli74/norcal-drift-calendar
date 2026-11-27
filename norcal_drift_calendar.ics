@@ -20,7 +20,7 @@ UID:fifo-2026-11-21@driftwestnet.com
 URL:https://www.motorsportreg.com/events/sonoma-raceway-hpde-november-fast-in-out-track-days-588407
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/registration\n\nAuto-imported from Drift Central schedule.
+DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/registration\n\nAuto-imported from Drift Central schedule. $180/day driver fee. No spectators. All levels welcome. 2 courses\, 1 donut box. Verified Nov 27\, 2026 from the @driftcentral_official flyer (Oct 25\, 2026).
 DTEND:20261129T170000Z
 LOCATION:Salinas Municipal Airport
 DTSTART:20261129T070000Z
@@ -425,7 +425,7 @@ UID:av-2027-02-13@driftwestnet.com
 URL:https://www.instagram.com/veronisaurousrex/
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Promoter: GoodLuckLeague\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://www.goodluckleague.com/schedule\n\nManually added by the site owner.
+DESCRIPTION:Promoter: GoodLuckLeague\nLocation: Thunderhill Raceway Park\nRegistration / Info: https://www.goodluckleague.com/schedule\n\nManually added by the site owner. Gates open 7am\, qualifying 10:00am-12:30pm\, Top 16 announced 12:30pm\, competition 1:15-3:00pm\, open runs until 5pm. Spectators FREE. $25 tire service. Verified Nov 27\, 2026 from the @goodluckleague carousel (Nov 26\, 2026).
 DTEND:20261128T170000Z
 LOCATION:Thunderhill Raceway Park
 DTSTART:20261128T080000Z
@@ -659,7 +659,7 @@ UID:av-2026-08-08@driftwestnet.com
 URL:https://applevalleyspeedway.com/calendar/
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/registration\n\nAuto-imported from Drift Central schedule.
+DESCRIPTION:Promoter: Drift Central\nLocation: Salinas Municipal Airport\nRegistration / Info: https://driftcentral.com/registration\n\nAuto-imported from Drift Central schedule. $180/day driver fee. No spectators. All levels welcome. 2 courses\, 1 donut box. Verified Nov 27\, 2026 from the @driftcentral_official flyer (Oct 25\, 2026).
 DTEND:20261128T170000Z
 LOCATION:Salinas Municipal Airport
 DTSTART:20261128T070000Z
@@ -702,6 +702,15 @@ DTSTART:20260710T080000Z
 SUMMARY:Apple Valley Speedway - UDC x Drift Japan Tours Benkei Birthday Bash
 UID:av-2026-07-10@driftwestnet.com
 URL:https://applevalleyspeedway.com/calendar/
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Promoter: Spirit Peaks Raceway\nLocation: Spirit Peaks Raceway\nRegistration / Info: https://www.instagram.com/p/DgDqXCnTeMn/\n\nAnnual food drive - bring items and get a free sticker. Drivers $100\, spectators $15\, kids under 16 free. Gates open 9AM\, track hot 11AM-4PM\, mandatory driver & media meeting 10:30AM. No pre-registration - tickets purchased at the gate. Food truck and tire service on site. Media list via Driftables. Moved from Sat Nov 28 (schedule graphic) to Sun Nov 29 per the track's own Nov 22\, 2026 announcement\; verified Nov 27\, 2026.
+DTEND:20261129T160000Z
+LOCATION:Spirit Peaks Raceway
+DTSTART:20261129T090000Z
+SUMMARY:Spirit Peaks Raceway - Thanksskidding
+UID:spr-2026-11-29@driftwestnet.com
+URL:https://www.instagram.com/p/DgDqXCnTeMn/
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Promoter: fxdwld\nLocation: Affinity Circuit\nRegistration / Info: https://www.instagram.com/fxdwld/\n\nDay 2 of 2. DM @fxdwld on Instagram to lock in a driver spot. Manually added by the site owner.
@@ -1295,15 +1304,6 @@ DTSTART:20261024T080000Z
 SUMMARY:SuperD - SuperD Cup
 UID:sd-2026-10-24@driftwestnet.com
 URL:https://super-d.net/pages/super-d-cup
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Promoter: Spirit Peaks Raceway\nLocation: Spirit Peaks Raceway\nRegistration / Info: https://spiritpeaksraceway.com\n\nGates open 9AM\, track hot 11AM-4PM\, mandatory driver & media meeting 10:30AM. No pre-registration - tickets purchased at the gate. Spectators $15\, kids 15 and under free.
-DTEND:20261128T160000Z
-LOCATION:Spirit Peaks Raceway
-DTSTART:20261128T090000Z
-SUMMARY:Spirit Peaks Raceway - Open Drift
-UID:spr-2026-11-28@driftwestnet.com
-URL:https://spiritpeaksraceway.com
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Promoter: fxdwld\nLocation: Affinity Circuit\nRegistration / Info: https://www.instagram.com/fxdwld/\n\nDay 1 of 2. DM @fxdwld on Instagram to lock in a driver spot. Manually added by the site owner.

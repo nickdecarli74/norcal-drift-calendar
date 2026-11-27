@@ -1452,7 +1452,7 @@
     "end": "2026-11-28 17:00",
     "location": "Salinas Municipal Airport",
     "url": "https://driftcentral.com/registration",
-    "notes": "Auto-imported from Drift Central schedule.",
+    "notes": "Auto-imported from Drift Central schedule. $180/day driver fee. No spectators. All levels welcome. 2 courses, 1 donut box. Verified Nov 27, 2026 from the @driftcentral_official flyer (Oct 25, 2026).",
     "addedAt": "2026-08-04T00:10:00+00:00"
   },
   {
@@ -1475,7 +1475,7 @@
     "end": "2026-11-28 17:00",
     "location": "Thunderhill Raceway Park",
     "url": "https://www.goodluckleague.com/schedule",
-    "notes": "Manually added by the site owner.",
+    "notes": "Manually added by the site owner. Gates open 7am, qualifying 10:00am-12:30pm, Top 16 announced 12:30pm, competition 1:15-3:00pm, open runs until 5pm. Spectators FREE. $25 tire service. Verified Nov 27, 2026 from the @goodluckleague carousel (Nov 26, 2026).",
     "addedAt": "2026-08-01T00:20:00+00:00"
   },
   {
@@ -1495,17 +1495,6 @@
     "addedAt": "2026-10-17T01:16:27+00:00"
   },
   {
-    "id": "spr-2026-11-28",
-    "title": "Open Drift",
-    "promoter": "Spirit Peaks Raceway",
-    "start": "2026-11-28 09:00",
-    "end": "2026-11-28 16:00",
-    "location": "Spirit Peaks Raceway",
-    "url": "https://spiritpeaksraceway.com",
-    "notes": "Gates open 9AM, track hot 11AM-4PM, mandatory driver & media meeting 10:30AM. No pre-registration - tickets purchased at the gate. Spectators $15, kids 15 and under free.",
-    "addedAt": "2026-11-03T17:57:00+00:00"
-  },
-  {
     "id": "dc-2026-11-29",
     "title": "Drift Central",
     "promoter": "Drift Central",
@@ -1513,8 +1502,19 @@
     "end": "2026-11-29 17:00",
     "location": "Salinas Municipal Airport",
     "url": "https://driftcentral.com/registration",
-    "notes": "Auto-imported from Drift Central schedule.",
+    "notes": "Auto-imported from Drift Central schedule. $180/day driver fee. No spectators. All levels welcome. 2 courses, 1 donut box. Verified Nov 27, 2026 from the @driftcentral_official flyer (Oct 25, 2026).",
     "addedAt": "2026-08-04T00:15:00+00:00"
+  },
+  {
+    "id": "spr-2026-11-29",
+    "title": "Thanksskidding",
+    "promoter": "Spirit Peaks Raceway",
+    "start": "2026-11-29 09:00",
+    "end": "2026-11-29 16:00",
+    "location": "Spirit Peaks Raceway",
+    "url": "https://www.instagram.com/p/DgDqXCnTeMn/",
+    "notes": "Annual food drive - bring items and get a free sticker. Drivers $100, spectators $15, kids under 16 free. Gates open 9AM, track hot 11AM-4PM, mandatory driver & media meeting 10:30AM. No pre-registration - tickets purchased at the gate. Food truck and tire service on site. Media list via Driftables. Moved from Sat Nov 28 (schedule graphic) to Sun Nov 29 per the track's own Nov 22, 2026 announcement; verified Nov 27, 2026.",
+    "addedAt": "2026-11-03T17:57:00+00:00"
   },
   {
     "id": "cs-2026-11-29",
