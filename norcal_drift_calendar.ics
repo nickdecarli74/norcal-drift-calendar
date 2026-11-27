@@ -92,6 +92,15 @@ UID:bad-2026-02-14@driftwestnet.com
 URL:https://bayareadrifting.com/schedule
 END:VEVENT
 BEGIN:VEVENT
+DESCRIPTION:Promoter: ClubTouge\nLocation: Apple Valley Speedway\nRegistration / Info: https://www.clubtouge.com/\n\nMain track only. ThanksDrifting '26. $90 driver entry (early $80 pricing ended 11/22). $15 entry per person. 50 driver cap. 9am drivers meeting. All skill levels welcome. Gates 8am-6pm. Food vendors on site. Media welcome - check in with organizers\, vest required. No refunds.
+DTEND:20261129T170000Z
+LOCATION:Apple Valley Speedway
+DTSTART:20261129T090000Z
+SUMMARY:ClubTouge - ClubTouge Open Track Event
+UID:av-2026-11-29@driftwestnet.com
+URL:https://www.clubtouge.com/
+END:VEVENT
+BEGIN:VEVENT
 DESCRIPTION:Promoter: Valley Drift Club\nLocation: NASA Crows Landing Airport\nRegistration / Info: https://www.valleydriftclub.com/\n\nValley Drift Club event.
 DTEND:20260926T170000Z
 LOCATION:NASA Crows Landing Airport
